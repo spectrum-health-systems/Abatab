@@ -138,33 +138,15 @@ How to uninstall the software.
 [ARCHIVED-REPOSITORY]: https://img.shields.io/badge/WARNING-THIS%20REPOSITORY%20IS%20ARCHIVED-FF160C?style=for-the-badge
 [CONTINUED-DEVELOPMENT]: https://github.com/spectrum-health-systems/Abatab
 
+<br>
+<div align="center">
 
-
-
-
-
-
-
-
-
-
-
-
-
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-
+  <!-- PROJECT BADGES
+       - Project badges that give the following mostly static information:
+          - The project issues
+          - The project pull requests
+  -->
   [![Issues](https://img.shields.io/github/issues/spectrum-health-systems/MAWSC?style=flat)](https://github.com/spectrum-health-systems/MAWSC/issues)&nbsp;
   [![Pulls](https://img.shields.io/github/issues-pr/spectrum-health-systems/MAWSC?style=flat)](https://github.com/spectrum-health-systems/MAWSC/pulls)
 
-
-  <br>
-
-
-
-  <br>
-
-
-
-<br>
-
+</div>
