@@ -112,8 +112,6 @@ This readme is short and sweet because the [Abatab Manual](./Documentation/Manua
 [CONTINUED-DEVELOPMENT]: https://github.com/spectrum-health-systems/Abatab
 
 <br>
-<br>
-
 
 <!-- FOOTER
 -->
