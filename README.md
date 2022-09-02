@@ -96,7 +96,7 @@ This readme is short and sweet because the [Abatab Manual](MANUAL), which is upd
 [MANUAL]: ./Documentation/Manual/Abatab-Manual.md
 [SOURCECODE]: ./Documentation/Sourcecode/Abatab-Sourcecode.md
 [CHANGELOG]: ./Documentation/CHANGELOG.md
-[ROADMAP: ./Documentation/ROAPMAP.md
+[ROADMAP]: ./Documentation/ROADMAP.md
 [AUTHORS]: ./.github/Documentation/Repository/AUTHORS.md
 [BUILT-WITH]: ./.github/Documentation/Repository/BUILT-WITH.md
 [CODE-OF-CONDUCT]: ./.github/Documentation/Repository/CODE-OF-CONDUCT.md
