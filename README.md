@@ -49,7 +49,7 @@
        - The menu bar color scheme should match the color scheme of the project.
   -->
 
-  [![REPOSITORY](https://img.shields.io/badge/REPOSITORY-FFEE00?style=for-the-badge)](REPOSITORY)&nbsp;&nbsp;&nbsp;[![CHANGELOG](https://img.shields.io/badge/CHANGELOG-FF8D00?style=for-the-badge)](CHANGLOG)&nbsp;&nbsp;&nbsp;[![ROADMAP](https://img.shields.io/badge/ROADMAP-FF8D00?style=for-the-badge)](ROADMAP)&nbsp;&nbsp;&nbsp;[![MANUAL](https://img.shields.io/badge/MANUAL-FF8D00?style=for-the-badge)](MANUAL)&nbsp;&nbsp;&nbsp;[![SOURCECODE-DOCUMENTATION](https://img.shields.io/badge/SOURCECODE%20DOCUMENTATION-FF8D00?style=for-the-badge)](SOURCECODE)
+  [![REPOSITORY](https://img.shields.io/badge/REPOSITORY-FFEE00?style=for-the-badge)](REPOSITORY)&nbsp;&nbsp;&nbsp;[![CHANGELOG](https://img.shields.io/badge/CHANGELOG-FF8D00?style=for-the-badge)](CHANGELOG)&nbsp;&nbsp;&nbsp;[![ROADMAP](https://img.shields.io/badge/ROADMAP-FF8D00?style=for-the-badge)](ROADMAP)&nbsp;&nbsp;&nbsp;[![MANUAL](https://img.shields.io/badge/MANUAL-FF8D00?style=for-the-badge)](MANUAL)&nbsp;&nbsp;&nbsp;[![SOURCECODE-DOCUMENTATION](https://img.shields.io/badge/SOURCECODE%20DOCUMENTATION-FF8D00?style=for-the-badge)](SOURCECODE)
   <br>
   <br>
 
