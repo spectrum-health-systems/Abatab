@@ -6,7 +6,7 @@
      - Documentation breadcrumbs.
      - This should also be at the end of the documentation as well.
 -->
-> [REPOSITORY-NAME][REPOSITORY-URL] > Additional resources
+> [Abatab][REPOSITORY-URL] > Additional resources
 
 ***
 
@@ -33,7 +33,7 @@ A little blurb about this resource.
 
 ***
 
-> [REPOSITORY-NAME][REPOSITORY-URL] > Additional resources
+> [Abatab][REPOSITORY-URL] > Additional resources
 
 <!-- REFERENCE LINKS: STANDARD
      These reference links should be standard across all project documentation.

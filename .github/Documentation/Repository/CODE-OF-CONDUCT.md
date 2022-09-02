@@ -6,7 +6,7 @@
      - Documentation breadcrumbs.
      - This should also be at the end of the documentation as well.
 -->
-> [REPOSITORY-NAME][REPOSITORY-URL] > Code of Conduct
+> [Abatab][REPOSITORY-URL] > Code of Conduct
 
 ***
 
@@ -113,7 +113,7 @@ Translations are available at https://www.contributor-covenant.org/translations.
 
 ***
 
-> [REPOSITORY-NAME][REPOSITORY-URL] > Code of Conduct
+> [Abatab][REPOSITORY-URL] > Code of Conduct
 
 <!-- REFERENCE LINKS: STANDARD
      These reference links should be standard across all project documentation.

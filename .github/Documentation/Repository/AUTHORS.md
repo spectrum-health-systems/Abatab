@@ -6,7 +6,7 @@
      - Documentation breadcrumbs.
      - This should also be at the end of the documentation as well.
 -->
-> [REPOSITORY-NAME][REPOSITORY-URL] > Authors
+> [Abatab][REPOSITORY-URL] > Authors
 
 ***
 
@@ -33,7 +33,7 @@ A little blurb about this person, and what they contributed to the project.
 
 ***
 
-> [REPOSITORY-NAME][REPOSITORY-URL] > Acknowledgements
+> [Abatab][REPOSITORY-URL] > Acknowledgements
 
 <!-- REFERENCE LINKS: STANDARD
      These reference links should be standard across all project documentation.
