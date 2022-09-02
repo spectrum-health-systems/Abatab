@@ -79,7 +79,7 @@ The good news is that myAvatar™ functionality can be extended via Netsmart's m
 
 # The Abatab manual
 
-This readme is short and sweet because the [Abatab Manual][MANUAL], which is updated with each release, contains everything you need to know about Abatab.
+This README is short and sweet because the [Abatab Manual][MANUAL], which is updated with each release, contains everything you need to know about Abatab.
 
 <!-- REFERENCE LINKS: REPOSITORY
      These reference links should be standard across all project documentation.
