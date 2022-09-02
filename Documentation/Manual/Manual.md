@@ -15,39 +15,29 @@
       - Project logo should be located at "./.github/Logos/ProjectLogo.png".
       - Short description of the project.
   -->
+
+  Last updated: September 2, 2022
+
   ![PROJECT-LOGO][PROJECT-LOGO]
   <h1> 
   Abatab Manual
   </h1>
   <br>
 
-  <!-- PROJECT BADGES
-       - Project badges that give the following mostly static information:
-          - The project status
-          - The project license type
-          - The current project release 
-  -->
-  <img src="https://img.shields.io/badge/status-active-brightgreen?style=flat">&nbsp;
-  [![License](https://img.shields.io/github/license/spectrum-health-systems/Abatab?style=flat)][LICENSE]&nbsp;
-  [![GitHub release](https://img.shields.io/github/v/release/spectrum-health-systems/Abatab?style=flat)][CURRENT-RELEASE]&nbsp;
-  <br>
-  <br>
-  
-  <!-- PROJECT MENU
-       - The menu bar should have links to:
-          - The project repository
-          - The project changelog
-          - The project roadmap
-          - The project manual
-          - The project sourcecode documentation
-       - The menu bar color scheme should match the color scheme of the project.
-  -->
-
-  [![REPOSITORY](https://img.shields.io/badge/REPOSITORY-FF8D00?style=for-the-badge)](REPOSITORY)&nbsp;&nbsp;&nbsp;[![CHANGELOG](https://img.shields.io/badge/CHANGELOG-FF8D00?style=for-the-badge)](Documentation/Changelog.md)&nbsp;&nbsp;&nbsp;[![ROADMAP](https://img.shields.io/badge/ROADMAP-FF8D00?style=for-the-badge)](Documentation/Roadmap.md)&nbsp;&nbsp;&nbsp;[![MANUAL](https://img.shields.io/badge/MANUAL-FFEE00?style=for-the-badge)](Documentation/Manual/Manual.md)&nbsp;&nbsp;&nbsp;[![SOURCECODE-DOCUMENTATION](https://img.shields.io/badge/SOURCECODE%20DOCUMENTATION-FF8D00?style=for-the-badge)](Documentation/Sourcecode/Sourcecode.md)
-  <br>
-  <br>
-
 </div>
+
+***
+
+<div align="center">
+
+  <h2>
+
+  [Home](manual.md)&nbsp;&bull;&nbsp;Getting started&nbsp;&bull;&nbsp;[Hosting](manual-hosting-maws.md)&nbsp;&bull;&nbsp;[Importing](manual-importing-maws.md)&nbsp;&bull;&nbsp;[Using](manual-using-maws.md)&nbsp;&bull;&nbsp;[ScriptLink](manual-scriptlink-events.md)&nbsp;&bull;&nbsp;[Additional information](manual-additional-information.md)
+
+  </h2>
+  </div>
+
+***
 
 # About
 
@@ -80,49 +70,21 @@ This readme is short and sweet because the [Abatab Manual](./Documentation/Manua
 -->
 [REPOSITORY-URL]: https://github.com/spectrum-health-systems/Abatab
 [PROJECT-LOGO]: ../../.github/Logos/ProjectLogo.png
-[README-SCREENSHOT]: ./.github/Screenshots/ReadmeScreenshot.png
-[LICENSE]: https://www.apache.org/licenses/LICENSE-2.0
-[CURRENT-RELEASE]: https://github.com/spectrum-health-systems/Abatab/releases
 
 <!-- REFERENCE LINKS: REPOSITORY DOCUMENTATION
      These reference links should be standard across all project documentation.
 -->
-[MANUAL]: ./Documentation/Manual/Abatab-Manual.md
-[SOURCECODE]: ./Documentation/Sourcecode/Abatab-Sourcecode.md
-[AUTHORS]: ./.github/Documentation/Repository/AUTHORS.md
-[BUILT-WITH]: ./.github/Documentation/Repository/BUILT-WITH.md
-[CODE-OF-CONDUCT]: ./.github/Documentation/Repository/CODE-OF-CONDUCT.md
-[CONTRIBUTING-GUIDELINES]: ./.github/Documentation/Repository/CONTRIBUTING.md
-[SECURITY]: ./.github/Documentation/Repository/SECURITY.md
-[SUPPORT]: ./.github/Documentation/Repository/SUPPORT.md
+[MANUAL]: ./Documentation/Manual/Manual.md
+[MANUAL-GETTING-STARTED]: ./Documentation/Manual/Manual-Getting-Started.md
+[MANUAL-HOSTING-ABATAB]: ./Documentation/Manual/Manual-Hosting-Abatab.md
+[MANUAL-IMPORTING-ABATAB]: ./Documentation/Manual/Manual-Importing-Abatab.md
+[MANUAL-USING-ABATAB]: ./Documentation/Manual/Manual-Using-Abatab.md
+[MANUAL-SCRIPTLINK]: ./Documentation/Manual/Manual-ScriptLink.md
+[MANUAL-ADDITIONAL-INFORMATION]: ./Documentation/Manual/Manual-Additional-Information.md
 
-<!-- REFERENCE LINKS: BADGES
-     These reference links should be standard across all project documentation.
--->
-[ALPHA-BRANCH]: https://img.shields.io/badge/WARNING-THIS%20IS%20ALPHA%20SOFTWARE-FF160C?style=for-the-badge
-[BETA-BRANCH]: https://img.shields.io/badge/WARNING-THIS%20IS%20BETA%20SOFTWARE-FF160C?style=for-the-badge
-[DEPRECIATED-BRANCH]: https://img.shields.io/badge/WARNING-THIS%20IS%20DEPRECIATED%20SOFTWARE-FF160C?style=for-the-badge
-[ARCHIVED-REPOSITORY]: https://img.shields.io/badge/WARNING-THIS%20REPOSITORY%20IS%20ARCHIVED-FF160C?style=for-the-badge
-[CONTINUED-DEVELOPMENT]: https://github.com/spectrum-health-systems/Abatab
+[SOURCECODE]: ./Documentation/Sourcecode/Sourcecode.md
 
 <br>
-
-<!-- FOOTER
--->
-***
-
-<br>
-<div align="center">
-
-  <!-- PROJECT BADGES
-       - Project badges that give the following mostly static information:
-          - The project issues
-          - The project pull requests
-  -->
-  [![Issues](https://img.shields.io/github/issues/spectrum-health-systems/MAWSC?style=flat)](https://github.com/spectrum-health-systems/MAWSC/issues)&nbsp;
-  [![Pulls](https://img.shields.io/github/issues-pr/spectrum-health-systems/MAWSC?style=flat)](https://github.com/spectrum-health-systems/MAWSC/pulls)
-
-</div>
 
 <!-- BREADCRUMBS
      - Documentation breadcrumbs. This should also be at the start of the documentation as well.
