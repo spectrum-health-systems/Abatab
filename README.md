@@ -73,43 +73,13 @@ Abatab is one such custom web service which includes various tools and utilities
 
 ## Prerequisites
 
-* A location to host the Avatool Web Service which meets the following requirements:
+* A location to host the Abatab which meets the following requirements:
   * .NET Framework 4.8+ installed
-  * Access to your myAvatar™ environments from the Avatool Web Service via HTTPS
+  * Access to your myAvatar™ environments via HTTPS
 
-# Getting started
+# The Abatab manual
 
-## Before you begin
-
-The [Abatab Manual](./Documentation/Manual/Manual.md) contains everything you need to know about Abatar, and is updated with each release.
-
-## Initial setup
-
-Steps to initially setup the software.
-
-# Installing
-
-Steps to install the software.
-
-# Cconfiguring
-
-Steps to configure the software.
-
-# Using
-
-How to use the software.
-
-# Updating
-
-How to update the software
-
-# Uninstalling
-
-How to uninstall the software.
-
-# Acknowlegements
-
-# Contributing
+This readme is short and sweet because the [Abatab Manual](./Documentation/Manual/Manual.md), which is updated with each release, contains everything you need to know about Abatab.
 
 <!-- REFERENCE LINKS: REPOSITORY
      These reference links should be standard across all project documentation.
