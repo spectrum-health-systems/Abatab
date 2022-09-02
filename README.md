@@ -2,15 +2,6 @@
      - All URLs should use reference-links added at the end of this documentation.
 -->
 
-<!-- BREADCRUMBS
-     - Documentation breadcrumbs.
-     - This should also be at the end of the documentation as well.
--->
-> [Abatab][REPOSITORY-URL]
-
-***
-<br>
-
 <!-- WARNINGS
      - Use these to let users know this is a non-production branch.
      - Production/released branches should not use these.
@@ -116,15 +107,6 @@ How to uninstall the software.
 # Acknowlegements
 
 # Contributing
-
-<!-- BREADCRUMBS
-     - Documentation breadcrumbs. This should also be at the start of the documentation as well.
--->
-<br>
-
-***
-
-> [Abatab][REPOSITORY-URL]
 
 <!-- REFERENCE LINKS: REPOSITORY
      These reference links should be standard across all project documentation.
