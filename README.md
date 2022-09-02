@@ -57,28 +57,31 @@
 
 # About
 
-About this project/repository
+[Netsmart's myAvatar™](https://www.ntst.com/Solutions-and-Services/Offerings/myAvatar) is a behavioral health EHR that offers a recovery-focused suite of solutions that leverage real-time analytics and clinical decision support to drive value-based care.
+
+While myAvatar™ is a robust platform, like most things in life (except [Heroes of Might and Magic III](https://www.gog.com/game/heroes_of_might_and_magic_3_complete_edition)), it isn't perfect.
+
+The good news is that myAvatar™ functionality can be extended via Netsmart's myAvatar™ Web Services, and/or custom web services that are written by myAvatar™ users.
+
+Abatab is one such custom web service which includes various tools and utilities for myAvatar™ that aren't included in the official release, and provides a solid foundation for building additional functionality quickly and efficiently.
 
 ## Features
 
-* Feature #1
-* Feature #2
-* Feature #3
-
-## Built with
-
-* [.NET 6](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
-
-# Getting started
+* Several built-in tools and utilities for use with myAvatar™
+* Does not require Java to be installed
+* A solid foundation to build additional myAvatar™ custom tools and utilities
 
 ## Prerequisites
 
-* [.NET 6](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
-* Prerequisite #2
+* A location to host the Avatool Web Service which meets the following requirements:
+  * .NET Framework 4.8+ installed
+  * Access to your myAvatar™ environments from the Avatool Web Service via HTTPS
+
+# Getting started
 
 ## Before you begin
 
-Things the user should know before using this software.
+The [Abatab Manual](./Documentation/Manual/Manual.md) contains everything you need to know about Abatar, and is updated with each release.
 
 ## Initial setup
 
@@ -141,6 +144,9 @@ How to uninstall the software.
 <br>
 <br>
 
+
+<!-- FOOTER
+-->
 ***
 
 <br>
