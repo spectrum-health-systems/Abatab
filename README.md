@@ -139,6 +139,11 @@ How to uninstall the software.
 [CONTINUED-DEVELOPMENT]: https://github.com/spectrum-health-systems/Abatab
 
 <br>
+<br>
+
+***
+
+<br>
 <div align="center">
 
   <!-- PROJECT BADGES
