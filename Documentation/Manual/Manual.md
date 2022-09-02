@@ -2,6 +2,12 @@
      - All URLs should use reference-links added at the end of this documentation.
 -->
 
+<!-- BREADCRUMBS
+     - Documentation breadcrumbs.
+     - This should also be at the end of the documentation as well.
+-->
+> [Abatab][REPOSITORY-URL] > Manual
+
 <br>
 <div align="center">
 
@@ -10,9 +16,9 @@
       - Short description of the project.
   -->
   ![PROJECT-LOGO][PROJECT-LOGO]
-  <h3> 
-  Abatab Web Service Manual
-  </h3>
+  <h1> 
+  Abatab Manual
+  </h1>
   <br>
 
   <!-- PROJECT BADGES
@@ -22,8 +28,8 @@
           - The current project release 
   -->
   <img src="https://img.shields.io/badge/status-active-brightgreen?style=flat">&nbsp;
-  [![License](https://img.shields.io/github/license/spectrum-health-systems/MAWSC?style=flat)][LICENSE]&nbsp;
-  [![GitHub release](https://img.shields.io/github/v/release/spectrum-health-systems/MAWSC?style=flat)][CURRENT-RELEASE]&nbsp;
+  [![License](https://img.shields.io/github/license/spectrum-health-systems/Abatab?style=flat)][LICENSE]&nbsp;
+  [![GitHub release](https://img.shields.io/github/v/release/spectrum-health-systems/Abatab?style=flat)][CURRENT-RELEASE]&nbsp;
   <br>
   <br>
   
@@ -37,7 +43,7 @@
        - The menu bar color scheme should match the color scheme of the project.
   -->
 
-  [![REPOSITORY](https://img.shields.io/badge/REPOSITORY-FFEE00?style=for-the-badge)](REPOSITORY)&nbsp;&nbsp;&nbsp;[![CHANGELOG](https://img.shields.io/badge/CHANGELOG-FF8D00?style=for-the-badge)](Documentation/Changelog.md)&nbsp;&nbsp;&nbsp;[![ROADMAP](https://img.shields.io/badge/ROADMAP-FF8D00?style=for-the-badge)](Documentation/Roadmap.md)&nbsp;&nbsp;&nbsp;[![MANUAL](https://img.shields.io/badge/MANUAL-FF8D00?style=for-the-badge)](Documentation/Manual/Manual.md)&nbsp;&nbsp;&nbsp;[![SOURCECODE-DOCUMENTATION](https://img.shields.io/badge/SOURCECODE%20DOCUMENTATION-FF8D00?style=for-the-badge)](Documentation/Sourcecode/Sourcecode.md)
+  [![REPOSITORY](https://img.shields.io/badge/REPOSITORY-FF8D00?style=for-the-badge)](REPOSITORY)&nbsp;&nbsp;&nbsp;[![CHANGELOG](https://img.shields.io/badge/CHANGELOG-FF8D00?style=for-the-badge)](Documentation/Changelog.md)&nbsp;&nbsp;&nbsp;[![ROADMAP](https://img.shields.io/badge/ROADMAP-FF8D00?style=for-the-badge)](Documentation/Roadmap.md)&nbsp;&nbsp;&nbsp;[![MANUAL](https://img.shields.io/badge/MANUAL-FFEE00?style=for-the-badge)](Documentation/Manual/Manual.md)&nbsp;&nbsp;&nbsp;[![SOURCECODE-DOCUMENTATION](https://img.shields.io/badge/SOURCECODE%20DOCUMENTATION-FF8D00?style=for-the-badge)](Documentation/Sourcecode/Sourcecode.md)
   <br>
   <br>
 
@@ -73,7 +79,7 @@ This readme is short and sweet because the [Abatab Manual](./Documentation/Manua
      These reference links should be standard across all project documentation.
 -->
 [REPOSITORY-URL]: https://github.com/spectrum-health-systems/Abatab
-[PROJECT-LOGO]: ./.github/Logos/ProjectLogo.png
+[PROJECT-LOGO]: ../../.github/Logos/ProjectLogo.png
 [README-SCREENSHOT]: ./.github/Screenshots/ReadmeScreenshot.png
 [LICENSE]: https://www.apache.org/licenses/LICENSE-2.0
 [CURRENT-RELEASE]: https://github.com/spectrum-health-systems/Abatab/releases
@@ -117,3 +123,12 @@ This readme is short and sweet because the [Abatab Manual](./Documentation/Manua
   [![Pulls](https://img.shields.io/github/issues-pr/spectrum-health-systems/MAWSC?style=flat)](https://github.com/spectrum-health-systems/MAWSC/pulls)
 
 </div>
+
+<!-- BREADCRUMBS
+     - Documentation breadcrumbs. This should also be at the start of the documentation as well.
+-->
+<br>
+
+***
+
+> [Abatab][REPOSITORY-URL] > Manual

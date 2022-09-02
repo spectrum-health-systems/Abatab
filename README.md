@@ -49,7 +49,7 @@
        - The menu bar color scheme should match the color scheme of the project.
   -->
 
-  [![REPOSITORY](https://img.shields.io/badge/REPOSITORY-FFEE00?style=for-the-badge)](REPOSITORY)&nbsp;&nbsp;&nbsp;[![CHANGELOG](https://img.shields.io/badge/CHANGELOG-FF8D00?style=for-the-badge)](Documentation/Changelog.md)&nbsp;&nbsp;&nbsp;[![ROADMAP](https://img.shields.io/badge/ROADMAP-FF8D00?style=for-the-badge)](Documentation/Roadmap.md)&nbsp;&nbsp;&nbsp;[![MANUAL](https://img.shields.io/badge/MANUAL-FF8D00?style=for-the-badge)](Documentation/Manual/Manual.md)&nbsp;&nbsp;&nbsp;[![SOURCECODE-DOCUMENTATION](https://img.shields.io/badge/SOURCECODE%20DOCUMENTATION-FF8D00?style=for-the-badge)](Documentation/Sourcecode/Sourcecode.md)
+  [![REPOSITORY](https://img.shields.io/badge/REPOSITORY-FFEE00?style=for-the-badge)](REPOSITORY)&nbsp;&nbsp;&nbsp;[![CHANGELOG](https://img.shields.io/badge/CHANGELOG-FF8D00?style=for-the-badge)](CHANGLOG)&nbsp;&nbsp;&nbsp;[![ROADMAP](https://img.shields.io/badge/ROADMAP-FF8D00?style=for-the-badge)](ROADMAP)&nbsp;&nbsp;&nbsp;[![MANUAL](https://img.shields.io/badge/MANUAL-FF8D00?style=for-the-badge)](MANUAL)&nbsp;&nbsp;&nbsp;[![SOURCECODE-DOCUMENTATION](https://img.shields.io/badge/SOURCECODE%20DOCUMENTATION-FF8D00?style=for-the-badge)](SOURCECODE)
   <br>
   <br>
 
@@ -79,7 +79,7 @@ The good news is that myAvatar™ functionality can be extended via Netsmart's m
 
 # The Abatab manual
 
-This readme is short and sweet because the [Abatab Manual](./Documentation/Manual/Manual.md), which is updated with each release, contains everything you need to know about Abatab.
+This readme is short and sweet because the [Abatab Manual](MANUAL), which is updated with each release, contains everything you need to know about Abatab.
 
 <!-- REFERENCE LINKS: REPOSITORY
      These reference links should be standard across all project documentation.
@@ -95,6 +95,8 @@ This readme is short and sweet because the [Abatab Manual](./Documentation/Manua
 -->
 [MANUAL]: ./Documentation/Manual/Abatab-Manual.md
 [SOURCECODE]: ./Documentation/Sourcecode/Abatab-Sourcecode.md
+[CHANGELOG]: ./Documentation/CHANGELOG.md
+[ROADMAP: ./Documentation/ROAPMAP.md
 [AUTHORS]: ./.github/Documentation/Repository/AUTHORS.md
 [BUILT-WITH]: ./.github/Documentation/Repository/BUILT-WITH.md
 [CODE-OF-CONDUCT]: ./.github/Documentation/Repository/CODE-OF-CONDUCT.md
