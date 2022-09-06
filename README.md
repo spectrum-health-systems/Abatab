@@ -84,8 +84,6 @@ The good news is that you can extend myAvatar™ functionality via Netsmart's my
   * .NET Framework 4.8+ installed
   * Access to your myAvatar™ environments via HTTPS
 
-<br>
-
 # The Abatab Manual
 
 This README is short and sweet because the [Abatab Manual][MANUAL], which is updated with each release, contains everything you need to know about Abatab.
