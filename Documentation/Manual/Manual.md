@@ -16,7 +16,7 @@
       - Short description of the project.
   -->
 
-  Last updated: September 2, 2022
+  Last updated: September 6, 2022
 
   ![PROJECT-LOGO][PROJECT-LOGO]
   <h1> 
@@ -32,7 +32,7 @@
 
   <h2>
 
-  [Home](manual.md)&nbsp;&bull;&nbsp;Getting started&nbsp;&bull;&nbsp;[Hosting](manual-hosting-maws.md)&nbsp;&bull;&nbsp;[Importing](manual-importing-maws.md)&nbsp;&bull;&nbsp;[Using](manual-using-maws.md)&nbsp;&bull;&nbsp;[ScriptLink](manual-scriptlink-events.md)&nbsp;&bull;&nbsp;[Additional information](manual-additional-information.md)
+  [Home](Manual.md)&nbsp;&bull;&nbsp;Getting started&nbsp;&bull;&nbsp;[Hosting](Manual-Hosting-Abatab.md)&nbsp;&bull;&nbsp;[Importing](Manual-Importing-Abatab.md)&nbsp;&bull;&nbsp;[Using](Manual-Using-Abatab.md)&nbsp;&bull;&nbsp;[ScriptLink](Manual-ScriptLink.md)&nbsp;&bull;&nbsp;[Additional information](Manual-Additional-Information.md)
 
   </h2>
   </div>
