@@ -54,27 +54,30 @@
   ### [Changelog][CHANGELOG]&nbsp;&bull;&nbsp;[Roadmap][ROADMAP]&nbsp;&bull;&nbsp;[Manual][MANUAL]&nbsp;&bull;&nbsp;[Sourcecode documentation][SOURCECODE-DOCUMENTATION]
   ***
 
-
-
-
 </div>
 
 <br>
 
-<!-- TABLE OF CONTENTS -->
+<!-- TABLE OF CONTENTS
+     - This component is optional.
+-->
+<!-- NOT USED
 <details open="open">
   <summary>CONTENTS</summary>
 
   * [About][TOC-ABOUT]
   * [Getting started][TOC-GETTING-STARTED]
+  * [Installing][TOC-INSTALLING]
+  * [SETUP][TOC-SETUP]
 
 </details>
+-->
 
 <br>
 
 <!--  ABOUT
 -->
-# About Abatab
+# About
 
 [Netsmart's myAvatar™][MYAVATAR] is a behavioral health EHR that offers a recovery-focused suite of solutions that leverage real-time analytics and clinical decision support to drive value-based care.
 
@@ -142,9 +145,14 @@ This README is short and sweet because the [Abatab Manual][MANUAL], which is upd
 <!-- README TABLE OF CONTENTS -->
 [TOC-ABOUT]: #about
 [TOC-GETTING-STARTED]: #getting-started
-[MANUAL]: ./Documentation/Manual/Manual.md
-[SOURCECODE-DOCUMENTATION]: ./Documentation/Sourcecode/Sourcecode.md
-
+[TOC-INSTALLING]: #installing
+[TOC-SETUP]: #setup
+[TOC-USING]: #using
+[TOC-COMPILING]: #compiling
+[TOC-TESTING]: #testing
+[TOC-API]: #apt
+[TOC-DEVELOPMENT]: #development
+[TOC-ADDITIONAL-INFORMATION]: #additional-information
 
 <!-- REFERENCE LINKS: REPOSITORY DOCUMENTATION
      These reference links should be standard across all project documentation.
