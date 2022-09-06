@@ -43,7 +43,7 @@
   -->
   ![REPOSITORY-STATUS][STATUS-ACTIVE]&nbsp;&nbsp;[![REPOSITORY-LICENSE][REPOSITORY-LICENSE]][REPOSITORY-LICENSE-URL]&nbsp;&nbsp;[![CURRENT-RELEASE][CURRENT-RELEASE]][CURRENT-RELEASE-URL]
 
-  <!-- REPOSITORY PRIMARY MENU
+  <!-- REPOSITORY MENU
        - Links to:
           - Repository changelog
           - Repository roadmap
@@ -54,24 +54,23 @@
   ### [Changelog][CHANGELOG]&nbsp;&bull;&nbsp;[Roadmap][ROADMAP]&nbsp;&bull;&nbsp;[Manual][MANUAL]&nbsp;&bull;&nbsp;[Sourcecode documentation][SOURCECODE-DOCUMENTATION]
   ***
 
-<table align="left">
-    <thead>
-        <tr>
-            <th>CONTENTS</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>About</td>
-        </tr>
-        <tr>
-            <td>Getting started</td>
-        </tr>
-    </tbody>
-</table>
+
 
 
 </div>
+
+<br>
+
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary>CONTENTS</summary>
+
+  * [About][TOC-ABOUT]
+  * [Getting started][TOC-GETTING-STARTED]
+
+</details>
+
+<br>
 
 <!--  ABOUT
 -->
@@ -131,27 +130,27 @@ This README is short and sweet because the [Abatab Manual][MANUAL], which is upd
 [CURRENT-RELEASE]: https://img.shields.io/github/v/release/spectrum-health-systems/Abatab?style=flat-square
 [CURRENT-RELEASE-URL]: https://github.com/spectrum-health-systems/Abatab/releases
 
-
-
-
-
-
-<!-- README
-     - Available to the repository README.
--->
+<!-- README SCREENSHOT -->
 [README-SCREENSHOT]: ./.github/Screenshots/ReadmeScreenshot.png
 
+<!-- README MENU -->
+[CHANGELOG]: ./Documentation/CHANGELOG.md
+[ROADMAP]: ./Documentation/ROADMAP.md
+[MANUAL]: ./Documentation/Manual/Manual.md
+[SOURCECODE-DOCUMENTATION]: ./Documentation/Sourcecode/Sourcecode.md
 
-
+<!-- README TABLE OF CONTENTS -->
+[TOC-ABOUT]: #about
+[TOC-GETTING-STARTED]: #getting-started
+[MANUAL]: ./Documentation/Manual/Manual.md
+[SOURCECODE-DOCUMENTATION]: ./Documentation/Sourcecode/Sourcecode.md
 
 
 <!-- REFERENCE LINKS: REPOSITORY DOCUMENTATION
      These reference links should be standard across all project documentation.
 -->
-[MANUAL]: ./Documentation/Manual/Manual.md
-[SOURCECODE-DOCUMENTATION]: ./Documentation/Sourcecode/Sourcecode.md
-[CHANGELOG]: ./Documentation/CHANGELOG.md
-[ROADMAP]: ./Documentation/ROADMAP.md
+
+
 [AUTHORS]: ./.github/Documentation/Repository/AUTHORS.md
 [BUILT-WITH]: ./.github/Documentation/Repository/BUILT-WITH.md
 [CODE-OF-CONDUCT]: ./.github/Documentation/Repository/CODE-OF-CONDUCT.md
