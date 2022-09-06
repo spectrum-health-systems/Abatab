@@ -57,9 +57,6 @@
 
 </div>
 
-<br>
-
-
 <!--  ABOUT
 -->
 # About Abatab
