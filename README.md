@@ -99,6 +99,7 @@ This README is short and sweet because the [Abatab Manual][MANUAL], which is upd
 
 <!-- REPOSITORY -->
 [REPOSITORY-URL]: https://github.com/spectrum-health-systems/Abatab
+[CURRENT-BRANCH-URL]: README.md
 
 <!-- BRANCH WARNINGS -->
 [BRANCH-ALPHA]: https://img.shields.io/badge/WARNING-THIS%20IS%20ALPHA%20SOFTWARE-FF160C?style=for-the-badge
