@@ -25,7 +25,7 @@
   <!-- REPOSITORY LOGO
       - The repository logo should be located at "./.github/Logos/RepositoryLogo.png".
   -->
-  [![REPOSITORY-LOGO][REPOSITORY-LOGO]][REPOSITORY-URL]
+  [![REPOSITORY-LOGO][REPOSITORY-LOGO]][CURRENT-BRANCH-URL]
 
   <!-- SHORT DESCRIPTION OF REPOSITORY
       - A short, one-line description of the project.
