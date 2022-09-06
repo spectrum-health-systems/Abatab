@@ -51,7 +51,7 @@
           - Repository sourcecode documentation
   -->
   ***
-  ### [Changelog][CHANGELOG]&nbsp;&nbsp;&bull;&nbsp;&nbsp;[Roadmap][ROADMAP]&nbsp;&nbsp;&bull;&nbsp;&nbsp;[Manual][MANUAL]&nbsp;&nbsp;&bull;&nbsp;&nbsp;[Sourcecode documentation][SOURCECODE-DOCUMENTATION]
+  ### [Changelog][CHANGELOG]&nbsp;&bull;&nbsp;[Roadmap][ROADMAP]&nbsp;&bull;&nbsp;[Manual][MANUAL]&nbsp;&nbsp;&bull;&nbsp;&nbsp;[Sourcecode documentation][SOURCECODE-DOCUMENTATION]
 
   ***
 
