@@ -26,7 +26,6 @@
       - The repository logo should be located at "./.github/Logos/RepositoryLogo.png".
   -->
   [![REPOSITORY-LOGO][REPOSITORY-LOGO]][CURRENT-BRANCH-URL]
-
   # A custom web service for Netsmart's myAvatar™ EHR
 
   <!-- REPOSITORY BADGE
