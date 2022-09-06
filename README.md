@@ -53,9 +53,8 @@
   ***
   ### [Changelog][CHANGELOG]&nbsp;&bull;&nbsp;[Roadmap][ROADMAP]&nbsp;&bull;&nbsp;[Manual][MANUAL]&nbsp;&bull;&nbsp;[Sourcecode documentation][SOURCECODE-DOCUMENTATION]
   ***
-</div>
 
-<br>
+</div>
 
 <!--  ABOUT
 -->
