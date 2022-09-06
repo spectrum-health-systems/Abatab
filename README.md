@@ -19,13 +19,13 @@
        - Should not be used in production.
   -->
   ![REPOSITORY-WARNING][BRANCH-BETA]
-
+  
   ***
 
   <!-- REPOSITORY LOGO
       - The repository logo should be located at "./.github/Logos/RepositoryLogo.png".
   -->
-  ![REPOSITORY-LOGO][REPOSITORY-LOGO]
+  [![REPOSITORY-LOGO][REPOSITORY-LOGO]][REPOSITORY-URL]
 
   <!-- SHORT DESCRIPTION OF REPOSITORY
       - A short, one-line description of the project.
@@ -41,9 +41,7 @@
                - [STATUS-DEPRECIATED]
                - [STATUS-ARCHIVED]
   -->
-  ![REPOSITORY-STATUS][STATUS-ACTIVE]&nbsp;&nbsp;&nbsp;[![REPOSITORY-LICENSE][REPOSITORY-LICENSE]][REPOSITORY-LICENSE-URL]&nbsp;&nbsp;&nbsp;[![CURRENT-RELEASE][CURRENT-RELEASE]][CURRENT-RELEASE-URL]
-  <br>
-  >
+  ![REPOSITORY-STATUS][STATUS-ACTIVE]&nbsp;&nbsp;[![REPOSITORY-LICENSE][REPOSITORY-LICENSE]][REPOSITORY-LICENSE-URL]&nbsp;&nbsp;[![CURRENT-RELEASE][CURRENT-RELEASE]][CURRENT-RELEASE-URL]
 
   <!-- PROJECT MENU
        - The menu bar should have links to:
@@ -99,9 +97,15 @@ This README is short and sweet because the [Abatab Manual][MANUAL], which is upd
 
 <!-- REFERENCE LINKS -->
 
+<!-- REPOSITORY -->
+[REPOSITORY-URL]: https://github.com/spectrum-health-systems/Abatab
+
 <!-- BRANCH WARNINGS -->
 [BRANCH-ALPHA]: https://img.shields.io/badge/WARNING-THIS%20IS%20ALPHA%20SOFTWARE-FF160C?style=for-the-badge
 [BRANCH-BETA]: https://img.shields.io/badge/WARNING-THIS%20IS%20BETA%20SOFTWARE-FF160C?style=for-the-badge
+
+<!-- REPOSITORY LOGO -->
+[REPOSITORY-LOGO]: ./.github/Logos/RepositoryLogo.png
 
 <!-- REPOSITORY STATUS -->
 [STATUS-ACTIVE]: https://img.shields.io/badge/status-active-brightgreen?style=flat-square
@@ -117,11 +121,7 @@ This README is short and sweet because the [Abatab Manual][MANUAL], which is upd
 [CURRENT-RELEASE-URL]: https://github.com/spectrum-health-systems/Abatab/releases
 
 
-<!-- REPOSITORY
-     - These should be vailable across all project documentation.
--->
-[REPOSITORY-URL]: https://github.com/spectrum-health-systems/Abatab
-[REPOSITORY-LOGO]: ./.github/Logos/RepositoryLogo.png
+
 
 
 
