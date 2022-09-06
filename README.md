@@ -27,10 +27,6 @@
   -->
   [![REPOSITORY-LOGO][REPOSITORY-LOGO]][CURRENT-BRANCH-URL]
 
-  <!-- SHORT DESCRIPTION OF REPOSITORY
-      - A short, one-line description of the project.
-      - By default this uses H1, but you can use H2 if you need more space.
-  -->
   # A custom web service for Netsmart's myAvatar™ EHR
 
   <!-- REPOSITORY BADGE
@@ -42,7 +38,7 @@
                - [STATUS-ARCHIVED]
   -->
   ![REPOSITORY-STATUS][STATUS-ACTIVE]&nbsp;&nbsp;[![REPOSITORY-LICENSE][REPOSITORY-LICENSE]][REPOSITORY-LICENSE-URL]&nbsp;&nbsp;[![CURRENT-RELEASE][CURRENT-RELEASE]][CURRENT-RELEASE-URL]
-  
+
   ***
 
 
