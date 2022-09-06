@@ -42,10 +42,6 @@
                - [STATUS-ARCHIVED]
   -->
   ![REPOSITORY-STATUS][STATUS-ACTIVE]&nbsp;&nbsp;[![REPOSITORY-LICENSE][REPOSITORY-LICENSE]][REPOSITORY-LICENSE-URL]&nbsp;&nbsp;[![CURRENT-RELEASE][CURRENT-RELEASE]][CURRENT-RELEASE-URL]
-  #
-
-  ***
-
 
   <!-- PROJECT MENU
        - The menu bar should have links to:
