@@ -43,26 +43,21 @@
   -->
   ![REPOSITORY-STATUS][STATUS-ACTIVE]&nbsp;&nbsp;[![REPOSITORY-LICENSE][REPOSITORY-LICENSE]][REPOSITORY-LICENSE-URL]&nbsp;&nbsp;[![CURRENT-RELEASE][CURRENT-RELEASE]][CURRENT-RELEASE-URL]
 
-  <!-- PROJECT MENU
-       - The menu bar should have links to:
-          - The project repository
-          - The project changelog
-          - The project roadmap
-          - The project manual
-          - The project sourcecode documentation
-       - The menu bar color scheme should match the color scheme of the project.
+  <!-- REPOSITORY PRIMARY MENU
+       - Links to:
+          - Repository changelog
+          - Repository roadmap
+          - Repository manual
+          - Repository sourcecode documentation
   -->
-
   ***
   ### [Changelog][CHANGELOG]&nbsp;&nbsp;&bull;&nbsp;&nbsp;[Roadmap][ROADMAP]&nbsp;&nbsp;&bull;&nbsp;&nbsp;[Manual][MANUAL]&nbsp;&nbsp;&bull;&nbsp;&nbsp;[Sourcecode documentation][SOURCECODE-DOCUMENTATION]
 
-***
+  ***
 
 </div>
 
-<br><br>
-
-
+<br>
 
 
 <!--  ABOUT
