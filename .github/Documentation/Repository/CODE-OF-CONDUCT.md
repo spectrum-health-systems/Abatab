@@ -17,7 +17,7 @@
       - Project logo should be located at "./.github/Logos/ProjectLogo.png".
       - Short description of the project.
   -->
-  ![PROJECT-LOGO][PROJECT-LOGO]
+  ![REPOSITORY-LOGO][REPOSITORY-LOGO]
 
   This project is released with a Contributor Code of Conduct, adapted from the [Contributor Covenant](https://www.contributor-covenant.org/). By participating in this project you agree to abide by its terms.
 
@@ -119,4 +119,4 @@ Translations are available at https://www.contributor-covenant.org/translations.
      These reference links should be standard across all project documentation.
 -->
 [REPOSITORY-URL]: https://github.com/spectrum-health-systems/Abatab
-[PROJECT-LOGO]: ../Logos/ProjectLogo.png
+[REPOSITORY-LOGO]: ../Logos/ProjectLogo.png

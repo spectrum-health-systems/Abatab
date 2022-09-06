@@ -17,7 +17,7 @@
       - Project logo should be located at "./.github/Logos/ProjectLogo.png".
       - Short description of the project.
   -->
-  ![PROJECT-LOGO][PROJECT-LOGO]
+  ![REPOSITORY-LOGO][REPOSITORY-LOGO]
 
 </div>
 
@@ -76,7 +76,7 @@ Provide a detailed description of any workarounds
      These reference links should be standard across all project documentation.
 -->
 [REPOSITORY-URL]: https://github.com/spectrum-health-systems/Abatab
-[PROJECT-LOGO]: ../Logos/ProjectLogo.png
+[REPOSITORY-LOGO]: ../Logos/ProjectLogo.png
 
 [CODE-OF-CONDUCT]: ./.github/Documentation/CODE-OF-CONDUCT.md
 
