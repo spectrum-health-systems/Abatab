@@ -54,7 +54,7 @@
   -->
 
   ***
-  ### [REPOSITORY][REPOSITORY-URL]&nbsp;&nbsp;&nbsp;[CHANGELOG][CHANGELOG]&nbsp;&nbsp;&nbsp;[ROADMAP][ROADMAP]&nbsp;&nbsp;&nbsp;[MANUAL][MANUAL]&nbsp;&nbsp;&nbsp;[SOURCECODE-DOCUMENTATION][SOURCECODE-DOCUMENTATION]
+  ### [Changelog][CHANGELOG]&nbsp;&nbsp;&bull;&nbsp;&nbsp;[Roadmap][ROADMAP]&nbsp;&nbsp;&bull;&nbsp;&nbsp;[Manual][MANUAL]&nbsp;&nbsp;&bull;&nbsp;&nbsp;[Sourcecode documentation][SOURCECODE-DOCUMENTATION]
 
 ***
 
