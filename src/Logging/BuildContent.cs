@@ -10,6 +10,7 @@
  * ========================================================================================================
  */
 
+using NTST.ScriptLinkService.Objects;
 using System;
 using System.IO;
 
@@ -18,7 +19,7 @@ namespace Abatab.Logging
     public class BuildContent
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="eventType"></param>
         /// <param name="assemblyName"></param>
@@ -81,35 +82,53 @@ namespace Abatab.Logging
         {
             switch (eventType)
             {
-                case "trace":
-                    // Don't do anything
-                    break;
-
                 case "sessionInformation":
-                    // Don't do anything
-                    break;
+                    return BodySessionInformation(abatabSession);
 
+                case "SentOptObjInformation":
+                    return BodyOptObjInformation(abatabSession.SentOptObj);
+
+                case "WorkerOptObjInformation":
+                    return BodyOptObjInformation(abatabSession.WorkerOptObj);
+
+                case "FinalOptObjInformation":
+                    return BodyOptObjInformation(abatabSession.FinalOptObj);
+
+                case "trace":
                 default:
-                    // Include Trace?
-                    break;
+                    return "";
             }
-
-
-            return "";
         }
 
         /// <summary>
-        /// 
+        /// OptionObject information for log body.
+        /// </summary>
+        /// <param name="abatabSession"></param>
+        /// <returns></returns>
+        private static string BodyOptObjInformation(OptionObject2015 optObj)
+        {
+            return $"       EntityID: {optObj.EntityID}{Environment.NewLine}" +
+                   $"       Facility: {optObj.Facility}{Environment.NewLine}" +
+                   $"  NamespaceName: {optObj.NamespaceName}{Environment.NewLine}" +
+                   $"       OptionId: {optObj.OptionId}{Environment.NewLine}" +
+                   $"ParentNamespace: {optObj.ParentNamespace}{Environment.NewLine}" +
+                   $"     ServerName: {optObj.ServerName}{Environment.NewLine}" +
+                   $"     SystemCode: {optObj.SystemCode}{Environment.NewLine}" +
+                   $"  EpisodeNumber: {optObj.EpisodeNumber}{Environment.NewLine}" +
+                   $"  OptionStaffId: {optObj.OptionStaffId}{Environment.NewLine}" +
+                   $"   OptionUserId: {optObj.OptionUserId}{Environment.NewLine}" +
+                   $"      ErrorCode: {optObj.ErrorCode}{Environment.NewLine}" +
+                   $"      ErrorMesg: {optObj.ErrorMesg}";
+        }
+
+        /// <summary>
+        /// Session information log body.
         /// </summary>
         /// <param name="abatabSession"></param>
         /// <returns></returns>
         private static string BodySessionInformation(Session abatabSession)
         {
-            // TODO - Verify this works.
-            var workerOptObjModified = OptionObject.Verify.NotModified(abatabSession.SentOptObj, abatabSession.WorkerOptObj);
-
-            var workerOptObjModified = OptionObject.Verify.NotModified(abatabSession.SentOptObj, abatabSession.WorkerOptObj);
-
+            // TODO - Verify this works, especially the modification stuff.
             return $"{Environment.NewLine}" +
                           $"              Abatab mode: {abatabSession.AbatabMode}{Environment.NewLine}" +
                           $"                 Log mode: {abatabSession.LogMode}{Environment.NewLine}" +
@@ -118,22 +137,9 @@ namespace Abatab.Logging
                           $"                Datestamp: {abatabSession.DateStamp}{Environment.NewLine}" +
                           $"                Timestamp: {abatabSession.TimeStamp}{Environment.NewLine}" +
                           $"           Abatab request: {abatabSession.AvatarUserName}{Environment.NewLine}" +
-                          $"  Working Object modified: {workerOptObjModified}{Environment.NewLine}" +
-                          $"    Final Object modified: {finalOptObjModified}{Environment.NewLine}";
-
+                          $" Working Object unchanged: {OptionObject.Verify.NotModified(abatabSession.SentOptObj, abatabSession.WorkerOptObj)}{Environment.NewLine}" +
+                          $"   Final Object unchanged: {OptionObject.Verify.NotModified(abatabSession.SentOptObj, abatabSession.FinalOptObj)}{Environment.NewLine}";
         }
-
-
-        /*
-         * 
-
-        public OptionObject2015 SentOptObj { get; set; }
-        public OptionObject2015 WorkerOptObj { get; set; }
-        public OptionObject2015 FinalOptObj { get; set; }
-        
-         */
-
-
 
         /// <summary>
         /// Standard log footer
