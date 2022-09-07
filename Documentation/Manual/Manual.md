@@ -16,10 +16,9 @@
       - Short description of the project.
   -->
 
-  Last updated: September 6, 2022
+  Last updated: September 7, 2022
 
-  ![REPOSITORY-LOGO][REPOSITORY-LOGO]
-  # Abatab Manual
+  ![MANUAL-LOGO][MANUAL-LOGO]
 
   <h2>
 
@@ -71,6 +70,7 @@ Ready to implement Abatab in your environment? [Let's get started!][MANUAL-GETTI
 <!-- REFERENCE LINKS: REPOSITORY DOCUMENTATION
      These reference links should be standard across all project documentation.
 -->
+[MANUAL-LOGO]: ./Images/ManualLogo.png
 [MANUAL]: ./Documentation/Manual/Manual.md
 [MANUAL-GETTING-STARTED]: ./Documentation/Manual/Manual-Getting-Started.md
 [MANUAL-HOSTING]: ./Documentation/Manual/Manual-Hosting-Abatab.md

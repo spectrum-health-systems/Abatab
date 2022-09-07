@@ -22,5 +22,41 @@ namespace Abatab.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("enabled")]
+        public string AbatabMode {
+            get {
+                return ((string)(this["AbatabMode"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("all")]
+        public string LogMode {
+            get {
+                return ((string)(this["LogMode"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Abatab\\")]
+        public string AbatabRootDirectory {
+            get {
+                return ((string)(this["AbatabRootDirectory"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("_Abatab_")]
+        public string AvatarFallbackUserName {
+            get {
+                return ((string)(this["AvatarFallbackUserName"]));
+            }
+        }
     }
 }
