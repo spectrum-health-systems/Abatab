@@ -1,42 +1,33 @@
-<!-- A generic template for an ADDITIONAL-RESOURCES document [b220829.094029]
-     - All URLs should use reference-links added at the end of this documentation.
--->
+<!-- A generic ADDITIONAL-RESOURCES.md template for a GitHub repository [b220907] -->
+<!-- Last updated: 9.7.22 -->
 
-<!-- BREADCRUMBS
-     - Documentation breadcrumbs.
-     - This should also be at the end of the documentation as well.
--->
-> [Abatab][REPOSITORY-URL] > Additional resources
-
+<!-- DOCUMENTATION BREADCRUMBS -->
+> [Abatab][CURRENT-BRANCH-URL] > Additional resources
 ***
 
 <br>
 <div align="center">
 
-  <!-- PROJECT LOGO
-      - Project logo should be located at "./.github/Logos/ProjectLogo.png".
-      - Short description of the project.
-  -->
-  ![REPOSITORY-LOGO][REPOSITORY-LOGO]
+  <!-- REPOSITORY LOGO -->
+  [![REPOSITORY-LOGO][REPOSITORY-LOGO]][CURRENT-BRANCH-URL]
 
 </div>
 
 # Additional resources
 
-* [RESOURCE](RESOURCE-URL)  
-A little blurb about this resource.
+* [Avatar Development Community][AVATAR-DEVELOPMENT-COMMUNITY]  
+The myAvatar™ Development Community contains community-driven documentation, projects, and templates for Netsmart's myAvatar™ EHR.
 
-<!-- BREADCRUMBS
-     - Documentation breadcrumbs. This should also be at the start of the documentation as well.
--->
 <br>
 
+<!-- DOCUMENTATION BREADCRUMBS -->
 ***
+> [Abatab][CURRENT-BRANCH-URL] > Additional resources
 
-> [Abatab][REPOSITORY-URL] > Additional resources
-
-<!-- REFERENCE LINKS: STANDARD
-     These reference links should be standard across all project documentation.
--->
+<!-- REFERENCE LINKS: REPOSITORY -->
 [REPOSITORY-URL]: https://github.com/spectrum-health-systems/Abatab
-[REPOSITORY-LOGO]: ../Logos/ProjectLogo.png
+[CURRENT-BRANCH-URL]: ../../../README.md
+[REPOSITORY-LOGO]: ../../Logos/RepositoryLogo.png
+
+<!-- REFERENCE LINKS: ADDITIONAL RESOURCES -->
+[AVATAR-DEVELOPMENT-COMMUNITY]: https://github.com/myAvatar-Development-Community
