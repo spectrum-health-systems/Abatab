@@ -1,14 +1,8 @@
 ﻿/* ========================================================================================================
- * Abatab: A custom web service for Netsmart's myAvatar™ EHR.
- * v0.0.1.0-devbuild+220907.121935
- * https://github.com/spectrum-health-systems/Abatab
- * Copyright (c) 2021-2022 A Pretty Cool Program (see LICENSE file for more information)
- * --------------------------------------------------------------------------------------------------------
- * Abatab.Session.cs: Session object properties
- * b220907.122057
+ * Abatab.Session.cs: Session object properties.
+ * b220912.112504
  * https://github.com/spectrum-health-systems/Abatab/blob/main/Documentation/Sourcecode/Sourcecode.md
- * ========================================================================================================
- */
+ * ===================================================================================================== */
 
 using NTST.ScriptLinkService.Objects;
 

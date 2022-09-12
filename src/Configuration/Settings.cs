@@ -1,14 +1,8 @@
 ﻿/* ========================================================================================================
- * Abatab: A custom web service for Netsmart's myAvatar™ EHR.
- * v0.0.1.0-devbuild+220907.121935
- * https://github.com/spectrum-health-systems/Abatab
- * Copyright (c) 2021-2022 A Pretty Cool Program (see LICENSE file for more information)
- * --------------------------------------------------------------------------------------------------------
  * Abatab.Configuration.Settings.cs: Creates session configuration settings.
- * b220907.122057
+ * b220912.112816
  * https://github.com/spectrum-health-systems/Abatab/blob/main/Documentation/Sourcecode/Sourcecode.md
- * ========================================================================================================
- */
+ * ===================================================================================================== */
 
 using NTST.ScriptLinkService.Objects;
 using System;
@@ -18,16 +12,18 @@ namespace Abatab.Configuration
     public class Settings
     {
         /// <summary>
-        /// Build configuration settings for this Abatab session.
+        /// Build configuration settings for an Abatab session.
         /// </summary>
-        /// <param name="sentOptionObject">OptionObject2015 sent from myAvatar.</param>
-        /// <param name="abatabRequest">Request to be executed.</param>
+        /// <param name="sentOptObj">OptionObject2015 sent from myAvatar.</param>
+        /// <param name="abatabRequest">Abatab request to be executed.</param>
         /// <returns>Session configuration settings.</returns>
         public static Session Build(OptionObject2015 sentOptObj, string abatabRequest)
         {
             Session abatabSession = Initialize(sentOptObj, abatabRequest);
-            // Assume reference type
-            _=Verify(abatabSession);
+
+            /* We need to verify components of the Abatab session configuration setting before continuing.
+             */
+            _=VerifyAvatarUserName(abatabSession); // TODO Assume reference type, but make sure this works.
 
             return abatabSession;
         }
@@ -35,7 +31,7 @@ namespace Abatab.Configuration
         /// <summary>
         /// Initialize the Abatab session configuration settings.
         /// </summary>
-        /// <param name="sentOptionObject">OptionObject2015 sent from myAvatar.</param>
+        /// <param name="sentOptObj">OptionObject2015 sent from myAvatar.</param>
         /// <param name="abatabRequest">Request to be executed.</param>
         /// <returns></returns>
         private static Session Initialize(OptionObject2015 sentOptObj, string abatabRequest)
@@ -57,12 +53,16 @@ namespace Abatab.Configuration
         }
 
         /// <summary>
-        /// Verify the Abatab session configuration settings.
+        /// Verify the session AvatarUserName is valid.
         /// </summary>
-        /// <param name="abatabSession"></param>
-        /// <returns></returns>
-        private static Session Verify(Session abatabSession)
+        /// <param name="abatabSession">Abatab session configuration settings.</param>
+        /// <returns>Session object with verified AvatarUserName</returns>
+        private static Session VerifyAvatarUserName(Session abatabSession)
         {
+            /* The AvatarUserName is used to keep track of various session information, such as logs. If
+             * sentOptionObject.OptionUserId is blank, we will force it to be the AvatarFallbackUserName
+             * defined in the local configuration settings file.
+             */
             if (string.IsNullOrWhiteSpace(abatabSession.AvatarUserName))
             {
                 abatabSession.AvatarUserName = abatabSession.AvatarFallbackUserName;
