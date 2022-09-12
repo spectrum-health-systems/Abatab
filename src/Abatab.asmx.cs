@@ -1,6 +1,6 @@
 ﻿/* ========================================================================================================
  * Abatab: A custom web service for Netsmart's myAvatar™ EHR.
- * v0.2.1-devbuild+220912.112519
+ * v0.2.2-devbuild+220912.125400
  * https://github.com/spectrum-health-systems/Abatab
  * Copyright (c) 2021-2022 A Pretty Cool Program (see LICENSE file for more information)
  * --------------------------------------------------------------------------------------------------------
@@ -42,21 +42,29 @@ namespace Abatab
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string abatabRequest)
         {
-            var abatabSession = Configuration.Settings.Build(sentOptionObject, abatabRequest);
+            var executingAssembly = Assembly.GetExecutingAssembly().GetName().Name.ToLower();
 
-            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name.ToLower(), abatabSession);
+
+            var abatabSession = Configuration.Settings.Build(sentOptionObject, abatabRequest);
+            LogEvent.Trace(executingAssembly, abatabSession);
+            LogEvent.SessionInformation(abatabSession);
+            LogEvent.AllOptionObjectInformation(abatabSession);
+
 
             switch (abatabSession.AbatabMode)
             {
                 case "enabled":
+                    LogEvent.Trace(executingAssembly, abatabSession);
                     // Normal operation.
                     break;
 
                 case "disabled":
+                    LogEvent.Trace(executingAssembly, abatabSession);
                     // Don't do anything.
                     break;
 
                 case "passthrough":
+                    LogEvent.Trace(executingAssembly, abatabSession);
                     // Just create logs, don't make any changes to data.
                     break;
 

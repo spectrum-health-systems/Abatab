@@ -1,6 +1,6 @@
 ﻿/* ========================================================================================================
  * Abatab.Logging.BuildContent.cs: Builds content for a logfile.
- * b220912.112747
+ * b220912.113717
  * https://github.com/spectrum-health-systems/Abatab/blob/main/Documentation/Sourcecode/Sourcecode.md
  * ===================================================================================================== */
 
@@ -13,31 +13,55 @@ namespace Abatab.Logging
     public class BuildContent
     {
         /// <summary>
-        ///
+        /// Build the logfile content with trace information.
         /// </summary>
-        /// <param name="eventType"></param>
-        /// <param name="assemblyName"></param>
-        /// <param name="abatabSession"></param>
-        /// <param name="logMessage"></param>
-        /// <param name="callerFilePath"></param>
-        /// <param name="callerMemberName"></param>
-        /// <param name="callerLine"></param>
-        /// <returns></returns>
-        public static string Message(string eventType, string assemblyName, Session abatabSession, string logMessage, string callerFilePath, string callerMemberName, int callerLine)
+        /// <param name="eventType">Log type.</param>
+        /// <param name="assemblyName">Name of executing assembly.</param>
+        /// <param name="abatabSession">Abatab session configuration settings.</param>
+        /// <param name="logMessage">Message for the logfile</param>
+        /// <param name="callerFilePath">Filename of where the log is coming from.</param>
+        /// <param name="callerMemberName">Method of where the log is coming from.</param>
+        /// <param name="callerLine">File line of where the log is coming from.</param>
+        /// <returns>Contents for a logfile with trace information.</returns>
+        public static string LogTextWithTrace(string eventType, string assemblyName, Session abatabSession, string logMessage, string callerFilePath, string callerMemberName, int callerLine)
         {
             var logHeader  = LogHeader(logMessage);
-            var logDetails = LogDetails(eventType, assemblyName, callerFilePath, callerMemberName, callerLine);
+            var logDetails = LogDetailsWithTrace(eventType, assemblyName, callerFilePath, callerMemberName, callerLine);
             var logBody    = LogBody(eventType, abatabSession);
             var logFooter  = LogFooter();
 
-            return "";
+            return $"{logHeader}{Environment.NewLine}" +
+                   $"{logDetails}{Environment.NewLine}" +
+                   $"{logBody}{Environment.NewLine}" +
+                   $"{logFooter}{Environment.NewLine}";
         }
 
         /// <summary>
-        /// Standard log header
+        /// Build the logfile content without trace information.
         /// </summary>
-        /// <param name="logMessage"></param>
-        /// <returns></returns>
+        /// <param name="eventType">Log type.</param>
+        /// <param name="assemblyName">Name of executing assembly.</param>
+        /// <param name="abatabSession">Abatab session configuration settings.</param>
+        /// <param name="logMessage">Message for the logfile</param>
+        /// <returns>Contents for a logfile without trace information.</returns>
+        public static string LogTextWithoutTrace(string eventType, Session abatabSession, string logMessage)
+        {
+            var logHeader  = LogHeader(logMessage);
+            var logDetails = LogDetailsWithoutTrace(eventType);
+            var logBody    = LogBody(eventType, abatabSession);
+            var logFooter  = LogFooter();
+
+            return $"{logHeader}{Environment.NewLine}" +
+                   $"{logDetails}{Environment.NewLine}" +
+                   $"{logBody}{Environment.NewLine}" +
+                   $"{logFooter}{Environment.NewLine}";
+        }
+
+        /// <summary>
+        /// Build a standard log header.
+        /// </summary>
+        /// <param name="logMessage">Log message.</param>
+        /// <returns> Standard log header.</returns>
         private static string LogHeader(string logMessage)
         {
             return $"{logMessage}:{Environment.NewLine}" +
@@ -45,32 +69,42 @@ namespace Abatab.Logging
         }
 
         /// <summary>
-        /// Standard log details.
+        /// Build standard log details with trace information.
         /// </summary>
-        /// <param name="eventType"></param>
-        /// <param name="assemblyName"></param>
-        /// <param name="callerFilePath"></param>
-        /// <param name="callerMemberName"></param>
-        /// <param name="callerLine"></param>
-        /// <returns></returns>
-        private static string LogDetails(string eventType, string assemblyName, string callerFilePath, string callerMemberName, int callerLine)
+        /// <param name="eventType">Log type.</param>
+        /// <param name="assemblyName">Name of executing assembly.</param>
+        /// <param name="callerFilePath">Filename of where the log is coming from.</param>
+        /// <param name="callerMemberName">Method of where the log is coming from.</param>
+        /// <param name="callerLine">File line of where the log is coming from.</param>
+        /// <returns>Standard log details with trace information.</returns>
+        private static string LogDetailsWithTrace(string eventType, string assemblyName, string callerFilePath, string callerMemberName, int callerLine)
         {
-            var logBody = $"{Environment.NewLine}" +
+            return $"{Environment.NewLine}" +
                           $"Log type: {eventType}{Environment.NewLine}" +
                           $"Assembly: {assemblyName}{Environment.NewLine}" +
                           $"  Source: {Path.GetFileName(callerFilePath)}{Environment.NewLine}" +
                           $"  Member: {callerMemberName}{Environment.NewLine}" +
                           $"    Line: {callerLine}{Environment.NewLine}";
-
-            return logBody;
         }
 
         /// <summary>
-        /// Build the log body.
+        /// Build standard log details without trace information.
         /// </summary>
-        /// <param name="eventType"></param>
-        /// <param name="abatabSession"></param>
-        /// <returns></returns>
+        /// <param name="eventType">Log type.</param>
+        /// <param name="assemblyName">Name of executing assembly.</param>
+        /// <returns>Standard log details without trace information.</returns>
+        private static string LogDetailsWithoutTrace(string eventType)
+        {
+            return $"{Environment.NewLine}" +
+                   $"Log type: {eventType}{Environment.NewLine}";
+        }
+
+        /// <summary>
+        /// Build standard log body for different log events.
+        /// </summary>
+        /// <param name="eventType">Log type.</param>
+        /// <param name="abatabSession">Abatab session configuration settings.</param>
+        /// <returns>Standard log body.</returns>
         private static string LogBody(string eventType, Session abatabSession)
         {
             switch (eventType)
@@ -78,14 +112,17 @@ namespace Abatab.Logging
                 case "sessionInformation":
                     return BodySessionInformation(abatabSession);
 
-                case "SentOptObjInformation":
-                    return BodyOptObjInformation(abatabSession.SentOptObj);
+                case "allOptObjInformation":
+                    return BodyAllOptObjInformation(abatabSession);
 
-                case "WorkerOptObjInformation":
-                    return BodyOptObjInformation(abatabSession.WorkerOptObj);
+                case "sentOptObjInformation":
+                    return BodyOptObjInformation(abatabSession.SentOptObj, "sentOptObj");
 
-                case "FinalOptObjInformation":
-                    return BodyOptObjInformation(abatabSession.FinalOptObj);
+                case "workerOptObjInformation":
+                    return BodyOptObjInformation(abatabSession.WorkerOptObj, "workerOptObj");
+
+                case "finalOptObjInformation":
+                    return BodyOptObjInformation(abatabSession.FinalOptObj, "finalOptObj");
 
                 case "trace":
                 default:
@@ -94,31 +131,50 @@ namespace Abatab.Logging
         }
 
         /// <summary>
-        /// OptionObject information for log body.
+        /// Build information for all OptionObject types.
         /// </summary>
-        /// <param name="abatabSession"></param>
-        /// <returns></returns>
-        private static string BodyOptObjInformation(OptionObject2015 optObj)
+        /// <param name="optObj">OptionObject2015 object to get information for.</param>
+        /// <returns>Information for all OptionObject types.</returns>
+        private static string BodyAllOptObjInformation(Session abatabSession)
         {
-            return $"       EntityID: {optObj.EntityID}{Environment.NewLine}" +
-                   $"       Facility: {optObj.Facility}{Environment.NewLine}" +
-                   $"  NamespaceName: {optObj.NamespaceName}{Environment.NewLine}" +
-                   $"       OptionId: {optObj.OptionId}{Environment.NewLine}" +
-                   $"ParentNamespace: {optObj.ParentNamespace}{Environment.NewLine}" +
-                   $"     ServerName: {optObj.ServerName}{Environment.NewLine}" +
-                   $"     SystemCode: {optObj.SystemCode}{Environment.NewLine}" +
-                   $"  EpisodeNumber: {optObj.EpisodeNumber}{Environment.NewLine}" +
-                   $"  OptionStaffId: {optObj.OptionStaffId}{Environment.NewLine}" +
-                   $"   OptionUserId: {optObj.OptionUserId}{Environment.NewLine}" +
-                   $"      ErrorCode: {optObj.ErrorCode}{Environment.NewLine}" +
-                   $"      ErrorMesg: {optObj.ErrorMesg}";
+            var sentOptObjectInformation   = BodyOptObjInformation(abatabSession.SentOptObj, "sentOptObj");
+            var workerOptObjectInformation = BodyOptObjInformation(abatabSession.SentOptObj, "workerOptObj");
+            var finalOptObjectInformation  = BodyOptObjInformation(abatabSession.SentOptObj, "finalOptObj");
+
+            return $"{sentOptObjectInformation}{Environment.NewLine}" +
+                   $"{workerOptObjectInformation}{Environment.NewLine}" +
+                   $"{finalOptObjectInformation}{Environment.NewLine}";
+        }
+
+
+
+        /// <summary>
+        /// Build OptionObject information for log body.
+        /// </summary>
+        /// <param name="optObj">OptionObject2015 object to get information for.</param>
+        /// <returns>Standard OptionObject information.</returns>
+        private static string BodyOptObjInformation(OptionObject2015 optObj, string optObjType)
+        {
+            return $" OptionObject Type: {optObjType}{Environment.NewLine}" +
+                   $"          EntityID: {optObj.EntityID}{Environment.NewLine}" +
+                   $"          Facility: {optObj.Facility}{Environment.NewLine}" +
+                   $"     NamespaceName: {optObj.NamespaceName}{Environment.NewLine}" +
+                   $"          OptionId: {optObj.OptionId}{Environment.NewLine}" +
+                   $"   ParentNamespace: {optObj.ParentNamespace}{Environment.NewLine}" +
+                   $"        ServerName: {optObj.ServerName}{Environment.NewLine}" +
+                   $"        SystemCode: {optObj.SystemCode}{Environment.NewLine}" +
+                   $"     EpisodeNumber: {optObj.EpisodeNumber}{Environment.NewLine}" +
+                   $"     OptionStaffId: {optObj.OptionStaffId}{Environment.NewLine}" +
+                   $"      OptionUserId: {optObj.OptionUserId}{Environment.NewLine}" +
+                   $"         ErrorCode: {optObj.ErrorCode}{Environment.NewLine}" +
+                   $"         ErrorMesg: {optObj.ErrorMesg}";
         }
 
         /// <summary>
-        /// Session information log body.
+        /// Build standard session information log body.
         /// </summary>
-        /// <param name="abatabSession"></param>
-        /// <returns></returns>
+        /// <param name="abatabSession">Abatab session configuration settings.</param>
+        /// <returns>Standard session information.</returns>
         private static string BodySessionInformation(Session abatabSession)
         {
             // TODO - Verify this works, especially the modification stuff.
@@ -135,10 +191,9 @@ namespace Abatab.Logging
         }
 
         /// <summary>
-        /// Standard log footer
+        /// Build a standard log footer.
         /// </summary>
-        /// <param name="logMessage"></param>
-        /// <returns></returns>
+        /// <returns>Standard log footer.</returns>
         private static string LogFooter()
         {
             return $"End of log.{Environment.NewLine}" +
