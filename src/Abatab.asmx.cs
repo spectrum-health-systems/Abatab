@@ -1,15 +1,15 @@
 ﻿/* ========================================================================================================
  * Abatab: A custom web service for Netsmart's myAvatar™ EHR.
- * v0.2.2-devbuild+220912.125400
+ * v0.3.0-devbuild+220922.120908
  * https://github.com/spectrum-health-systems/Abatab
  * Copyright (c) 2021-2022 A Pretty Cool Program (see LICENSE file for more information)
  * --------------------------------------------------------------------------------------------------------
- * Abatab.asmx.cs: Entry point for MAWSC.
- * b220912.112513
+ * Abatab.asmx.cs: Entry point for Abatab.
+ * b220922.120913
  * https://github.com/spectrum-health-systems/Abatab/blob/main/Documentation/Sourcecode/Sourcecode.md
  * ===================================================================================================== */
 
-using Abatab.Logging;
+using AbatabLogging;
 using NTST.ScriptLinkService.Objects;
 using System.Reflection;
 using System.Web.Services;
@@ -19,9 +19,7 @@ namespace Abatab
     [WebService(Namespace = "http://tempuri.org/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
-    // To allow this Web Service to be called from script, using ASP.NET AJAX, uncomment the following line.
-    // [System.Web.Script.Services.ScriptService]
-    public class Abatab : System.Web.Services.WebService
+    public class Abatab : WebService
     {
         /// <summary>
         /// Return Abatab version.
@@ -42,29 +40,26 @@ namespace Abatab
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string abatabRequest)
         {
-            var executingAssembly = Assembly.GetExecutingAssembly().GetName().Name.ToLower();
-
-
-            var abatabSession = Configuration.Settings.Build(sentOptionObject, abatabRequest);
-            LogEvent.Trace(executingAssembly, abatabSession);
+            var abatabSession = AbatabSession.Configuration.Build(sentOptionObject, abatabRequest);
+            // var executingAssembly = Assembly.GetExecutingAssembly().GetName().Name; // DEPRECIATED
+            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name.ToLower(), abatabSession);
             LogEvent.SessionInformation(abatabSession);
             LogEvent.AllOptionObjectInformation(abatabSession);
-
 
             switch (abatabSession.AbatabMode)
             {
                 case "enabled":
-                    LogEvent.Trace(executingAssembly, abatabSession);
+                    LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
                     // Normal operation.
                     break;
 
                 case "disabled":
-                    LogEvent.Trace(executingAssembly, abatabSession);
+                    LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
                     // Don't do anything.
                     break;
 
                 case "passthrough":
-                    LogEvent.Trace(executingAssembly, abatabSession);
+                    LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
                     // Just create logs, don't make any changes to data.
                     break;
 

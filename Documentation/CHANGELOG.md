@@ -21,20 +21,23 @@
 
 </div>
 
-# v0.2.x
+# v0.1.x - v0.9.x-devbuild
 
-## v0.2.2-devbuild+220912.125400
+## v0.3.0
+`NEW` AbatabLogging.csproj
+`NEW` AbatabOptionObject.csproj
+`NEW` AbatabSession.csproj
+
+## v0.2.2
 `INFO` Code/comment cleanup
 
-## v0.2.1-devbuild+220912.112519
+## v0.2.1
 `INFO` Code/comment cleanup
 
-## v0.2.0-devbuild+220912.082819
+## v0.2.0
 `INFO` Comment cleanup
 
-# v0.1.x
-
-## v0.1.0-devbuild+220907.121935
+## v0.1.0
 `INFO` Initial framework commit
 
 <!-- BREADCRUMBS

@@ -1,12 +1,13 @@
 ﻿/* ========================================================================================================
- * Abatab.Logging.LogEvent.cs: Logs an Abatab event.
- * b220912.112738
+ * AbatabLogging.LogEvent.cs: Logs an Abatab event.
+ * b220922.110913
  * https://github.com/spectrum-health-systems/Abatab/blob/main/Documentation/Sourcecode/Sourcecode.md
  * ===================================================================================================== */
 
+using AbatabSession;
 using System.Runtime.CompilerServices;
 
-namespace Abatab.Logging
+namespace AbatabLogging
 {
     public class LogEvent
     {
@@ -56,6 +57,7 @@ namespace Abatab.Logging
         /// <param name="callerLine">File line of where the log is coming from.</param>
         public static void Trace(string assemblyName, Session abatabSession, string logMessage = "Trace log.", [CallerFilePath] string callerFilePath = "", [CallerMemberName] string callerMemberName = "", [CallerLineNumber] int callerLine = 0)
         {
+            // TODO See if we can get the Executing Assembly name here, instead of passing it.
             BuildContent.LogTextWithTrace("trace", assemblyName, abatabSession, logMessage, callerFilePath, callerMemberName, callerLine);
         }
 

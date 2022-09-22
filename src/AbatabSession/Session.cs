@@ -1,12 +1,12 @@
 ﻿/* ========================================================================================================
- * Abatab.Session.cs: Session object properties.
- * b220912.112504
+ * AbatabSession.Session.cs: Session object properties.
+ * b220912.112816
  * https://github.com/spectrum-health-systems/Abatab/blob/main/Documentation/Sourcecode/Sourcecode.md
  * ===================================================================================================== */
 
 using NTST.ScriptLinkService.Objects;
 
-namespace Abatab
+namespace AbatabSession
 {
     public class Session
     {

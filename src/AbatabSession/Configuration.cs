@@ -1,5 +1,5 @@
 ﻿/* ========================================================================================================
- * Abatab.Configuration.Settings.cs: Creates session configuration settings.
+ * AbatabSession.Configuration.cs: Creates session configuration settings.
  * b220912.112816
  * https://github.com/spectrum-health-systems/Abatab/blob/main/Documentation/Sourcecode/Sourcecode.md
  * ===================================================================================================== */
@@ -7,9 +7,9 @@
 using NTST.ScriptLinkService.Objects;
 using System;
 
-namespace Abatab.Configuration
+namespace AbatabSession
 {
-    public class Settings
+    public class Configuration
     {
         /// <summary>
         /// Build configuration settings for an Abatab session.
@@ -39,7 +39,7 @@ namespace Abatab.Configuration
             return new Session
             {
                 AbatabMode             = Properties.Settings.Default.AbatabMode.ToLower(),
-                LogMode                = Properties.Settings.Default.LogMode.ToLower(),
+                LogMode                = Properties.Settings.Default.LoggingMode.ToLower(),
                 AbatabRootDirectory    = Properties.Settings.Default.AbatabRootDirectory,
                 AvatarFallbackUserName = Properties.Settings.Default.AvatarFallbackUserName,
                 DateStamp              = DateTime.Now.ToString("yyMMdd"),

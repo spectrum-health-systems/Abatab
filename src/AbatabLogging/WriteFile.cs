@@ -1,12 +1,12 @@
 ﻿/* ========================================================================================================
- * Abatab.Logging.WriteLogfile.cs: Writes a logfile to disk.
- * b220912.112728
+ * AbatabLogging.WriteFile.cs: Writes content to a local file.
+ * b220922.121116
  * https://github.com/spectrum-health-systems/Abatab/blob/main/Documentation/Sourcecode/Sourcecode.md
  * ===================================================================================================== */
 
-namespace Abatab.Logging
+namespace AbatabLogging
 {
-    public class WriteLogfile
+    internal class WriteFile
     {
     }
 }

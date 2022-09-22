@@ -1,14 +1,15 @@
 ﻿/* ========================================================================================================
- * Abatab.Logging.BuildContent.cs: Builds content for a logfile.
- * b220912.113717
+ * AbatabLogging.BuildContent.cs: Builds content for a logfile.
+ * b220922.121116
  * https://github.com/spectrum-health-systems/Abatab/blob/main/Documentation/Sourcecode/Sourcecode.md
  * ===================================================================================================== */
 
+using AbatabSession;
 using NTST.ScriptLinkService.Objects;
 using System;
 using System.IO;
 
-namespace Abatab.Logging
+namespace AbatabLogging
 {
     public class BuildContent
     {
@@ -186,8 +187,8 @@ namespace Abatab.Logging
                           $"                Datestamp: {abatabSession.DateStamp}{Environment.NewLine}" +
                           $"                Timestamp: {abatabSession.TimeStamp}{Environment.NewLine}" +
                           $"           Abatab request: {abatabSession.AvatarUserName}{Environment.NewLine}" +
-                          $" Working Object unchanged: {OptionObject.Verify.NotModified(abatabSession.SentOptObj, abatabSession.WorkerOptObj)}{Environment.NewLine}" +
-                          $"   Final Object unchanged: {OptionObject.Verify.NotModified(abatabSession.SentOptObj, abatabSession.FinalOptObj)}{Environment.NewLine}";
+                          $" Working Object unchanged: {AbatabOptionObject.Verify.NotModified(abatabSession.SentOptObj, abatabSession.WorkerOptObj)}{Environment.NewLine}" +
+                          $"   Final Object unchanged: {AbatabOptionObject.Verify.NotModified(abatabSession.SentOptObj, abatabSession.FinalOptObj)}{Environment.NewLine}";
         }
 
         /// <summary>
