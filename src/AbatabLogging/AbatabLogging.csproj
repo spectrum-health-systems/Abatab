@@ -51,10 +51,6 @@
       <Project>{2741df45-7db8-4bea-89b4-4a70c7114192}</Project>
       <Name>AbatabOptionObject</Name>
     </ProjectReference>
-    <ProjectReference Include="..\AbatabSession\AbatabSession.csproj">
-      <Project>{5fcad3f6-0aa9-4bee-b390-097a6832568e}</Project>
-      <Name>AbatabSession</Name>
-    </ProjectReference>
     <ProjectReference Include="..\NTST.ScriptLinkService.Objects\NTST.ScriptLinkService.Objects.vbproj">
       <Project>{8a8a6089-3286-42e6-9f76-b61784709654}</Project>
       <Name>NTST.ScriptLinkService.Objects</Name>

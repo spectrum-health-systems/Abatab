@@ -1,6 +1,6 @@
 ﻿/* ========================================================================================================
  * Abatab: A custom web service for Netsmart's myAvatar™ EHR.
- * v0.3.0-devbuild+220922.120908
+ * v0.3.1-devbuild+220922.121800
  * https://github.com/spectrum-health-systems/Abatab
  * Copyright (c) 2021-2022 A Pretty Cool Program (see LICENSE file for more information)
  * --------------------------------------------------------------------------------------------------------
@@ -10,6 +10,8 @@
  * ===================================================================================================== */
 
 using AbatabLogging;
+using AbatabRoundhouse;
+using AbatabSession;
 using NTST.ScriptLinkService.Objects;
 using System.Reflection;
 using System.Web.Services;
@@ -40,27 +42,24 @@ namespace Abatab
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string abatabRequest)
         {
-            var abatabSession = AbatabSession.Configuration.Build(sentOptionObject, abatabRequest);
-            // var executingAssembly = Assembly.GetExecutingAssembly().GetName().Name; // DEPRECIATED
-            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name.ToLower(), abatabSession);
-            LogEvent.SessionInformation(abatabSession);
-            LogEvent.AllOptionObjectInformation(abatabSession);
+            var abatabSession = SessionData.Build(sentOptionObject, abatabRequest);
+            LogEvent.AllEvents(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
 
             switch (abatabSession.AbatabMode)
             {
                 case "enabled":
                     LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
-                    // Normal operation.
+                    Roundhouse.TestA();
                     break;
 
                 case "disabled":
                     LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
-                    // Don't do anything.
+                    Roundhouse.TestB();
                     break;
 
                 case "passthrough":
                     LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
-                    // Just create logs, don't make any changes to data.
+                    Roundhouse.TestC();
                     break;
 
                 default:

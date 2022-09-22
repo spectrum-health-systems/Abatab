@@ -1,10 +1,9 @@
 ﻿/* ========================================================================================================
  * AbatabLogging.BuildContent.cs: Builds content for a logfile.
- * b220922.121116
+ * b220922.123713
  * https://github.com/spectrum-health-systems/Abatab/blob/main/Documentation/Sourcecode/Sourcecode.md
  * ===================================================================================================== */
 
-using AbatabSession;
 using NTST.ScriptLinkService.Objects;
 using System;
 using System.IO;
@@ -17,17 +16,17 @@ namespace AbatabLogging
         /// Build the logfile content with trace information.
         /// </summary>
         /// <param name="eventType">Log type.</param>
-        /// <param name="assemblyName">Name of executing assembly.</param>
+        /// <param name="executingAssemblyName">Name of executing assembly.</param>
         /// <param name="abatabSession">Abatab session configuration settings.</param>
         /// <param name="logMessage">Message for the logfile</param>
         /// <param name="callerFilePath">Filename of where the log is coming from.</param>
         /// <param name="callerMemberName">Method of where the log is coming from.</param>
         /// <param name="callerLine">File line of where the log is coming from.</param>
         /// <returns>Contents for a logfile with trace information.</returns>
-        public static string LogTextWithTrace(string eventType, string assemblyName, Session abatabSession, string logMessage, string callerFilePath, string callerMemberName, int callerLine)
+        public static string LogTextWithTrace(string eventType, string executingAssemblyName, SessionData abatabSession, string logMessage, string callerFilePath, string callerMemberName, int callerLine)
         {
             var logHeader  = LogHeader(logMessage);
-            var logDetails = LogDetailsWithTrace(eventType, assemblyName, callerFilePath, callerMemberName, callerLine);
+            var logDetails = LogDetailsWithTrace(eventType, executingAssemblyName, callerFilePath, callerMemberName, callerLine);
             var logBody    = LogBody(eventType, abatabSession);
             var logFooter  = LogFooter();
 
@@ -45,7 +44,7 @@ namespace AbatabLogging
         /// <param name="abatabSession">Abatab session configuration settings.</param>
         /// <param name="logMessage">Message for the logfile</param>
         /// <returns>Contents for a logfile without trace information.</returns>
-        public static string LogTextWithoutTrace(string eventType, Session abatabSession, string logMessage)
+        public static string LogTextWithoutTrace(string eventType, SessionData abatabSession, string logMessage)
         {
             var logHeader  = LogHeader(logMessage);
             var logDetails = LogDetailsWithoutTrace(eventType);
@@ -73,16 +72,16 @@ namespace AbatabLogging
         /// Build standard log details with trace information.
         /// </summary>
         /// <param name="eventType">Log type.</param>
-        /// <param name="assemblyName">Name of executing assembly.</param>
+        /// <param name="executingAssemblyName">Name of executing assembly.</param>
         /// <param name="callerFilePath">Filename of where the log is coming from.</param>
         /// <param name="callerMemberName">Method of where the log is coming from.</param>
         /// <param name="callerLine">File line of where the log is coming from.</param>
         /// <returns>Standard log details with trace information.</returns>
-        private static string LogDetailsWithTrace(string eventType, string assemblyName, string callerFilePath, string callerMemberName, int callerLine)
+        private static string LogDetailsWithTrace(string eventType, string executingAssemblyName, string callerFilePath, string callerMemberName, int callerLine)
         {
             return $"{Environment.NewLine}" +
                           $"Log type: {eventType}{Environment.NewLine}" +
-                          $"Assembly: {assemblyName}{Environment.NewLine}" +
+                          $"Assembly: {executingAssemblyName}{Environment.NewLine}" +
                           $"  Source: {Path.GetFileName(callerFilePath)}{Environment.NewLine}" +
                           $"  Member: {callerMemberName}{Environment.NewLine}" +
                           $"    Line: {callerLine}{Environment.NewLine}";
@@ -106,7 +105,7 @@ namespace AbatabLogging
         /// <param name="eventType">Log type.</param>
         /// <param name="abatabSession">Abatab session configuration settings.</param>
         /// <returns>Standard log body.</returns>
-        private static string LogBody(string eventType, Session abatabSession)
+        private static string LogBody(string eventType, SessionData abatabSession)
         {
             switch (eventType)
             {
@@ -136,7 +135,7 @@ namespace AbatabLogging
         /// </summary>
         /// <param name="optObj">OptionObject2015 object to get information for.</param>
         /// <returns>Information for all OptionObject types.</returns>
-        private static string BodyAllOptObjInformation(Session abatabSession)
+        private static string BodyAllOptObjInformation(SessionData abatabSession)
         {
             var sentOptObjectInformation   = BodyOptObjInformation(abatabSession.SentOptObj, "sentOptObj");
             var workerOptObjectInformation = BodyOptObjInformation(abatabSession.SentOptObj, "workerOptObj");
@@ -176,7 +175,7 @@ namespace AbatabLogging
         /// </summary>
         /// <param name="abatabSession">Abatab session configuration settings.</param>
         /// <returns>Standard session information.</returns>
-        private static string BodySessionInformation(Session abatabSession)
+        private static string BodySessionInformation(SessionData abatabSession)
         {
             // TODO - Verify this works, especially the modification stuff.
             return $"{Environment.NewLine}" +

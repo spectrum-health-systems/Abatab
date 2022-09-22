@@ -100,6 +100,10 @@
       <Project>{a4467424-56e0-4260-bb21-d98263d7aefd}</Project>
       <Name>AbatabLogging</Name>
     </ProjectReference>
+    <ProjectReference Include="AbatabRoundhouse\AbatabRoundhouse.csproj">
+      <Project>{d2854caf-4b28-4df0-81c1-692c3e7b008f}</Project>
+      <Name>AbatabRoundhouse</Name>
+    </ProjectReference>
     <ProjectReference Include="AbatabSession\AbatabSession.csproj">
       <Project>{5fcad3f6-0aa9-4bee-b390-097a6832568e}</Project>
       <Name>AbatabSession</Name>

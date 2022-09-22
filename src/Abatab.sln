@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbatabSession", "AbatabSess
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbatabOptionObject", "AbatabOptionObject\AbatabOptionObject.csproj", "{2741DF45-7DB8-4BEA-89B4-4A70C7114192}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbatabRoundhouse", "AbatabRoundhouse\AbatabRoundhouse.csproj", "{D2854CAF-4B28-4DF0-81C1-692C3E7B008F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{2741DF45-7DB8-4BEA-89B4-4A70C7114192}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2741DF45-7DB8-4BEA-89B4-4A70C7114192}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2741DF45-7DB8-4BEA-89B4-4A70C7114192}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2854CAF-4B28-4DF0-81C1-692C3E7B008F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2854CAF-4B28-4DF0-81C1-692C3E7B008F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2854CAF-4B28-4DF0-81C1-692C3E7B008F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2854CAF-4B28-4DF0-81C1-692C3E7B008F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

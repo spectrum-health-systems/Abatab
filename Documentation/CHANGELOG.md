@@ -23,6 +23,9 @@
 
 # v0.1.x - v0.9.x-devbuild
 
+## v0.3.1
+`NEW` AbatabOptionObject.csproj
+
 ## v0.3.0
 `NEW` AbatabLogging.csproj
 `NEW` AbatabOptionObject.csproj
