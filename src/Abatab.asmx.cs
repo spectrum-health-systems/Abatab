@@ -1,18 +1,16 @@
-﻿/* ========================================================================================================
- * Abatab: A custom web service for Netsmart's myAvatar™ EHR.
- * v0.4.0-devbuild+220926.100624
- * https://github.com/spectrum-health-systems/Abatab
- * Copyright (c) 2021-2022 A Pretty Cool Program (see LICENSE file for more information)
- * --------------------------------------------------------------------------------------------------------
- * Abatab.asmx.cs: Entry point for Abatab.
- * b220926.100628
- * https://github.com/spectrum-health-systems/Abatab/blob/main/Documentation/Sourcecode/Sourcecode.md
- * ===================================================================================================== */
-
-/* INFO This class is the entry point for Abatab, and primarily focuses on the processing the initial
- *      ScriptLink call from myAvatar™. As such, it should remain fairly static and allow external
- *      projects/classes to do the heavy lifting.
+﻿/* Abatab: A custom web service for Netsmart's myAvatar™ EHR.
+ * More information: Abatab/ApplicationData/ApplicationInformation.md
  */
+
+/* AbatabData.SessionData.cs                                                                 b220926.111024
+ * Entry point for Abatab, and primarily focuses on the processing the initial ScriptLink call from
+ * myAvatar™. This class should remain fairly static and rely external source code to do the heavy lifting.
+ *
+ * For more information about this source code, please see:
+ *   https://github.com/spectrum-health-systems/Abatab/blob/main/Documentation/Sourcecode/Sourcecode.md
+ * ----------------------------------------------------------------------------------------------------- */
+
+
 
 using AbatabLogging;
 using AbatabRoundhouse;
@@ -30,7 +28,7 @@ namespace Abatab
     public class Abatab : WebService
     {
         /// <summary>
-        /// Return Abatab version.
+        /// Return the Abatab version.
         /// </summary>
         /// <returns>Version of Abatab.</returns>
         [WebMethod]

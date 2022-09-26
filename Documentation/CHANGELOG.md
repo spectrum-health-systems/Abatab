@@ -23,6 +23,9 @@
 
 # v0.1.x - v0.9.x-devbuild
 
+## v0.4.1
+`INFO` Comment cleanup
+
 ## v0.4.0
 `NEW` AbatabData.csproj
 `NEW` AbatabData.SessionData.cs
