@@ -19,9 +19,9 @@
   -->
   ![REPOSITORY-LOGO][REPOSITORY-LOGO]
 
-</div>
+# Changelog
 
-# v0.1.x - v0.9.x-devbuild
+</div>
 
 ## v0.4.1
 `INFO` Comment cleanup  
@@ -69,3 +69,4 @@
 
 <!-- CHANGELOG LINKS -->
 [ABATAB-CSPROJ-CHANGLOG]: ../src/ProjData/Doc/CHANGELOG.md
+[ABATAB-DATA-CHANGLOG]: ../src/AbatabData/ProjData/Doc/CHANGELOG.md

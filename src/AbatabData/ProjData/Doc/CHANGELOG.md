@@ -2,8 +2,7 @@
      - All URLs should use reference-links added at the end of this documentation.
 -->
 
-# Abatab.csproj changelog
+# AbatabData.csproj changelog
 
 ## v0.4.6
-
 `INFO` Comment cleanup
