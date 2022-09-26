@@ -1,8 +1,16 @@
-﻿/* ========================================================================================================
- * AbatabSession.Session.cs: Session object properties.
- * b220912.112816
- * https://github.com/spectrum-health-systems/Abatab/blob/main/Documentation/Sourcecode/Sourcecode.md
- * ===================================================================================================== */
+﻿/* Abatab: A custom web service for Netsmart's myAvatar™ EHR.
+ * https://github.com/spectrum-health-systems/Abatab
+ * (c) 2021-2022 A Pretty Cool Program (see LICENSE file for more information)
+ *
+ * Abatab application information:
+ * https://github.com/spectrum-health-systems/Abatab/blob/main/src/AppData/AppInfo.md
+ *
+ * AbatabSession.csproj information:
+ * https://github.com/spectrum-health-systems/Abatab/blob/main/src/AbatabSession/ProjData/ProjInfo.md
+ * https://github.com/spectrum-health-systems/Abatab/blob/main/src/AbatabSession/ProjData/Sourcecode.md
+ */
+
+// b220926.160724
 
 using AbatabData;
 using AbatabLogging;
@@ -42,7 +50,7 @@ namespace AbatabSession
         /// <returns></returns>
         private static SessionData Initialize(OptionObject2015 sentOptObj, string abatabRequest)
         {
-            return new Instance
+            return new SessionData
             {
                 AbatabMode             = Properties.Settings.Default.AbatabMode.ToLower(),
                 LogMode                = Properties.Settings.Default.LoggingMode.ToLower(),

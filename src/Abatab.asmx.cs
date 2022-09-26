@@ -6,37 +6,13 @@
  * https://github.com/spectrum-health-systems/Abatab/blob/main/src/AppData/AppInfo.md
  *
  * Abatab.csproj information:
- *   https://github.com/spectrum-health-systems/Abatab/blob/main/src/ProjData/ProjInfo.md
+ * https://github.com/spectrum-health-systems/Abatab/blob/main/src/ProjData/ProjInfo.md
  *
  * Abatab.asmx.cs information
- *   https://github.com/spectrum-health-systems/Abatab/blob/main/src/ProjData/Doc/Abatab.asmx.cs.md
+ * https://github.com/spectrum-health-systems/Abatab/blob/main/src/ProjData/Sourcecode.md
  */
 
-/* AbatabData.csproj v0.4.1
- * Data object definitions for Abatab.
- *
- * AbatabData.SessionData.cs b220926.111024
- * Session data object definitions.
- *
-/* For more information about this source code, please see:
- *   https://github.com/spectrum-health-systems/Abatab/blob/main/Documentation/Sourcecode/Sourcecode.md
- * *******************************************************************************************************/
-
-
-
-/* Abatab: A custom web service for Netsmart's myAvatar™ EHR.
- * More information: Abatab/ApplicationData/ApplicationInformation.md
- */
-
-/* AbatabData.SessionData.cs                                                                 b220926.111024
- * Entry point for Abatab, and primarily focuses on the processing the initial ScriptLink call from
- * myAvatar™. This class should remain fairly static and rely external source code to do the heavy lifting.
- *
- * For more information about this source code, please see:
- *   https://github.com/spectrum-health-systems/Abatab/blob/main/Documentation/Sourcecode/Sourcecode.md
- * ----------------------------------------------------------------------------------------------------- */
-
-
+// b220926.160724
 
 using AbatabLogging;
 using AbatabRoundhouse;

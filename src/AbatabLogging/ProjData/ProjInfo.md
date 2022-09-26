@@ -1,10 +1,10 @@
-# AbatabData.csproj `v0.4.7`
+# AbatabLogging.csproj `v0.4.7`
 
-Data object definitions for [Abatab][REPOSITORY-URL].
+Logging functionality for [Abatab][REPOSITORY-URL].
 
 # Changelog
 
-The AbatabData.csproj changelog can be found [here][CHANGELOG].
+The AbatabLogging changelog can be found [here][CHANGELOG].
 
 <!-- REFERENCE LINKS -->
 

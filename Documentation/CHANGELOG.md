@@ -23,9 +23,12 @@
 
 </div>
 
-## v0.4.1
+## v0.4.7
 `INFO` Comment cleanup  
-[`ABATAB.CSPROJ`][ABATAB-CSPROJ-CHANGLOG]
+[`AbatabData changelog`][ABATAB-CSPROJ-CHANGLOG]  
+[`AbatabRoundhouse changelog`][ABATAB-CSPROJ-CHANGLOG]  
+
+
 
 ## v0.4.0
 `NEW` AbatabData.csproj  
@@ -69,4 +72,4 @@
 
 <!-- CHANGELOG LINKS -->
 [ABATAB-CSPROJ-CHANGLOG]: ../src/ProjData/Doc/CHANGELOG.md
-[ABATAB-DATA-CHANGLOG]: ../src/AbatabData/ProjData/Doc/CHANGELOG.md
+[ABATAB-DATA-CHANGLOG]: ../src/AbatabData/ProjData/CHANGELOG.md

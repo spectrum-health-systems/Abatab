@@ -1,10 +1,10 @@
-# AbatabData.csproj `v0.4.7`
+# AbatabSession.csproj `v0.4.7`
 
-Data object definitions for [Abatab][REPOSITORY-URL].
+Session logic for [Abatab][REPOSITORY-URL].
 
 # Changelog
 
-The AbatabData.csproj changelog can be found [here][CHANGELOG].
+The AbatabSession.csproj changelog can be found [here][CHANGELOG].
 
 <!-- REFERENCE LINKS -->
 
