@@ -4,7 +4,7 @@
  * https://github.com/spectrum-health-systems/Abatab/blob/main/Documentation/Sourcecode/Sourcecode.md
  * ===================================================================================================== */
 
-using AbatabSession;
+using AbatabData;
 using System.Runtime.CompilerServices;
 
 namespace AbatabLogging

@@ -23,8 +23,13 @@
 
 # v0.1.x - v0.9.x-devbuild
 
+## v0.4.0
+`NEW` AbatabData.csproj
+`NEW` AbatabData.SessionData.cs
+
 ## v0.3.1
 `NEW` AbatabOptionObject.csproj
+`NEW` AbatabOptionObject.Verify()
 
 ## v0.3.0
 `NEW` AbatabLogging.csproj

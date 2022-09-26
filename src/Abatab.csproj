@@ -96,9 +96,17 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="AbatabData\AbatabData.csproj">
+      <Project>{e3028cfd-5965-4555-9a96-3ebbdfd4d550}</Project>
+      <Name>AbatabData</Name>
+    </ProjectReference>
     <ProjectReference Include="AbatabLogging\AbatabLogging.csproj">
       <Project>{a4467424-56e0-4260-bb21-d98263d7aefd}</Project>
       <Name>AbatabLogging</Name>
+    </ProjectReference>
+    <ProjectReference Include="AbatabOptionObject\AbatabOptionObject.csproj">
+      <Project>{2741df45-7db8-4bea-89b4-4a70c7114192}</Project>
+      <Name>AbatabOptionObject</Name>
     </ProjectReference>
     <ProjectReference Include="AbatabRoundhouse\AbatabRoundhouse.csproj">
       <Project>{d2854caf-4b28-4df0-81c1-692c3e7b008f}</Project>

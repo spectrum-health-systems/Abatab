@@ -4,6 +4,7 @@
  * https://github.com/spectrum-health-systems/Abatab/blob/main/Documentation/Sourcecode/Sourcecode.md
  * ===================================================================================================== */
 
+using AbatabData;
 using AbatabLogging;
 using NTST.ScriptLinkService.Objects;
 using System;
@@ -11,24 +12,8 @@ using System.Reflection;
 
 namespace AbatabSession
 {
-    public class SessionData
+    public class Instance
     {
-        // web.config settings.
-        public string AbatabMode { get; set; }
-        public string LogMode { get; set; }
-        public string AbatabRootDirectory { get; set; }
-        public string AvatarFallbackUserName { get; set; }
-
-        // Runtime settings.
-        public string DateStamp { get; set; }
-        public string TimeStamp { get; set; }
-        public string AvatarUserName { get; set; }
-        public string AbatabRequest { get; set; }
-        public OptionObject2015 SentOptObj { get; set; }
-        public OptionObject2015 WorkerOptObj { get; set; }
-        public OptionObject2015 FinalOptObj { get; set; }
-
-
         /// <summary>
         /// Build configuration settings for an Abatab session.
         /// </summary>
@@ -37,6 +22,7 @@ namespace AbatabSession
         /// <returns>Session configuration settings.</returns>
         public static SessionData Build(OptionObject2015 sentOptObj, string abatabRequest)
         {
+            /* INFO Build SessionData for this session instance.*/
             SessionData abatabSession = Initialize(sentOptObj, abatabRequest);
 
             /* We need to verify components of the Abatab session configuration setting before continuing.
@@ -56,7 +42,7 @@ namespace AbatabSession
         /// <returns></returns>
         private static SessionData Initialize(OptionObject2015 sentOptObj, string abatabRequest)
         {
-            return new SessionData
+            return new Instance
             {
                 AbatabMode             = Properties.Settings.Default.AbatabMode.ToLower(),
                 LogMode                = Properties.Settings.Default.LoggingMode.ToLower(),

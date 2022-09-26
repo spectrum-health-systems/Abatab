@@ -1,17 +1,23 @@
 ﻿/* ========================================================================================================
  * Abatab: A custom web service for Netsmart's myAvatar™ EHR.
- * v0.3.1-devbuild+220922.121800
+ * v0.4.0-devbuild+220926.100624
  * https://github.com/spectrum-health-systems/Abatab
  * Copyright (c) 2021-2022 A Pretty Cool Program (see LICENSE file for more information)
  * --------------------------------------------------------------------------------------------------------
  * Abatab.asmx.cs: Entry point for Abatab.
- * b220922.120913
+ * b220926.100628
  * https://github.com/spectrum-health-systems/Abatab/blob/main/Documentation/Sourcecode/Sourcecode.md
  * ===================================================================================================== */
+
+/* INFO This class is the entry point for Abatab, and primarily focuses on the processing the initial
+ *      ScriptLink call from myAvatar™. As such, it should remain fairly static and allow external
+ *      projects/classes to do the heavy lifting.
+ */
 
 using AbatabLogging;
 using AbatabRoundhouse;
 using AbatabSession;
+
 using NTST.ScriptLinkService.Objects;
 using System.Reflection;
 using System.Web.Services;
@@ -42,7 +48,7 @@ namespace Abatab
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string abatabRequest)
         {
-            var abatabSession = SessionData.Build(sentOptionObject, abatabRequest);
+            var abatabSession = Instance.Build(sentOptionObject, abatabRequest);
             LogEvent.AllEvents(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
 
             switch (abatabSession.AbatabMode)
