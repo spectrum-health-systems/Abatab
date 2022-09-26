@@ -4,6 +4,7 @@
  * https://github.com/spectrum-health-systems/Abatab/blob/main/Documentation/Sourcecode/Sourcecode.md
  * ===================================================================================================== */
 
+using AbatabLogging;
 using NTST.ScriptLinkService.Objects;
 using System;
 using System.Reflection;
