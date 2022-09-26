@@ -3,11 +3,8 @@
  * (c) 2021-2022 A Pretty Cool Program (see LICENSE file for more information)
  *
  * More information:
- *   https://github.com/spectrum-health-systems/Abatab/ApplicationData/ApplicationInformation.md
- *   [s](./ApplicationData/ApplicationInformation.md)
+ *   https://github.com/spectrum-health-systems/Abatab/blob/main/src/ApplicationData/ApplicationInformation.md
  */
-
-
 
 /* AbatabData.csproj v0.4.1
  * Data object definitions for Abatab.
