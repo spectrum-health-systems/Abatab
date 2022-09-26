@@ -68,7 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Abatab.asmx" />
-    <None Include="ApplicationData\ApplicationInformation.md" />
+    <None Include="AppData\AppInfo.md" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -89,7 +89,6 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="ProjectData\Documentation\ProjectInformation.md" />
     <Content Include="test.md" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -125,7 +124,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ApplicationData\Documentation\" />
+    <Folder Include="AppData\Documentation\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
