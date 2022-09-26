@@ -1,4 +1,25 @@
 ﻿/* Abatab: A custom web service for Netsmart's myAvatar™ EHR.
+ * https://github.com/spectrum-health-systems/Abatab
+ * (c) 2021-2022 A Pretty Cool Program (see LICENSE file for more information)
+ *
+ * More information:
+ *   https://github.com/spectrum-health-systems/Abatab/ApplicationData/ApplicationInformation.md
+ */
+
+
+/* AbatabData.csproj v0.4.1
+ * Data object definitions for Abatab.
+ *
+ * AbatabData.SessionData.cs b220926.111024
+ * Session data object definitions.
+ *
+/* For more information about this source code, please see:
+ *   https://github.com/spectrum-health-systems/Abatab/blob/main/Documentation/Sourcecode/Sourcecode.md
+ * *******************************************************************************************************/
+
+
+
+/* Abatab: A custom web service for Netsmart's myAvatar™ EHR.
  * More information: Abatab/ApplicationData/ApplicationInformation.md
  */
 
