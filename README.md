@@ -1,102 +1,164 @@
-<!-- A generic README template for a GitHub repository [b220829.094029]
-     - All URLs should use reference-links added at the end of this documentation.
+<!-- A generic README template for a GitHub repository [b220906]
 -->
 
-<!-- WARNINGS
-     - Use these to let users know this is a non-production branch.
-     - Production/released branches should not use these.
+<!-- README HEADER
+     - Everything that should be centered and at the top of the README should be inside these <div> tags.
 -->
 <div align="center">
 
-  ![BETA-BRANCH][BETA-BRANCH]<br>
+  <!-- BRANCH WARNINGS
+       Syntax: ![BRANCH-WARNING][%branch-warning%]
+
+               Replace %branch-warning% with one of the following:
+               - [BRANCH-ALPHA]
+               - [BRANCH-BETA]
+
+       This component:
+       - Is optional.
+       - Lets the reader know this is a non-stable branch.
+       - Should not be used in production.
+  -->
+  ![REPOSITORY-WARNING][BRANCH-BETA]
+  
+  ***
+
+  <!-- REPOSITORY LOGO
+      - The repository logo should be located at "./.github/Logos/RepositoryLogo.png".
+  -->
+  [![REPOSITORY-LOGO][REPOSITORY-LOGO]][CURRENT-BRANCH-URL]
+
+  <!-- SHORT DESCRIPTION OF REPOSITORY
+      - A short, one-line description of the project.
+      - By default this uses H1, but you can use H2 if you need more space.
+  -->
+  # A custom web service for Netsmart's myAvatar™ EHR
+
+  <!-- REPOSITORY BADGE
+       Syntax: ![REPOSITORY-STATUS][%repository-status%]
+
+               Replace %repository-status% with one of the following:
+               - [STATUS-ACTIVE]
+               - [STATUS-DEPRECIATED]
+               - [STATUS-ARCHIVED]
+  -->
+  ![REPOSITORY-STATUS][STATUS-ACTIVE]&nbsp;&nbsp;[![REPOSITORY-LICENSE][REPOSITORY-LICENSE]][REPOSITORY-LICENSE-URL]&nbsp;&nbsp;[![CURRENT-RELEASE][CURRENT-RELEASE]][CURRENT-RELEASE-URL]
+
+  <!-- REPOSITORY MENU
+       - Links to:
+          - Repository changelog
+          - Repository roadmap
+          - Repository manual
+          - Repository sourcecode documentation
+  -->
+  ***
+  ### [Changelog][CHANGELOG]&nbsp;&bull;&nbsp;[Roadmap][ROADMAP]&nbsp;&bull;&nbsp;[Manual][MANUAL]&nbsp;&bull;&nbsp;[Sourcecode documentation][SOURCECODE-DOCUMENTATION]
+  ***
 
 </div>
-
-***
 
 <br>
-<div align="center">
 
-  <!-- PROJECT LOGO
-      - Project logo should be located at "./.github/Logos/ProjectLogo.png".
-      - Short description of the project.
-  -->
-  ![PROJECT-LOGO][PROJECT-LOGO]
-  <h3> 
-  A custom web service for Netsmart's myAvatar™ EHR
-  </h3>
-  <br>
+<!-- TABLE OF CONTENTS
+     - This component is optional.
+-->
+<!-- NOT USED
+<details open="open">
+  <summary>CONTENTS</summary>
 
-  <!-- PROJECT BADGES
-       - Project badges that give the following mostly static information:
-          - The project status
-          - The project license type
-          - The current project release 
-  -->
-  <img src="https://img.shields.io/badge/status-active-brightgreen?style=flat">&nbsp;
-  [![License](https://img.shields.io/github/license/spectrum-health-systems/MAWSC?style=flat)][LICENSE]&nbsp;
-  [![GitHub release](https://img.shields.io/github/v/release/spectrum-health-systems/MAWSC?style=flat)][CURRENT-RELEASE]&nbsp;
-  <br>
-  <br>
-  
-  <!-- PROJECT MENU
-       - The menu bar should have links to:
-          - The project repository
-          - The project changelog
-          - The project roadmap
-          - The project manual
-          - The project sourcecode documentation
-       - The menu bar color scheme should match the color scheme of the project.
-  -->
+  * [About][TOC-ABOUT]
+  * [Getting started][TOC-GETTING-STARTED]
+  * [Installing][TOC-INSTALLING]
+  * [SETUP][TOC-SETUP]
 
-  [![REPOSITORY](https://img.shields.io/badge/REPOSITORY-FFEE00?style=for-the-badge)](REPOSITORY)&nbsp;&nbsp;&nbsp;[![CHANGELOG](https://img.shields.io/badge/CHANGELOG-FF8D00?style=for-the-badge)](CHANGELOG)&nbsp;&nbsp;&nbsp;[![ROADMAP](https://img.shields.io/badge/ROADMAP-FF8D00?style=for-the-badge)](ROADMAP)&nbsp;&nbsp;&nbsp;[![MANUAL](https://img.shields.io/badge/MANUAL-FF8D00?style=for-the-badge)](MANUAL)&nbsp;&nbsp;&nbsp;[![SOURCECODE-DOCUMENTATION](https://img.shields.io/badge/SOURCECODE%20DOCUMENTATION-FF8D00?style=for-the-badge)](SOURCECODE)
-  <br>
-  <br>
+</details>
+-->
 
-</div>
+<br>
 
+<!--  ABOUT
+-->
 # About
 
-[Netsmart's myAvatar™](https://www.ntst.com/Solutions-and-Services/Offerings/myAvatar) is a behavioral health EHR that offers a recovery-focused suite of solutions that leverage real-time analytics and clinical decision support to drive value-based care.
+[Netsmart's myAvatar™][MYAVATAR] is a behavioral health EHR that offers a recovery-focused suite of solutions that leverage real-time analytics and clinical decision support to drive value-based care.
 
-While myAvatar™ is a robust platform, like most things in life (except [Heroes of Might and Magic III](https://www.gog.com/game/heroes_of_might_and_magic_3_complete_edition)), it isn't perfect.
+While myAvatar™ is a robust platform, like most things in life (except [Heroes of Might and Magic III][HOMM3]), it isn't perfect.
 
-The good news is that myAvatar™ functionality can be extended via Netsmart's myAvatar™ Web Services, and/or custom web services that are written by myAvatar™ users.
+The good news is that you can extend myAvatar™ functionality via Netsmart's myAvatar™ Web Services, and/or custom web services that are written by other myAvatar™ users.
 
 **Abatab** is one such custom web service which includes various tools and utilities for myAvatar™ that aren't included in the official release, and provides a solid foundation for building additional functionality quickly and efficiently.
 
+<!-- FEATURES
+-->
 ## Features
 
 * Several built-in tools and utilities for use with myAvatar™
 * Does not require Java to be installed
 * A solid foundation to build additional myAvatar™ custom tools and utilities
 
+<!--  PREREQUISITES
+-->
 ## Prerequisites
 
 * A location to host the Abatab which meets the following requirements:
   * .NET Framework 4.8+ installed
   * Access to your myAvatar™ environments via HTTPS
 
-# The Abatab manual
+# The Abatab Manual
 
-This readme is short and sweet because the [Abatab Manual](MANUAL), which is updated with each release, contains everything you need to know about Abatab.
+This README is short and sweet because the [Abatab Manual][MANUAL], which is updated with each release, contains everything you need to know about Abatab.
 
-<!-- REFERENCE LINKS: REPOSITORY
-     These reference links should be standard across all project documentation.
--->
+<!-- REFERENCE LINKS -->
+
+<!-- REPOSITORY -->
 [REPOSITORY-URL]: https://github.com/spectrum-health-systems/Abatab
-[PROJECT-LOGO]: ./.github/Logos/ProjectLogo.png
+[CURRENT-BRANCH-URL]: README.md
+
+<!-- BRANCH WARNINGS -->
+[BRANCH-ALPHA]: https://img.shields.io/badge/WARNING-THIS%20IS%20ALPHA%20SOFTWARE-FF160C?style=for-the-badge
+[BRANCH-BETA]: https://img.shields.io/badge/WARNING-THIS%20IS%20BETA%20SOFTWARE-FF160C?style=for-the-badge
+
+<!-- REPOSITORY LOGO -->
+[REPOSITORY-LOGO]: ./.github/Logos/RepositoryLogo.png
+
+<!-- REPOSITORY STATUS -->
+[STATUS-ACTIVE]: https://img.shields.io/badge/status-active-brightgreen?style=flat-square
+[STATUS-DEPRECIATED]: https://img.shields.io/badge/status-depreciated-red?style=flat-square
+[STATUS-ARCHIVED]: https://img.shields.io/badge/status-archived-yellow?style=flat-square
+
+<!-- REPOSITORY LICENSE -->
+[REPOSITORY-LICENSE]: https://img.shields.io/github/license/spectrum-health-systems/Abatab?style=flat-square
+[REPOSITORY-LICENSE-URL]: https://www.apache.org/licenses/LICENSE-2.0
+
+<!-- CURRENT RELEASE -->
+[CURRENT-RELEASE]: https://img.shields.io/github/v/release/spectrum-health-systems/Abatab?style=flat-square
+[CURRENT-RELEASE-URL]: https://github.com/spectrum-health-systems/Abatab/releases
+
+<!-- README SCREENSHOT -->
 [README-SCREENSHOT]: ./.github/Screenshots/ReadmeScreenshot.png
-[LICENSE]: https://www.apache.org/licenses/LICENSE-2.0
-[CURRENT-RELEASE]: https://github.com/spectrum-health-systems/Abatab/releases
+
+<!-- README MENU -->
+[CHANGELOG]: ./Documentation/CHANGELOG.md
+[ROADMAP]: ./Documentation/ROADMAP.md
+[MANUAL]: ./Documentation/Manual/Manual.md
+[SOURCECODE-DOCUMENTATION]: ./Documentation/Sourcecode/Sourcecode.md
+
+<!-- README TABLE OF CONTENTS -->
+[TOC-ABOUT]: #about
+[TOC-GETTING-STARTED]: #getting-started
+[TOC-INSTALLING]: #installing
+[TOC-SETUP]: #setup
+[TOC-USING]: #using
+[TOC-COMPILING]: #compiling
+[TOC-TESTING]: #testing
+[TOC-API]: #apt
+[TOC-DEVELOPMENT]: #development
+[TOC-ADDITIONAL-INFORMATION]: #additional-information
 
 <!-- REFERENCE LINKS: REPOSITORY DOCUMENTATION
      These reference links should be standard across all project documentation.
 -->
-[MANUAL]: ./Documentation/Manual/Abatab-Manual.md
-[SOURCECODE]: ./Documentation/Sourcecode/Abatab-Sourcecode.md
-[CHANGELOG]: ./Documentation/CHANGELOG.md
-[ROADMAP]: ./Documentation/ROADMAP.md
+
+
 [AUTHORS]: ./.github/Documentation/Repository/AUTHORS.md
 [BUILT-WITH]: ./.github/Documentation/Repository/BUILT-WITH.md
 [CODE-OF-CONDUCT]: ./.github/Documentation/Repository/CODE-OF-CONDUCT.md
@@ -104,14 +166,16 @@ This readme is short and sweet because the [Abatab Manual](MANUAL), which is upd
 [SECURITY]: ./.github/Documentation/Repository/SECURITY.md
 [SUPPORT]: ./.github/Documentation/Repository/SUPPORT.md
 
-<!-- REFERENCE LINKS: BADGES
+
+
+[CONTINUED-DEVELOPMENT]: https://github.com/spectrum-health-systems/Abatab
+
+<!-- REFERENCE LINKS: DOCUMENT SPECIFIC
      These reference links should be standard across all project documentation.
 -->
-[ALPHA-BRANCH]: https://img.shields.io/badge/WARNING-THIS%20IS%20ALPHA%20SOFTWARE-FF160C?style=for-the-badge
-[BETA-BRANCH]: https://img.shields.io/badge/WARNING-THIS%20IS%20BETA%20SOFTWARE-FF160C?style=for-the-badge
-[DEPRECIATED-BRANCH]: https://img.shields.io/badge/WARNING-THIS%20IS%20DEPRECIATED%20SOFTWARE-FF160C?style=for-the-badge
-[ARCHIVED-REPOSITORY]: https://img.shields.io/badge/WARNING-THIS%20REPOSITORY%20IS%20ARCHIVED-FF160C?style=for-the-badge
-[CONTINUED-DEVELOPMENT]: https://github.com/spectrum-health-systems/Abatab
+[MYAVATAR]: https://www.ntst.com/Solutions-and-Services/Offerings/myAvatar
+[HOMM3]: https://www.gog.com/game/heroes_of_might_and_magic_3_complete_edition
+
 
 <br>
 

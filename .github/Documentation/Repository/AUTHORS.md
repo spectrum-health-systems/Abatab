@@ -1,42 +1,32 @@
-<!-- A generic template for an AUTHORS document [b220829.094029]
-     - All URLs should use reference-links added at the end of this documentation.
--->
+<!-- A generic AUTHORS.md template for a GitHub repository [b220907] -->
+<!-- Last updated: 9.7.22 -->
 
-<!-- BREADCRUMBS
-     - Documentation breadcrumbs.
-     - This should also be at the end of the documentation as well.
--->
-> [Abatab][REPOSITORY-URL] > Authors
-
+<!-- DOCUMENTATION BREADCRUMBS -->
+> [Abatab][CURRENT-BRANCH-URL] > Authors
 ***
 
 <br>
 <div align="center">
 
-  <!-- PROJECT LOGO
-      - Project logo should be located at "./.github/Logos/ProjectLogo.png".
-      - Short description of the project.
-  -->
-  ![PROJECT-LOGO][PROJECT-LOGO]
+  <!-- REPOSITORY LOGO -->
+  [![REPOSITORY-LOGO][REPOSITORY-LOGO]][CURRENT-BRANCH-URL]
 
 </div>
 
 # Authors
 
-* [AUTHOR-NAME](AUTHOR-URL)  
-A little blurb about this person, and what they contributed to the project.
+* [Christopher Banwarth][CHRISTOPHER-BANWARTH]
 
-<!-- BREADCRUMBS
-     - Documentation breadcrumbs. This should also be at the start of the documentation as well.
--->
 <br>
 
+<!-- DOCUMENTATION BREADCRUMBS -->
 ***
+> [Abatab][CURRENT-BRANCH-URL] > Authors
 
-> [Abatab][REPOSITORY-URL] > Acknowledgements
-
-<!-- REFERENCE LINKS: STANDARD
-     These reference links should be standard across all project documentation.
--->
+<!-- REFERENCE LINKS: REPOSITORY -->
 [REPOSITORY-URL]: https://github.com/spectrum-health-systems/Abatab
-[PROJECT-LOGO]: ../Logos/ProjectLogo.png
+[CURRENT-BRANCH-URL]: ../../../README.md
+[REPOSITORY-LOGO]: ../../Logos/RepositoryLogo.png
+
+<!-- REFERENCE LINKS: AUTHORS -->
+[CHRISTOPHER-BANWARTH]: https://github.com/APrettyCoolProgram

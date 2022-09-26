@@ -1,44 +1,36 @@
-<!-- A generic template for an BUILT-WITH document [b220829.094029]
-     - All URLs should use reference-links added at the end of this documentation.
--->
+<!-- A generic BUILT-WITH.md template for a GitHub repository [b220907] -->
+<!-- Last updated: 9.7.22 -->
 
-<!-- BREADCRUMBS
-     - Documentation breadcrumbs.
-     - This should also be at the end of the documentation as well.
--->
-> [Abatab][REPOSITORY-URL] > Built with
-
+<!-- DOCUMENTATION BREADCRUMBS -->
+> [Abatab][CURRENT-BRANCH-URL] > Built with
 ***
 
 <br>
 <div align="center">
 
-  <!-- PROJECT LOGO
-      - Project logo should be located at "./.github/Logos/ProjectLogo.png".
-      - Short description of the project.
-  -->
-  ![PROJECT-LOGO][PROJECT-LOGO]
+  <!-- REPOSITORY LOGO -->
+  [![REPOSITORY-LOGO][REPOSITORY-LOGO]][CURRENT-BRANCH-URL]
 
 </div>
 
 # Built with
 
-* [Visual Studio Community 2022](https://visualstudio.microsoft.com/vs/)
-* [Visual Studio Code](https://code.visualstudio.com/?wt.mc_id=DX_841432)
-* [GitHub Desktop](https://desktop.github.com/)
-* [.NET Core](https://dotnet.microsoft.com/download/dotnet-framework)
+* [Visual Studio Community 2022][VISUAL-STUDIO-COMMUNITY-2022]
+* [Visual Studio Code][VISUAL-STUDIO-CODE]
+* [.NET Core][DOTNET-CORE]
 
-<!-- BREADCRUMBS
-     - Documentation breadcrumbs. This should also be at the start of the documentation as well.
--->
 <br>
 
+<!-- DOCUMENTATION BREADCRUMBS -->
 ***
+> [Abatab][CURRENT-BRANCH-URL] > Built with
 
-> [Abatab][REPOSITORY-URL] >  Built with
-
-<!-- REFERENCE LINKS: STANDARD
-     These reference links should be standard across all project documentation.
--->
+<!-- REFERENCE LINKS: REPOSITORY -->
 [REPOSITORY-URL]: https://github.com/spectrum-health-systems/Abatab
-[PROJECT-LOGO]: ../Logos/ProjectLogo.png
+[CURRENT-BRANCH-URL]: ../../../README.md
+[REPOSITORY-LOGO]: ../../Logos/RepositoryLogo.png
+
+<!-- REFERENCE LINKS: BUILT WITH -->
+[VISUAL-STUDIO-COMMUNITY-2022]: https://visualstudio.microsoft.com/vs/
+[VISUAL-STUDIO-CODE]: https://code.visualstudio.com/?wt.mc_id=DX_841432
+[DOTNET-CORE]: https://dotnet.microsoft.com/download/dotnet-framework
