@@ -14,7 +14,7 @@
 <div align="center">
 
   <!-- PROJECT LOGO
-      - Project logo should be located at "./.github/Logos/ProjectLogo.png".
+      - Project logo should be located at "./.github/Logos/RepositoryLogo.png".
       - Short description of the project.
   -->
   ![REPOSITORY-LOGO][REPOSITORY-LOGO]
@@ -65,7 +65,7 @@
      These reference links should be standard across all project documentation.
 -->
 [REPOSITORY-URL]: https://github.com/spectrum-health-systems/Abatab
-[REPOSITORY-LOGO]: ../.github/Logos/ProjectLogo.png
+[REPOSITORY-LOGO]: ../.github/Logos/RepositoryLogo.png
 
 <!-- CHANGELOG LINKS -->
 [ABATAB-CSPROJ-CHANGLOG]: ../src/ProjData/Doc/CHANGELOG.md
