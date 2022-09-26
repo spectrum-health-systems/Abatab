@@ -90,6 +90,7 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <None Include="ProjectData\Documentation\ProjectInformation.md" />
+    <Content Include="test.md" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
