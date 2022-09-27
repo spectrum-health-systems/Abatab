@@ -1,15 +1,10 @@
-> [Abatab][AbatabRepositoryUrl] &gt; [Sourcecode][AbatabSourcecodeDocumentation] &gt; **AbatabData.csproj**
+> [Abatab][AbatabRepoUrl] &gt; [Sourcecode][AbatabSrcDocHome] &gt; **AbatabData.csproj**
 
 <br>
 
 <div align="center">
 
-  <!-- PROJECT LOGO
-      - Project logo should be located at "./.github/Logos/ProjectLogo.png".
-      - Short description of the project.
-  -->
-
-  ![SourceCodeDocumentationLogo][SourceCodeDocumentationLogo]
+  ![SrcDocPng][SrcDocPng]
 
   <h1>
     Abatab.csproj
@@ -26,6 +21,7 @@ As it is mostly a "clearing house" for Abatab requests, this namespace should on
 ***
 
 ### Classes
+
 * [Abatab.asmx.cs](#abatabasmxcs)  
 Main Abatab class that contains the required methods that Abatab needs to function.
 
@@ -70,7 +66,6 @@ The AbatabMode can be one of the following:
     * `passthrough`  
     Use Abatab, but don't make changes, only write logs. This is like the "disabled" setting, since no modifications to the OptionObject are make, and also like the "enabled" setting, since Abatab will actually go through the motions and write logs normally.
 
-
 3. **Return an OptionObject2015 object to myAvatar**  
 The returned OptionObject2015 may - or may not - be modified, depending on the AbatabMode and/or the Abatab Request.
 
@@ -83,11 +78,9 @@ The returned OptionObject2015 may - or may not - be modified, depending on the A
 
 ***
 
-> [Abatab][AbatabRepositoryUrl] &gt; [Sourcecode][AbatabSourcecodeDocumentation] &gt; **AbatabData.csproj**
-
+> [Abatab][AbatabRepoUrl] &gt; [Sourcecode][AbatabSrcDocHome] &gt; **AbatabData.csproj**
 
 <!-- REFERENCE LINKS -->
-
-[AbatabRepositoryUrl]: https://github.com/spectrum-health-systems/Abatab
-[AbatabSourcecodeDocumentation]: Sourcecode.md
-[SourceCodeDocumentationLogo]: ./Images/SourceCodeDocumentationLogo.png
+[AbatabRepoUrl]: https://github.com/spectrum-health-systems/Abatab
+[SrcDocPng]: ./res/img/SrcDocPng.png
+[AbatabSrcDocHome]: SrcDocHome.md

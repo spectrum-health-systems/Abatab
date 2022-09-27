@@ -1,15 +1,10 @@
-> [Abatab][AbatabRepositoryUrl] &gt; [Sourcecode][AbatabSourcecodeDocumentation] &gt; **Abatab.csproj**
+> [Abatab][AbatabRepoUrl] &gt; [Sourcecode][AbatabSrcDocHome] &gt; **Abatab.csproj**
 
 <br>
 
 <div align="center">
 
-  <!-- PROJECT LOGO
-      - Project logo should be located at "./.github/Logos/ProjectLogo.png".
-      - Short description of the project.
-  -->
-
-  ![SourceCodeDocumentationLogo][SourceCodeDocumentationLogo]
+  ![SrcDocPng][SrcDocPng]
 
   <h1>
     Abatab.csproj
@@ -83,13 +78,13 @@ The returned OptionObject2015 may - or may not - be modified, depending on the A
 
 ***
 
-> [Abatab][AbatabRepositoryUrl] &gt; [Sourcecode][AbatabSourcecodeDocumentation] &gt; **Abatab.csproj**
+> [Abatab][AbatabRepoUrl] &gt; [Sourcecode][AbatabSrcDocHome] &gt; **Abatab.csproj**
 
 
 <!-- REFERENCE LINKS -->
 
-[AbatabRepositoryUrl]: https://github.com/spectrum-health-systems/Abatab
-[AbatabSourcecodeDocumentation]: Sourcecode.md
-[SourceCodeDocumentationLogo]: ./Images/SourceCodeDocumentationLogo.png
+[AbatabRepoUrl]: https://github.com/spectrum-health-systems/Abatab
+[SrcDocPng]: ./res/img/SrcDocPng.png
+[AbatabSrcDocHome]: SrcDocHome.md
 [GetVersionMethodDocumenation]: https://github.com/myAvatar-Development-Community/document-creating-a-custom-web-service#the-getversion-method
 [RunScriptMethodDocumentation]: https://github.com/myAvatar-Development-Community/document-creating-a-custom-web-service#the-runscript-method
