@@ -17,8 +17,6 @@ The Abatab project is the entry point for Abatab. When you make a Abatab request
 
 As it is mostly a "clearing house" for Abatab requests, this namespace should only contain the required classes/methods that Abatab needs to function. In addition, it is designed to be fairly generic - most of the heavy-lifting is done by external namespaces/classes/methods. This way the required functionality rarely changes, and ScriptLink will have a known, stable target.
 
-<br>
-
 ***
 
 ### Classes
