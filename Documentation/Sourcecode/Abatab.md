@@ -25,8 +25,6 @@ Main Abatab class
 
 ***
 
-<br>
-
 # Abatab.asmx.cs
 
 ## `GetVersion()`
