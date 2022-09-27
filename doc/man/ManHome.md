@@ -56,9 +56,8 @@ Ready to implement Abatab in your environment? [Let's get started!][ManGettingSt
 
 <!-- REFERENCE LINKS -->
 [AbatabRepositoryUrl]: https://github.com/spectrum-health-systems/Abatab
-[AbatabLogo]: ../../.github/Logos/ProjectLogo.png
+[AbatabManualPng]: ../man/res/img/AbatabManual.png
 [MyAvatarUrl]: https://www.ntst.com/Solutions-and-Services/Offerings/MyAvatarUrl
-[AbatabManualPng]: ./Images/ManualLogo.png
 [ManHome]: ./Documentation/Manual/Manual.md
 [ManGettingStarted]: ./Documentation/Manual/ManGettingStarted.md
 [ManHosting]: ./Documentation/Manual/ManHosting.md

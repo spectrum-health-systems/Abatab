@@ -45,9 +45,8 @@ The first step to using MAWS in your MyAvatarUrl™ environment is hosting the M
 
 <!-- REFERENCE LINKS -->
 [AbatabRepositoryUrl]: https://github.com/spectrum-health-systems/Abatab
-[AbatabLogo]: ../../.github/Logos/ProjectLogo.png
+[AbatabManualPng]: ../man/res/img/AbatabManual.png
 [MyAvatarUrl]: https://www.ntst.com/Solutions-and-Services/Offerings/MyAvatarUrl
-[AbatabManualPng]: ./Images/ManualLogo.png
 [ManHome]: ./Documentation/Manual/Manual.md
 [ManGettingStarted]: ./Documentation/Manual/ManGettingStarted.md
 [ManHosting]: ./Documentation/Manual/ManHosting.md
@@ -55,3 +54,4 @@ The first step to using MAWS in your MyAvatarUrl™ environment is hosting the M
 [ManUsing]: ./Documentation/Manual/ManUsing.md
 [ManScriptLink]: ./Documentation/Manual/ManScriptLink.md
 [ManAdditionalInfo]: ./Documentation/Manual/ManAdditionalInfo.md
+
