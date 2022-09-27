@@ -5,7 +5,7 @@
 
   Last updated: September 27, 2022
 
-  ![AbatabLogo][AbatabLogo]
+  ![AbatabManualPng][AbatabManualPng]
   <h1> 
   Abatab Manual
   </h1>
