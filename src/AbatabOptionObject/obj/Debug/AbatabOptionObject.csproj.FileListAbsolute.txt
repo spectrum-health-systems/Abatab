@@ -1,0 +1,10 @@
+C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\AbatabOptionObject\bin\Debug\AbatabOptionObject.dll
+C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\AbatabOptionObject\bin\Debug\AbatabOptionObject.pdb
+C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\AbatabOptionObject\bin\Debug\NTST.ScriptLinkService.Objects.dll
+C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\AbatabOptionObject\bin\Debug\NTST.ScriptLinkService.Objects.pdb
+C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\AbatabOptionObject\bin\Debug\NTST.ScriptLinkService.Objects.xml
+C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\AbatabOptionObject\obj\Debug\AbatabOptionObject.csproj.AssemblyReference.cache
+C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\AbatabOptionObject\obj\Debug\AbatabOptionObject.csproj.CoreCompileInputs.cache
+C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\AbatabOptionObject\obj\Debug\AbatabOptionObject.csproj.CopyComplete
+C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\AbatabOptionObject\obj\Debug\AbatabOptionObject.dll
+C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\AbatabOptionObject\obj\Debug\AbatabOptionObject.pdb

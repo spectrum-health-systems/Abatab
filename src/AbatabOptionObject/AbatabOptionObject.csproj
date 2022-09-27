@@ -50,15 +50,6 @@
       <Name>NTST.ScriptLinkService.Objects</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="ProjData\ProjInfo.md" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="ProjData\CHANGELOG.md" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="ProjData\Sourcecode.md" />
-  </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

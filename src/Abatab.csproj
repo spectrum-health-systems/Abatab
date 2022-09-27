@@ -68,7 +68,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Abatab.asmx" />
-    <None Include="AppData\AppInfo.md" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -80,9 +79,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <Content Include="ProjData\CHANGELOG.md" />
-    <Content Include="ProjData\Sourcecode.md" />
-    <Content Include="ProjData\ProjInfo.md" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

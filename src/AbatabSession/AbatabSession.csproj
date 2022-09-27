@@ -66,9 +66,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <Content Include="ProjData\CHANGELOG.md" />
-    <Content Include="ProjData\ProjInfo.md" />
-    <Content Include="ProjData\Sourcecode.md" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
