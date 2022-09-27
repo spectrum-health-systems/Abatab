@@ -1,7 +1,10 @@
 ﻿/* ========================================================================================================
- * AbatabSession.Session.cs: Session object properties.
- * b220912.112816
- * https://github.com/spectrum-health-systems/Abatab/blob/main/Documentation/Sourcecode/Sourcecode.md
+ * Abatab v0.5.0
+ * https://github.com/spectrum-health-systems/Abatab
+ * (c) 2021-2022 A Pretty Cool Program (see LICENSE file for more information)
+ * --------------------------------------------------------------------------------------------------------
+ * AbatabSession.Instance.cs v0.5.0-development+220927.110333
+ * https://github.com/spectrum-health-systems/Abatab/blob/main/doc/srcdoc/SrcDocAbatabSession.md
  * ===================================================================================================== */
 
 using AbatabData;
@@ -42,7 +45,7 @@ namespace AbatabSession
         /// <returns></returns>
         private static SessionData Initialize(OptionObject2015 sentOptObj, string abatabRequest)
         {
-            return new Instance
+            return new SessionData
             {
                 AbatabMode             = Properties.Settings.Default.AbatabMode.ToLower(),
                 LogMode                = Properties.Settings.Default.LoggingMode.ToLower(),

@@ -1,9 +1,11 @@
 ﻿/* ========================================================================================================
- * AbatabRoundhouse.Roundhouse.cs: The roundhouse for Abatab.
- * b220922.120913
- * https://github.com/spectrum-health-systems/Abatab/blob/main/Documentation/Sourcecode/Sourcecode.md
+ * Abatab v0.5.0
+ * https://github.com/spectrum-health-systems/Abatab
+ * (c) 2021-2022 A Pretty Cool Program (see LICENSE file for more information)
+ * --------------------------------------------------------------------------------------------------------
+ * AbatabRoundhouse.Roundhouse.cs v0.5.0-development+220927.110333
+ * https://github.com/spectrum-health-systems/Abatab/blob/main/doc/srcdoc/SrcDocAbatabRoundhouse.md
  * ===================================================================================================== */
-
 namespace AbatabRoundhouse
 {
     public class Roundhouse

@@ -1,41 +1,15 @@
-﻿/* Abatab: A custom web service for Netsmart's myAvatar™ EHR.
+﻿/* ========================================================================================================
+ * Abatab v0.5.0
  * https://github.com/spectrum-health-systems/Abatab
  * (c) 2021-2022 A Pretty Cool Program (see LICENSE file for more information)
- *
- * More information:
- *   https://github.com/spectrum-health-systems/Abatab/blob/main/src/ApplicationData/ApplicationInformation.md
- */
-
-/* AbatabData.csproj v0.4.1
- * Data object definitions for Abatab.
- *
- * AbatabData.SessionData.cs b220926.111024
- * Session data object definitions.
- *
-/* For more information about this source code, please see:
- *   https://github.com/spectrum-health-systems/Abatab/blob/main/Documentation/Sourcecode/Sourcecode.md
- * *******************************************************************************************************/
-
-
-
-/* Abatab: A custom web service for Netsmart's myAvatar™ EHR.
- * More information: Abatab/ApplicationData/ApplicationInformation.md
- */
-
-/* AbatabData.SessionData.cs                                                                 b220926.111024
- * Entry point for Abatab, and primarily focuses on the processing the initial ScriptLink call from
- * myAvatar™. This class should remain fairly static and rely external source code to do the heavy lifting.
- *
- * For more information about this source code, please see:
- *   https://github.com/spectrum-health-systems/Abatab/blob/main/Documentation/Sourcecode/Sourcecode.md
- * ----------------------------------------------------------------------------------------------------- */
-
-
+ * --------------------------------------------------------------------------------------------------------
+ * Abatab.asmx.cs v0.5.0-development+220927.110333
+ * https://github.com/spectrum-health-systems/Abatab/blob/main/doc/srcdoc/SrcDocAbatab.md
+ * ===================================================================================================== */
 
 using AbatabLogging;
 using AbatabRoundhouse;
 using AbatabSession;
-
 using NTST.ScriptLinkService.Objects;
 using System.Reflection;
 using System.Web.Services;
