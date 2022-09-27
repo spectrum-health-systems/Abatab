@@ -97,7 +97,5 @@ Translations are available at https://www.contributor-covenant.org/translations.
 <!-- REFERENCE LINKS -->
 [AbatabCurrentBranchUrl]: ../../../README.md
 [AbatabLogo]: ../../Logos/RepositoryLogo.png
-[AbatabRepositoryUrl]: https://github.com/spectrum-health-systems/Abatab
 [ContributorCovenentUrl]: https://www.contributor-covenant.org/
-[ContributorCovenentV2Url]: https://www.contributor-covenant.org/version/2/0/code_of_conduct.html
 [MozillaEnforcementLadderUrl]: https://github.com/mozilla/diversity

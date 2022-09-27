@@ -1,4 +1,4 @@
-> [Abatab][AbatabRepositoryUrl] > Manual
+> [Abatab][AbatabRepoUrl] > Manual
 
 <br>
 <div align="center">
@@ -22,7 +22,7 @@
 
 You can extend MyAvatarUrl™ functionality via Netsmart's MyAvatarUrl™ Web Services, and/or custom web services that are written by other MyAvatarUrl™ users.
 
-[**Abatab**][AbatabRepositoryUrl] is one such custom web service which includes various tools and utilities for MyAvatarUrl™ that aren't included in the official release, and provides a solid foundation for building additional functionality quickly and efficiently.
+[**Abatab**][AbatabRepoUrl] is one such custom web service which includes various tools and utilities for MyAvatarUrl™ that aren't included in the official release, and provides a solid foundation for building additional functionality quickly and efficiently.
 
 ## Features
 
@@ -52,10 +52,10 @@ Ready to implement Abatab in your environment? [Let's get started!][ManGettingSt
 
 ***
 
-> [Abatab][AbatabRepositoryUrl] > Manual
+> [Abatab][AbatabRepoUrl] > Manual
 
 <!-- REFERENCE LINKS -->
-[AbatabRepositoryUrl]: https://github.com/spectrum-health-systems/Abatab
+[AbatabRepoUrl]: https://github.com/spectrum-health-systems/Abatab
 [AbatabManualPng]: ../man/res/img/AbatabManual.png
 [MyAvatarUrl]: https://www.ntst.com/Solutions-and-Services/Offerings/MyAvatarUrl
 [ManHome]: ManHome.md

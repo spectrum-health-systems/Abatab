@@ -55,7 +55,7 @@ This README is short and sweet because the [Abatab Manual][ManHome], which is up
 <!-- REFERENCE LINKS -->
 [WarningAlphaBranch]: https://img.shields.io/badge/WARNING-THIS%20IS%20ALPHA%20SOFTWARE-FF160C?style=for-the-badge
 [WarningBetaBranch]: https://img.shields.io/badge/WARNING-THIS%20IS%20BETA%20SOFTWARE-FF160C?style=for-the-badge
-[AbatabRepositoryUrl]: https://github.com/spectrum-health-systems/Abatab
+[AbatabRepoUrl]: https://github.com/spectrum-health-systems/Abatab
 [AbatabCurrentBranchUrl]: README.md
 [AbatabLogo]: /.github/res/img/logo/RepositoryLogo.png
 [StatusActiveRepo]: https://img.shields.io/badge/StatusActiveRepo-brightgreen?style=flat-square
@@ -68,6 +68,6 @@ This README is short and sweet because the [Abatab Manual][ManHome], which is up
 [AbatabChangelog]: /doc/CHANGELOG.md
 [AbatabRoadmap]: /doc/ROADMAP.md
 [ManHome]: /doc/man/ManHome.md
-[SrcDocHome]: /doc/source/SrcDocHome.md
+[SrcDocHome]: /doc/srcdoc/SrcDocHome.md
 [MyAvatarUrl]: https://www.ntst.com/Solutions-and-Services/Offerings/myAvatar
 [HoMM3]: https://www.gog.com/game/heroes_of_might_and_magic_3_complete_edition

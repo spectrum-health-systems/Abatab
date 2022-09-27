@@ -22,6 +22,5 @@ When contributing to this repository:
 <!-- REFERENCE LINKS -->
 [AbatabCurrentBranchUrl]: ../../../README.md
 [AbatabLogo]: ../../Logos/RepositoryLogo.png
-[AbatabRepositoryUrl]: https://github.com/spectrum-health-systems/Abatab
 [CodeOfConduct]: ./CodeOfConduct.md
 [BuiltWith]: ./BuiltWith.md

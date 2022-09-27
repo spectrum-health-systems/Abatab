@@ -1,4 +1,4 @@
-> [Abatab][AbatabRepositoryUrl] > Manual
+> [Abatab][AbatabRepoUrl] > Manual
 
 <br>
 <div align="center">
@@ -41,10 +41,10 @@ The first step to using MAWS in your MyAvatarUrl™ environment is hosting the M
 
 ***
 
-> [Abatab][AbatabRepositoryUrl] > Manual
+> [Abatab][AbatabRepoUrl] > Manual
 
 <!-- REFERENCE LINKS -->
-[AbatabRepositoryUrl]: https://github.com/spectrum-health-systems/Abatab
+[AbatabRepoUrl]: https://github.com/spectrum-health-systems/Abatab
 [AbatabManualPng]: ../man/res/img/AbatabManual.png
 [MyAvatarUrl]: https://www.ntst.com/Solutions-and-Services/Offerings/MyAvatarUrl
 [ManHome]: ManHome.md

@@ -11,16 +11,14 @@
 
 # Additional resources
 
-* [Avatar Development Community][AvatarDevelopmentCommunityUrl]  
+* [Avatar Development Community][AvatarDevCommunityUrl]  
 The myAvatar™ Development Community contains community-driven documentation, projects, and templates for Netsmart's myAvatar™ EHR.
 
 <br>
-
 
 > [Abatab][AbatabCurrentBranchUrl] > Additional resources
 
 <!-- REFERENCE LINKS -->
 [AbatabCurrentBranchUrl]: ../../../README.md
 [AbatabLogo]: ../../Logos/RepositoryLogo.png
-[AbatabRepositoryUrl]: https://github.com/spectrum-health-systems/Abatab
-[AvatarDevelopmentCommunityUrl]: https://github.com/myAvatarDevelopmentCommunityUrl
+[AvatarDevCommunityUrl]: https://github.com/myAvatarDevCommunityUrl

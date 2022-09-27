@@ -20,4 +20,3 @@ Nothing here yet.
 <!-- REFERENCE LINKS -->
 [AbatabCurrentBranchUrl]: ../../../README.md
 [AbatabLogo]: ../../Logos/RepositoryLogo.png
-[AbatabRepositoryUrl]: https://github.com/spectrum-health-systems/Abatab
