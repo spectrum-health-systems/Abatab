@@ -58,10 +58,10 @@ Ready to implement Abatab in your environment? [Let's get started!][ManGettingSt
 [AbatabRepositoryUrl]: https://github.com/spectrum-health-systems/Abatab
 [AbatabManualPng]: ../man/res/img/AbatabManual.png
 [MyAvatarUrl]: https://www.ntst.com/Solutions-and-Services/Offerings/MyAvatarUrl
-[ManHome]: ./Documentation/Manual/Manual.md
-[ManGettingStarted]: ./Documentation/Manual/ManGettingStarted.md
-[ManHosting]: ./Documentation/Manual/ManHosting.md
-[ManImporting]: ./Documentation/Manual/ManImporting.md
-[ManUsing]: ./Documentation/Manual/ManUsing.md
-[ManScriptLink]: ./Documentation/Manual/ManScriptLink.md
-[ManAdditionalInfo]: ./Documentation/Manual/ManAdditionalInfo.md
+[ManHome]: ManHome.md
+[ManGettingStarted]: ManGettingStarted.md
+[ManHosting]: ManHosting.md
+[ManImporting]: ManImporting.md
+[ManUsing]: ManUsing.md
+[ManScriptLink]: ManScriptLink.md
+[ManAdditionalInfo]: ManAdditionalInfo.md

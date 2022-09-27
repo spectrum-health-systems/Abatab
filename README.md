@@ -1,6 +1,6 @@
 <div align="center">
 
-  ![REPOSITORY-WARNING][WarningBetaBranch]
+  ![RepoWarning][WarningBetaBranch]
   
   ***
 
@@ -8,7 +8,7 @@
 
 # A custom web service for Netsmart's myAvatar™ EHR
 
-  ![REPOSITORY-STATUS][StatusActiveRepo]&nbsp;&nbsp;[![AbatabLicense][AbatabLicense]][AbatabLicenseUrl]&nbsp;&nbsp;[![AbatabCurrentRelease][AbatabCurrentRelease]][AbatabCurrentReleaseUrl]
+  ![RepoStatus][StatusActiveRepo]&nbsp;&nbsp;[![AbatabLicense][AbatabLicense]][AbatabLicenseUrl]&nbsp;&nbsp;[![AbatabCurrentRelease][AbatabCurrentRelease]][AbatabCurrentReleaseUrl]
 
   ***
   ### [AbatabChangelog][AbatabChangelog]&nbsp;&bull;&nbsp;[AbatabRoadmap][AbatabRoadmap]&nbsp;&bull;&nbsp;[ManHome][ManHome]&nbsp;&bull;&nbsp;[Sourcecode documentation][SrcDocHome]
@@ -17,7 +17,6 @@
 
 </div>
 
-<br>
 <br>
 
 # About
