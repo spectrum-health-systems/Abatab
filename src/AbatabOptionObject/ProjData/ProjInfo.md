@@ -1,4 +1,4 @@
-# AbatabOptionObject.csproj `v0.4.7`
+# AbatabOptionObject.csproj `v0.0.0`
 
 Logging functionality for [Abatab][REPOSITORY-URL].
 

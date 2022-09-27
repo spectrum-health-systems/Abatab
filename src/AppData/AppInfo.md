@@ -1,4 +1,4 @@
-﻿# Abatab `v0.4.7`
+﻿# Abatab `v0.5.0`
 
 A custom web service for Netsmart's myAvatar™ EHR that includes various tools and utilities for myAvatar™ that aren't included in the official release, and provides a solid foundation for building additional functionality quickly and efficiently.
 

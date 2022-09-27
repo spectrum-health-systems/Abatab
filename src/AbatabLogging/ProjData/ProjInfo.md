@@ -1,4 +1,4 @@
-# AbatabLogging.csproj `v0.4.7`
+# AbatabLogging.csproj `v0.0.0`
 
 Logging functionality for [Abatab][REPOSITORY-URL].
 

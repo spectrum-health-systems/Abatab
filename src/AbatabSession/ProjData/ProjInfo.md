@@ -1,4 +1,4 @@
-# AbatabSession.csproj `v0.4.7`
+# AbatabSession.csproj `v0.0.0`
 
 Session logic for [Abatab][REPOSITORY-URL].
 

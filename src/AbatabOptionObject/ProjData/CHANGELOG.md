@@ -3,6 +3,3 @@
 -->
 
 # AbatabOptionObject.csproj changelog
-
-## v0.4.6
-`INFO` Comment cleanup

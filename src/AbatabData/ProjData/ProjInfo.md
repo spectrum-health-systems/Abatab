@@ -1,4 +1,4 @@
-# AbatabData.csproj `v0.4.7`
+# AbatabData.csproj `v0.0.0`
 
 Data object definitions for [Abatab][REPOSITORY-URL].
 
