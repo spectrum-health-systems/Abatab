@@ -1,6 +1,0 @@
-C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\AbatabRoundhouse\bin\Debug\AbatabRoundhouse.dll
-C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\AbatabRoundhouse\bin\Debug\AbatabRoundhouse.pdb
-C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\AbatabRoundhouse\obj\Debug\AbatabRoundhouse.csproj.AssemblyReference.cache
-C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\AbatabRoundhouse\obj\Debug\AbatabRoundhouse.csproj.CoreCompileInputs.cache
-C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\AbatabRoundhouse\obj\Debug\AbatabRoundhouse.dll
-C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\AbatabRoundhouse\obj\Debug\AbatabRoundhouse.pdb
