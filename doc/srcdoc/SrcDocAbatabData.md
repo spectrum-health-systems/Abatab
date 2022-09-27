@@ -1,4 +1,4 @@
-> [Abatab][AbatabRepoUrl] &gt; [Sourcecode][AbatabSrcDocHome] &gt; **AbatabData.csproj**
+> [Abatab][AbatabRepoUrl] &gt; [Source code documentation][AbatabSrcDocHome] &gt; **AbatabData.csproj**
 
 <br>
 
@@ -78,7 +78,7 @@ The returned OptionObject2015 may - or may not - be modified, depending on the A
 
 ***
 
-> [Abatab][AbatabRepoUrl] &gt; [Sourcecode][AbatabSrcDocHome] &gt; **AbatabData.csproj**
+> [Abatab][AbatabRepoUrl] &gt; [Source code documentation][AbatabSrcDocHome] &gt; **AbatabData.csproj**
 
 <!-- REFERENCE LINKS -->
 [AbatabRepoUrl]: https://github.com/spectrum-health-systems/Abatab

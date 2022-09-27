@@ -3,7 +3,8 @@
  * https://github.com/spectrum-health-systems/Abatab
  * (c) 2021-2022 A Pretty Cool Program (see LICENSE file for more information)
  * --------------------------------------------------------------------------------------------------------
- * AbatabRoundhouse.Roundhouse.cs v0.5.0-development+220927.110333
+ * AbatabRoundhouse v0.5.0
+ * AbatabRoundhouse.Roundhouse.cs b220927.110333
  * https://github.com/spectrum-health-systems/Abatab/blob/main/doc/srcdoc/SrcDocAbatabRoundhouse.md
  * ===================================================================================================== */
 namespace AbatabRoundhouse
