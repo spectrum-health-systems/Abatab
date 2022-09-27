@@ -25,7 +25,7 @@
   Home&nbsp;&bull;&nbsp;[Getting started][MANUAL-GETTING-STARTED]&nbsp;&bull;&nbsp;[Hosting][MANUAL-HOSTING]&nbsp;&bull;&nbsp;[Importing][MANUAL-IMPORTING]&nbsp;&bull;&nbsp;[Using][MANUAL-USING]&nbsp;&bull;&nbsp;[ScriptLink][MANUAL-SCRIPTLINK]&nbsp;&bull;&nbsp;[Additional information][MANUAL-ADDITIONAL-INFORMATION]
 
   </h2>
-  </div>
+</div>
 
 ***
 

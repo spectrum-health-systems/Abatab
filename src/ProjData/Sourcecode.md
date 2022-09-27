@@ -1,7 +1,18 @@
+<br>
 <div align="center">
-  <h1>
-    Abatab project sourcecode documentation
-  </h1>
+
+  <!-- PROJECT LOGO
+      - Project logo should be located at "./.github/Logos/ProjectLogo.png".
+      - Short description of the project.
+  -->
+
+  ![SourceCodeDocumentationLogo][SourceCodeDocumentationLogo]
+
+  <h2>
+
+  Home&nbsp;&bull;&nbsp;[Getting started][MANUAL-GETTING-STARTED]&nbsp;&bull;&nbsp;[Hosting][MANUAL-HOSTING]&nbsp;&bull;&nbsp;[Importing][MANUAL-IMPORTING]&nbsp;&bull;&nbsp;[Using][MANUAL-USING]&nbsp;&bull;&nbsp;[ScriptLink][MANUAL-SCRIPTLINK]&nbsp;&bull;&nbsp;[Additional information][MANUAL-ADDITIONAL-INFORMATION]
+
+  </h2>
 </div>
 
 # Namespace
@@ -85,4 +96,6 @@ The returned OptionObject2015 may - or may not - be modified, depending on the A
 
 * This method is required by myAvatar.
 
-</details>
+<!-- REFERENCE LINKS -->
+
+[SourceCodeDocumentationLogo]: ./Images/ManualLogo.png
