@@ -181,7 +181,7 @@ Build the logfile content footer.
 
 * None
 
-> [Back to top](#content)
+> [`Back to top`](#content)
 
 <br>
 
