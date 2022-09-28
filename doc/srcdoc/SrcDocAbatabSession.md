@@ -65,8 +65,8 @@ Verify the session AvatarUserName is valid.
 
 ## Operation
 
-1. **Check if the username is blank**  
-The AvatarUserName is used to keep track of various session information, such as logs. If sentOptionObject.OptionUserId is blank, we will force it to be the AvatarFallbackUserName defined in the local configuration settings file.
+1. **Check if the username is blank/whitespace**  
+The AvatarUserName is used to keep track of various session information, such as logs. If it doesn't exist,it will be set to the `FallbackAvatarUserName`.
 
 2. **Return the `abatabSession` object**  
 
