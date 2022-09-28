@@ -1,5 +1,4 @@
-
-> [Abatab][AbatabRepoUrl] &gt; [Source code documentation][AbatabSrcDocHome] &gt; **Abatab.csproj**
+> [Abatab][AbatabRepoUrl] &gt; [Source code documentation][SrcDocHome] &gt; **Abatab.csproj**
 
 <br>
 
@@ -7,85 +6,72 @@
 
   ![SrcDocPng][SrcDocPng]
 
-  <h1>
-    Abatab.csproj
-  </h1>
-
-  **v0.5.0 - Last updated 9/27/22**
+  <h2>
+    Abatab.csproj<br>
+    <b>v0.6.0</b>
+  </h2>
 
 </div>
 
-The Abatab project is the entry point for Abatab. When you make a Abatab request via a ScriptLink event, this is where that request ends up.
+***
 
-As it is mostly a "clearing house" for Abatab requests, this namespace should only contain the required classes/methods that Abatab needs to function. In addition, it is designed to be fairly generic - most of the heavy-lifting is done by external namespaces/classes/methods. This way the required functionality rarely changes, and ScriptLink will have a known, stable target.
+## Abatab.asmx.cs<br>
+[GetVersion()](#instancebuild)<br>
+[RunScript()](#instanceinitialize)<br>
 
 ***
 
-### Classes
-* [Abatab.asmx.cs](#abatabasmxcs)  
-Main Abatab class that contains the required methods that Abatab needs to function.
+<br>
 
-***
-
-# Abatab.asmx.cs
-
-## `GetVersion()`
+# Abatab.GetVersion()
 
 Returns the Abatab version.
 
-### Operation
+## Operation
 
 1. **Return the current version of Abatab**  
-The version number doesn't change during development. For example, while developing v2.0.x.x, this method will aways return `VERSION 2.0`.
 
-### Notes
+## Notes
 
 * The `GetVersion()` method is required by myAvatar™.
-* You can find more information about the `GetVersion()` method [here][GetVersionMethodDocumenation].
+* The version number doesn't change during development. For example, while developing v2.0.x.x, this method will aways return *"VERSION 2.0"*.
+* You can find more information about the `GetVersion()` method [here][GetVersionMethodDocumentation].
 
-***
+<br>
 
-## `RunScript()`
+# Abatab.RunScript()
 
 Execute a Abatab Request.
 
-### Operation
+## Operation
 
-1. **Create a SessionData object with everything we need**  
-The SessionData object contains:
-    * Configuration settings from the local web.config file
-    * Settings created at runtime
-    * Necessary OptionObjects
+1. **Build a new `abatabSession` object**  
+The `abatabSession` object contains all of the settings and data Abatab needs to do it's job.
 
-2. **Process the Abatab Request**  
-The AbatabMode can be one of the following:
-    * `enabled`  
-    This is the default setting, which processes Abatab requests normally, returns a modified OptionObject2015 to myAvatar, and logs everything.
-    * `disabled`  
-    Skip all Abatab functionality. Essentially Abatab will recieve the sentOptObj, then skip directly to finalizing and returning the retOptObj, so no changes are made. This should be used when you don't want myAvatar to call Abatab, but you don't want to disable scripts on every form you use  anything, including writing logs (aside from basic, informational logs).
-    * `passthrough`  
-    Use Abatab, but don't make changes, only write logs. This is like the "disabled" setting, since no modifications to the OptionObject are make, and also like the "enabled" setting, since Abatab will actually go through the motions and write logs normally.
-
+2. **Process the Abatab request**  
+Where the request is sent depends on which [AbatabMode][ManConfigure] is active.
 
 3. **Return an OptionObject2015 object to myAvatar**  
-The returned OptionObject2015 may - or may not - be modified, depending on the AbatabMode and/or the Abatab Request.
+The returned OptionObject2015 may - *or may not* - be modified, depending on the AbatabMode and/or the Abatab request.
 
-### Notes
+## Notes
 
 * The `RunScript()` method is required by myAvatar™.
+* This method is the entry point for Abatab. When you make a Abatab request via a ScriptLink event, this is where that request ends up. It is designed to be fairly generic, since most of the heavy-lifting is done by external namespaces/classes/methods. This way the required functionality rarely changes, and ScriptLink will have a known, stable target.  
 * You can find more information about the `RunScript()` method [here][RunScriptMethodDocumentation].
 
 <br>
 
 ***
 
-> [Abatab][AbatabRepoUrl] &gt; [Source code documentation][AbatabSrcDocHome] &gt; **Abatab.csproj**
-
+> [Abatab][AbatabRepoUrl] &gt; [Source code documentation][SrcDocHome] &gt; **Abatab.csproj**
 
 <!-- REFERENCE LINKS -->
 
 [AbatabRepoUrl]: https://github.com/spectrum-health-systems/Abatab
 [SrcDocPng]: ./res/img/SrcDocPng.png
-[AbatabSrcDocHome]: SrcDocHome.md
-[GetVersionMethodDocumenation]: https://github.com/myAvatar-Development-Community/document-creating-a-custom-web-service#the-getversion-method
+[SrcDocHome]: SrcDocHome.md
+[GetVersionMethodDocumentation]: https://github.com/myAvatar-Development-Community/document-creating-a-custom-web-service#the-getversion-method
+ <!-- Need specific link -->
+[ManConfigure]: /doc/man/ManConfigure.md
 [RunScriptMethodDocumentation]: https://github.com/myAvatar-Development-Community/document-creating-a-custom-web-service#the-runscript-method

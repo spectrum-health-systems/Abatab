@@ -3,7 +3,7 @@
 <br>
 <div align="center">
 
-  Last updated: September 27, 2022
+  **Abatab v0.6.0**
 
   ![AbatabManualPng][AbatabManualPng]
   <h1> 

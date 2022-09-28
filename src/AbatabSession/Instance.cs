@@ -1,10 +1,10 @@
 ﻿/* ========================================================================================================
- * Abatab v0.5.0
+ * Abatab v0.6.0
  * https://github.com/spectrum-health-systems/Abatab
  * (c) 2021-2022 A Pretty Cool Program (see LICENSE file for more information)
  * --------------------------------------------------------------------------------------------------------
- * AbatabSession v0.5.0
- * AbatabSession.Instance.cs b220927.110333
+ * AbatabSession v0.6.0
+ * AbatabSession.Instance.cs b220928.093453
  * https://github.com/spectrum-health-systems/Abatab/blob/main/doc/srcdoc/SrcDocAbatabSession.md
  * ===================================================================================================== */
 
@@ -26,11 +26,8 @@ namespace AbatabSession
         /// <returns>Session configuration settings.</returns>
         public static SessionData Build(OptionObject2015 sentOptObj, string abatabRequest)
         {
-            /* INFO Build SessionData for this session instance.*/
             SessionData abatabSession = Initialize(sentOptObj, abatabRequest);
 
-            /* We need to verify components of the Abatab session configuration setting before continuing.
-             */
             _=VerifyAvatarUserName(abatabSession); // TODO Assume reference type, but make sure this works.
 
             LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
@@ -53,11 +50,11 @@ namespace AbatabSession
                 AbatabRootDirectory    = Properties.Settings.Default.AbatabRootDirectory,
                 AvatarFallbackUserName = Properties.Settings.Default.AvatarFallbackUserName,
                 DateStamp              = DateTime.Now.ToString("yyMMdd"),
-                TimeStamp              = DateTime.Now.ToString($"HHmmss.fffffff"),
+                TimeStamp              = DateTime.Now.ToString("HHmmss.fffffff"),
                 AbatabRequest          = abatabRequest.ToLower(),
                 AvatarUserName         = sentOptObj.OptionUserId,
                 SentOptObj             = sentOptObj,
-                WorkerOptObj           = sentOptObj,
+                WorkOptObj             = sentOptObj,
                 FinalOptObj            = sentOptObj,
             };
         }
@@ -69,10 +66,6 @@ namespace AbatabSession
         /// <returns>Session object with verified AvatarUserName</returns>
         private static SessionData VerifyAvatarUserName(SessionData abatabSession)
         {
-            /* The AvatarUserName is used to keep track of various session information, such as logs. If
-             * sentOptionObject.OptionUserId is blank, we will force it to be the AvatarFallbackUserName
-             * defined in the local configuration settings file.
-             */
             if (string.IsNullOrWhiteSpace(abatabSession.AvatarUserName))
             {
                 abatabSession.AvatarUserName = abatabSession.AvatarFallbackUserName;

@@ -1,10 +1,10 @@
 ﻿/* ========================================================================================================
- * Abatab v0.5.0
+ * Abatab v0.6.0
  * https://github.com/spectrum-health-systems/Abatab
  * (c) 2021-2022 A Pretty Cool Program (see LICENSE file for more information)
  * --------------------------------------------------------------------------------------------------------
- * AbatabData v0.5.0
- * AbatabData.SessionData.cs b220927.110333
+ * AbatabData v0.6.0
+ * AbatabData.SessionData.cs b220928.091558
  * https://github.com/spectrum-health-systems/Abatab/blob/main/doc/srcdoc/SrcDocAbatabData.md
  * ===================================================================================================== */
 
@@ -26,7 +26,7 @@ namespace AbatabData
         public string AvatarUserName { get; set; }
         public string AbatabRequest { get; set; }
         public OptionObject2015 SentOptObj { get; set; }
-        public OptionObject2015 WorkerOptObj { get; set; }
+        public OptionObject2015 WorkOptObj { get; set; }
         public OptionObject2015 FinalOptObj { get; set; }
     }
 }
