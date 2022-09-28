@@ -15,7 +15,8 @@
 
 ***
 
-## Instance.cs<br>
+## Content
+### Instance.cs<br>
 [Instance.Build()](#instancebuild)<br>
 [Instance.Initialize()](#instanceinitialize)<br>
 [Instance.VerifyAvatarUserName()](#instanceverifyavatarusername)<br>
@@ -40,6 +41,8 @@ Some components are required, or need to meet specific paramaters.
 
 * None
 
+> [Back to top](#content)
+
 # Instance.Initialize()
 
 Initialize the Abatab session configuration settings.
@@ -59,6 +62,8 @@ The `abatabSession` object is a [SessionData][ManAbatabData] object that contain
 * More information about the web.config settings can be found in the [Abatab Manual][ManConfigure].
 * OptionObjects naming conventions can be found [here][VariablePrefixes].
 
+> [Back to top](#content)
+
 # Instance.VerifyAvatarUserName()
 
 Verify the session AvatarUserName is valid.
@@ -74,7 +79,7 @@ The AvatarUserName is used to keep track of various session information, such as
 
 * None
 
-</details>
+> [Back to top](#content)
 
 <br>
 

@@ -15,9 +15,10 @@
 
 ***
 
-## Abatab.asmx.cs<br>
-[GetVersion()](#instancebuild)<br>
-[RunScript()](#instanceinitialize)<br>
+## Content
+### Abatab.cs<br>
+[Abatab.GetVersion()](#abatabgetversion)<br>
+[Abatab.RunScript()](#abatabrunscript)<br>
 
 ***
 
@@ -37,7 +38,7 @@ Returns the Abatab version.
 * The version number doesn't change during development. For example, while developing v2.0.x.x, this method will aways return *"VERSION 2.0"*.
 * You can find more information about the `GetVersion()` method [here][GetVersionMethodDocumentation].
 
-<br>
+> [Back to top](#content)
 
 # Abatab.RunScript()
 
@@ -60,9 +61,13 @@ The returned OptionObject2015 may - *or may not* - be modified, depending on the
 * This method is the entry point for Abatab. When you make a Abatab request via a ScriptLink event, this is where that request ends up. It is designed to be fairly generic, since most of the heavy-lifting is done by external namespaces/classes/methods. This way the required functionality rarely changes, and ScriptLink will have a known, stable target.  
 * You can find more information about the `RunScript()` method [here][RunScriptMethodDocumentation].
 
+> [Back to top](#content)
+
 <br>
 
 ***
+
+<br>
 
 > [Abatab][AbatabRepoUrl] &gt; [Source code documentation][SrcDocHome] &gt; **Abatab.csproj**
 
