@@ -22,8 +22,6 @@
 
 ***
 
-<br>
-
 # Instance.Build()
 
 Build configuration settings for an Abatab session.
@@ -41,8 +39,6 @@ Some components are required, or need to meet specific paramaters.
 ## Notes
 
 * None
-
-<br>
 
 # Instance.Initialize()
 
@@ -62,8 +58,6 @@ The `abatabSession` object is a [SessionData][ManAbatabData] object that contain
 
 * More information about the web.config settings can be found in the [Abatab Manual][ManConfigure].
 * OptionObjects naming conventions can be found [here][VariablePrefixes].
-
-<br>
 
 # Instance.VerifyAvatarUserName()
 
