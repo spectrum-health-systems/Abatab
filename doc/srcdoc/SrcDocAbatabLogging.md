@@ -31,7 +31,6 @@
 
 ### LogEvent.cs<br>
 
-[LogEvent.AllEvents()](#logeventallevents)<br>
 [LogEvent.AllOptionObjectInformation()](#logeventalloptionobjectinformation)<br>
 [LogEvent.SessionData()](#logeventsessiondata)<br>
 [LogEvent.Trace()](#logeventtrace)<br>
@@ -208,24 +207,6 @@ Build the logfile content footer.
 ## Notes
 
 * None
-
-> [Back to top](#content)
-
-# LogEvent.AllEvents()
-
-Log all types of events in one method call.
-
-## Operation
-
-1. **Build a trace log**  
-
-2. **Build a session data log**  
-
-3. **Build logs for each OptionObject**
-
-## Notes
-
-* This is helpful when you want to log a bunch of information at once.
 
 > [Back to top](#content)
 

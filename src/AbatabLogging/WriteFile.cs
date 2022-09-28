@@ -8,9 +8,15 @@
  * https://github.com/spectrum-health-systems/Abatab/blob/main/doc/srcdoc/SrcDocAbatabLogging.md
  * ===================================================================================================== */
 
+using System.IO;
+
 namespace AbatabLogging
 {
-    internal class WriteFile
+    public class WriteFile
     {
+        public static void ToLocalFile(string logContent)
+        {
+            File.WriteAllText(@"C:Abatab-testing\log.txt", logContent);
+        }
     }
 }

@@ -42,29 +42,12 @@ namespace Abatab
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string abatabRequest)
         {
             var abatabSession = Instance.Build(sentOptionObject, abatabRequest);
-            LogEvent.AllEvents(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
+            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
 
-            switch (abatabSession.AbatabMode)
-            {
-                case "enabled":
-                    LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
-                    Roundhouse.TestA();
-                    break;
+            Roundhouse.ParseRequest(abatabSession, abatabRequest);
+            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
 
-                case "disabled":
-                    LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
-                    Roundhouse.TestB();
-                    break;
 
-                case "passthrough":
-                    LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
-                    Roundhouse.TestC();
-                    break;
-
-                default:
-                    // Gracefully exit.
-                    break;
-            }
 
             return abatabSession.FinalOptObj;
         }
