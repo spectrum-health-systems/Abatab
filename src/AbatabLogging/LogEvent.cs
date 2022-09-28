@@ -16,7 +16,7 @@ namespace AbatabLogging
     public class LogEvent
     {
         /// <summary>
-        ///
+        /// Log all types of events in one method call.
         /// </summary>
         /// <param name="executingAssemblyName">Name of executing assembly.</param>
         /// <param name="abatabSession">Abatab session configuration settings.</param>

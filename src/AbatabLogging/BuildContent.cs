@@ -85,11 +85,11 @@ namespace AbatabLogging
         private static string LogDetailsWithTrace(string eventType, string executingAssemblyName, string callerFilePath, string callerMemberName, int callerLine)
         {
             return $"{Environment.NewLine}" +
-                          $"Log type: {eventType}{Environment.NewLine}" +
-                          $"Assembly: {executingAssemblyName}{Environment.NewLine}" +
-                          $"  Source: {Path.GetFileName(callerFilePath)}{Environment.NewLine}" +
-                          $"  Member: {callerMemberName}{Environment.NewLine}" +
-                          $"    Line: {callerLine}{Environment.NewLine}";
+                   $"Log type: {eventType}{Environment.NewLine}" +
+                   $"Assembly: {executingAssemblyName}{Environment.NewLine}" +
+                   $"  Source: {Path.GetFileName(callerFilePath)}{Environment.NewLine}" +
+                   $"  Member: {callerMemberName}{Environment.NewLine}" +
+                   $"    Line: {callerLine}{Environment.NewLine}";
         }
 
         /// <summary>
@@ -124,7 +124,7 @@ namespace AbatabLogging
                     return BodyOptObjInformation(abatabSession.SentOptObj, "sentOptObj");
 
                 case "workerOptObjInformation":
-                    return BodyOptObjInformation(abatabSession.WorkerOptObj, "workerOptObj");
+                    return BodyOptObjInformation(abatabSession.WorkOptObj, "workerOptObj");
 
                 case "finalOptObjInformation":
                     return BodyOptObjInformation(abatabSession.FinalOptObj, "finalOptObj");
@@ -191,7 +191,7 @@ namespace AbatabLogging
                           $"                Datestamp: {abatabSession.DateStamp}{Environment.NewLine}" +
                           $"                Timestamp: {abatabSession.TimeStamp}{Environment.NewLine}" +
                           $"           Abatab request: {abatabSession.AvatarUserName}{Environment.NewLine}" +
-                          $" Working Object unchanged: {AbatabOptionObject.Verify.NotModified(abatabSession.SentOptObj, abatabSession.WorkerOptObj)}{Environment.NewLine}" +
+                          $" Working Object unchanged: {AbatabOptionObject.Verify.NotModified(abatabSession.SentOptObj, abatabSession.WorkOptObj)}{Environment.NewLine}" +
                           $"   Final Object unchanged: {AbatabOptionObject.Verify.NotModified(abatabSession.SentOptObj, abatabSession.FinalOptObj)}{Environment.NewLine}";
         }
 

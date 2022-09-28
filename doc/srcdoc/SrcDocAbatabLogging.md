@@ -15,15 +15,26 @@
 
 ***
 ## Content
+
 ### BuildContent.cs<br>
-[BuildContent.LogTextWithTrace()]()<br>
-[BuildContent.LogTextWithoutTrace]()<br>
-[BuildContent.LogHeader]()<br>
-[BuildContent.LogDetailsWithTrace]()<br>
-[BuildContent.LogBody]()<br>
-[BuildContent.BodyAllOptObjInformation]()<br>
-[BuildContent.BodyOptObjInformation]()<br>
-[BuildContent.LogFooter()]()<br>
+
+[BuildContent.LogTextWithTrace()](#buildcontentlogtextwithtrace)<br>
+[BuildContent.LogTextWithoutTrace](#buildcontentlogtextwithouttrace)<br>
+[BuildContent.LogHeader](#buildcontentlogheader)<br>
+[BuildContent.LogDetailsWithTrace](#buildcontentlogdetailswithtrace)<br>
+[BuildContent.LogDetailsWithoutTrace](#buildcontentlogdetailswithouttrace)<br>
+[BuildContent.LogBody](#buildcontentlogbody)<br>
+[BuildContent.BodyAllOptObjInformation](#buildcontentbodyalloptobjinformation)<br>
+[BuildContent.BodyOptObjInformation](#buildcontentbodyoptobjinformation)<br>
+[BuildContent.BodySessionInformation](#buildcontentsessioninformation)<br>
+[BuildContent.LogFooter()](#buildcontentlogfooter)<br>
+
+### LogEvent.cs<br>
+
+[LogEvent.AllEvents()](#logeventallevents)<br>
+[LogEvent.AllOptionObjectInformation()](#logeventalloptionobjectinformation)<br>
+[LogEvent.SessionData()](#logeventsessiondata)<br>
+[LogEvent.Trace()](#logeventtrace)<br>
 
 ***
 
@@ -141,6 +152,22 @@ Build information for all OptionObject types.
 
 ## Operation
 
+1. **Build the logfile body for all types of OptionObject**  
+
+2. **Return the completed log body**
+
+## Notes
+
+* None
+
+> [Back to top](#content)
+
+# BuildContent.BodyOptObjInformation()
+
+Build information for a specific OptionObject type.
+
+## Operation
+
 1. **Build the logfile body for a specific type of OptionObject**  
 
 2. **Return the completed log body**
@@ -151,7 +178,8 @@ Build information for all OptionObject types.
 
 > [Back to top](#content)
 
-# BuildContent.BodyAllOptObjInformation()
+
+# BuildContent.SessionInformation()
 
 Build standard session information log body.
 
@@ -181,7 +209,67 @@ Build the logfile content footer.
 
 * None
 
-> [`Back to top`](#content)
+> [Back to top](#content)
+
+# LogEvent.AllEvents()
+
+Log all types of events in one method call.
+
+## Operation
+
+1. **Build a trace log**  
+
+2. **Build a session data log**  
+
+3. **Build logs for each OptionObject**
+
+## Notes
+
+* This is helpful when you want to log a bunch of information at once.
+
+> [Back to top](#content)
+
+# LogEvent.AllOptionObjectInformation()
+
+Build a OptionObject information log.
+
+## Operation
+
+1. **Build logs for each OptionObject**
+
+## Notes
+
+* None
+
+> [Back to top](#content)
+
+# LogEvent.SessionData()
+
+Build a session information log.
+
+## Operation
+
+1. **Build a session data log**
+
+## Notes
+
+* None
+
+> [Back to top](#content)
+
+# LogEvent.Trace()
+
+Build a trace log.
+
+## Operation
+
+1. **Build a trace log**
+
+## Notes
+
+* Basic troubleshooting, these are all over the place.
+
+> [Back to top](#content)
 
 <br>
 
