@@ -12,6 +12,7 @@ using AbatabLogging;
 using AbatabRoundhouse;
 using AbatabSession;
 using NTST.ScriptLinkService.Objects;
+using System.IO;
 using System.Reflection;
 using System.Web.Services;
 
@@ -43,6 +44,8 @@ namespace Abatab
         {
             var abatabSession = Instance.Build(sentOptionObject, abatabRequest);
             LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
+            File.WriteAllText(@"C:\Abatab-testing\a.txt", "test");
+
 
             Roundhouse.ParseRequest(abatabSession, abatabRequest);
             LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
