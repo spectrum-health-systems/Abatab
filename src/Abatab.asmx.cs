@@ -8,12 +8,8 @@
  * https://github.com/spectrum-health-systems/Abatab/blob/main/doc/srcdoc/SrcDocAbatab.md
  * ===================================================================================================== */
 
-using AbatabLogging;
-using AbatabRoundhouse;
-using AbatabSession;
 using NTST.ScriptLinkService.Objects;
 using System.IO;
-using System.Reflection;
 using System.Web.Services;
 
 namespace Abatab
@@ -44,13 +40,15 @@ namespace Abatab
         {
             File.WriteAllText(@"C:\AvatoolWebService\AbatabData\log.txt", $"Request: {abatabRequest}");
 
-            var abatabSession = Instance.Build(sentOptionObject, abatabRequest);
-            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
+            //var abatabSession = Instance.Build(sentOptionObject, abatabRequest);
+            //LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
 
-            Roundhouse.ParseRequest(abatabSession, abatabRequest);
-            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
+            //Roundhouse.ParseRequest(abatabSession, abatabRequest);
+            //LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
 
-            return abatabSession.FinalOptObj;
+
+            return sentOptionObject;
+            //return abatabSession.FinalOptObj;
         }
     }
 }
