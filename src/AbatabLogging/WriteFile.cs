@@ -16,7 +16,7 @@ namespace AbatabLogging
     {
         public static void ToLocalFile(string logContent)
         {
-            File.WriteAllText(@"C:AvatoolWebService\Abatab_Logs\log.txt", logContent);
+            File.WriteAllText(@"C:\AvatoolWebService\Abatab_Logs\log.txt", logContent);
         }
     }
 }
