@@ -42,8 +42,7 @@ namespace Abatab
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string abatabRequest)
         {
-            File.WriteAllText(@"C:\AvatoolWebService\Abatab_Logs\log.txt", "tesT");
-
+            File.WriteAllText(@"C:\AvatoolWebService\AbatabLogs\log.txt", "tesT");
 
             var abatabSession = Instance.Build(sentOptionObject, abatabRequest);
             LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
