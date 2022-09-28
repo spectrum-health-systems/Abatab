@@ -14,6 +14,12 @@ namespace AbatabOptionObject
 {
     public static class Verify
     {
+        /// <summary>
+        /// Verify that the sentOptObj has not been modified.
+        /// </summary>
+        /// <param name="sentOptObj"></param>
+        /// <param name="alternateOptObj"></param>
+        /// <returns></returns>
         public static bool NotModified(OptionObject2015 sentOptObj, OptionObject2015 alternateOptObj)
         {
             return alternateOptObj == sentOptObj;
