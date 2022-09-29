@@ -12,6 +12,7 @@ using AbatabData;
 using AbatabLogging;
 using NTST.ScriptLinkService.Objects;
 using System;
+using System.IO;
 using System.Reflection;
 
 namespace AbatabSession
@@ -43,7 +44,7 @@ namespace AbatabSession
         /// <returns></returns>
         private static SessionData Initialize(OptionObject2015 sentOptObj, string abatabRequest)
         {
-            return new SessionData
+            var abatabSession = new SessionData
             {
                 AbatabMode             = Properties.Settings.Default.AbatabMode.ToLower(),
                 LogMode                = Properties.Settings.Default.LoggingMode.ToLower(),
@@ -57,6 +58,16 @@ namespace AbatabSession
                 WorkOptObj             = sentOptObj,
                 FinalOptObj            = sentOptObj,
             };
+
+            var dailyLogDir = $@"{abatabSession.AbatabRootDirectory}\logs\{abatabSession.DateStamp})";
+
+            if (!Directory.Exists(dailyLogDir))
+            {
+                _=Directory.CreateDirectory(dailyLogDir);
+            }
+
+            return abatabSession;
+
         }
 
         /// <summary>

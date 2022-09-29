@@ -17,9 +17,9 @@ namespace AbatabLogging
     {
         public static void ToLocalFile(string eventType, SessionData abatabSession, string logContent)
         {
-            var fileName = $@"{abatabSession.AvatarUserName}_{eventType}_{abatabSession.DateStamp}-{abatabSession.TimeStamp}.log";
+            var filePath = $@"{abatabSession.AbatabRootDirectory}\logs\{abatabSession.DateStamp}\{abatabSession.AvatarUserName}-{abatabSession.TimeStamp}.{eventType}";
 
-            File.WriteAllText($@"C:\AvatoolWebService\Abatab_UAT\logs\{fileName}", logContent);
+            File.WriteAllText(filePath, logContent);
         }
     }
 }
