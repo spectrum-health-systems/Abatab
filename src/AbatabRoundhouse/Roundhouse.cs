@@ -8,6 +8,7 @@
  * https://github.com/spectrum-health-systems/Abatab/blob/main/doc/srcdoc/SrcDocAbatabRoundhouse.md
  * ===================================================================================================== */
 using AbatabData;
+
 using AbatabLogging;
 using System.Reflection;
 
@@ -29,6 +30,8 @@ namespace AbatabRoundhouse
 
                 case "passthrough":
                     LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
+                    abatabSession = AbatabOptionObject.Finalize.ForPassthrough(abatabSession);
+
                     break;
 
                 default:
