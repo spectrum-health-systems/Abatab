@@ -11,7 +11,6 @@
 using AbatabData;
 using AbatabLogging;
 using NTST.ScriptLinkService.Objects;
-using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
@@ -43,7 +42,8 @@ namespace AbatabSession
             };
 
             abatabSession.AvatarUserName      = VerifyAvatarUserName(abatabSession.AvatarUserName, abatabSession.AvatarFallbackUserName);
-            abatabSession.SessionLogDirectory = $@"{abatabSession.AbatabRootDirectory}\logs\{DateTime.Now.ToString("yyMMdd")}\{abatabSession.AvatarUserName}";
+            //abatabSession.SessionLogDirectory = $@"{abatabSession.AbatabRootDirectory}\logs\{DateTime.Now.ToString("yyMMdd")}\{abatabSession.AvatarUserName}";
+            abatabSession.SessionLogDirectory = $@"{abatabSession.AbatabRootDirectory}\logs\12345\test";
 
             VerifySessionLogDir(abatabSession.SessionLogDirectory);
             LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
