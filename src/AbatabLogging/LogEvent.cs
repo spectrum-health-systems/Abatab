@@ -56,6 +56,7 @@ namespace AbatabLogging
             var logContent = BuildContent.LogTextWithTrace("trace", executingAssemblyName, abatabSession, logMessage, callerFilePath, callerMemberName, callerLine);
             File.WriteAllText(@"C:\AvatoolWebService\Abatab_UAT\logs\12345\test\t.txt", "none");
             File.WriteAllText(filePath, logContent);
+            File.WriteAllText(@"C:\AvatoolWebService\Abatab_UAT\logs\12345\test\j.txt", "none");
         }
     }
 }
