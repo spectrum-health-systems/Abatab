@@ -27,6 +27,9 @@ namespace AbatabSession
         /// <returns>Session configuration settings.</returns>
         public static SessionData Build(Dictionary<string, string> webConfigSettings, OptionObject2015 sentOptObj, string abatabRequest)
         {
+
+            File.WriteAllText(@"C:\AvatoolWebService\Abatab_UAT\logs\12345\test\A.txt", "none");
+
             var abatabSession = new SessionData
             {
                 AbatabMode             = webConfigSettings["AbatabMode"].ToLower(),
@@ -41,11 +44,16 @@ namespace AbatabSession
                 FinalOptObj            = sentOptObj,
             };
 
+            File.WriteAllText(@"C:\AvatoolWebService\Abatab_UAT\logs\12345\test\b.txt", "none");
+
             abatabSession.AvatarUserName      = VerifyAvatarUserName(abatabSession.AvatarUserName, abatabSession.AvatarFallbackUserName);
+
+            File.WriteAllText(@"C:\AvatoolWebService\Abatab_UAT\logs\12345\test\c.txt", "none");
             //abatabSession.SessionLogDirectory = $@"{abatabSession.AbatabRootDirectory}\logs\{DateTime.Now.ToString("yyMMdd")}\{abatabSession.AvatarUserName}";
             abatabSession.SessionLogDirectory = $@"{abatabSession.AbatabRootDirectory}\logs\12345\test";
-
+            File.WriteAllText(@"C:\AvatoolWebService\Abatab_UAT\logs\12345\test\d.txt", "none");
             VerifySessionLogDir(abatabSession.SessionLogDirectory);
+            File.WriteAllText(@"C:\AvatoolWebService\Abatab_UAT\logs\12345\test\e.txt", "none");
             LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
 
             return abatabSession;
