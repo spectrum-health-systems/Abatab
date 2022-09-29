@@ -188,8 +188,6 @@ namespace AbatabLogging
                           $"                 Log mode: {abatabSession.LogMode}{Environment.NewLine}" +
                           $"    Abatab root directory: {abatabSession.AbatabRootDirectory}{Environment.NewLine}" +
                           $"Avatar fallback user name: {abatabSession.AvatarFallbackUserName}{Environment.NewLine}" +
-                          $"                Datestamp: {abatabSession.DateStamp}{Environment.NewLine}" +
-                          $"                Timestamp: {abatabSession.TimeStamp}{Environment.NewLine}" +
                           $"           Abatab request: {abatabSession.AvatarUserName}{Environment.NewLine}";
         }
 

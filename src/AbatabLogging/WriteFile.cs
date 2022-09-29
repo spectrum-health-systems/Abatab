@@ -9,6 +9,7 @@
  * ===================================================================================================== */
 
 using AbatabData;
+using System;
 using System.IO;
 
 namespace AbatabLogging
@@ -17,7 +18,7 @@ namespace AbatabLogging
     {
         public static void ToLocalFile(string eventType, SessionData abatabSession, string logContent)
         {
-            var filePath = $@"{abatabSession.AbatabRootDirectory}\logs\{abatabSession.DateStamp}\{abatabSession.AvatarUserName}\{abatabSession.TimeStamp}.{eventType}";
+            var filePath = $@"{abatabSession.SessionLogDirectory}\{DateTime.Now.ToString("HHmmss.fffffff")}.{eventType}";
 
             File.WriteAllText(filePath, logContent);
         }

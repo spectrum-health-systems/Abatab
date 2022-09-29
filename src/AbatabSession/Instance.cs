@@ -33,8 +33,6 @@ namespace AbatabSession
                 LogMode                = Properties.Settings.Default.LoggingMode.ToLower(),
                 AbatabRootDirectory    = Properties.Settings.Default.AbatabRootDirectory,
                 AvatarFallbackUserName = Properties.Settings.Default.AvatarFallbackUserName,
-                DateStamp              = DateTime.Now.ToString("yyMMdd"),
-                TimeStamp              = DateTime.Now.ToString("HHmmss.fffffff"),
                 SessionLogDirectory    = "",
                 AbatabRequest          = abatabRequest.ToLower(),
                 AvatarUserName         = sentOptObj.OptionUserId,
@@ -44,10 +42,12 @@ namespace AbatabSession
             };
 
             abatabSession.AvatarUserName      = VerifyAvatarUserName(abatabSession.AvatarUserName, abatabSession.AvatarFallbackUserName);
-            abatabSession.SessionLogDirectory = $@"{abatabSession.AbatabRootDirectory}\logs\{abatabSession.DateStamp}\{abatabSession.AvatarUserName}";
+            abatabSession.SessionLogDirectory = $@"{abatabSession.AbatabRootDirectory}\logs\{DateTime.Now.ToString("yyMMdd")}\{abatabSession.AvatarUserName}";
 
             VerifySessionLogDir(abatabSession.SessionLogDirectory);
             LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
+
+            //    TimeStamp              = DateTime.Now.ToString("HHmmss.fffffff"),
 
             return abatabSession;
         }
