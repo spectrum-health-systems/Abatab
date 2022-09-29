@@ -43,7 +43,7 @@ namespace AbatabSession.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Abatab\\")]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\AvatoolWebService\\Abatab_UAT")]
         public string AbatabRootDirectory {
             get {
                 return ((string)(this["AbatabRootDirectory"]));

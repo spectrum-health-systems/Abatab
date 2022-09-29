@@ -41,10 +41,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Finalize.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Verify.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AbatabData\AbatabData.csproj">
+      <Project>{E3028CFD-5965-4555-9A96-3EBBDFD4D550}</Project>
+      <Name>AbatabData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AbatabLogging\AbatabLogging.csproj">
+      <Project>{a4467424-56e0-4260-bb21-d98263d7aefd}</Project>
+      <Name>AbatabLogging</Name>
+    </ProjectReference>
     <ProjectReference Include="..\NTST.ScriptLinkService.Objects\NTST.ScriptLinkService.Objects.vbproj">
       <Project>{8a8a6089-3286-42e6-9f76-b61784709654}</Project>
       <Name>NTST.ScriptLinkService.Objects</Name>

@@ -1,9 +1,9 @@
 ﻿/* ========================================================================================================
- * Abatab v0.7.0
+ * Abatab v0.8.0
  * https://github.com/spectrum-health-systems/Abatab
  * (c) 2021-2022 A Pretty Cool Program (see LICENSE file for more information)
  * --------------------------------------------------------------------------------------------------------
- * AbatabRoundhouse v0.7.0
+ * AbatabRoundhouse v0.8.0
  * AbatabRoundhouse.Roundhouse.cs b220928.091558
  * https://github.com/spectrum-health-systems/Abatab/blob/main/doc/srcdoc/SrcDocAbatabRoundhouse.md
  * ===================================================================================================== */
@@ -15,7 +15,7 @@ namespace AbatabRoundhouse
 {
     public class Roundhouse
     {
-        public static void ParseRequest(SessionData abatabSession, string abatabRequest)
+        public static SessionData ParseRequest(SessionData abatabSession, string abatabRequest)
         {
             switch (abatabSession.AbatabMode)
             {
@@ -35,6 +35,8 @@ namespace AbatabRoundhouse
                     // Gracefully exit.
                     break;
             }
+
+            return abatabSession;
         }
 
         public static void TestB()

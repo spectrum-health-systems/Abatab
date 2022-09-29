@@ -1,9 +1,9 @@
 ﻿/* ========================================================================================================
- * Abatab v0.7.0
+ * Abatab v0.8.0
  * https://github.com/spectrum-health-systems/Abatab
  * (c) 2021-2022 A Pretty Cool Program (see LICENSE file for more information)
  * --------------------------------------------------------------------------------------------------------
- * AbatabLogging v0.7.0
+ * AbatabLogging v0.8.0
  * AbatabLogging.LogEvent.cs b220928.121815
  * https://github.com/spectrum-health-systems/Abatab/blob/main/doc/srcdoc/SrcDocAbatabLogging.md
  * ===================================================================================================== */

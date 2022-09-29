@@ -15,12 +15,30 @@
 
 ***
 ## Content
-
+### Finalize.cs<br>
+[Finalize.ForPassthrough()](#finalizeforpassthrough)<br>
 ### Verify.cs<br>
-
 [Verify.NotModified()](#verifynotmodified)<br>
 
 ***
+
+# Finalize.ForPassthrough()
+
+Finalizes an OptionObject for passthrough mode.
+
+## Operation
+
+1. **Set the ErrorCode**  
+ErrorCode 0 is the default error code.
+
+2. **Set the ErrorMesg**  
+This is decriptive so it's easy to tell we are in passthrough mode.
+
+## Notes
+
+* None
+
+> [Back to top](#content)
 
 # Verify.NotModified()
 

@@ -1,9 +1,9 @@
 ﻿/* ========================================================================================================
- * Abatab v0.7.0
+ * Abatab v0.8.0
  * https://github.com/spectrum-health-systems/Abatab
  * (c) 2021-2022 A Pretty Cool Program (see LICENSE file for more information)
  * --------------------------------------------------------------------------------------------------------
- * AbatabLogging v0.7.0
+ * AbatabLogging v0.8.0
  * AbatabLogging.BuildContent.cs b220928.091558
  * https://github.com/spectrum-health-systems/Abatab/blob/main/doc/srcdoc/SrcDocAbatabLogging.md
  * ===================================================================================================== */
@@ -190,9 +190,7 @@ namespace AbatabLogging
                           $"Avatar fallback user name: {abatabSession.AvatarFallbackUserName}{Environment.NewLine}" +
                           $"                Datestamp: {abatabSession.DateStamp}{Environment.NewLine}" +
                           $"                Timestamp: {abatabSession.TimeStamp}{Environment.NewLine}" +
-                          $"           Abatab request: {abatabSession.AvatarUserName}{Environment.NewLine}" +
-                          $" Working Object unchanged: {AbatabOptionObject.Verify.NotModified(abatabSession.SentOptObj, abatabSession.WorkOptObj)}{Environment.NewLine}" +
-                          $"   Final Object unchanged: {AbatabOptionObject.Verify.NotModified(abatabSession.SentOptObj, abatabSession.FinalOptObj)}{Environment.NewLine}";
+                          $"           Abatab request: {abatabSession.AvatarUserName}{Environment.NewLine}";
         }
 
         /// <summary>
@@ -206,3 +204,7 @@ namespace AbatabLogging
         }
     }
 }
+
+// INFO These were at the end of BodySessionInformation(), and were causing a circular reference to AbatabOptionObject.csproj
+//$" Working Object unchanged: {AbatabOptionObject.Verify.NotModified(abatabSession.SentOptObj, abatabSession.WorkOptObj)}{Environment.NewLine}" +
+//$"   Final Object unchanged: {AbatabOptionObject.Verify.NotModified(abatabSession.SentOptObj, abatabSession.FinalOptObj)}{Environment.NewLine}";

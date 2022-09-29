@@ -1,15 +1,19 @@
 ﻿/* ========================================================================================================
- * Abatab v0.7.0
+ * Abatab v0.8.0
  * https://github.com/spectrum-health-systems/Abatab
  * (c) 2021-2022 A Pretty Cool Program (see LICENSE file for more information)
  * --------------------------------------------------------------------------------------------------------
- * Abatab.csproj v0.7.0
+ * Abatab.csproj v0.8.0
  * Abatab.asmx.cs b220928.093504
  * https://github.com/spectrum-health-systems/Abatab/blob/main/doc/srcdoc/SrcDocAbatab.md
  * ===================================================================================================== */
 
+using AbatabLogging;
+using AbatabRoundhouse;
+using AbatabSession;
 using NTST.ScriptLinkService.Objects;
 using System.IO;
+using System.Reflection;
 using System.Web.Services;
 
 namespace Abatab
@@ -38,17 +42,18 @@ namespace Abatab
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string abatabRequest)
         {
+            // INFO Development testing only
             File.WriteAllText(@"C:\AvatoolWebService\Abatab_Logs\log.txt", $"Request: {abatabRequest}");
 
-            //var abatabSession = Instance.Build(sentOptionObject, abatabRequest);
-            //LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
+            var abatabSession = Instance.Build(sentOptionObject, abatabRequest);
+            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
 
-            //Roundhouse.ParseRequest(abatabSession, abatabRequest);
-            //LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
+            // TODO Need to verify if we need to assign this.
+            abatabSession = Roundhouse.ParseRequest(abatabSession, abatabRequest);
 
+            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
 
-            return sentOptionObject;
-            //return abatabSession.FinalOptObj;
+            return abatabSession.FinalOptObj;
         }
     }
 }
