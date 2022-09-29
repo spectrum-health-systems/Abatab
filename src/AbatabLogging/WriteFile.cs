@@ -8,18 +8,14 @@
  * https://github.com/spectrum-health-systems/Abatab/blob/main/doc/srcdoc/SrcDocAbatabLogging.md
  * ===================================================================================================== */
 
-using AbatabData;
-using System;
 using System.IO;
 
 namespace AbatabLogging
 {
     public class WriteFile
     {
-        public static void ToLocalFile(string eventType, SessionData abatabSession, string logContent)
+        public static void ToLocalFile(string filePath, string logContent)
         {
-            var filePath = $@"{abatabSession.SessionLogDirectory}\{DateTime.Now.ToString("HHmmss.fffffff")}.{eventType}";
-
             File.WriteAllText(filePath, logContent);
         }
     }

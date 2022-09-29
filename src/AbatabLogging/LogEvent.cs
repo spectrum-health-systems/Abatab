@@ -9,6 +9,8 @@
  * ===================================================================================================== */
 
 using AbatabData;
+using System;
+using System.IO;
 using System.Runtime.CompilerServices;
 
 namespace AbatabLogging
@@ -48,9 +50,10 @@ namespace AbatabLogging
         /// <param name="callerLine">File line of where the log is coming from.</param>
         public static void Trace(string executingAssemblyName, SessionData abatabSession, string logMessage = "Trace log.", [CallerFilePath] string callerFilePath = "", [CallerMemberName] string callerMemberName = "", [CallerLineNumber] int callerLine = 0)
         {
-            // TODO See if we can get the Executing Assembly name here, instead of passing it.
+            var filePath   = $@"{abatabSession.SessionLogDirectory}\{DateTime.Now.ToString("HHmmss.fffffff")}-{executingAssemblyName}-{callerFilePath}-{callerFilePath}-{callerMemberName}-{callerLine}.trace";
             var logContent = BuildContent.LogTextWithTrace("trace", executingAssemblyName, abatabSession, logMessage, callerFilePath, callerMemberName, callerLine);
-            WriteFile.ToLocalFile("trace", abatabSession, logContent);
+
+            File.WriteAllText(filePath, logContent);
         }
     }
 }
