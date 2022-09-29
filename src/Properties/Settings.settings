@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="AbatabMode" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">enabled</Value>
+      <Value Profile="(Default)">passthrough</Value>
     </Setting>
     <Setting Name="LoggingMode" Type="System.String" Scope="Application">
       <Value Profile="(Default)">all</Value>
