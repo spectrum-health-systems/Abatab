@@ -13,6 +13,7 @@ using AbatabRoundhouse;
 using AbatabSession;
 using NTST.ScriptLinkService.Objects;
 using System.Collections.Generic;
+using System.IO;
 using System.Reflection;
 using System.Web.Services;
 
@@ -42,20 +43,28 @@ namespace Abatab
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string abatabRequest)
         {
-            // INFO Development testing only
-            //File.WriteAllText(@"C:\AvatoolWebService\Abatab_Logs\log.txt", $"Request: {abatabRequest}");
-            var webConfigSettings = GetWebConfigSettings();
-            var abatabSession = Instance.Build(webConfigSettings, sentOptionObject, abatabRequest);
-            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
+            File.WriteAllText(@"C:\AvatoolWebService\Abatab_UAT\logs\12345\test\46.txt", "none");
 
+            var webConfigSettings = GetWebConfigSettings();
+
+            File.WriteAllText(@"C:\AvatoolWebService\Abatab_UAT\logs\12345\test\50.txt", "none");
+            var abatabSession     = Instance.Build(webConfigSettings, sentOptionObject, abatabRequest);
+
+            File.WriteAllText(@"C:\AvatoolWebService\Abatab_UAT\logs\12345\test\53.txt", "none");
+            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
+            File.WriteAllText(@"C:\AvatoolWebService\Abatab_UAT\logs\12345\test\556.txt", "none");
             // TODO Need to verify if we need to assign this.
             abatabSession = Roundhouse.ParseRequest(abatabSession, abatabRequest);
-
+            File.WriteAllText(@"C:\AvatoolWebService\Abatab_UAT\logs\12345\test\58.txt", "none");
             LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
 
             return abatabSession.FinalOptObj;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         private static Dictionary<string, string> GetWebConfigSettings()
         {
             return new Dictionary<string, string>
