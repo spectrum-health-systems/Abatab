@@ -70,7 +70,7 @@ namespace Abatab
             return new Dictionary<string, string>
             {
                 { "AbatabMode" ,            Properties.Settings.Default.AbatabMode.ToLower() },
-                { "LogMode",                Properties.Settings.Default.LoggingMode.ToLower() },
+                { "LoggingMode",                Properties.Settings.Default.LoggingMode.ToLower() },
                 { "AbatabRootDirectory",    Properties.Settings.Default.AbatabRootDirectory },
                 { "AvatarFallbackUserName", Properties.Settings.Default.AvatarFallbackUserName },
             };
