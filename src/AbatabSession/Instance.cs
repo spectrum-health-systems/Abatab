@@ -59,7 +59,7 @@ namespace AbatabSession
                 FinalOptObj            = sentOptObj,
             };
 
-            var dailyLogDir = $@"{abatabSession.AbatabRootDirectory}\logs\{abatabSession.DateStamp})";
+            var dailyLogDir = $@"{abatabSession.AbatabRootDirectory}\logs\{abatabSession.DateStamp}";
 
             if (!Directory.Exists(dailyLogDir))
             {
