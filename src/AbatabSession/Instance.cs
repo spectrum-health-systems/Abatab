@@ -11,6 +11,7 @@
 using AbatabData;
 using AbatabLogging;
 using NTST.ScriptLinkService.Objects;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
@@ -44,18 +45,16 @@ namespace AbatabSession
                 FinalOptObj            = sentOptObj,
             };
 
-            File.WriteAllText(@"C:\AvatoolWebService\Abatab_UAT\logs\12345\test\b.txt", "none");
 
             abatabSession.AvatarUserName      = VerifyAvatarUserName(abatabSession.AvatarUserName, abatabSession.AvatarFallbackUserName);
 
-            File.WriteAllText(@"C:\AvatoolWebService\Abatab_UAT\logs\12345\test\c.txt", "none");
-            //abatabSession.SessionLogDirectory = $@"{abatabSession.AbatabRootDirectory}\logs\{DateTime.Now.ToString("yyMMdd")}\{abatabSession.AvatarUserName}";
-            abatabSession.SessionLogDirectory = $@"{abatabSession.AbatabRootDirectory}\logs\12345\test";
-            File.WriteAllText(@"C:\AvatoolWebService\Abatab_UAT\logs\12345\test\d.txt", "none");
+
+            abatabSession.SessionLogDirectory = $@"{abatabSession.AbatabRootDirectory}\logs\{DateTime.Now.ToString("yyMMdd")}\{abatabSession.AvatarUserName}";
+
             VerifySessionLogDir(abatabSession.SessionLogDirectory);
-            File.WriteAllText(@"C:\AvatoolWebService\Abatab_UAT\logs\12345\test\e.txt", "none");
+
             LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
-            File.WriteAllText(@"C:\AvatoolWebService\Abatab_UAT\logs\12345\test\f.txt", "none");
+
             return abatabSession;
         }
 
