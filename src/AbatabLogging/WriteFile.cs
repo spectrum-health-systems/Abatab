@@ -4,7 +4,7 @@
  * (c) 2021-2022 A Pretty Cool Program (see LICENSE file for more information)
  * --------------------------------------------------------------------------------------------------------
  * AbatabLogging v0.8.0
- * AbatabLogging.WriteFile.cs b220928.091558
+ * AbatabLogging.WriteFile.cs b220929.160925
  * https://github.com/spectrum-health-systems/Abatab/blob/main/doc/srcdoc/SrcDocAbatabLogging.md
  * ===================================================================================================== */
 
@@ -16,7 +16,7 @@ namespace AbatabLogging
     {
         public static void ToLocalFile(string logContent)
         {
-            File.WriteAllText(@"C:\AvatoolWebService\Abatab_Logs\log.txt", logContent);
+            File.WriteAllText(@"C:\AvatoolWebService\Abatab_UAT\logs\log.txt", logContent);
         }
     }
 }
