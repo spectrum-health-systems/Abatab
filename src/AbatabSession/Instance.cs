@@ -4,7 +4,7 @@
  * (c) 2021-2022 A Pretty Cool Program (see LICENSE file for more information)
  * --------------------------------------------------------------------------------------------------------
  * AbatabSession v0.8.0
- * AbatabSession.Instance.cs b220928.093453
+ * AbatabSession.Instance.cs b220929.170014
  * https://github.com/spectrum-health-systems/Abatab/blob/main/doc/srcdoc/SrcDocAbatabSession.md
  * ===================================================================================================== */
 
@@ -27,23 +27,6 @@ namespace AbatabSession
         /// <returns>Session configuration settings.</returns>
         public static SessionData Build(OptionObject2015 sentOptObj, string abatabRequest)
         {
-            SessionData abatabSession = Initialize(sentOptObj, abatabRequest);
-
-            _=VerifyAvatarUserName(abatabSession); // TODO Assume reference type, but make sure this works.
-
-            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
-
-            return abatabSession;
-        }
-
-        /// <summary>
-        /// Initialize the Abatab session configuration settings.
-        /// </summary>
-        /// <param name="sentOptObj">OptionObject2015 sent from myAvatar.</param>
-        /// <param name="abatabRequest">Request to be executed.</param>
-        /// <returns></returns>
-        private static SessionData Initialize(OptionObject2015 sentOptObj, string abatabRequest)
-        {
             var abatabSession = new SessionData
             {
                 AbatabMode             = Properties.Settings.Default.AbatabMode.ToLower(),
@@ -52,37 +35,50 @@ namespace AbatabSession
                 AvatarFallbackUserName = Properties.Settings.Default.AvatarFallbackUserName,
                 DateStamp              = DateTime.Now.ToString("yyMMdd"),
                 TimeStamp              = DateTime.Now.ToString("HHmmss.fffffff"),
+                SessionLogDirectory    = "",
                 AbatabRequest          = abatabRequest.ToLower(),
                 AvatarUserName         = sentOptObj.OptionUserId,
                 SentOptObj             = sentOptObj,
                 WorkOptObj             = sentOptObj,
                 FinalOptObj            = sentOptObj,
             };
+            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
 
-            var dailyLogDir = $@"{abatabSession.AbatabRootDirectory}\logs\{abatabSession.DateStamp}";
+            abatabSession.AvatarUserName = VerifyAvatarUserName(abatabSession.AvatarUserName, abatabSession.AvatarFallbackUserName);
+            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
 
-            if (!Directory.Exists(dailyLogDir))
-            {
-                _=Directory.CreateDirectory(dailyLogDir);
-            }
+            abatabSession.SessionLogDirectory = $@"{abatabSession.AbatabRootDirectory}\logs\{abatabSession.DateStamp}\{abatabSession.AvatarUserName}";
+            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
+
+            VerifySessionLogDir(abatabSession.SessionLogDirectory);
+            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
 
             return abatabSession;
+        }
 
+        /// <summary>
+        /// Verify the session log directory exists.
+        /// </summary>
+        /// <param name="sessionLogDirectory"></param>
+        private static void VerifySessionLogDir(string sessionLogDirectory)
+        {
+            if (!Directory.Exists(sessionLogDirectory))
+            {
+                _=Directory.CreateDirectory(sessionLogDirectory);
+            }
         }
 
         /// <summary>
         /// Verify the session AvatarUserName is valid.
         /// </summary>
-        /// <param name="abatabSession">Abatab session configuration settings.</param>
+        /// <param name="avatarUserName"></param>
+        /// <param name="avatarFallbackUserName"></param>
         /// <returns>Session object with verified AvatarUserName</returns>
-        private static SessionData VerifyAvatarUserName(SessionData abatabSession)
+        private static string VerifyAvatarUserName(string avatarUserName, string avatarFallbackUserName)
         {
-            if (string.IsNullOrWhiteSpace(abatabSession.AvatarUserName))
-            {
-                abatabSession.AvatarUserName = abatabSession.AvatarFallbackUserName;
-            }
-
-            return abatabSession;
+            return string.IsNullOrWhiteSpace(avatarUserName)
+                ? avatarFallbackUserName
+                : avatarUserName;
         }
     }
 }

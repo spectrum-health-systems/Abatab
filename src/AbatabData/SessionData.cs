@@ -23,6 +23,7 @@ namespace AbatabData
         // Runtime settings.
         public string DateStamp { get; set; }
         public string TimeStamp { get; set; }
+        public string SessionLogDirectory { get; set; }
         public string AvatarUserName { get; set; }
         public string AbatabRequest { get; set; }
         public OptionObject2015 SentOptObj { get; set; }

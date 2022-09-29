@@ -32,9 +32,6 @@ Build configuration settings for an Abatab session.
 1. **Initialize a new `abatabSession` object**  
 The `abatabSession` object contains all of the settings and data Abatab needs to do it's job.
 
-2. **Verify various components of the `abatabSession` object.**  
-Some components are required, or need to meet specific paramaters.
-
 3. **Return the completed `abatabSession` object.**  
 
 ## Notes
