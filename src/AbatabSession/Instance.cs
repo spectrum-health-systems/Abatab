@@ -43,11 +43,10 @@ namespace AbatabSession
                 FinalOptObj            = sentOptObj,
             };
 
+            abatabSession.AvatarUserName      = VerifyAvatarUserName(abatabSession.AvatarUserName, abatabSession.AvatarFallbackUserName);
             abatabSession.SessionLogDirectory = $@"{abatabSession.AbatabRootDirectory}\logs\{abatabSession.DateStamp}\{abatabSession.AvatarUserName}";
-            VerifySessionLogDir(abatabSession.SessionLogDirectory);
-            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
 
-            abatabSession.AvatarUserName = VerifyAvatarUserName(abatabSession.AvatarUserName, abatabSession.AvatarFallbackUserName);
+            VerifySessionLogDir(abatabSession.SessionLogDirectory);
             LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
 
             return abatabSession;
