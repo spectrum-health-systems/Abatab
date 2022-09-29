@@ -8,15 +8,18 @@
  * https://github.com/spectrum-health-systems/Abatab/blob/main/doc/srcdoc/SrcDocAbatabLogging.md
  * ===================================================================================================== */
 
+using AbatabData;
 using System.IO;
 
 namespace AbatabLogging
 {
     public class WriteFile
     {
-        public static void ToLocalFile(string logContent)
+        public static void ToLocalFile(string eventType, SessionData abatabSession, string logContent)
         {
-            File.WriteAllText(@"C:\AvatoolWebService\Abatab_UAT\logs\log.txt", logContent);
+            var fileName = $@"{abatabSession.AvatarUserName}_{eventType}_{abatabSession.DateStamp}-{abatabSession.TimeStamp}.log";
+
+            File.WriteAllText($@"C:\AvatoolWebService\Abatab_UAT\logs\{fileName}", logContent);
         }
     }
 }

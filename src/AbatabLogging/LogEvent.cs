@@ -50,7 +50,7 @@ namespace AbatabLogging
         {
             // TODO See if we can get the Executing Assembly name here, instead of passing it.
             var logContent = BuildContent.LogTextWithTrace("trace", executingAssemblyName, abatabSession, logMessage, callerFilePath, callerMemberName, callerLine);
-            WriteFile.ToLocalFile(logContent);
+            WriteFile.ToLocalFile("trace", abatabSession, logContent);
         }
     }
 }
