@@ -12,7 +12,6 @@ using AbatabLogging;
 using AbatabRoundhouse;
 using AbatabSession;
 using NTST.ScriptLinkService.Objects;
-using System.IO;
 using System.Reflection;
 using System.Web.Services;
 
@@ -43,7 +42,7 @@ namespace Abatab
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string abatabRequest)
         {
             // INFO Development testing only
-            File.WriteAllText(@"C:\AvatoolWebService\Abatab_Logs\log.txt", $"Request: {abatabRequest}");
+            //File.WriteAllText(@"C:\AvatoolWebService\Abatab_Logs\log.txt", $"Request: {abatabRequest}");
 
             var abatabSession = Instance.Build(sentOptionObject, abatabRequest);
             LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
