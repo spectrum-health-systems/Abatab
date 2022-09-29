@@ -55,7 +55,9 @@ namespace AbatabLogging
             var fileExtensionLocation = callerFilePath.IndexOf('.');
             var callerfilePathWithoutExtension = callerFilePath.Remove(fileExtensionLocation);
 
-            var filePather = Path.GetFileName(callerFilePath).Remove(fileExtensionLocation);
+            var filePather = Path.GetFileName(callerFilePath);
+
+
 
             var filePath   = $@"{abatabSession.SessionLogDirectory}\{DateTime.Now.ToString("HHmmss.fffffff")}-{executingAssemblyName}-{filePather}-{callerMemberName}-{callerLine}.trace";
             var logContent = BuildContent.LogTextWithTrace("trace", executingAssemblyName, abatabSession, logMessage, callerFilePath, callerMemberName, callerLine);
