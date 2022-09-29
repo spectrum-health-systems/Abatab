@@ -50,18 +50,20 @@ namespace AbatabLogging
         /// <param name="callerLine">File line of where the log is coming from.</param>
         public static void Trace(string executingAssemblyName, SessionData abatabSession, string logMessage = "Trace log.", [CallerFilePath] string callerFilePath = "", [CallerMemberName] string callerMemberName = "", [CallerLineNumber] int callerLine = 0)
         {
-
+            File.WriteAllText(@"C:\AvatoolWebService\Abatab_UAT\logs\captain\1.txt", "1");
 
             var fileExtensionLocation = callerFilePath.IndexOf('.');
+            File.WriteAllText(@"C:\AvatoolWebService\Abatab_UAT\logs\captain\2.txt", $"{fileExtensionLocation}");
             var callerfilePathWithoutExtension = callerFilePath.Remove(fileExtensionLocation);
-
+            File.WriteAllText(@"C:\AvatoolWebService\Abatab_UAT\logs\captain\3.txt", $"{callerfilePathWithoutExtension}");
             var filePather = Path.GetFileName(callerFilePath);
-
+            File.WriteAllText(@"C:\AvatoolWebService\Abatab_UAT\logs\captain\4.txt", $"{filePather}");
 
 
             var filePath   = $@"{abatabSession.SessionLogDirectory}\{DateTime.Now.ToString("HHmmss.fffffff")}-{executingAssemblyName}-{filePather}-{callerMemberName}-{callerLine}.trace";
+            File.WriteAllText(@"C:\AvatoolWebService\Abatab_UAT\logs\captain\5.txt", $"{filePath}");
             var logContent = BuildContent.LogTextWithTrace("trace", executingAssemblyName, abatabSession, logMessage, callerFilePath, callerMemberName, callerLine);
-
+            File.WriteAllText(@"C:\AvatoolWebService\Abatab_UAT\logs\captain\6.txt", $"{logContent}");
             File.WriteAllText(filePath, logContent);
 
         }
