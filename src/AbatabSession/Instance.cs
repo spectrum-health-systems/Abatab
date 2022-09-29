@@ -55,7 +55,7 @@ namespace AbatabSession
             VerifySessionLogDir(abatabSession.SessionLogDirectory);
             File.WriteAllText(@"C:\AvatoolWebService\Abatab_UAT\logs\12345\test\e.txt", "none");
             LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
-
+            File.WriteAllText(@"C:\AvatoolWebService\Abatab_UAT\logs\12345\test\f.txt", "none");
             return abatabSession;
         }
 
