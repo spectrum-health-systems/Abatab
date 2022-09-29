@@ -57,7 +57,7 @@ namespace AbatabLogging
 
 
 
-            var filePath   = $@"{abatabSession.SessionLogDirectory}\{DateTime.Now.ToString("HHmmss.fffffff")}-{executingAssemblyName}-{callerfilePathWithoutExtension}-{callerFilePath}-{callerMemberName}-{callerLine}.trace";
+            var filePath   = $@"{abatabSession.SessionLogDirectory}\{DateTime.Now.ToString("HHmmss.fffffff")}-{executingAssemblyName}-{Path.GetFileName(callerFilePath)}-{callerFilePath}-{callerMemberName}-{callerLine}.trace";
             File.WriteAllText(@"C:\AvatoolWebService\Abatab_UAT\logs\12345\test\path.txt", $"{filePath}");
             var logContent = BuildContent.LogTextWithTrace("trace", executingAssemblyName, abatabSession, logMessage, callerFilePath, callerMemberName, callerLine);
             File.WriteAllText(@"C:\AvatoolWebService\Abatab_UAT\logs\12345\test\cont.txt", $"{logContent}");
