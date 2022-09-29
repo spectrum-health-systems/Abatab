@@ -1,18 +1,5 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="AbatabSession.Properties" GeneratedClassName="Settings">
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)">
   <Profiles />
-  <Settings>
-    <Setting Name="AbatabMode" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">enabled</Value>
-    </Setting>
-    <Setting Name="LoggingMode" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">all</Value>
-    </Setting>
-    <Setting Name="AbatabRootDirectory" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">C:\AvatoolWebService\Abatab_UAT</Value>
-    </Setting>
-    <Setting Name="AvatarFallbackUserName" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">_Abatab_</Value>
-    </Setting>
-  </Settings>
+  <Settings />
 </SettingsFile>

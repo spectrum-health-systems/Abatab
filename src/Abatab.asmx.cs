@@ -12,6 +12,7 @@ using AbatabLogging;
 using AbatabRoundhouse;
 using AbatabSession;
 using NTST.ScriptLinkService.Objects;
+using System.Collections.Generic;
 using System.Reflection;
 using System.Web.Services;
 
@@ -43,8 +44,8 @@ namespace Abatab
         {
             // INFO Development testing only
             //File.WriteAllText(@"C:\AvatoolWebService\Abatab_Logs\log.txt", $"Request: {abatabRequest}");
-
-            var abatabSession = Instance.Build(sentOptionObject, abatabRequest);
+            var webConfigSettings = GetWebConfigSettings();
+            var abatabSession = Instance.Build(webConfigSettings, sentOptionObject, abatabRequest);
             LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
 
             // TODO Need to verify if we need to assign this.
@@ -53,6 +54,17 @@ namespace Abatab
             LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
 
             return abatabSession.FinalOptObj;
+        }
+
+        private static Dictionary<string, string> GetWebConfigSettings()
+        {
+            return new Dictionary<string, string>
+            {
+                { "AbatabMode" ,            Properties.Settings.Default.AbatabMode.ToLower() },
+                { "LogMode",                Properties.Settings.Default.LoggingMode.ToLower() },
+                { "AbatabRootDirectory",    Properties.Settings.Default.AbatabRootDirectory },
+                { "AvatarFallbackUserName", Properties.Settings.Default.AvatarFallbackUserName },
+            };
         }
     }
 }

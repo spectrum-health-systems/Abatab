@@ -12,6 +12,7 @@ using AbatabData;
 using AbatabLogging;
 using NTST.ScriptLinkService.Objects;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 
@@ -25,14 +26,14 @@ namespace AbatabSession
         /// <param name="sentOptObj">OptionObject2015 sent from myAvatar.</param>
         /// <param name="abatabRequest">Abatab request to be executed.</param>
         /// <returns>Session configuration settings.</returns>
-        public static SessionData Build(OptionObject2015 sentOptObj, string abatabRequest)
+        public static SessionData Build(Dictionary<string, string> webConfigSettings, OptionObject2015 sentOptObj, string abatabRequest)
         {
             var abatabSession = new SessionData
             {
-                AbatabMode             = Properties.Settings.Default.AbatabMode.ToLower(),
-                LogMode                = Properties.Settings.Default.LoggingMode.ToLower(),
-                AbatabRootDirectory    = Properties.Settings.Default.AbatabRootDirectory,
-                AvatarFallbackUserName = Properties.Settings.Default.AvatarFallbackUserName,
+                AbatabMode             = webConfigSettings["AbatabMode"].ToLower(),
+                LogMode                = webConfigSettings["LoggingMode"].ToLower(),
+                AbatabRootDirectory    = webConfigSettings["AbatabRootDirectory"],
+                AvatarFallbackUserName = webConfigSettings["AvatarFallbackUserName"],
                 SessionLogDirectory    = "",
                 AbatabRequest          = abatabRequest.ToLower(),
                 AvatarUserName         = sentOptObj.OptionUserId,
@@ -46,8 +47,6 @@ namespace AbatabSession
 
             VerifySessionLogDir(abatabSession.SessionLogDirectory);
             LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
-
-            //    TimeStamp              = DateTime.Now.ToString("HHmmss.fffffff"),
 
             return abatabSession;
         }
