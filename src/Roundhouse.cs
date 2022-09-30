@@ -10,14 +10,17 @@
 
 using AbatabData;
 using AbatabLogging;
+using System.Collections.Generic;
 using System.Reflection;
 
 namespace Abatab
 {
     public class Roundhouse
     {
-        public static SessionData ParseRequest(SessionData abatabSession, string abatabRequest)
+        public static SessionData Request(SessionData abatabSession, string abatabRequest)
         {
+            Dictionary<string, string> requestComponent = ParseRequest(abatabRequest);
+
             switch (abatabSession.AbatabMode)
             {
                 case "enabled":
@@ -41,5 +44,30 @@ namespace Abatab
             return abatabSession;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="abatabRequest"></param>
+        /// <returns></returns>
+        private static Dictionary<string, string> ParseRequest(string abatabRequest)
+        {
+            string[] requestComponents = abatabRequest.Split('-');
+
+            foreach (var component in requestComponents)
+            {
+                if (string.IsNullOrWhiteSpace(component))
+                {
+
+                }
+            }
+
+            return new Dictionary<string, string>
+            {
+                { "Module",  requestComponents[0] },
+                { "Command", requestComponents[1] },
+                { "Action",  requestComponents[2] },
+                { "Action",  requestComponents[3] }
+            };
+        }
     }
 }
