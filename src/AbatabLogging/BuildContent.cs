@@ -185,8 +185,10 @@ namespace AbatabLogging
             // TODO - Verify this works, especially the modification stuff.
             return $"{Environment.NewLine}" +
                           $"              Abatab mode: {abatabSession.AbatabMode}{Environment.NewLine}" +
-                          $"                 Log mode: {abatabSession.LogMode}{Environment.NewLine}" +
-                          $"    Abatab root directory: {abatabSession.AbatabRootDirectory}{Environment.NewLine}" +
+                          $"               Debug mode: {abatabSession.DebugMode}{Environment.NewLine}" +
+                          $"             Logging mode: {abatabSession.LoggingMode}{Environment.NewLine}" +
+                          $"          Logging details: {abatabSession.LoggingDetails}{Environment.NewLine}" +
+                          $"    Abatab root directory: {abatabSession.AbatabRoot}{Environment.NewLine}" +
                           $"Avatar fallback user name: {abatabSession.AvatarFallbackUserName}{Environment.NewLine}" +
                           $"           Abatab request: {abatabSession.AvatarUserName}{Environment.NewLine}";
         }

@@ -12,7 +12,6 @@ using AbatabData;
 using AbatabLogging;
 using NTST.ScriptLinkService.Objects;
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 
@@ -28,16 +27,17 @@ namespace AbatabSession
         /// <returns>Session configuration settings.</returns>
         public static SessionData Build(OptionObject2015 sentOptObj, string abatabRequest)
         {
+            // NOTE Development only.
+            File.WriteAllText(@"C:\AvatoolWebService\Abatab_UAT\logs\temp\debug-AbatabSession-Instance-Build.txt", "Debug");
 
-            File.WriteAllText(@"C:\AvatoolWebService\Abatab_UAT\logs\12345\test\A.txt", "none");
-
-            var webConfigSettings = GetWebConfigSettings();
             var abatabSession = new SessionData
             {
-                AbatabMode             = webConfigSettings["AbatabMode"].ToLower(),
-                LogMode                = webConfigSettings["LoggingMode"].ToLower(),
-                AbatabRootDirectory    = webConfigSettings["AbatabRootDirectory"],
-                AvatarFallbackUserName = webConfigSettings["AvatarFallbackUserName"],
+                AbatabMode             = Properties.Settings.Default.AbatabMode.ToLower(),
+                DebugMode              = Properties.Settings.Default.DebugMode.ToLower(),
+                AbatabRoot             = Properties.Settings.Default.AbatabRoot.ToLower(),
+                LoggingMode            = Properties.Settings.Default.LoggingMode.ToLower(),
+                LoggingDetails         = Properties.Settings.Default.LoggingDetail.ToLower(),
+                AvatarFallbackUserName = Properties.Settings.Default.AvatarFallbackUserName.ToLower(),
                 SessionLogDirectory    = "",
                 AbatabRequest          = abatabRequest.ToLower(),
                 AvatarUserName         = sentOptObj.OptionUserId,
@@ -46,9 +46,9 @@ namespace AbatabSession
                 FinalOptObj            = sentOptObj,
             };
 
-            abatabSession.AvatarUserName      = VerifyAvatarUserName(abatabSession.AvatarUserName, abatabSession.AvatarFallbackUserName);
+            abatabSession.AvatarUserName = VerifyAvatarUserName(abatabSession.AvatarUserName, abatabSession.AvatarFallbackUserName);
 
-            abatabSession.SessionLogDirectory = $@"{abatabSession.AbatabRootDirectory}\logs\{DateTime.Now:yyMMdd}\{abatabSession.AvatarUserName}";
+            abatabSession.SessionLogDirectory = $@"{abatabSession.AbatabRoot}\logs\{DateTime.Now:yyMMdd}\{abatabSession.AvatarUserName}";
 
             VerifySessionLogDir(abatabSession.SessionLogDirectory);
 
@@ -80,22 +80,6 @@ namespace AbatabSession
             return string.IsNullOrWhiteSpace(avatarUserName)
                 ? avatarFallbackUserName
                 : avatarUserName;
-        }
-
-
-        /// <summary>
-        /// Get the settings in the weg.config file.
-        /// </summary>
-        /// <returns>Web.config settings.</returns>
-        private static Dictionary<string, string> GetWebConfigSettings()
-        {
-            return new Dictionary<string, string>
-            {
-                { "AbatabMode" ,            Properties.Settings.Default.AbatabMode.ToLower() },
-                { "LoggingMode",            Properties.Settings.Default.LoggingMode.ToLower() },
-                { "AbatabRootDirectory",    Properties.Settings.Default.AbatabRoot },
-                { "AvatarFallbackUserName", Properties.Settings.Default.AvatarFallbackUserName },
-            };
         }
     }
 }

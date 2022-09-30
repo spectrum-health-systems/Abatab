@@ -11,6 +11,8 @@
 using AbatabLogging;
 using AbatabSession;
 using NTST.ScriptLinkService.Objects;
+using System;
+using System.IO;
 using System.Reflection;
 using System.Web.Services;
 
@@ -40,7 +42,12 @@ namespace Abatab
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string abatabRequest)
         {
-            //var webConfigSettings = GetWebConfigSettings();
+            //NOTE This is for debugging purposes only. By default DebugMode should be set to "off".
+            if (Properties.Settings.Default.DebugMode == "on")
+            {
+                File.WriteAllText($@"{Properties.Settings.Default.DebugLogDir}\{DateTime.Now:yyMMdd}\Started-{DateTime.Now.ToString("HHmmss.fffffff")}.debug", "Abatab started.");
+            }
+
             var abatabSession     = Instance.Build(sentOptionObject, abatabRequest);
             LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
 
@@ -50,7 +57,5 @@ namespace Abatab
 
             return abatabSession.FinalOptObj;
         }
-
-
     }
 }
