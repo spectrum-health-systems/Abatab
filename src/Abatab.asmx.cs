@@ -42,13 +42,9 @@ namespace Abatab
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string abatabRequest)
         {
-            //NOTE This is for debugging purposes only. By default DebugMode should be set to "off".
-            if (Properties.Settings.Default.DebugMode == "on")
-            {
-                File.WriteAllText($@"{Properties.Settings.Default.DebugLogDir}\{DateTime.Now:yyMMdd}\Started-{DateTime.Now.ToString("HHmmss.fffffff")}.debug", "Abatab started.");
-            }
+            DebugLog();
 
-            var abatabSession     = Instance.Build(sentOptionObject, abatabRequest);
+            var abatabSession = Instance.Build(sentOptionObject, abatabRequest);
             LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
 
             // TODO Need to verify if we need to assign this.
@@ -56,6 +52,21 @@ namespace Abatab
             LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
 
             return abatabSession.FinalOptObj;
+        }
+
+        /// <summary>
+        ///  Write a debug logfile.
+        /// </summary>
+        private static void DebugLog()
+        {
+            // NOTE This is for debugging purposes only. By default DebugMode should be set to "off".
+
+            if (Properties.Settings.Default.DebugMode == "on")
+            {
+                var debugLogDir = $@"{Properties.Settings.Default.DebugLogDir}\{DateTime.Now:yyMMdd}";
+                _=Directory.CreateDirectory(debugLogDir);
+                File.WriteAllText($@"{debugLogDir}\Started-{DateTime.Now.ToString("HHmmss.fffffff")}.debug", "Abatab started.");
+            }
         }
     }
 }
