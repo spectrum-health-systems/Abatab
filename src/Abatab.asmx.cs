@@ -42,7 +42,7 @@ namespace Abatab
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string abatabRequest)
         {
-            DebugLog();
+            DebugLog("Abatab started.");
 
             var abatabSession = Instance.Build(sentOptionObject, abatabRequest);
             LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
@@ -55,17 +55,18 @@ namespace Abatab
         }
 
         /// <summary>
-        ///  Write a debug logfile.
+        /// Write a debug logfile.
         /// </summary>
-        private static void DebugLog()
+        private static void DebugLog(string msg)
         {
-            // NOTE This is for debugging purposes only. By default DebugMode should be set to "off".
+            // NOTE For debugging purposes only! By default DebugMode in Web.config should be set to "off".
 
             if (Properties.Settings.Default.DebugMode == "on")
             {
                 var debugLogDir = $@"{Properties.Settings.Default.DebugLogDir}\{DateTime.Now:yyMMdd}";
                 _=Directory.CreateDirectory(debugLogDir);
-                File.WriteAllText($@"{debugLogDir}\Started-{DateTime.Now.ToString("HHmmss.fffffff")}.debug", "Abatab started.");
+
+                File.WriteAllText($@"{debugLogDir}\{DateTime.Now.ToString("HHmmss.fffffff")}.start", msg);
             }
         }
     }
