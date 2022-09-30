@@ -4,7 +4,7 @@
  * (c) 2021-2022 A Pretty Cool Program (see LICENSE file for more information)
  * --------------------------------------------------------------------------------------------------------
  * Abatab.csproj v0.90.0
- * Abatab.asmx.cs b220930.082025
+ * Abatab.asmx.cs b220930.093243
  * https://github.com/spectrum-health-systems/Abatab/blob/main/doc/srcdoc/SrcDocAbatab.md
  * ===================================================================================================== */
 
@@ -42,7 +42,7 @@ namespace Abatab
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string abatabRequest)
         {
-            DebugLog("Abatab started.");
+            WriteDebugLog("Abatab started.");
 
             var abatabSession = Instance.Build(sentOptionObject, abatabRequest);
             LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
@@ -57,11 +57,11 @@ namespace Abatab
         /// <summary>
         /// Write a debug logfile.
         /// </summary>
-        private static void DebugLog(string msg)
+        private static void WriteDebugLog(string msg)
         {
             // NOTE For debugging purposes only! By default DebugMode in Web.config should be set to "off".
 
-            if (Properties.Settings.Default.DebugMode == "on")
+            if (Properties.Settings.Default.DebugMode.ToLower() == "on")
             {
                 var debugLogDir = $@"{Properties.Settings.Default.DebugLogDir}\{DateTime.Now:yyMMdd}";
                 _=Directory.CreateDirectory(debugLogDir);

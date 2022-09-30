@@ -8,7 +8,7 @@
 
   <h2>
     AbatabOptionObject.csproj<br>
-    <b>v0.6.0</b>
+    <b>v0.90.0</b>
   </h2>
 
 </div>
