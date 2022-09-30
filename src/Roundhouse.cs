@@ -3,16 +3,16 @@
  * https://github.com/spectrum-health-systems/Abatab
  * (c) 2021-2022 A Pretty Cool Program (see LICENSE file for more information)
  * --------------------------------------------------------------------------------------------------------
- * AbatabRoundhouse v0.90.0
- * AbatabRoundhouse.Roundhouse.cs b220930.082025
- * https://github.com/spectrum-health-systems/Abatab/blob/main/doc/srcdoc/SrcDocAbatabRoundhouse.md
+ * Abatab.csproj v0.90.0
+ * Abatab.Roundhouse.cs b220930.082025
+ * https://github.com/spectrum-health-systems/Abatab/blob/main/doc/srcdoc/SrcDocAbatab.md
  * ===================================================================================================== */
-using AbatabData;
 
+using AbatabData;
 using AbatabLogging;
 using System.Reflection;
 
-namespace AbatabRoundhouse
+namespace Abatab
 {
     public class Roundhouse
     {
@@ -40,5 +40,6 @@ namespace AbatabRoundhouse
 
             return abatabSession;
         }
+
     }
 }

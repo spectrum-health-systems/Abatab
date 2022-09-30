@@ -4,7 +4,7 @@
  * (c) 2021-2022 A Pretty Cool Program (see LICENSE file for more information)
  * --------------------------------------------------------------------------------------------------------
  * AbatabLogging v0.90.0
- * AbatabLogging.BuildContent.cs b220929.184306
+ * AbatabLogging.BuildContent.cs b220930.082025
  * https://github.com/spectrum-health-systems/Abatab/blob/main/doc/srcdoc/SrcDocAbatabLogging.md
  * ===================================================================================================== */
 

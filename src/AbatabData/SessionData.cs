@@ -4,7 +4,7 @@
  * (c) 2021-2022 A Pretty Cool Program (see LICENSE file for more information)
  * --------------------------------------------------------------------------------------------------------
  * AbatabData v0.90.0
- * AbatabData.SessionData.cs b220929.184306
+ * AbatabData.SessionData.cs b220930.082025
  * https://github.com/spectrum-health-systems/Abatab/blob/main/doc/srcdoc/SrcDocAbatabData.md
  * ===================================================================================================== */
 
@@ -16,8 +16,10 @@ namespace AbatabData
     {
         // web.config settings.
         public string AbatabMode { get; set; }
-        public string LogMode { get; set; }
-        public string AbatabRootDirectory { get; set; }
+        public string DebugMode { get; set; }
+        public string LoggingMode { get; set; }
+        public string LoggingDetails { get; set; }
+        public string AbatabRoot { get; set; }
         public string AvatarFallbackUserName { get; set; }
 
         // Runtime settings.
