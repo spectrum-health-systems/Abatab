@@ -27,9 +27,6 @@ namespace AbatabSession
         /// <returns>Session configuration settings.</returns>
         public static SessionData Build(OptionObject2015 sentOptObj, string abatabRequest)
         {
-            // NOTE Development only.
-            File.WriteAllText(@"C:\AvatoolWebService\Abatab_UAT\logs\temp\debug-AbatabSession-Instance-Build.txt", "Debug");
-
             var abatabSession = new SessionData
             {
                 AbatabMode             = Properties.Settings.Default.AbatabMode.ToLower(),
