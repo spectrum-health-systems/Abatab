@@ -81,7 +81,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="Roundhouse.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

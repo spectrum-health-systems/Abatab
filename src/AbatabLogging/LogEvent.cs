@@ -1,10 +1,10 @@
 ﻿/* ========================================================================================================
- * Abatab v0.90.0
+ * Abatab v0.90.1
  * https://github.com/spectrum-health-systems/Abatab
  * (c) 2021-2022 A Pretty Cool Program (see LICENSE file for more information)
  * --------------------------------------------------------------------------------------------------------
- * AbatabLogging v0.90.0
- * AbatabLogging.LogEvent.cs b220930.082025
+ * AbatabLogging v0.90.1
+ * AbatabLogging.LogEvent.cs b221003.075515
  * https://github.com/spectrum-health-systems/Abatab/blob/main/doc/srcdoc/SrcDocAbatabLogging.md
  * ===================================================================================================== */
 
@@ -28,6 +28,20 @@ namespace AbatabLogging
         public static void AllOptionObjectInformation(SessionData abatabSession, string logMessage = "OptionObject information log.")
         {
             BuildContent.LogTextWithoutTrace("allOptObjInformation", abatabSession, logMessage);
+        }
+
+        /// <summary>Write a debug logfile.</summary>
+        public static void DebugModule(string debugModuleMode, string debugModuleDir, string debugMsg)
+        {
+            // NOTE For debugging purposes only! By default DebugMode in Web.config should be set to "off".
+
+            if (string.Equals(debugModuleMode, "on", StringComparison.OrdinalIgnoreCase))
+            {
+                var debugLogDir = $@"{debugModuleDir}\{DateTime.Now:yyMMdd}";
+                _=Directory.CreateDirectory(debugLogDir);
+
+                File.WriteAllText($@"{debugLogDir}\{DateTime.Now.ToString("HHmmss.fffffff")}.start", debugMsg);
+            }
         }
 
         /// <summary>
@@ -59,5 +73,7 @@ namespace AbatabLogging
 
             File.WriteAllText(filePath, logContent);
         }
+
+
     }
 }
