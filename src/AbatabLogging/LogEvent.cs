@@ -38,21 +38,26 @@ namespace AbatabLogging
             var debugLogDir = $@"{debugModuleDir}\{DateTime.Now:yyMMdd}";
             _=Directory.CreateDirectory($@"{debugModuleDir}\{DateTime.Now:yyMMdd}");
 
-            File.WriteAllText($@"{debugLogDir}\{DateTime.Now:fffffff}.{fileExt}", debugMsg);
+            File.WriteAllText($@"{debugLogDir}\{DateTime.Now:HHmmssfffffff}.{fileExt}", debugMsg);
         }
 
-        /// <summary>Write a debug logfile.</summary>
+        /// <summary>
+        /// Basic debugging for a module.
+        /// </summary>
+        /// <param name="executingAssemblyName">Module name.</param>
+        /// <param name="debugModuleDir">Directory to write the logfile.</param>
+        /// <param name="logContents">Log contents (leave blank for low-level debugging).</param>
         public static void DebugModule(string executingAssemblyName, string debugModuleDir, string logContents = "")
         {
             // NOTE For debugging purposes only! By default DebugMode in Web.config should be set to "off".
 
-            // NOTE For detailed logs.
+            // NOTE Delay creating a debug log by 10ms, just to make sure we don't overwrite an existing log.
             Thread.Sleep(10);
 
             var debugLogDir = $@"{debugModuleDir}\{DateTime.Now:yyMMdd}";
             _=Directory.CreateDirectory(debugLogDir);
 
-            File.WriteAllText($@"{debugLogDir}\{DateTime.Now:fffffff}-Module-{executingAssemblyName}", logContents);
+            File.WriteAllText($@"{debugLogDir}\{DateTime.Now:HHmmssfffffff}-{executingAssemblyName}-Module", logContents);
 
         }
 

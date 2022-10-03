@@ -16,7 +16,7 @@ namespace AbatabRoundhouse
 {
     public class Roundhouse
     {
-        public static SessionData ParseRequest(SessionData abatabSession, string abatabRequest)
+        public static SessionData ParseRequest(SessionData abatabSession)
         {
             switch (abatabSession.AbatabMode)
             {

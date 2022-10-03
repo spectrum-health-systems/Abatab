@@ -8,6 +8,7 @@
  * https://github.com/spectrum-health-systems/Abatab/blob/main/doc/srcdoc/SrcDocAbatab.md
  * ===================================================================================================== */
 
+using AbatabData;
 using AbatabLogging;
 using AbatabSession;
 using NTST.ScriptLinkService.Objects;
@@ -22,9 +23,7 @@ namespace Abatab
     [System.ComponentModel.ToolboxItem(false)]
     public class Abatab : WebService
     {
-        /// <summary>
-        /// Return the Abatab version.
-        /// </summary>
+        /// <summary>Return the Abatab version.</summary>
         /// <returns>Version of Abatab.</returns>
         [WebMethod]
         public string GetVersion()
@@ -34,21 +33,16 @@ namespace Abatab
 
         /// <summary>Execute an Abatab request.</summary>
         /// <param name="sentOptionObject">OptionObject2015 sent from myAvatar.</param>
-        /// <param name="abatabRequest">Request to be executed.</param>
+        /// <param name="abatabRequest">Request from Avatar.</param>
         /// <returns>OptionObject2015, which may have been modified.</returns>
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string abatabRequest)
         {
             DebugModule();
 
-            var abatabSession = Instance.Build(sentOptionObject, abatabRequest);
-            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
+            OptionObject2015 finalOptObj = DoIt(sentOptionObject, abatabRequest);
 
-            // TODO Need to verify if we need to assign this.
-            abatabSession = AbatabRoundhouse.Roundhouse.ParseRequest(abatabSession, abatabRequest);
-            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
-
-            return abatabSession.FinalOptObj;
+            return finalOptObj;
         }
 
         /// <summary>Debug logic for this module.</summary>
@@ -58,6 +52,33 @@ namespace Abatab
             {
                 LogEvent.DebugModule(Assembly.GetExecutingAssembly().GetName().Name, Properties.Settings.Default.DebugLogDir);
             }
+        }
+
+        /// <summary></summary>
+        /// <param name="abatabSession"></param>
+        /// <param name="abatabRequest"></param>
+        /// <returns></returns>
+        private static OptionObject2015 DoIt(OptionObject2015 sentOptionObject, string abatabRequest)
+        {
+            SessionData abatabSession = CreateNewSession(sentOptionObject, abatabRequest);
+
+            // TODO Need to verify if we need to assign this.
+            abatabSession = AbatabRoundhouse.Roundhouse.ParseRequest(abatabSession);
+            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
+
+            return abatabSession.FinalOptObj;
+        }
+
+        /// <summary></summary>
+        /// <param name="sentOptionObject"></param>
+        /// <param name="abatabRequest"></param>
+        /// <returns></returns>
+        private static SessionData CreateNewSession(OptionObject2015 sentOptionObject, string abatabRequest)
+        {
+            SessionData abatabSession = Instance.Build(sentOptionObject, abatabRequest);
+            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
+
+            return abatabSession;
         }
     }
 }

@@ -34,6 +34,24 @@ namespace AbatabSession.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("off")]
+        public string DebugMode {
+            get {
+                return ((string)(this["DebugMode"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("c:\\AvatoolWebService\\Abatab_UAT")]
+        public string AbatabRoot {
+            get {
+                return ((string)(this["AbatabRoot"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("trace")]
         public string LoggingMode {
             get {
@@ -52,15 +70,6 @@ namespace AbatabSession.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("c:\\AvatoolWebService\\Abatab_UAT")]
-        public string AbatabRoot {
-            get {
-                return ((string)(this["AbatabRoot"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("_Abatab_")]
         public string AvatarFallbackUserName {
             get {
@@ -70,10 +79,10 @@ namespace AbatabSession.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("off")]
-        public string DebugMode {
+        [global::System.Configuration.DefaultSettingValueAttribute("10")]
+        public string LoggingDelay {
             get {
-                return ((string)(this["DebugMode"]));
+                return ((string)(this["LoggingDelay"]));
             }
         }
     }
