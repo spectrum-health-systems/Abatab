@@ -30,10 +30,24 @@ namespace AbatabLogging
             BuildContent.LogTextWithoutTrace("allOptObjInformation", abatabSession, logMessage);
         }
 
+        public static void Debug(string executingAssemblyName, string debugModuleMode, string debugModuleDir, string debugMsg, string fileExt = "debug")
+        {
+            // NOTE For detailed logs.
+            Thread.Sleep(10);
+
+            var debugLogDir = $@"{debugModuleDir}\{DateTime.Now:yyMMdd}";
+            _=Directory.CreateDirectory($@"{debugModuleDir}\{DateTime.Now:yyMMdd}");
+
+            File.WriteAllText($@"{debugLogDir}\{DateTime.Now:fffffff}.{fileExt}", debugMsg);
+        }
+
         /// <summary>Write a debug logfile.</summary>
         public static void DebugModule(string executingAssemblyName, string debugModuleMode, string debugModuleDir, string debugMsg)
         {
             // NOTE For debugging purposes only! By default DebugMode in Web.config should be set to "off".
+
+            // NOTE For detailed logs.
+            Thread.Sleep(10);
 
             if (string.Equals(debugModuleMode, "on", StringComparison.OrdinalIgnoreCase))
             {
