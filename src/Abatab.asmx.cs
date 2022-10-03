@@ -11,6 +11,7 @@
 using AbatabLogging;
 using AbatabSession;
 using NTST.ScriptLinkService.Objects;
+using System;
 using System.Reflection;
 using System.Web.Services;
 
@@ -38,7 +39,7 @@ namespace Abatab
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string abatabRequest)
         {
-            LogEvent.DebugModule(Assembly.GetExecutingAssembly().GetName().Name, Properties.Settings.Default.DebugMode, Properties.Settings.Default.DebugLogDir, "Abatab started.");
+            DebugModule();
 
             var abatabSession = Instance.Build(sentOptionObject, abatabRequest);
             LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
@@ -48,6 +49,15 @@ namespace Abatab
             LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
 
             return abatabSession.FinalOptObj;
+        }
+
+        /// <summary>Debug logic for this module.</summary>
+        private static void DebugModule()
+        {
+            if (string.Equals(Properties.Settings.Default.DebugMode, "on", StringComparison.OrdinalIgnoreCase))
+            {
+                LogEvent.DebugModule(Assembly.GetExecutingAssembly().GetName().Name, Properties.Settings.Default.DebugLogDir);
+            }
         }
     }
 }

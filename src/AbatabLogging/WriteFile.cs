@@ -17,7 +17,7 @@ namespace AbatabLogging
 {
     public class WriteFile
     {
-        public static void ToLocalFile(string filePath, string logContent)
+        public static void ToLocalFile(string filePath, string logContent = "")
         {
             File.WriteAllText(filePath, logContent);
         }

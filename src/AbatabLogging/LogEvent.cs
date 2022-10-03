@@ -42,20 +42,18 @@ namespace AbatabLogging
         }
 
         /// <summary>Write a debug logfile.</summary>
-        public static void DebugModule(string executingAssemblyName, string debugModuleMode, string debugModuleDir, string debugMsg)
+        public static void DebugModule(string executingAssemblyName, string debugModuleDir, string logContents = "")
         {
             // NOTE For debugging purposes only! By default DebugMode in Web.config should be set to "off".
 
             // NOTE For detailed logs.
             Thread.Sleep(10);
 
-            if (string.Equals(debugModuleMode, "on", StringComparison.OrdinalIgnoreCase))
-            {
-                var debugLogDir = $@"{debugModuleDir}\{DateTime.Now:yyMMdd}";
-                _=Directory.CreateDirectory(debugLogDir);
+            var debugLogDir = $@"{debugModuleDir}\{DateTime.Now:yyMMdd}";
+            _=Directory.CreateDirectory(debugLogDir);
 
-                File.WriteAllText($@"{debugLogDir}\{DateTime.Now:fffffff}.{executingAssemblyName}", "test");
-            }
+            File.WriteAllText($@"{debugLogDir}\{DateTime.Now:fffffff}.{executingAssemblyName}", logContents);
+
         }
 
         /// <summary>
