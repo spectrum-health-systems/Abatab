@@ -70,7 +70,14 @@ namespace AbatabSession
         {
             string[] requestComponents = abatabRequest.Split('-');
 
-            // TODO What if a component is empty/whitespace?
+            foreach (var component in requestComponents)
+            {
+                if (string.IsNullOrWhiteSpace(component))
+                {
+                    var test = Array.IndexOf(requestComponents, component);
+                    requestComponents[test] = "undefined";
+                }
+            }
 
             return new Dictionary<string, string>
             {
