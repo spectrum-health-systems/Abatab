@@ -1,12 +1,8 @@
-﻿/* ========================================================================================================
- * Abatab v0.90.1
- * https://github.com/spectrum-health-systems/Abatab
- * (c) 2021-2022 A Pretty Cool Program (see LICENSE file for more information)
- * --------------------------------------------------------------------------------------------------------
- * Abatab.csproj v0.90.1
- * Abatab.asmx.cs b220930.093243
- * https://github.com/spectrum-health-systems/Abatab/blob/main/doc/srcdoc/SrcDocAbatab.md
- * ===================================================================================================== */
+﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
+ * Abatab                                                                                           v0.90.2
+ * Abatab.csproj                                                                                    v0.90.2
+ * BuildContent.cs                                                                           b221003.113616
+ * ================================ (c) 2016-2022 A Pretty Cool Program ================================ */
 
 using AbatabData;
 using AbatabLogging;

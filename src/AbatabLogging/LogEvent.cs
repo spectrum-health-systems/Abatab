@@ -1,12 +1,8 @@
-﻿/* ========================================================================================================
- * Abatab v0.90.1
- * https://github.com/spectrum-health-systems/Abatab
- * (c) 2021-2022 A Pretty Cool Program (see LICENSE file for more information)
- * --------------------------------------------------------------------------------------------------------
- * AbatabLogging v0.90.1
- * AbatabLogging.LogEvent.cs b221003.075515
- * https://github.com/spectrum-health-systems/Abatab/blob/main/doc/srcdoc/SrcDocAbatabLogging.md
- * ===================================================================================================== */
+﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
+ * Abatab                                                                                           v0.90.2
+ * AbatabLogging.csproj                                                                             v0.90.2
+ * LogEvent.cs                                                                               b221003.113616
+ * ================================ (c) 2016-2022 A Pretty Cool Program ================================ */
 
 using AbatabData;
 using System;
@@ -34,7 +30,7 @@ namespace AbatabLogging
         {
             // NOTE For detailed logs.
             Thread.Sleep(10);
-
+            //kkssssssdfhh
             var debugLogDir = $@"{debugModuleDir}\{DateTime.Now:yyMMdd}";
             _=Directory.CreateDirectory($@"{debugModuleDir}\{DateTime.Now:yyMMdd}");
 
@@ -68,6 +64,7 @@ namespace AbatabLogging
         /// <param name="logMessage">Message for the logfile</param>
         public static void SessionData(SessionData abatabSession, string logMessage = "Session information log.")
         {
+            // est
             BuildContent.LogTextWithoutTrace("sessionInformation", abatabSession, logMessage);
         }
 

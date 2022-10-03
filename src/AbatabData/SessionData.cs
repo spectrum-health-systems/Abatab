@@ -1,12 +1,8 @@
-﻿/* ========================================================================================================
- * Abatab v0.90.1
- * https://github.com/spectrum-health-systems/Abatab
- * (c) 2021-2022 A Pretty Cool Program (see LICENSE file for more information)
- * --------------------------------------------------------------------------------------------------------
- * AbatabData v0.90.1
- * AbatabData.SessionData.cs b221003.075515
- * https://github.com/spectrum-health-systems/Abatab/blob/main/doc/srcdoc/SrcDocAbatabData.md
- * ===================================================================================================== */
+﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
+ * Abatab                                                                                           v0.90.2
+ * AbatabData.csproj                                                                                v0.90.2
+ * SessionData.cs                                                                            b221003.113616
+ * ================================ (c) 2016-2022 A Pretty Cool Program ================================ */
 
 using NTST.ScriptLinkService.Objects;
 
