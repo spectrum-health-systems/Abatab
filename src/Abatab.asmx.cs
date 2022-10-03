@@ -38,7 +38,7 @@ namespace Abatab
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string abatabRequest)
         {
-            LogEvent.DebugModule(Assembly.GetExecutingAssembly().GetName().Name, Properties.Settings.Default.DebugMode, Properties.Settings.Default.DebugLogDir, "Abatab started.");
+            LogEvent.DebugModule(Assembly.GetExecutingAssembly().GetName().Name, Properties.Settings.Default.DebugMode, Properties.Settings.Default.DebugLogDir, Assembly.GetExecutingAssembly().GetName().Name);
 
             var abatabSession = Instance.Build(sentOptionObject, abatabRequest);
             LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
