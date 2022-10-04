@@ -83,7 +83,13 @@ namespace AbatabLogging
         /// <param name="logMessage">Message for the logfile</param>
         public static void SessionData(SessionData abatabSession, string logMessage = "Session information log.")
         {
-            var logData = BuildContent.LogTextWithoutTrace("sessionInformation", abatabSession, logMessage);
+            var filePath   = $@"{abatabSession.SessionLogDirectory}\{DateTime.Now.ToString("HHmmss.fffffff")}.SessionData";
+            var logContent = BuildContent.LogTextWithoutTrace("sessionInformation", abatabSession, logMessage);
+
+            // NOTE For detailed logs.
+            Thread.Sleep(10);
+
+            File.WriteAllText(filePath, logContent);
         }
 
         /// <summary>
