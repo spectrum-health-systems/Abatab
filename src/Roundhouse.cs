@@ -29,7 +29,8 @@ namespace Abatab
 
                 case "testing":
                     LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
-                    abatabSession = AbatabOptionObject.Finalize.ForPassthrough(abatabSession);
+                    ModuleTesting.Roundhouse.ParseCommand(abatabSession);
+                    //abatabSession = AbatabOptionObject.Finalize.ForPassthrough(abatabSession);
                     break;
 
                 default:

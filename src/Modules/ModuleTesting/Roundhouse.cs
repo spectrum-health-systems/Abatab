@@ -26,8 +26,8 @@ namespace ModuleTesting
                     ParseCommandB(abatabSession);
                     break;
 
-                case "commandc":
-                    ParseCommandB(abatabSession);
+                case "datadump":
+                    ParseDataDump(abatabSession);
                     break;
 
                 default:
@@ -96,22 +96,14 @@ namespace ModuleTesting
             return abatabSession;
         }
 
-        private static SessionData ParseCommandC(SessionData abatabSession)
+        private static SessionData ParseDataDump(SessionData abatabSession)
         {
             LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
 
             switch (abatabSession.AbatabAction)
             {
-                case "actionc1":
-                    CommandC.ActionC1(abatabSession);
-                    break;
-
-                case "actionc2":
-                    CommandC.ActionC2(abatabSession);
-                    break;
-
-                case "actionc3":
-                    CommandC.ActionC3(abatabSession);
+                case "basic":
+                    DataDump.SessionData(abatabSession);
                     break;
 
                 default:
