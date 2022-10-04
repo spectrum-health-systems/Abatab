@@ -44,10 +44,6 @@ namespace AbatabSession
                 AbatabCommand          = "undefined",
                 AbatabAction           = "undefined",
                 AbatabOption           = "undefined",
-                //AbatabModule           = abatabRequestComponents["Module"],
-                //AbatabCommand          = abatabRequestComponents["Command"],
-                //AbatabAction           = abatabRequestComponents["Action"],
-                //AbatabOption           = abatabRequestComponents["Option"],
                 AvatarUserName         = sentOptObj.OptionUserId,
                 SentOptObj             = sentOptObj,
                 WorkOptObj             = sentOptObj,
@@ -55,24 +51,13 @@ namespace AbatabSession
             };
 
             abatabSession.AvatarUserName = VerifyAvatarUserName(abatabSession.AvatarUserName, abatabSession.AvatarFallbackUserName);
+            //abatabSession.SessionLogDirectory = $@"{abatabSession.AbatabRoot}\logs\{DateTime.Now:yyMMdd}\{abatabSession.AvatarUserName}";
 
-            abatabSession.SessionLogDirectory = $@"{abatabSession.AbatabRoot}\logs\{DateTime.Now:yyMMdd}\{abatabSession.AvatarUserName}";
-
-            VerifySessionLogDir(abatabSession.SessionLogDirectory);
-
-            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
+            VerifySessionLogDir(abatabSession);
 
             ParseAbatabRequest(abatabSession);
 
             LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
-
-            //abatabSession.AvatarUserName = VerifyAvatarUserName(abatabSession.AvatarUserName, abatabSession.AvatarFallbackUserName);
-
-            //abatabSession.SessionLogDirectory = $@"{abatabSession.AbatabRoot}\logs\{DateTime.Now:yyMMdd}\{abatabSession.AvatarUserName}";
-
-            //VerifySessionLogDir(abatabSession.SessionLogDirectory);
-
-            //LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
 
             return abatabSession;
         }
@@ -101,18 +86,6 @@ namespace AbatabSession
         }
 
         /// <summary>
-        /// Verify the session log directory exists.
-        /// </summary>
-        /// <param name="sessionLogDirectory"></param>
-        private static void VerifySessionLogDir(string sessionLogDirectory)
-        {
-            if (!Directory.Exists(sessionLogDirectory))
-            {
-                _=Directory.CreateDirectory(sessionLogDirectory);
-            }
-        }
-
-        /// <summary>
         /// Verify the session AvatarUserName is valid.
         /// </summary>
         /// <param name="avatarUserName"></param>
@@ -123,6 +96,21 @@ namespace AbatabSession
             return string.IsNullOrWhiteSpace(avatarUserName)
                 ? avatarFallbackUserName
                 : avatarUserName;
+        }
+
+        /// <summary>
+        /// Verify the session log directory exists.
+        /// </summary>
+        /// <param name="sessionLogDirectory"></param>
+        private static void VerifySessionLogDir(SessionData abatabSession)
+        {
+            //abatabSession.AvatarUserName      = VerifyAvatarUserName(abatabSession.AvatarUserName, abatabSession.AvatarFallbackUserName);
+            abatabSession.SessionLogDirectory = $@"{abatabSession.AbatabRoot}\logs\{DateTime.Now:yyMMdd}\{abatabSession.AvatarUserName}";
+
+            if (!Directory.Exists(abatabSession.SessionLogDirectory))
+            {
+                _=Directory.CreateDirectory(abatabSession.SessionLogDirectory);
+            }
         }
     }
 }
