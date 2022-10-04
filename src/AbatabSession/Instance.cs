@@ -23,6 +23,11 @@ namespace AbatabSession
         /// <returns>Session configuration settings.</returns>
         public static SessionData Build(OptionObject2015 sentOptObj, string abatabRequest)
         {
+            if (string.Equals(Properties.Settings.Default.DebugMode, "on", StringComparison.OrdinalIgnoreCase))
+            {
+                LogEvent.DebugModule(Assembly.GetExecutingAssembly().GetName().Name, Properties.Settings.Default.DebugLogDir, "Instance.cs.");
+            }
+
             //var abatabRequestComponents = ParseAbatabRequest(abatabRequest);
 
             var abatabSession = new SessionData

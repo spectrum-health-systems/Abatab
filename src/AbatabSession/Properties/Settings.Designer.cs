@@ -34,7 +34,7 @@ namespace AbatabSession.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("off")]
+        [global::System.Configuration.DefaultSettingValueAttribute("on")]
         public string DebugMode {
             get {
                 return ((string)(this["DebugMode"]));
@@ -70,6 +70,15 @@ namespace AbatabSession.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("10")]
+        public string LoggingDelay {
+            get {
+                return ((string)(this["LoggingDelay"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("_Abatab_")]
         public string AvatarFallbackUserName {
             get {
@@ -77,12 +86,15 @@ namespace AbatabSession.Properties {
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("10")]
-        public string LoggingDelay {
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\AvatoolWebService\\Abatab_UAT\\logs\\debug\\")]
+        public string DebugLogDir {
             get {
-                return ((string)(this["LoggingDelay"]));
+                return ((string)(this["DebugLogDir"]));
+            }
+            set {
+                this["DebugLogDir"] = value;
             }
         }
     }
