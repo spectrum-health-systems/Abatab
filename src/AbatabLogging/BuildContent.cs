@@ -48,10 +48,10 @@ namespace AbatabLogging
             var logBody    = "";
             var logFooter  = LogFooter();
 
-            return $"{logHeader}{Environment.NewLine}" +
-                   $"{logDetails}{Environment.NewLine}" +
-                   $"{logBody}{Environment.NewLine}" +
-                   $"{logFooter}{Environment.NewLine}";
+            return $"{logHeader}" +
+                   $"{logDetails}" +
+                   $"{logBody}" +
+                   $"{logFooter}";
         }
 
         /// <summary>
