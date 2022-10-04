@@ -14,7 +14,6 @@ namespace AbatabLogging
 {
     public class LogEvent
     {
-
         /// <summary>
         /// Build a OptionObject information log.
         /// </summary>
@@ -30,7 +29,7 @@ namespace AbatabLogging
         {
             // NOTE For detailed logs.
             Thread.Sleep(10);
-            //kkssssssdfhh
+
             var debugLogDir = $@"{debugModuleDir}\{DateTime.Now:yyMMdd}";
             _=Directory.CreateDirectory($@"{debugModuleDir}\{DateTime.Now:yyMMdd}");
 
@@ -64,7 +63,6 @@ namespace AbatabLogging
         /// <param name="logMessage">Message for the logfile</param>
         public static void SessionData(SessionData abatabSession, string logMessage = "Session information log.")
         {
-            // est
             BuildContent.LogTextWithoutTrace("sessionInformation", abatabSession, logMessage);
         }
 

@@ -8,7 +8,6 @@ using AbatabData;
 using AbatabLogging;
 using NTST.ScriptLinkService.Objects;
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 
@@ -24,7 +23,7 @@ namespace AbatabSession
         /// <returns>Session configuration settings.</returns>
         public static SessionData Build(OptionObject2015 sentOptObj, string abatabRequest)
         {
-            var abatabRequestComponents = ParseAbatabRequest(abatabRequest);
+            //var abatabRequestComponents = ParseAbatabRequest(abatabRequest);
 
             var abatabSession = new SessionData
             {
@@ -36,15 +35,21 @@ namespace AbatabSession
                 AvatarFallbackUserName = Properties.Settings.Default.AvatarFallbackUserName.ToLower(),
                 SessionLogDirectory    = "",
                 AbatabRequest          = abatabRequest.ToLower(),
-                AbatabModule           = abatabRequestComponents["Module"],
-                AbatabCommand          = abatabRequestComponents["Command"],
-                AbatabAction           = abatabRequestComponents["Action"],
-                AbatabOption           = abatabRequestComponents["Option"],
+                AbatabModule           = "undefined",
+                AbatabCommand          = "undefined",
+                AbatabAction           = "undefined",
+                AbatabOption           = "undefined",
+                //AbatabModule           = abatabRequestComponents["Module"],
+                //AbatabCommand          = abatabRequestComponents["Command"],
+                //AbatabAction           = abatabRequestComponents["Action"],
+                //AbatabOption           = abatabRequestComponents["Option"],
                 AvatarUserName         = sentOptObj.OptionUserId,
                 SentOptObj             = sentOptObj,
                 WorkOptObj             = sentOptObj,
                 FinalOptObj            = sentOptObj,
             };
+
+            ParseAbatabRequest(abatabSession);
 
             LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
 
@@ -64,33 +69,22 @@ namespace AbatabSession
         /// </summary>
         /// <param name="abatabRequest"></param>
         /// <returns></returns>
-        private static Dictionary<string, string> ParseAbatabRequest(string abatabRequest)
+        private static void ParseAbatabRequest(SessionData abatabSession)
         {
-            string[] requestComponents = abatabRequest.Split('-');
+            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
 
+            string[] req = abatabSession.AbatabRequest.Split('-');
 
-            // NOTE If the option is missing.
-            if (requestComponents.Length == 2)
+            abatabSession.AbatabModule = req[0].ToLower();
+            abatabSession.AbatabCommand = req[1].ToLower();
+            abatabSession.AbatabAction = req[2].ToLower();
+
+            if (req.Length == 4)
             {
-                requestComponents[3] = "undefined";
+                abatabSession.AbatabOption = req[3].ToLower();
             }
 
-            //foreach (var component in requestComponents)
-            //{
-            //    if (string.IsNullOrWhiteSpace(component))
-            //    {
-            //        var test = Array.IndexOf(requestComponents, component);
-            //        requestComponents[test] = "undefined";
-            //    }
-            //}
-
-            return new Dictionary<string, string>
-            {
-                { "Module",  requestComponents[0].ToLower() },
-                { "Command", requestComponents[1].ToLower() },
-                { "Action",  requestComponents[2].ToLower() },
-                { "Option",  requestComponents[3].ToLower() }
-            };
+            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
         }
 
         /// <summary>
