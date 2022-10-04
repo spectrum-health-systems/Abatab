@@ -8,6 +8,7 @@ using AbatabData;
 using NTST.ScriptLinkService.Objects;
 using System;
 using System.IO;
+using System.Reflection;
 
 namespace AbatabLogging
 {
@@ -26,6 +27,8 @@ namespace AbatabLogging
         /// <returns>Contents for a logfile with trace information.</returns>
         public static string LogTextWithTrace(string eventType, string executingAssemblyName, SessionData abatabSession, string logMessage, string callerFilePath, string callerMemberName, int callerLine)
         {
+            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
+
             var logHeader  = LogHeader(logMessage);
             var logDetails = LogDetailsWithTrace(eventType, executingAssemblyName, callerFilePath, callerMemberName, callerLine);
             var logBody    = LogBody(eventType, abatabSession);
@@ -47,6 +50,8 @@ namespace AbatabLogging
         /// <returns>Contents for a logfile without trace information.</returns>
         public static string LogTextWithoutTrace(string eventType, SessionData abatabSession, string logMessage)
         {
+            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
+
             var logHeader  = LogHeader(logMessage);
             var logDetails = LogDetailsWithoutTrace(eventType);
             var logBody    = LogBody(eventType, abatabSession);
@@ -65,6 +70,8 @@ namespace AbatabLogging
         /// <returns> Standard log header.</returns>
         private static string LogHeader(string logMessage)
         {
+            //LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
+
             return $"{logMessage}:{Environment.NewLine}" +
                    $"{Environment.NewLine}";
         }
@@ -80,6 +87,8 @@ namespace AbatabLogging
         /// <returns>Standard log details with trace information.</returns>
         private static string LogDetailsWithTrace(string eventType, string executingAssemblyName, string callerFilePath, string callerMemberName, int callerLine)
         {
+            //LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
+
             return $"{Environment.NewLine}" +
                    $"Log type: {eventType}{Environment.NewLine}" +
                    $"Assembly: {executingAssemblyName}{Environment.NewLine}" +
@@ -96,6 +105,8 @@ namespace AbatabLogging
         /// <returns>Standard log details without trace information.</returns>
         private static string LogDetailsWithoutTrace(string eventType)
         {
+            //LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
+
             return $"{Environment.NewLine}" +
                    $"Log type: {eventType}{Environment.NewLine}";
         }
@@ -108,6 +119,8 @@ namespace AbatabLogging
         /// <returns>Standard log body.</returns>
         private static string LogBody(string eventType, SessionData abatabSession)
         {
+            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
+
             switch (eventType)
             {
                 case "sessionInformation":
@@ -138,6 +151,8 @@ namespace AbatabLogging
         /// <returns>Information for all OptionObject types.</returns>
         private static string BodyAllOptObjInformation(SessionData abatabSession)
         {
+            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
+
             var sentOptObjectInformation   = BodyOptObjInformation(abatabSession.SentOptObj, "sentOptObj");
             var workerOptObjectInformation = BodyOptObjInformation(abatabSession.SentOptObj, "workerOptObj");
             var finalOptObjectInformation  = BodyOptObjInformation(abatabSession.SentOptObj, "finalOptObj");
@@ -156,6 +171,8 @@ namespace AbatabLogging
         /// <returns>Standard OptionObject information.</returns>
         private static string BodyOptObjInformation(OptionObject2015 optObj, string optObjType)
         {
+            //LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
+
             return $" OptionObject Type: {optObjType}{Environment.NewLine}" +
                    $"          EntityID: {optObj.EntityID}{Environment.NewLine}" +
                    $"          Facility: {optObj.Facility}{Environment.NewLine}" +
@@ -178,6 +195,10 @@ namespace AbatabLogging
         /// <returns>Standard session information.</returns>
         private static string BodySessionInformation(SessionData abatabSession)
         {
+            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
+
+            var allOptObjInformation =BodyAllOptObjInformation(abatabSession);
+
             // TODO - Verify this works, especially the modification stuff.
             return $"{Environment.NewLine}" +
                           $"              Abatab mode: {abatabSession.AbatabMode}{Environment.NewLine}" +
@@ -186,7 +207,14 @@ namespace AbatabLogging
                           $"          Logging details: {abatabSession.LoggingDetails}{Environment.NewLine}" +
                           $"    Abatab root directory: {abatabSession.AbatabRoot}{Environment.NewLine}" +
                           $"Avatar fallback user name: {abatabSession.AvatarFallbackUserName}{Environment.NewLine}" +
-                          $"           Abatab request: {abatabSession.AvatarUserName}{Environment.NewLine}";
+                          $"    Session log directory: {abatabSession.SessionLogDirectory}{Environment.NewLine}" +
+                          $"          Avatar username: {abatabSession.AvatarUserName}{Environment.NewLine}" +
+                          $"           Abatab request: {abatabSession.AvatarUserName}{Environment.NewLine}" +
+                          $"    Abatab request module: {abatabSession.AvatarUserName}{Environment.NewLine}" +
+                          $"   Abatab request command: {abatabSession.AvatarUserName}{Environment.NewLine}" +
+                          $"    Abatab request action: {abatabSession.AvatarUserName}{Environment.NewLine}" +
+                          $"    Abatab request option: {abatabSession.AvatarUserName}{Environment.NewLine}" +
+                          $"{allOptObjInformation}";
         }
 
         /// <summary>
@@ -195,6 +223,8 @@ namespace AbatabLogging
         /// <returns>Standard log footer.</returns>
         private static string LogFooter()
         {
+            //LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
+
             return $"End of log.{Environment.NewLine}" +
                    $"{Environment.NewLine}";
         }
