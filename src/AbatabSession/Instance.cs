@@ -46,10 +46,14 @@ namespace AbatabSession
                 FinalOptObj            = sentOptObj,
             };
 
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogDir, "Main SessionData created.");
+
             abatabSession.AvatarUserName = VerifyAvatarUserName(abatabSession.AvatarUserName, abatabSession.AvatarFallbackUserName);
-            //abatabSession.SessionLogDirectory = $@"{abatabSession.AbatabRoot}\logs\{DateTime.Now:yyMMdd}\{abatabSession.AvatarUserName}";
+
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogDir, "Avatar username added.");
 
             VerifySessionLogDir(abatabSession);
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogDir, "Session dir verified.");
 
             ParseAbatabRequest(abatabSession);
 

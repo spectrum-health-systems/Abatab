@@ -86,8 +86,7 @@ namespace AbatabLogging
         {
             //LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
 
-            return $"{logMessage}:{Environment.NewLine}" +
-                   $"{Environment.NewLine}";
+            return $"{logMessage}{Environment.NewLine}";
         }
 
         /// <summary>
