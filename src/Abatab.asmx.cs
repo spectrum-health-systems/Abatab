@@ -8,8 +8,6 @@ using AbatabData;
 using AbatabLogging;
 using AbatabSession;
 using NTST.ScriptLinkService.Objects;
-using System;
-using System.Reflection;
 using System.Web.Services;
 
 namespace Abatab
@@ -34,7 +32,7 @@ namespace Abatab
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string abatabRequest)
         {
-            DebugModule();
+            LogEvent.Debug(Properties.Settings.Default.DebugMode, Properties.Settings.Default.DebugLogDir, "Abatab started -> Abatab.RunScript()");
 
             SessionData abatabSession = Instance.Build(sentOptionObject, abatabRequest);
 
@@ -44,15 +42,15 @@ namespace Abatab
         }
 
         /// <summary>Debug logic for this module.</summary>
-        private static void DebugModule(string debugMsg = "")
-        {
-            /* Since we haven't setup the logging functionality yet, this gives us an opportunity to write a simple logfile so we can verify that Abatab has
-             * started. By defauly, the "DebugMode" setting in Web.config should be set to "off".
-             */
-            if (string.Equals(Properties.Settings.Default.DebugMode, "on", StringComparison.OrdinalIgnoreCase))
-            {
-                LogEvent.DebugModule(Assembly.GetExecutingAssembly().GetName().Name, Properties.Settings.Default.DebugLogDir, "Abatab.RunScript()");
-            }
-        }
+        ////private static void Debug(string debugMsg = "")
+        ////{
+        ////    /* Since we haven't setup the logging functionality yet, this gives us an opportunity to write a simple logfile so we can verify that Abatab has
+        ////     * started. By default, the "DebugMode" setting in Web.config should be set to "off".
+        ////     */
+        ////    if (string.Equals(Properties.Settings.Default.DebugMode, "on", StringComparison.OrdinalIgnoreCase))
+        ////    {
+        ////        LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Properties.Settings.Default.DebugLogDir, debugMsg);
+        ////    }
+        ////}
     }
 }

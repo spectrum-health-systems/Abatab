@@ -23,7 +23,7 @@ namespace AbatabSession
         /// <returns>Session configuration settings.</returns>
         public static SessionData Build(OptionObject2015 sentOptObj, string abatabRequest)
         {
-            DebugClass("SessionData.Build()");
+            LogEvent.Debug(Properties.Settings.Default.DebugMode, Properties.Settings.Default.DebugLogDir, "Building session data -> AbatabSession.Instance.Build()");
 
             var abatabSession = new SessionData
             {
@@ -105,15 +105,6 @@ namespace AbatabSession
             if (!Directory.Exists(abatabSession.SessionLogDirectory))
             {
                 _=Directory.CreateDirectory(abatabSession.SessionLogDirectory);
-            }
-        }
-
-        /// <summary>Debug logic for this module.</summary>
-        private static void DebugClass(string debugMsg)
-        {
-            if (string.Equals(Properties.Settings.Default.DebugMode, "on", StringComparison.OrdinalIgnoreCase))
-            {
-                LogEvent.DebugModule(Assembly.GetExecutingAssembly().GetName().Name, Properties.Settings.Default.DebugLogDir, debugMsg);
             }
         }
     }

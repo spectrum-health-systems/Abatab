@@ -7,6 +7,7 @@
 using AbatabData;
 using System;
 using System.IO;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Threading;
 
@@ -25,36 +26,16 @@ namespace AbatabLogging
             BuildContent.LogTextWithoutTrace("allOptObjInformation", abatabSession, logMessage);
         }
 
-        public static void Debug(string executingAssemblyName, string debugModuleMode, string debugModuleDir, string debugMsg, string fileExt = "debug")
-        {
-            // NOTE For detailed logs.
-            Thread.Sleep(10);
+        ////public static void Debug(string executingAssemblyName, string debugModuleMode, string debugModuleDir, string debugMsg, string fileExt = "debug")
+        ////{
+        ////    // NOTE For detailed logs.
+        ////    Thread.Sleep(10);
 
-            var debugLogDir = $@"{debugModuleDir}\{DateTime.Now:yyMMdd}";
-            _=Directory.CreateDirectory($@"{debugModuleDir}\{DateTime.Now:yyMMdd}");
+        ////    var debugLogDir = $@"{debugModuleDir}\{DateTime.Now:yyMMdd}";
+        ////    _=Directory.CreateDirectory($@"{debugModuleDir}\{DateTime.Now:yyMMdd}");
 
-            File.WriteAllText($@"{debugLogDir}\{DateTime.Now:HHmmssfffffff}.{fileExt}", debugMsg);
-        }
-
-        /// <summary>
-        /// Basic debugging for a module.
-        /// </summary>
-        /// <param name="executingAssemblyName">Module name.</param>
-        /// <param name="debugModuleDir">Directory to write the logfile.</param>
-        /// <param name="logContents">Log contents (leave blank for low-level debugging).</param>
-        public static void DebugClass(string executingAssemblyName, string debugModuleDir, string logContents = "")
-        {
-            // NOTE For debugging purposes only! By default DebugMode in Web.config should be set to "off".
-
-            // NOTE Delay creating a debug log by 10ms, just to make sure we don't overwrite an existing log.
-            Thread.Sleep(10);
-
-            var debugLogDir = $@"{debugModuleDir}\{DateTime.Now:yyMMdd}";
-            _=Directory.CreateDirectory(debugLogDir);
-
-            File.WriteAllText($@"{debugLogDir}\{DateTime.Now:HHmmssfffffff}-{executingAssemblyName}-Class", logContents);
-
-        }
+        ////    File.WriteAllText($@"{debugLogDir}\{DateTime.Now:HHmmssfffffff}.{fileExt}", debugMsg);
+        ////}
 
         /// <summary>
         /// Basic debugging for a module.
@@ -62,19 +43,63 @@ namespace AbatabLogging
         /// <param name="executingAssemblyName">Module name.</param>
         /// <param name="debugModuleDir">Directory to write the logfile.</param>
         /// <param name="logContents">Log contents (leave blank for low-level debugging).</param>
-        public static void DebugModule(string executingAssemblyName, string debugModuleDir, string logContents = "")
+        public static void Debug(string executingAssemblyName, string debugMode, string debugLogDirRoot, string debugMsg = "", [CallerFilePath] string callerFilePath = "", [CallerMemberName] string callerMemberName = "", [CallerLineNumber] int callerLine = 0)
         {
             // NOTE For debugging purposes only! By default DebugMode in Web.config should be set to "off".
 
+            if (string.Equals(debugMode, "on", StringComparison.OrdinalIgnoreCase))
+            {
+                LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, debugLogDirRoot, debugMsg);
+            }
             // NOTE Delay creating a debug log by 10ms, just to make sure we don't overwrite an existing log.
             Thread.Sleep(10);
 
-            var debugLogDir = $@"{debugModuleDir}\{DateTime.Now:yyMMdd}";
+            var debugLogDir = $@"{debugLogDirRoot}\{DateTime.Now:yyMMdd}";
             _=Directory.CreateDirectory(debugLogDir);
 
-            File.WriteAllText($@"{debugLogDir}\{DateTime.Now:HHmmssfffffff}-{executingAssemblyName}-Module", logContents);
+            File.WriteAllText($@"{debugLogDir}\{DateTime.Now:HHmmssfffffff}-{executingAssemblyName}-Class", debugMsg);
 
         }
+
+        ///// <summary>
+        ///// Basic debugging for a module.
+        ///// </summary>
+        ///// <param name="executingAssemblyName">Module name.</param>
+        ///// <param name="debugModuleDir">Directory to write the logfile.</param>
+        ///// <param name="logContents">Log contents (leave blank for low-level debugging).</param>
+        //public static void DebugClass(string executingAssemblyName, string debugModuleDir, string logContents = "")
+        //{
+        //    // NOTE For debugging purposes only! By default DebugMode in Web.config should be set to "off".
+
+        //    // NOTE Delay creating a debug log by 10ms, just to make sure we don't overwrite an existing log.
+        //    Thread.Sleep(10);
+
+        //    var debugLogDir = $@"{debugModuleDir}\{DateTime.Now:yyMMdd}";
+        //    _=Directory.CreateDirectory(debugLogDir);
+
+        //    File.WriteAllText($@"{debugLogDir}\{DateTime.Now:HHmmssfffffff}-{executingAssemblyName}-Class", logContents);
+
+        //}
+
+        ///// <summary>
+        ///// Basic debugging for a module.
+        ///// </summary>
+        ///// <param name="executingAssemblyName">Module name.</param>
+        ///// <param name="debugModuleDir">Directory to write the logfile.</param>
+        ///// <param name="logContents">Log contents (leave blank for low-level debugging).</param>
+        //public static void DebugModule(string executingAssemblyName, string debugModuleDir, string logContents = "")
+        //{
+        //    // NOTE For debugging purposes only! By default DebugMode in Web.config should be set to "off".
+
+        //    // NOTE Delay creating a debug log by 10ms, just to make sure we don't overwrite an existing log.
+        //    Thread.Sleep(10);
+
+        //    var debugLogDir = $@"{debugModuleDir}\{DateTime.Now:yyMMdd}";
+        //    _=Directory.CreateDirectory(debugLogDir);
+
+        //    File.WriteAllText($@"{debugLogDir}\{DateTime.Now:HHmmssfffffff}-{executingAssemblyName}-Module", logContents);
+
+        //}
 
         /// <summary>
         /// Build a session information log.
