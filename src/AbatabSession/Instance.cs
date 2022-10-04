@@ -46,6 +46,8 @@ namespace AbatabSession
                 FinalOptObj            = sentOptObj,
             };
 
+            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
+
             abatabSession.AvatarUserName = VerifyAvatarUserName(abatabSession.AvatarUserName, abatabSession.AvatarFallbackUserName);
 
             abatabSession.SessionLogDirectory = $@"{abatabSession.AbatabRoot}\logs\{DateTime.Now:yyMMdd}\{abatabSession.AvatarUserName}";
@@ -66,14 +68,21 @@ namespace AbatabSession
         {
             string[] requestComponents = abatabRequest.Split('-');
 
-            foreach (var component in requestComponents)
+
+            // NOTE If the option is missing.
+            if (requestComponents.Length == 2)
             {
-                if (string.IsNullOrWhiteSpace(component))
-                {
-                    var test = Array.IndexOf(requestComponents, component);
-                    requestComponents[test] = "undefined";
-                }
+                requestComponents[3] = "undefined";
             }
+
+            //foreach (var component in requestComponents)
+            //{
+            //    if (string.IsNullOrWhiteSpace(component))
+            //    {
+            //        var test = Array.IndexOf(requestComponents, component);
+            //        requestComponents[test] = "undefined";
+            //    }
+            //}
 
             return new Dictionary<string, string>
             {
