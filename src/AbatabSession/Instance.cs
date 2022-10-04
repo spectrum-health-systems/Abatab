@@ -54,10 +54,6 @@ namespace AbatabSession
                 FinalOptObj            = sentOptObj,
             };
 
-            ParseAbatabRequest(abatabSession);
-
-            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
-
             abatabSession.AvatarUserName = VerifyAvatarUserName(abatabSession.AvatarUserName, abatabSession.AvatarFallbackUserName);
 
             abatabSession.SessionLogDirectory = $@"{abatabSession.AbatabRoot}\logs\{DateTime.Now:yyMMdd}\{abatabSession.AvatarUserName}";
@@ -65,6 +61,18 @@ namespace AbatabSession
             VerifySessionLogDir(abatabSession.SessionLogDirectory);
 
             LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
+
+            ParseAbatabRequest(abatabSession);
+
+            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
+
+            //abatabSession.AvatarUserName = VerifyAvatarUserName(abatabSession.AvatarUserName, abatabSession.AvatarFallbackUserName);
+
+            //abatabSession.SessionLogDirectory = $@"{abatabSession.AbatabRoot}\logs\{DateTime.Now:yyMMdd}\{abatabSession.AvatarUserName}";
+
+            //VerifySessionLogDir(abatabSession.SessionLogDirectory);
+
+            //LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
 
             return abatabSession;
         }
