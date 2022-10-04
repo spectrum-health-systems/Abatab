@@ -4,10 +4,12 @@
  * BuildContent.cs                                                                           b221004.105628
  * ================================ (c) 2016-2022 A Pretty Cool Program ================================ */
 
+using Abatab.Properties;
 using AbatabData;
 using AbatabLogging;
 using AbatabSession;
 using NTST.ScriptLinkService.Objects;
+using System.Reflection;
 using System.Web.Services;
 
 namespace Abatab
@@ -32,7 +34,7 @@ namespace Abatab
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string abatabRequest)
         {
-            LogEvent.Debug(Properties.Settings.Default.DebugMode, Properties.Settings.Default.DebugLogDir, "Abatab started -> Abatab.RunScript()");
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogDir, "Abatab started -> Abatab.RunScript()");
 
             SessionData abatabSession = Instance.Build(sentOptionObject, abatabRequest);
 

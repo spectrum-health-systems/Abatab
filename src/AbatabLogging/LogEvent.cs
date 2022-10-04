@@ -7,7 +7,6 @@
 using AbatabData;
 using System;
 using System.IO;
-using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Threading;
 
@@ -49,15 +48,16 @@ namespace AbatabLogging
 
             if (string.Equals(debugMode, "on", StringComparison.OrdinalIgnoreCase))
             {
-                LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, debugLogDirRoot, debugMsg);
+                // NOTE Delay creating a debug log by 10ms, just to make sure we don't overwrite an existing log.
+                Thread.Sleep(10);
+
+
+                var debugLogDir = $@"{debugLogDirRoot}\{DateTime.Now:yyMMdd}";
+                _=Directory.CreateDirectory(debugLogDir);
+
+                File.WriteAllText($@"{debugLogDir}\{DateTime.Now:HHmmssfffffff}-{executingAssemblyName}-Class", debugMsg);
             }
-            // NOTE Delay creating a debug log by 10ms, just to make sure we don't overwrite an existing log.
-            Thread.Sleep(10);
 
-            var debugLogDir = $@"{debugLogDirRoot}\{DateTime.Now:yyMMdd}";
-            _=Directory.CreateDirectory(debugLogDir);
-
-            File.WriteAllText($@"{debugLogDir}\{DateTime.Now:HHmmssfffffff}-{executingAssemblyName}-Class", debugMsg);
 
         }
 

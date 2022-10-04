@@ -40,6 +40,20 @@ namespace AbatabLogging
                    $"{logFooter}{Environment.NewLine}";
         }
 
+
+        public static string Debug(string executingAssemblyName, string debugMode, string debugLogDirRoot, string debugMsg, string callerFilePath, string callerMemberName, int callerLine)
+        {
+            var logHeader  = LogHeader(debugMsg);
+            var logDetails = LogDetailsWithTrace("debug", executingAssemblyName, callerFilePath, callerMemberName, callerLine);
+            var logBody    = "";
+            var logFooter  = LogFooter();
+
+            return $"{logHeader}{Environment.NewLine}" +
+                   $"{logDetails}{Environment.NewLine}" +
+                   $"{logBody}{Environment.NewLine}" +
+                   $"{logFooter}{Environment.NewLine}";
+        }
+
         /// <summary>
         /// Build the logfile content without trace information.
         /// </summary>
