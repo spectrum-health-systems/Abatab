@@ -6,6 +6,7 @@
 
 using AbatabData;
 using AbatabLogging;
+using AbatabSession.Properties;
 using NTST.ScriptLinkService.Objects;
 using System;
 using System.IO;
@@ -23,7 +24,7 @@ namespace AbatabSession
         /// <returns>Session configuration settings.</returns>
         public static SessionData Build(OptionObject2015 sentOptObj, string abatabRequest)
         {
-            LogEvent.Debug(Properties.Settings.Default.DebugMode, Properties.Settings.Default.DebugLogDir, "Building session data -> AbatabSession.Instance.Build()");
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogDir, "AbatabSession.Instance.Build()");
 
             var abatabSession = new SessionData
             {

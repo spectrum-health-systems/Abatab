@@ -56,7 +56,7 @@ namespace AbatabLogging
                 var debugLogDir = $@"{debugLogDirRoot}\{DateTime.Now:yyMMdd}";
                 _=Directory.CreateDirectory(debugLogDir);
 
-                File.WriteAllText($@"{debugLogDir}\{DateTime.Now:HHmmssfffffff}-{executingAssemblyName}-Class", debugContent);
+                File.WriteAllText($@"{debugLogDir}\{DateTime.Now:HHmmssfffffff}-{executingAssemblyName}-{Path.GetFileName(callerFilePath)}-{callerMemberName}-{callerLine}.debug", debugContent);
             }
 
 
