@@ -23,12 +23,7 @@ namespace AbatabSession
         /// <returns>Session configuration settings.</returns>
         public static SessionData Build(OptionObject2015 sentOptObj, string abatabRequest)
         {
-            if (string.Equals(Properties.Settings.Default.DebugMode, "on", StringComparison.OrdinalIgnoreCase))
-            {
-                LogEvent.DebugModule(Assembly.GetExecutingAssembly().GetName().Name, Properties.Settings.Default.DebugLogDir, "Instance.cs.");
-            }
-
-            //var abatabRequestComponents = ParseAbatabRequest(abatabRequest);
+            DebugClass("SessionData.Build()");
 
             var abatabSession = new SessionData
             {
@@ -110,6 +105,15 @@ namespace AbatabSession
             if (!Directory.Exists(abatabSession.SessionLogDirectory))
             {
                 _=Directory.CreateDirectory(abatabSession.SessionLogDirectory);
+            }
+        }
+
+        /// <summary>Debug logic for this module.</summary>
+        private static void DebugClass(string debugMsg)
+        {
+            if (string.Equals(Properties.Settings.Default.DebugMode, "on", StringComparison.OrdinalIgnoreCase))
+            {
+                LogEvent.DebugModule(Assembly.GetExecutingAssembly().GetName().Name, Properties.Settings.Default.DebugLogDir, debugMsg);
             }
         }
     }

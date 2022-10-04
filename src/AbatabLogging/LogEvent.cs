@@ -42,6 +42,26 @@ namespace AbatabLogging
         /// <param name="executingAssemblyName">Module name.</param>
         /// <param name="debugModuleDir">Directory to write the logfile.</param>
         /// <param name="logContents">Log contents (leave blank for low-level debugging).</param>
+        public static void DebugClass(string executingAssemblyName, string debugModuleDir, string logContents = "")
+        {
+            // NOTE For debugging purposes only! By default DebugMode in Web.config should be set to "off".
+
+            // NOTE Delay creating a debug log by 10ms, just to make sure we don't overwrite an existing log.
+            Thread.Sleep(10);
+
+            var debugLogDir = $@"{debugModuleDir}\{DateTime.Now:yyMMdd}";
+            _=Directory.CreateDirectory(debugLogDir);
+
+            File.WriteAllText($@"{debugLogDir}\{DateTime.Now:HHmmssfffffff}-{executingAssemblyName}-Class", logContents);
+
+        }
+
+        /// <summary>
+        /// Basic debugging for a module.
+        /// </summary>
+        /// <param name="executingAssemblyName">Module name.</param>
+        /// <param name="debugModuleDir">Directory to write the logfile.</param>
+        /// <param name="logContents">Log contents (leave blank for low-level debugging).</param>
         public static void DebugModule(string executingAssemblyName, string debugModuleDir, string logContents = "")
         {
             // NOTE For debugging purposes only! By default DebugMode in Web.config should be set to "off".
@@ -63,7 +83,7 @@ namespace AbatabLogging
         /// <param name="logMessage">Message for the logfile</param>
         public static void SessionData(SessionData abatabSession, string logMessage = "Session information log.")
         {
-            BuildContent.LogTextWithoutTrace("sessionInformation", abatabSession, logMessage);
+            var logData = BuildContent.LogTextWithoutTrace("sessionInformation", abatabSession, logMessage);
         }
 
         /// <summary>

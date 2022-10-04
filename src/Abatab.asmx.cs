@@ -44,11 +44,14 @@ namespace Abatab
         }
 
         /// <summary>Debug logic for this module.</summary>
-        private static void DebugModule()
+        private static void DebugModule(string debugMsg = "")
         {
+            /* Since we haven't setup the logging functionality yet, this gives us an opportunity to write a simple logfile so we can verify that Abatab has
+             * started. By defauly, the "DebugMode" setting in Web.config should be set to "off".
+             */
             if (string.Equals(Properties.Settings.Default.DebugMode, "on", StringComparison.OrdinalIgnoreCase))
             {
-                LogEvent.DebugModule(Assembly.GetExecutingAssembly().GetName().Name, Properties.Settings.Default.DebugLogDir, "Abatab started.");
+                LogEvent.DebugModule(Assembly.GetExecutingAssembly().GetName().Name, Properties.Settings.Default.DebugLogDir, "Abatab.RunScript()");
             }
         }
     }
