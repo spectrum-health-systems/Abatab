@@ -51,11 +51,12 @@ namespace AbatabLogging
                 // NOTE Delay creating a debug log by 10ms, just to make sure we don't overwrite an existing log.
                 Thread.Sleep(10);
 
+                var debugContent = BuildContent.Debug(executingAssemblyName, debugMode, debugLogDirRoot, debugMsg, callerFilePath, callerMemberName, callerLine);
 
                 var debugLogDir = $@"{debugLogDirRoot}\{DateTime.Now:yyMMdd}";
                 _=Directory.CreateDirectory(debugLogDir);
 
-                File.WriteAllText($@"{debugLogDir}\{DateTime.Now:HHmmssfffffff}-{executingAssemblyName}-Class", debugMsg);
+                File.WriteAllText($@"{debugLogDir}\{DateTime.Now:HHmmssfffffff}-{executingAssemblyName}-Class", debugContent);
             }
 
 
