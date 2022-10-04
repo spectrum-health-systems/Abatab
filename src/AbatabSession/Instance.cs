@@ -24,7 +24,7 @@ namespace AbatabSession
         /// <returns>Session configuration settings.</returns>
         public static SessionData Build(OptionObject2015 sentOptObj, string abatabRequest)
         {
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogDir, "AbatabSession.Instance.Build()");
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogDir, "AbatabSession.Instance.Build() [001]");
 
             var abatabSession = new SessionData
             {
@@ -46,16 +46,18 @@ namespace AbatabSession
                 FinalOptObj            = sentOptObj,
             };
 
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogDir, "Main SessionData created.");
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogDir, "AbatabSession.Instance.Build() [002]");
 
             abatabSession.AvatarUserName = VerifyAvatarUserName(abatabSession.AvatarUserName, abatabSession.AvatarFallbackUserName);
 
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogDir, "Avatar username added.");
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogDir, "AbatabSession.Instance.Build() [003]");
 
             VerifySessionLogDir(abatabSession);
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogDir, "Session dir verified.");
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogDir, "AbatabSession.Instance.Build() [004]");
 
             ParseAbatabRequest(abatabSession);
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogDir, "AbatabSession.Instance.Build() [005]");
+
 
             LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
 
