@@ -1,7 +1,7 @@
 ﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
  * Abatab                                                                                           v0.91.0
  * AbatabSession.csproj                                                                             v0.91.0
- * Instance.cs                                                                               b221003.130759
+ * Instance.cs                                                                               b221004.105628
  * ================================ (c) 2016-2022 A Pretty Cool Program ================================ */
 
 using AbatabData;
@@ -77,10 +77,10 @@ namespace AbatabSession
 
             return new Dictionary<string, string>
             {
-                { "Module",  requestComponents[0] },
-                { "Command", requestComponents[1] },
-                { "Action",  requestComponents[2] },
-                { "Option",  requestComponents[3] }
+                { "Module",  requestComponents[0].ToLower() },
+                { "Command", requestComponents[1].ToLower() },
+                { "Action",  requestComponents[2].ToLower() },
+                { "Option",  requestComponents[3].ToLower() }
             };
         }
 

@@ -1,7 +1,7 @@
 ﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
  * Abatab                                                                                           v0.91.0
  * Abatab.csproj                                                                                    v0.91.0
- * BuildContent.cs                                                                           b221003.130759
+ * BuildContent.cs                                                                           b221004.105628
  * ================================ (c) 2016-2022 A Pretty Cool Program ================================ */
 
 using AbatabData;
@@ -36,9 +36,11 @@ namespace Abatab
         {
             DebugModule();
 
-            OptionObject2015 finalOptObj = DoIt(sentOptionObject, abatabRequest);
+            SessionData abatabSession = Instance.Build(sentOptionObject, abatabRequest);
 
-            return finalOptObj;
+            abatabSession = Roundhouse.ParseRequest(abatabSession); // TODO Need to verify if we need to assign this.
+
+            return abatabSession.FinalOptObj;
         }
 
         /// <summary>Debug logic for this module.</summary>
@@ -48,33 +50,6 @@ namespace Abatab
             {
                 LogEvent.DebugModule(Assembly.GetExecutingAssembly().GetName().Name, Properties.Settings.Default.DebugLogDir);
             }
-        }
-
-        /// <summary></summary>
-        /// <param name="abatabSession"></param>
-        /// <param name="abatabRequest"></param>
-        /// <returns></returns>
-        private static OptionObject2015 DoIt(OptionObject2015 sentOptionObject, string abatabRequest)
-        {
-            SessionData abatabSession = CreateNewSession(sentOptionObject, abatabRequest);
-
-            // TODO Need to verify if we need to assign this.
-            abatabSession = AbatabRoundhouse.Roundhouse.ParseRequest(abatabSession);
-            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
-
-            return abatabSession.FinalOptObj;
-        }
-
-        /// <summary></summary>
-        /// <param name="sentOptionObject"></param>
-        /// <param name="abatabRequest"></param>
-        /// <returns></returns>
-        private static SessionData CreateNewSession(OptionObject2015 sentOptionObject, string abatabRequest)
-        {
-            SessionData abatabSession = Instance.Build(sentOptionObject, abatabRequest);
-            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
-
-            return abatabSession;
         }
     }
 }
