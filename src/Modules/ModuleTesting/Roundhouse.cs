@@ -103,6 +103,7 @@ namespace ModuleTesting
             switch (abatabSession.AbatabAction)
             {
                 case "sessiondata":
+                    LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
                     DataDump.SessionData(abatabSession);
                     break;
 
