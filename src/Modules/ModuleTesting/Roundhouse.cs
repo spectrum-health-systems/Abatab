@@ -102,7 +102,7 @@ namespace ModuleTesting
 
             switch (abatabSession.AbatabAction)
             {
-                case "basic":
+                case "sessiondata":
                     DataDump.SessionData(abatabSession);
                     break;
 
