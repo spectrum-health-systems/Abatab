@@ -72,7 +72,7 @@ namespace AbatabLogging
                   $"Assembly: {executingAssemblyName}{Environment.NewLine}" +
                   $"Source:   {Path.GetFileName(callerFilePath)}{Environment.NewLine}" +
                   $"Member:   {callerMemberName}{Environment.NewLine}" +
-                  $" Line:    {callerLine}{Environment.NewLine}";
+                  $"Line:     {callerLine}{Environment.NewLine}";
 
             return $"{logDetailHeader}" +
                    $"{logDetail}";
@@ -117,22 +117,22 @@ namespace AbatabLogging
 
             // TODO - Verify this works, especially the modification stuff.
             return $"{Environment.NewLine}" +
-                   $"              Abatab mode: {abatabSession.AbatabMode}{Environment.NewLine}" +
-                   $"               Debug mode: {abatabSession.DebugMode}{Environment.NewLine}" +
-                   $"             Logging mode: {abatabSession.LoggingMode}{Environment.NewLine}" +
-                   $"           Logging detail: {abatabSession.LoggingDetail}{Environment.NewLine}" +
-                   $"    Abatab root directory: {abatabSession.AbatabRoot}{Environment.NewLine}" +
+                   $"Abatab mode:               {abatabSession.AbatabMode}{Environment.NewLine}" +
+                   $"Debug mode:                {abatabSession.DebugMode}{Environment.NewLine}" +
+                   $"Logging mode:              {abatabSession.LoggingMode}{Environment.NewLine}" +
+                   $"Logging detail:            {abatabSession.LoggingDetail}{Environment.NewLine}" +
+                   $"Abatab root directory:     {abatabSession.AbatabRoot}{Environment.NewLine}" +
                    $"Avatar fallback user name: {abatabSession.AvatarFallbackUserName}{Environment.NewLine}" +
-                   $"    Session log directory: {abatabSession.SessionLogDir}{Environment.NewLine}" +
-                   $"          Avatar username: {abatabSession.AvatarUserName}{Environment.NewLine}" +
-                   $"           Abatab request: {abatabSession.AvatarUserName}{Environment.NewLine}" +
-                   $"    Abatab request module: {abatabSession.AvatarUserName}{Environment.NewLine}" +
-                   $"   Abatab request command: {abatabSession.AvatarUserName}{Environment.NewLine}" +
-                   $"    Abatab request action: {abatabSession.AvatarUserName}{Environment.NewLine}" +
-                   $"    Abatab request option: {abatabSession.AvatarUserName}{Environment.NewLine}" +
-                   $"        Sent OptionObject: {BodyOptObjInfo(abatabSession.SentOptObj, "sentOptObj")}{Environment.NewLine}" +
-                   $"      Worker OptionObject: {BodyOptObjInfo(abatabSession.SentOptObj, "workerOptObj")}{Environment.NewLine}" +
-                   $"       Final OptionObject: {BodyOptObjInfo(abatabSession.SentOptObj, "finalOptObj")}{Environment.NewLine}";
+                   $"Session log directory:     {abatabSession.SessionLogDir}{Environment.NewLine}" +
+                   $"Avatar username:           {abatabSession.AvatarUserName}{Environment.NewLine}" +
+                   $"Abatab request:            {abatabSession.AvatarUserName}{Environment.NewLine}" +
+                   $"Abatab request module:     {abatabSession.AvatarUserName}{Environment.NewLine}" +
+                   $"Abatab request command:    {abatabSession.AvatarUserName}{Environment.NewLine}" +
+                   $"Abatab request action:     {abatabSession.AvatarUserName}{Environment.NewLine}" +
+                   $"Abatab request option:     {abatabSession.AvatarUserName}{Environment.NewLine}" +
+                   $"Sent OptionObject:         {BodyOptObjInfo(abatabSession.SentOptObj, "sentOptObj")}{Environment.NewLine}" +
+                   $"Worker OptionObject:       {BodyOptObjInfo(abatabSession.SentOptObj, "workerOptObj")}{Environment.NewLine}" +
+                   $"Final OptionObject:        {BodyOptObjInfo(abatabSession.SentOptObj, "finalOptObj")}{Environment.NewLine}";
 
             //return $"{Environment.NewLine}" +
             //              $"              Abatab mode: {abatabSession.AbatabMode}{Environment.NewLine}" +
@@ -173,19 +173,19 @@ namespace AbatabLogging
         private static string BodyOptObjInfo(OptionObject2015 optObj, string optObjType)
         {
             return $"{Environment.NewLine}" +
-                   $" OptionObject Type: {optObjType}{Environment.NewLine}" +
-                   $"          EntityID: {optObj.EntityID}{Environment.NewLine}" +
-                   $"          Facility: {optObj.Facility}{Environment.NewLine}" +
-                   $"     NamespaceName: {optObj.NamespaceName}{Environment.NewLine}" +
-                   $"          OptionId: {optObj.OptionId}{Environment.NewLine}" +
-                   $"   ParentNamespace: {optObj.ParentNamespace}{Environment.NewLine}" +
-                   $"        ServerName: {optObj.ServerName}{Environment.NewLine}" +
-                   $"        SystemCode: {optObj.SystemCode}{Environment.NewLine}" +
-                   $"     EpisodeNumber: {optObj.EpisodeNumber}{Environment.NewLine}" +
-                   $"     OptionStaffId: {optObj.OptionStaffId}{Environment.NewLine}" +
-                   $"      OptionUserId: {optObj.OptionUserId}{Environment.NewLine}" +
-                   $"         ErrorCode: {optObj.ErrorCode}{Environment.NewLine}" +
-                   $"         ErrorMesg: {optObj.ErrorMesg}";
+                   $"OptionObject Type: {optObjType}{Environment.NewLine}" +
+                   $"EntityID:          {optObj.EntityID}{Environment.NewLine}" +
+                   $"Facility:          {optObj.Facility}{Environment.NewLine}" +
+                   $"NamespaceName:     {optObj.NamespaceName}{Environment.NewLine}" +
+                   $"OptionId:          {optObj.OptionId}{Environment.NewLine}" +
+                   $"ParentNamespace:   {optObj.ParentNamespace}{Environment.NewLine}" +
+                   $"ServerName:        {optObj.ServerName}{Environment.NewLine}" +
+                   $"SystemCode:        {optObj.SystemCode}{Environment.NewLine}" +
+                   $"EpisodeNumber:     {optObj.EpisodeNumber}{Environment.NewLine}" +
+                   $"OptionStaffId:     {optObj.OptionStaffId}{Environment.NewLine}" +
+                   $"OptionUserId:      {optObj.OptionUserId}{Environment.NewLine}" +
+                   $"ErrorCode:         {optObj.ErrorCode}{Environment.NewLine}" +
+                   $"ErrorMesg:         {optObj.ErrorMesg}";
         }
 
         /// <summary>Build a standard log footer.</summary>
