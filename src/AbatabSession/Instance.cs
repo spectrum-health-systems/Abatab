@@ -54,7 +54,7 @@ namespace AbatabSession
 
             VerifySessionLogDir(abatabSession);
 
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"], abatabSession.SessionLogDir);
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"]);
 
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 
