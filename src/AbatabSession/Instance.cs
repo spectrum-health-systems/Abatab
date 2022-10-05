@@ -50,13 +50,13 @@ namespace AbatabSession
                 FinalOptObj            = sentOptObj,
             };
             VerifySessionLogDir(abatabSession);
-            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 
             abatabSession.AvatarUserName = VerifyAvatarUserName(abatabSession.AvatarUserName, abatabSession.AvatarFallbackUserName);
-            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 
             ParseAbatabRequest(abatabSession);
-            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 
             return abatabSession;
         }

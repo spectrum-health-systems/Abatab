@@ -41,10 +41,10 @@ namespace Abatab
             Dictionary<string, string> abatabSettings = AbatabSettings.LoadFromWebConfig();
 
             SessionData abatabSession = Instance.Build(sentOptionObject, abatabRequest, abatabSettings);
-            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 
             Roundhouse.ParseRequest(abatabSession);
-            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 
             return abatabSession.FinalOptObj;
         }

@@ -14,20 +14,16 @@ namespace AbatabLogging
 {
     public class LogEvent
     {
-        /// <summary>
-        /// Build a OptionObject information log.
-        /// </summary>
+        /// <summary>Build a OptionObject information log.</summary>
         /// <param name="optObjType">Type of OptionObject.</param>
         /// <param name="abatabSession">Abatab session configuration settings.</param>
         /// <param name="logMessage">Message for the logfile</param>
         public static void AllOptionObjectInformation(SessionData abatabSession, string logMessage = "OptionObject information log.")
         {
-            BuildContent.LogTextWithoutTrace("allOptObjInformation", abatabSession, logMessage);
+            BuildContent.LogContent("allOptObjInformation", abatabSession, logMessage);
         }
 
-        /// <summary>
-        /// Basic debugging for a module.
-        /// </summary>
+        /// <summary>Basic debugging for a module.</summary>
         /// <param name="executingAssemblyName">Module name.</param>
         /// <param name="debugModuleDir">Directory to write the logfile.</param>
         /// <param name="logContents">Log contents (leave blank for low-level debugging).</param>
@@ -69,14 +65,14 @@ namespace AbatabLogging
             }
         }
 
-        /// <summary>
-        ///
-        /// </summary>
+        /// <summary>Debug the debugger.</summary>
         /// <param name="debugDebugger"></param>
         /// <param name="debugLogDir"></param>
         /// <param name="debugMsg"></param>
         private static void DebugDebugger(bool debugDebugger, string debugLogDir, string debugMsg)
         {
+            /* This will significantly slow down Abatab, and should only be used when developing/debugging.
+             */
             if (debugDebugger)
             {
                 Thread.Sleep(1000);
@@ -86,63 +82,37 @@ namespace AbatabLogging
         }
 
 
-        /// <summary>
-        /// Build a session information log.
-        /// </summary>
+        /// <summary>Build a session information log.</summary>
         /// <param name="abatabSession">Abatab session configuration settings.</param>
         /// <param name="logMessage">Message for the logfile</param>
         public static void SessionData(SessionData abatabSession, string logMessage = "Session information log.")
         {
-            var filePath   = $@"{abatabSession.SessionLogDir}\{DateTime.Now.ToString("HHmmss.fffffff")}.SessionData";
-            var logContent = BuildContent.LogTextWithoutTrace("sessionInformation", abatabSession, logMessage);
+            if (abatabSession.LoggingMode == "all" || abatabSession.LoggingMode.Contains("session"))
+            {
+                var logPath    = BuildPath.FullPath("session", abatabSession.SessionLogDir);
+                var logContent = BuildContent.LogContent("sessionInformation", abatabSession, logMessage);
 
-            // NOTE For detailed logs.
-            Thread.Sleep(10);
+                WriteFile.LocalFile(logPath, logContent, Convert.ToInt32(abatabSession.LoggingDelay));
+            }
 
-            File.WriteAllText(filePath, logContent);
         }
 
-        /// <summary>
-        /// Build a trace log.
-        /// </summary>
+        /// <summary>Build a trace log.</summary>
         /// <param name="executingAssemblyName">Name of executing assembly.</param>
         /// <param name="abatabSession">Abatab session configuration settings.</param>
         /// <param name="logMessage">Message for the logfile</param>
         /// <param name="callerFilePath">Filename of where the log is coming from.</param>
         /// <param name="callerMemberName">Method of where the log is coming from.</param>
         /// <param name="callerLine">File line of where the log is coming from.</param>
-        public static void Trace(string executingAssemblyName, SessionData abatabSession, string logMessage = "Trace log.", [CallerFilePath] string callerFilePath = "", [CallerMemberName] string callerMemberName = "", [CallerLineNumber] int callerLine = 0)
+        public static void Trace(SessionData abatabSession, string executingAssemblyName, string logMessage = "Trace log.", [CallerFilePath] string callerFilePath = "", [CallerMemberName] string callerMemberName = "", [CallerLineNumber] int callerLine = 0)
         {
-            var filePath   = $@"{abatabSession.SessionLogDir}\{DateTime.Now.ToString("HHmmss.fffffff")}-{executingAssemblyName}-{Path.GetFileName(callerFilePath)}-{callerMemberName}-{callerLine}.trace";
+            if (abatabSession.LoggingMode == "all" || abatabSession.LoggingMode.Contains("trace"))
+            {
+                var logPath    = BuildPath.FullPath("trace", abatabSession.SessionLogDir, executingAssemblyName, callerFilePath, callerMemberName, callerLine);
+                var logContent = BuildContent.LogContent("trace", abatabSession, logMessage, executingAssemblyName, callerFilePath, callerMemberName, callerLine);
 
-            var logContent = BuildContent.LogTextWithTrace("trace", executingAssemblyName, abatabSession, logMessage, callerFilePath, callerMemberName, callerLine);
-
-            // NOTE For detailed logs.
-            Thread.Sleep(10);
-
-            File.WriteAllText(filePath, logContent);
-        }
-
-        /// <summary>
-        /// Build a trace log.
-        /// </summary>
-        /// <param name="executingAssemblyName">Name of executing assembly.</param>
-        /// <param name="abatabSession">Abatab session configuration settings.</param>
-        /// <param name="logMessage">Message for the logfile</param>
-        /// <param name="callerFilePath">Filename of where the log is coming from.</param>
-        /// <param name="callerMemberName">Method of where the log is coming from.</param>
-        /// <param name="callerLine">File line of where the log is coming from.</param>
-        public static void TraceDetails(string executingAssemblyName, SessionData abatabSession, string logMessage = "Trace log.", [CallerFilePath] string callerFilePath = "", [CallerMemberName] string callerMemberName = "", [CallerLineNumber] int callerLine = 0)
-        {
-            var filePath   = $@"{abatabSession.SessionLogDir}\{DateTime.Now.ToString("HHmmss.fffffff")}-{executingAssemblyName}-{Path.GetFileName(callerFilePath)}-{callerMemberName}-{callerLine}.trace";
-
-            var logContent = BuildContent.LogTextWithTrace("trace", executingAssemblyName, abatabSession, logMessage, callerFilePath, callerMemberName, callerLine);
-
-            // NOTE For detailed logs.
-            Thread.Sleep(10);
-
-            File.WriteAllText(filePath, logContent);
-
+                WriteFile.LocalFile(logPath, logContent, Convert.ToInt32(abatabSession.LoggingDelay));
+            }
         }
     }
 }

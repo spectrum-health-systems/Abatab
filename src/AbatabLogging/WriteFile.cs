@@ -7,14 +7,17 @@
 // NOTE Probably depreciated
 
 using System.IO;
+using System.Threading;
 
 namespace AbatabLogging
 {
     public class WriteFile
     {
-        public static void ToLocalFile(string filePath, string logContent = "")
+        public static void LocalFile(string logPath, string logContent, int loggingDelay)
         {
-            File.WriteAllText(filePath, logContent);
+            Thread.Sleep(loggingDelay);
+
+            File.WriteAllText(logPath, logContent);
         }
     }
 }
