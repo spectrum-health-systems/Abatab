@@ -11,18 +11,18 @@ namespace AbatabLogging
 
             var fullPath = $@"{sessionLogDir}\{DateTime.Now:HHmmss.fffffff}";
 
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on", @"C:\AvatoolWebService\Abatab_UAT\logs\debug", "fullPath");
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on", @"C:\AvatoolWebService\Abatab_UAT\logs\debug", fullPath);
 
             if (!string.IsNullOrWhiteSpace(executingAssemblyName))
             {
                 fullPath += $"-{executingAssemblyName}";
-                LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on", @"C:\AvatoolWebService\Abatab_UAT\logs\debug", "fullPath");
+                LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on", @"C:\AvatoolWebService\Abatab_UAT\logs\debug", fullPath);
             }
 
             if (!string.IsNullOrWhiteSpace(callerFilePath))
             {
                 fullPath += $"-{callerFilePath}-{callerMemberName}-{callerLine}";
-                LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on", @"C:\AvatoolWebService\Abatab_UAT\logs\debug", "fullPath");
+                LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on", @"C:\AvatoolWebService\Abatab_UAT\logs\debug", fullPath);
             }
 
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on", @"C:\AvatoolWebService\Abatab_UAT\logs\debug", $"{fullPath}.{eventType}");
