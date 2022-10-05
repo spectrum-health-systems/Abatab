@@ -58,7 +58,6 @@ namespace AbatabSession
             ParseAbatabRequest(abatabSession);
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogDir, "AbatabSession.Instance.Build() [005]");
 
-
             LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
 
             return abatabSession;
@@ -71,19 +70,24 @@ namespace AbatabSession
         /// <returns></returns>
         private static void ParseAbatabRequest(SessionData abatabSession)
         {
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogDir, "AbatabSession.Instance.ParseAbatabRequest() [001]");
             LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
 
             string[] req = abatabSession.AbatabRequest.Split('-');
 
-            abatabSession.AbatabModule = req[0].ToLower();
+            abatabSession.AbatabModule  = req[0].ToLower();
             abatabSession.AbatabCommand = req[1].ToLower();
-            abatabSession.AbatabAction = req[2].ToLower();
+            abatabSession.AbatabAction  = req[2].ToLower();
+
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogDir, "AbatabSession.Instance.ParseAbatabRequest() [002]");
 
             if (req.Length == 4)
             {
+                LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogDir, "AbatabSession.Instance.ParseAbatabRequest() [003]");
                 abatabSession.AbatabOption = req[3].ToLower();
             }
 
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogDir, "AbatabSession.Instance.ParseAbatabRequest() [004]");
             LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
         }
 
