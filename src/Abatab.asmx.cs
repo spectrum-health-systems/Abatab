@@ -4,6 +4,7 @@
  * BuildContent.cs                                                                           b221005.090329
  * ================================ (c) 2016-2022 A Pretty Cool Program ================================ */
 
+using Abatab.Properties;
 using AbatabLogging;
 using NTST.ScriptLinkService.Objects;
 using System.Reflection;
@@ -32,7 +33,7 @@ namespace Abatab
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string abatabRequest)
         {
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on", @"C:\AvatoolWebService\Abatab_UAT\logs\debug");
-            //LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot);
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot);
 
             //Dictionary< string, string> abatabSettings = AbatabSettings.LoadFromWebConfig();
 
