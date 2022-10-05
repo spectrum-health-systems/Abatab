@@ -24,6 +24,17 @@ namespace AbatabOptionObject
             abatabSession.FinalOptObj.ErrorCode = 0;
             abatabSession.FinalOptObj.ErrorMesg = "Abatab is in passthrough mode.";
 
+            abatabSession.FinalOptObj.EntityID        = abatabSession.SentOptObj.EntityID;
+            abatabSession.FinalOptObj.EpisodeNumber   = abatabSession.SentOptObj.EpisodeNumber;
+            abatabSession.FinalOptObj.Facility        = abatabSession.SentOptObj.Facility;
+            abatabSession.FinalOptObj.OptionId        = abatabSession.SentOptObj.OptionId;
+            abatabSession.FinalOptObj.OptionStaffId   = abatabSession.SentOptObj.OptionStaffId;
+            abatabSession.FinalOptObj.OptionUserId    = abatabSession.SentOptObj.OptionUserId;
+            abatabSession.FinalOptObj.SystemCode      = abatabSession.SentOptObj.SystemCode;
+            abatabSession.FinalOptObj.ServerName      = abatabSession.SentOptObj.ServerName;
+            abatabSession.FinalOptObj.NamespaceName   = abatabSession.SentOptObj.NamespaceName;
+            abatabSession.FinalOptObj.ParentNamespace = abatabSession.SentOptObj.ParentNamespace;
+
             return abatabSession;
         }
     }
