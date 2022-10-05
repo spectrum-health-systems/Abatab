@@ -45,7 +45,8 @@ namespace AbatabLogging
         {
             return $"========================================{Environment.NewLine}" +
                    $"{logMessage}{Environment.NewLine}" +
-                   $"========================================{Environment.NewLine}";
+                   $"========================================{Environment.NewLine}" +
+                   $"{Environment.NewLine}";
         }
 
         /// <summary>Build standard log details with trace information.</summary>
@@ -57,12 +58,9 @@ namespace AbatabLogging
         /// <returns>Standard log details with trace information.</returns>
         private static string LogDetails(string eventType, string executingAssemblyName, string callerFilePath, string callerMemberName, int callerLine = 0)
         {
-            var logDetailHeader = $"-----------{Environment.NewLine}" +
+            var detailHeader = $"-----------{Environment.NewLine}" +
                                   $"Log details{Environment.NewLine}" +
                                   $"-----------";
-
-
-
 
             var logDetail = string.IsNullOrWhiteSpace(callerFilePath)
                 ? $"{Environment.NewLine}" +
@@ -74,7 +72,7 @@ namespace AbatabLogging
                   $"Member:   {callerMemberName}{Environment.NewLine}" +
                   $"Line:     {callerLine}{Environment.NewLine}";
 
-            return $"{logDetailHeader}" +
+            return $"{detailHeader}" +
                    $"{logDetail}";
 
         }
@@ -113,10 +111,12 @@ namespace AbatabLogging
         /// <returns>Standard session information.</returns>
         private static string BodySessionInfo(SessionData abatabSession)
         {
-            //var allOptObjInformation = BodyAllOptObjInfo(abatabSession);
+            var sessionInfoHeader = $"-------------------{Environment.NewLine}" +
+                                    $"Session information{Environment.NewLine}" +
+                                    $"-------------------";
 
             // TODO - Verify this works, especially the modification stuff.
-            return $"{Environment.NewLine}" +
+            var sessionInfo = $"{Environment.NewLine}" +
                    $"Abatab mode:               {abatabSession.AbatabMode}{Environment.NewLine}" +
                    $"Debug mode:                {abatabSession.DebugMode}{Environment.NewLine}" +
                    $"Logging mode:              {abatabSession.LoggingMode}{Environment.NewLine}" +
@@ -133,6 +133,10 @@ namespace AbatabLogging
                    $"Sent OptionObject:         {BodyOptObjInfo(abatabSession.SentOptObj, "sentOptObj")}{Environment.NewLine}" +
                    $"Worker OptionObject:       {BodyOptObjInfo(abatabSession.SentOptObj, "workerOptObj")}{Environment.NewLine}" +
                    $"Final OptionObject:        {BodyOptObjInfo(abatabSession.SentOptObj, "finalOptObj")}{Environment.NewLine}";
+
+            return $"{sessionInfoHeader}" +
+                   $"{sessionInfo}";
+
 
             //return $"{Environment.NewLine}" +
             //              $"              Abatab mode: {abatabSession.AbatabMode}{Environment.NewLine}" +
