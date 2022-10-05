@@ -75,6 +75,8 @@ namespace AbatabSession
 
             string[] req = abatabSession.AbatabRequest.Split('-');
 
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogDir);
+
             abatabSession.AbatabModule  = req[0].ToLower();
             abatabSession.AbatabCommand = req[1].ToLower();
             abatabSession.AbatabAction  = req[2].ToLower();
