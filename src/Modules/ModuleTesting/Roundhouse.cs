@@ -14,7 +14,7 @@ namespace ModuleTesting
     {
         public static SessionData ParseCommand(SessionData abatabSession)
         {
-            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 
             switch (abatabSession.AbatabCommand)
             {
@@ -35,14 +35,14 @@ namespace ModuleTesting
                     break;
             }
 
-            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 
             return abatabSession;
         }
 
         private static SessionData ParseCommandA(SessionData abatabSession)
         {
-            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 
             switch (abatabSession.AbatabAction)
             {
@@ -63,14 +63,14 @@ namespace ModuleTesting
                     break;
             }
 
-            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 
             return abatabSession;
         }
 
         private static SessionData ParseCommandB(SessionData abatabSession)
         {
-            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 
             switch (abatabSession.AbatabAction)
             {
@@ -91,19 +91,19 @@ namespace ModuleTesting
                     break;
             }
 
-            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 
             return abatabSession;
         }
 
         private static SessionData ParseDataDump(SessionData abatabSession)
         {
-            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 
             switch (abatabSession.AbatabAction)
             {
                 case "sessiondata":
-                    LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
+                    LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
                     DataDump.SessionData(abatabSession);
                     break;
 
@@ -112,7 +112,7 @@ namespace ModuleTesting
                     break;
             }
 
-            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 
             return abatabSession;
         }

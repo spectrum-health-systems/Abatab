@@ -14,17 +14,17 @@ namespace ModuleTesting
     {
         public static void ActionB1(SessionData abatabSession)
         {
-            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
         }
 
         public static void ActionB2(SessionData abatabSession)
         {
-            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
         }
 
         public static void ActionB3(SessionData abatabSession)
         {
-            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
         }
     }
 }

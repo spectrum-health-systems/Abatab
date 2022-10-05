@@ -19,7 +19,7 @@ namespace AbatabOptionObject
         /// <returns></returns>
         public static SessionData ForPassthrough(SessionData abatabSession)
         {
-            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 
             abatabSession.FinalOptObj.ErrorCode = 0;
             abatabSession.FinalOptObj.ErrorMesg = "Abatab is in passthrough mode.";
