@@ -4,7 +4,10 @@
  * AbatabSettings.cs                                                                         b221005.121531
  * ================================ (c) 2016-2022 A Pretty Cool Program ================================ */
 
+using Abatab.Properties;
+using AbatabLogging;
 using System.Collections.Generic;
+using System.Reflection;
 
 namespace Abatab
 {
@@ -12,7 +15,7 @@ namespace Abatab
     {
         public static Dictionary<string, string> LoadFromWebConfig()
         {
-            //LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot);
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot);
 
             return new Dictionary<string, string>
             {
