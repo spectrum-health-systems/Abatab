@@ -26,7 +26,7 @@ namespace AbatabSession
         public static SessionData Build(OptionObject2015 sentOptObj, string abatabRequest, Dictionary<string, string> abatabSettings)
         {
             // Only used for development.
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"], "Building session instance.");
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"], $"{abatabSettings["DebugMode"]} - {abatabSettings["DebugLogRoot"]}");
 
             var abatabSession = new SessionData
             {
