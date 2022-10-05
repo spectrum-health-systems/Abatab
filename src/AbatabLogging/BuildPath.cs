@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection;
 
 namespace AbatabLogging
 {
@@ -17,6 +18,8 @@ namespace AbatabLogging
             {
                 fullPath = $"{fullPath}-{callerFilePath}-{callerMemberName}-{callerLine}";
             }
+
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on", "${fullPath}.{eventType}");
 
             return $"{fullPath}.{eventType}";
         }

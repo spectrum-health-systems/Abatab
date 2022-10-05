@@ -28,7 +28,7 @@ namespace AbatabLogging
         /// <param name="executingAssemblyName">Module name.</param>
         /// <param name="debugModuleDir">Directory to write the logfile.</param>
         /// <param name="logContents">Log contents (leave blank for low-level debugging).</param>
-        public static void Debug(string executingAssemblyName, string debugMode, string debugLogRoot, string debugMsg = "", [CallerFilePath] string callerFilePath = "", [CallerMemberName] string callerMemberName = "", [CallerLineNumber] int callerLine = 0)
+        public static void Debug(string executingAssemblyName, string debugMode, string debugLogRoot = "", string debugMsg = "", [CallerFilePath] string callerFilePath = "", [CallerMemberName] string callerMemberName = "", [CallerLineNumber] int callerLine = 0)
         {
             /* NOTE The advantage of debug logs is that they can be created prior to a SessionData object being created. You can put a LogEvent.Debug() call
              * anywhere in your code, and a logfile will be written. This is for development/debugging purposes, therefore the DebugMode setting in Web.config
@@ -38,6 +38,11 @@ namespace AbatabLogging
             if (debugMode == "on")
             {
                 const bool debugDebugger = false;
+
+                if (string.IsNullOrWhiteSpace(debugLogRoot))
+                {
+                    debugLogRoot = @"C:\AvatoolWebService\Abatab_UAT\logs\debug";
+                }
 
                 var debugLogDir = $@"{debugLogRoot}\{DateTime.Now:yyMMdd}"; // TODO Move this.
                 _=Directory.CreateDirectory(debugLogDir);
