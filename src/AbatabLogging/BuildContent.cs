@@ -118,22 +118,22 @@ namespace AbatabLogging
 
             // TODO - Verify this works, especially the modification stuff.
             var sessionInfo = $"{Environment.NewLine}" +
-                   $"Abatab mode:               {abatabSession.AbatabMode}{Environment.NewLine}" +
-                   $"Debug mode:                {abatabSession.DebugMode}{Environment.NewLine}" +
-                   $"Logging mode:              {abatabSession.LoggingMode}{Environment.NewLine}" +
-                   $"Logging detail:            {abatabSession.LoggingDetail}{Environment.NewLine}" +
-                   $"Abatab root directory:     {abatabSession.AbatabRoot}{Environment.NewLine}" +
-                   $"Avatar fallback user name: {abatabSession.AvatarFallbackUserName}{Environment.NewLine}" +
-                   $"Session log directory:     {abatabSession.SessionLogDir}{Environment.NewLine}" +
-                   $"Avatar username:           {abatabSession.AvatarUserName}{Environment.NewLine}" +
-                   $"Abatab request:            {abatabSession.AvatarUserName}{Environment.NewLine}" +
-                   $"Abatab request module:     {abatabSession.AvatarUserName}{Environment.NewLine}" +
-                   $"Abatab request command:    {abatabSession.AvatarUserName}{Environment.NewLine}" +
-                   $"Abatab request action:     {abatabSession.AvatarUserName}{Environment.NewLine}" +
-                   $"Abatab request option:     {abatabSession.AvatarUserName}{Environment.NewLine}" +
-                   $"Sent OptionObject:         {BodyOptObjInfo(abatabSession.SentOptObj, "sentOptObj")}{Environment.NewLine}" +
-                   $"Worker OptionObject:       {BodyOptObjInfo(abatabSession.SentOptObj, "workerOptObj")}{Environment.NewLine}" +
-                   $"Final OptionObject:        {BodyOptObjInfo(abatabSession.SentOptObj, "finalOptObj")}{Environment.NewLine}";
+                              $"Abatab mode:               {abatabSession.AbatabMode}{Environment.NewLine}" +
+                              $"Debug mode:                {abatabSession.DebugMode}{Environment.NewLine}" +
+                              $"Logging mode:              {abatabSession.LoggingMode}{Environment.NewLine}" +
+                              $"Logging detail:            {abatabSession.LoggingDetail}{Environment.NewLine}" +
+                              $"Abatab root directory:     {abatabSession.AbatabRoot}{Environment.NewLine}" +
+                              $"Avatar fallback user name: {abatabSession.AvatarFallbackUserName}{Environment.NewLine}" +
+                              $"Session log directory:     {abatabSession.SessionLogDir}{Environment.NewLine}" +
+                              $"Avatar username:           {abatabSession.AvatarUserName}{Environment.NewLine}" +
+                              $"Abatab request:            {abatabSession.AvatarUserName}{Environment.NewLine}" +
+                              $"Abatab request module:     {abatabSession.AvatarUserName}{Environment.NewLine}" +
+                              $"Abatab request command:    {abatabSession.AvatarUserName}{Environment.NewLine}" +
+                              $"Abatab request action:     {abatabSession.AvatarUserName}{Environment.NewLine}" +
+                              $"Abatab request option:     {abatabSession.AvatarUserName}{Environment.NewLine}" +
+                              $"Sent OptionObject:         {BodyOptObjInfo(abatabSession.SentOptObj, "sentOptObj")}{Environment.NewLine}" +
+                              $"Worker OptionObject:       {BodyOptObjInfo(abatabSession.SentOptObj, "workerOptObj")}{Environment.NewLine}" +
+                              $"Final OptionObject:        {BodyOptObjInfo(abatabSession.SentOptObj, "finalOptObj")}{Environment.NewLine}";
 
             return $"{sessionInfoHeader}" +
                    $"{sessionInfo}";
@@ -182,7 +182,7 @@ namespace AbatabLogging
                                $"{optObjType}{Environment.NewLine}" +
                                $"------------";
 
-            var optObjInfo = $"OptionObject Type: {optObjType}{Environment.NewLine}" +
+            var optObjInfo = $"{Environment.NewLine}" +
                              $"EntityID:          {optObj.EntityID}{Environment.NewLine}" +
                              $"Facility:          {optObj.Facility}{Environment.NewLine}" +
                              $"NamespaceName:     {optObj.NamespaceName}{Environment.NewLine}" +
