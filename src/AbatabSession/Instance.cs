@@ -71,7 +71,7 @@ namespace AbatabSession
         private static void ParseAbatabRequest(SessionData abatabSession)
         {
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogDir, $"{abatabSession.AbatabRequest}");
-            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
+            //LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
 
             string[] req = abatabSession.AbatabRequest.Split('-');
 
