@@ -49,7 +49,8 @@ namespace Abatab
             Roundhouse.ParseRequest(abatabSession);
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 
-            return abatabSession.FinalOptObj;
+            return abatabSession.SentOptObj;
+            //return abatabSession.FinalOptObj;
         }
     }
 }
