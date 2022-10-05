@@ -59,7 +59,7 @@ namespace AbatabLogging
         {
             var logDetailHeader = $"-----------{Environment.NewLine}" +
                                   $"Log details{Environment.NewLine}" +
-                                  $"-----------{Environment.NewLine}";
+                                  $"-----------";
 
             var logDetail = (string.IsNullOrWhiteSpace(callerFilePath))
                 ? $"{Environment.NewLine}" +
@@ -191,9 +191,10 @@ namespace AbatabLogging
         /// <returns>Standard log footer.</returns>
         private static string LogFooter()
         {
-            return $"========================================{Environment.NewLine}" +
-                   $"End of log." +
-                   $"========================================{Environment.NewLine}";
+            return $"{Environment.NewLine}" +
+                   $"========================================{Environment.NewLine}" +
+                   $"End of log.{Environment.NewLine}" +
+                   $"========================================";
         }
 
         /// <summary></summary>
