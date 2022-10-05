@@ -49,30 +49,44 @@ namespace AbatabLogging
              * should be set to "off" in your production environment.
              */
 
+            bool debugDebugger = true;
+
             var debugLogDir = $@"{debugLogRoot}\{DateTime.Now:yyMMdd}"; // TODO Move this.
             _=Directory.CreateDirectory(debugLogDir);
 
-            File.WriteAllText($@"{debugLogDir}\{DateTime.Now:HHmmssfffffff}-Debugger-001.debug", "001");
+            DebugDebugger(debugDebugger, debugLogDir, "001");
 
             if (string.Equals(debugMode, "on", StringComparison.OrdinalIgnoreCase))
             {
-                File.WriteAllText($@"{debugLogDir}\{DateTime.Now:HHmmssfffffff}-Debugger-002.debug", "002");
+                DebugDebugger(debugDebugger, debugLogDir, "002");
 
-                // NOTE Delay creating a debug log by 10ms, just to make sure we don't overwrite an existing log.
+                // NOTE Delay creating a debug log by 100ms, just to make sure we don't overwrite an existing log.
                 Thread.Sleep(100);
 
-                File.WriteAllText($@"{debugLogDir}\{DateTime.Now:HHmmssfffffff}-Debugger-003.debug", "003");
+                DebugDebugger(debugDebugger, debugLogDir, "003");
+
                 var debugContent = BuildContent.Debug(executingAssemblyName, debugMode, debugMsg, callerFilePath, callerMemberName, callerLine);
 
-                File.WriteAllText($@"{debugLogDir}\{DateTime.Now:HHmmssfffffff}-Debugger-004.debug", "004");
+                DebugDebugger(debugDebugger, debugLogDir, "004");
 
                 File.WriteAllText($@"{debugLogDir}\{DateTime.Now:HHmmssfffffff}-{executingAssemblyName}-{Path.GetFileName(callerFilePath)}-{callerMemberName}-{callerLine}.debug", debugContent);
 
-                File.WriteAllText($@"{debugLogDir}\{DateTime.Now:HHmmssfffffff}-Debugger-005.debug", "005");
+                DebugDebugger(debugDebugger, debugLogDir, "005");
             }
 
-            File.WriteAllText($@"{debugLogDir}\{DateTime.Now:HHmmssfffffff}-Debugger-006.debug", "006");
+            DebugDebugger(debugDebugger, debugLogDir, "006");
         }
+
+        private static void DebugDebugger(bool debugDebugger, string debugLogDir, string debugMsg)
+        {
+            if (debugDebugger)
+            {
+                Thread.Sleep(500);
+
+                File.WriteAllText($@"{debugLogDir}\{DateTime.Now:HHmmssfffffff}-Debugger[{debugMsg}].debug", debugMsg);
+            }
+        }
+
 
         /// <summary>
         /// Build a session information log.
