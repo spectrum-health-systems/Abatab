@@ -20,10 +20,9 @@ namespace Abatab
             return new Dictionary<string, string>
             {
                 { "DebugMode",              Properties.Settings.Default.DebugMode.ToLower() },
-                { "DebugLogDir",            Properties.Settings.Default.DebugLogRoot.ToLower() },
+                { "DebugLogRoot",            Properties.Settings.Default.DebugLogRoot.ToLower() },
                 { "AbatabMode",             Properties.Settings.Default.AbatabMode.ToLower() },
                 { "AbatabRoot",             Properties.Settings.Default.AbatabRoot.ToLower() },
-                { "AbatabMode",             Properties.Settings.Default.AbatabMode.ToLower() },
                 { "LoggingMode",            Properties.Settings.Default.LoggingMode.ToLower() },
                 { "LoggingDetail",          Properties.Settings.Default.LoggingDetail.ToLower() },
                 { "AvatarFallbackUserName", Properties.Settings.Default.AvatarFallbackUserName.ToLower() }
