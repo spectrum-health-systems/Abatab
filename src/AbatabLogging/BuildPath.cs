@@ -21,6 +21,7 @@ namespace AbatabLogging
 
             if (!string.IsNullOrWhiteSpace(callerFilePath))
             {
+                LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on", @"C:\AvatoolWebService\Abatab_UAT\logs\debug", fullPath);
                 fullPath += $"-{callerFilePath}-{callerMemberName}-{callerLine}";
                 LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on", @"C:\AvatoolWebService\Abatab_UAT\logs\debug", fullPath);
             }
