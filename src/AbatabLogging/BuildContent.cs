@@ -88,18 +88,6 @@ namespace AbatabLogging
                 case "sessionInformation":
                     return BodySessionInfo(abatabSession);
 
-                //case "allOptObjInformation":
-                //    return BodyAllOptObjInfo(abatabSession);
-
-                //case "sentOptObjInformation":
-                //    return BodyOptObjInfo(abatabSession.SentOptObj, "sentOptObj");
-
-                //case "workerOptObjInformation":
-                //    return BodyOptObjInfo(abatabSession.WorkOptObj, "workerOptObj");
-
-                //case "finalOptObjInformation":
-                //    return BodyOptObjInfo(abatabSession.FinalOptObj, "finalOptObj");
-
                 case "trace":
                 default:
                     return "";
@@ -137,41 +125,7 @@ namespace AbatabLogging
 
             return $"{sessionInfoHeader}" +
                    $"{sessionInfo}";
-
-
-            //return $"{Environment.NewLine}" +
-            //              $"              Abatab mode: {abatabSession.AbatabMode}{Environment.NewLine}" +
-            //              $"               Debug mode: {abatabSession.DebugMode}{Environment.NewLine}" +
-            //              $"             Logging mode: {abatabSession.LoggingMode}{Environment.NewLine}" +
-            //              $"           Logging detail: {abatabSession.LoggingDetail}{Environment.NewLine}" +
-            //              $"    Abatab root directory: {abatabSession.AbatabRoot}{Environment.NewLine}" +
-            //              $"Avatar fallback user name: {abatabSession.AvatarFallbackUserName}{Environment.NewLine}" +
-            //              $"    Session log directory: {abatabSession.SessionLogDir}{Environment.NewLine}" +
-            //              $"          Avatar username: {abatabSession.AvatarUserName}{Environment.NewLine}" +
-            //              $"           Abatab request: {abatabSession.AvatarUserName}{Environment.NewLine}" +
-            //              $"    Abatab request module: {abatabSession.AvatarUserName}{Environment.NewLine}" +
-            //              $"   Abatab request command: {abatabSession.AvatarUserName}{Environment.NewLine}" +
-            //              $"    Abatab request action: {abatabSession.AvatarUserName}{Environment.NewLine}" +
-            //              $"    Abatab request option: {abatabSession.AvatarUserName}{Environment.NewLine}" +
-            //              $"{allOptObjInformation}";
         }
-
-        /////// <summary>Build information for all OptionObject types.</summary>
-        /////// <returns>Information for all OptionObject types.</returns>
-        ////private static string BodyAllOptObjInfo(SessionData abatabSession)
-        ////{
-        ////    //var sentOptObjectInformation   = BodyOptObjInfo(abatabSession.SentOptObj, "sentOptObj");
-        ////    //var workerOptObjectInformation = BodyOptObjInfo(abatabSession.SentOptObj, "workerOptObj");
-        ////    //var finalOptObjectInformation  = BodyOptObjInfo(abatabSession.SentOptObj, "finalOptObj");
-
-        ////    //return $"{sentOptObjectInformation}{Environment.NewLine}" +
-        ////    //       $"{workerOptObjectInformation}{Environment.NewLine}" +
-        ////    //       $"{finalOptObjectInformation}{Environment.NewLine}";
-
-        ////    return $"{BodyOptObjInfo(abatabSession.SentOptObj, "sentOptObj")}{Environment.NewLine}" +
-        ////           $"{BodyOptObjInfo(abatabSession.SentOptObj, "workerOptObj")}{Environment.NewLine}" +
-        ////           $"{BodyOptObjInfo(abatabSession.SentOptObj, "finalOptObj")}{Environment.NewLine}";
-        ////}
 
         /// <summary><param name="optObj">OptionObject2015 object to get information for.</param>
         /// <returns>Standard OptionObject information.</returns>
