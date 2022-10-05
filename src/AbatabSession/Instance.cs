@@ -49,6 +49,8 @@ namespace AbatabSession
                 FinalOptObj            = sentOptObj,
             };
 
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"]);
+
             abatabSession.AvatarUserName = VerifyAvatarUserName(abatabSession.AvatarUserName, abatabSession.AvatarFallbackUserName);
 
             VerifySessionLogDir(abatabSession);
