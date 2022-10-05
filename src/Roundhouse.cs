@@ -1,7 +1,7 @@
 ﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
  * Abatab                                                                                           v0.91.0
  * Abatab.csproj                                                                                    v0.91.0
- * Abatab.Roundhouse.cs                                                                      b221004.105628
+ * Abatab.Roundhouse.cs                                                                      b221005.090329
  * ================================ (c) 2016-2022 A Pretty Cool Program ================================ */
 
 using AbatabData;
@@ -15,7 +15,7 @@ namespace Abatab
         /// <summary></summary>
         /// <param name="abatabSession"></param>
         /// <returns></returns>
-        public static SessionData ParseRequest(SessionData abatabSession)
+        public static void ParseRequest(SessionData abatabSession)
         {
             switch (abatabSession.AbatabModule)
             {
@@ -38,7 +38,7 @@ namespace Abatab
                     break;
             }
 
-            return abatabSession;
+            //return abatabSession;
         }
     }
 }

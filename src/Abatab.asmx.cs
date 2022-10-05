@@ -1,7 +1,7 @@
 ﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
  * Abatab                                                                                           v0.91.0
  * Abatab.csproj                                                                                    v0.91.0
- * BuildContent.cs                                                                           b221004.105628
+ * BuildContent.cs                                                                           b221005.090329
  * ================================ (c) 2016-2022 A Pretty Cool Program ================================ */
 
 using Abatab.Properties;
@@ -38,21 +38,9 @@ namespace Abatab
 
             SessionData abatabSession = Instance.Build(sentOptionObject, abatabRequest);
 
-            abatabSession = Roundhouse.ParseRequest(abatabSession); // TODO Need to verify if we need to assign this.
+            Roundhouse.ParseRequest(abatabSession); // TODO Need to verify if we need to assign this.
 
             return abatabSession.FinalOptObj;
         }
-
-        /// <summary>Debug logic for this module.</summary>
-        ////private static void Debug(string debugMsg = "")
-        ////{
-        ////    /* Since we haven't setup the logging functionality yet, this gives us an opportunity to write a simple logfile so we can verify that Abatab has
-        ////     * started. By default, the "DebugMode" setting in Web.config should be set to "off".
-        ////     */
-        ////    if (string.Equals(Properties.Settings.Default.DebugMode, "on", StringComparison.OrdinalIgnoreCase))
-        ////    {
-        ////        LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Properties.Settings.Default.DebugLogDir, debugMsg);
-        ////    }
-        ////}
     }
 }
