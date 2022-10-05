@@ -45,8 +45,7 @@ namespace AbatabLogging
         {
             return $"========================================{Environment.NewLine}" +
                    $"{logMessage}{Environment.NewLine}" +
-                   $"========================================{Environment.NewLine}" +
-                   $"{Environment.NewLine}";
+                   $"========================================{Environment.NewLine}";
         }
 
         /// <summary>Build standard log details with trace information.</summary>
@@ -58,9 +57,10 @@ namespace AbatabLogging
         /// <returns>Standard log details with trace information.</returns>
         private static string LogDetails(string eventType, string executingAssemblyName, string callerFilePath, string callerMemberName, int callerLine = 0)
         {
-            var detailHeader = $"-----------{Environment.NewLine}" +
-                                  $"Log details{Environment.NewLine}" +
-                                  $"-----------";
+            var detailHeader = $"{Environment.NewLine}" +
+                               $"-----------{Environment.NewLine}" +
+                               $"Log details{Environment.NewLine}" +
+                               $"-----------";
 
             var logDetail = string.IsNullOrWhiteSpace(callerFilePath)
                 ? $"{Environment.NewLine}" +
