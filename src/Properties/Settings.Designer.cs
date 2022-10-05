@@ -25,7 +25,7 @@ namespace Abatab.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("off")]
+        [global::System.Configuration.DefaultSettingValueAttribute("on")]
         public string DebugMode {
             get {
                 return ((string)(this["DebugMode"]));
