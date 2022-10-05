@@ -25,6 +25,7 @@ namespace Abatab
                 { "AbatabRoot",             Properties.Settings.Default.AbatabRoot.ToLower() },
                 { "LoggingMode",            Properties.Settings.Default.LoggingMode.ToLower() },
                 { "LoggingDetail",          Properties.Settings.Default.LoggingDetail.ToLower() },
+                { "LoggingDelay",           Properties.Settings.Default.LoggingDelay.ToLower() },
                 { "AvatarFallbackUserName", Properties.Settings.Default.AvatarFallbackUserName.ToLower() }
             };
         }

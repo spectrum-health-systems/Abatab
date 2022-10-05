@@ -4,13 +4,10 @@
  * BuildContent.cs                                                                           b221005.090329
  * ================================ (c) 2016-2022 A Pretty Cool Program ================================ */
 
-using Abatab.Properties;
 using AbatabData;
-using AbatabLogging;
 using AbatabSession;
 using NTST.ScriptLinkService.Objects;
 using System.Collections.Generic;
-using System.Reflection;
 using System.Web.Services;
 
 namespace Abatab
@@ -35,14 +32,14 @@ namespace Abatab
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string abatabRequest)
         {
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on", @"C:\AvatoolWebService\Abatab_UAT\logs\debug", $"1:{Settings.Default.DebugMode}-{Settings.Default.DebugLogRoot}");
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot);
+            //LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on", @"C:\AvatoolWebService\Abatab_UAT\logs\debug", $"1:{Settings.Default.DebugMode}-{Settings.Default.DebugLogRoot}");
+            //LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot);
 
             Dictionary< string, string> abatabSettings = AbatabSettings.LoadFromWebConfig();
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot);
+            //LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot);
 
             SessionData abatabSession = Instance.Build(sentOptionObject, abatabRequest, abatabSettings);
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot);
+            //LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot);
 
             //Roundhouse.ParseRequest(abatabSession); // TODO Need to verify if we need to assign this.
 
