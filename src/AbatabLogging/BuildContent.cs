@@ -55,14 +55,25 @@ namespace AbatabLogging
         /// <returns>Standard log details with trace information.</returns>
         private static string LogDetails(string eventType, string executingAssemblyName, string callerFilePath, string callerMemberName, int callerLine = 0)
         {
-            return string.IsNullOrWhiteSpace(callerFilePath)
-                ? $"{Environment.NewLine}" +
+            var logDetailHeader = $"Log details{Environment.NewLine}" +
+                                  $"-----------{Environment.NewLine}";
+
+            var logDetail = (string.IsNullOrWhiteSpace(callerFilePath))
+                  ? $"{Environment.NewLine}" +
+                  $" {eventType}{Environment.NewLine}" +
                   $"Log type: {eventType}{Environment.NewLine}" +
                   $"Assembly: {executingAssemblyName}{Environment.NewLine}" +
-                  $"  Source: {Path.GetFileName(callerFilePath)}{Environment.NewLine}" +
-                  $"  Member: {callerMemberName}{Environment.NewLine}" +
-                  $"    Line: {callerLine}{Environment.NewLine}"
-                : $"Log type: {eventType}{Environment.NewLine}";
+                  $"Source:   {Path.GetFileName(callerFilePath)}{Environment.NewLine}" +
+                  $"Member:   {callerMemberName}{Environment.NewLine}" +
+                  $" Line:    {callerLine}{Environment.NewLine}"
+                : $"{Environment.NewLine}" +
+                  $"Log type: {eventType}{Environment.NewLine}";
+
+            var logDetailFooter = $"-----------{Environment.NewLine}";
+
+            return $"{logDetailHeader}" +
+                   $"{logDetail}" +
+                   $"{logDetailFooter}";
 
         }
 

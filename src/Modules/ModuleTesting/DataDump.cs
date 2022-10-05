@@ -9,7 +9,7 @@ namespace ModuleTesting
         {
             //LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
 
-            LogEvent.SessionData(abatabSession);
+            LogEvent.SessionInformation(abatabSession);
         }
     }
 }

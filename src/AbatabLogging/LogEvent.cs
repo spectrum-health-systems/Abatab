@@ -87,11 +87,10 @@ namespace AbatabLogging
             }
         }
 
-
         /// <summary>Build a session information log.</summary>
         /// <param name="abatabSession">Abatab session configuration settings.</param>
         /// <param name="logMessage">Message for the logfile</param>
-        public static void SessionData(SessionData abatabSession, string logMessage = "Session information log.")
+        public static void SessionInformation(SessionData abatabSession, string logMessage = "Session information log.")
         {
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Creating session log.");
 
@@ -112,7 +111,7 @@ namespace AbatabLogging
         /// <param name="callerFilePath">Filename of where the log is coming from.</param>
         /// <param name="callerMemberName">Method of where the log is coming from.</param>
         /// <param name="callerLine">File line of where the log is coming from.</param>
-        public static void Trace(SessionData abatabSession, string executingAssemblyName, string logMessage = "Trace log.", [CallerFilePath] string callerFilePath = "", [CallerMemberName] string callerMemberName = "", [CallerLineNumber] int callerLine = 0)
+        public static void Trace(SessionData abatabSession, string executingAssemblyName, string logMessage = "Trace log start...", [CallerFilePath] string callerFilePath = "", [CallerMemberName] string callerMemberName = "", [CallerLineNumber] int callerLine = 0)
         {
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Creating trace log.");
 
