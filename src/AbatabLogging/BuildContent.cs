@@ -72,11 +72,9 @@ namespace AbatabLogging
                 : $"{Environment.NewLine}" +
                   $"Log type: {eventType}{Environment.NewLine}";
 
-            var logDetailFooter = $"-----------{Environment.NewLine}";
 
             return $"{logDetailHeader}" +
-                   $"{logDetail}" +
-                   $"{logDetailFooter}";
+                   $"{logDetail}";
 
         }
 
@@ -193,8 +191,9 @@ namespace AbatabLogging
         /// <returns>Standard log footer.</returns>
         private static string LogFooter()
         {
-            return $"{Environment.NewLine}" +
-                   $"End of log.";
+            return $"========================================{Environment.NewLine}" +
+                   $"End of log." +
+                   $"========================================{Environment.NewLine}";
         }
 
         /// <summary></summary>
