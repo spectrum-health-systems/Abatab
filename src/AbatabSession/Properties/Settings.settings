@@ -2,14 +2,14 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="AbatabSession.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="AbatabMode" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">passthrough</Value>
-    </Setting>
     <Setting Name="DebugMode" Type="System.String" Scope="Application">
       <Value Profile="(Default)">on</Value>
     </Setting>
     <Setting Name="DebugLogDir" Type="System.String" Scope="Application">
       <Value Profile="(Default)">C:\AvatoolWebService\Abatab_UAT\logs\debug\</Value>
+    </Setting>
+    <Setting Name="AbatabMode" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">passthrough</Value>
     </Setting>
     <Setting Name="AbatabRoot" Type="System.String" Scope="Application">
       <Value Profile="(Default)">c:\AvatoolWebService\Abatab_UAT</Value>

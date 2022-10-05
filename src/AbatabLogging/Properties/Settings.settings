@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="AbatabLogging.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="DebugMode" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">on</Value>
+    </Setting>
+    <Setting Name="DebugLogDir" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\AvatoolWebService\Abatab_UAT\logs\debug\</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
