@@ -22,23 +22,5 @@ namespace AbatabData.Properties {
                 return defaultInstance;
             }
         }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("off")]
-        public string DebugMode {
-            get {
-                return ((string)(this["DebugMode"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\AvatoolWebService\\Abatab_UAT\\logs\\debug\\")]
-        public string DebugLogDir {
-            get {
-                return ((string)(this["DebugLogDir"]));
-            }
-        }
     }
 }

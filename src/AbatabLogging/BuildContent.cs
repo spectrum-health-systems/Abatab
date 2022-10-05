@@ -5,7 +5,6 @@
  * ================================ (c) 2016-2022 A Pretty Cool Program ================================ */
 
 using AbatabData;
-using AbatabLogging.Properties;
 using NTST.ScriptLinkService.Objects;
 using System;
 using System.IO;
@@ -28,17 +27,11 @@ namespace AbatabLogging
         /// <returns>Contents for a logfile with trace information.</returns>
         public static string LogTextWithTrace(string eventType, string executingAssemblyName, SessionData abatabSession, string logMessage, string callerFilePath, string callerMemberName, int callerLine)
         {
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogDir);
             //LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogDir);
             var logHeader  = LogHeader(logMessage);
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogDir, logHeader);
             var logDetails = LogDetailsWithTrace(eventType, executingAssemblyName, callerFilePath, callerMemberName, callerLine);
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogDir, logDetails);
             var logBody    = LogBody(eventType, abatabSession);
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogDir, logBody);
             var logFooter  = LogFooter();
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogDir, logFooter);
 
             return $"{logHeader}{Environment.NewLine}" +
                    $"{logDetails}{Environment.NewLine}" +
@@ -47,11 +40,11 @@ namespace AbatabLogging
         }
 
 
-        public static string Debug(string executingAssemblyName, string debugMode, string debugLogDirRoot, string debugMsg, string callerFilePath, string callerMemberName, int callerLine)
+        public static string Debug(string executingAssemblyName, string debugMode, string debugMsg, string callerFilePath, string callerMemberName, int callerLine)
         {
             var logHeader  = LogHeader(debugMsg);
             var logDetails = LogDetailsWithTrace("debug", executingAssemblyName, callerFilePath, callerMemberName, callerLine);
-            var logBody    = "";
+            var logBody    = $"DebugMode: {debugMode}";
             var logFooter  = LogFooter();
 
             return $"{logHeader}" +
@@ -223,10 +216,10 @@ namespace AbatabLogging
                           $"              Abatab mode: {abatabSession.AbatabMode}{Environment.NewLine}" +
                           $"               Debug mode: {abatabSession.DebugMode}{Environment.NewLine}" +
                           $"             Logging mode: {abatabSession.LoggingMode}{Environment.NewLine}" +
-                          $"          Logging details: {abatabSession.LoggingDetails}{Environment.NewLine}" +
+                          $"           Logging detail: {abatabSession.LoggingDetail}{Environment.NewLine}" +
                           $"    Abatab root directory: {abatabSession.AbatabRoot}{Environment.NewLine}" +
                           $"Avatar fallback user name: {abatabSession.AvatarFallbackUserName}{Environment.NewLine}" +
-                          $"    Session log directory: {abatabSession.SessionLogDirectory}{Environment.NewLine}" +
+                          $"    Session log directory: {abatabSession.SessionLogDir}{Environment.NewLine}" +
                           $"          Avatar username: {abatabSession.AvatarUserName}{Environment.NewLine}" +
                           $"           Abatab request: {abatabSession.AvatarUserName}{Environment.NewLine}" +
                           $"    Abatab request module: {abatabSession.AvatarUserName}{Environment.NewLine}" +

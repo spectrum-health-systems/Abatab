@@ -9,6 +9,7 @@ using AbatabData;
 using AbatabLogging;
 using AbatabSession;
 using NTST.ScriptLinkService.Objects;
+using System.Collections.Generic;
 using System.Reflection;
 using System.Web.Services;
 
@@ -34,9 +35,11 @@ namespace Abatab
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string abatabRequest)
         {
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogDir, $"DebugMode: {Settings.Default.DebugMode}");
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot);
 
-            SessionData abatabSession = Instance.Build(sentOptionObject, abatabRequest);
+            Dictionary< string, string> abatabSettings = AbatabSettings.LoadFromWebConfig();
+
+            SessionData abatabSession = Instance.Build(sentOptionObject, abatabRequest, abatabSettings);
 
             Roundhouse.ParseRequest(abatabSession); // TODO Need to verify if we need to assign this.
 
