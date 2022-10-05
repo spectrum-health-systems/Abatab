@@ -77,6 +77,12 @@ namespace AbatabLogging
             DebugDebugger(debugDebugger, debugLogDir, "006");
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="debugDebugger"></param>
+        /// <param name="debugLogDir"></param>
+        /// <param name="debugMsg"></param>
         private static void DebugDebugger(bool debugDebugger, string debugLogDir, string debugMsg)
         {
             if (debugDebugger)

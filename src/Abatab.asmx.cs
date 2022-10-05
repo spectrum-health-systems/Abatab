@@ -7,6 +7,7 @@
 using Abatab.Properties;
 using AbatabLogging;
 using NTST.ScriptLinkService.Objects;
+using System.Collections.Generic;
 using System.Reflection;
 using System.Web.Services;
 
@@ -35,7 +36,8 @@ namespace Abatab
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on", @"C:\AvatoolWebService\Abatab_UAT\logs\debug", $"1:{Settings.Default.DebugMode}-{Settings.Default.DebugLogRoot}");
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot);
 
-            //Dictionary< string, string> abatabSettings = AbatabSettings.LoadFromWebConfig();
+            Dictionary< string, string> abatabSettings = AbatabSettings.LoadFromWebConfig();
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot);
 
             //SessionData abatabSession = Instance.Build(sentOptionObject, abatabRequest, abatabSettings);
 
