@@ -81,7 +81,7 @@ namespace AbatabLogging
         {
             if (debugDebugger)
             {
-                Thread.Sleep(500);
+                Thread.Sleep(1000);
 
                 File.WriteAllText($@"{debugLogDir}\{DateTime.Now:HHmmssfffffff}-Debugger[{debugMsg}].debug", debugMsg);
             }
