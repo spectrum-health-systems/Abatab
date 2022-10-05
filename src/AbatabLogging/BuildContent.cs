@@ -61,17 +61,18 @@ namespace AbatabLogging
                                   $"Log details{Environment.NewLine}" +
                                   $"-----------";
 
-            var logDetail = (string.IsNullOrWhiteSpace(callerFilePath))
+
+
+
+            var logDetail = string.IsNullOrWhiteSpace(callerFilePath)
                 ? $"{Environment.NewLine}" +
-                  $" {eventType}{Environment.NewLine}" +
+                  $"Log type: {eventType}{Environment.NewLine}"
+                : $"{Environment.NewLine}" +
                   $"Log type: {eventType}{Environment.NewLine}" +
                   $"Assembly: {executingAssemblyName}{Environment.NewLine}" +
                   $"Source:   {Path.GetFileName(callerFilePath)}{Environment.NewLine}" +
                   $"Member:   {callerMemberName}{Environment.NewLine}" +
-                  $" Line:    {callerLine}{Environment.NewLine}"
-                : $"{Environment.NewLine}" +
-                  $"Log type: {eventType}{Environment.NewLine}";
-
+                  $" Line:    {callerLine}{Environment.NewLine}";
 
             return $"{logDetailHeader}" +
                    $"{logDetail}";
