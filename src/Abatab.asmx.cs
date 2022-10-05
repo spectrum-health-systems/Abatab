@@ -4,12 +4,8 @@
  * BuildContent.cs                                                                           b221005.090329
  * ================================ (c) 2016-2022 A Pretty Cool Program ================================ */
 
-using Abatab.Properties;
-using AbatabData;
 using AbatabLogging;
-using AbatabSession;
 using NTST.ScriptLinkService.Objects;
-using System.Collections.Generic;
 using System.Reflection;
 using System.Web.Services;
 
@@ -36,15 +32,16 @@ namespace Abatab
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string abatabRequest)
         {
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on", @"C:\AvatoolWebService\Abatab_UAT\logs\debug");
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot);
+            //LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot);
 
-            Dictionary< string, string> abatabSettings = AbatabSettings.LoadFromWebConfig();
+            //Dictionary< string, string> abatabSettings = AbatabSettings.LoadFromWebConfig();
 
-            SessionData abatabSession = Instance.Build(sentOptionObject, abatabRequest, abatabSettings);
+            //SessionData abatabSession = Instance.Build(sentOptionObject, abatabRequest, abatabSettings);
 
-            Roundhouse.ParseRequest(abatabSession); // TODO Need to verify if we need to assign this.
+            //Roundhouse.ParseRequest(abatabSession); // TODO Need to verify if we need to assign this.
 
-            return abatabSession.FinalOptObj;
+            //return abatabSession.FinalOptObj;
+            return sentOptionObject;
         }
     }
 }
