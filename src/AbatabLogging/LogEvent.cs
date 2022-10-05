@@ -49,7 +49,7 @@ namespace AbatabLogging
              * should be set to "off" in your production environment.
              */
 
-            bool debugDebugger = true;
+            bool debugDebugger = false;
 
             var debugLogDir = $@"{debugLogRoot}\{DateTime.Now:yyMMdd}"; // TODO Move this.
             _=Directory.CreateDirectory(debugLogDir);
