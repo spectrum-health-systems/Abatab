@@ -94,5 +94,32 @@ namespace Abatab.Properties {
                 return ((string)(this["AvatarFallbackUserName"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("enabled")]
+        public string ModuleTestingMode {
+            get {
+                return ((string)(this["ModuleTestingMode"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("enabled")]
+        public string ModuleDateMode {
+            get {
+                return ((string)(this["ModuleDateMode"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("enabled")]
+        public string ModuleDoseMode {
+            get {
+                return ((string)(this["ModuleDoseMode"]));
+            }
+        }
     }
 }

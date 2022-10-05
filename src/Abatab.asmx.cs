@@ -1,8 +1,12 @@
 ﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
  * Abatab                                                                                           v0.91.0
  * Abatab.csproj                                                                                    v0.91.0
- * BuildContent.cs                                                                           b221005.134422
+ * Abatab.asmx.cs                                                                            b221005.154725
  * ================================ (c) 2016-2022 A Pretty Cool Program ================================ */
+
+/* Main entry point for Abatab. This should be pretty static, but if it is modified, it will require the
+ * entire solution to be rebuilt.
+ */
 
 using Abatab.Properties;
 using AbatabData;
@@ -20,7 +24,7 @@ namespace Abatab
     [System.ComponentModel.ToolboxItem(false)]
     public class Abatab : WebService
     {
-        /// <summary>Return the Abatab version.</summary>
+        /// <summary>Return Abatab version.</summary>
         /// <returns>Version of Abatab.</returns>
         [WebMethod]
         public string GetVersion()
@@ -28,14 +32,13 @@ namespace Abatab
             return "VERSION 1.0";
         }
 
-        /// <summary>Execute an Abatab request.</summary>
+        /// <summary>Execute Abatab request.</summary>
         /// <param name="sentOptionObject">OptionObject2015 sent from myAvatar.</param>
         /// <param name="abatabRequest">Request from Avatar.</param>
-        /// <returns>OptionObject2015, which may have been modified.</returns>
+        /// <returns>Finalized OptionObject2015.</returns>
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string abatabRequest)
         {
-            // Only used in development.
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG] Abatab started.");
 
             Dictionary<string, string> abatabSettings = AbatabSettings.LoadFromWebConfig();
