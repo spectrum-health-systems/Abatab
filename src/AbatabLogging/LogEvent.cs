@@ -145,7 +145,5 @@ namespace AbatabLogging
             File.WriteAllText(filePath, logContent);
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogDir);
         }
-
-
     }
 }

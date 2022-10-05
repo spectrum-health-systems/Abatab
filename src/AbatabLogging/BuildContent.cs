@@ -5,6 +5,7 @@
  * ================================ (c) 2016-2022 A Pretty Cool Program ================================ */
 
 using AbatabData;
+using AbatabLogging.Properties;
 using NTST.ScriptLinkService.Objects;
 using System;
 using System.IO;
@@ -27,12 +28,17 @@ namespace AbatabLogging
         /// <returns>Contents for a logfile with trace information.</returns>
         public static string LogTextWithTrace(string eventType, string executingAssemblyName, SessionData abatabSession, string logMessage, string callerFilePath, string callerMemberName, int callerLine)
         {
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogDir);
             LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
-
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogDir);
             var logHeader  = LogHeader(logMessage);
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogDir, logHeader);
             var logDetails = LogDetailsWithTrace(eventType, executingAssemblyName, callerFilePath, callerMemberName, callerLine);
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogDir, logDetails);
             var logBody    = LogBody(eventType, abatabSession);
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogDir, logBody);
             var logFooter  = LogFooter();
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogDir, logFooter);
 
             return $"{logHeader}{Environment.NewLine}" +
                    $"{logDetails}{Environment.NewLine}" +
