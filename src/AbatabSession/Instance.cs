@@ -25,8 +25,7 @@ namespace AbatabSession
         //public static SessionData Build(OptionObject2015 sentOptObj, string abatabRequest)
         public static SessionData Build(OptionObject2015 sentOptObj, string abatabRequest, Dictionary<string, string> abatabSettings)
         {
-            // Only used for development.
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"], $"{abatabSettings["DebugMode"]} - {abatabSettings["DebugLogRoot"]}");
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"], "[DEBUG] Building session data.");
 
             var abatabSession = new SessionData
             {
@@ -50,12 +49,7 @@ namespace AbatabSession
                 FinalOptObj            = sentOptObj,
             };
 
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"]);
-
             VerifySessionLogDir(abatabSession);
-
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"]);
-
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 
             abatabSession.AvatarUserName = VerifyAvatarUserName(abatabSession.AvatarUserName, abatabSession.AvatarFallbackUserName);

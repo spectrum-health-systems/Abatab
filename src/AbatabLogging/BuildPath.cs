@@ -1,6 +1,5 @@
 ﻿using System;
 using System.IO;
-using System.Reflection;
 
 namespace AbatabLogging
 {
@@ -8,28 +7,19 @@ namespace AbatabLogging
     {
         public static string FullPath(string eventType, string sessionLogDir, string executingAssemblyName = "", string callerFilePath = "", string callerMemberName = "", int callerLine = 0)
         {
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on");
+            //LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on",  @"C:\AvatoolWebService\Abatab_UAT\logs\debug", "[DEBUG] Building logPath.");
 
             var fullPath = $@"{sessionLogDir}\{DateTime.Now:HHmmss.fffffff}";
-
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on", @"C:\AvatoolWebService\Abatab_UAT\logs\debug", fullPath);
 
             if (!string.IsNullOrWhiteSpace(executingAssemblyName))
             {
                 fullPath += $"-{executingAssemblyName}";
-                LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on", @"C:\AvatoolWebService\Abatab_UAT\logs\debug", fullPath);
             }
 
             if (!string.IsNullOrWhiteSpace(callerFilePath))
             {
-                var debugText = $"callerFilePath = {callerFilePath}{Environment.NewLine}" +
-                                $"fullPath = {fullPath}";
-                LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on", @"C:\AvatoolWebService\Abatab_UAT\logs\debug", debugText);
                 fullPath += $"-{Path.GetFileName(callerFilePath)}-{callerMemberName}-{callerLine}";
-                LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on", @"C:\AvatoolWebService\Abatab_UAT\logs\debug", debugText);
             }
-
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on", @"C:\AvatoolWebService\Abatab_UAT\logs\debug", $"{fullPath}.{eventType}");
 
             return $"{fullPath}.{eventType}";
         }
