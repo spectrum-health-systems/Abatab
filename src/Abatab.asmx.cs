@@ -32,7 +32,7 @@ namespace Abatab
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string abatabRequest)
         {
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on", @"C:\AvatoolWebService\Abatab_UAT\logs\debug", $"{Settings.Default.DebugMode}-{Settings.Default.DebugLogRoot}");
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on", @"C:\AvatoolWebService\Abatab_UAT\logs\debug", $"1:{Settings.Default.DebugMode}-{Settings.Default.DebugLogRoot}");
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot);
 
             //Dictionary< string, string> abatabSettings = AbatabSettings.LoadFromWebConfig();

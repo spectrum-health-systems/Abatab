@@ -51,7 +51,7 @@ namespace AbatabLogging
             if (string.Equals(debugMode, "on", StringComparison.OrdinalIgnoreCase))
             {
                 // NOTE Delay creating a debug log by 10ms, just to make sure we don't overwrite an existing log.
-                Thread.Sleep(10);
+                Thread.Sleep(100);
 
                 var debugContent = BuildContent.Debug(executingAssemblyName, debugMode, debugMsg, callerFilePath, callerMemberName, callerLine);
 
