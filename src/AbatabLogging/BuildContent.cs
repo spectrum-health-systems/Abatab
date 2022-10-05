@@ -43,9 +43,9 @@ namespace AbatabLogging
         /// <returns> Standard log header.</returns>
         private static string LogHeader(string logMessage)
         {
-            return $"========================================{Environment.NewLine}" +
+            return $"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-={Environment.NewLine}" +
                    $"{logMessage}{Environment.NewLine}" +
-                   $"========================================{Environment.NewLine}";
+                   $"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-={Environment.NewLine}";
         }
 
         /// <summary>Build standard log details with trace information.</summary>
@@ -58,9 +58,9 @@ namespace AbatabLogging
         private static string LogDetails(string eventType, string executingAssemblyName, string callerFilePath, string callerMemberName, int callerLine = 0)
         {
             var detailHeader = $"{Environment.NewLine}" +
-                               $"-----------{Environment.NewLine}" +
+                               $"==========={Environment.NewLine}" +
                                $"Log details{Environment.NewLine}" +
-                               $"-----------";
+                               $"===========";
 
             var logDetail = string.IsNullOrWhiteSpace(callerFilePath)
                 ? $"{Environment.NewLine}" +
@@ -111,9 +111,10 @@ namespace AbatabLogging
         /// <returns>Standard session information.</returns>
         private static string BodySessionInfo(SessionData abatabSession)
         {
-            var sessionInfoHeader = $"-------------------{Environment.NewLine}" +
+            var sessionInfoHeader = $"{Environment.NewLine}" +
+                                    $"==================={Environment.NewLine}" +
                                     $"Session information{Environment.NewLine}" +
-                                    $"-------------------";
+                                    $"===================";
 
             // TODO - Verify this works, especially the modification stuff.
             var sessionInfo = $"{Environment.NewLine}" +
@@ -176,22 +177,28 @@ namespace AbatabLogging
         /// <returns>Standard OptionObject information.</returns>
         private static string BodyOptObjInfo(OptionObject2015 optObj, string optObjType)
         {
-            return $"{Environment.NewLine}" +
-                   $"OptionObject Type: {optObjType}{Environment.NewLine}" +
-                   $"EntityID:          {optObj.EntityID}{Environment.NewLine}" +
-                   $"Facility:          {optObj.Facility}{Environment.NewLine}" +
-                   $"NamespaceName:     {optObj.NamespaceName}{Environment.NewLine}" +
-                   $"OptionId:          {optObj.OptionId}{Environment.NewLine}" +
-                   $"ParentNamespace:   {optObj.ParentNamespace}{Environment.NewLine}" +
-                   $"ServerName:        {optObj.ServerName}{Environment.NewLine}" +
-                   $"SystemCode:        {optObj.SystemCode}{Environment.NewLine}" +
-                   $"EpisodeNumber:     {optObj.EpisodeNumber}{Environment.NewLine}" +
-                   $"OptionStaffId:     {optObj.OptionStaffId}{Environment.NewLine}" +
-                   $"OptionUserId:      {optObj.OptionUserId}{Environment.NewLine}" +
-                   $"ErrorCode:         {optObj.ErrorCode}{Environment.NewLine}" +
-                   $"ErrorMesg:         {optObj.ErrorMesg}";
-        }
+            var optObjHeader = $"{Environment.NewLine}" +
+                               $"------------{Environment.NewLine}" +
+                               $"{optObjType}{Environment.NewLine}" +
+                               $"------------";
 
+            var optObjInfo = $"OptionObject Type: {optObjType}{Environment.NewLine}" +
+                             $"EntityID:          {optObj.EntityID}{Environment.NewLine}" +
+                             $"Facility:          {optObj.Facility}{Environment.NewLine}" +
+                             $"NamespaceName:     {optObj.NamespaceName}{Environment.NewLine}" +
+                             $"OptionId:          {optObj.OptionId}{Environment.NewLine}" +
+                             $"ParentNamespace:   {optObj.ParentNamespace}{Environment.NewLine}" +
+                             $"ServerName:        {optObj.ServerName}{Environment.NewLine}" +
+                             $"SystemCode:        {optObj.SystemCode}{Environment.NewLine}" +
+                             $"EpisodeNumber:     {optObj.EpisodeNumber}{Environment.NewLine}" +
+                             $"OptionStaffId:     {optObj.OptionStaffId}{Environment.NewLine}" +
+                             $"OptionUserId:      {optObj.OptionUserId}{Environment.NewLine}" +
+                             $"ErrorCode:         {optObj.ErrorCode}{Environment.NewLine}" +
+                             $"ErrorMesg:         {optObj.ErrorMesg}";
+
+            return $"{optObjHeader}" +
+                   $"{optObjInfo}";
+        }
         /// <summary>Build a standard log footer.</summary>
         /// <returns>Standard log footer.</returns>
         private static string LogFooter()
