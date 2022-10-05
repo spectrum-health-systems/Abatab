@@ -32,10 +32,10 @@ namespace AbatabLogging
             var logBody    = LogBody(eventType, abatabSession);
             var logFooter  = LogFooter();
 
-            return $"{logHeader}{Environment.NewLine}" +
-                   $"{logDetails}{Environment.NewLine}" +
-                   $"{logBody}{Environment.NewLine}" +
-                   $"{logFooter}{Environment.NewLine}";
+            return $"{logHeader}" +
+                   $"{logDetails}" +
+                   $"{logBody}" +
+                   $"{logFooter}";
         }
 
         /// <summary>Build a standard log header.</summary>
@@ -56,7 +56,8 @@ namespace AbatabLogging
         private static string LogDetails(string eventType, string executingAssemblyName, string callerFilePath, string callerMemberName, int callerLine = 0)
         {
             return string.IsNullOrWhiteSpace(callerFilePath)
-                ? $"Log type: {eventType}{Environment.NewLine}" +
+                ? $"{Environment.NewLine}" +
+                  $"Log type: {eventType}{Environment.NewLine}" +
                   $"Assembly: {executingAssemblyName}{Environment.NewLine}" +
                   $"  Source: {Path.GetFileName(callerFilePath)}{Environment.NewLine}" +
                   $"  Member: {callerMemberName}{Environment.NewLine}" +
@@ -103,22 +104,22 @@ namespace AbatabLogging
 
             // TODO - Verify this works, especially the modification stuff.
             return $"{Environment.NewLine}" +
-                          $"              Abatab mode: {abatabSession.AbatabMode}{Environment.NewLine}" +
-                          $"               Debug mode: {abatabSession.DebugMode}{Environment.NewLine}" +
-                          $"             Logging mode: {abatabSession.LoggingMode}{Environment.NewLine}" +
-                          $"           Logging detail: {abatabSession.LoggingDetail}{Environment.NewLine}" +
-                          $"    Abatab root directory: {abatabSession.AbatabRoot}{Environment.NewLine}" +
-                          $"Avatar fallback user name: {abatabSession.AvatarFallbackUserName}{Environment.NewLine}" +
-                          $"    Session log directory: {abatabSession.SessionLogDir}{Environment.NewLine}" +
-                          $"          Avatar username: {abatabSession.AvatarUserName}{Environment.NewLine}" +
-                          $"           Abatab request: {abatabSession.AvatarUserName}{Environment.NewLine}" +
-                          $"    Abatab request module: {abatabSession.AvatarUserName}{Environment.NewLine}" +
-                          $"   Abatab request command: {abatabSession.AvatarUserName}{Environment.NewLine}" +
-                          $"    Abatab request action: {abatabSession.AvatarUserName}{Environment.NewLine}" +
-                          $"    Abatab request option: {abatabSession.AvatarUserName}{Environment.NewLine}" +
-                          $"        Sent OptionObject: {BodyOptObjInfo(abatabSession.SentOptObj, "sentOptObj")}{Environment.NewLine}" +
-                          $"      Worker OptionObject: {BodyOptObjInfo(abatabSession.SentOptObj, "workerOptObj")}{Environment.NewLine}" +
-                          $"       Final OptionObject: {BodyOptObjInfo(abatabSession.SentOptObj, "finalOptObj")}";
+                   $"              Abatab mode: {abatabSession.AbatabMode}{Environment.NewLine}" +
+                   $"               Debug mode: {abatabSession.DebugMode}{Environment.NewLine}" +
+                   $"             Logging mode: {abatabSession.LoggingMode}{Environment.NewLine}" +
+                   $"           Logging detail: {abatabSession.LoggingDetail}{Environment.NewLine}" +
+                   $"    Abatab root directory: {abatabSession.AbatabRoot}{Environment.NewLine}" +
+                   $"Avatar fallback user name: {abatabSession.AvatarFallbackUserName}{Environment.NewLine}" +
+                   $"    Session log directory: {abatabSession.SessionLogDir}{Environment.NewLine}" +
+                   $"          Avatar username: {abatabSession.AvatarUserName}{Environment.NewLine}" +
+                   $"           Abatab request: {abatabSession.AvatarUserName}{Environment.NewLine}" +
+                   $"    Abatab request module: {abatabSession.AvatarUserName}{Environment.NewLine}" +
+                   $"   Abatab request command: {abatabSession.AvatarUserName}{Environment.NewLine}" +
+                   $"    Abatab request action: {abatabSession.AvatarUserName}{Environment.NewLine}" +
+                   $"    Abatab request option: {abatabSession.AvatarUserName}{Environment.NewLine}" +
+                   $"        Sent OptionObject: {BodyOptObjInfo(abatabSession.SentOptObj, "sentOptObj")}{Environment.NewLine}" +
+                   $"      Worker OptionObject: {BodyOptObjInfo(abatabSession.SentOptObj, "workerOptObj")}{Environment.NewLine}" +
+                   $"       Final OptionObject: {BodyOptObjInfo(abatabSession.SentOptObj, "finalOptObj")}{Environment.NewLine}";
 
             //return $"{Environment.NewLine}" +
             //              $"              Abatab mode: {abatabSession.AbatabMode}{Environment.NewLine}" +
@@ -137,28 +138,29 @@ namespace AbatabLogging
             //              $"{allOptObjInformation}";
         }
 
-        /// <summary>Build information for all OptionObject types.</summary>
-        /// <returns>Information for all OptionObject types.</returns>
-        private static string BodyAllOptObjInfo(SessionData abatabSession)
-        {
-            //var sentOptObjectInformation   = BodyOptObjInfo(abatabSession.SentOptObj, "sentOptObj");
-            //var workerOptObjectInformation = BodyOptObjInfo(abatabSession.SentOptObj, "workerOptObj");
-            //var finalOptObjectInformation  = BodyOptObjInfo(abatabSession.SentOptObj, "finalOptObj");
+        /////// <summary>Build information for all OptionObject types.</summary>
+        /////// <returns>Information for all OptionObject types.</returns>
+        ////private static string BodyAllOptObjInfo(SessionData abatabSession)
+        ////{
+        ////    //var sentOptObjectInformation   = BodyOptObjInfo(abatabSession.SentOptObj, "sentOptObj");
+        ////    //var workerOptObjectInformation = BodyOptObjInfo(abatabSession.SentOptObj, "workerOptObj");
+        ////    //var finalOptObjectInformation  = BodyOptObjInfo(abatabSession.SentOptObj, "finalOptObj");
 
-            //return $"{sentOptObjectInformation}{Environment.NewLine}" +
-            //       $"{workerOptObjectInformation}{Environment.NewLine}" +
-            //       $"{finalOptObjectInformation}{Environment.NewLine}";
+        ////    //return $"{sentOptObjectInformation}{Environment.NewLine}" +
+        ////    //       $"{workerOptObjectInformation}{Environment.NewLine}" +
+        ////    //       $"{finalOptObjectInformation}{Environment.NewLine}";
 
-            return $"{BodyOptObjInfo(abatabSession.SentOptObj, "sentOptObj")}{Environment.NewLine}" +
-                   $"{BodyOptObjInfo(abatabSession.SentOptObj, "workerOptObj")}{Environment.NewLine}" +
-                   $"{BodyOptObjInfo(abatabSession.SentOptObj, "finalOptObj")}{Environment.NewLine}";
-        }
+        ////    return $"{BodyOptObjInfo(abatabSession.SentOptObj, "sentOptObj")}{Environment.NewLine}" +
+        ////           $"{BodyOptObjInfo(abatabSession.SentOptObj, "workerOptObj")}{Environment.NewLine}" +
+        ////           $"{BodyOptObjInfo(abatabSession.SentOptObj, "finalOptObj")}{Environment.NewLine}";
+        ////}
 
         /// <summary><param name="optObj">OptionObject2015 object to get information for.</param>
         /// <returns>Standard OptionObject information.</returns>
         private static string BodyOptObjInfo(OptionObject2015 optObj, string optObjType)
         {
-            return $" OptionObject Type: {optObjType}{Environment.NewLine}" +
+            return $"{Environment.NewLine}" +
+                   $" OptionObject Type: {optObjType}{Environment.NewLine}" +
                    $"          EntityID: {optObj.EntityID}{Environment.NewLine}" +
                    $"          Facility: {optObj.Facility}{Environment.NewLine}" +
                    $"     NamespaceName: {optObj.NamespaceName}{Environment.NewLine}" +
@@ -177,7 +179,8 @@ namespace AbatabLogging
         /// <returns>Standard log footer.</returns>
         private static string LogFooter()
         {
-            return $"{Environment.NewLine}End of log.";
+            return $"{Environment.NewLine}" +
+                   $"End of log.";
         }
 
         /// <summary></summary>
