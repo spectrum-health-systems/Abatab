@@ -25,7 +25,8 @@ namespace AbatabSession
         //public static SessionData Build(OptionObject2015 sentOptObj, string abatabRequest)
         public static SessionData Build(OptionObject2015 sentOptObj, string abatabRequest, Dictionary<string, string> abatabSettings)
         {
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"]);
+            // Only used for development.
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"], "Building session instance.");
 
             var abatabSession = new SessionData
             {
@@ -48,16 +49,16 @@ namespace AbatabSession
                 WorkOptObj             = sentOptObj,
                 FinalOptObj            = sentOptObj,
             };
-
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"]);
+            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
 
             abatabSession.AvatarUserName = VerifyAvatarUserName(abatabSession.AvatarUserName, abatabSession.AvatarFallbackUserName);
+            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
 
             VerifySessionLogDir(abatabSession);
+            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
 
             ParseAbatabRequest(abatabSession);
-
-            //////LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
+            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
 
             return abatabSession;
         }
@@ -82,8 +83,6 @@ namespace AbatabSession
         /// <returns></returns>
         private static void ParseAbatabRequest(SessionData abatabSession)
         {
-            //LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
-
             string[] req = abatabSession.AbatabRequest.Split('-');
 
             abatabSession.AbatabModule  = req[0].ToLower();
@@ -94,8 +93,6 @@ namespace AbatabSession
             {
                 abatabSession.AbatabOption = req[3].ToLower();
             }
-
-            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
         }
 
         /// <summary>
@@ -104,13 +101,9 @@ namespace AbatabSession
         /// <param name="sessionLogDirectory"></param>
         private static void VerifySessionLogDir(SessionData abatabSession)
         {
-            //abatabSession.AvatarUserName      = VerifyAvatarUserName(abatabSession.AvatarUserName, abatabSession.AvatarFallbackUserName);
             abatabSession.SessionLogDir = $@"{abatabSession.AbatabRoot}\logs\{DateTime.Now:yyMMdd}\{abatabSession.AvatarUserName}";
 
-            if (!Directory.Exists(abatabSession.SessionLogDir))
-            {
-                _=Directory.CreateDirectory(abatabSession.SessionLogDir);
-            }
+            _=Directory.CreateDirectory(abatabSession.SessionLogDir);
         }
     }
 }

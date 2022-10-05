@@ -1,7 +1,7 @@
 ﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
  * Abatab                                                                                           v0.91.0
  * Abatab.csproj                                                                                    v0.91.0
- * BuildContent.cs                                                                           b221005.090329
+ * BuildContent.cs                                                                           b221005.134422
  * ================================ (c) 2016-2022 A Pretty Cool Program ================================ */
 
 using Abatab.Properties;
@@ -35,13 +35,16 @@ namespace Abatab
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string abatabRequest)
         {
+            // Only used in development.
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "Abatab started.");
 
-            Dictionary< string, string> abatabSettings = AbatabSettings.LoadFromWebConfig();
+            Dictionary<string, string> abatabSettings = AbatabSettings.LoadFromWebConfig();
 
             SessionData abatabSession = Instance.Build(sentOptionObject, abatabRequest, abatabSettings);
+            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
 
-            Roundhouse.ParseRequest(abatabSession); // TODO Need to verify if we need to assign this.
+            Roundhouse.ParseRequest(abatabSession);
+            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
 
             return abatabSession.FinalOptObj;
         }

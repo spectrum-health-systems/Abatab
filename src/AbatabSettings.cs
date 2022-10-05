@@ -15,7 +15,7 @@ namespace Abatab
     {
         public static Dictionary<string, string> LoadFromWebConfig()
         {
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot);
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "Loading settings from Web.config.");
 
             return new Dictionary<string, string>
             {
