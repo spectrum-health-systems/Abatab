@@ -25,17 +25,6 @@ namespace AbatabLogging
             BuildContent.LogTextWithoutTrace("allOptObjInformation", abatabSession, logMessage);
         }
 
-        ////public static void Debug(string executingAssemblyName, string debugModuleMode, string debugModuleDir, string debugMsg, string fileExt = "debug")
-        ////{
-        ////    // NOTE For detailed logs.
-        ////    Thread.Sleep(10);
-
-        ////    var debugLogDir = $@"{debugModuleDir}\{DateTime.Now:yyMMdd}";
-        ////    _=Directory.CreateDirectory($@"{debugModuleDir}\{DateTime.Now:yyMMdd}");
-
-        ////    File.WriteAllText($@"{debugLogDir}\{DateTime.Now:HHmmssfffffff}.{fileExt}", debugMsg);
-        ////}
-
         /// <summary>
         /// Basic debugging for a module.
         /// </summary>
@@ -49,32 +38,35 @@ namespace AbatabLogging
              * should be set to "off" in your production environment.
              */
 
-            bool debugDebugger = false;
-
-            var debugLogDir = $@"{debugLogRoot}\{DateTime.Now:yyMMdd}"; // TODO Move this.
-            _=Directory.CreateDirectory(debugLogDir);
-
-            DebugDebugger(debugDebugger, debugLogDir, "001");
-
-            if (string.Equals(debugMode, "on", StringComparison.OrdinalIgnoreCase))
+            if (debugMode == "on")
             {
-                DebugDebugger(debugDebugger, debugLogDir, "002");
+                const bool debugDebugger = false;
 
-                // NOTE Delay creating a debug log by 100ms, just to make sure we don't overwrite an existing log.
-                Thread.Sleep(100);
+                var debugLogDir = $@"{debugLogRoot}\{DateTime.Now:yyMMdd}"; // TODO Move this.
+                _=Directory.CreateDirectory(debugLogDir);
 
-                DebugDebugger(debugDebugger, debugLogDir, "003");
+                DebugDebugger(debugDebugger, debugLogDir, "001");
 
-                var debugContent = BuildContent.Debug(executingAssemblyName, debugMode, debugMsg, callerFilePath, callerMemberName, callerLine);
+                if (string.Equals(debugMode, "on", StringComparison.OrdinalIgnoreCase))
+                {
+                    DebugDebugger(debugDebugger, debugLogDir, "002");
 
-                DebugDebugger(debugDebugger, debugLogDir, "004");
+                    // NOTE Delay creating a debug log by 100ms, just to make sure we don't overwrite an existing log.
+                    Thread.Sleep(100);
 
-                File.WriteAllText($@"{debugLogDir}\{DateTime.Now:HHmmssfffffff}-{executingAssemblyName}-{Path.GetFileName(callerFilePath)}-{callerMemberName}-{callerLine}.debug", debugContent);
+                    DebugDebugger(debugDebugger, debugLogDir, "003");
 
-                DebugDebugger(debugDebugger, debugLogDir, "005");
+                    var debugContent = BuildContent.Debug(executingAssemblyName, debugMode, debugMsg, callerFilePath, callerMemberName, callerLine);
+
+                    DebugDebugger(debugDebugger, debugLogDir, "004");
+
+                    File.WriteAllText($@"{debugLogDir}\{DateTime.Now:HHmmssfffffff}-{executingAssemblyName}-{Path.GetFileName(callerFilePath)}-{callerMemberName}-{callerLine}.debug", debugContent);
+
+                    DebugDebugger(debugDebugger, debugLogDir, "005");
+                }
+
+                DebugDebugger(debugDebugger, debugLogDir, "006");
             }
-
-            DebugDebugger(debugDebugger, debugLogDir, "006");
         }
 
         /// <summary>
