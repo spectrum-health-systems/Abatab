@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Reflection;
 
 namespace AbatabLogging
@@ -24,7 +25,7 @@ namespace AbatabLogging
                 var debugText = $"callerFilePath = {callerFilePath}{Environment.NewLine}" +
                                 $"fullPath = {fullPath}";
                 LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on", @"C:\AvatoolWebService\Abatab_UAT\logs\debug", debugText);
-                fullPath += $"-{callerFilePath}-{callerMemberName}-{callerLine}";
+                fullPath += $"-{Path.GetFileName(callerFilePath)}-{callerMemberName}-{callerLine}";
                 LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on", @"C:\AvatoolWebService\Abatab_UAT\logs\debug", debugText);
             }
 
