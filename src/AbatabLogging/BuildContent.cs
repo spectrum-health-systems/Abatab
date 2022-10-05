@@ -138,7 +138,7 @@ namespace AbatabLogging
         /// <returns>Standard log body.</returns>
         private static string LogBody(string eventType, SessionData abatabSession)
         {
-            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
+            //LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
 
             switch (eventType)
             {
@@ -170,7 +170,7 @@ namespace AbatabLogging
         /// <returns>Information for all OptionObject types.</returns>
         private static string BodyAllOptObjInformation(SessionData abatabSession)
         {
-            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
+            //LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
 
             var sentOptObjectInformation   = BodyOptObjInformation(abatabSession.SentOptObj, "sentOptObj");
             var workerOptObjectInformation = BodyOptObjInformation(abatabSession.SentOptObj, "workerOptObj");
@@ -214,7 +214,7 @@ namespace AbatabLogging
         /// <returns>Standard session information.</returns>
         private static string BodySessionInformation(SessionData abatabSession)
         {
-            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
+            //LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
 
             var allOptObjInformation =BodyAllOptObjInformation(abatabSession);
 
