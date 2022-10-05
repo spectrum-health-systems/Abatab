@@ -25,16 +25,7 @@ namespace AbatabSession.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("passthrough")]
-        public string AbatabMode {
-            get {
-                return ((string)(this["AbatabMode"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("on")]
+        [global::System.Configuration.DefaultSettingValueAttribute("off")]
         public string DebugMode {
             get {
                 return ((string)(this["DebugMode"]));
@@ -47,6 +38,15 @@ namespace AbatabSession.Properties {
         public string DebugLogDir {
             get {
                 return ((string)(this["DebugLogDir"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("passthrough")]
+        public string AbatabMode {
+            get {
+                return ((string)(this["AbatabMode"]));
             }
         }
         
