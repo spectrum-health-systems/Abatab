@@ -49,12 +49,10 @@ namespace AbatabSession
                 WorkOptObj             = sentOptObj,
                 FinalOptObj            = sentOptObj,
             };
+            VerifySessionLogDir(abatabSession);
             LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
 
             abatabSession.AvatarUserName = VerifyAvatarUserName(abatabSession.AvatarUserName, abatabSession.AvatarFallbackUserName);
-            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
-
-            VerifySessionLogDir(abatabSession);
             LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
 
             ParseAbatabRequest(abatabSession);
