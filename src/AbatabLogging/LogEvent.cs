@@ -145,5 +145,31 @@ namespace AbatabLogging
             File.WriteAllText(filePath, logContent);
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogDir);
         }
+
+        /// <summary>
+        /// Build a trace log.
+        /// </summary>
+        /// <param name="executingAssemblyName">Name of executing assembly.</param>
+        /// <param name="abatabSession">Abatab session configuration settings.</param>
+        /// <param name="logMessage">Message for the logfile</param>
+        /// <param name="callerFilePath">Filename of where the log is coming from.</param>
+        /// <param name="callerMemberName">Method of where the log is coming from.</param>
+        /// <param name="callerLine">File line of where the log is coming from.</param>
+        public static void TraceDetails(string executingAssemblyName, SessionData abatabSession, string logMessage = "Trace log.", [CallerFilePath] string callerFilePath = "", [CallerMemberName] string callerMemberName = "", [CallerLineNumber] int callerLine = 0)
+        {
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogDir);
+
+            var filePath   = $@"{abatabSession.SessionLogDirectory}\{DateTime.Now.ToString("HHmmss.fffffff")}-{executingAssemblyName}-{Path.GetFileName(callerFilePath)}-{callerMemberName}-{callerLine}.trace";
+
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogDir, filePath);
+            var logContent = BuildContent.LogTextWithTrace("trace", executingAssemblyName, abatabSession, logMessage, callerFilePath, callerMemberName, callerLine);
+
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogDir, logContent);
+            // NOTE For detailed logs.
+            Thread.Sleep(10);
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogDir);
+            File.WriteAllText(filePath, logContent);
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogDir);
+        }
     }
 }

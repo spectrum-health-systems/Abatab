@@ -58,7 +58,7 @@ namespace AbatabSession
             ParseAbatabRequest(abatabSession);
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogDir);
 
-            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
+            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession, $"DebugMode: {Settings.Default.DebugMode}");
 
             return abatabSession;
         }
