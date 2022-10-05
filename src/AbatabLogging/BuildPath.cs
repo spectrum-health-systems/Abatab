@@ -23,9 +23,9 @@ namespace AbatabLogging
             {
                 var debugText = $"callerFilePath = {callerFilePath}{Environment.NewLine}" +
                                 $"fullPath = {fullPath}";
-                LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on", @"C:\AvatoolWebService\Abatab_UAT\logs\debug", fullPath);
+                LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on", @"C:\AvatoolWebService\Abatab_UAT\logs\debug", debugText);
                 fullPath += $"-{callerFilePath}-{callerMemberName}-{callerLine}";
-                LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on", @"C:\AvatoolWebService\Abatab_UAT\logs\debug", fullPath);
+                LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on", @"C:\AvatoolWebService\Abatab_UAT\logs\debug", debugText);
             }
 
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on", @"C:\AvatoolWebService\Abatab_UAT\logs\debug", $"{fullPath}.{eventType}");
