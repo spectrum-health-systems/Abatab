@@ -22,7 +22,7 @@ namespace AbatabOptionObject
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 
             abatabSession.FinalOptObj.ErrorCode = 0;
-            abatabSession.FinalOptObj.ErrorMesg = "Abatab is in passthrough mode.";
+            abatabSession.FinalOptObj.ErrorMesg = "";
 
             abatabSession.FinalOptObj.EntityID        = abatabSession.SentOptObj.EntityID;
             abatabSession.FinalOptObj.EpisodeNumber   = abatabSession.SentOptObj.EpisodeNumber;
