@@ -1,8 +1,11 @@
 ﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
  * Abatab                                                                                           v0.91.0
  * AbatabSession.csproj                                                                             v0.91.0
- * Instance.cs                                                                               b221005.090329
+ * Instance.cs                                                                               b221006.073240
  * ================================ (c) 2016-2022 A Pretty Cool Program ================================ */
+
+/*
+ */
 
 using AbatabData;
 using AbatabLogging;
@@ -16,9 +19,7 @@ namespace AbatabSession
 {
     public class Instance
     {
-        /// <summary>
-        /// Build configuration settings for an Abatab session.
-        /// </summary>
+        /// <summary>Build configuration settings for an Abatab session.</summary>
         /// <param name="sentOptObj">OptionObject2015 sent from myAvatar.</param>
         /// <param name="abatabRequest">Abatab request to be executed.</param>
         /// <returns>Session configuration settings.</returns>
@@ -61,9 +62,7 @@ namespace AbatabSession
             return abatabSession;
         }
 
-        /// <summary>
-        /// Verify the session AvatarUserName is valid.
-        /// </summary>
+        /// <summary>Verify the session AvatarUserName is valid.</summary>
         /// <param name="avatarUserName"></param>
         /// <param name="avatarFallbackUserName"></param>
         /// <returns>Session object with verified AvatarUserName</returns>
@@ -74,11 +73,8 @@ namespace AbatabSession
                 : avatarUserName;
         }
 
-        /// <summary>
-        /// Parse the abatabRequest into separate components.
-        /// </summary>
-        /// <param name="abatabRequest"></param>
-        /// <returns></returns>
+        /// <summary>Parse the abatabRequest into separate components.</summary>
+        /// <param name="abatabSession"></param>
         private static void ParseAbatabRequest(SessionData abatabSession)
         {
             string[] req = abatabSession.AbatabRequest.Split('-');
@@ -93,10 +89,7 @@ namespace AbatabSession
             }
         }
 
-        /// <summary>
-        /// Verify the session log directory exists.
-        /// </summary>
-        /// <param name="sessionLogDirectory"></param>
+        /// <summary>Verify the session log directory exists.</summary>
         private static void VerifySessionLogDir(SessionData abatabSession)
         {
             abatabSession.SessionLogDir = $@"{abatabSession.AbatabRoot}\logs\{DateTime.Now:yyMMdd}\{abatabSession.AvatarUserName}";

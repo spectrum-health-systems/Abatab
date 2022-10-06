@@ -1,10 +1,10 @@
 ﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
  * Abatab                                                                                           v0.91.0
  * AbatabData.csproj                                                                                v0.91.0
- * SessionData.cs                                                                            b221005.154725
+ * SessionData.cs                                                                            b221006.073240
  * ================================ (c) 2016-2022 A Pretty Cool Program ================================ */
 
-/* The SessionData properties that contain all of the inforamation/data Abatab needs to do it's job.
+/* The SessionData properties that contain all of the information/data Abatab needs to do it's job.
  */
 
 using NTST.ScriptLinkService.Objects;

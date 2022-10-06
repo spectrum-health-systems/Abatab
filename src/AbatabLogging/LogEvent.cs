@@ -1,8 +1,11 @@
 ﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
  * Abatab                                                                                           v0.91.0
  * AbatabLogging.csproj                                                                             v0.91.0
- * LogEvent.cs                                                                               b221005.090329
+ * LogEvent.cs                                                                               b221006.073240
  * ================================ (c) 2016-2022 A Pretty Cool Program ================================ */
+
+/* Logic for log events.
+ */
 
 using AbatabData;
 using System;
@@ -16,18 +19,21 @@ namespace AbatabLogging
     public class LogEvent
     {
         /// <summary>Build a OptionObject information log.</summary>
-        /// <param name="optObjType">Type of OptionObject.</param>
-        /// <param name="abatabSession">Abatab session configuration settings.</param>
-        /// <param name="logMessage">Message for the logfile</param>
+        /// <param name="abatabSession"></param>
+        /// <param name="logMessage"></param>
         public static void AllOptionObjectInformation(SessionData abatabSession, string logMessage = "OptionObject information log.")
         {
             BuildContent.LogContent("allOptObjInformation", abatabSession, logMessage);
         }
 
         /// <summary>Basic debugging for a module.</summary>
-        /// <param name="executingAssemblyName">Module name.</param>
-        /// <param name="debugModuleDir">Directory to write the logfile.</param>
-        /// <param name="logContents">Log contents (leave blank for low-level debugging).</param>
+        /// <param name="executingAssemblyName"></param>
+        /// <param name="debugMode"></param>
+        /// <param name="debugLogRoot"></param>
+        /// <param name="debugMsg"></param>
+        /// <param name="callerFilePath"></param>
+        /// <param name="callerMemberName"></param>
+        /// <param name="callerLine"></param>
         public static void Debug(string executingAssemblyName, string debugMode, string debugLogRoot = "", string debugMsg = "", [CallerFilePath] string callerFilePath = "", [CallerMemberName] string callerMemberName = "", [CallerLineNumber] int callerLine = 0)
         {
             /* NOTE The advantage of debug logs is that they can be created prior to a SessionData object being created. You can put a LogEvent.Debug() call

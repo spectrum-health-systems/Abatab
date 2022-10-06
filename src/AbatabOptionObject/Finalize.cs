@@ -1,8 +1,11 @@
 ﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
  * Abatab                                                                                           v0.91.0
  * AbatabOptionObject.csproj                                                                        v0.91.0
- * Finalize.cs                                                                               b221005.090329
+ * Finalize.cs                                                                               b221006.073240
  * ================================ (c) 2016-2022 A Pretty Cool Program ================================ */
+
+/* Finalize an OptionObject so it can be returned to Avatar
+ */
 
 using AbatabData;
 using AbatabLogging;
@@ -12,11 +15,8 @@ namespace AbatabOptionObject
 {
     public class Finalize
     {
-        /// <summary>
-        /// Finalizes an OptionObject for passthrough mode.
-        /// </summary>
+        /// <summary>Finalizes an OptionObject for passthrough mode.</summary>
         /// <param name="abatabSession"></param>
-        /// <returns></returns>
         public static SessionData ForPassthrough(SessionData abatabSession)
         {
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);

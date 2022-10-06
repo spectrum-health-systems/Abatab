@@ -1,7 +1,7 @@
 ﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
  * Abatab                                                                                           v0.91.0
  * Abatab.csproj                                                                                    v0.91.0
- * AbatabSettings.cs                                                                         b221005.154725
+ * AbatabSettings.cs                                                                         b221006.073240
  * ================================ (c) 2016-2022 A Pretty Cool Program ================================ */
 
 /* Logic to work with the local configuration settings found in Web.config. Whenever a setting is added or

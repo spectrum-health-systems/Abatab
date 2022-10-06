@@ -1,8 +1,11 @@
 ﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
  * Abatab                                                                                           v0.91.0
  * ModuleTesting.csproj                                                                             v0.91.0
- * Roundhouse.cs                                                                             b221005.090329
+ * Roundhouse.cs                                                                             b221006.073240
  * ================================ (c) 2016-2022 A Pretty Cool Program ================================ */
+
+/*
+ */
 
 using AbatabData;
 using AbatabLogging;
@@ -12,6 +15,9 @@ namespace ModuleTesting
 {
     public class Roundhouse
     {
+        /// <summary></summary>
+        /// <param name="abatabSession"></param>
+        /// <returns></returns>
         public static SessionData ParseCommand(SessionData abatabSession)
         {
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
@@ -19,7 +25,7 @@ namespace ModuleTesting
             switch (abatabSession.AbatabCommand)
             {
                 case "datadump":
-                    ParseDataDump(abatabSession);
+                    _=ParseDataDump(abatabSession);
                     break;
 
                 default:
@@ -32,6 +38,9 @@ namespace ModuleTesting
             return abatabSession;
         }
 
+        /// <summary></summary>
+        /// <param name="abatabSession"></param>
+        /// <returns></returns>
         private static SessionData ParseDataDump(SessionData abatabSession)
         {
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
@@ -40,7 +49,7 @@ namespace ModuleTesting
             {
                 case "sessiondata":
                     LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
-                    AbatabOptionObject.Finalize.ForPassthrough(abatabSession);
+                    _=AbatabOptionObject.Finalize.ForPassthrough(abatabSession);
                     DataDump.SessionData(abatabSession);
                     break;
 
