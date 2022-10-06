@@ -39,12 +39,12 @@ namespace AbatabLogging
 
             if (eventType == "trace")
             {
-                fullPath += $@"\{eventType}\{DateTime.Now:HHmmss.fffffff}";
+                fullPath += $@"\{eventType}";
+                AbatabSystem.Maintenance.VerifyDir(fullPath);
             }
-            else
-            {
-                fullPath += $@"\{DateTime.Now:HHmmss.fffffff}";
-            }
+
+            fullPath += $@"\{DateTime.Now:HHmmss.fffffff}";
+
 
             //if (subDirTypes.Any(eventType.Contains))
             //{
@@ -55,7 +55,7 @@ namespace AbatabLogging
             //    fullPath += $@"\{DateTime.Now:HHmmss.fffffff}";
             //}
 
-            AbatabSystem.Maintenance.VerifyDir(fullPath);
+
 
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on", @"C:\AvatoolWebService\Abatab_UAT\logs\debug", $"{fullPath}");
 
