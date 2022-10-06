@@ -120,8 +120,8 @@ namespace AbatabLogging
                               $"Abatab request action:     {abatabSession.AvatarUserName}{Environment.NewLine}" +
                               $"Abatab request option:     {abatabSession.AvatarUserName}{Environment.NewLine}" +
                               $"Sent OptionObject:         {BodyOptObjInfo(abatabSession.SentOptObj, "sentOptObj")}{Environment.NewLine}" +
-                              $"Worker OptionObject:       {BodyOptObjInfo(abatabSession.SentOptObj, "workerOptObj")}{Environment.NewLine}" +
-                              $"Final OptionObject:        {BodyOptObjInfo(abatabSession.SentOptObj, "finalOptObj")}{Environment.NewLine}";
+                              $"Worker OptionObject:       {BodyOptObjInfo(abatabSession.WorkOptObj, "workerOptObj")}{Environment.NewLine}" +
+                              $"Final OptionObject:        {BodyOptObjInfo(abatabSession.FinalOptObj, "finalOptObj")}{Environment.NewLine}";
 
             return $"{sessionInfoHeader}" +
                    $"{sessionInfo}";
