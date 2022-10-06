@@ -114,11 +114,11 @@ namespace AbatabLogging
                               $"Avatar fallback user name: {abatabSession.AvatarFallbackUserName}{Environment.NewLine}" +
                               $"Session log directory:     {abatabSession.SessionLogDir}{Environment.NewLine}" +
                               $"Avatar username:           {abatabSession.AvatarUserName}{Environment.NewLine}" +
-                              $"Abatab request:            {abatabSession.AvatarUserName}{Environment.NewLine}" +
-                              $"Abatab request module:     {abatabSession.AvatarUserName}{Environment.NewLine}" +
-                              $"Abatab request command:    {abatabSession.AvatarUserName}{Environment.NewLine}" +
-                              $"Abatab request action:     {abatabSession.AvatarUserName}{Environment.NewLine}" +
-                              $"Abatab request option:     {abatabSession.AvatarUserName}{Environment.NewLine}" +
+                              $"Abatab request:            {abatabSession.AbatabRequest}{Environment.NewLine}" +
+                              $"Abatab request module:     {abatabSession.AbatabModule}{Environment.NewLine}" +
+                              $"Abatab request command:    {abatabSession.AbatabCommand}{Environment.NewLine}" +
+                              $"Abatab request action:     {abatabSession.AbatabAction}{Environment.NewLine}" +
+                              $"Abatab request option:     {abatabSession.AbatabOption}{Environment.NewLine}" +
                               $"Sent OptionObject:         {BodyOptObjInfo(abatabSession.SentOptObj, "sentOptObj")}{Environment.NewLine}" +
                               $"Worker OptionObject:       {BodyOptObjInfo(abatabSession.WorkOptObj, "workerOptObj")}{Environment.NewLine}" +
                               $"Final OptionObject:        {BodyOptObjInfo(abatabSession.FinalOptObj, "finalOptObj")}{Environment.NewLine}";
