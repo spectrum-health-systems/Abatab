@@ -51,6 +51,7 @@ namespace AbatabSession
 
             //VerifySessionLogDir(abatabSession); // DEPRECIATED
             abatabSession.SessionLogDir = $@"{abatabSession.AbatabRoot}\logs\{DateTime.Now:yyMMdd}\{abatabSession.AvatarUserName}";
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on", @"C:\AvatoolWebService\Abatab_UAT\logs\debug", $"{abatabSession.SessionLogDir}");
             AbatabSystem.Maintenance.VerifyDir(abatabSession.SessionLogDir);
 
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
