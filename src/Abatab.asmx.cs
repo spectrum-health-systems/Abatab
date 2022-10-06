@@ -49,7 +49,7 @@ namespace Abatab
             Roundhouse.ParseRequest(abatabSession);
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 
-            LogEvent.SessionInformation(abatabSession);
+            LogEvent.SessionInformation(abatabSession); // DEBUGING
 
             //return abatabSession.SentOptObj;
             return abatabSession.FinalOptObj;
