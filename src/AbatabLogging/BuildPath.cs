@@ -31,7 +31,7 @@ namespace AbatabLogging
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on", @"C:\AvatoolWebService\Abatab_UAT\logs\debug", "[DEBUG] Building logPath.");
 
             var fullPath = sessionLogDir;
-
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on", @"C:\AvatoolWebService\Abatab_UAT\logs\debug", $"{fullPath}");
             var subDirTypes = new List<string>
             {
                 "trace"
