@@ -103,6 +103,7 @@ namespace AbatabLogging
 
             if (abatabSession.LoggingMode == "all" || abatabSession.LoggingMode.Contains("session"))
             {
+                LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, abatabSession.FinalOptObj.ErrorMesg);
                 var logPath    = BuildPath.FullPath("session", abatabSession.SessionLogDir);
                 var logContent = BuildContent.LogContent("sessionInformation", abatabSession, logMessage);
 
