@@ -9,7 +9,7 @@
       <Value Profile="(Default)">C:\AvatoolWebService\Abatab_UAT\logs\debug</Value>
     </Setting>
     <Setting Name="AbatabMode" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">passthrough</Value>
+      <Value Profile="(Default)">enabled</Value>
     </Setting>
     <Setting Name="AbatabRoot" Type="System.String" Scope="Application">
       <Value Profile="(Default)">C:\AvatoolWebService\Abatab_UAT</Value>

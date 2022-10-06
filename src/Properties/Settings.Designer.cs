@@ -43,7 +43,7 @@ namespace Abatab.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("passthrough")]
+        [global::System.Configuration.DefaultSettingValueAttribute("enabled")]
         public string AbatabMode {
             get {
                 return ((string)(this["AbatabMode"]));

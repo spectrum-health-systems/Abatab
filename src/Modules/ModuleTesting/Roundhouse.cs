@@ -25,6 +25,7 @@ namespace ModuleTesting
             switch (abatabSession.AbatabCommand)
             {
                 case "datadump":
+                    LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
                     _=ParseDataDump(abatabSession);
                     break;
 

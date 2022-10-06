@@ -8,8 +8,6 @@
  */
 
 using AbatabData;
-using AbatabLogging;
-using System.Reflection;
 
 namespace AbatabOptionObject
 {
@@ -19,21 +17,21 @@ namespace AbatabOptionObject
         /// <param name="abatabSession"></param>
         public static SessionData ForPassthrough(SessionData abatabSession)
         {
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+            //LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 
-            abatabSession.FinalOptObj.ErrorCode = 0;
-            abatabSession.FinalOptObj.ErrorMesg = "";
+            //abatabSession.FinalOptObj.ErrorCode = 0;
+            //abatabSession.FinalOptObj.ErrorMesg = "";
 
-            abatabSession.FinalOptObj.EntityID        = abatabSession.SentOptObj.EntityID;
-            abatabSession.FinalOptObj.EpisodeNumber   = abatabSession.SentOptObj.EpisodeNumber;
-            abatabSession.FinalOptObj.Facility        = abatabSession.SentOptObj.Facility;
-            abatabSession.FinalOptObj.OptionId        = abatabSession.SentOptObj.OptionId;
-            abatabSession.FinalOptObj.OptionStaffId   = abatabSession.SentOptObj.OptionStaffId;
-            abatabSession.FinalOptObj.OptionUserId    = abatabSession.SentOptObj.OptionUserId;
-            abatabSession.FinalOptObj.SystemCode      = abatabSession.SentOptObj.SystemCode;
-            abatabSession.FinalOptObj.ServerName      = abatabSession.SentOptObj.ServerName;
-            abatabSession.FinalOptObj.NamespaceName   = abatabSession.SentOptObj.NamespaceName;
-            abatabSession.FinalOptObj.ParentNamespace = abatabSession.SentOptObj.ParentNamespace;
+            //abatabSession.FinalOptObj.EntityID        = abatabSession.SentOptObj.EntityID;
+            //abatabSession.FinalOptObj.EpisodeNumber   = abatabSession.SentOptObj.EpisodeNumber;
+            //abatabSession.FinalOptObj.Facility        = abatabSession.SentOptObj.Facility;
+            //abatabSession.FinalOptObj.OptionId        = abatabSession.SentOptObj.OptionId;
+            //abatabSession.FinalOptObj.OptionStaffId   = abatabSession.SentOptObj.OptionStaffId;
+            //abatabSession.FinalOptObj.OptionUserId    = abatabSession.SentOptObj.OptionUserId;
+            //abatabSession.FinalOptObj.SystemCode      = abatabSession.SentOptObj.SystemCode;
+            //abatabSession.FinalOptObj.ServerName      = abatabSession.SentOptObj.ServerName;
+            //abatabSession.FinalOptObj.NamespaceName   = abatabSession.SentOptObj.NamespaceName;
+            //abatabSession.FinalOptObj.ParentNamespace = abatabSession.SentOptObj.ParentNamespace;
 
             return abatabSession;
         }
