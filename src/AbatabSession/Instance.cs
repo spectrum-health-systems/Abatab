@@ -54,13 +54,19 @@ namespace AbatabSession
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on", @"C:\AvatoolWebService\Abatab_UAT\logs\debug", $"{abatabSession.SessionLogDir}");
             AbatabSystem.Maintenance.VerifyDir(abatabSession.SessionLogDir);
 
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on", @"C:\AvatoolWebService\Abatab_UAT\logs\debug", $"{abatabSession.SessionLogDir}");
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on", @"C:\AvatoolWebService\Abatab_UAT\logs\debug", $"{abatabSession.SessionLogDir}");
 
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on", @"C:\AvatoolWebService\Abatab_UAT\logs\debug", $"{abatabSession.SessionLogDir}");
             abatabSession.AvatarUserName = VerifyAvatarUserName(abatabSession.AvatarUserName, abatabSession.AvatarFallbackUserName);
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on", @"C:\AvatoolWebService\Abatab_UAT\logs\debug", $"{abatabSession.SessionLogDir}");
 
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on", @"C:\AvatoolWebService\Abatab_UAT\logs\debug", $"{abatabSession.SessionLogDir}");
             ParseAbatabRequest(abatabSession);
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on", @"C:\AvatoolWebService\Abatab_UAT\logs\debug", $"{abatabSession.SessionLogDir}");
 
             return abatabSession;
         }
