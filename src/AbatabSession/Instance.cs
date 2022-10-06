@@ -12,7 +12,6 @@ using AbatabLogging;
 using NTST.ScriptLinkService.Objects;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Reflection;
 
 namespace AbatabSession
@@ -50,7 +49,9 @@ namespace AbatabSession
                 FinalOptObj            = new OptionObject2015()
             };
 
-            VerifySessionLogDir(abatabSession);
+            //VerifySessionLogDir(abatabSession); // DEPRECIATED
+            AbatabSystem.Maintenance.VerifyDir($@"{abatabSession.AbatabRoot}\logs\{DateTime.Now:yyMMdd}\{abatabSession.AvatarUserName}");
+
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 
             abatabSession.AvatarUserName = VerifyAvatarUserName(abatabSession.AvatarUserName, abatabSession.AvatarFallbackUserName);
@@ -89,12 +90,13 @@ namespace AbatabSession
             }
         }
 
-        /// <summary>Verify the session log directory exists.</summary>
-        private static void VerifySessionLogDir(SessionData abatabSession)
-        {
-            abatabSession.SessionLogDir = $@"{abatabSession.AbatabRoot}\logs\{DateTime.Now:yyMMdd}\{abatabSession.AvatarUserName}";
+        // DEPRECIATED
+        /////// <summary>Verify the session log directory exists.</summary>
+        ////private static void VerifySessionLogDir(SessionData abatabSession)
+        ////{
+        ////    abatabSession.SessionLogDir = $@"{abatabSession.AbatabRoot}\logs\{DateTime.Now:yyMMdd}\{abatabSession.AvatarUserName}";
 
-            _=Directory.CreateDirectory(abatabSession.SessionLogDir);
-        }
+        ////    _=Directory.CreateDirectory(abatabSession.SessionLogDir);
+        ////}
     }
 }

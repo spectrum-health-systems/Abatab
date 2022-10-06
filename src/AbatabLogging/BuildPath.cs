@@ -47,6 +47,8 @@ namespace AbatabLogging
                 fullPath += $@"\{DateTime.Now:HHmmss.fffffff}";
             }
 
+            AbatabSystem.Maintenance.VerifyDir(fullPath);
+
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on", @"C:\AvatoolWebService\Abatab_UAT\logs\debug", $"{fullPath}");
 
             if (!string.IsNullOrWhiteSpace(executingAssemblyName))
