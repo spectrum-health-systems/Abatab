@@ -35,6 +35,7 @@ namespace AbatabOptionObject
             abatabSession.FinalOptObj.NamespaceName   = abatabSession.SentOptObj.NamespaceName;
             abatabSession.FinalOptObj.ParentNamespace = abatabSession.SentOptObj.ParentNamespace;
 
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, abatabSession.FinalOptObj.ErrorMesg);
             LogEvent.SessionInformation(abatabSession); // DEBUGING
 
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
