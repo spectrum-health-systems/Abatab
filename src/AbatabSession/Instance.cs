@@ -46,8 +46,8 @@ namespace AbatabSession
                 AbatabOption           = "undefined",
                 AvatarUserName         = sentOptObj.OptionUserId,
                 SentOptObj             = sentOptObj,
-                WorkOptObj             = sentOptObj,
-                FinalOptObj            = sentOptObj,
+                WorkOptObj             = new OptionObject2015(),
+                FinalOptObj            = new OptionObject2015()
             };
 
             VerifySessionLogDir(abatabSession);
