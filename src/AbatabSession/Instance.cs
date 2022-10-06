@@ -50,7 +50,8 @@ namespace AbatabSession
             };
 
             //VerifySessionLogDir(abatabSession); // DEPRECIATED
-            AbatabSystem.Maintenance.VerifyDir($@"{abatabSession.AbatabRoot}\logs\{DateTime.Now:yyMMdd}\{abatabSession.AvatarUserName}");
+            abatabSession.SessionLogDir = $@"{abatabSession.AbatabRoot}\logs\{DateTime.Now:yyMMdd}\{abatabSession.AvatarUserName}";
+            AbatabSystem.Maintenance.VerifyDir(abatabSession.SessionLogDir);
 
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 
