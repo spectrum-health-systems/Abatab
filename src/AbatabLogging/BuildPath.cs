@@ -10,7 +10,6 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Reflection;
 
 namespace AbatabLogging
@@ -38,7 +37,7 @@ namespace AbatabLogging
                 "trace"
             };
 
-            if (subDirTypes.Any(eventType.Contains))
+            if (eventType == "trace")
             {
                 fullPath += $@"\{eventType}\{DateTime.Now:HHmmss.fffffff}";
             }
@@ -46,6 +45,15 @@ namespace AbatabLogging
             {
                 fullPath += $@"\{DateTime.Now:HHmmss.fffffff}";
             }
+
+            //if (subDirTypes.Any(eventType.Contains))
+            //{
+            //    fullPath += $@"\{eventType}\{DateTime.Now:HHmmss.fffffff}";
+            //}
+            //else
+            //{
+            //    fullPath += $@"\{DateTime.Now:HHmmss.fffffff}";
+            //}
 
             AbatabSystem.Maintenance.VerifyDir(fullPath);
 
