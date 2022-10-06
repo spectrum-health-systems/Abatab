@@ -54,10 +54,14 @@ namespace AbatabLogging
                 fullPath += $"-{executingAssemblyName}";
             }
 
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on", @"C:\AvatoolWebService\Abatab_UAT\logs\debug", $"{fullPath}");
+
             if (!string.IsNullOrWhiteSpace(callerFilePath))
             {
                 fullPath += $"-{Path.GetFileName(callerFilePath)}-{callerMemberName}-{callerLine}";
             }
+
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on", @"C:\AvatoolWebService\Abatab_UAT\logs\debug", $"{fullPath}");
 
             return $"{fullPath}.{eventType}";
         }
