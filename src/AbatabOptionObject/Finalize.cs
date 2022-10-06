@@ -17,7 +17,7 @@ namespace AbatabOptionObject
     {
         /// <summary>Finalizes an OptionObject for passthrough mode.</summary>
         /// <param name="abatabSession"></param>
-        public static SessionData ForPassthrough(SessionData abatabSession)
+        public static void ForPassthrough(SessionData abatabSession)
         {
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 
@@ -35,7 +35,7 @@ namespace AbatabOptionObject
             abatabSession.FinalOptObj.NamespaceName   = abatabSession.SentOptObj.NamespaceName;
             abatabSession.FinalOptObj.ParentNamespace = abatabSession.SentOptObj.ParentNamespace;
 
-            return abatabSession;
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
         }
     }
 }
