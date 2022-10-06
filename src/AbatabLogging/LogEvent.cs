@@ -99,6 +99,7 @@ namespace AbatabLogging
         public static void SessionInformation(SessionData abatabSession, string logMessage = "Session information log.")
         {
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Creating session log.");
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, abatabSession.FinalOptObj.ErrorMesg);
 
             if (abatabSession.LoggingMode == "all" || abatabSession.LoggingMode.Contains("session"))
             {
