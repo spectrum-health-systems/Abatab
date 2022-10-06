@@ -8,7 +8,9 @@
  */
 
 using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Reflection;
 
 namespace AbatabLogging
@@ -29,7 +31,21 @@ namespace AbatabLogging
             // debugMode and debugLogPath are hardcoded here, since they don't exist.
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on", @"C:\AvatoolWebService\Abatab_UAT\logs\debug", "[DEBUG] Building logPath.");
 
-            var fullPath = $@"{sessionLogDir}\{DateTime.Now:HHmmss.fffffff}";
+            var fullPath = sessionLogDir;
+
+            var subDirTypes = new List<string>
+            {
+                "trace"
+            };
+
+            if (subDirTypes.Any(eventType.Contains))
+            {
+                fullPath += $@"\{eventType}\{DateTime.Now:HHmmss.fffffff}";
+            }
+            else
+            {
+                fullPath += $@"\{DateTime.Now:HHmmss.fffffff}";
+            }
 
             if (!string.IsNullOrWhiteSpace(executingAssemblyName))
             {
