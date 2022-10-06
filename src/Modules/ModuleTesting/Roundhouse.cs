@@ -18,7 +18,7 @@ namespace ModuleTesting
         /// <summary></summary>
         /// <param name="abatabSession"></param>
         /// <returns></returns>
-        public static SessionData ParseCommand(SessionData abatabSession)
+        public static void ParseCommand(SessionData abatabSession)
         {
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 
@@ -26,7 +26,7 @@ namespace ModuleTesting
             {
                 case "datadump":
                     LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
-                    _=ParseDataDump(abatabSession);
+                    ParseDataDump(abatabSession);
                     break;
 
                 default:
@@ -36,13 +36,13 @@ namespace ModuleTesting
 
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 
-            return abatabSession;
+            //return abatabSession;
         }
 
         /// <summary></summary>
         /// <param name="abatabSession"></param>
         /// <returns></returns>
-        private static SessionData ParseDataDump(SessionData abatabSession)
+        private static void ParseDataDump(SessionData abatabSession)
         {
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 
@@ -61,7 +61,7 @@ namespace ModuleTesting
 
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 
-            return abatabSession;
+            // return abatabSession;
         }
     }
 }
