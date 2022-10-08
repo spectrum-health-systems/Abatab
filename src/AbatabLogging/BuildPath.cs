@@ -10,7 +10,6 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Reflection;
 
 namespace AbatabLogging
 {
@@ -27,11 +26,8 @@ namespace AbatabLogging
         /// <returns></returns>
         public static string FullPath(string eventType, string sessionLogDir, string executingAssemblyName = "", string callerFilePath = "", string callerMemberName = "", int callerLine = 0)
         {
-            // debugMode and debugLogPath are hardcoded here, since they don't exist.
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on", @"C:\AvatoolWebService\Abatab_UAT\logs\debug", "[DEBUG] Building logPath.");
-
             var fullPath = sessionLogDir;
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on", @"C:\AvatoolWebService\Abatab_UAT\logs\debug", $"{fullPath}");
+
             var subDirTypes = new List<string>
             {
                 "trace"
@@ -45,7 +41,6 @@ namespace AbatabLogging
 
             fullPath += $@"\{DateTime.Now:HHmmss.fffffff}";
 
-
             //if (subDirTypes.Any(eventType.Contains))
             //{
             //    fullPath += $@"\{eventType}\{DateTime.Now:HHmmss.fffffff}";
@@ -55,23 +50,15 @@ namespace AbatabLogging
             //    fullPath += $@"\{DateTime.Now:HHmmss.fffffff}";
             //}
 
-
-
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on", @"C:\AvatoolWebService\Abatab_UAT\logs\debug", $"{fullPath}");
-
             if (!string.IsNullOrWhiteSpace(executingAssemblyName))
             {
                 fullPath += $"-{executingAssemblyName}";
             }
 
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on", @"C:\AvatoolWebService\Abatab_UAT\logs\debug", $"{fullPath}");
-
             if (!string.IsNullOrWhiteSpace(callerFilePath))
             {
                 fullPath += $"-{Path.GetFileName(callerFilePath)}-{callerMemberName}-{callerLine}";
             }
-
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on", @"C:\AvatoolWebService\Abatab_UAT\logs\debug", $"{fullPath}");
 
             return $"{fullPath}.{eventType}";
         }
