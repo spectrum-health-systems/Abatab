@@ -119,6 +119,10 @@ namespace AbatabLogging
                               $"Abatab request command:    {abatabSession.AbatabCommand}{Environment.NewLine}" +
                               $"Abatab request action:     {abatabSession.AbatabAction}{Environment.NewLine}" +
                               $"Abatab request option:     {abatabSession.AbatabOption}{Environment.NewLine}" +
+                              $"{Environment.NewLine}" +
+                              $"==================={Environment.NewLine}" +
+                              $"Session information{Environment.NewLine}" +
+                              $"===================" +
                               $"{BodyOptObjInfo(abatabSession.SentOptObj, "sentOptObj")}{Environment.NewLine}" +
                               $"{BodyOptObjInfo(abatabSession.WorkOptObj, "workerOptObj")}{Environment.NewLine}" +
                               $"{BodyOptObjInfo(abatabSession.FinalOptObj, "finalOptObj")}{Environment.NewLine}";
