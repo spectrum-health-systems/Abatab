@@ -22,7 +22,7 @@ namespace Abatab
         /// <returns>Abatab session data, potentially modified.</returns>
         public static void ParseRequest(SessionData abatabSession)
         {
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Parsing request..");
+            LogDebug.Debugger(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Parsing request..");
 
             switch (abatabSession.AbatabModule)
             {

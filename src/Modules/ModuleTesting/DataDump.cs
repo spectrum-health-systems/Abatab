@@ -9,6 +9,7 @@
 
 using AbatabData;
 using AbatabLogging;
+using System.Reflection;
 
 namespace ModuleTesting
 {
@@ -18,7 +19,9 @@ namespace ModuleTesting
         /// <param name="abatabSession"></param>
         public static void SessionData(SessionData abatabSession)
         {
-            LogEvent.SessionInformation(abatabSession);
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+
+            LogEvent.SessionInformation(abatabSession, "Testing data dump functionality.");
         }
     }
 }

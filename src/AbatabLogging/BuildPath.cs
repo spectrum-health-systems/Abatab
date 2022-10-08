@@ -8,7 +8,6 @@
  */
 
 using System;
-using System.Collections.Generic;
 using System.IO;
 
 namespace AbatabLogging
@@ -28,11 +27,6 @@ namespace AbatabLogging
         {
             var fullPath = sessionLogDir;
 
-            var subDirTypes = new List<string>
-            {
-                "trace"
-            };
-
             if (eventType == "trace")
             {
                 fullPath += $@"\{eventType}";
@@ -40,15 +34,6 @@ namespace AbatabLogging
             }
 
             fullPath += $@"\{DateTime.Now:HHmmss.fffffff}";
-
-            //if (subDirTypes.Any(eventType.Contains))
-            //{
-            //    fullPath += $@"\{eventType}\{DateTime.Now:HHmmss.fffffff}";
-            //}
-            //else
-            //{
-            //    fullPath += $@"\{DateTime.Now:HHmmss.fffffff}";
-            //}
 
             if (!string.IsNullOrWhiteSpace(executingAssemblyName))
             {
