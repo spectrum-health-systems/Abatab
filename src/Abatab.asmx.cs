@@ -38,7 +38,6 @@ namespace Abatab
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string abatabRequest)
         {
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG] Abatab started.");
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, Settings.Default.DebugMode);
 
             SessionData abatabSession = AbatabSettings.BuildSettings(sentOptionObject, abatabRequest);
 
