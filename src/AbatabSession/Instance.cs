@@ -1,7 +1,7 @@
 ﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
  * Abatab                                                                                           v0.91.0
  * AbatabSession.csproj                                                                             v0.91.0
- * Instance.cs                                                                               b221006.073240
+ * Instance.cs                                                                               b221008.094839
  * ================================ (c) 2016-2022 A Pretty Cool Program ================================ */
 
 /*
@@ -29,14 +29,15 @@ namespace AbatabSession
 
             var abatabSession = new SessionData
             {
-                DebugMode              = abatabSettings["DebugMode"],
-                DebugLogRoot           = abatabSettings["DebugLogRoot"],
                 AbatabMode             = abatabSettings["AbatabMode"],
                 AbatabRoot             = abatabSettings["AbatabRoot"],
+                DebugMode              = abatabSettings["DebugMode"],
+                DebugLogRoot           = abatabSettings["DebugLogRoot"],
                 LoggingMode            = abatabSettings["LoggingMode"],
                 LoggingDetail          = abatabSettings["LoggingDetail"],
                 LoggingDelay           = abatabSettings["LoggingDelay"],
                 AvatarFallbackUserName = abatabSettings["AvatarFallbackUserName"],
+                SessionTimestamp       = $"{DateTime.Now:yyMMdd}",
                 SessionLogDir          = "",
                 AbatabRequest          = abatabRequest.ToLower(),
                 AbatabModule           = "undefined",
@@ -49,24 +50,23 @@ namespace AbatabSession
                 FinalOptObj            = new OptionObject2015()
             };
 
-            //VerifySessionLogDir(abatabSession); // DEPRECIATED
-            abatabSession.SessionLogDir = $@"{abatabSession.AbatabRoot}\logs\{DateTime.Now:yyMMdd}\{abatabSession.AvatarUserName}";
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on", @"C:\AvatoolWebService\Abatab_UAT\logs\debug", $"{abatabSession.SessionLogDir}");
+            abatabSession.SessionLogDir = $@"{abatabSession.AbatabRoot}\logs\{abatabSession.SessionTimestamp}\{abatabSession.AvatarUserName}";
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on", @"C:\AvatoolWebService\Abatab_UAT\logs\debug", $"{abatabSession.SessionLogDir}"); // REMOVE
             AbatabSystem.Maintenance.VerifyDir(abatabSession.SessionLogDir);
 
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on", @"C:\AvatoolWebService\Abatab_UAT\logs\debug", $"{abatabSession.SessionLogDir}");
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on", @"C:\AvatoolWebService\Abatab_UAT\logs\debug", $"{abatabSession.SessionLogDir}"); // REMOVE
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on", @"C:\AvatoolWebService\Abatab_UAT\logs\debug", $"{abatabSession.SessionLogDir}");
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on", @"C:\AvatoolWebService\Abatab_UAT\logs\debug", $"{abatabSession.SessionLogDir}"); // REMOVE
 
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on", @"C:\AvatoolWebService\Abatab_UAT\logs\debug", $"{abatabSession.SessionLogDir}");
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on", @"C:\AvatoolWebService\Abatab_UAT\logs\debug", $"{abatabSession.SessionLogDir}"); // REMOVE
             abatabSession.AvatarUserName = VerifyAvatarUserName(abatabSession.AvatarUserName, abatabSession.AvatarFallbackUserName);
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on", @"C:\AvatoolWebService\Abatab_UAT\logs\debug", $"{abatabSession.SessionLogDir}");
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on", @"C:\AvatoolWebService\Abatab_UAT\logs\debug", $"{abatabSession.SessionLogDir}"); // REMOVE
 
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on", @"C:\AvatoolWebService\Abatab_UAT\logs\debug", $"{abatabSession.SessionLogDir}");
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on", @"C:\AvatoolWebService\Abatab_UAT\logs\debug", $"{abatabSession.SessionLogDir}"); // REMOVE
             ParseAbatabRequest(abatabSession);
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on", @"C:\AvatoolWebService\Abatab_UAT\logs\debug", $"{abatabSession.SessionLogDir}");
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on", @"C:\AvatoolWebService\Abatab_UAT\logs\debug", $"{abatabSession.SessionLogDir}"); // REMOVE
 
             return abatabSession;
         }

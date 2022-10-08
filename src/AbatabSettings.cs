@@ -10,7 +10,10 @@
  */
 
 using Abatab.Properties;
+using AbatabData;
 using AbatabLogging;
+using AbatabSession;
+using NTST.ScriptLinkService.Objects;
 using System.Collections.Generic;
 using System.Reflection;
 
@@ -18,11 +21,24 @@ namespace Abatab
 {
     public class AbatabSettings
     {
+        /// <summary>Build the abatabSession object</summary>
+        /// <param name="sentOptionObject"></param>
+        /// <param name="abatabRequest"></param>
+        /// <returns>Completed abatabSession object.</returns>
+        public static SessionData BuildSettings(OptionObject2015 sentOptionObject, string abatabRequest)
+        {
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG] Building Abatab session settings.");
+
+            Dictionary<string, string> abatabSettings = AbatabSettings.LoadFromWebConfig();
+
+            return Instance.Build(sentOptionObject, abatabRequest, abatabSettings);
+        }
+
         /// <summary>Load local configuration settings from Web.config.</summary>
         /// <returns>Local configuration settings.</returns>
-        public static Dictionary<string, string> LoadFromWebConfig()
+        private static Dictionary<string, string> LoadFromWebConfig()
         {
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG] Loading settings from Web.config.");
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG] Loading configuration settings from Web.config.");
 
             return new Dictionary<string, string>
             {

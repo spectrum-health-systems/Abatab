@@ -1,7 +1,7 @@
 ﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
  * Abatab                                                                                           v0.91.0
  * Abatab.csproj                                                                                    v0.91.0
- * Abatab.asmx.cs                                                                            b221006.073240
+ * Abatab.asmx.cs                                                                            b221008.094839
  * ================================ (c) 2016-2022 A Pretty Cool Program ================================ */
 
 /* Main entry point for Abatab. This should be pretty static, but if it is modified, it will require the
@@ -11,9 +11,7 @@
 using Abatab.Properties;
 using AbatabData;
 using AbatabLogging;
-using AbatabSession;
 using NTST.ScriptLinkService.Objects;
-using System.Collections.Generic;
 using System.Reflection;
 using System.Web.Services;
 
@@ -41,18 +39,20 @@ namespace Abatab
         {
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG] Abatab started.");
 
-            Dictionary<string, string> abatabSettings = AbatabSettings.LoadFromWebConfig();
+            ////Dictionary<string, string> abatabSettings = AbatabSettings.LoadFromWebConfig();
 
-            SessionData abatabSession = Instance.Build(sentOptionObject, abatabRequest, abatabSettings);
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+            ////SessionData abatabSession = Instance.Build(sentOptionObject, abatabRequest, abatabSettings);
+            ////LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+
+            SessionData abatabSession = AbatabSettings.BuildSettings(sentOptionObject, abatabRequest);
 
             Roundhouse.ParseRequest(abatabSession);
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+            LogEvent.SessionInformation(abatabSession, "Completed session information");
 
-            LogEvent.SessionInformation(abatabSession); // DEBUGING
-
-            //return abatabSession.SentOptObj;
             return abatabSession.FinalOptObj;
         }
+
+
     }
 }

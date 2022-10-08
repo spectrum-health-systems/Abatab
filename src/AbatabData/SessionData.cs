@@ -1,7 +1,7 @@
 ﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
  * Abatab                                                                                           v0.91.0
  * AbatabData.csproj                                                                                v0.91.0
- * SessionData.cs                                                                            b221006.073240
+ * SessionData.cs                                                                            b221008.094839
  * ================================ (c) 2016-2022 A Pretty Cool Program ================================ */
 
 /* The SessionData properties that contain all of the information/data Abatab needs to do it's job.
@@ -17,13 +17,14 @@ namespace AbatabData
         public string AbatabMode { get; set; }
         public string AbatabRoot { get; set; }
         public string DebugMode { get; set; }
+        public string DebugLogRoot { get; set; }
         public string LoggingMode { get; set; }
         public string LoggingDetail { get; set; }
         public string LoggingDelay { get; set; }
         public string AvatarFallbackUserName { get; set; }
 
         // Runtime settings.
-        public string DebugLogRoot { get; set; }
+        public string SessionTimestamp { get; set; }
         public string SessionLogDir { get; set; }
         public string AvatarUserName { get; set; }
         public string AbatabRequest { get; set; }

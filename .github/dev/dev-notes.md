@@ -1,5 +1,19 @@
 # Abatab development notes
 
+## Debugging
+
+* Debug logs with "[DEBUG]" are part of the source code. All other debug statements are temporary
+* DebbuingDebug is only for debugging/development
+* Cases where paramaters are hardcoded
+
+## Tracing
+
+* Trace logs are generally found at the beg/end of methods, and not in sub-methods
+* Cases where paramaters are hardcoded
+
+
+
+
 ## TESTING
 * All logging modes
     * All
