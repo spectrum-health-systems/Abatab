@@ -16,8 +16,6 @@ namespace AbatabSystem
         /// <summary>Verify directory exists, and create if not.</summary>
         public static void VerifyDir(string dir)
         {
-            File.WriteAllText(@"C:\AvatoolWebService\Abatab_UAT\logs\debug\MAINTENANCE.debug", dir);
-
             _=Directory.CreateDirectory(dir);
         }
     }
