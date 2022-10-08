@@ -41,7 +41,7 @@ namespace AbatabLogging
              * should be set to "off" in your production environment.
              */
 
-            if (debugMode == "on")
+            if (debugMode == "on" || debugMode == "undefined")
             {
                 const bool debugDebugger = false;
 

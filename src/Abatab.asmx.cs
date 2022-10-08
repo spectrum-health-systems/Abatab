@@ -39,11 +39,6 @@ namespace Abatab
         {
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG] Abatab started.");
 
-            ////Dictionary<string, string> abatabSettings = AbatabSettings.LoadFromWebConfig();
-
-            ////SessionData abatabSession = Instance.Build(sentOptionObject, abatabRequest, abatabSettings);
-            ////LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
-
             SessionData abatabSession = AbatabSettings.BuildSettings(sentOptionObject, abatabRequest);
 
             Roundhouse.ParseRequest(abatabSession);
@@ -52,7 +47,5 @@ namespace Abatab
 
             return abatabSession.FinalOptObj;
         }
-
-
     }
 }
