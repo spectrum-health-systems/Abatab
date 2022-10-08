@@ -8,7 +8,6 @@
  */
 
 using System.IO;
-using System.Reflection;
 using System.Threading;
 
 namespace AbatabLogging
@@ -22,7 +21,7 @@ namespace AbatabLogging
         public static void LocalFile(string logPath, string logContent, int loggingDelay)
         {
             Thread.Sleep(loggingDelay);
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, "on", @"C:\AvatoolWebService\Abatab_UAT\logs\debug", $"{logPath}");
+
             File.WriteAllText(logPath, logContent);
         }
     }
