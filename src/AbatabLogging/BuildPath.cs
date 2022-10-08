@@ -1,7 +1,7 @@
 ﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
  * Abatab                                                                                           v0.91.0
  * AbatabLogging.csproj                                                                             v0.91.0
- * BuildPath.cs                                                                              b221008.094839
+ * BuildPath.cs                                                                              b221008.180009
  * ================================ (c) 2016-2022 A Pretty Cool Program ================================ */
 
 /* Builds the log file path.

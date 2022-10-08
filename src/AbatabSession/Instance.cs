@@ -1,7 +1,7 @@
 ﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
  * Abatab                                                                                           v0.91.0
  * AbatabSession.csproj                                                                             v0.91.0
- * Instance.cs                                                                               b221008.094839
+ * Instance.cs                                                                               b221008.180009
  * ================================ (c) 2016-2022 A Pretty Cool Program ================================ */
 
 /*
@@ -91,14 +91,5 @@ namespace AbatabSession
                 abatabSession.AbatabOption = req[3].ToLower();
             }
         }
-
-        // DEPRECIATED
-        /////// <summary>Verify the session log directory exists.</summary>
-        ////private static void VerifySessionLogDir(SessionData abatabSession)
-        ////{
-        ////    abatabSession.SessionLogDir = $@"{abatabSession.AbatabRoot}\logs\{DateTime.Now:yyMMdd}\{abatabSession.AvatarUserName}";
-
-        ////    _=Directory.CreateDirectory(abatabSession.SessionLogDir);
-        ////}
     }
 }
