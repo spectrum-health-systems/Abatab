@@ -1,11 +1,11 @@
 ﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
  * Abatab                                                                                           v0.91.0
  * AbatabData.csproj                                                                                v0.91.0
- * SessionData.cs                                                                            b221009.083236
- * ================================ (c) 2016-2022 A Pretty Cool Program ================================ */
-
-/* The SessionData properties that contain all of the information/data Abatab needs to do it's job.
- */
+ * SessionData.cs                                                                            b221009.090325
+ * --------------------------------------------------------------------------------------------------------
+ * Defines the properties for the SessionData object, which contains all of the information/data that
+ * Abatab needs to do its job.
+ * ================================= (c)2016-2022 A Pretty Cool Program ================================ */
 
 using NTST.ScriptLinkService.Objects;
 
@@ -33,7 +33,7 @@ namespace AbatabData
         public string AbatabAction { get; set; }
         public string AbatabOption { get; set; }
 
-        // OptionObjects
+        // OptionObject detail set at runtime
         public OptionObject2015 SentOptObj { get; set; }
         public OptionObject2015 WorkOptObj { get; set; }
         public OptionObject2015 FinalOptObj { get; set; }
