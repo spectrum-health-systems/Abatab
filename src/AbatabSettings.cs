@@ -19,21 +19,21 @@ namespace Abatab
     public class AbatabSettings
     {
         /// <summary>Build the abatabSession object</summary>
-        /// <param name="sentOptionObject"></param>
-        /// <param name="abatabRequest"></param>
+        /// <param name="sentOptObj">OptionObject2015 sent from myAvatar.</param>
+        /// <param name="abatabSession">Abatab session data.</param>
         /// <returns>Completed abatabSession object.</returns>
-        public static SessionData BuildSettings(OptionObject2015 sentOptionObject, string abatabRequest)
+        public static SessionData BuildSettings(OptionObject2015 sentOptObj, string abatabRequest)
         {
             LogDebug.DebugContent(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG] Building Abatab session settings.");
 
-            Dictionary<string, string> abatabSettings = AbatabSettings.LoadFromWebConfig();
+            Dictionary<string, string> abatabSettings = AbatabSettings.LoadWebConfig();
 
-            return Instance.Build(sentOptionObject, abatabRequest, abatabSettings);
+            return Instance.Build(sentOptObj, abatabRequest, abatabSettings);
         }
 
         /// <summary>Load local configuration settings from Web.config.</summary>
         /// <returns>Local configuration settings.</returns>
-        private static Dictionary<string, string> LoadFromWebConfig()
+        private static Dictionary<string, string> LoadWebConfig()
         {
             LogDebug.DebugContent(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG] Loading configuration settings from Web.config.");
 
