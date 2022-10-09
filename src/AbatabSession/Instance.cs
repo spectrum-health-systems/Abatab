@@ -38,7 +38,7 @@ namespace AbatabSession
                 LoggingDelay           = abatabSettings["LoggingDelay"],
                 AvatarFallbackUserName = abatabSettings["AvatarFallbackUserName"],
                 SessionTimestamp       = $"{DateTime.Now:yyMMdd}",
-                SessionLogDir          = "",
+                SessionLogRoot          = "",
                 AbatabRequest          = abatabRequest.ToLower(),
                 AbatabModule           = "undefined",
                 AbatabCommand          = "undefined",
@@ -50,9 +50,9 @@ namespace AbatabSession
                 FinalOptObj            = new OptionObject2015()
             };
 
-            abatabSession.SessionLogDir = $@"{abatabSession.AbatabRoot}\logs\{abatabSession.SessionTimestamp}\{abatabSession.AvatarUserName}";
+            abatabSession.SessionLogRoot = $@"{abatabSession.AbatabRoot}\logs\{abatabSession.SessionTimestamp}\{abatabSession.AvatarUserName}";
 
-            AbatabSystem.Maintenance.VerifyDir(abatabSession.SessionLogDir);
+            AbatabSystem.Maintenance.VerifyDir(abatabSession.SessionLogRoot);
 
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 

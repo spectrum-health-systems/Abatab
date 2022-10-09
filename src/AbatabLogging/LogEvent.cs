@@ -36,7 +36,7 @@ namespace AbatabLogging
             if (abatabSession.LoggingMode == "all" || abatabSession.LoggingMode.Contains("session"))
             {
                 LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, abatabSession.FinalOptObj.ErrorMesg);
-                var logPath    = BuildPath.FullPath("session", abatabSession.SessionLogDir);
+                var logPath    = BuildPath.FullPath("session", abatabSession.SessionLogRoot);
                 var logContent = BuildContent.LogComponents("sessionInformation", abatabSession, logMessage);
 
                 WriteFile.LocalFile(logPath, logContent, Convert.ToInt32(abatabSession.LoggingDelay));
@@ -57,7 +57,7 @@ namespace AbatabLogging
 
             if (abatabSession.LoggingMode == "all" || abatabSession.LoggingMode.Contains("trace"))
             {
-                var logPath    = BuildPath.FullPath("trace", abatabSession.SessionLogDir, executingAssemblyName, callerFilePath, callerMemberName, callerLine);
+                var logPath    = BuildPath.FullPath("trace", abatabSession.SessionLogRoot, executingAssemblyName, callerFilePath, callerMemberName, callerLine);
 
                 var logContent = BuildContent.LogComponents("trace", abatabSession, logMessage, executingAssemblyName, callerFilePath, callerMemberName, callerLine);
 
