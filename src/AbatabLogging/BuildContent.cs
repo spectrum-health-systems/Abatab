@@ -1,11 +1,10 @@
 ﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
  * Abatab                                                                                           v0.91.0
  * AbatabLogging.csproj                                                                             v0.91.0
- * BuildContent.cs                                                                           b221009.083236
- * ================================ (c) 2016-2022 A Pretty Cool Program ================================ */
-
-/* Builds the various components of log file content.
- */
+ * BuildContent.cs                                                                           b221009.090325
+ * --------------------------------------------------------------------------------------------------------
+ * Builds the various components of a log file.
+ * ================================= (c)2016-2022 A Pretty Cool Program ================================ */
 
 using AbatabData;
 using NTST.ScriptLinkService.Objects;
@@ -18,17 +17,17 @@ namespace AbatabLogging
     {
         /// <summary>Build logfile content.</summary>
         /// <param name="eventType">Log type.</param>
-        /// <param name="executingAssemblyName">Name of executing assembly.</param>
+        /// <param name="exeAssembly">Name of executing assembly.</param>
         /// <param name="abatabSession">Abatab session configuration settings.</param>
-        /// <param name="logMessage">Message for the logfile</param>
-        /// <param name="callerFilePath">Filename of where the log is coming from.</param>
-        /// <param name="callerMemberName">Method of where the log is coming from.</param>
-        /// <param name="callerLine">File line of where the log is coming from.</param>
+        /// <param name="logMsg">Message for the logfile</param>
+        /// <param name="callPath">Filename of where the log is coming from.</param>
+        /// <param name="callMember">Method of where the log is coming from.</param>
+        /// <param name="callLine">File line of where the log is coming from.</param>
         /// <returns>Content for a logfile with trace information.</returns>
-        public static string LogContent(string eventType, SessionData abatabSession, string logMessage, string executingAssemblyName = "", string callerFilePath = "", string callerMemberName = "", int callerLine = 0)
+        public static string LogComponents(string eventType, SessionData abatabSession, string logMsg, string exeAssembly = "", string callPath = "", string callMember = "", int callLine = 0)
         {
-            var logHeader  = LogHeader(logMessage);
-            var logDetails = LogDetails(eventType, executingAssemblyName, callerFilePath, callerMemberName, callerLine);
+            var logHeader  = LogHeader(logMsg);
+            var logDetails = LogDetails(eventType, exeAssembly, callPath, callMember, callLine);
             var logBody    = LogBody(eventType, abatabSession);
             var logFooter  = LogFooter();
 

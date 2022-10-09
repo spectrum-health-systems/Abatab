@@ -21,7 +21,7 @@ namespace AbatabLogging
         /// <param name="logMessage"></param>
         public static void AllOptionObjectInformation(SessionData abatabSession, string logMessage = "OptionObject information log.")
         {
-            BuildContent.LogContent("allOptObjInformation", abatabSession, logMessage);
+            BuildContent.LogComponents("allOptObjInformation", abatabSession, logMessage);
         }
 
 
@@ -37,7 +37,7 @@ namespace AbatabLogging
             {
                 LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, abatabSession.FinalOptObj.ErrorMesg);
                 var logPath    = BuildPath.FullPath("session", abatabSession.SessionLogDir);
-                var logContent = BuildContent.LogContent("sessionInformation", abatabSession, logMessage);
+                var logContent = BuildContent.LogComponents("sessionInformation", abatabSession, logMessage);
 
                 WriteFile.LocalFile(logPath, logContent, Convert.ToInt32(abatabSession.LoggingDelay));
             }
@@ -59,7 +59,7 @@ namespace AbatabLogging
             {
                 var logPath    = BuildPath.FullPath("trace", abatabSession.SessionLogDir, executingAssemblyName, callerFilePath, callerMemberName, callerLine);
 
-                var logContent = BuildContent.LogContent("trace", abatabSession, logMessage, executingAssemblyName, callerFilePath, callerMemberName, callerLine);
+                var logContent = BuildContent.LogComponents("trace", abatabSession, logMessage, executingAssemblyName, callerFilePath, callerMemberName, callerLine);
 
                 WriteFile.LocalFile(logPath, logContent, Convert.ToInt32(abatabSession.LoggingDelay));
             }
