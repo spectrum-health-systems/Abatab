@@ -29,7 +29,7 @@ namespace AbatabLogging
         /// <param name="logMessage">Message for the logfile</param>
         public static void SessionInformation(SessionData abatabSession, string logMessage = "Session information log.")
         {
-            LogDebug.Debugger(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Creating session log.");
+            LogDebug.Debugger(abatabSession.DebugMode, "[DEBUG] Creating session log.", abatabSession.DebugLogRoot, Assembly.GetExecutingAssembly().GetName().Name);
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, abatabSession.FinalOptObj.ErrorMesg);
 
             if (abatabSession.LoggingMode == "all" || abatabSession.LoggingMode.Contains("session"))
@@ -52,7 +52,7 @@ namespace AbatabLogging
         /// <param name="callerLine">File line of where the log is coming from.</param>
         public static void Trace(SessionData abatabSession, string executingAssemblyName, string logMessage = "Trace log start...", [CallerFilePath] string callerFilePath = "", [CallerMemberName] string callerMemberName = "", [CallerLineNumber] int callerLine = 0)
         {
-            LogDebug.Debugger(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Creating trace log.");
+            LogDebug.Debugger(abatabSession.DebugMode, "[DEBUG] Creating trace log.", abatabSession.DebugLogRoot, Assembly.GetExecutingAssembly().GetName().Name);
 
             if (abatabSession.LoggingMode == "all" || abatabSession.LoggingMode.Contains("trace"))
             {

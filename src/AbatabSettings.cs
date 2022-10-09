@@ -24,7 +24,7 @@ namespace Abatab
         /// <returns>Completed abatabSession object.</returns>
         public static SessionData BuildSettings(OptionObject2015 sentOptionObject, string abatabRequest)
         {
-            LogDebug.Debugger(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG] Building Abatab session settings.");
+            LogDebug.Debugger(Settings.Default.DebugMode, "[DEBUG] Building Abatab session settings.", Settings.Default.DebugLogRoot, Assembly.GetExecutingAssembly().GetName().Name);
 
             Dictionary<string, string> abatabSettings = AbatabSettings.LoadFromWebConfig();
 
@@ -35,7 +35,7 @@ namespace Abatab
         /// <returns>Local configuration settings.</returns>
         private static Dictionary<string, string> LoadFromWebConfig()
         {
-            LogDebug.Debugger(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG] Loading configuration settings from Web.config.");
+            LogDebug.Debugger(Settings.Default.DebugMode, "[DEBUG] Loading configuration settings from Web.config.", Settings.Default.DebugLogRoot, Assembly.GetExecutingAssembly().GetName().Name);
 
             return new Dictionary<string, string>
             {

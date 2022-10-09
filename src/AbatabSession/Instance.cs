@@ -24,7 +24,7 @@ namespace AbatabSession
         //public static SessionData Build(OptionObject2015 sentOptObj, string abatabRequest)
         public static SessionData Build(OptionObject2015 sentOptObj, string abatabRequest, Dictionary<string, string> abatabSettings)
         {
-            LogDebug.Debugger(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"], "[DEBUG] Building session data.");
+            LogDebug.Debugger(abatabSettings["DebugMode"], "[DEBUG] Building session data.", abatabSettings["DebugLogRoot"], Assembly.GetExecutingAssembly().GetName().Name);
 
             var abatabSession = new SessionData
             {
