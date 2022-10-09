@@ -9,6 +9,7 @@
  * rebuilt, however, only the module that is modified.
  */
 
+using Abatab.Properties;
 using AbatabData;
 using AbatabLogging;
 using System.Reflection;
@@ -22,7 +23,7 @@ namespace Abatab
         /// <returns>Abatab session data, potentially modified.</returns>
         public static void ParseRequest(SessionData abatabSession)
         {
-            LogDebug.Debugger(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Parsing request..");
+            LogDebug.DebugContent(Settings.Default.DebugMode, "[DEBUG] Parsing request.", Settings.Default.DebugLogRoot, Assembly.GetExecutingAssembly().GetName().Name);
 
             switch (abatabSession.AbatabModule)
             {
