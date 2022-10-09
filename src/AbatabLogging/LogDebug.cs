@@ -74,7 +74,7 @@ namespace AbatabLogging
 
                     DebugTheDebugger(debugDebugger, debugLogRoot, "004");
 
-                    var debugContent = BuildContent.Debug(exeAssembly, debugMode, debugMsg, callPath, callMember, callLine);
+                    var debugContent = BuildContent.DebugComponents(exeAssembly, debugMode, debugMsg, callPath, callMember, callLine);
 
                     DebugTheDebugger(debugDebugger, debugLogRoot, "005");
 

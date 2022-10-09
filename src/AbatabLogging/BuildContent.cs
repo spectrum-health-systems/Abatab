@@ -15,7 +15,7 @@ namespace AbatabLogging
 {
     public class BuildContent
     {
-        /// <summary>Build logfile content.</summary>
+        /// <summary>Build all logfile components.</summary>
         /// <param name="eventType">Log type.</param>
         /// <param name="exeAssembly">Name of executing assembly.</param>
         /// <param name="abatabSession">Abatab session configuration settings.</param>
@@ -26,7 +26,7 @@ namespace AbatabLogging
         /// <returns>Content for a logfile with trace information.</returns>
         public static string LogComponents(string eventType, SessionData abatabSession, string logMsg, string exeAssembly = "", string callPath = "", string callMember = "", int callLine = 0)
         {
-            var logHeader  = LogHeader(logMsg);
+            var logHeader  = LogHead(logMsg);
             var logDetails = LogDetails(eventType, exeAssembly, callPath, callMember, callLine);
             var logBody    = LogBody(eventType, abatabSession);
             var logFooter  = LogFooter();
@@ -37,13 +37,35 @@ namespace AbatabLogging
                    $"{logFooter}";
         }
 
-        /// <summary>Build a standard log header.</summary>
-        /// <param name="logMessage">Log message.</param>
-        /// <returns> Standard log header.</returns>
-        private static string LogHeader(string logMessage)
+        /// <summary></summary>
+        /// <param name="executingAssemblyName"></param>
+        /// <param name="debugMode"></param>
+        /// <param name="debugMsg"></param>
+        /// <param name="callerFilePath"></param>
+        /// <param name="callerMemberName"></param>
+        /// <param name="callerLine"></param>
+        /// <returns></returns>
+        public static string DebugComponents(string executingAssemblyName, string debugMode, string debugMsg, string callerFilePath, string callerMemberName, int callerLine)
+        {
+            var logHeader  = LogHead(debugMsg);
+            var logDetails = LogDetails("debug", executingAssemblyName, callerFilePath, callerMemberName, callerLine);
+            var logBody    = $"DebugMode: {debugMode}";
+            var logFooter  = LogFooter();
+
+            return $"{logHeader}" +
+                   $"{logDetails}" +
+                   $"{logBody}" +
+                   $"{logFooter}";
+        }
+
+
+        /// <summary>Build log header.</summary>
+        /// <param name="logMsg">Log message.</param>
+        /// <returns>Log header.</returns>
+        private static string LogHead(string logMsg)
         {
             return $"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-={Environment.NewLine}" +
-                   $"{logMessage}{Environment.NewLine}" +
+                   $"{logMsg}{Environment.NewLine}" +
                    $"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-={Environment.NewLine}";
         }
 
@@ -164,27 +186,6 @@ namespace AbatabLogging
                    $"========================================{Environment.NewLine}" +
                    $"End of log.{Environment.NewLine}" +
                    $"========================================";
-        }
-
-        /// <summary></summary>
-        /// <param name="executingAssemblyName"></param>
-        /// <param name="debugMode"></param>
-        /// <param name="debugMsg"></param>
-        /// <param name="callerFilePath"></param>
-        /// <param name="callerMemberName"></param>
-        /// <param name="callerLine"></param>
-        /// <returns></returns>
-        public static string Debug(string executingAssemblyName, string debugMode, string debugMsg, string callerFilePath, string callerMemberName, int callerLine)
-        {
-            var logHeader  = LogHeader(debugMsg);
-            var logDetails = LogDetails("debug", executingAssemblyName, callerFilePath, callerMemberName, callerLine);
-            var logBody    = $"DebugMode: {debugMode}";
-            var logFooter  = LogFooter();
-
-            return $"{logHeader}" +
-                   $"{logDetails}" +
-                   $"{logBody}" +
-                   $"{logFooter}";
         }
     }
 }
