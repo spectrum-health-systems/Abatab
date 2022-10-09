@@ -50,6 +50,8 @@ namespace AbatabSession
                 FinalOptObj            = new OptionObject2015()
             };
 
+            LogDebug.DebugContent(abatabSettings["DebugMode"], "[DEBUG] Building session data.", abatabSettings["DebugLogRoot"], Assembly.GetExecutingAssembly().GetName().Name);
+
             abatabSession.SessionLogRoot = $@"{abatabSession.AbatabRoot}\logs\{abatabSession.SessionTimestamp}\{abatabSession.AvatarUserName}";
 
             AbatabSystem.Maintenance.VerifyDir(abatabSession.SessionLogRoot);
