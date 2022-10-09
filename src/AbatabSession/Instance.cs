@@ -25,8 +25,8 @@ namespace AbatabSession
         public static SessionData Build(OptionObject2015 sentOptObj, string abatabRequest, Dictionary<string, string> abatabSettings)
         {
             LogDebug.DebugContent(abatabSettings["DebugMode"], "[DEBUG] Building session data.", abatabSettings["DebugLogRoot"], Assembly.GetExecutingAssembly().GetName().Name);
-
-            LogDebug.DebugContent(abatabSettings["DebugMode"], sentOptObj.EpisodeNumber.ToString(), abatabSettings["DebugLogRoot"], Assembly.GetExecutingAssembly().GetName().Name);
+            LogDebug.DebugContent(abatabSettings["DebugMode"], "[DEBUG] Building session data.", abatabSettings["DebugLogRoot"], Assembly.GetExecutingAssembly().GetName().Name);
+            LogDebug.DebugContent(abatabSettings["DebugMode"], sentOptObj.OptionUserId, abatabSettings["DebugLogRoot"], Assembly.GetExecutingAssembly().GetName().Name);
 
 
             var abatabSession = new SessionData
@@ -65,7 +65,7 @@ namespace AbatabSession
             ParseAbatabRequest(abatabSession);
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 
-            return abatabSession;
+            return abatabSession; // remove?
         }
 
         /// <summary>Verify the session AvatarUserName is valid.</summary>
