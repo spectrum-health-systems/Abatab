@@ -33,7 +33,7 @@ namespace Abatab
         }
 
         /// <summary>Execute Abatab request.</summary>
-        /// <param name="sentOptionObject">OptionObject2015 sent from myAvatar.</param>
+        /// <param name="sentOptObj">OptionObject2015 sent from myAvatar.</param>
         /// <param name="abatabRequest">Request from Avatar.</param>
         /// <returns>Finalized OptionObject2015 that will be returned to Avatar.</returns>
         [WebMethod]
