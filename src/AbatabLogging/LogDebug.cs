@@ -24,7 +24,7 @@ namespace AbatabLogging
         /// <param name="callerFilePath"></param>
         /// <param name="callerMemberName"></param>
         /// <param name="callerLine"></param>
-        public static void Debugger(string executingAssemblyName, string debugMode, string debugLogRoot = "", string debugMsg = "", [CallerFilePath] string callerFilePath = "", [CallerMemberName] string callerMemberName = "", [CallerLineNumber] int callerLine = 0)
+        public static void DebugContent(string executingAssemblyName, string debugMode, string debugLogRoot = "", string debugMsg = "", [CallerFilePath] string callerFilePath = "", [CallerMemberName] string callerMemberName = "", [CallerLineNumber] int callerLine = 0)
         {
             /* NOTE The advantage of debug logs is that they can be created prior to a SessionData object being created. You can put a LogDebug.Debug() call
              * anywhere in your code, and a logfile will be written. This is for development/debugging purposes, therefore the DebugMode setting in Web.config
