@@ -26,9 +26,11 @@ namespace AbatabSession
         {
             LogDebug.DebugContent(abatabSettings["DebugMode"], "[DEBUG] Building session data.", abatabSettings["DebugLogRoot"], Assembly.GetExecutingAssembly().GetName().Name);
 
+            LogDebug.DebugContent(abatabSettings["DebugMode"], "[DEBUG] Building session data.", abatabSettings["DebugLogRoot"], Assembly.GetExecutingAssembly().GetName().Name);
+
             var abatabSession = new SessionData
             {
-                AbatabVer              = Assembly.GetEntryAssembly().GetName().Version.ToString(),
+                //AbatabVer              = Assembly.GetEntryAssembly().GetName().Version.ToString(),
                 AbatabMode             = abatabSettings["AbatabMode"],
                 AbatabRoot             = abatabSettings["AbatabRoot"],
                 DebugMode              = abatabSettings["DebugMode"],
@@ -49,8 +51,6 @@ namespace AbatabSession
                 WorkOptObj             = new OptionObject2015(),
                 FinalOptObj            = new OptionObject2015()
             };
-
-            LogDebug.DebugContent(abatabSettings["DebugMode"], "[DEBUG] Building session data.", abatabSettings["DebugLogRoot"], Assembly.GetExecutingAssembly().GetName().Name);
 
             abatabSession.SessionLogRoot = $@"{abatabSession.AbatabRoot}\logs\{abatabSession.SessionTimestamp}\{abatabSession.AvatarUserName}";
 
