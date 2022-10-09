@@ -39,7 +39,10 @@ namespace Abatab
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptObj, string abatabRequest)
         {
+            var test = sentOptObj.OptionUserId;
+
             LogDebug.DebugContent(Settings.Default.DebugMode, "[DEBUG] Abatab started.", Settings.Default.DebugLogRoot, Assembly.GetExecutingAssembly().GetName().Name);
+
             LogDebug.DebugContent("on", sentOptObj.OptionUserId, @"C:\AvatoolWebService\Abatab_UAT\logs\debug\test.debug", Assembly.GetExecutingAssembly().GetName().Name);
             SessionData abatabSession = AbatabSettings.BuildSettings(sentOptObj, abatabRequest);
 
