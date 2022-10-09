@@ -40,18 +40,15 @@ namespace AbatabLogging
         /// <param name="debugMode"></param>
         /// <param name="debugMsg"></param>
         /// <param name="debugLogRoot"></param>
-        /// <param name="executingAssemblyName"></param>
-        /// <param name="callerFilePath"></param>
-        /// <param name="callerMemberName"></param>
-        /// <param name="callerLine"></param>
-        public static void Debugger(string debugMode, string debugMsg = "", string debugLogRoot = "", string executingAssemblyName = "", [CallerFilePath] string callerFilePath = "", [CallerMemberName] string callerMemberName = "", [CallerLineNumber] int callerLine = 0)
+        /// <param name="exeAssembly"></param>
+        /// <param name="callPath"></param>
+        /// <param name="callMember"></param>
+        /// <param name="callLine"></param>
+        public static void Debugger(string debugMode, string debugMsg = "", string debugLogRoot = "", string exeAssembly = "", [CallerFilePath] string callPath = "", [CallerMemberName] string callMember = "", [CallerLineNumber] int callLine = 0)
         {
-            /* NOTE The advantage of debug logs is that they can be created prior to a SessionData object being created. You can put a LogDebug.Debug() call
-             * anywhere in your code, and a logfile will be written. This is for development/debugging purposes, therefore the DebugMode setting in Web.config
-             * should be set to "off" in your production environment.
-             */
 
-            if (debugMode == "on" || debugMode == "undefined")
+            //if (debugMode == "on" || debugMode == "undefined")
+            if (debugMode == "on")
             {
                 const bool debugDebugger = false;
 
@@ -74,11 +71,11 @@ namespace AbatabLogging
 
                     DebugDebugger(debugDebugger, debugLogDir, "003");
 
-                    var debugContent = BuildContent.Debug(executingAssemblyName, debugMode, debugMsg, callerFilePath, callerMemberName, callerLine);
+                    var debugContent = BuildContent.Debug(exeAssembly, debugMode, debugMsg, callPath, callMember, callLine);
 
                     DebugDebugger(debugDebugger, debugLogDir, "004");
 
-                    File.WriteAllText($@"{debugLogDir}\{DateTime.Now:HHmmssfffffff}-{executingAssemblyName}-{Path.GetFileName(callerFilePath)}-{callerMemberName}-{callerLine}.debug", debugContent);
+                    File.WriteAllText($@"{debugLogDir}\{DateTime.Now:HHmmssfffffff}-{exeAssembly}-{Path.GetFileName(callPath)}-{callMember}-{callLine}.debug", debugContent);
 
                     DebugDebugger(debugDebugger, debugLogDir, "005");
                 }
