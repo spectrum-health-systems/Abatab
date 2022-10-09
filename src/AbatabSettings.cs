@@ -1,13 +1,10 @@
 ﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
  * Abatab                                                                                           v0.91.0
  * Abatab.csproj                                                                                    v0.91.0
- * AbatabSettings.cs                                                                         b221006.073240
- * ================================ (c) 2016-2022 A Pretty Cool Program ================================ */
-
-/* Logic to work with the local configuration settings found in Web.config. Whenever a setting is added or
- * removed from Web.config, it needs to be added/removed here. If this class is modified, the entire
- * solution will need to be rebuilt.
- */
+ * AbatabSettings.cs                                                                         b221009.090325
+ * --------------------------------------------------------------------------------------------------------
+ * Contains the logic to work with configuration settings found in the local Web.Config file.
+ * ================================= (c)2016-2022 A Pretty Cool Program ================================ */
 
 using Abatab.Properties;
 using AbatabData;
@@ -22,23 +19,23 @@ namespace Abatab
     public class AbatabSettings
     {
         /// <summary>Build the abatabSession object</summary>
-        /// <param name="sentOptionObject"></param>
+        /// <param name="sentOptObj"></param>
         /// <param name="abatabRequest"></param>
         /// <returns>Completed abatabSession object.</returns>
-        public static SessionData BuildSettings(OptionObject2015 sentOptionObject, string abatabRequest)
+        public static SessionData BuildSettings(OptionObject2015 sentOptObj, string abatabRequest)
         {
-            LogDebug.Debugger(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG] Building Abatab session settings.");
+            LogDebug.DebugContent(Settings.Default.DebugMode, "[DEBUG] Building Abatab session settings.", Settings.Default.DebugLogRoot, Assembly.GetExecutingAssembly().GetName().Name);
 
-            Dictionary<string, string> abatabSettings = AbatabSettings.LoadFromWebConfig();
+            Dictionary<string, string> abatabSettings = LoadWebConfig();
 
-            return Instance.Build(sentOptionObject, abatabRequest, abatabSettings);
+            return Instance.Build(sentOptObj, abatabRequest, abatabSettings);
         }
 
         /// <summary>Load local configuration settings from Web.config.</summary>
         /// <returns>Local configuration settings.</returns>
-        private static Dictionary<string, string> LoadFromWebConfig()
+        private static Dictionary<string, string> LoadWebConfig()
         {
-            LogDebug.Debugger(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG] Loading configuration settings from Web.config.");
+            LogDebug.DebugContent(Settings.Default.DebugMode, "[DEBUG] Loading configuration settings from Web.config.", Settings.Default.DebugLogRoot, Assembly.GetExecutingAssembly().GetName().Name);
 
             return new Dictionary<string, string>
             {

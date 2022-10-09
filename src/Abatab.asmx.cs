@@ -1,12 +1,14 @@
 ﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
  * Abatab                                                                                           v0.91.0
  * Abatab.csproj                                                                                    v0.91.0
- * Abatab.asmx.cs                                                                            b221009.083236
- * ================================ (c) 2016-2022 A Pretty Cool Program ================================ */
-
-/* Main entry point for Abatab. This should be pretty static, but if it is modified, it will require the
- * entire solution to be rebuilt.
- */
+ * Abatab.asmx.cs                                                                            b221009.090325
+ * --------------------------------------------------------------------------------------------------------
+ * Main entry point for Abatab.
+ *
+ * When a ScriptLink event is executed in Avatar, an OptionObject (the information/data from Avatar that
+ * Abatab needs to do it's job) and script parameter (also referred to as the "Abatab request") are sent to
+ * here.
+ * ================================= (c)2016-2022 A Pretty Cool Program ================================ */
 
 using Abatab.Properties;
 using AbatabData;
@@ -23,7 +25,7 @@ namespace Abatab
     public class Abatab : WebService
     {
         /// <summary>Return Abatab version.</summary>
-        /// <returns>Version of Abatab.</returns>
+        /// <returns>Current version of Abatab.</returns>
         [WebMethod]
         public string GetVersion()
         {
@@ -31,15 +33,15 @@ namespace Abatab
         }
 
         /// <summary>Execute Abatab request.</summary>
-        /// <param name="sentOptionObject">OptionObject2015 sent from myAvatar.</param>
+        /// <param name="sentOptObj">OptionObject2015 sent from myAvatar.</param>
         /// <param name="abatabRequest">Request from Avatar.</param>
-        /// <returns>Finalized OptionObject2015.</returns>
+        /// <returns>Finalized OptionObject2015 that will be returned to Avatar.</returns>
         [WebMethod]
-        public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string abatabRequest)
+        public OptionObject2015 RunScript(OptionObject2015 sentOptObj, string abatabRequest)
         {
-            LogDebug.Debugger(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG] Abatab started.");
+            LogDebug.DebugContent(Settings.Default.DebugMode, "[DEBUG] Abatab started.", Settings.Default.DebugLogRoot, Assembly.GetExecutingAssembly().GetName().Name);
 
-            SessionData abatabSession = AbatabSettings.BuildSettings(sentOptionObject, abatabRequest);
+            SessionData abatabSession = AbatabSettings.BuildSettings(sentOptObj, abatabRequest);
 
             Roundhouse.ParseRequest(abatabSession);
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);

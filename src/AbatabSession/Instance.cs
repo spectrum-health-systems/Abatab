@@ -1,11 +1,10 @@
 ﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
  * Abatab                                                                                           v0.91.0
  * AbatabSession.csproj                                                                             v0.91.0
- * Instance.cs                                                                               b221009.083236
- * ================================ (c) 2016-2022 A Pretty Cool Program ================================ */
-
-/*
- */
+ * Instance.cs                                                                               b221009.090325
+ * --------------------------------------------------------------------------------------------------------
+ * Logic for Abatab sessions.
+ * ================================= (c)2016-2022 A Pretty Cool Program ================================ */
 
 using AbatabData;
 using AbatabLogging;
@@ -25,10 +24,11 @@ namespace AbatabSession
         //public static SessionData Build(OptionObject2015 sentOptObj, string abatabRequest)
         public static SessionData Build(OptionObject2015 sentOptObj, string abatabRequest, Dictionary<string, string> abatabSettings)
         {
-            LogDebug.Debugger(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"], "[DEBUG] Building session data.");
+            LogDebug.DebugContent(abatabSettings["DebugMode"], "[DEBUG] Building session data.", abatabSettings["DebugLogRoot"], Assembly.GetExecutingAssembly().GetName().Name);
 
             var abatabSession = new SessionData
             {
+                AbatabVer              = Assembly.GetEntryAssembly().GetName().Version.ToString(),
                 AbatabMode             = abatabSettings["AbatabMode"],
                 AbatabRoot             = abatabSettings["AbatabRoot"],
                 DebugMode              = abatabSettings["DebugMode"],
@@ -38,7 +38,7 @@ namespace AbatabSession
                 LoggingDelay           = abatabSettings["LoggingDelay"],
                 AvatarFallbackUserName = abatabSettings["AvatarFallbackUserName"],
                 SessionTimestamp       = $"{DateTime.Now:yyMMdd}",
-                SessionLogDir          = "",
+                SessionLogRoot         = "",
                 AbatabRequest          = abatabRequest.ToLower(),
                 AbatabModule           = "undefined",
                 AbatabCommand          = "undefined",
@@ -50,9 +50,9 @@ namespace AbatabSession
                 FinalOptObj            = new OptionObject2015()
             };
 
-            abatabSession.SessionLogDir = $@"{abatabSession.AbatabRoot}\logs\{abatabSession.SessionTimestamp}\{abatabSession.AvatarUserName}";
+            abatabSession.SessionLogRoot = $@"{abatabSession.AbatabRoot}\logs\{abatabSession.SessionTimestamp}\{abatabSession.AvatarUserName}";
 
-            AbatabSystem.Maintenance.VerifyDir(abatabSession.SessionLogDir);
+            AbatabSystem.Maintenance.VerifyDir(abatabSession.SessionLogRoot);
 
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 

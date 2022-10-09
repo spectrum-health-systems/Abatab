@@ -1,11 +1,11 @@
 ﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
  * Abatab                                                                                           v0.91.0
  * AbatabData.csproj                                                                                v0.91.0
- * SessionData.cs                                                                            b221009.083236
- * ================================ (c) 2016-2022 A Pretty Cool Program ================================ */
-
-/* The SessionData properties that contain all of the information/data Abatab needs to do it's job.
- */
+ * SessionData.cs                                                                            b221009.090325
+ * --------------------------------------------------------------------------------------------------------
+ * Defines the properties for the SessionData object, which contains all of the information/data that
+ * Abatab needs to do its job.
+ * ================================= (c)2016-2022 A Pretty Cool Program ================================ */
 
 using NTST.ScriptLinkService.Objects;
 
@@ -24,8 +24,9 @@ namespace AbatabData
         public string AvatarFallbackUserName { get; set; }
 
         // Runtime settings.
+        public string AbatabVer { get; set; }
         public string SessionTimestamp { get; set; }
-        public string SessionLogDir { get; set; }
+        public string SessionLogRoot { get; set; }
         public string AvatarUserName { get; set; }
         public string AbatabRequest { get; set; }
         public string AbatabModule { get; set; }
@@ -33,7 +34,7 @@ namespace AbatabData
         public string AbatabAction { get; set; }
         public string AbatabOption { get; set; }
 
-        // OptionObjects
+        // OptionObject details set at runtime.
         public OptionObject2015 SentOptObj { get; set; }
         public OptionObject2015 WorkOptObj { get; set; }
         public OptionObject2015 FinalOptObj { get; set; }

@@ -1,17 +1,36 @@
 # Abatab development notes
 
-## Debugging
+## Logging
+
+* How to enable/disable log event types
+
+### Debug logs
 
 * Debug logs with "[DEBUG]" are part of the source code. All other debug statements are temporary
+* Some debug statements should always be ther.
 * DebbuingDebug is only for debugging/development
+* Should not be enabled in production
 * Cases where paramaters are hardcoded
 
-## Tracing
+### Trace logs
 
+* Intended to show the flow of code, usually used during development
+* Should not be enabled in production
 * Trace logs are generally found at the beg/end of methods, and not in sub-methods
 * Cases where paramaters are hardcoded
 
+### Detailed information
 
+* TBD
+
+### Session information
+
+* Contains all information about the current session.
+* By default, is created at the end of each session.
+
+## Roundhouse
+
+* What these are.
 
 
 ## TESTING
@@ -43,7 +62,8 @@
 
 ### Abatab.asmx.cs
 
-* Most of the heavy lifting
+* Entry point
+* For the most part, this source code should remain relatively static, since most of the heavy lifting is done outside of the Abatab.csproj project. In the event that this code is modified, it is recommended that you clean/rebuild the entire Abatab solution.
 
 #### GetVersion()
 
@@ -59,6 +79,7 @@
 ### AbatabSettings.cs
 
 * Loads local configuration settings.
+* For the most part, this source code should remain relatively static. Whenever a setting is added/removed from Web.config, it needs to be added/removed here as well. In the event that this code is modified, it is recommended that you clean/rebuild the entire Abatab solution.
 
 #### LoadFromConfig()
 
@@ -68,14 +89,32 @@
 ### Roundhouse.cs
 
 * Determines which module gets the request
+* For the most part, this source code should remain relatively static. Whenever a new Abatab modules is added/removed, it needs to be added/removed here as well.In the event that this code is modified, it is recommended that you clean/rebuild the entire Abatab solution.
 
 #### ParseRequest()
 
 * Will require rebuilding the solution if modified.
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## AbatabData.csproj
 
-* Just data objects.
+* Just definitions of data objects.
 
 ### Session Data
 
