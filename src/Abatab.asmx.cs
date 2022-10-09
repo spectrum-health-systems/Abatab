@@ -39,7 +39,8 @@ namespace Abatab
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptObj, string abatabRequest)
         {
-            var test = sentOptObj.OptionUserId;
+            //var test = sentOptObj.OptionUserId;
+            var test = "ok";
 
             LogDebug.DebugContent(Settings.Default.DebugMode, "[DEBUG] Abatab started.", Settings.Default.DebugLogRoot, Assembly.GetExecutingAssembly().GetName().Name);
             LogDebug.DebugContent(Settings.Default.DebugMode, $"{test}", Settings.Default.DebugLogRoot, Assembly.GetExecutingAssembly().GetName().Name);
