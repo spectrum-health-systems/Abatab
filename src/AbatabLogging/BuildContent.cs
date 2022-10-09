@@ -1,11 +1,10 @@
 ﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
  * Abatab                                                                                           v0.91.0
  * AbatabLogging.csproj                                                                             v0.91.0
- * BuildContent.cs                                                                           b221009.083236
- * ================================ (c) 2016-2022 A Pretty Cool Program ================================ */
-
-/* Builds the various components of log file content.
- */
+ * BuildContent.cs                                                                           b221009.144127
+ * --------------------------------------------------------------------------------------------------------
+ * Builds the various components of a log file.
+ * ================================= (c)2016-2022 A Pretty Cool Program ================================ */
 
 using AbatabData;
 using NTST.ScriptLinkService.Objects;

@@ -1,11 +1,10 @@
 ﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
  * Abatab                                                                                           v0.91.0
  * AbatabSession.csproj                                                                             v0.91.0
- * Instance.cs                                                                               b221009.083236
- * ================================ (c) 2016-2022 A Pretty Cool Program ================================ */
-
-/*
- */
+ * Instance.cs                                                                               b221009.144127
+ * --------------------------------------------------------------------------------------------------------
+ * Logic for Abatab sessions.
+ * ================================= (c)2016-2022 A Pretty Cool Program ================================ */
 
 using AbatabData;
 using AbatabLogging;

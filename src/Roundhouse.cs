@@ -1,13 +1,12 @@
 ﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
  * Abatab                                                                                           v0.91.0
  * Abatab.csproj                                                                                    v0.91.0
- * Abatab.Roundhouse.cs                                                                      b221009.083236
- * ================================ (c) 2016-2022 A Pretty Cool Program ================================ */
-
-/* Parses the Abatab request, and determines where is should go. Whenever a new module is added, the entire
- * solution will need to be rebuilt. Adding functionality to a module will not require Abatab to be
- * rebuilt, however, only the module that is modified.
- */
+ * Abatab.Roundhouse.cs                                                                      b221009.144127
+ * --------------------------------------------------------------------------------------------------------
+ * When a ScriptLink event is executed in Avatar, an OptionObject (the information/data from Avatar that
+ * Abatab needs to do it's job) and script parameter (also referred to as the "Abatab request") are sent to
+ * Abatab. This class parses the request, and determines where the OptionObject should go for further work.
+ * ================================= (c)2016-2022 A Pretty Cool Program ================================ */
 
 using AbatabData;
 using AbatabLogging;

@@ -1,13 +1,10 @@
 ﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
  * Abatab                                                                                           v0.91.0
  * Abatab.csproj                                                                                    v0.91.0
- * AbatabSettings.cs                                                                         b221006.073240
- * ================================ (c) 2016-2022 A Pretty Cool Program ================================ */
-
-/* Logic to work with the local configuration settings found in Web.config. Whenever a setting is added or
- * removed from Web.config, it needs to be added/removed here. If this class is modified, the entire
- * solution will need to be rebuilt.
- */
+ * AbatabSettings.cs                                                                         b221009.144127
+ * --------------------------------------------------------------------------------------------------------
+ * Contains the logic to work with configuration settings found in the local Web.Config file.
+ * ================================= (c)2016-2022 A Pretty Cool Program ================================ */
 
 using Abatab.Properties;
 using AbatabData;

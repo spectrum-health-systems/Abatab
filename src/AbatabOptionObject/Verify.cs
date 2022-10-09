@@ -1,11 +1,12 @@
 ﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
  * Abatab                                                                                           v0.91.0
  * AbatabOptionObject.csproj                                                                        v0.91.0
- * Verify.cs                                                                                 b221009.083236
- * ================================ (c) 2016-2022 A Pretty Cool Program ================================ */
+ * Verify.cs                                                                                 b221009.144127
+ * --------------------------------------------------------------------------------------------------------
+ * Verify an OptionObject.
+ * ================================= (c)2016-2022 A Pretty Cool Program ================================ */
 
-/*
- */
+// Used?
 
 using NTST.ScriptLinkService.Objects;
 

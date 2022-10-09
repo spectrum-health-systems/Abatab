@@ -1,12 +1,14 @@
 ﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
  * Abatab                                                                                           v0.91.0
  * Abatab.csproj                                                                                    v0.91.0
- * Abatab.asmx.cs                                                                            b221009.083236
- * ================================ (c) 2016-2022 A Pretty Cool Program ================================ */
-
-/* Main entry point for Abatab. This should be pretty static, but if it is modified, it will require the
- * entire solution to be rebuilt.
- */
+ * Abatab.asmx.cs                                                                            b221009.144127
+ * --------------------------------------------------------------------------------------------------------
+ * Main entry point for Abatab.
+ *
+ * When a ScriptLink event is executed in Avatar, an OptionObject (the information/data from Avatar that
+ * Abatab needs to do it's job) and script parameter (also referred to as the "Abatab request") are sent to
+ * here.
+ * ================================= (c)2016-2022 A Pretty Cool Program ================================ */
 
 using Abatab.Properties;
 using AbatabData;
