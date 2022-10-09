@@ -36,14 +36,14 @@ namespace AbatabLogging
 {
     public class LogDebug
     {
-        /// <summary>Basic debugging for a module.</summary>
-        /// <param name="debugMode"></param>
-        /// <param name="debugMsg"></param>
-        /// <param name="debugLogRoot"></param>
-        /// <param name="exeAssembly"></param>
-        /// <param name="callPath"></param>
-        /// <param name="callMember"></param>
-        /// <param name="callLine"></param>
+        /// <summary>Basic debugging.</summary>
+        /// <param name="debugMode">Debug log mode.</param>
+        /// <param name="debugMsg">Debug log message.</param>
+        /// <param name="debugLogRoot">Debug log root directory.</param>
+        /// <param name="exeAssembly">Name of executing assembly.</param>
+        /// <param name="callPath">Filename of where the log is coming from.</param>
+        /// <param name="callMember">Method of where the log is coming from.</param>
+        /// <param name="callLine">File line of where the log is coming from.</param>
         public static void Debugger(string debugMode, string debugMsg = "", string debugLogRoot = "", string exeAssembly = "", [CallerFilePath] string callPath = "", [CallerMemberName] string callMember = "", [CallerLineNumber] int callLine = 0)
         {
 
@@ -52,53 +52,59 @@ namespace AbatabLogging
             {
                 const bool debugDebugger = false;
 
+                DebugTheDebugger(debugDebugger, debugLogRoot, "Setting debugLogRoot.");
+
                 if (string.IsNullOrWhiteSpace(debugLogRoot))
                 {
                     debugLogRoot = @"C:\AvatoolWebService\Abatab_UAT\logs\debug";
                 }
 
-                var debugLogDir = $@"{debugLogRoot}\{DateTime.Now:yyMMdd}"; // TODO Move this.
+                DebugTheDebugger(debugDebugger, debugLogRoot, "Creating debugLogRoot.");
+
+                var debugLogDir = $@"{debugLogRoot}\{DateTime.Now:yyMMdd}"; // TODO Move this to where other dirs are created.
                 _=Directory.CreateDirectory(debugLogDir);
 
-                DebugDebugger(debugDebugger, debugLogDir, "001");
+                DebugTheDebugger(debugDebugger, debugLogRoot, "Entering loop.");
 
                 if (string.Equals(debugMode, "on", StringComparison.OrdinalIgnoreCase))
                 {
-                    DebugDebugger(debugDebugger, debugLogDir, "002");
+                    DebugTheDebugger(debugDebugger, debugLogRoot, "Sleeping 100ms");
 
-                    // NOTE Delay creating a debug log by 100ms, just to make sure we don't overwrite an existing log.
+                    /* Delay creating a debug log by 100ms, just to make sure we don't overwrite an
+                     * existing log. This will have a negative affect on performance.
+                     */
                     Thread.Sleep(100);
 
-                    DebugDebugger(debugDebugger, debugLogDir, "003");
+                    DebugTheDebugger(debugDebugger, debugLogRoot, "Building debug log content.");
 
                     var debugContent = BuildContent.Debug(exeAssembly, debugMode, debugMsg, callPath, callMember, callLine);
 
-                    DebugDebugger(debugDebugger, debugLogDir, "004");
+                    DebugTheDebugger(debugDebugger, debugLogRoot, "Writing debug log content to file.");
 
                     File.WriteAllText($@"{debugLogDir}\{DateTime.Now:HHmmssfffffff}-{exeAssembly}-{Path.GetFileName(callPath)}-{callMember}-{callLine}.debug", debugContent);
 
-                    DebugDebugger(debugDebugger, debugLogDir, "005");
+                    DebugTheDebugger(debugDebugger, debugLogRoot, "Debug log content written.");
                 }
 
-                DebugDebugger(debugDebugger, debugLogDir, "006");
+                DebugTheDebugger(debugDebugger, debugLogRoot, "Exited loop.");
             }
         }
 
         /// <summary>Debug the debugger.</summary>
-        /// <param name="debugDebugger"></param>
-        /// <param name="debugLogDir"></param>
-        /// <param name="debugMsg"></param>
-        private static void DebugDebugger(bool debugDebugger, string debugLogDir, string debugMsg)
+        /// <param name="debugDebugger">Flag that determines if the debugger should be debugged.</param>
+        /// <param name="debugLogRoot">Debug log root directory.</param>
+        /// <param name="debugDebuggerMsg">Debugger log message.</param>
+        private static void DebugTheDebugger(bool debugDebugger, string debugLogRoot, string debugDebuggerMsg)
         {
-            /* This will significantly slow down Abatab, and should only be used when developing/debugging.
-             */
             if (debugDebugger)
             {
+                /* Delay creating a debug log by 1000ms, just to make sure we don't overwrite an
+                 * existing log. This will have a significant negative affect on performance.
+                 */
                 Thread.Sleep(1000);
 
-                File.WriteAllText($@"{debugLogDir}\{DateTime.Now:HHmmssfffffff}-Debugger[{debugMsg}].debug", debugMsg);
+                File.WriteAllText($@"{debugLogRoot}\{DateTime.Now:HHmmssfffffff}-Debugger[{debugDebuggerMsg}].debug", debugDebuggerMsg);
             }
         }
-
     }
 }
