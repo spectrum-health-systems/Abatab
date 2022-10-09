@@ -37,11 +37,11 @@ namespace Abatab
         /// <param name="abatabRequest">Request from Avatar.</param>
         /// <returns>Finalized OptionObject2015 that will be returned to Avatar.</returns>
         [WebMethod]
-        public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string abatabRequest)
+        public OptionObject2015 RunScript(OptionObject2015 sentOptObj, string abatabRequest)
         {
             LogDebug.DebugContent(Settings.Default.DebugMode, "[DEBUG] Abatab started.", Settings.Default.DebugLogRoot, Assembly.GetExecutingAssembly().GetName().Name);
-            LogDebug.DebugContent("on", sentOptionObject.OptionUserId, @"C:\AvatoolWebService\Abatab_UAT\logs\debug\test.debug", Assembly.GetExecutingAssembly().GetName().Name);
-            SessionData abatabSession = AbatabSettings.BuildSettings(sentOptionObject, abatabRequest);
+            LogDebug.DebugContent("on", sentOptObj.OptionUserId, @"C:\AvatoolWebService\Abatab_UAT\logs\debug\test.debug", Assembly.GetExecutingAssembly().GetName().Name);
+            SessionData abatabSession = AbatabSettings.BuildSettings(sentOptObj, abatabRequest);
 
             Roundhouse.ParseRequest(abatabSession);
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
