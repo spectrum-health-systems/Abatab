@@ -164,10 +164,10 @@ namespace AbatabLogging
                                 $"============================{Environment.NewLine}" +
                                 $"Module details{Environment.NewLine}" +
                                 $"============================" +
-                                $"{BodyModuleDetail(abatabSession, "date")}{Environment.NewLine}" +
-                                $"{BodyModuleDetail(abatabSession, "quickmedorder")}{Environment.NewLine}" +
-                                $"{BodyModuleDetail(abatabSession, "prototype")}{Environment.NewLine}" +
-                                $"{BodyModuleDetail(abatabSession, "testing")}{Environment.NewLine}" +
+                                $"{BodyModuleDetail(abatabSession, "Date")}{Environment.NewLine}" +
+                                $"{BodyModuleDetail(abatabSession, "QuickMedOrder")}{Environment.NewLine}" +
+                                $"{BodyModuleDetail(abatabSession, "Prototype")}{Environment.NewLine}" +
+                                $"{BodyModuleDetail(abatabSession, "Testing")}{Environment.NewLine}" +
                                 $"{Environment.NewLine}" +
                                 $"===================={Environment.NewLine}" +
                                 $"OptionObject details{Environment.NewLine}" +
@@ -185,7 +185,7 @@ namespace AbatabLogging
             var moduleHead = $"{Environment.NewLine}" +
                              $"------------{Environment.NewLine}" +
                              $"{modName}{Environment.NewLine}" +
-                             $"------------";
+                             $"------------{Environment.NewLine}";
 
             var moduleDetail = "";
 
@@ -228,10 +228,9 @@ namespace AbatabLogging
             var optObjHead = $"{Environment.NewLine}" +
                              $"------------{Environment.NewLine}" +
                              $"{optObjType}{Environment.NewLine}" +
-                             $"------------";
+                             $"------------{Environment.NewLine}";
 
-            var optObjDetail = $"{Environment.NewLine}" +
-                               $"EntityID:          {thisOptObj.EntityID}{Environment.NewLine}" +
+            var optObjDetail = $"EntityID:          {thisOptObj.EntityID}{Environment.NewLine}" +
                                $"Facility:          {thisOptObj.Facility}{Environment.NewLine}" +
                                $"NamespaceName:     {thisOptObj.NamespaceName}{Environment.NewLine}" +
                                $"OptionId:          {thisOptObj.OptionId}{Environment.NewLine}" +
