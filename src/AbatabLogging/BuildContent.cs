@@ -30,16 +30,16 @@ namespace AbatabLogging
             LogDebug.DebugContent(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Creating log components..");
 
             var logHead   = ComponentHead(logMsg);
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+            //LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 
             var logDetail = ComponentDetail(eventType, exeAssembly, callPath, callMember, callLine);
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+            //LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 
             var logBody   = ComponentBody(eventType, abatabSession);
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+            //LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 
             var logFoot   = ComponentFoot();
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+            //LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 
             return $"{logHead}" +
                    $"{logDetail}" +
