@@ -82,7 +82,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="AbatabRoundhouse.cs" />
+    <Compile Include="Roundhouse.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
