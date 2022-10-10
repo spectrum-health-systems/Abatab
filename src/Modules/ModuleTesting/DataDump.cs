@@ -21,7 +21,7 @@ namespace ModuleTesting
         {
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 
-            LogEvent.SessionInformation(abatabSession, "Testing data dump functionality.");
+            LogEvent.SessionDetail(abatabSession, "Testing data dump functionality.");
         }
     }
 }

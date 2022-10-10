@@ -1,11 +1,10 @@
 ﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
  * Abatab                                                                                           v0.91.0
  * AbatabLogging.csproj                                                                             v0.91.0
- * BuildPath.cs                                                                              b221009.083236
- * ================================ (c) 2016-2022 A Pretty Cool Program ================================ */
-
-/* Builds the log file path.
- */
+ * BuildPath.cs                                                                              b221009.090325
+ * --------------------------------------------------------------------------------------------------------
+ * Builds the log file path.
+ * ================================= (c)2016-2022 A Pretty Cool Program ================================ */
 
 using System;
 using System.IO;
@@ -15,17 +14,17 @@ namespace AbatabLogging
     public class BuildPath
     {
 
-        /// <summary></summary>
-        /// <param name="eventType"></param>
-        /// <param name="sessionLogDir"></param>
-        /// <param name="executingAssemblyName"></param>
-        /// <param name="callerFilePath"></param>
-        /// <param name="callerMemberName"></param>
-        /// <param name="callerLine"></param>
-        /// <returns></returns>
-        public static string FullPath(string eventType, string sessionLogDir, string executingAssemblyName = "", string callerFilePath = "", string callerMemberName = "", int callerLine = 0)
+        /// <summary>Build log file path.</summary>
+        /// <param name="eventType">Log type.</param>
+        /// <param name="sessionLogRoot"></param>
+        /// <param name="exeAssembly">Name of executing assembly.</param>
+        /// <param name="callPath">Filename of where the log is coming from.</param>
+        /// <param name="callMember">Method of where the log is coming from.</param>
+        /// <param name="callLine">File line of where the log is coming from.</param>
+        /// <returns>Log file path.</returns>
+        public static string FullPath(string eventType, string sessionLogRoot, string exeAssembly = "", string callPath = "", string callMember = "", int callLine = 0)
         {
-            var fullPath = sessionLogDir;
+            var fullPath = sessionLogRoot;
 
             if (eventType == "trace")
             {
@@ -35,14 +34,14 @@ namespace AbatabLogging
 
             fullPath += $@"\{DateTime.Now:HHmmss.fffffff}";
 
-            if (!string.IsNullOrWhiteSpace(executingAssemblyName))
+            if (!string.IsNullOrWhiteSpace(exeAssembly))
             {
-                fullPath += $"-{executingAssemblyName}";
+                fullPath += $"-{exeAssembly}";
             }
 
-            if (!string.IsNullOrWhiteSpace(callerFilePath))
+            if (!string.IsNullOrWhiteSpace(callPath))
             {
-                fullPath += $"-{Path.GetFileName(callerFilePath)}-{callerMemberName}-{callerLine}";
+                fullPath += $"-{Path.GetFileName(callPath)}-{callMember}-{callLine}";
             }
 
             return $"{fullPath}.{eventType}";

@@ -1,11 +1,10 @@
 ﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
  * Abatab                                                                                           v0.91.0
  * AbatabLogging.csproj                                                                             v0.91.0
- * LogEvent.cs                                                                               b221009.083236
- * ================================ (c) 2016-2022 A Pretty Cool Program ================================ */
-
-/* Logic for log events.
- */
+ * LogEvent.cs                                                                               b221009.090325
+ * --------------------------------------------------------------------------------------------------------
+ * Build a log files.
+ * ================================= (c)2016-2022 A Pretty Cool Program ================================ */
 
 using AbatabData;
 using System;
@@ -18,17 +17,17 @@ namespace AbatabLogging
     {
         /// <summary>Build a OptionObject information log.</summary>
         /// <param name="abatabSession"></param>
-        /// <param name="logMessage"></param>
-        public static void AllOptionObjectInformation(SessionData abatabSession, string logMessage = "OptionObject information log.")
+        /// <param name="logMsg"></param>
+        public static void AllOptionObjectInformation(SessionData abatabSession, string logMsg = "OptionObject information log.")
         {
-            BuildContent.LogComponents("allOptObjInformation", abatabSession, logMessage);
+            BuildContent.LogComponents("allOptObjInformation", abatabSession, logMsg);
         }
 
 
-        /// <summary>Build a session information log.</summary>
+        /// <summary>Build a session detail log.</summary>
         /// <param name="abatabSession">Abatab session configuration settings.</param>
-        /// <param name="logMessage">Message for the logfile</param>
-        public static void SessionInformation(SessionData abatabSession, string logMessage = "Session information log.")
+        /// <param name="logMsg">Message for the logfile</param>
+        public static void SessionDetail(SessionData abatabSession, string logMsg = "Session detail log.")
         {
             LogDebug.DebugContent(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Creating session log.");
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, abatabSession.FinalOptObj.ErrorMesg);
@@ -37,7 +36,7 @@ namespace AbatabLogging
             {
                 LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, abatabSession.FinalOptObj.ErrorMesg);
                 var logPath    = BuildPath.FullPath("session", abatabSession.SessionLogRoot);
-                var logContent = BuildContent.LogComponents("sessionInformation", abatabSession, logMessage);
+                var logContent = BuildContent.LogComponents("sessionInformation", abatabSession, logMsg);
 
                 WriteFile.LocalFile(logPath, logContent, Convert.ToInt32(abatabSession.LoggingDelay));
             }
@@ -45,21 +44,21 @@ namespace AbatabLogging
         }
 
         /// <summary>Build a trace log.</summary>
-        /// <param name="executingAssemblyName">Name of executing assembly.</param>
+        /// <param name="exeAssembly">Name of executing assembly.</param>
         /// <param name="abatabSession">Abatab session configuration settings.</param>
-        /// <param name="logMessage">Message for the logfile</param>
-        /// <param name="callerFilePath">Filename of where the log is coming from.</param>
-        /// <param name="callerMemberName">Method of where the log is coming from.</param>
+        /// <param name="logMsg">Message for the logfile</param>
+        /// <param name="callerPath">Filename of where the log is coming from.</param>
+        /// <param name="callerMember">Method of where the log is coming from.</param>
         /// <param name="callerLine">File line of where the log is coming from.</param>
-        public static void Trace(SessionData abatabSession, string executingAssemblyName, string logMessage = "Trace log start...", [CallerFilePath] string callerFilePath = "", [CallerMemberName] string callerMemberName = "", [CallerLineNumber] int callerLine = 0)
+        public static void Trace(SessionData abatabSession, string exeAssembly, string logMsg = "Trace log start...", [CallerFilePath] string callPath = "", [CallerMemberName] string callMember = "", [CallerLineNumber] int callLine = 0)
         {
             LogDebug.DebugContent(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Creating trace log.");
 
             if (abatabSession.LoggingMode == "all" || abatabSession.LoggingMode.Contains("trace"))
             {
-                var logPath    = BuildPath.FullPath("trace", abatabSession.SessionLogRoot, executingAssemblyName, callerFilePath, callerMemberName, callerLine);
+                var logPath    = BuildPath.FullPath("trace", abatabSession.SessionLogRoot, exeAssembly, callPath, callMember, callLine);
 
-                var logContent = BuildContent.LogComponents("trace", abatabSession, logMessage, executingAssemblyName, callerFilePath, callerMemberName, callerLine);
+                var logContent = BuildContent.LogComponents("trace", abatabSession, logMsg, exeAssembly, callPath, callMember, callLine);
 
                 WriteFile.LocalFile(logPath, logContent, Convert.ToInt32(abatabSession.LoggingDelay));
             }
