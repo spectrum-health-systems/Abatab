@@ -48,6 +48,7 @@ namespace ModuleDose
                 case "verifyundermaxinc":
                     LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
                     Percentage.VerifyUnderMaxInc(abatabSession);
+                    AbatabOptionObject.FinalObj.Finalize(abatabSession);
                     break;
 
                 default:

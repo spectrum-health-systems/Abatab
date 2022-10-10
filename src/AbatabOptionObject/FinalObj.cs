@@ -16,7 +16,21 @@ namespace AbatabOptionObject
     {
         /// <summary>Finalizes an OptionObject for passthrough mode.</summary>
         /// <param name="abatabSession">Abatab session settings.</param>
-        public static void BuildPassthrough(SessionData abatabSession)
+        public static void Finalize(SessionData abatabSession)
+        {
+            switch (abatabSession.AbatabMode.ToLower())
+            {
+
+                case "passthrough":
+                    ForPassthrough(abatabSession);
+                    break;
+
+                default:
+                    break;
+            }
+        }
+
+        public static void ForPassthrough(SessionData abatabSession)
         {
             Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Finalizing finalOptObj");
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
