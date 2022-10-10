@@ -24,7 +24,6 @@ namespace AbatabData
         public string AvatarFallbackUserName { get; set; }
 
         // Runtime settings.
-        public string AbatabVer { get; set; }
         public string SessionTimestamp { get; set; }
         public string SessionLogRoot { get; set; }
         public string AvatarUserName { get; set; }

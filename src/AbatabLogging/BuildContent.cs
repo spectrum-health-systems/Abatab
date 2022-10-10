@@ -127,7 +127,6 @@ namespace AbatabLogging
             // TODO - Verify this works, especially the modification stuff.
             var sessionDetail = $"{Environment.NewLine}" +
                                 $"Abatab{Environment.NewLine}" +
-                                $"    Version:                {abatabSession.AbatabVer}{Environment.NewLine}" +
                                 $"    Mode:                   {abatabSession.AbatabMode}{Environment.NewLine}" +
                                 $"    Root:                   {abatabSession.AbatabRoot}{Environment.NewLine}" +
                                 $"Debugging{Environment.NewLine}" +
