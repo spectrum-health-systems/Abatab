@@ -10,7 +10,7 @@ using AbatabData;
 using AbatabLogging;
 using System.Reflection;
 
-namespace ModuleDose
+namespace ModQuickMedOrder
 {
     public class Roundhouse
     {
@@ -23,9 +23,9 @@ namespace ModuleDose
 
             switch (abatabSession.AbatabCommand.ToLower())
             {
-                case "percentage":
+                case "dose":
                     LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
-                    ParseCommandPercentage(abatabSession);
+                    ParseCommandDose(abatabSession);
                     break;
 
                 default:
@@ -39,7 +39,7 @@ namespace ModuleDose
 
         /// <summary>Do a data dump.</summary>
         /// <param name="abatabSession">Abatab session information.</param>
-        private static void ParseCommandPercentage(SessionData abatabSession)
+        private static void ParseCommandDose(SessionData abatabSession)
         {
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 
