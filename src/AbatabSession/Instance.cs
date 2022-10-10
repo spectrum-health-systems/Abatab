@@ -1,11 +1,10 @@
 ﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
  * Abatab                                                                                           v0.91.0
  * AbatabSession.csproj                                                                             v0.91.0
- * Instance.cs                                                                               b221009.083236
- * ================================ (c) 2016-2022 A Pretty Cool Program ================================ */
-
-/*
- */
+ * Instance.cs                                                                               b221009.090325
+ * --------------------------------------------------------------------------------------------------------
+ * Logic for Abatab sessions.
+ * ================================= (c)2016-2022 A Pretty Cool Program ================================ */
 
 using AbatabData;
 using AbatabLogging;
@@ -29,6 +28,7 @@ namespace AbatabSession
 
             var abatabSession = new SessionData
             {
+                AbatabVer              = Assembly.GetEntryAssembly().GetName().Version.ToString(),
                 AbatabMode             = abatabSettings["AbatabMode"],
                 AbatabRoot             = abatabSettings["AbatabRoot"],
                 DebugMode              = abatabSettings["DebugMode"],
@@ -51,9 +51,9 @@ namespace AbatabSession
             };
 
             abatabSession.SessionLogRoot = $@"{abatabSession.AbatabRoot}\logs\{abatabSession.SessionTimestamp}\{abatabSession.AvatarUserName}";
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 
             AbatabSystem.Maintenance.VerifyDir(abatabSession.SessionLogRoot);
-
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 
             abatabSession.AvatarUserName = VerifyAvatarUserName(abatabSession.AvatarUserName, abatabSession.AvatarFallbackUserName);
@@ -66,18 +66,18 @@ namespace AbatabSession
         }
 
         /// <summary>Verify the session AvatarUserName is valid.</summary>
-        /// <param name="avatarUserName"></param>
-        /// <param name="avatarFallbackUserName"></param>
+        /// <param name="avatarUserName">Avatar user name sent from Avatar.</param>
+        /// <param name="fallbackAvatarUserName">Fallback Avatar user name from Web.config.</param>
         /// <returns>Session object with verified AvatarUserName</returns>
-        private static string VerifyAvatarUserName(string avatarUserName, string avatarFallbackUserName)
+        private static string VerifyAvatarUserName(string avatarUserName, string fallbackAvatarUserName)
         {
             return string.IsNullOrWhiteSpace(avatarUserName)
-                ? avatarFallbackUserName
+                ? fallbackAvatarUserName
                 : avatarUserName;
         }
 
         /// <summary>Parse the abatabRequest into separate components.</summary>
-        /// <param name="abatabSession"></param>
+        /// <param name="abatabSession">Abatab session settings.</param>
         private static void ParseAbatabRequest(SessionData abatabSession)
         {
             string[] req = abatabSession.AbatabRequest.Split('-');
