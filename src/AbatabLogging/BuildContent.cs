@@ -138,10 +138,10 @@ namespace AbatabLogging
                                 $"Avatar username:     {abatabSession.AvatarUserName}{Environment.NewLine}" +
                                 $"Fallback username:   {abatabSession.AvatarFallbackUserName}{Environment.NewLine}" +
                                 $"Abatab request:      {abatabSession.AbatabRequest}{Environment.NewLine}" +
-                                $"    Request module:  {abatabSession.AbatabModule}{Environment.NewLine}" +
-                                $"    Request command: {abatabSession.AbatabCommand}{Environment.NewLine}" +
-                                $"    Request action:  {abatabSession.AbatabAction}{Environment.NewLine}" +
-                                $"    Request option:  {abatabSession.AbatabOption}{Environment.NewLine}" +
+                                $"    Module:          {abatabSession.AbatabModule}{Environment.NewLine}" +
+                                $"    Command:         {abatabSession.AbatabCommand}{Environment.NewLine}" +
+                                $"    Action:          {abatabSession.AbatabAction}{Environment.NewLine}" +
+                                $"    Option:          {abatabSession.AbatabOption}{Environment.NewLine}" +
                                 $"{Environment.NewLine}" +
                                 $"===================={Environment.NewLine}" +
                                 $"OptionObject details{Environment.NewLine}" +

@@ -8,15 +8,21 @@
 
 using AbatabData;
 using AbatabLogging;
+using NTST.ScriptLinkService.Objects;
 using System.Reflection;
 
 namespace AbatabOptionObject
 {
     public class FinalObj
     {
+        public static OptionObject2015 BuildFinalObj(OptionObject2015 sentOptObj)
+        {
+            return sentOptObj;
+        }
+
         /// <summary>Finalizes an OptionObject for passthrough mode.</summary>
         /// <param name="abatabSession">Abatab session settings.</param>
-        public static void ForPassthrough(SessionData abatabSession)
+        public static void BuildPassthrough(SessionData abatabSession)
         {
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 

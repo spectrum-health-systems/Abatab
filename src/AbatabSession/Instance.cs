@@ -44,8 +44,8 @@ namespace AbatabSession
                 AbatabOption           = "undefined",
                 AvatarUserName         = sentOptObj.OptionUserId,
                 SentOptObj             = sentOptObj,
-                WorkOptObj             = new OptionObject2015(),
-                FinalOptObj            = new OptionObject2015()
+                WorkOptObj             = AbatabOptionObject.WorkObj.BuildWorkObj(sentOptObj),
+                FinalOptObj            = AbatabOptionObject.FinalObj.BuildFinalObj(sentOptObj)
             };
 
             abatabSession.SessionLogRoot = $@"{abatabSession.AbatabRoot}\logs\{abatabSession.SessionTimestamp}\{abatabSession.AvatarUserName}";

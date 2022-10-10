@@ -58,6 +58,10 @@
       <Project>{a4467424-56e0-4260-bb21-d98263d7aefd}</Project>
       <Name>AbatabLogging</Name>
     </ProjectReference>
+    <ProjectReference Include="..\AbatabOptionObject\AbatabOptionObject.csproj">
+      <Project>{2741df45-7db8-4bea-89b4-4a70c7114192}</Project>
+      <Name>AbatabOptionObject</Name>
+    </ProjectReference>
     <ProjectReference Include="..\AbatabSystem\AbatabSystem.csproj">
       <Project>{212a533f-4074-4e6e-a994-9d5db850bf8e}</Project>
       <Name>AbatabSystem</Name>

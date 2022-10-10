@@ -23,7 +23,6 @@ namespace AbatabLogging
             BuildContent.LogComponents("allOptObjInformation", abatabSession, logMsg);
         }
 
-
         /// <summary>Build a session detail log.</summary>
         /// <param name="abatabSession">Abatab session configuration settings.</param>
         /// <param name="logMsg">Message for the logfile</param>
@@ -40,7 +39,6 @@ namespace AbatabLogging
 
                 WriteFile.LocalFile(logPath, logContent, Convert.ToInt32(abatabSession.LoggingDelay));
             }
-
         }
 
         /// <summary>Build a trace log.</summary>
