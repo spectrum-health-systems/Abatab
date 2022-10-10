@@ -9,8 +9,8 @@
 /* Logging is done a little differently in AbatabLogging.csproj, since trying to create logs using the same
  * code that creates  logs results in strange behavior. For the most part, LogEvent.Trace() is replaced
  * with Debugger.BuildDebugLog(), although in some cases log files aren't written at all. This makes it a
- * little difficult to troubleshoot logging, which is why it's a good idea to test the logging funcionality
- * extensively prior to deploying to production.
+ * little difficult to troubleshoot logging, which is why it's a good idea to test the logging
+ * functionality extensively prior to deploying to production.
  */
 
 using AbatabData;
@@ -22,17 +22,37 @@ namespace AbatabLogging
 {
     public class LogEvent
     {
+
+        public static void ModQuickMedOrder(SessionData abatabSession, string logMsg = "QuickMedOrder detail log.")
+        {
+            Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Creating QuickMedOrder detail log.");
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+
+            if (abatabSession.LoggingMode == "all" || abatabSession.LoggingMode.Contains("quickmedorder"))
+            {
+                LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+
+                var logPath    = BuildPath.FullPath("quickmedorder", abatabSession.SessionLogRoot);
+                var logContent = BuildContent.LogComponents("quickmedorder", abatabSession, logMsg);
+
+                WriteFile.LocalFile(logPath, logContent, Convert.ToInt32(abatabSession.LoggingDelay));
+            }
+
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+        }
+
+
         /// <summary>Build a session detail log.</summary>
         /// <param name="abatabSession">Abatab session configuration settings.</param>
         /// <param name="logMsg">Message for the logfile</param>
         public static void Session(SessionData abatabSession, string logMsg = "Session detail log.")
         {
             Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Creating session log.");
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, abatabSession.FinalOptObj.ErrorMesg);
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 
             if (abatabSession.LoggingMode == "all" || abatabSession.LoggingMode.Contains("session"))
             {
-                LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, abatabSession.FinalOptObj.ErrorMesg);
+                LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 
                 var logPath    = BuildPath.FullPath("session", abatabSession.SessionLogRoot);
                 var logContent = BuildContent.LogComponents("session", abatabSession, logMsg);
@@ -40,7 +60,7 @@ namespace AbatabLogging
                 WriteFile.LocalFile(logPath, logContent, Convert.ToInt32(abatabSession.LoggingDelay));
             }
 
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, abatabSession.FinalOptObj.ErrorMesg);
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
         }
 
         /// <summary>Build a trace log.</summary>

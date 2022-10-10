@@ -16,16 +16,16 @@ namespace ModuleTesting
     {
         /// <summary>Parse the Abatab request command.</summary>
         /// <param name="abatabSession">Abatab session information.</param>
-        public static void ParseCommand(SessionData abatabSession)
+        public static void ParseRequest(SessionData abatabSession)
         {
-            Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] PArsing Testing Module command.");
+            Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Parsing Testing Module command.");
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 
             switch (abatabSession.AbatabCommand)
             {
                 case "datadump":
                     LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
-                    ParseDataDump(abatabSession);
+                    ParseCommandDataDump(abatabSession);
                     break;
 
                 default:
@@ -39,7 +39,7 @@ namespace ModuleTesting
 
         /// <summary>Do a data dump.</summary>
         /// <param name="abatabSession">Abatab session information.</param>
-        private static void ParseDataDump(SessionData abatabSession)
+        private static void ParseCommandDataDump(SessionData abatabSession)
         {
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 

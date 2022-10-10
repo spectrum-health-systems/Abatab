@@ -31,6 +31,7 @@ namespace AbatabData
         public string ModQuickMedOrderPrevDosePrefix { get; set; }
         public string ModQuickMedOrderPrevDoseSuffix { get; set; }
         public string ModQuickMedOrderDosePercentMaxInc { get; set; }
+        public QuickMedOrderData ModQuickMedOrderData { get; set; }
 
         // Web.config: ModulePrototype
         public string ModPrototypeMode { get; set; }
@@ -52,5 +53,19 @@ namespace AbatabData
         public OptionObject2015 SentOptObj { get; set; }
         public OptionObject2015 WorkOptObj { get; set; }
         public OptionObject2015 FinalOptObj { get; set; }
+    }
+
+    public class QuickMedOrderData
+    {
+        public string DosageOneFieldId { get; set; }
+        public bool FoundDosageOneFieldId { get; set; }
+        public string CurrentDose { get; set; }
+        public string OrderTypeFieldId { get; set; }
+        public bool FoundOrderTypeFieldId { get; set; }
+        public string OrderType { get; set; }
+        public string LastOrderScheduleFieldId { get; set; }
+        public bool FoundLastOrderScheduleFieldId { get; set; }
+        public string LastOrderScheduleText { get; set; }
+        public bool FoundAllRequiredFieldIds { get; set; }
     }
 }

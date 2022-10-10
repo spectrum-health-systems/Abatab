@@ -33,7 +33,7 @@ namespace AbatabLogging
         {
             var fullPath = sessionLogRoot;
 
-            if (eventType == "trace")
+            if (eventType != "session")
             {
                 fullPath += $@"\{eventType}";
                 AbatabSystem.Maintenance.VerifyDir(fullPath);
