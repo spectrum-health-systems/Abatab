@@ -1,7 +1,7 @@
 ﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
- * Abatab                                                                                           v0.91.0
- * AbatabSession.csproj                                                                             v0.91.0
- * Instance.cs                                                                               b221010.115103
+ * Abatab                                                                                           v0.92.0
+ * AbatabSession.csproj                                                                             v0.92.0
+ * Instance.cs                                                                               b221010.115437
  * --------------------------------------------------------------------------------------------------------
  * Logic for Abatab sessions.
  * ================================= (c)2016-2022 A Pretty Cool Program ================================ */
