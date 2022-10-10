@@ -118,17 +118,25 @@
       <Project>{5fcad3f6-0aa9-4bee-b390-097a6832568e}</Project>
       <Name>AbatabSession</Name>
     </ProjectReference>
-    <ProjectReference Include="Modules\ModuleDate\ModuleDate.csproj">
-      <Project>{8143e2a4-e482-4d41-8d05-3eff62185964}</Project>
-      <Name>ModuleDate</Name>
+    <ProjectReference Include="Modules\ModCommon\ModCommon.csproj">
+      <Project>{cbd27c27-b3cd-455e-af5d-4749ca219d53}</Project>
+      <Name>ModCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="Modules\ModPrototype\ModPrototype.csproj">
+      <Project>{312ec2a5-27d6-4abf-8697-022db3123933}</Project>
+      <Name>ModPrototype</Name>
+    </ProjectReference>
+    <ProjectReference Include="Modules\ModQuickMedOrder\ModQuickMedOrder.csproj">
+      <Project>{2b511742-bd1e-4600-a041-7229942f4672}</Project>
+      <Name>ModQuickMedOrder</Name>
+    </ProjectReference>
+    <ProjectReference Include="Modules\ModTesting\ModTesting.csproj">
+      <Project>{62d98fc0-0a8d-4278-a96b-c9acefb79ef3}</Project>
+      <Name>ModTesting</Name>
     </ProjectReference>
     <ProjectReference Include="Modules\ModuleDose\ModuleQuickMedOrder.csproj">
       <Project>{b1f06ae6-91ef-46e5-850f-2933e0273932}</Project>
       <Name>ModuleQuickMedOrder</Name>
-    </ProjectReference>
-    <ProjectReference Include="Modules\ModuleTesting\ModuleTesting.csproj">
-      <Project>{c7c8afa2-927b-416f-9cf5-d12ec768ae26}</Project>
-      <Name>ModuleTesting</Name>
     </ProjectReference>
     <ProjectReference Include="NTST.ScriptLinkService.Objects\NTST.ScriptLinkService.Objects.vbproj">
       <Project>{8a8a6089-3286-42e6-9f76-b61784709654}</Project>
