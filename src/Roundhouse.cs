@@ -3,9 +3,7 @@
  * Abatab.csproj                                                                                    v0.91.0
  * Abatab.Roundhouse.cs                                                                      b221010.102030
  * --------------------------------------------------------------------------------------------------------
- * When a ScriptLink event is executed in Avatar, an OptionObject (the information/data from Avatar that
- * Abatab needs to do it's job) and script parameter (also referred to as the "Abatab request") are sent to
- * Abatab. This class parses the request, and determines where the OptionObject should go for further work.
+ * Determines where the sentOptionObject should go for further work.
  * ================================= (c)2016-2022 A Pretty Cool Program ================================ */
 
 using AbatabData;
@@ -26,14 +24,15 @@ namespace Abatab
             switch (abatabSession.AbatabModule)
             {
                 case "date":
-                    // TBD
+                    LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
                     break;
 
                 case "dose":
-                    // TBD
+                    LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
                     break;
 
                 case "testing":
+                    LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
                     ModuleTesting.Roundhouse.ParseCommand(abatabSession);
                     break;
 

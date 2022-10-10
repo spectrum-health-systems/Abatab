@@ -30,9 +30,16 @@ namespace AbatabLogging
             LogDebug.DebugContent(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Creating log components..");
 
             var logHead   = ComponentHead(logMsg);
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+
             var logDetail = ComponentDetail(eventType, exeAssembly, callPath, callMember, callLine);
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+
             var logBody   = ComponentBody(eventType, abatabSession);
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+
             var logFoot   = ComponentFoot();
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 
             return $"{logHead}" +
                    $"{logDetail}" +
@@ -50,6 +57,9 @@ namespace AbatabLogging
         /// <returns>Content for a debug log file.</returns>
         public static string DebugComponents(string exeAssembly, string debugMode, string debugMsg, string callPath, string callMember, int callLine)
         {
+            /* Normally there would be a debug and trace statements here, but since this is actually building a debug log, doing so would create a rip in the space-time
+             * continuum, so I'm not putting a debug statement here.
+             */
             var logHead   = ComponentHead(debugMsg);
             var logDetail = ComponentDetail("debug", exeAssembly, callPath, callMember, callLine);
             var logBody   = $"DebugMode: {debugMode}";

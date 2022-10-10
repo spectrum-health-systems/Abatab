@@ -15,7 +15,7 @@
 * Debug logs with "[DEBUG]" are part of the source code, and should not be removed.
 * Debug logs without "[DEBUG]" temporary.
 * Debug logs have a 100ms delay, and will have a noticeable affect on performance.
-* DebuggingDebug is only for debugging/development
+* DebuggingDebug is only for debugging/development/troubleshooting log functionality(?)
 * DebuggingDebug logs have a 1000ms delay, and will severly impact performance.
 * Debug logs should not be enabled in production
 * Cases where paramaters are hardcoded
@@ -24,6 +24,11 @@
 
 * Located:
     - At the top of private methods
+    - At the top of case statements
+* Trace statement generally do not have any unique messages, and look like this:
+```
+LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+```
 
 * Intended to show the flow of code, usually used during development
 * Should not be enabled in production
@@ -101,6 +106,7 @@
 
 * Determines which module gets the request
 * For the most part, this source code should remain relatively static. Whenever a new Abatab modules is added/removed, it needs to be added/removed here as well.In the event that this code is modified, it is recommended that you clean/rebuild the entire Abatab solution.
+* When a ScriptLink event is executed in Avatar, an OptionObject (the information/data from Avatar that Abatab needs to do it's job) and script parameter (also referred to as the "Abatab request") are sent to Abatab. This class parses the request, and determines where the OptionObject should go for further work.
 
 #### ParseRequest()
 
