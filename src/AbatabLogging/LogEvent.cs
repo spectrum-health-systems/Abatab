@@ -22,7 +22,6 @@ namespace AbatabLogging
 {
     public class LogEvent
     {
-
         public static void ModQuickMedOrder(SessionData abatabSession, string logMsg = "QuickMedOrder detail log.")
         {
             Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Creating QuickMedOrder detail log.");

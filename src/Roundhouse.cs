@@ -30,6 +30,7 @@ namespace Abatab
 
                 case "dose":
                     LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+                    ModuleDose.Roundhouse.ParseRequest(abatabSession);
                     break;
 
                 case "testing":
