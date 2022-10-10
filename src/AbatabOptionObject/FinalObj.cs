@@ -24,10 +24,12 @@ namespace AbatabOptionObject
             switch (abatabSession.AbatabMode.ToLower())
             {
                 case "passthrough":
+                    LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
                     ForPassthrough(abatabSession);
                     break;
 
                 default:
+                    LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
                     break;
             }
 
