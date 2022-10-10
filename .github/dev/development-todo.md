@@ -4,22 +4,19 @@
 * [ ] Dose code
 * [ ] Setting do only test with specific users
 * [ ] Detailed log type
-
+* [ ] Cleanup project references
+* [ ] Cleanup public/private
+* [ ] Logging types: all-none-trace-session
+* [ ] //if (debugMode == "on" || debugMode == "undefined") // TODO Remove.
+* [ ] Test logging types via Web.config
+* [ ] Verify DebugDebugger
 # v0.92.0.0
 
 * [X] Build WorkOptObj
-* [ ] Cleanup trace/debug logs
+* [X] Cleanup trace/debug logs
 * [X] Move trace logs to trace/
-* [ ] Test logging types via Web.config
-* [ ] Cleanup project references
-* [ ] Cleanup public/private
-* [ ] Verify DebugDebugger
-* [ ] Cleanup code/comments
-* [ ] Logging types: all-none-trace-session
-
-
-
-
+* [X] Cleanup code/comments
 
 # v0.XX.0.0
 * [ ] Debug descriptions are static in settings file.
+* [ ] Debug stuff moved to LogEvent.Debug()

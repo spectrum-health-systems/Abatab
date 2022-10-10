@@ -6,6 +6,13 @@
  * Builds the various components of a log file.
  * ================================= (c)2016-2022 A Pretty Cool Program ================================ */
 
+/* Logging is done a little differently in AbatabLogging.csproj, since trying to create logs using the same
+ * code that creates  logs results in strange behavior. For the most part, LogEvent.Trace() is replaced
+ * with Debugger.BuildDebugLog(), although in some cases log files aren't written at all. This makes it a
+ * little difficult to troubleshoot logging, which is why it's a good idea to test the logging funcionality
+ * extensively prior to deploying to production.
+ */
+
 using AbatabData;
 using NTST.ScriptLinkService.Objects;
 using System;
@@ -27,22 +34,18 @@ namespace AbatabLogging
         /// <returns>Content for a log file.</returns>
         public static string LogComponents(string eventType, SessionData abatabSession, string logMsg, string exeAssembly = "", string callPath = "", string callMember = "", int callLine = 0)
         {
-            /* Logging is done a little differently in AbatabLogging.csproj, since trying to create trace logs using the same code that creates trace logs
-             * results in strange behavior. So instead of writing trace logs, we write debug logs. This will have an impact on performance, so it is recommended
-             * that you troubleshoot/resolve any issues with logging during development.
-             */
             Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Creating log components..");
 
-            var logHead   = ComponentHead(logMsg);
+            var logHead = ComponentHead(logMsg);
             Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Created log header.");
 
             var logDetail = ComponentDetail(eventType, exeAssembly, callPath, callMember, callLine);
             Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Created log detail.");
 
-            var logBody   = ComponentBody(eventType, abatabSession);
+            var logBody = ComponentBody(eventType, abatabSession);
             Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Created log body.");
 
-            var logFoot   = ComponentFoot();
+            var logFoot = ComponentFoot();
             Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Created log footer.");
 
             return $"{logHead}" +
@@ -61,9 +64,6 @@ namespace AbatabLogging
         /// <returns>Content for a debug log file.</returns>
         public static string DebugComponents(string exeAssembly, string debugMode, string debugMsg, string callPath, string callMember, int callLine)
         {
-            /* Normally there would be a debug and trace statements here, but since this is actually building a debug log, doing so would create a rip in the space-time
-             * continuum, so I'm not putting a debug statement here.
-             */
             var logHead   = ComponentHead(debugMsg);
             var logDetail = ComponentDetail("debug", exeAssembly, callPath, callMember, callLine);
             var logBody   = $"DebugMode: {debugMode}";
@@ -80,8 +80,6 @@ namespace AbatabLogging
         /// <returns>Log header.</returns>
         private static string ComponentHead(string logMsg)
         {
-            /* Usually there would be a LogEvent.Trace() statement here, but logging is handled a little differently in AbatabLogging.csproj.
-             */
             return $"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-={Environment.NewLine}" +
                    $"{logMsg}{Environment.NewLine}" +
                    $"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-={Environment.NewLine}";
@@ -96,8 +94,6 @@ namespace AbatabLogging
         /// <returns>Log details.</returns>
         private static string ComponentDetail(string eventType, string exeAssembly, string callPath, string callMember, int callLine = 0)
         {
-            /* Usually there would be a LogEvent.Trace() statement here, but logging is handled a little differently in AbatabLogging.csproj.
-             */
             var detailHead = $"{Environment.NewLine}" +
                              $"==========={Environment.NewLine}" +
                              $"Log details{Environment.NewLine}" +
@@ -113,9 +109,9 @@ namespace AbatabLogging
                   $"Member:   {callMember}{Environment.NewLine}" +
                   $"Line:     {callLine}{Environment.NewLine}";
 
+            // No LogEvent.Trace() here because the necessary information doesn't exist.
             return $"{detailHead}" +
                    $"{logDetail}";
-
         }
 
         /// <summary>Build log body.</summary>
@@ -124,16 +120,15 @@ namespace AbatabLogging
         /// <returns>Log body.</returns>
         private static string ComponentBody(string eventType, SessionData abatabSession)
         {
-            /* Usually there would be a LogEvent.Trace() statement here, and at the top of each case statement, but logging is handled a little differently in
-             * AbatabLogging.csproj.
-             */
             switch (eventType)
             {
                 case "session":
+                    // No LogEvent.Trace() here because the necessary information doesn't exist.
                     return BodySessionDetail(abatabSession);
 
                 case "trace":
                 default:
+                    // No LogEvent.Trace() here because the necessary information doesn't exist.
                     return "";
             }
         }
@@ -143,8 +138,6 @@ namespace AbatabLogging
         /// <returns>Session information for log body.</returns>
         private static string BodySessionDetail(SessionData abatabSession)
         {
-            /* Usually there would be a LogEvent.Trace() statement here, but logging is handled a little differently in AbatabLogging.csproj.
-             */
             var sessionDetailHead = $"{Environment.NewLine}" +
                                     $"==============={Environment.NewLine}" +
                                     $"Session details{Environment.NewLine}" +
@@ -183,8 +176,6 @@ namespace AbatabLogging
         /// <returns>Details of an OptionObject.</returns>
         private static string BodyOptObjDetail(OptionObject2015 thisOptObj, string optObjType)
         {
-            /* Usually there would be a LogEvent.Trace() statement here, but logging is handled a little differently in AbatabLogging.csproj.
-             */
             var optObjHead = $"{Environment.NewLine}" +
                              $"------------{Environment.NewLine}" +
                              $"{optObjType}{Environment.NewLine}" +
@@ -212,8 +203,6 @@ namespace AbatabLogging
         /// <returns>Log footer.</returns>
         private static string ComponentFoot(string footMsg = "End of log.")
         {
-            /* Usually there would be a LogEvent.Trace() statement here, but logging is handled a little differently in AbatabLogging.csproj.
-             */
             return $"{Environment.NewLine}" +
                    $"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-={Environment.NewLine}" +
                    $"{footMsg}{Environment.NewLine}" +

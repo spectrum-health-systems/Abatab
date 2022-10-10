@@ -20,6 +20,7 @@ namespace Abatab
         public static void ParseRequest(SessionData abatabSession)
         {
             Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Parsing Abatab request..");
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 
             switch (abatabSession.AbatabModule)
             {
@@ -40,6 +41,8 @@ namespace Abatab
                     LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
                     break;
             }
+
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
         }
     }
 }

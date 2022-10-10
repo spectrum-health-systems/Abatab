@@ -15,7 +15,8 @@ namespace AbatabSystem
         /// <summary>Verify directory exists, and create if not.</summary>
         public static void VerifyDir(string dir)
         {
-            // No debug/log file.
+            // No Debugger.BuildDebugLog() or LogEvent.Trace() here because it isn't worth it...yet.
+
             _=Directory.CreateDirectory(dir);
         }
     }

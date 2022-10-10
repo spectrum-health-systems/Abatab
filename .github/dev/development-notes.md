@@ -25,7 +25,8 @@
 ### Trace logs
 
 * Located:
-    - At the top and bottom of public and private methods
+    - First statement in a private method, second statement in a public method (behind debug statement)
+    - Last statement in public/private methods (or last statement before return)
     - At the top of case statements
     - At the top of if...else statements
     - After assignments that aren't generated via a method

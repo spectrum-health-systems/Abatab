@@ -36,14 +36,15 @@ namespace Abatab
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string abatabRequest)
         {
             Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG] Abatab started.");
+            // No LogEvent.Trace() here because the necessary information doesn't exist.
 
             SessionData abatabSession = AbatabSettings.BuildSettings(sentOptionObject, abatabRequest);
 
             Roundhouse.ParseRequest(abatabSession);
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 
             LogEvent.Session(abatabSession, "Completed session information"); // This should be written every time Abatab executes.
 
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
             return abatabSession.FinalOptObj;
         }
     }

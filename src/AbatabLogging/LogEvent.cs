@@ -6,6 +6,13 @@
  * Build a log files.
  * ================================= (c)2016-2022 A Pretty Cool Program ================================ */
 
+/* Logging is done a little differently in AbatabLogging.csproj, since trying to create logs using the same
+ * code that creates  logs results in strange behavior. For the most part, LogEvent.Trace() is replaced
+ * with Debugger.BuildDebugLog(), although in some cases log files aren't written at all. This makes it a
+ * little difficult to troubleshoot logging, which is why it's a good idea to test the logging funcionality
+ * extensively prior to deploying to production.
+ */
+
 using AbatabData;
 using System;
 using System.Reflection;
@@ -15,17 +22,6 @@ namespace AbatabLogging
 {
     public class LogEvent
     {
-        ///// <summary>Build a OptionObject information log.</summary>
-        ///// <param name="abatabSession"></param>
-        ///// <param name="logMsg"></param>
-        //public static void AllOptionObjectInformation(SessionData abatabSession, string logMsg = "OptionObject information log.")
-        //{
-        //    LogDebug.DebugContent(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Building ");
-
-        //    BuildContent.LogComponents("allOptObjInformation", abatabSession, logMsg);
-        //}
-
-
         /// <summary>Build a session detail log.</summary>
         /// <param name="abatabSession">Abatab session configuration settings.</param>
         /// <param name="logMsg">Message for the logfile</param>
@@ -43,6 +39,8 @@ namespace AbatabLogging
 
                 WriteFile.LocalFile(logPath, logContent, Convert.ToInt32(abatabSession.LoggingDelay));
             }
+
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, abatabSession.FinalOptObj.ErrorMesg);
         }
 
         /// <summary>Build a trace log.</summary>
@@ -55,12 +53,9 @@ namespace AbatabLogging
         public static void Trace(SessionData abatabSession, string exeAssembly, string logMsg = "Trace log start...", [CallerFilePath] string callPath = "", [CallerMemberName] string callMember = "", [CallerLineNumber] int callLine = 0)
         {
             Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Creating trace log.");
-            /* Normally there would be a LogEvent.Trace() statement here, but since this is where that would end up, there isn't one.
-             */
+
             if (abatabSession.LoggingMode == "all" || abatabSession.LoggingMode.Contains("trace"))
             {
-                /* Normally there would be a LogEvent.Trace() statement here, but since this is where that would end up, there isn't one.
-                 */
                 var logPath    = BuildPath.FullPath("trace", abatabSession.SessionLogRoot, exeAssembly, callPath, callMember, callLine);
                 var logContent = BuildContent.LogComponents("trace", abatabSession, logMsg, exeAssembly, callPath, callMember, callLine);
 

@@ -19,8 +19,6 @@ namespace AbatabLogging
         /// <param name="loggingDelay">Log file delay.</param>
         public static void LocalFile(string logPath, string logContent, int loggingDelay)
         {
-            /* Normally there would be LogDebug.DebugContent() and LogEvent.Trace() statements here, but it's tricky.
-             */
             Thread.Sleep(loggingDelay);
 
             File.WriteAllText(logPath, logContent);

@@ -6,6 +6,13 @@
  * Builds the log file path.
  * ================================= (c)2016-2022 A Pretty Cool Program ================================ */
 
+/* Logging is done a little differently in AbatabLogging.csproj, since trying to create logs using the same
+ * code that creates  logs results in strange behavior. For the most part, LogEvent.Trace() is replaced
+ * with Debugger.BuildDebugLog(), although in some cases log files aren't written at all. This makes it a
+ * little difficult to troubleshoot logging, which is why it's a good idea to test the logging funcionality
+ * extensively prior to deploying to production.
+ */
+
 using System;
 using System.IO;
 
@@ -24,8 +31,6 @@ namespace AbatabLogging
         /// <returns>Log file path.</returns>
         public static string FullPath(string eventType, string sessionLogRoot, string exeAssembly = "", string callPath = "", string callMember = "", int callLine = 0)
         {
-            //LogDebug.DebugContent(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Creating log components..");
-
             var fullPath = sessionLogRoot;
 
             if (eventType == "trace")

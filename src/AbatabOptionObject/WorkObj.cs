@@ -14,7 +14,8 @@ namespace AbatabOptionObject
     {
         public static OptionObject2015 BuildWorkObj(OptionObject2015 sentOptObj)
         {
-            // Do debug/trace file here.
+            // No Debugger.BuildDebugLog() or LogEvent.Trace() here because it isn't worth it...yet.
+
             /* Eventually we may want to do something more complex when building the workOptObj.
              */
             return sentOptObj;

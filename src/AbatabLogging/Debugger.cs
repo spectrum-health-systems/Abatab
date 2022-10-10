@@ -6,6 +6,13 @@
  * Build and write a debug log file.
  * ================================= (c)2016-2022 A Pretty Cool Program ================================ */
 
+/* Logging is done a little differently in AbatabLogging.csproj, since trying to create logs using the same
+ * code that creates  logs results in strange behavior. For the most part, LogEvent.Trace() is replaced
+ * with Debugger.BuildDebugLog(), although in some cases log files aren't written at all. This makes it a
+ * little difficult to troubleshoot logging, which is why it's a good idea to test the logging funcionality
+ * extensively prior to deploying to production.
+ */
+
 /* Abatab debugging functionality should only be used for development/debugging. There is a hardcoded 100ms
  * delay when writing a debug log file, and there for should not be used production environments due to
  * the performance penalties it creates.
@@ -46,11 +53,6 @@ namespace AbatabLogging
         /// <param name="callerLine">File line of where the log is coming from.</param>
         public static void BuildDebugLog(string exeAssembly, string debugMode, string debugLogRoot = "", string debugMsg = "", [CallerFilePath] string callPath = "", [CallerMemberName] string callMember = "", [CallerLineNumber] int callLine = 0)
         {
-            /* Logging is done a little differently in AbatabLogging.csproj, since trying to create trace logs using the same code that creates trace logs
-             * results in strange behavior. So instead of writing trace logs, we write debug logs. This will have an impact on performance, so it is recommended
-             * that you troubleshoot/resolve any issues with logging during development.
-             */
-
             //if (debugMode == "on" || debugMode == "undefined") // TODO Remove.
             if (debugMode == "on")
             {
@@ -98,10 +100,6 @@ namespace AbatabLogging
         /// <param name="debugMsg">Debugger log message.</param>
         private static void DebugTheDebugger(bool debugDebugger, string debugLogRoot, string debugMsg)
         {
-            /* Logging is done a little differently in AbatabLogging.csproj, since trying to create trace logs using the same code that creates trace logs
-             * results in strange behavior. So instead of writing trace logs, we write debug logs. This will have an impact on performance, so it is recommended
-             * that you troubleshoot/resolve any issues with logging during development.
-             */
             if (debugDebugger)
             {
                 /* Delay creating a debug log by 1000ms, just to make sure we don't overwrite an

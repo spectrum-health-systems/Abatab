@@ -18,6 +18,7 @@ namespace ModuleTesting
         /// <param name="abatabSession">Abatab session information.</param>
         public static void ParseCommand(SessionData abatabSession)
         {
+            Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] PArsing Testing Module command.");
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 
             switch (abatabSession.AbatabCommand)
@@ -28,6 +29,7 @@ namespace ModuleTesting
                     break;
 
                 default:
+                    LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
                     // Gracefully exit.
                     break;
             }
@@ -45,11 +47,13 @@ namespace ModuleTesting
             {
                 case "sessiondata":
                     LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+
                     AbatabOptionObject.FinalObj.BuildPassthrough(abatabSession);
                     DataDump.SessionData(abatabSession);
                     break;
 
                 default:
+                    LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
                     // Gracefully exit.
                     break;
             }

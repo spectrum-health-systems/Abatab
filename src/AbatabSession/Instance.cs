@@ -24,7 +24,7 @@ namespace AbatabSession
         public static SessionData Build(OptionObject2015 sentOptObj, string abatabRequest, Dictionary<string, string> abatabSettings)
         {
             Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"], "[DEBUG] Building session data.");
-            // No LogEvent.Trace() here.
+            // No LogEvent.Trace() here because we don't have the necessary information yet.
 
             var abatabSession = new SessionData
             {
@@ -59,8 +59,8 @@ namespace AbatabSession
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 
             ParseAbatabRequest(abatabSession);
-            //LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name); // don't need
 
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
             return abatabSession;
         }
 
@@ -79,7 +79,7 @@ namespace AbatabSession
         /// <param name="abatabSession">Abatab session details.</param>
         private static void ParseAbatabRequest(SessionData abatabSession)
         {
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "test");
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 
             string[] req = abatabSession.AbatabRequest.Split('-');
 
@@ -89,8 +89,12 @@ namespace AbatabSession
 
             if (req.Length == 4)
             {
+                LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+
                 abatabSession.AbatabOption = req[3].ToLower();
             }
+
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
         }
     }
 }
