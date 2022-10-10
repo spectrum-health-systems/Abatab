@@ -105,7 +105,7 @@ namespace AbatabLogging
         {
             switch (eventType)
             {
-                case "sessionDetail":
+                case "session":
                     return BodySessionDetail(abatabSession);
 
                 case "trace":
