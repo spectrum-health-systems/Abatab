@@ -24,7 +24,7 @@ namespace Abatab
         /// <returns>Completed abatabSession object.</returns>
         public static SessionData BuildSettings(OptionObject2015 sentOptObj, string abatabRequest)
         {
-            LogDebug.DebugContent(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG] Building Abatab session settings.");
+            Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG] Building Abatab session settings.");
 
             Dictionary<string, string> abatabSettings = AbatabSettings.LoadWebConfig();
 
@@ -38,7 +38,7 @@ namespace Abatab
             /* Normally private methods don't create debug logs, but since we don't have the necessary information to create trace logs yet, we'll use a debug
              * log here.
              */
-            LogDebug.DebugContent(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG] Loading configuration settings from Web.config.");
+            Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG] Loading configuration settings from Web.config.");
 
             return new Dictionary<string, string>
             {

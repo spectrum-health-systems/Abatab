@@ -3,7 +3,7 @@
  * AbatabOptionObject.csproj                                                                        v0.91.0
  * FinalObj.cs                                                                               b221010.102030
  * --------------------------------------------------------------------------------------------------------
- * Logic for the FinalOptObj
+ * Logic for the FinalOptObj.
  * ================================= (c)2016-2022 A Pretty Cool Program ================================ */
 
 using AbatabData;
@@ -17,6 +17,9 @@ namespace AbatabOptionObject
     {
         public static OptionObject2015 BuildFinalObj(OptionObject2015 sentOptObj)
         {
+            // Do debug/trace file here.
+            /* Eventually we may want to do something more complex when building the workOptObj.
+             */
             return sentOptObj;
         }
 
@@ -24,6 +27,7 @@ namespace AbatabOptionObject
         /// <param name="abatabSession">Abatab session settings.</param>
         public static void BuildPassthrough(SessionData abatabSession)
         {
+            Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Finalizing finalOptObj");
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 
             abatabSession.FinalOptObj.ErrorCode = 0;

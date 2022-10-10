@@ -25,8 +25,11 @@
 ### Trace logs
 
 * Located:
-    - At the top of private methods
+    - At the top and bottom of public and private methods
     - At the top of case statements
+    - At the top of if...else statements
+    - After assignments that aren't generated via a method
+* Trace statements generally do not follow methods that have a trace event at the top, unless there is no trace event at the top (see: maintenance)
 * Trace statement generally do not have any unique messages, and look like this:
 ```
 LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);

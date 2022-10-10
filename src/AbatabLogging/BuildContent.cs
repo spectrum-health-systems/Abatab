@@ -31,19 +31,19 @@ namespace AbatabLogging
              * results in strange behavior. So instead of writing trace logs, we write debug logs. This will have an impact on performance, so it is recommended
              * that you troubleshoot/resolve any issues with logging during development.
              */
-            LogDebug.DebugContent(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Creating log components..");
+            Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Creating log components..");
 
             var logHead   = ComponentHead(logMsg);
-            LogDebug.DebugContent(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Created log header.");
+            Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Created log header.");
 
             var logDetail = ComponentDetail(eventType, exeAssembly, callPath, callMember, callLine);
-            LogDebug.DebugContent(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Created log detail.");
+            Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Created log detail.");
 
             var logBody   = ComponentBody(eventType, abatabSession);
-            LogDebug.DebugContent(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Created log body.");
+            Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Created log body.");
 
             var logFoot   = ComponentFoot();
-            LogDebug.DebugContent(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Created log footer.");
+            Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Created log footer.");
 
             return $"{logHead}" +
                    $"{logDetail}" +

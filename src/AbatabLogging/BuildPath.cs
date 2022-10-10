@@ -24,6 +24,8 @@ namespace AbatabLogging
         /// <returns>Log file path.</returns>
         public static string FullPath(string eventType, string sessionLogRoot, string exeAssembly = "", string callPath = "", string callMember = "", int callLine = 0)
         {
+            //LogDebug.DebugContent(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Creating log components..");
+
             var fullPath = sessionLogRoot;
 
             if (eventType == "trace")

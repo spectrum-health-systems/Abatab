@@ -15,25 +15,29 @@ namespace AbatabLogging
 {
     public class LogEvent
     {
-        /// <summary>Build a OptionObject information log.</summary>
-        /// <param name="abatabSession"></param>
-        /// <param name="logMsg"></param>
-        public static void AllOptionObjectInformation(SessionData abatabSession, string logMsg = "OptionObject information log.")
-        {
-            BuildContent.LogComponents("allOptObjInformation", abatabSession, logMsg);
-        }
+        ///// <summary>Build a OptionObject information log.</summary>
+        ///// <param name="abatabSession"></param>
+        ///// <param name="logMsg"></param>
+        //public static void AllOptionObjectInformation(SessionData abatabSession, string logMsg = "OptionObject information log.")
+        //{
+        //    LogDebug.DebugContent(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Building ");
+
+        //    BuildContent.LogComponents("allOptObjInformation", abatabSession, logMsg);
+        //}
+
 
         /// <summary>Build a session detail log.</summary>
         /// <param name="abatabSession">Abatab session configuration settings.</param>
         /// <param name="logMsg">Message for the logfile</param>
         public static void Session(SessionData abatabSession, string logMsg = "Session detail log.")
         {
-            LogDebug.DebugContent(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Creating session log.");
+            Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Creating session log.");
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, abatabSession.FinalOptObj.ErrorMesg);
 
             if (abatabSession.LoggingMode == "all" || abatabSession.LoggingMode.Contains("session"))
             {
                 LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, abatabSession.FinalOptObj.ErrorMesg);
+
                 var logPath    = BuildPath.FullPath("session", abatabSession.SessionLogRoot);
                 var logContent = BuildContent.LogComponents("session", abatabSession, logMsg);
 
@@ -50,10 +54,13 @@ namespace AbatabLogging
         /// <param name="callerLine">File line of where the log is coming from.</param>
         public static void Trace(SessionData abatabSession, string exeAssembly, string logMsg = "Trace log start...", [CallerFilePath] string callPath = "", [CallerMemberName] string callMember = "", [CallerLineNumber] int callLine = 0)
         {
-            LogDebug.DebugContent(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Creating trace log.");
-
+            Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Creating trace log.");
+            /* Normally there would be a LogEvent.Trace() statement here, but since this is where that would end up, there isn't one.
+             */
             if (abatabSession.LoggingMode == "all" || abatabSession.LoggingMode.Contains("trace"))
             {
+                /* Normally there would be a LogEvent.Trace() statement here, but since this is where that would end up, there isn't one.
+                 */
                 var logPath    = BuildPath.FullPath("trace", abatabSession.SessionLogRoot, exeAssembly, callPath, callMember, callLine);
                 var logContent = BuildContent.LogComponents("trace", abatabSession, logMsg, exeAssembly, callPath, callMember, callLine);
 
