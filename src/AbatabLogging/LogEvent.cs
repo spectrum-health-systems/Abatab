@@ -1,7 +1,7 @@
 ﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
  * Abatab                                                                                           v0.92.0
  * AbatabLogging.csproj                                                                             v0.92.0
- * LogEvent.cs                                                                               b221010.124123
+ * LogEvent.cs                                                                               b221010.153857
  * --------------------------------------------------------------------------------------------------------
  * Build a log files.
  * ================================= (c)2016-2022 A Pretty Cool Program ================================ */
@@ -22,6 +22,9 @@ namespace AbatabLogging
 {
     public class LogEvent
     {
+        /// <summary></summary>
+        /// <param name="abatabSession"></param>
+        /// <param name="logMsg"></param>
         public static void ModQuickMedOrder(SessionData abatabSession, string logMsg = "QuickMedOrder detail log.")
         {
             Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Creating QuickMedOrder detail log.");

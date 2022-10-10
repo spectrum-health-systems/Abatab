@@ -1,7 +1,7 @@
 ﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
  * Abatab                                                                                           v0.92.0
  * Abatab.csproj                                                                                    v0.92.0
- * Abatab.Roundhouse.cs                                                                      b221010.124123
+ * Abatab.Roundhouse.cs                                                                      b221010.153857
  * --------------------------------------------------------------------------------------------------------
  * Determines where the sentOptionObject should go for further work.
  * ================================= (c)2016-2022 A Pretty Cool Program ================================ */
@@ -12,7 +12,7 @@ using System.Reflection;
 
 namespace Abatab
 {
-    public class Roundhouse
+    public static class Roundhouse
     {
         /// <summary>Determine which module should receive the request.</summary>
         /// <param name="abatabSession">Abatab session data.</param>
@@ -24,8 +24,9 @@ namespace Abatab
 
             switch (abatabSession.AbatabModule)
             {
-                case "date":
+                case "prototype":
                     LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+                    //ModPrototype.Roundhouse.ParseRequest(abatabSession);
                     break;
 
                 case "quickmedorder":

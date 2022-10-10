@@ -1,7 +1,7 @@
 ﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
  * Abatab                                                                                           v0.92.0
  * AbatabData.csproj                                                                                v0.92.0
- * SessionData.cs                                                                            b221010.124123
+ * SessionData.cs                                                                            b221010.153857
  * --------------------------------------------------------------------------------------------------------
  * Defines the properties for the SessionData object, which contains all of the information/data that
  * Abatab needs to do its job.
@@ -23,20 +23,17 @@ namespace AbatabData
         public string LoggingDelay { get; set; }
         public string AvatarFallbackUserName { get; set; }
 
-        // Web.config: ModuleDate
-        public string ModDateMode { get; set; }
-
-        // Web.config: ModuleDose
+        // Web.config: ModQuickMedOrder
         public string ModQuickMedOrderMode { get; set; }
         public string ModQuickMedOrderPrevDosePrefix { get; set; }
         public string ModQuickMedOrderPrevDoseSuffix { get; set; }
         public string ModQuickMedOrderDosePercentMaxInc { get; set; }
         public QuickMedOrderData ModQuickMedOrderData { get; set; }
 
-        // Web.config: ModulePrototype
+        // Web.config: ModPrototype
         public string ModPrototypeMode { get; set; }
 
-        // Web.config: ModuleTesting
+        // Web.config: ModTesting
         public string ModTestingMode { get; set; }
 
         // Set at runtime: General

@@ -1,7 +1,7 @@
 ﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
  * Abatab                                                                                           v0.92.0
  * AbatabSession.csproj                                                                             v0.92.0
- * Instance.cs                                                                               b221010.124123
+ * Instance.cs                                                                               b221010.153857
  * --------------------------------------------------------------------------------------------------------
  * Logic for Abatab sessions.
  * ================================= (c)2016-2022 A Pretty Cool Program ================================ */
@@ -36,7 +36,6 @@ namespace AbatabSession
                 LoggingDetail                     = abatabSettings["LoggingDetail"],
                 LoggingDelay                      = abatabSettings["LoggingDelay"],
                 AvatarFallbackUserName            = abatabSettings["AvatarFallbackUserName"],
-                ModDateMode                       = abatabSettings["ModDateMode"],
                 ModQuickMedOrderMode              = abatabSettings["ModQuickMedOrderMode"],
                 ModQuickMedOrderPrevDosePrefix    = abatabSettings["ModQuickMedOrderPrevDosePrefix"],
                 ModQuickMedOrderPrevDoseSuffix    = abatabSettings["ModQuickMedOrderPrevDoseSuffix"],

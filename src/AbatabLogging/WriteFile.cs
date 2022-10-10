@@ -1,9 +1,9 @@
 ﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
  * Abatab                                                                                           v0.92.0
  * AbatabLogging.csproj                                                                             v0.92.0
- * WriteFile.cs                                                                              b221010.124123
+ * WriteFile.cs                                                                              b221010.153857
  * --------------------------------------------------------------------------------------------------------
- * Write a log files.
+ * Write a log file.
  * ================================= (c)2016-2022 A Pretty Cool Program ================================ */
 
 using System.IO;

@@ -1,7 +1,7 @@
 ﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
  * Abatab                                                                                           v0.92.0
  * AbatabLogging.csproj                                                                             v0.92.0
- * BuildContent.cs                                                                           b221010.124123
+ * BuildContent.cs                                                                           b221010.153857
  * --------------------------------------------------------------------------------------------------------
  * Builds the various components of a log file.
  * ================================= (c)2016-2022 A Pretty Cool Program ================================ */
@@ -195,10 +195,6 @@ namespace AbatabLogging
 
             switch (modName.ToLower())
             {
-                case "date":
-                    moduleDetail = $"Mode: {abatabSession.ModDateMode}";
-                    break;
-
                 case "quickmedorder":
                     moduleDetail = $"Mode:                 {abatabSession.ModQuickMedOrderMode}{Environment.NewLine}" +
                                    $"Previous dose prefix: \"{abatabSession.ModQuickMedOrderPrevDosePrefix}\"{Environment.NewLine}" +

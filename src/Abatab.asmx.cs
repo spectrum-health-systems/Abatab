@@ -1,7 +1,7 @@
 ﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
  * Abatab                                                                                           v0.92.0
  * Abatab.csproj                                                                                    v0.92.0
- * Abatab.asmx.cs                                                                            b221010.124123
+ * Abatab.asmx.cs                                                                            b221010.153857
  * --------------------------------------------------------------------------------------------------------
  * Entry point for Abatab.
  * ================================= (c)2016-2022 A Pretty Cool Program ================================ */
@@ -35,14 +35,14 @@ namespace Abatab
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string abatabRequest)
         {
-            Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG] Abatab started.");
+            Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG] Session started.");
             // No LogEvent.Trace() here because the necessary information doesn't exist.
 
             SessionData abatabSession = AbatabSettings.BuildSettings(sentOptionObject, abatabRequest);
 
             Roundhouse.ParseRequest(abatabSession);
 
-            LogEvent.Session(abatabSession, "Completed session information"); // This should be written every time Abatab executes.
+            LogEvent.Session(abatabSession, "Session complete.");
 
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
             return abatabSession.FinalOptObj;
