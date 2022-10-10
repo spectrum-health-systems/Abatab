@@ -57,7 +57,6 @@ namespace AbatabLogging
             if (abatabSession.LoggingMode == "all" || abatabSession.LoggingMode.Contains("trace"))
             {
                 var logPath    = BuildPath.FullPath("trace", abatabSession.SessionLogRoot, exeAssembly, callPath, callMember, callLine);
-
                 var logContent = BuildContent.LogComponents("trace", abatabSession, logMsg, exeAssembly, callPath, callMember, callLine);
 
                 WriteFile.LocalFile(logPath, logContent, Convert.ToInt32(abatabSession.LoggingDelay));
