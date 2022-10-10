@@ -27,6 +27,7 @@ namespace AbatabSession
 
             var abatabSession = new SessionData
             {
+                AbatabVer              = Assembly.GetEntryAssembly().GetName().Version.ToString(),
                 AbatabMode             = abatabSettings["AbatabMode"],
                 AbatabRoot             = abatabSettings["AbatabRoot"],
                 DebugMode              = abatabSettings["DebugMode"],
