@@ -64,18 +64,18 @@ namespace AbatabSession
         }
 
         /// <summary>Verify the session AvatarUserName is valid.</summary>
-        /// <param name="avatarUserName"></param>
-        /// <param name="avatarFallbackUserName"></param>
-        /// <returns>Session object with verified AvatarUserName</returns>
-        private static string VerifyAvatarUserName(string avatarUserName, string avatarFallbackUserName)
+        /// <param name="avatarUserName">User name sent from Avatar.</param>
+        /// <param name="fallbackAvatarUserName">Fallback username from Web.config</param>
+        /// <returns>Session object with verified AvatarUserName.</returns>
+        private static string VerifyAvatarUserName(string avatarUserName, string fallbackAvatarUserName)
         {
             return string.IsNullOrWhiteSpace(avatarUserName)
-                ? avatarFallbackUserName
+                ? fallbackAvatarUserName
                 : avatarUserName;
         }
 
         /// <summary>Parse the abatabRequest into separate components.</summary>
-        /// <param name="abatabSession"></param>
+        /// <param name="abatabSession">Abatab session details.</param>
         private static void ParseAbatabRequest(SessionData abatabSession)
         {
             string[] req = abatabSession.AbatabRequest.Split('-');

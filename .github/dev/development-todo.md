@@ -9,10 +9,9 @@
 
 * [ ] Build WorkOptObj
 * [ ] Cleanup trace/debug logs
-* [ ] Move trace logs to trace/
+* [] Move trace logs to trace/
 * [ ] Test logging types via Web.config
 * [ ] Cleanup project references
 * [ ] Cleanup public/private
 * [ ] Verify DebugDebugger
 * [ ] Cleanup code/comments
-* [ ] Verify the correct version is in SessionData

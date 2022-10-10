@@ -45,7 +45,7 @@ namespace ModuleTesting
             {
                 case "sessiondata":
                     LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
-                    AbatabOptionObject.Finalize.ForPassthrough(abatabSession);
+                    AbatabOptionObject.FinalObj.ForPassthrough(abatabSession);
                     DataDump.SessionData(abatabSession);
                     break;
 

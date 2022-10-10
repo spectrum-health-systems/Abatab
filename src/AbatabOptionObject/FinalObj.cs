@@ -1,9 +1,9 @@
 ﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
  * Abatab                                                                                           v0.91.0
  * AbatabOptionObject.csproj                                                                        v0.91.0
- * Finalize.cs                                                                               b221009.090325
+ * FinalObj.cs                                                                               b221009.090325
  * --------------------------------------------------------------------------------------------------------
- * Finalize an OptionObject.
+ * Logic for the FinalOptObj
  * ================================= (c)2016-2022 A Pretty Cool Program ================================ */
 
 using AbatabData;
@@ -12,7 +12,7 @@ using System.Reflection;
 
 namespace AbatabOptionObject
 {
-    public class Finalize
+    public class FinalObj
     {
         /// <summary>Finalizes an OptionObject for passthrough mode.</summary>
         /// <param name="abatabSession">Abatab session settings.</param>
