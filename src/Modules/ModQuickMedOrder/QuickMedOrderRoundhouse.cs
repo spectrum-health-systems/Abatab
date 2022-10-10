@@ -47,7 +47,7 @@ namespace ModuleDose
             {
                 case "verifyundermaxpercentincrease":
                     LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
-                    ModQuickMedOrder.Dose.VerifyUnderMaxInc(abatabSession);
+                    ModQuickMedOrder.Dose.VerifyUnderMaxPercentIncrease(abatabSession);
                     AbatabOptionObject.FinalObj.Finalize(abatabSession);
                     break;
 

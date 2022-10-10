@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ModPrototype
 {
-    public class Class1
+    public class PrototypeRoundhouse
     {
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ModCommon
 {
-    public class Class1
+    public class CommonRoundhouse
     {
     }
 }
