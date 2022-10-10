@@ -6,6 +6,8 @@
 * Public methods have debug logs at the beginning
 * Public methods have trace logs
 * Private methods have trace logs
+* Logging is done a little differently in AbatabLogging.BuildContent()
+
 
 ### Debug logs
 
