@@ -12,7 +12,7 @@ using System.Reflection;
 
 namespace ModTesting
 {
-    public class Roundhouse
+    public class TestingRoundhouse
     {
         /// <summary>Parse the Abatab request command.</summary>
         /// <param name="abatabSession">Abatab session information.</param>

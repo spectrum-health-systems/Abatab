@@ -40,7 +40,7 @@ namespace Abatab
 
             SessionData abatabSession = AbatabSettings.BuildSettings(sentOptionObject, abatabRequest);
 
-            Roundhouse.ParseRequest(abatabSession);
+            AbatabRoundhouse.ParseRequest(abatabSession);
 
             LogEvent.Session(abatabSession, "Completed session information"); // This should be written every time Abatab executes.
 

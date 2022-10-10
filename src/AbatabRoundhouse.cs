@@ -12,7 +12,7 @@ using System.Reflection;
 
 namespace Abatab
 {
-    public class Roundhouse
+    public class AbatabRoundhouse
     {
         /// <summary>Determine which module should receive the request.</summary>
         /// <param name="abatabSession">Abatab session data.</param>
@@ -30,13 +30,12 @@ namespace Abatab
 
                 case "dose":
                     LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
-                    ModuleDose.Roundhouse.ParseRequest(abatabSession);
+                    ModuleDose.QuickMedOrderRoundhouse.ParseRequest(abatabSession);
                     break;
 
                 case "testing":
                     LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
-
-                    ModTesting.Roundhouse.ParseRequest(abatabSession);
+                    ModTesting.TestingRoundhouse.ParseRequest(abatabSession);
                     break;
 
                 default:
