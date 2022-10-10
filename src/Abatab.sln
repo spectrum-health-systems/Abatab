@@ -19,7 +19,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbatabData", "AbatabData\Ab
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{02BF6478-CF2B-4E5C-B7C0-2C1BAE3A83BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModuleDose", "Modules\ModuleDose\ModuleDose.csproj", "{B1F06AE6-91EF-46E5-850F-2933E0273932}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModuleQuickMedOrder", "Modules\ModuleDose\ModuleQuickMedOrder.csproj", "{B1F06AE6-91EF-46E5-850F-2933E0273932}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModuleDate", "Modules\ModuleDate\ModuleDate.csproj", "{8143E2A4-E482-4D41-8D05-3EFF62185964}"
 EndProject

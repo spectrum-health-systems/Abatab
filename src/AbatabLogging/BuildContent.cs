@@ -1,7 +1,7 @@
 ﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
  * Abatab                                                                                           v0.92.0
  * AbatabLogging.csproj                                                                             v0.92.0
- * BuildContent.cs                                                                           b221010.115437
+ * BuildContent.cs                                                                           b221010.124123
  * --------------------------------------------------------------------------------------------------------
  * Builds the various components of a log file.
  * ================================= (c)2016-2022 A Pretty Cool Program ================================ */
@@ -161,6 +161,14 @@ namespace AbatabLogging
                                 $"    Action:          {abatabSession.AbatabAction}{Environment.NewLine}" +
                                 $"    Option:          {abatabSession.AbatabOption}{Environment.NewLine}" +
                                 $"{Environment.NewLine}" +
+                                $"============================{Environment.NewLine}" +
+                                $"Module details{Environment.NewLine}" +
+                                $"============================" +
+                                $"{BodyModuleDetail(abatabSession, "date")}{Environment.NewLine}" +
+                                $"{BodyModuleDetail(abatabSession, "quickmedorder")}{Environment.NewLine}" +
+                                $"{BodyModuleDetail(abatabSession, "prototype")}{Environment.NewLine}" +
+                                $"{BodyModuleDetail(abatabSession, "testing")}{Environment.NewLine}" +
+                                $"{Environment.NewLine}" +
                                 $"===================={Environment.NewLine}" +
                                 $"OptionObject details{Environment.NewLine}" +
                                 $"====================" +
@@ -172,6 +180,47 @@ namespace AbatabLogging
                    $"{sessionDetail}";
         }
 
+        private static string BodyModuleDetail(SessionData abatabSession, string modName)
+        {
+            var moduleHead = $"{Environment.NewLine}" +
+                             $"------------{Environment.NewLine}" +
+                             $"{modName}{Environment.NewLine}" +
+                             $"------------";
+
+            var moduleDetail = "";
+
+            switch (modName.ToLower())
+            {
+                case "date":
+                    moduleDetail = $"Mode: {abatabSession.ModDateMode}";
+                    break;
+
+
+                case "quickmedorder":
+                    moduleDetail = $"Mode: {abatabSession.ModQuickMedOrderMode}{Environment.NewLine}" +
+                                   $"Previous dose prefix: {abatabSession.ModQuickMedOrderPrevDosePrefix}{Environment.NewLine}" +
+                                   $"Previous dose suffix: {abatabSession.ModQuickMedOrderPrevDoseSuffix}{Environment.NewLine}" +
+                                   $"Max percent increase: {abatabSession.ModQuickMedOrderDosePercentMaxInc}{Environment.NewLine}";
+                    break;
+
+
+                case "prototype":
+                    moduleDetail = $"Mode: {abatabSession.ModPrototypeMode}";
+                    break;
+
+                case "testing":
+                    moduleDetail = $"Mode: {abatabSession.ModTestingMode}";
+                    break;
+
+                default:
+                    moduleDetail = $"Undefined.";
+                    break;
+            }
+
+            return $"{moduleHead}" +
+                   $"{moduleDetail}";
+        }
+
         /// <summary><param name="thisOptObj">OptionObject2015 object to get information for.</param>
         /// <returns>Details of an OptionObject.</returns>
         private static string BodyOptObjDetail(OptionObject2015 thisOptObj, string optObjType)
@@ -181,22 +230,22 @@ namespace AbatabLogging
                              $"{optObjType}{Environment.NewLine}" +
                              $"------------";
 
-            var optObjInfo = $"{Environment.NewLine}" +
-                             $"EntityID:          {thisOptObj.EntityID}{Environment.NewLine}" +
-                             $"Facility:          {thisOptObj.Facility}{Environment.NewLine}" +
-                             $"NamespaceName:     {thisOptObj.NamespaceName}{Environment.NewLine}" +
-                             $"OptionId:          {thisOptObj.OptionId}{Environment.NewLine}" +
-                             $"ParentNamespace:   {thisOptObj.ParentNamespace}{Environment.NewLine}" +
-                             $"ServerName:        {thisOptObj.ServerName}{Environment.NewLine}" +
-                             $"SystemCode:        {thisOptObj.SystemCode}{Environment.NewLine}" +
-                             $"EpisodeNumber:     {thisOptObj.EpisodeNumber}{Environment.NewLine}" +
-                             $"OptionStaffId:     {thisOptObj.OptionStaffId}{Environment.NewLine}" +
-                             $"OptionUserId:      {thisOptObj.OptionUserId}{Environment.NewLine}" +
-                             $"ErrorCode:         {thisOptObj.ErrorCode}{Environment.NewLine}" +
-                             $"ErrorMesg:         {thisOptObj.ErrorMesg}";
+            var optObjDetail = $"{Environment.NewLine}" +
+                               $"EntityID:          {thisOptObj.EntityID}{Environment.NewLine}" +
+                               $"Facility:          {thisOptObj.Facility}{Environment.NewLine}" +
+                               $"NamespaceName:     {thisOptObj.NamespaceName}{Environment.NewLine}" +
+                               $"OptionId:          {thisOptObj.OptionId}{Environment.NewLine}" +
+                               $"ParentNamespace:   {thisOptObj.ParentNamespace}{Environment.NewLine}" +
+                               $"ServerName:        {thisOptObj.ServerName}{Environment.NewLine}" +
+                               $"SystemCode:        {thisOptObj.SystemCode}{Environment.NewLine}" +
+                               $"EpisodeNumber:     {thisOptObj.EpisodeNumber}{Environment.NewLine}" +
+                               $"OptionStaffId:     {thisOptObj.OptionStaffId}{Environment.NewLine}" +
+                               $"OptionUserId:      {thisOptObj.OptionUserId}{Environment.NewLine}" +
+                               $"ErrorCode:         {thisOptObj.ErrorCode}{Environment.NewLine}" +
+                               $"ErrorMesg:         {thisOptObj.ErrorMesg}";
 
             return $"{optObjHead}" +
-                   $"{optObjInfo}";
+                   $"{optObjDetail}";
         }
 
         /// <summary>Build log footer.</summary>
