@@ -16,3 +16,10 @@
 * [ ] Verify DebugDebugger
 * [ ] Cleanup code/comments
 * [ ] Logging types: all-none-trace-session
+
+
+
+
+
+# v0.XX.0.0
+* [ ] Debug descriptions are static in settings file.
