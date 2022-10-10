@@ -1,7 +1,7 @@
 ﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
  * Abatab                                                                                           v0.92.0
  * Abatab.csproj                                                                                    v0.92.0
- * AbatabSettings.cs                                                                         b221010.115437
+ * AbatabSettings.cs                                                                         b221010.124123
  * --------------------------------------------------------------------------------------------------------
  * Logic to work with configuration settings found in the local Web.Config file.
  * ================================= (c)2016-2022 A Pretty Cool Program ================================ */
@@ -45,17 +45,21 @@ namespace Abatab
 
             return new Dictionary<string, string>
             {
-                { "DebugMode",              Properties.Settings.Default.DebugMode.ToLower() },
-                { "DebugLogRoot",           Properties.Settings.Default.DebugLogRoot.ToLower() },
-                { "AbatabMode",             Properties.Settings.Default.AbatabMode.ToLower() },
-                { "AbatabRoot",             Properties.Settings.Default.AbatabRoot.ToLower() },
-                { "LoggingMode",            Properties.Settings.Default.LoggingMode.ToLower() },
-                { "LoggingDetail",          Properties.Settings.Default.LoggingDetail.ToLower() },
-                { "LoggingDelay",           Properties.Settings.Default.LoggingDelay.ToLower() },
-                { "AvatarFallbackUserName", Properties.Settings.Default.AvatarFallbackUserName.ToLower() },
-                { "ModuleDateMode",         Properties.Settings.Default.ModuleDateMode.ToLower() },
-                { "ModuleDoseMode",         Properties.Settings.Default.ModuleDoseMode.ToLower() },
-                { "ModuleTestingMode",      Properties.Settings.Default.ModuleTestingMode.ToLower() }
+                { "DebugMode",                      Properties.Settings.Default.DebugMode.ToLower() },
+                { "DebugLogRoot",                   Properties.Settings.Default.DebugLogRoot.ToLower() },
+                { "AbatabMode",                     Properties.Settings.Default.AbatabMode.ToLower() },
+                { "AbatabRoot",                     Properties.Settings.Default.AbatabRoot.ToLower() },
+                { "LoggingMode",                    Properties.Settings.Default.LoggingMode.ToLower() },
+                { "LoggingDetail",                  Properties.Settings.Default.LoggingDetail.ToLower() },
+                { "LoggingDelay",                   Properties.Settings.Default.LoggingDelay.ToLower() },
+                { "AvatarFallbackUserName",         Properties.Settings.Default.AvatarFallbackUserName.ToLower() },
+                { "ModDateMode",                    Properties.Settings.Default.ModDateMode.ToLower() },
+                { "ModQuickMedOrderMode",           Properties.Settings.Default.ModQuickMedOrderMode.ToLower() },
+                { "ModQuickMedOrderPrevDosePrefix", Properties.Settings.Default.ModQuickMedOrderPrevDosePrefix.ToLower() },
+                { "ModQuickMedOrderPrevDoseSuffix", Properties.Settings.Default.ModQuickMedOrderPrevDoseSuffix.ToLower() },
+                { "ModQuickMedOrderDosePercentMaxInc", Properties.Settings.Default.ModQuickMedOrderDosePercentMaxInc.ToLower() },
+                { "ModPrototypeMode",               Properties.Settings.Default.ModPrototypeMode.ToLower() },
+                { "ModTestingMode",                 Properties.Settings.Default.ModTestingMode.ToLower() }
             };
         }
     }

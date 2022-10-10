@@ -143,3 +143,11 @@ LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 
 * All of the data we need for a session.
 
+
+
+
+
+## ModuleDose
+
+* Note about settings
+    - space before "mgs"

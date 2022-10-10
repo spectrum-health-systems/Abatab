@@ -10,6 +10,8 @@
 * [ ] //if (debugMode == "on" || debugMode == "undefined") // TODO Remove.
 * [ ] Test logging types via Web.config
 * [ ] Verify DebugDebugger
+* [ ] Cleanup settings order
+
 # v0.92.0.0
 
 * [X] Build WorkOptObj

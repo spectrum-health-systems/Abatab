@@ -98,27 +98,72 @@ namespace Abatab.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("enabled")]
-        public string ModuleTestingMode {
+        public string ModTestingMode {
             get {
-                return ((string)(this["ModuleTestingMode"]));
+                return ((string)(this["ModTestingMode"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("enabled")]
-        public string ModuleDateMode {
+        public string ModDateMode {
             get {
-                return ((string)(this["ModuleDateMode"]));
+                return ((string)(this["ModDateMode"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("enabled")]
-        public string ModuleDoseMode {
+        public string ModQuickMedOrderMode {
             get {
-                return ((string)(this["ModuleDoseMode"]));
+                return ((string)(this["ModQuickMedOrderMode"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("none")]
+        public string ModQuickMedOrderTestUsers {
+            get {
+                return ((string)(this["ModQuickMedOrderTestUsers"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Recurring Dosage:")]
+        public string ModQuickMedOrderPrevDosePrefix {
+            get {
+                return ((string)(this["ModQuickMedOrderPrevDosePrefix"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute(" mgs")]
+        public string ModQuickMedOrderPrevDoseSuffix {
+            get {
+                return ((string)(this["ModQuickMedOrderPrevDoseSuffix"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0.25")]
+        public string ModQuickMedOrderDosePercentMaxInc {
+            get {
+                return ((string)(this["ModQuickMedOrderDosePercentMaxInc"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("enabled")]
+        public string ModPrototypeMode {
+            get {
+                return ((string)(this["ModPrototypeMode"]));
             }
         }
     }

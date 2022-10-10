@@ -26,13 +26,28 @@
     <Setting Name="AvatarFallbackUserName" Type="System.String" Scope="Application">
       <Value Profile="(Default)">_Abatab_</Value>
     </Setting>
-    <Setting Name="ModuleTestingMode" Type="System.String" Scope="Application">
+    <Setting Name="ModTestingMode" Type="System.String" Scope="Application">
       <Value Profile="(Default)">enabled</Value>
     </Setting>
-    <Setting Name="ModuleDateMode" Type="System.String" Scope="Application">
+    <Setting Name="ModDateMode" Type="System.String" Scope="Application">
       <Value Profile="(Default)">enabled</Value>
     </Setting>
-    <Setting Name="ModuleDoseMode" Type="System.String" Scope="Application">
+    <Setting Name="ModQuickMedOrderMode" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">enabled</Value>
+    </Setting>
+    <Setting Name="ModQuickMedOrderTestUsers" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">none</Value>
+    </Setting>
+    <Setting Name="ModQuickMedOrderPrevDosePrefix" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Recurring Dosage:</Value>
+    </Setting>
+    <Setting Name="ModQuickMedOrderPrevDoseSuffix" Type="System.String" Scope="Application">
+      <Value Profile="(Default)"> mgs</Value>
+    </Setting>
+    <Setting Name="ModQuickMedOrderDosePercentMaxInc" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">0.25</Value>
+    </Setting>
+    <Setting Name="ModPrototypeMode" Type="System.String" Scope="Application">
       <Value Profile="(Default)">enabled</Value>
     </Setting>
   </Settings>

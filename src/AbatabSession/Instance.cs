@@ -1,7 +1,7 @@
 ﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
  * Abatab                                                                                           v0.92.0
  * AbatabSession.csproj                                                                             v0.92.0
- * Instance.cs                                                                               b221010.115437
+ * Instance.cs                                                                               b221010.124123
  * --------------------------------------------------------------------------------------------------------
  * Logic for Abatab sessions.
  * ================================= (c)2016-2022 A Pretty Cool Program ================================ */
@@ -28,25 +28,32 @@ namespace AbatabSession
 
             var abatabSession = new SessionData
             {
-                AbatabMode             = abatabSettings["AbatabMode"],
-                AbatabRoot             = abatabSettings["AbatabRoot"],
-                DebugMode              = abatabSettings["DebugMode"],
-                DebugLogRoot           = abatabSettings["DebugLogRoot"],
-                LoggingMode            = abatabSettings["LoggingMode"],
-                LoggingDetail          = abatabSettings["LoggingDetail"],
-                LoggingDelay           = abatabSettings["LoggingDelay"],
-                AvatarFallbackUserName = abatabSettings["AvatarFallbackUserName"],
-                SessionTimestamp       = $"{DateTime.Now:yyMMdd}",
-                SessionLogRoot          = "",
-                AbatabRequest          = abatabRequest.ToLower(),
-                AbatabModule           = "undefined",
-                AbatabCommand          = "undefined",
-                AbatabAction           = "undefined",
-                AbatabOption           = "undefined",
-                AvatarUserName         = sentOptObj.OptionUserId,
-                SentOptObj             = sentOptObj,
-                WorkOptObj             = AbatabOptionObject.WorkObj.BuildWorkObj(sentOptObj),
-                FinalOptObj            = new OptionObject2015()
+                AbatabMode                     = abatabSettings["AbatabMode"],
+                AbatabRoot                     = abatabSettings["AbatabRoot"],
+                DebugMode                      = abatabSettings["DebugMode"],
+                DebugLogRoot                   = abatabSettings["DebugLogRoot"],
+                LoggingMode                    = abatabSettings["LoggingMode"],
+                LoggingDetail                  = abatabSettings["LoggingDetail"],
+                LoggingDelay                   = abatabSettings["LoggingDelay"],
+                AvatarFallbackUserName         = abatabSettings["AvatarFallbackUserName"],
+                ModDateMode                    = abatabSettings["ModDateMode"],
+                ModQuickMedOrderMode           = abatabSettings["ModQuickMedOrderMode"],
+                ModQuickMedOrderPrevDosePrefix = abatabSettings["ModQuickMedOrderPrevDosePrefix"],
+                ModQuickMedOrderPrevDoseSuffix = abatabSettings["ModQuickMedOrderPrevDoseSuffix"],
+                ModQuickMedOrderDosePercentMaxInc = abatabSettings["ModQuickMedOrderDosePercentMaxInc"],
+                ModPrototypeMode               = abatabSettings["ModPrototypeMode"],
+                ModTestingMode                 = abatabSettings["ModTestingMode"],
+                SessionTimestamp               = $"{DateTime.Now:yyMMdd}",
+                SessionLogRoot                 = "",
+                AbatabRequest                  = abatabRequest.ToLower(),
+                AbatabModule                   = "undefined",
+                AbatabCommand                  = "undefined",
+                AbatabAction                   = "undefined",
+                AbatabOption                   = "undefined",
+                AvatarUserName                 = sentOptObj.OptionUserId,
+                SentOptObj                     = sentOptObj,
+                WorkOptObj                     = AbatabOptionObject.WorkObj.BuildWorkObj(sentOptObj),
+                FinalOptObj                    = new OptionObject2015()
             };
 
             abatabSession.SessionLogRoot = $@"{abatabSession.AbatabRoot}\logs\{abatabSession.SessionTimestamp}\{abatabSession.AvatarUserName}";

@@ -122,9 +122,9 @@
       <Project>{8143e2a4-e482-4d41-8d05-3eff62185964}</Project>
       <Name>ModuleDate</Name>
     </ProjectReference>
-    <ProjectReference Include="Modules\ModuleDose\ModuleDose.csproj">
+    <ProjectReference Include="Modules\ModuleDose\ModuleQuickMedOrder.csproj">
       <Project>{b1f06ae6-91ef-46e5-850f-2933e0273932}</Project>
-      <Name>ModuleDose</Name>
+      <Name>ModuleQuickMedOrder</Name>
     </ProjectReference>
     <ProjectReference Include="Modules\ModuleTesting\ModuleTesting.csproj">
       <Project>{c7c8afa2-927b-416f-9cf5-d12ec768ae26}</Project>
