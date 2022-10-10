@@ -183,9 +183,9 @@ namespace AbatabLogging
         private static string BodyModuleDetail(SessionData abatabSession, string modName)
         {
             var moduleHead = $"{Environment.NewLine}" +
-                             $"------------{Environment.NewLine}" +
+                             $"-------------{Environment.NewLine}" +
                              $"{modName}{Environment.NewLine}" +
-                             $"------------{Environment.NewLine}";
+                             $"-------------{Environment.NewLine}";
 
             var moduleDetail = "";
 
@@ -197,10 +197,10 @@ namespace AbatabLogging
 
 
                 case "quickmedorder":
-                    moduleDetail = $"Mode: {abatabSession.ModQuickMedOrderMode}{Environment.NewLine}" +
+                    moduleDetail = $"Mode:                 {abatabSession.ModQuickMedOrderMode}{Environment.NewLine}" +
                                    $"Previous dose prefix: {abatabSession.ModQuickMedOrderPrevDosePrefix}{Environment.NewLine}" +
                                    $"Previous dose suffix: {abatabSession.ModQuickMedOrderPrevDoseSuffix}{Environment.NewLine}" +
-                                   $"Max percent increase: {abatabSession.ModQuickMedOrderDosePercentMaxInc}{Environment.NewLine}";
+                                   $"Max percent increase: {abatabSession.ModQuickMedOrderDosePercentMaxInc}";
                     break;
 
 
