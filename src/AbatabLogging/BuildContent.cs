@@ -126,28 +126,22 @@ namespace AbatabLogging
 
             // TODO - Verify this works, especially the modification stuff.
             var sessionDetail = $"{Environment.NewLine}" +
-                                $"Abatab{Environment.NewLine}" +
-                                $"    Mode:                   {abatabSession.AbatabMode}{Environment.NewLine}" +
-                                $"    Root:                   {abatabSession.AbatabRoot}{Environment.NewLine}" +
-                                $"Debugging{Environment.NewLine}" +
-                                $"    Mode :                  {abatabSession.DebugMode}{Environment.NewLine}" +
-                                $"    Log root:               {abatabSession.DebugLogRoot}{Environment.NewLine}" +
-                                $"Logging{Environment.NewLine}" +
-                                $"    Mode:                   {abatabSession.LoggingMode}{Environment.NewLine}" +
-                                $"    Detail:                 {abatabSession.LoggingDetail}{Environment.NewLine}" +
-                                $"    Delay:                  {abatabSession.LoggingDelay}{Environment.NewLine}" +
-                                $"Session{Environment.NewLine}" +
-                                $"    Timestamp:              {abatabSession.SessionTimestamp}{Environment.NewLine}" +
-                                $"    Log root:               {abatabSession.SessionLogRoot}{Environment.NewLine}" +
-                                $"Avatar{Environment.NewLine}" +
-                                $"    Username (from Avatar): {abatabSession.AvatarUserName}{Environment.NewLine}" +
-                                $"    Username (fallback):    {abatabSession.AvatarFallbackUserName}{Environment.NewLine}" +
-                                $"Abatab request{Environment.NewLine}" +
-                                $"    From Avatar:            {abatabSession.AbatabRequest}{Environment.NewLine}" +
-                                $"    Module:                 {abatabSession.AbatabModule}{Environment.NewLine}" +
-                                $"    Command:                {abatabSession.AbatabCommand}{Environment.NewLine}" +
-                                $"    Action:                 {abatabSession.AbatabAction}{Environment.NewLine}" +
-                                $"    Option:                 {abatabSession.AbatabOption}{Environment.NewLine}" +
+                                $"Abatab Mode:         {abatabSession.AbatabMode}{Environment.NewLine}" +
+                                $"Abatab Root:         {abatabSession.AbatabRoot}{Environment.NewLine}" +
+                                $"Debugging Mode:      {abatabSession.DebugMode}{Environment.NewLine}" +
+                                $"Debugging Log root:  {abatabSession.DebugLogRoot}{Environment.NewLine}" +
+                                $"Logging Mode:        {abatabSession.LoggingMode}{Environment.NewLine}" +
+                                $"Logging Detail:      {abatabSession.LoggingDetail}{Environment.NewLine}" +
+                                $"Logging Delay:       {abatabSession.LoggingDelay}{Environment.NewLine}" +
+                                $"Session Timestamp:   {abatabSession.SessionTimestamp}{Environment.NewLine}" +
+                                $"Session Log root:    {abatabSession.SessionLogRoot}{Environment.NewLine}" +
+                                $"Avatar username:     {abatabSession.AvatarUserName}{Environment.NewLine}" +
+                                $"Fallback username:   {abatabSession.AvatarFallbackUserName}{Environment.NewLine}" +
+                                $"Abatab request:      {abatabSession.AbatabRequest}{Environment.NewLine}" +
+                                $"    Request module:  {abatabSession.AbatabModule}{Environment.NewLine}" +
+                                $"    Request command: {abatabSession.AbatabCommand}{Environment.NewLine}" +
+                                $"    Request action:  {abatabSession.AbatabAction}{Environment.NewLine}" +
+                                $"    Request option:  {abatabSession.AbatabOption}{Environment.NewLine}" +
                                 $"{Environment.NewLine}" +
                                 $"===================={Environment.NewLine}" +
                                 $"OptionObject details{Environment.NewLine}" +
