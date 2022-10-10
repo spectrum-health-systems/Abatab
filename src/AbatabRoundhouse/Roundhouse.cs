@@ -1,28 +1,42 @@
-﻿/* ========================================================================================================
- * Abatab v0.5.0
- * https://github.com/spectrum-health-systems/Abatab
- * (c) 2021-2022 A Pretty Cool Program (see LICENSE file for more information)
+﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
+ * Abatab                                                                                           v0.92.0
+ * AbatabRoundhouse.csproj                                                                          v0.92.0
+ * Roundhouse.cs                                                                             b221010.115437
  * --------------------------------------------------------------------------------------------------------
- * AbatabRoundhouse.Roundhouse.cs v0.5.0-development+220927.110333
- * https://github.com/spectrum-health-systems/Abatab/blob/main/doc/srcdoc/SrcDocAbatabRoundhouse.md
- * ===================================================================================================== */
+ * 
+ * ================================= (c)2016-2022 A Pretty Cool Program ================================ */
+
+// Potentially depreciated.
+
 namespace AbatabRoundhouse
 {
     public class Roundhouse
     {
-        public static void TestA()
-        {
+        //public static SessionData ParseRequest(SessionData abatabSession)
+        //{
+        //    switch (abatabSession.AbatabMode)
+        //    {
+        //        case "enabled":
+        //            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
+        //            break;
 
-        }
+        //        case "disabled":
+        //            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
+        //            break;
 
-        public static void TestB()
-        {
+        //        case "passthrough":
+        //            LogEvent.Trace(Assembly.GetExecutingAssembly().GetName().Name, abatabSession);
+        //            abatabSession = AbatabOptionObject.Finalize.ForPassthrough(abatabSession);
+        //            break;
 
-        }
+        //        default:
+        //            // Gracefully exit.
+        //            break;
+        //    }
 
-        public static void TestC()
-        {
+        //    return abatabSession;
+        //}
 
-        }
+
     }
 }

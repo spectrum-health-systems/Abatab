@@ -41,8 +41,38 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="Roundhouse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AbatabData\AbatabData.csproj">
+      <Project>{E3028CFD-5965-4555-9A96-3EBBDFD4D550}</Project>
+      <Name>AbatabData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AbatabLogging\AbatabLogging.csproj">
+      <Project>{A4467424-56E0-4260-BB21-D98263D7AEFD}</Project>
+      <Name>AbatabLogging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AbatabOptionObject\AbatabOptionObject.csproj">
+      <Project>{2741df45-7db8-4bea-89b4-4a70c7114192}</Project>
+      <Name>AbatabOptionObject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Modules\ModuleTesting\ModuleTesting.csproj">
+      <Project>{c7c8afa2-927b-416f-9cf5-d12ec768ae26}</Project>
+      <Name>ModuleTesting</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

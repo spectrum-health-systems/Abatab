@@ -41,7 +41,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Configuration.cs" />
     <Compile Include="Instance.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
@@ -58,6 +57,14 @@
     <ProjectReference Include="..\AbatabLogging\AbatabLogging.csproj">
       <Project>{a4467424-56e0-4260-bb21-d98263d7aefd}</Project>
       <Name>AbatabLogging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AbatabOptionObject\AbatabOptionObject.csproj">
+      <Project>{2741df45-7db8-4bea-89b4-4a70c7114192}</Project>
+      <Name>AbatabOptionObject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AbatabSystem\AbatabSystem.csproj">
+      <Project>{212a533f-4074-4e6e-a994-9d5db850bf8e}</Project>
+      <Name>AbatabSystem</Name>
     </ProjectReference>
     <ProjectReference Include="..\NTST.ScriptLinkService.Objects\NTST.ScriptLinkService.Objects.vbproj">
       <Project>{8a8a6089-3286-42e6-9f76-b61784709654}</Project>

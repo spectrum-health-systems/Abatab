@@ -1,11 +1,12 @@
-﻿/* ========================================================================================================
- * Abatab v0.5.0
- * https://github.com/spectrum-health-systems/Abatab
- * (c) 2021-2022 A Pretty Cool Program (see LICENSE file for more information)
+﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
+ * Abatab                                                                                           v0.92.0
+ * AbatabOptionObject.csproj                                                                        v0.92.0
+ * Verify.cs                                                                                 b221010.115437
  * --------------------------------------------------------------------------------------------------------
- * AbatabOptionObject.BuildContent.cs v0.5.0-development+220927.110333
- * https://github.com/spectrum-health-systems/Abatab/blob/main/doc/srcdoc/SrcDocAbatabOptionObject.md
- * ===================================================================================================== */
+ * Verify an OptionObject.
+ * ================================= (c)2016-2022 A Pretty Cool Program ================================ */
+
+// Used?
 
 using NTST.ScriptLinkService.Objects;
 
@@ -13,9 +14,12 @@ namespace AbatabOptionObject
 {
     public static class Verify
     {
-        public static bool NotModified(OptionObject2015 sentOptObj, OptionObject2015 alternateOptObj)
+        /// <summary>Verify that the sentOptObj has not been modified.</summary>
+        /// <param name="sentOptObj"></param>
+        /// <param name="altOptObj"></param>
+        public static bool NotModified(OptionObject2015 sentOptObj, OptionObject2015 altOptObj)
         {
-            return alternateOptObj == sentOptObj;
+            return altOptObj == sentOptObj;
         }
     }
 }
