@@ -25,9 +25,10 @@ namespace AbatabSession
         {
             LogDebug.DebugContent(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"], "[DEBUG] Building session data.");
 
+            var ver = Assembly.GetEntryAssembly().GetName().Version.ToString();
+
             var abatabSession = new SessionData
             {
-                AbatabVer              = Assembly.GetEntryAssembly().GetName().Version.ToString(),
                 AbatabMode             = abatabSettings["AbatabMode"],
                 AbatabRoot             = abatabSettings["AbatabRoot"],
                 DebugMode              = abatabSettings["DebugMode"],
