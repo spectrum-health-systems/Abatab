@@ -1,11 +1,10 @@
 ﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
  * Abatab                                                                                           v0.91.0
  * ModuleTesting.csproj                                                                             v0.91.0
- * Roundhouse.cs                                                                             b221009.083236
- * ================================ (c) 2016-2022 A Pretty Cool Program ================================ */
-
-/*
- */
+ * Roundhouse.cs                                                                             b221009.090325
+ * --------------------------------------------------------------------------------------------------------
+ * Roundhouse logic for the Testing module.
+ * ================================= (c)2016-2022 A Pretty Cool Program ================================ */
 
 using AbatabData;
 using AbatabLogging;
@@ -15,9 +14,8 @@ namespace ModuleTesting
 {
     public class Roundhouse
     {
-        /// <summary></summary>
-        /// <param name="abatabSession"></param>
-        /// <returns></returns>
+        /// <summary>Parse the Abatab request command.</summary>
+        /// <param name="abatabSession">Abatab session information.</param>
         public static void ParseCommand(SessionData abatabSession)
         {
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
@@ -35,13 +33,10 @@ namespace ModuleTesting
             }
 
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
-
-            //return abatabSession;
         }
 
-        /// <summary></summary>
-        /// <param name="abatabSession"></param>
-        /// <returns></returns>
+        /// <summary>Do a data dump.</summary>
+        /// <param name="abatabSession">Abatab session information.</param>
         private static void ParseDataDump(SessionData abatabSession)
         {
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
@@ -60,8 +55,6 @@ namespace ModuleTesting
             }
 
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
-
-            // return abatabSession;
         }
     }
 }
