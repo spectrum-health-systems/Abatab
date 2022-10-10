@@ -26,7 +26,7 @@ namespace AbatabLogging
         /// <summary>Build a session detail log.</summary>
         /// <param name="abatabSession">Abatab session configuration settings.</param>
         /// <param name="logMsg">Message for the logfile</param>
-        public static void SessionDetail(SessionData abatabSession, string logMsg = "Session detail log.")
+        public static void Session(SessionData abatabSession, string logMsg = "Session detail log.")
         {
             LogDebug.DebugContent(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Creating session log.");
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, abatabSession.FinalOptObj.ErrorMesg);

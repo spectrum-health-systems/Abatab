@@ -19,7 +19,7 @@ namespace ModuleTesting
         public static void SessionData(SessionData abatabSession)
         {
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
-            LogEvent.SessionDetail(abatabSession, "Testing data dump functionality.");
+            LogEvent.Session(abatabSession, "Testing data dump functionality.");
         }
     }
 }

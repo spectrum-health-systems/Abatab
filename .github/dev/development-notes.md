@@ -3,16 +3,27 @@
 ## Logging
 
 * How to enable/disable log event types
+* Public methods have debug logs at the beginning
+* Public methods have trace logs
+* Private methods have trace logs
 
 ### Debug logs
 
-* Debug logs with "[DEBUG]" are part of the source code. All other debug statements are temporary
-* Some debug statements should always be ther.
-* DebbuingDebug is only for debugging/development
-* Should not be enabled in production
+* Located:
+    - At the top of public methods.
+    - Immediately following the statement you want to trace (not separated by a blank line)
+* Debug logs with "[DEBUG]" are part of the source code, and should not be removed.
+* Debug logs without "[DEBUG]" temporary.
+* Debug logs have a 100ms delay, and will have a noticeable affect on performance.
+* DebuggingDebug is only for debugging/development
+* DebuggingDebug logs have a 1000ms delay, and will severly impact performance.
+* Debug logs should not be enabled in production
 * Cases where paramaters are hardcoded
 
 ### Trace logs
+
+* Located:
+    - At the top of private methods
 
 * Intended to show the flow of code, usually used during development
 * Should not be enabled in production

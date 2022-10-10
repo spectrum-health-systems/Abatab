@@ -1,12 +1,10 @@
 ﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
  * Abatab                                                                                           v0.91.0
  * Abatab.csproj                                                                                    v0.91.0
- * Abatab.asmx.cs                                                                            b221009.083236
- * ================================ (c) 2016-2022 A Pretty Cool Program ================================ */
-
-/* Main entry point for Abatab. This should be pretty static, but if it is modified, it will require the
- * entire solution to be rebuilt.
- */
+ * Abatab.asmx.cs                                                                         b221010.102030
+ * --------------------------------------------------------------------------------------------------------
+ * Entry point for Abatab.
+ * ================================= (c)2016-2022 A Pretty Cool Program ================================ */
 
 using Abatab.Properties;
 using AbatabData;
@@ -43,7 +41,8 @@ namespace Abatab
 
             Roundhouse.ParseRequest(abatabSession);
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
-            LogEvent.SessionDetail(abatabSession, "Completed session information");
+
+            LogEvent.Session(abatabSession, "Completed session information"); // This should be written every time Abatab executes.
 
             return abatabSession.FinalOptObj;
         }

@@ -21,7 +21,7 @@ namespace Abatab
         /// <returns>Abatab session data, potentially modified.</returns>
         public static void ParseRequest(SessionData abatabSession)
         {
-            LogDebug.DebugContent(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Parsing request..");
+            LogDebug.DebugContent(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Parsing Abatab request..");
 
             switch (abatabSession.AbatabModule)
             {
@@ -34,12 +34,11 @@ namespace Abatab
                     break;
 
                 case "testing":
-                    LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
                     ModuleTesting.Roundhouse.ParseCommand(abatabSession);
                     break;
 
                 default:
-                    // Gracefully exit.
+                    LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
                     break;
             }
         }

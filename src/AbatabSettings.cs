@@ -3,7 +3,7 @@
  * Abatab.csproj                                                                                    v0.91.0
  * AbatabSettings.cs                                                                         b221010.102030
  * --------------------------------------------------------------------------------------------------------
- * Contains the logic to work with configuration settings found in the local Web.Config file.
+ * Logic to work with configuration settings found in the local Web.Config file.
  * ================================= (c)2016-2022 A Pretty Cool Program ================================ */
 
 using Abatab.Properties;
@@ -20,7 +20,7 @@ namespace Abatab
     {
         /// <summary>Build the abatabSession object</summary>
         /// <param name="sentOptObj">OptionObject2015 sent from myAvatar.</param>
-        /// <param name="abatabSession">Abatab session data.</param>
+        /// <param name="abatabRequest">Request from Avatar.</param>
         /// <returns>Completed abatabSession object.</returns>
         public static SessionData BuildSettings(OptionObject2015 sentOptObj, string abatabRequest)
         {
@@ -35,6 +35,9 @@ namespace Abatab
         /// <returns>Local configuration settings.</returns>
         private static Dictionary<string, string> LoadWebConfig()
         {
+            /* Normally private methods don't create debug logs, but since we don't have the necessary information to create trace logs yet, we'll use a debug
+             * log here.
+             */
             LogDebug.DebugContent(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG] Loading configuration settings from Web.config.");
 
             return new Dictionary<string, string>

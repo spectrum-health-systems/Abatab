@@ -10,6 +10,7 @@ using AbatabData;
 using NTST.ScriptLinkService.Objects;
 using System;
 using System.IO;
+using System.Reflection;
 
 namespace AbatabLogging
 {
@@ -26,6 +27,8 @@ namespace AbatabLogging
         /// <returns>Content for a log file.</returns>
         public static string LogComponents(string eventType, SessionData abatabSession, string logMsg, string exeAssembly = "", string callPath = "", string callMember = "", int callLine = 0)
         {
+            LogDebug.DebugContent(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Creating log components..");
+
             var logHead   = ComponentHead(logMsg);
             var logDetail = ComponentDetail(eventType, exeAssembly, callPath, callMember, callLine);
             var logBody   = ComponentBody(eventType, abatabSession);
