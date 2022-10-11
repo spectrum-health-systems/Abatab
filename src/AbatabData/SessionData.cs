@@ -25,7 +25,7 @@ namespace AbatabData
 
         // Web.config: ModQuickMedOrder
         public string ModQuickMedOrderMode { get; set; }
-        public string ModQuickMedOrderTesters { get; set; }
+        public string ModQuickMedOrderValidUsers { get; set; }
         public string ModQuickMedOrderDosePercentMaxInc { get; set; }
         public QuickMedOrderData ModQuickMedOrderData { get; set; }
 

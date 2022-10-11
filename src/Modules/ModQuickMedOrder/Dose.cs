@@ -21,7 +21,7 @@ namespace ModQuickMedOrder
             Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Parsing Abatab request..");
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 
-            var shouldExecute = ModCommon.Confirm.Exectution(abatabSession.AvatarUserName, abatabSession.ModQuickMedOrderTesters);
+            var shouldExecute = ModCommon.Confirm.ValidUser(abatabSession.AvatarUserName, abatabSession.ModQuickMedOrderValidUsers);
 
             if (shouldExecute)
             {

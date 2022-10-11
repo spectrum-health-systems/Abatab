@@ -37,7 +37,7 @@ namespace AbatabSession
                 LoggingDelay                      = abatabSettings["LoggingDelay"],
                 AvatarFallbackUserName            = abatabSettings["AvatarFallbackUserName"],
                 ModQuickMedOrderMode              = abatabSettings["ModQuickMedOrderMode"],
-                ModQuickMedOrderTesters           = abatabSettings["ModQuickMedOrderTesters"],
+                ModQuickMedOrderValidUsers        = abatabSettings["ModQuickMedOrderValidUsers"],
                 ModQuickMedOrderDosePercentMaxInc = abatabSettings["ModQuickMedOrderDosePercentMaxInc"],
                 ModQuickMedOrderData              = new QuickMedOrderData(),
                 ModPrototypeMode                  = abatabSettings["ModPrototypeMode"],

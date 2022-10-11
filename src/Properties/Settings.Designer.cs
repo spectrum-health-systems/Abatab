@@ -115,10 +115,10 @@ namespace Abatab.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("none")]
-        public string ModQuickMedOrderTesters {
+        [global::System.Configuration.DefaultSettingValueAttribute("all")]
+        public string ModQuickMedOrderValidUsers {
             get {
-                return ((string)(this["ModQuickMedOrderTesters"]));
+                return ((string)(this["ModQuickMedOrderValidUsers"]));
             }
         }
         

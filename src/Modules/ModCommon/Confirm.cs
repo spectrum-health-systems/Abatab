@@ -14,9 +14,9 @@ namespace ModCommon
         /// <param name="userName"></param>
         /// <param name="testUsers"></param>
         /// <returns></returns>
-        public static bool Exectution(string userName, string testUsers)
+        public static bool ValidUser(string userName, string testUsers)
         {
-            return testUsers.ToLower() == "none" || testUsers.ToLower().Contains(userName);
+            return testUsers.Trim().ToLower() == "all" || testUsers.ToLower().Contains(userName);
         }
     }
 }
