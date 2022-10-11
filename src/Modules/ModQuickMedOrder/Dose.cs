@@ -22,6 +22,7 @@ namespace ModQuickMedOrder
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 
             var shouldExecute = ModCommon.Confirm.ValidUser(abatabSession.AvatarUserName, abatabSession.ModQuickMedOrderValidUsers);
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, $"{shouldExecute.ToString()}");
 
             if (shouldExecute)
             {

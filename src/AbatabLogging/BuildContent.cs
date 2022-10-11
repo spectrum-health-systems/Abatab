@@ -201,7 +201,7 @@ namespace AbatabLogging
             {
                 case "quickmedorder":
                     moduleDetail = $"Mode:                 {abatabSession.ModQuickMedOrderMode}{Environment.NewLine}" +
-                                   $"Test users:           {abatabSession.ModQuickMedOrderValidUsers}{Environment.NewLine}" +
+                                   $"Valid users:           {abatabSession.ModQuickMedOrderValidUsers}{Environment.NewLine}" +
                                    $"Max percent increase: {abatabSession.ModQuickMedOrderDosePercentMaxInc}";
                     break;
 
