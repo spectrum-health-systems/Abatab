@@ -55,6 +55,7 @@ namespace Abatab
             LogEvent.Session(abatabSession, "Session complete.");
 
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+
             return abatabSession.FinalOptObj;
         }
     }

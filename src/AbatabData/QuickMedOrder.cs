@@ -19,6 +19,5 @@ namespace AbatabData
         public bool FoundLastOrderScheduleFieldId { get; set; }
         public string LastOrderScheduleText { get; set; }
         public bool FoundAllRequiredFieldIds { get; set; }
-
     }
 }

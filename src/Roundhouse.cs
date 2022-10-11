@@ -14,7 +14,7 @@ namespace Abatab
         /// <summary>
         /// Determines where a script parameter request should go.
         /// </summary>
-        /// <param name="abatabSession">Abatab session data.</param>
+        /// <param name="abatabSession">Information/data for this session of Abatab.</param>
         public static void ParseRequest(Session abatabSession)
         {
             Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Parse script parameter request.");

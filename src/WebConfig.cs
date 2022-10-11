@@ -25,19 +25,19 @@ namespace Abatab
 
             return new Dictionary<string, string>
             {
-                { "DebugMode",                         Properties.Settings.Default.DebugMode.ToLower() },
-                { "DebugLogRoot",                      Properties.Settings.Default.DebugLogRoot.ToLower() },
-                { "AbatabMode",                        Properties.Settings.Default.AbatabMode.ToLower() },
-                { "AbatabRoot",                        Properties.Settings.Default.AbatabRoot.ToLower() },
-                { "LoggingMode",                       Properties.Settings.Default.LoggingMode.ToLower() },
-                { "LoggingDetail",                     Properties.Settings.Default.LoggingDetail.ToLower() },
-                { "LoggingDelay",                      Properties.Settings.Default.LoggingDelay.ToLower() },
-                { "AvatarFallbackUserName",            Properties.Settings.Default.AvatarFallbackUserName.ToLower() },
-                { "ModQuickMedOrderMode",              Properties.Settings.Default.ModQuickMedOrderMode.ToLower() },
-                { "ModQuickMedOrderValidUsers",        Properties.Settings.Default.ModQuickMedOrderValidUsers.ToLower() },
-                { "ModQuickMedOrderDosePercentMaxInc", Properties.Settings.Default.ModQuickMedOrderDosePercentMaxInc.ToLower() },
-                { "ModPrototypeMode",                  Properties.Settings.Default.ModPrototypeMode.ToLower() },
-                { "ModTestingMode",                    Properties.Settings.Default.ModTestingMode.ToLower() }
+                { "DebugMode",                         Settings.Default.DebugMode.ToLower() },
+                { "DebugLogRoot",                      Settings.Default.DebugLogRoot.ToLower() },
+                { "AbatabMode",                        Settings.Default.AbatabMode.ToLower() },
+                { "AbatabRoot",                        Settings.Default.AbatabRoot.ToLower() },
+                { "LoggingMode",                       Settings.Default.LoggingMode.ToLower() },
+                { "LoggingDetail",                     Settings.Default.LoggingDetail.ToLower() },
+                { "LoggingDelay",                      Settings.Default.LoggingDelay.ToLower() },
+                { "AvatarFallbackUserName",            Settings.Default.AvatarFallbackUserName.ToLower() },
+                { "ModQuickMedOrderMode",              Settings.Default.ModQuickMedOrderMode.ToLower() },
+                { "ModQuickMedOrderValidUsers",        Settings.Default.ModQuickMedOrderValidUsers.ToLower() },
+                { "ModQuickMedOrderDosePercentMaxInc", Settings.Default.ModQuickMedOrderDosePercentMaxInc.ToLower() },
+                { "ModPrototypeMode",                  Settings.Default.ModPrototypeMode.ToLower() },
+                { "ModTestingMode",                    Settings.Default.ModTestingMode.ToLower() }
             };
         }
     }

@@ -16,17 +16,22 @@ using System.Reflection;
 
 namespace AbatabLogging
 {
+    /// <summary>
+    /// Build the content components for a log file.
+    /// </summary>
     public class BuildContent
     {
-        /// <summary>Build all logfile components.</summary>
-        /// <param name="eventType">Log type.</param>
-        /// <param name="exeAssembly">Name of executing assembly.</param>
-        /// <param name="abatabSession">Abatab session configuration settings.</param>
-        /// <param name="logMsg">Message for the logfile</param>
-        /// <param name="callPath">Filename of where the log is coming from.</param>
-        /// <param name="callMember">Method of where the log is coming from.</param>
-        /// <param name="callLine">File line of where the log is coming from.</param>
-        /// <returns>Content for a log file.</returns>
+        /// <summary>
+        /// Builds the content for a log file.
+        /// </summary>
+        /// <param name="eventType">The type of log to create.</param>
+        /// <param name="abatabSession">Information/data for this session of Abatab.</param>
+        /// <param name="logMsg">The log message.</param>
+        /// <param name="exeAssembly">The name of executing assembly.</param>
+        /// <param name="callPath">The filename of where the log is coming from.</param>
+        /// <param name="callMember">The method name of where the log is coming from.</param>
+        /// <param name="callLine">The file line of where the log is coming from.</param>
+        /// <returns>The completed content for a log file.</returns>
         public static string LogComponents(string eventType, Session abatabSession, string logMsg, string exeAssembly = "", string callPath = "", string callMember = "", int callLine = 0)
         {
             Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Creating log components..");
@@ -49,14 +54,16 @@ namespace AbatabLogging
                    $"{logFoot}";
         }
 
-        /// <summary>Build debug log.</summary>
-        /// <param name="debugMode">Debug mode setting.</param>
-        /// <param name="debugMsg">Debug log message.</param>
-        /// <param name="exeAssembly">Name of executing assembly.</param>
-        /// <param name="callerPath">Filename of where the log is coming from.</param>
-        /// <param name="callerMember">Method of where the log is coming from.</param>
-        /// <param name="callerLine">File line of where the log is coming from.</param>
-        /// <returns>Content for a debug log file.</returns>
+        /// <summary>
+        /// Builds the content for a debug log file.
+        /// </summary>
+        /// <param name="debugMode">The Abatab debug mode setting.</param>
+        /// <param name="debugMsg">The debug log message.</param>
+        /// <param name="exeAssembly">The name of executing assembly.</param>
+        /// <param name="callPath">The filename of where the log is coming from.</param>
+        /// <param name="callMember">The method name of where the log is coming from.</param>
+        /// <param name="callLine">The file line of where the log is coming from.</param>
+        /// <returns>The cmpleted content for a debug log file.</returns>
         public static string DebugComponents(string exeAssembly, string debugMode, string debugMsg, string callPath, string callMember, int callLine)
         {
             var logHead   = ComponentHead(debugMsg);
@@ -70,9 +77,11 @@ namespace AbatabLogging
                    $"{logFoot}";
         }
 
-        /// <summary>Build log header.</summary>
-        /// <param name="logMsg">Log message.</param>
-        /// <returns>Log header.</returns>
+        /// <summary>
+        /// Builds the log header component.
+        /// </summary>
+        /// <param name="logMsg">The log message.</param>
+        /// <returns>The completed log header component.</returns>
         private static string ComponentHead(string logMsg)
         {
             return $"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-={Environment.NewLine}" +
@@ -80,13 +89,15 @@ namespace AbatabLogging
                    $"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-={Environment.NewLine}";
         }
 
-        /// <summary>Build log details.</summary>
-        /// <param name="eventType">Log type.</param>
-        /// <param name="exeAssembly">Name of executing assembly.</param>
-        /// <param name="callerPath">Filename of where the log is coming from.</param>
-        /// <param name="callerMember">Method of where the log is coming from.</param>
-        /// <param name="callerLine">File line of where the log is coming from.</param>
-        /// <returns>Log details.</returns>
+        /// <summary>
+        /// Builds the log details component.
+        /// </summary>
+        /// <param name="eventType">The type of log to create.</param>
+        /// <param name="exeAssembly">The name of executing assembly.</param>
+        /// <param name="callPath">The filename of where the log is coming from.</param>
+        /// <param name="callMember">The method name of where the log is coming from.</param>
+        /// <param name="callLine">The file line of where the log is coming from.</param>
+        /// <returns>The completed log details component.</returns>
         private static string ComponentDetail(string eventType, string exeAssembly, string callPath, string callMember, int callLine = 0)
         {
             var detailHead = $"{Environment.NewLine}" +
@@ -104,37 +115,38 @@ namespace AbatabLogging
                   $"Member:   {callMember}{Environment.NewLine}" +
                   $"Line:     {callLine}{Environment.NewLine}";
 
-            // No LogEvent.Trace() here because the necessary information doesn't exist.
             return $"{detailHead}" +
                    $"{logDetail}";
         }
 
-        /// <summary>Build log body.</summary>
-        /// <param name="eventType">Log type.</param>
-        /// <param name="abatabSession">Abatab session configuration settings.</param>
-        /// <returns>Log body.</returns>
+        /// <summary>
+        /// Builds the log body component.
+        /// </summary>
+        /// <param name="eventType">The type of log to create.</param>
+        /// <param name="abatabSession">Information/data for this session of Abatab.</param>
+        /// <returns>The completed log body component.</returns>
         private static string ComponentBody(string eventType, Session abatabSession)
         {
             switch (eventType)
             {
                 case "session":
-                    // No LogEvent.Trace() here because the necessary information doesn't exist.
                     return BodySessionDetail(abatabSession);
 
                 case "quickmedorder":
-                    // No LogEvent.Trace() here because the necessary information doesn't exist.
                     return BodyModQuickMedOrderDetail(abatabSession);
 
                 case "trace":
                 default:
-                    // No LogEvent.Trace() here because the necessary information doesn't exist.
+                    // Gracefully exit.
                     return "";
             }
         }
 
-        /// <summary>Build session information log body.</summary>
-        /// <param name="abatabSession">Abatab session configuration settings.</param>
-        /// <returns>Session information for log body.</returns>
+        /// <summary>
+        /// Builds a log body component for session details.
+        /// </summary>
+        /// <param name="abatabSession">Information/data for this session of Abatab.</param>
+        /// <returns>The completed log body component for session details.</returns>
         private static string BodySessionDetail(Session abatabSession)
         {
             var sessionHead = $"{Environment.NewLine}" +
@@ -179,10 +191,12 @@ namespace AbatabLogging
                    $"{sessionDetail}";
         }
 
-        /// <summary></summary>
-        /// <param name="abatabSession"></param>
-        /// <param name="modName"></param>
-        /// <returns></returns>
+        /// <summary>
+        /// Builds the log body component for module details.
+        /// </summary>
+        /// <param name="abatabSession">Information/data for this session of Abatab.</param>
+        /// <param name="modName">The name of the module.</param>
+        /// <returns>The completed log body component for module details.</returns>
         private static string BodyModuleDetail(Session abatabSession, string modName)
         {
             var moduleHead = $"{Environment.NewLine}" +
@@ -196,7 +210,7 @@ namespace AbatabLogging
             {
                 case "quickmedorder":
                     moduleDetail = $"Mode:                 {abatabSession.ModQuickMedOrderMode}{Environment.NewLine}" +
-                                   $"Valid users:           {abatabSession.ModQuickMedOrderValidUsers}{Environment.NewLine}" +
+                                   $"Valid users:          {abatabSession.ModQuickMedOrderValidUsers}{Environment.NewLine}" +
                                    $"Max percent increase: {abatabSession.ModQuickMedOrderDosePercentMaxInc}";
                     break;
 
@@ -217,9 +231,11 @@ namespace AbatabLogging
                    $"{moduleDetail}";
         }
 
-        /// <summary></summary>
-        /// <param name="abatabSession"></param>
-        /// <returns></returns>
+        /// <summary>
+        /// Builds the log body component for the QuickMedOrder details.
+        /// </summary>
+        /// <param name="abatabSession">Information/data for this session of Abatab.</param>
+        /// <returns>The completed log body component for QuickMedOrder details.</returns>
         private static string BodyModQuickMedOrderDetail(Session abatabSession)
         {
             var modQuickMedOrderHead = $"{Environment.NewLine}" +
@@ -245,34 +261,40 @@ namespace AbatabLogging
                    $"{modQuickMedOrderDetail}";
         }
 
-        /// <summary><param name="thisOptObj">OptionObject2015 object to get information for.</param>
-        /// <returns>Details of an OptionObject.</returns>
-        private static string BodyOptObjDetail(OptionObject2015 thisOptObj, string optObjType)
+        /// <summary>
+        /// Builds the log body component for the OptionObject details.
+        /// </summary>
+        /// <param name="optObj">The OptionObject to build from.</param>
+        /// <param name="optObjType">The type of OptionObject.</param>
+        /// <returns>The completed log body component for OptionObject details.</returns>
+        private static string BodyOptObjDetail(OptionObject2015 optObj, string optObjType)
         {
             var optObjHead = $"{Environment.NewLine}" +
                              $"------------{Environment.NewLine}" +
                              $"{optObjType}{Environment.NewLine}" +
                              $"------------{Environment.NewLine}";
 
-            var optObjDetail = $"EntityID:          {thisOptObj.EntityID}{Environment.NewLine}" +
-                               $"Facility:          {thisOptObj.Facility}{Environment.NewLine}" +
-                               $"NamespaceName:     {thisOptObj.NamespaceName}{Environment.NewLine}" +
-                               $"OptionId:          {thisOptObj.OptionId}{Environment.NewLine}" +
-                               $"ParentNamespace:   {thisOptObj.ParentNamespace}{Environment.NewLine}" +
-                               $"ServerName:        {thisOptObj.ServerName}{Environment.NewLine}" +
-                               $"SystemCode:        {thisOptObj.SystemCode}{Environment.NewLine}" +
-                               $"EpisodeNumber:     {thisOptObj.EpisodeNumber}{Environment.NewLine}" +
-                               $"OptionStaffId:     {thisOptObj.OptionStaffId}{Environment.NewLine}" +
-                               $"OptionUserId:      {thisOptObj.OptionUserId}{Environment.NewLine}" +
-                               $"ErrorCode:         {thisOptObj.ErrorCode}{Environment.NewLine}" +
-                               $"ErrorMesg:         {thisOptObj.ErrorMesg}";
+            var optObjDetail = $"EntityID:          {optObj.EntityID}{Environment.NewLine}" +
+                               $"Facility:          {optObj.Facility}{Environment.NewLine}" +
+                               $"NamespaceName:     {optObj.NamespaceName}{Environment.NewLine}" +
+                               $"OptionId:          {optObj.OptionId}{Environment.NewLine}" +
+                               $"ParentNamespace:   {optObj.ParentNamespace}{Environment.NewLine}" +
+                               $"ServerName:        {optObj.ServerName}{Environment.NewLine}" +
+                               $"SystemCode:        {optObj.SystemCode}{Environment.NewLine}" +
+                               $"EpisodeNumber:     {optObj.EpisodeNumber}{Environment.NewLine}" +
+                               $"OptionStaffId:     {optObj.OptionStaffId}{Environment.NewLine}" +
+                               $"OptionUserId:      {optObj.OptionUserId}{Environment.NewLine}" +
+                               $"ErrorCode:         {optObj.ErrorCode}{Environment.NewLine}" +
+                               $"ErrorMesg:         {optObj.ErrorMesg}";
 
             return $"{optObjHead}" +
                    $"{optObjDetail}";
         }
 
-        /// <summary>Build log footer.</summary>
-        /// <returns>Log footer.</returns>
+        /// <summary>
+        /// Builds the log footer.
+        /// </summary>
+        /// <returns>The completed log footer.</returns>
         private static string ComponentFoot(string footMsg = "End of log.")
         {
             return $"{Environment.NewLine}" +
