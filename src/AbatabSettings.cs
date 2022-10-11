@@ -53,10 +53,7 @@ namespace Abatab
                 { "LoggingDetail",                     Properties.Settings.Default.LoggingDetail.ToLower() },
                 { "LoggingDelay",                      Properties.Settings.Default.LoggingDelay.ToLower() },
                 { "AvatarFallbackUserName",            Properties.Settings.Default.AvatarFallbackUserName.ToLower() },
-                { "ModDateMode",                       Properties.Settings.Default.ModDateMode.ToLower() },
                 { "ModQuickMedOrderMode",              Properties.Settings.Default.ModQuickMedOrderMode.ToLower() },
-                { "ModQuickMedOrderPrevDosePrefix",    Properties.Settings.Default.ModQuickMedOrderPrevDosePrefix.ToLower() },
-                { "ModQuickMedOrderPrevDoseSuffix",    Properties.Settings.Default.ModQuickMedOrderPrevDoseSuffix.ToLower() },
                 { "ModQuickMedOrderDosePercentMaxInc", Properties.Settings.Default.ModQuickMedOrderDosePercentMaxInc.ToLower() },
                 { "ModPrototypeMode",                  Properties.Settings.Default.ModPrototypeMode.ToLower() },
                 { "ModTestingMode",                    Properties.Settings.Default.ModTestingMode.ToLower() }

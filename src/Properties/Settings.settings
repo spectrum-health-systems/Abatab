@@ -2,17 +2,17 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Abatab.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="DebugMode" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">off</Value>
-    </Setting>
-    <Setting Name="DebugLogRoot" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">C:\AvatoolWebService\Abatab_UAT\logs\debug</Value>
-    </Setting>
     <Setting Name="AbatabMode" Type="System.String" Scope="Application">
       <Value Profile="(Default)">passthrough</Value>
     </Setting>
     <Setting Name="AbatabRoot" Type="System.String" Scope="Application">
       <Value Profile="(Default)">C:\AvatoolWebService\Abatab_UAT</Value>
+    </Setting>
+    <Setting Name="DebugMode" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">off</Value>
+    </Setting>
+    <Setting Name="DebugLogRoot" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\AvatoolWebService\Abatab_UAT\logs\debug</Value>
     </Setting>
     <Setting Name="LoggingMode" Type="System.String" Scope="Application">
       <Value Profile="(Default)">all</Value>
@@ -29,20 +29,11 @@
     <Setting Name="ModTestingMode" Type="System.String" Scope="Application">
       <Value Profile="(Default)">enabled</Value>
     </Setting>
-    <Setting Name="ModDateMode" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">enabled</Value>
-    </Setting>
     <Setting Name="ModQuickMedOrderMode" Type="System.String" Scope="Application">
       <Value Profile="(Default)">enabled</Value>
     </Setting>
-    <Setting Name="ModQuickMedOrderTestUsers" Type="System.String" Scope="Application">
+    <Setting Name="ModQuickMedOrderTesters" Type="System.String" Scope="Application">
       <Value Profile="(Default)">none</Value>
-    </Setting>
-    <Setting Name="ModQuickMedOrderPrevDosePrefix" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">Recurring Dosage:</Value>
-    </Setting>
-    <Setting Name="ModQuickMedOrderPrevDoseSuffix" Type="System.String" Scope="Application">
-      <Value Profile="(Default)"> mgs</Value>
     </Setting>
     <Setting Name="ModQuickMedOrderDosePercentMaxInc" Type="System.String" Scope="Application">
       <Value Profile="(Default)">0.25</Value>

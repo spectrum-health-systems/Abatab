@@ -25,8 +25,9 @@ namespace AbatabData
 
         // Web.config: ModQuickMedOrder
         public string ModQuickMedOrderMode { get; set; }
-        public string ModQuickMedOrderPrevDosePrefix { get; set; }
-        public string ModQuickMedOrderPrevDoseSuffix { get; set; }
+        public string ModQuickMedOrderTesters { get; set; }
+        //public string ModQuickMedOrderPrevDosePrefix { get; set; } // DEPRECIATED
+        //public string ModQuickMedOrderPrevDoseSuffix { get; set; } // DEPRECIATED
         public string ModQuickMedOrderDosePercentMaxInc { get; set; }
         public QuickMedOrderData ModQuickMedOrderData { get; set; }
 
@@ -54,6 +55,8 @@ namespace AbatabData
 
     public class QuickMedOrderData
     {
+        public string PrevDosePrefix { get; set; }
+        public string PrevDoseSuffix { get; set; }
         public string DosageOneFieldId { get; set; }
         public bool FoundDosageOneFieldId { get; set; }
         public string CurrentDose { get; set; }

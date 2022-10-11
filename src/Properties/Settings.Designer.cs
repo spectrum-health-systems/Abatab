@@ -25,24 +25,6 @@ namespace Abatab.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("off")]
-        public string DebugMode {
-            get {
-                return ((string)(this["DebugMode"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\AvatoolWebService\\Abatab_UAT\\logs\\debug")]
-        public string DebugLogRoot {
-            get {
-                return ((string)(this["DebugLogRoot"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("passthrough")]
         public string AbatabMode {
             get {
@@ -56,6 +38,24 @@ namespace Abatab.Properties {
         public string AbatabRoot {
             get {
                 return ((string)(this["AbatabRoot"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("off")]
+        public string DebugMode {
+            get {
+                return ((string)(this["DebugMode"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\AvatoolWebService\\Abatab_UAT\\logs\\debug")]
+        public string DebugLogRoot {
+            get {
+                return ((string)(this["DebugLogRoot"]));
             }
         }
         
@@ -107,15 +107,6 @@ namespace Abatab.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("enabled")]
-        public string ModDateMode {
-            get {
-                return ((string)(this["ModDateMode"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("enabled")]
         public string ModQuickMedOrderMode {
             get {
                 return ((string)(this["ModQuickMedOrderMode"]));
@@ -125,27 +116,9 @@ namespace Abatab.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("none")]
-        public string ModQuickMedOrderTestUsers {
+        public string ModQuickMedOrderTesters {
             get {
-                return ((string)(this["ModQuickMedOrderTestUsers"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Recurring Dosage:")]
-        public string ModQuickMedOrderPrevDosePrefix {
-            get {
-                return ((string)(this["ModQuickMedOrderPrevDosePrefix"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute(" mgs")]
-        public string ModQuickMedOrderPrevDoseSuffix {
-            get {
-                return ((string)(this["ModQuickMedOrderPrevDoseSuffix"]));
+                return ((string)(this["ModQuickMedOrderTesters"]));
             }
         }
         

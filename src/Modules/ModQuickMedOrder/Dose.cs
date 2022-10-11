@@ -21,21 +21,30 @@ namespace ModQuickMedOrder
             Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Parsing Abatab request..");
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 
-            InitializeData(abatabSession);
+            var shouldExecute = ModCommon.Confirm.Exectution(abatabSession.AvatarUserName, abatabSession.ModQuickMedOrderTesters);
 
-            AbatabOptionObject.WorkObj.ClearErrorData(abatabSession);
+            if (shouldExecute)
+            {
+                LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 
-            LogEvent.ModQuickMedOrder(abatabSession);
+                InitializeDoseData(abatabSession);
+
+                AbatabOptionObject.WorkObj.ClearErrorData(abatabSession);
+
+                LogEvent.ModQuickMedOrder(abatabSession);
+            }
 
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
         }
 
         /// <summary></summary>
         /// <returns></returns>
-        private static void InitializeData(SessionData abatabSession)
+        private static void InitializeDoseData(SessionData abatabSession)
         {
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 
+            abatabSession.ModQuickMedOrderData.PrevDosePrefix                = "Recurring Dosage:";
+            abatabSession.ModQuickMedOrderData.PrevDoseSuffix                = " mgs";
             abatabSession.ModQuickMedOrderData.DosageOneFieldId              = "107";
             abatabSession.ModQuickMedOrderData.FoundDosageOneFieldId         = false;
             abatabSession.ModQuickMedOrderData.CurrentDose                   = "0.0";
@@ -49,5 +58,10 @@ namespace ModQuickMedOrder
 
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
         }
+
+
+
+
+
     }
 }

@@ -58,6 +58,10 @@
       <Project>{2741df45-7db8-4bea-89b4-4a70c7114192}</Project>
       <Name>AbatabOptionObject</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ModCommon\ModCommon.csproj">
+      <Project>{cbd27c27-b3cd-455e-af5d-4749ca219d53}</Project>
+      <Name>ModCommon</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
