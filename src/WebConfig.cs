@@ -5,37 +5,18 @@
  */
 
 using Abatab.Properties;
-using AbatabData;
 using AbatabLogging;
-using AbatabSession;
-using NTST.ScriptLinkService.Objects;
 using System.Collections.Generic;
 using System.Reflection;
 
 namespace Abatab
 {
-    public static class AbatabSettings
+    public static class WebConfig
     {
-        /// <summary>Build settings object</summary>
-        /// <param name="sentOptObj">OptionObject2015 sent from myAvatar.</param>
-        /// <param name="abatabRequest">Script parameter sent from Avatar.</param>
-        /// <returns>Completed settings object.</returns>
-        public static SessionData Build(OptionObject2015 sentOptObj, string abatabRequest)
-        {
-            Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG] Building Abatab session settings.");
-            // No LogEvent.Trace()
-
-            Dictionary<string, string> abatabSettings = AbatabSettings.LoadWebConfig();
-
-            // No LogEvent.Trace()
-            return Instance.Build(sentOptObj, abatabRequest, abatabSettings);
-        }
-
         /// <summary>Load settings from Web.config.</summary>
         /// <returns>Web.config settings.</returns>
-        private static Dictionary<string, string> LoadWebConfig()
+        public static Dictionary<string, string> Load()
         {
-            // Debugger.BuildDebugLog() here instead of a LogEvent.Trace().
             Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG] Loading configuration settings from Web.config.");
 
             return new Dictionary<string, string>
