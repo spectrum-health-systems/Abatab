@@ -16,7 +16,7 @@ namespace ModCommon
         /// <returns></returns>
         public static bool ValidUser(string userName, string testUsers)
         {
-            return testUsers.Trim().ToLower() == "all" || testUsers.ToLower().Contains(userName);
+            return testUsers.Trim().ToLower() == "all" || testUsers.ToLower().Contains(userName.ToLower());
         }
     }
 }
