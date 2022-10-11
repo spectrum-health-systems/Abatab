@@ -184,6 +184,10 @@ namespace AbatabLogging
                    $"{sessionDetail}";
         }
 
+        /// <summary></summary>
+        /// <param name="abatabSession"></param>
+        /// <param name="modName"></param>
+        /// <returns></returns>
         private static string BodyModuleDetail(SessionData abatabSession, string modName)
         {
             var moduleHead = $"{Environment.NewLine}" +
@@ -218,8 +222,9 @@ namespace AbatabLogging
                    $"{moduleDetail}";
         }
 
-        /// <summary><param name="thisOptObj">OptionObject2015 object to get information for.</param>
-        /// <returns>Details of an OptionObject.</returns>
+        /// <summary></summary>
+        /// <param name="abatabSession"></param>
+        /// <returns></returns>
         private static string BodyModQuickMedOrderDetail(SessionData abatabSession)
         {
             var modQuickMedOrderHead = $"{Environment.NewLine}" +
@@ -228,6 +233,8 @@ namespace AbatabLogging
                                        $"====================";
 
             var modQuickMedOrderDetail = $"{Environment.NewLine}" +
+                                         $"Previous dose prefix:              {abatabSession.ModQuickMedOrderData.PrevDosePrefix}{Environment.NewLine}" +
+                                         $"Previous dose suffix:              {abatabSession.ModQuickMedOrderData.PrevDoseSuffix}{Environment.NewLine}" +
                                          $"OrderType field ID:                {abatabSession.ModQuickMedOrderData.OrderTypeFieldId}{Environment.NewLine}" +
                                          $"Found OrderType field ID:          {abatabSession.ModQuickMedOrderData.FoundOrderTypeFieldId}{Environment.NewLine}" +
                                          $"OrderType:                         {abatabSession.ModQuickMedOrderData.OrderType}{Environment.NewLine}" +
