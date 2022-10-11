@@ -1,8 +1,9 @@
-﻿/* Abatab.AbatabSettings.cs 0.92.0+221011.093856
+﻿/* =============================================================================
+ * Abatab.WebConfig.cs
+ * b221011.093856
  * https://github.com/spectrum-health-systems/Abatab
- * (c)2016-2022 A Pretty Cool Program
- * https://github.com/spectrum-health-systems/Abatab/blob/main/doc/srcdoc/SrcDocHome.md
- */
+ * (c)2016-2022 A Pretty Cool Program (see LICENSE file)
+ * ========================================================================== */
 
 using Abatab.Properties;
 using AbatabLogging;
@@ -11,13 +12,21 @@ using System.Reflection;
 
 namespace Abatab
 {
+    /// <summary>
+    /// Logic for working with Web.config.
+    /// </summary>
     public static class WebConfig
     {
-        /// <summary>Load settings from Web.config.</summary>
-        /// <returns>Web.config settings.</returns>
+        /// <summary>
+        /// Load the settings from Web.config.
+        /// </summary>
+        /// <remarks>
+        /// If a setting is added/removed/modified in Web.config, it needs to be reflected here.
+        /// </remarks>
+        /// <returns>A dictionary containing the settings from Web.config.</returns>
         public static Dictionary<string, string> Load()
         {
-            Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG] Loading configuration settings from Web.config.");
+            Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG] Load Web.config.");
 
             return new Dictionary<string, string>
             {

@@ -1,10 +1,9 @@
-﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
- * Abatab                                                                                           v0.92.0
- * Abatab.csproj                                                                                    v0.92.0
- * Abatab.Roundhouse.cs                                                                      b221011.093856
- * --------------------------------------------------------------------------------------------------------
- * Determines where the sentOptionObject should go for further work.
- * ================================= (c)2016-2022 A Pretty Cool Program ================================ */
+﻿/* =============================================================================
+ * Abatab.Roundhouse.cs
+ * b221011.093856
+ * https://github.com/spectrum-health-systems/Abatab
+ * (c)2016-2022 A Pretty Cool Program (see LICENSE file)
+ * ========================================================================== */
 
 using AbatabData;
 using AbatabLogging;
@@ -12,14 +11,16 @@ using System.Reflection;
 
 namespace Abatab
 {
+    /// <summary>
+    /// Roundhouse functionality for Abatab.
+    /// </summary>
     public static class Roundhouse
     {
-        /// <summary>Determine which module should receive the request.</summary>
-        /// <param name="abatabSession">Abatab session data.</param>
-        /// <returns>Abatab session data, potentially modified.</returns>
+        /// <summary>Determines where a script parameter request should go.</summary>
+        /// <param name="abatabSession">Necessary data for this session of Abatab.</param>
         public static void ParseRequest(SessionData abatabSession)
         {
-            Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Parsing Abatab request..");
+            Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Parse script parameter request.");
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 
             switch (abatabSession.AbatabModule)

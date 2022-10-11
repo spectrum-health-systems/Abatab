@@ -1,10 +1,9 @@
-﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
- * Abatab                                                                                           v0.92.0
- * Abatab.csproj                                                                                    v0.92.0
- * Abatab.asmx.cs                                                                            b221011.093856
- * --------------------------------------------------------------------------------------------------------
- * The entry point for Abatab.
- * ================================= (c)2016-2022 A Pretty Cool Program ================================ */
+﻿/* =============================================================================
+ * Abatab.asmx.cs
+ * b221011.093856
+ * https://github.com/spectrum-health-systems/Abatab
+ * (c)2016-2022 A Pretty Cool Program (see LICENSE file)
+ * ========================================================================== */
 
 using Abatab.Properties;
 using AbatabData;
@@ -17,6 +16,9 @@ using System.Web.Services;
 
 namespace Abatab
 {
+    /// <summary>
+    /// The entry point for Abatab.
+    /// </summary>
     [WebService(Namespace = "http://tempuri.org/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
@@ -25,6 +27,9 @@ namespace Abatab
         /// <summary>
         /// Returns the current version of Abatab.
         /// </summary>
+        /// <remarks>
+        /// This method is required by Avatar.
+        /// </remarks>
         /// <returns>The current version of Abatab.</returns>
         [WebMethod]
         public string GetVersion()
@@ -33,8 +38,11 @@ namespace Abatab
         }
 
         /// <summary>
-        /// Executes script parameter request from Avatar, then returns a potentially modified OptionObject to Avatar. abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+        /// Executes script parameter request from Avatar, then returns a potentially modified OptionObject to Avatar.
         /// </summary>
+        /// <remarks>
+        /// This method is required by Avatar.
+        /// </remarks>
         /// <param name="sentOptionObject">The original OptionObject sent from Avatar.</param>
         /// <param name="scriptParameter">The script parameter request from Avatar.</param>
         /// <returns>A finalized OptionObject.</returns>
@@ -56,28 +64,3 @@ namespace Abatab
         }
     }
 }
-
-/*
-
-=================
-DEVELOPMENT NOTES
-=================
-
-GetVersion()
-------------
-01 Returns the Abatab version
-- Required method
-- More information: https://github.com/myAvatar-Development-Community/document-creating-a-custom-web-service#the-getversion-method
-
-RunScript()
------------
-01 Build required data for the current session
-03 Parse the ScriptLink script parameter to determine where the OptionObject needs to be sent
-04 Write the session details to a log file for reference
-05 Return the final OptionObject to Avatar
-- Required method
-- Entry point for Abatab
-- LogEvent.Trace() is not used
-- More information: https://github.com/myAvatar-Development-Community/document-creating-a-custom-web-service#the-runscript-method
-
-*/
