@@ -16,7 +16,7 @@ namespace ModQuickMedOrder
     {
         /// <summary>Parse the Abatab request command.</summary>
         /// <param name="abatabSession">Abatab session information.</param>
-        public static void ParseRequest(SessionData abatabSession)
+        public static void ParseRequest(Session abatabSession)
         {
             Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Parsing QuickMedOrder Module command.");
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
@@ -39,7 +39,7 @@ namespace ModQuickMedOrder
 
         /// <summary>Do a data dump.</summary>
         /// <param name="abatabSession">Abatab session information.</param>
-        private static void ParseCommandDose(SessionData abatabSession)
+        private static void ParseCommandDose(Session abatabSession)
         {
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 

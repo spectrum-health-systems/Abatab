@@ -1,9 +1,4 @@
-﻿/* =============================================================================
- * Abatab.asmx.cs
- * b221011.093856
- * https://github.com/spectrum-health-systems/Abatab
- * (c)2016-2022 A Pretty Cool Program (see LICENSE file)
- * ========================================================================== */
+﻿// b221011.093856
 
 using Abatab.Properties;
 using AbatabData;
@@ -53,7 +48,7 @@ namespace Abatab
 
             Dictionary<string, string> webConfig = WebConfig.Load();
 
-            SessionData abatabSession = Instance.Build(sentOptionObject, scriptParameter, webConfig);
+            Session abatabSession = Instance.Build(sentOptionObject, scriptParameter, webConfig);
 
             Roundhouse.ParseRequest(abatabSession);
 

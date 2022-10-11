@@ -16,7 +16,7 @@ namespace AbatabOptionObject
     {
         /// <summary>Finalizes an OptionObject.</summary>
         /// <param name="abatabSession">Abatab session settings.</param>
-        public static void Finalize(SessionData abatabSession)
+        public static void Finalize(Session abatabSession)
         {
             Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Finalizing finalOptObj");
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, abatabSession.AbatabMode);
@@ -36,7 +36,7 @@ namespace AbatabOptionObject
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
         }
 
-        public static void ForPassthrough(SessionData abatabSession)
+        public static void ForPassthrough(Session abatabSession)
         {
             Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Finalizing finalOptObj");
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);

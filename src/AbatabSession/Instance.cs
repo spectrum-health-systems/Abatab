@@ -21,12 +21,12 @@ namespace AbatabSession
         /// <param name="sentOptObj">OptionObject2015 sent from myAvatar.</param>
         /// <param name="abatabRequest">Abatab request to be executed.</param>
         /// <returns>Session configuration settings.</returns>
-        public static SessionData Build(OptionObject2015 sentOptObj, string abatabRequest, Dictionary<string, string> abatabSettings)
+        public static Session Build(OptionObject2015 sentOptObj, string abatabRequest, Dictionary<string, string> abatabSettings)
         {
             Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"], "[DEBUG] Building session data.");
             // No LogEvent.Trace() here because we don't have the necessary information yet.
 
-            var abatabSession = new SessionData
+            var abatabSession = new Session
             {
                 AbatabMode                        = abatabSettings["AbatabMode"],
                 AbatabRoot                        = abatabSettings["AbatabRoot"],
@@ -39,7 +39,7 @@ namespace AbatabSession
                 ModQuickMedOrderMode              = abatabSettings["ModQuickMedOrderMode"],
                 ModQuickMedOrderValidUsers        = abatabSettings["ModQuickMedOrderValidUsers"],
                 ModQuickMedOrderDosePercentMaxInc = abatabSettings["ModQuickMedOrderDosePercentMaxInc"],
-                ModQuickMedOrderData              = new QuickMedOrderData(),
+                ModQuickMedOrderData              = new QuickMedOrder(),
                 ModPrototypeMode                  = abatabSettings["ModPrototypeMode"],
                 ModTestingMode                    = abatabSettings["ModTestingMode"],
                 SessionTimestamp                  = $"{DateTime.Now:yyMMdd}",
@@ -83,7 +83,7 @@ namespace AbatabSession
 
         /// <summary>Parse the abatabRequest into separate components.</summary>
         /// <param name="abatabSession">Abatab session details.</param>
-        private static void ParseAbatabRequest(SessionData abatabSession)
+        private static void ParseAbatabRequest(Session abatabSession)
         {
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 

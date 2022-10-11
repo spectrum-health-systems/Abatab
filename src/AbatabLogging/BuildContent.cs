@@ -1,16 +1,8 @@
-﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
- * Abatab                                                                                           v0.92.0
- * AbatabLogging.csproj                                                                             v0.92.0
- * BuildContent.cs                                                                           b221011.093856
- * --------------------------------------------------------------------------------------------------------
- * Builds the various components of a log file.
- * ================================= (c)2016-2022 A Pretty Cool Program ================================ */
+﻿// b221011.093856
 
-/* Logging is done a little differently in AbatabLogging.csproj, since trying to create logs using the same
- * code that creates  logs results in strange behavior. For the most part, LogEvent.Trace() is replaced
- * with Debugger.BuildDebugLog(), although in some cases log files aren't written at all. This makes it a
- * little difficult to troubleshoot logging, which is why it's a good idea to test the logging funcionality
- * extensively prior to deploying to production.
+/* A note about this class: Logging is done a little differently in AbatabLogging.csproj, since trying to create logs using the same code that creates  logs results in
+ * strange behavior. For the most part, LogEvent.Trace() is replaced with Debugger.BuildDebugLog(), although in some cases log files aren't written at all. This makes it a
+ * little difficult to troubleshoot logging, which is why it's a good idea to test the logging funcionality extensively prior to deploying to production.
  */
 
 using AbatabData;
@@ -32,7 +24,7 @@ namespace AbatabLogging
         /// <param name="callMember">Method of where the log is coming from.</param>
         /// <param name="callLine">File line of where the log is coming from.</param>
         /// <returns>Content for a log file.</returns>
-        public static string LogComponents(string eventType, SessionData abatabSession, string logMsg, string exeAssembly = "", string callPath = "", string callMember = "", int callLine = 0)
+        public static string LogComponents(string eventType, Session abatabSession, string logMsg, string exeAssembly = "", string callPath = "", string callMember = "", int callLine = 0)
         {
             Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Creating log components..");
 
@@ -118,7 +110,7 @@ namespace AbatabLogging
         /// <param name="eventType">Log type.</param>
         /// <param name="abatabSession">Abatab session configuration settings.</param>
         /// <returns>Log body.</returns>
-        private static string ComponentBody(string eventType, SessionData abatabSession)
+        private static string ComponentBody(string eventType, Session abatabSession)
         {
             switch (eventType)
             {
@@ -140,7 +132,7 @@ namespace AbatabLogging
         /// <summary>Build session information log body.</summary>
         /// <param name="abatabSession">Abatab session configuration settings.</param>
         /// <returns>Session information for log body.</returns>
-        private static string BodySessionDetail(SessionData abatabSession)
+        private static string BodySessionDetail(Session abatabSession)
         {
             var sessionHead = $"{Environment.NewLine}" +
                               $"==============={Environment.NewLine}" +
@@ -188,7 +180,7 @@ namespace AbatabLogging
         /// <param name="abatabSession"></param>
         /// <param name="modName"></param>
         /// <returns></returns>
-        private static string BodyModuleDetail(SessionData abatabSession, string modName)
+        private static string BodyModuleDetail(Session abatabSession, string modName)
         {
             var moduleHead = $"{Environment.NewLine}" +
                              $"-------------{Environment.NewLine}" +
@@ -225,7 +217,7 @@ namespace AbatabLogging
         /// <summary></summary>
         /// <param name="abatabSession"></param>
         /// <returns></returns>
-        private static string BodyModQuickMedOrderDetail(SessionData abatabSession)
+        private static string BodyModQuickMedOrderDetail(Session abatabSession)
         {
             var modQuickMedOrderHead = $"{Environment.NewLine}" +
                                        $"====================={Environment.NewLine}" +

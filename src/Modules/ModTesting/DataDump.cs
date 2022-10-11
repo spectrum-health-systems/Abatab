@@ -16,7 +16,7 @@ namespace ModTesting
     {
         /// <summary>Do a data dump.</summary>
         /// <param name="abatabSession">Abatab session settings.</param>
-        public static void SessionData(SessionData abatabSession)
+        public static void SessionData(Session abatabSession)
         {
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
             LogEvent.Session(abatabSession, "Testing data dump functionality.");

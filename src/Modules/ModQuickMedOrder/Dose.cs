@@ -16,7 +16,7 @@ namespace ModQuickMedOrder
     {
         /// <summary></summary>
         /// <param name="abatabSession"></param>
-        public static void VerifyUnderMaxPercentIncrease(SessionData abatabSession)
+        public static void VerifyUnderMaxPercentIncrease(Session abatabSession)
         {
             Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Parsing Abatab request..");
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
@@ -43,7 +43,7 @@ namespace ModQuickMedOrder
 
         /// <summary></summary>
         /// <returns></returns>
-        private static void InitializeDoseData(SessionData abatabSession)
+        private static void InitializeDoseData(Session abatabSession)
         {
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 

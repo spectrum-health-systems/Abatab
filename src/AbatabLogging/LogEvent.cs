@@ -25,7 +25,7 @@ namespace AbatabLogging
         /// <summary></summary>
         /// <param name="abatabSession"></param>
         /// <param name="logMsg"></param>
-        public static void ModQuickMedOrder(SessionData abatabSession, string logMsg = "QuickMedOrder detail log.")
+        public static void ModQuickMedOrder(Session abatabSession, string logMsg = "QuickMedOrder detail log.")
         {
             Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Creating QuickMedOrder detail log.");
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
@@ -47,7 +47,7 @@ namespace AbatabLogging
         /// <summary>Build a session detail log.</summary>
         /// <param name="abatabSession">Abatab session configuration settings.</param>
         /// <param name="logMsg">Message for the logfile</param>
-        public static void Session(SessionData abatabSession, string logMsg = "Session detail log.")
+        public static void Session(Session abatabSession, string logMsg = "Session detail log.")
         {
             Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Creating session log.");
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
@@ -72,7 +72,7 @@ namespace AbatabLogging
         /// <param name="callerPath">Filename of where the log is coming from.</param>
         /// <param name="callerMember">Method of where the log is coming from.</param>
         /// <param name="callerLine">File line of where the log is coming from.</param>
-        public static void Trace(SessionData abatabSession, string exeAssembly, string logMsg = "Trace log start...", [CallerFilePath] string callPath = "", [CallerMemberName] string callMember = "", [CallerLineNumber] int callLine = 0)
+        public static void Trace(Session abatabSession, string exeAssembly, string logMsg = "Trace log start...", [CallerFilePath] string callPath = "", [CallerMemberName] string callMember = "", [CallerLineNumber] int callLine = 0)
         {
             Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Creating trace log.");
 

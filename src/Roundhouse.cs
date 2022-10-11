@@ -1,9 +1,4 @@
-﻿/* =============================================================================
- * Abatab.Roundhouse.cs
- * b221011.093856
- * https://github.com/spectrum-health-systems/Abatab
- * (c)2016-2022 A Pretty Cool Program (see LICENSE file)
- * ========================================================================== */
+﻿// b221011.093856
 
 using AbatabData;
 using AbatabLogging;
@@ -16,9 +11,11 @@ namespace Abatab
     /// </summary>
     public static class Roundhouse
     {
-        /// <summary>Determines where a script parameter request should go.</summary>
-        /// <param name="abatabSession">Necessary data for this session of Abatab.</param>
-        public static void ParseRequest(SessionData abatabSession)
+        /// <summary>
+        /// Determines where a script parameter request should go.
+        /// </summary>
+        /// <param name="abatabSession">Abatab session data.</param>
+        public static void ParseRequest(Session abatabSession)
         {
             Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Parse script parameter request.");
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
@@ -42,6 +39,7 @@ namespace Abatab
 
                 default:
                     LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+                    // Exit gracefully.
                     break;
             }
 

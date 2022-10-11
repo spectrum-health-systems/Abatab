@@ -30,7 +30,7 @@ namespace AbatabOptionObject
         /// <param name="abatabSession"></param>
         /// <param name="errCode"></param>
         /// <param name="errMsg"></param>
-        public static void ClearErrorData(SessionData abatabSession, int errCode = 0, string errMsg = "")
+        public static void ClearErrorData(Session abatabSession, int errCode = 0, string errMsg = "")
         {
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 

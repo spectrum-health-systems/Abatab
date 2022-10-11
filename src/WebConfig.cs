@@ -1,9 +1,4 @@
-﻿/* =============================================================================
- * Abatab.WebConfig.cs
- * b221011.093856
- * https://github.com/spectrum-health-systems/Abatab
- * (c)2016-2022 A Pretty Cool Program (see LICENSE file)
- * ========================================================================== */
+﻿// b221011.093856
 
 using Abatab.Properties;
 using AbatabLogging;
