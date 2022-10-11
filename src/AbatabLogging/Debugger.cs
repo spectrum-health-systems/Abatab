@@ -1,7 +1,7 @@
 ﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
  * Abatab                                                                                           v0.92.0
  * AbatabLogging.csproj                                                                             v0.92.0
- * LogDebug.cs                                                                               b221011.074325
+ * LogDebug.cs                                                                               b221011.093856
  * --------------------------------------------------------------------------------------------------------
  * Build and write a debug log file.
  * ================================= (c)2016-2022 A Pretty Cool Program ================================ */

@@ -1,7 +1,7 @@
 ﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
  * Abatab                                                                                           v0.92.0
  * ModQuickMedOrder.csproj                                                                          v0.92.0
- * Dose.cs                                                                                   b221011.074325
+ * Dose.cs                                                                                   b221011.093856
  * --------------------------------------------------------------------------------------------------------
  *
  * ================================= (c)2016-2022 A Pretty Cool Program ================================ */
@@ -21,10 +21,8 @@ namespace ModQuickMedOrder
             Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Parsing Abatab request..");
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 
-            var shouldExecute = ModCommon.Confirm.ValidUser(abatabSession.AvatarUserName, abatabSession.ModQuickMedOrderValidUsers);
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, $"{abatabSession.AvatarUserName}");
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, $"{abatabSession.ModQuickMedOrderValidUsers}");
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, $"{shouldExecute.ToString()}");
+            var shouldExecute = ModCommon.Verify.ValidUser(abatabSession.AvatarUserName, abatabSession.ModQuickMedOrderValidUsers);
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "Trailing trace log for valid user check.");
 
             if (shouldExecute)
             {
@@ -39,6 +37,9 @@ namespace ModQuickMedOrder
 
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
         }
+
+
+
 
         /// <summary></summary>
         /// <returns></returns>

@@ -35,6 +35,7 @@
 ```
 LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 ```
+* Trailing trace logs have a logMsg that desribes why they are there/what they are doing.
 
 * Intended to show the flow of code, usually used during development
 * Should not be enabled in production

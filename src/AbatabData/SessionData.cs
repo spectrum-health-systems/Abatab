@@ -1,7 +1,7 @@
 ﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
  * Abatab                                                                                           v0.92.0
  * AbatabData.csproj                                                                                v0.92.0
- * SessionData.cs                                                                            b221011.074325
+ * SessionData.cs                                                                            b221011.093856
  * --------------------------------------------------------------------------------------------------------
  * Defines the properties for the SessionData object, which contains all of the information/data that
  * Abatab needs to do its job.
