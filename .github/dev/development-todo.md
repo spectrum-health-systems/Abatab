@@ -11,6 +11,7 @@
 * [ ] Test logging types via Web.config
 * [ ] Verify DebugDebugger
 * [ ] Cleanup settings order
+* [ ] Version someplace
 
 # v0.92.0.0
 

@@ -55,6 +55,8 @@ namespace AbatabSession
                 FinalOptObj                       = new OptionObject2015()
             };
 
+            Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"], "[TEMP DEBUG] ---");
+
             abatabSession.SessionLogRoot = $@"{abatabSession.AbatabRoot}\logs\{abatabSession.SessionTimestamp}\{abatabSession.AvatarUserName}";
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 
