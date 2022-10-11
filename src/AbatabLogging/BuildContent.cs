@@ -1,8 +1,11 @@
 ﻿// b221011.093856
 
-/* A note about this class: Logging is done a little differently in AbatabLogging.csproj, since trying to create logs using the same code that creates  logs results in
- * strange behavior. For the most part, LogEvent.Trace() is replaced with Debugger.BuildDebugLog(), although in some cases log files aren't written at all. This makes it a
- * little difficult to troubleshoot logging, which is why it's a good idea to test the logging funcionality extensively prior to deploying to production.
+/* A note about this class:
+ * Logging is done a little differently in AbatabLogging.csproj, since trying to create logs using the same
+ * code that creates logs results in strange behavior. For the most part, LogEvent.Trace() is replaced with
+ * Debugger.BuildDebugLog(), although in some cases log files aren't written at all. This makes it a little
+ * difficult to troubleshoot logging, which is why it's a good idea to test the logging functionality
+ * extensively prior to deploying to production.
  */
 
 using AbatabData;
