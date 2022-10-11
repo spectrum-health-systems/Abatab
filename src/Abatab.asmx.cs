@@ -30,15 +30,15 @@ namespace Abatab
 
         /// <summary>Execute Abatab request.</summary>
         /// <param name="sentOptionObject">OptionObject2015 sent from myAvatar.</param>
-        /// <param name="abatabRequest">Request from Avatar.</param>
+        /// <param name="scriptParameter">Request from Avatar.</param>
         /// <returns>Finalized OptionObject2015.</returns>
         [WebMethod]
-        public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string abatabRequest)
+        public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string scriptParameter)
         {
             Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG] Session started.");
-            // No LogEvent.Trace() here because the necessary information doesn't exist.
+            // No LogEvent.Trace()
 
-            SessionData abatabSession = AbatabSettings.BuildSettings(sentOptionObject, abatabRequest);
+            SessionData abatabSession = AbatabSettings.Build(sentOptionObject, scriptParameter);
 
             Roundhouse.ParseRequest(abatabSession);
 
@@ -49,3 +49,27 @@ namespace Abatab
         }
     }
 }
+
+/*
+
+=================
+DEVELOPMENT NOTES
+=================
+
+GetVersion()
+------------
+01 Returns the Abatab version
+- Required
+- More information: https://github.com/myAvatar-Development-Community/document-creating-a-custom-web-service#the-getversion-method
+
+RunScript()
+-----------
+01 Build required data for the current session
+03 Parse the ScriptLink script parameter to determine where the OptionObject needs to be sent
+04 Write the session details to a log file for reference
+05 Return the final OptionObject to Avatar
+- Entry point for Abatab.
+- Required
+- More information: https://github.com/myAvatar-Development-Community/document-creating-a-custom-web-service#the-runscript-method
+
+*/

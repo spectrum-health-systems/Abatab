@@ -23,3 +23,4 @@
 # v0.XX.0.0
 * [ ] Debug descriptions are static in settings file.
 * [ ] Debug stuff moved to LogEvent.Debug()
+* [ ] Try...catch

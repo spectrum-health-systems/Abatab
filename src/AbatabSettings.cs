@@ -1,10 +1,8 @@
-﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
- * Abatab                                                                                           v0.92.0
- * Abatab.csproj                                                                                    v0.92.0
- * AbatabSettings.cs                                                                         b221011.093856
- * --------------------------------------------------------------------------------------------------------
- * Logic to work with configuration settings found in the local Web.Config file.
- * ================================= (c)2016-2022 A Pretty Cool Program ================================ */
+﻿/* Abatab.AbatabSettings.cs 0.92.0+221011.093856
+ * https://github.com/spectrum-health-systems/Abatab
+ * (c)2016-2022 A Pretty Cool Program
+ * https://github.com/spectrum-health-systems/Abatab/blob/main/doc/srcdoc/SrcDocHome.md
+ */
 
 using Abatab.Properties;
 using AbatabData;
@@ -18,30 +16,27 @@ namespace Abatab
 {
     public static class AbatabSettings
     {
-        /// <summary>Build the abatabSession object</summary>
+        /// <summary>Build settings object</summary>
         /// <param name="sentOptObj">OptionObject2015 sent from myAvatar.</param>
-        /// <param name="abatabRequest">Request from Avatar.</param>
-        /// <returns>Completed abatabSession object.</returns>
-        public static SessionData BuildSettings(OptionObject2015 sentOptObj, string abatabRequest)
+        /// <param name="abatabRequest">Script parameter sent from Avatar.</param>
+        /// <returns>Completed settings object.</returns>
+        public static SessionData Build(OptionObject2015 sentOptObj, string abatabRequest)
         {
             Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG] Building Abatab session settings.");
-            // No LogEvent.Trace() here because the necessary information doesn't exist.
+            // No LogEvent.Trace()
 
             Dictionary<string, string> abatabSettings = AbatabSettings.LoadWebConfig();
 
-            // No LogEvent.Trace() here because the necessary information doesn't exist.
+            // No LogEvent.Trace()
             return Instance.Build(sentOptObj, abatabRequest, abatabSettings);
         }
 
-        /// <summary>Load local configuration settings from Web.config.</summary>
-        /// <returns>Local configuration settings.</returns>
+        /// <summary>Load settings from Web.config.</summary>
+        /// <returns>Web.config settings.</returns>
         private static Dictionary<string, string> LoadWebConfig()
         {
-            /* Since we don't have the necessary information to create trace logs yet, we'll use
-             * Debugger.BuildDebugLog() here instead of a LogEvent.Trace().
-             */
+            // Debugger.BuildDebugLog() here instead of a LogEvent.Trace().
             Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG] Loading configuration settings from Web.config.");
-            // No LogEvent.Trace() here because the necessary information doesn't exist.
 
             return new Dictionary<string, string>
             {

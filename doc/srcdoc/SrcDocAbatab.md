@@ -8,7 +8,7 @@
 
   <h2>
     Abatab.csproj<br>
-    <b>v0.90.0</b>
+    <b>v0.92.0</b>
   </h2>
 
 </div>
@@ -20,19 +20,31 @@
 ### Abatab.cs<br>
 [Abatab.GetVersion()](#abatabgetversion)<br>
 [Abatab.RunScript()](#abatabrunscript)<br>
-[Abatab.WriteDebugLog()](#writedebuglog)<br>
+### AbatabSettings.cs<br>
+[AbatabSettings.Build()]()<br>
+[AbatabSettings.LoadWebConfig()]()<br>
 ### Roundhouse.cs<br>
-[Roundhouse.ParseRequest()](#abatabgetversion)<br>
+[Roundhouse.ParseRequest()]()<br>
+
 ***
 
 <br>
 
 # Abatab settings file
 
-### DebugMode  
-> Default: `off`  
+The Abatab Settings.settings file contains the following settings:
 
-When this is set to `on`, a file will be written that indicates Abatab was started.
+* **AbatabMode**  
+  - `disabled`  
+  Abatab does nothing
+  - `enabled`  
+  Abatab executes and functions normally
+  - `passthrough`  
+  Abatab write logfiles
+
+* **AbatabRoot**  
+  The Abatab root directory (e.g., `C:\WebServerFiles\Abatab_UAT`  )
+
 
 <br>
 
