@@ -1,7 +1,7 @@
 ﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
  * Abatab                                                                                           v0.92.0
  * ModQuickMedOrder.csproj                                                                          v0.92.0
- * Dose.cs                                                                            b221010.153857
+ * Dose.cs                                                                                   b221011.074325
  * --------------------------------------------------------------------------------------------------------
  *
  * ================================= (c)2016-2022 A Pretty Cool Program ================================ */
@@ -49,6 +49,5 @@ namespace ModQuickMedOrder
 
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
         }
-
     }
 }
