@@ -12,6 +12,8 @@
 * [ ] Verify DebugDebugger
 * [ ] Cleanup settings order
 * [ ] Version someplace
+* [ ] Verify all session data is being logged 
+* [ ] Reorder WebConfig.Load() to match rest of code
 
 # v0.92.0.0
 

@@ -39,19 +39,19 @@ namespace AbatabLogging
         /// <returns>The completed content for a log file.</returns>
         public static string LogComponents(string eventType, Session abatabSession, string logMsg, string exeAssembly = "", string callPath = "", string callMember = "", int callLine = 0)
         {
-            Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Creating log components..");
+            Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Creating log components..");
 
             var logHead = ComponentHead(logMsg);
-            Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Created log header.");
+            Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Created log header.");
 
             var logDetail = ComponentDetail(eventType, exeAssembly, callPath, callMember, callLine);
-            Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Created log detail.");
+            Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Created log detail.");
 
             var logBody = ComponentBody(eventType, abatabSession);
-            Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Created log body.");
+            Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Created log body.");
 
             var logFoot = ComponentFoot();
-            Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Created log footer.");
+            Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Created log footer.");
 
             return $"{logHead}" +
                    $"{logDetail}" +
@@ -160,15 +160,17 @@ namespace AbatabLogging
                               $"===============";
 
             var sessionDetail = $"{Environment.NewLine}" +
-                                $"Abatab Mode:         {abatabSession.AbatabMode}{Environment.NewLine}" +
-                                $"Abatab Root:         {abatabSession.AbatabRoot}{Environment.NewLine}" +
-                                $"Debugging Mode:      {abatabSession.DebugMode}{Environment.NewLine}" +
+                                $"Abatab version:      {abatabSession.AbatabVer}{Environment.NewLine}" +
+                                $"Abatab mode:         {abatabSession.AbatabMode}{Environment.NewLine}" +
+                                $"Abatab root:         {abatabSession.AbatabRoot}{Environment.NewLine}" +
+                                $"Debugging mode:      {abatabSession.DebugMode}{Environment.NewLine}" +
                                 $"Debugging Log root:  {abatabSession.DebugLogRoot}{Environment.NewLine}" +
-                                $"Logging Mode:        {abatabSession.LoggingMode}{Environment.NewLine}" +
-                                $"Logging Detail:      {abatabSession.LoggingDetail}{Environment.NewLine}" +
-                                $"Logging Delay:       {abatabSession.LoggingDelay}{Environment.NewLine}" +
-                                $"Session Timestamp:   {abatabSession.SessionTimestamp}{Environment.NewLine}" +
-                                $"Session Log root:    {abatabSession.SessionLogRoot}{Environment.NewLine}" +
+                                $"Logging mode:        {abatabSession.LoggingMode}{Environment.NewLine}" +
+                                $"Logging detail:      {abatabSession.LoggingDetail}{Environment.NewLine}" +
+                                $"Logging delay:       {abatabSession.LoggingDelay}{Environment.NewLine}" +
+                                $"Session datestamp:   {abatabSession.SessionDate}{Environment.NewLine}" +
+                                $"Session timestamp:   {abatabSession.SessionTime}{Environment.NewLine}" +
+                                $"Session log root:    {abatabSession.SessionLogRoot}{Environment.NewLine}" +
                                 $"Avatar username:     {abatabSession.AvatarUserName}{Environment.NewLine}" +
                                 $"Fallback username:   {abatabSession.AvatarFallbackUserName}{Environment.NewLine}" +
                                 $"Abatab request:      {abatabSession.AbatabRequest}{Environment.NewLine}" +

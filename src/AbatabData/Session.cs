@@ -12,6 +12,7 @@ namespace AbatabData
     public class Session
     {
         // Web.config: General
+        public string AbatabVer { get; set; }
         public string AbatabMode { get; set; }
         public string AbatabRoot { get; set; }
         public string DebugMode { get; set; }
@@ -36,7 +37,8 @@ namespace AbatabData
         public string ModTestingMode { get; set; }
 
         // Set at runtime: General
-        public string SessionTimestamp { get; set; }
+        public string SessionDate { get; set; }
+        public string SessionTime { get; set; }
         public string SessionLogRoot { get; set; }
         public string AvatarUserName { get; set; }
         public string AbatabRequest { get; set; }

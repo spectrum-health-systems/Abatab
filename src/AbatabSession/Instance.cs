@@ -24,11 +24,12 @@ namespace AbatabSession
         /// <returns>Session configuration settings.</returns>
         public static Session Build(OptionObject2015 sentOptObj, string scriptParameter, Dictionary<string, string> abatabSettings)
         {
-            Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"], "[DEBUG] Building session data.");
+            Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"], "[DEBUG] Building session data.");
             // No LogEvent.Trace() here because we don't have the necessary information yet.
 
             var abatabSession = new Session
             {
+                AbatabVer                         = abatabSettings["AbatabVer"],
                 AbatabMode                        = abatabSettings["AbatabMode"],
                 AbatabRoot                        = abatabSettings["AbatabRoot"],
                 DebugMode                         = abatabSettings["DebugMode"],
@@ -43,7 +44,8 @@ namespace AbatabSession
                 ModQuickMedOrderData              = new QuickMedOrder(),
                 ModPrototypeMode                  = abatabSettings["ModPrototypeMode"],
                 ModTestingMode                    = abatabSettings["ModTestingMode"],
-                SessionTimestamp                  = $"{DateTime.Now:yyMMdd}",
+                SessionDate                       = $"{DateTime.Now:yyMMdd}",
+                SessionTime                       = $"{DateTime.Now:HHmmss}",
                 SessionLogRoot                    = "",
                 AbatabRequest                     = scriptParameter.ToLower(),
                 AbatabModule                      = "undefined",
@@ -56,7 +58,7 @@ namespace AbatabSession
                 FinalOptObj                       = new OptionObject2015()
             };
 
-            abatabSession.SessionLogRoot = $@"{abatabSession.AbatabRoot}\logs\{abatabSession.SessionTimestamp}\{abatabSession.AvatarUserName}";
+            abatabSession.SessionLogRoot = $@"{abatabSession.AbatabRoot}\logs\{abatabSession.SessionTime}\{abatabSession.AvatarUserName}";
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 
             AbatabSystem.Maintenance.VerifyDir(abatabSession.SessionLogRoot);
