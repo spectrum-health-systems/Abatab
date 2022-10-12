@@ -4,7 +4,7 @@ C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\Modules\ModTesting\bi
 C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\Modules\ModTesting\bin\Debug\AbatabLogging.dll
 C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\Modules\ModTesting\bin\Debug\AbatabOptionObject.dll
 C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\Modules\ModTesting\bin\Debug\NTST.ScriptLinkService.Objects.dll
-C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\Modules\ModTesting\bin\Debug\AbatabSystem.dll
+C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\Modules\ModTesting\bin\Debug\Du.dll
 C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\Modules\ModTesting\bin\Debug\AbatabData.pdb
 C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\Modules\ModTesting\bin\Debug\AbatabData.dll.config
 C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\Modules\ModTesting\bin\Debug\AbatabLogging.pdb
@@ -13,7 +13,7 @@ C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\Modules\ModTesting\bi
 C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\Modules\ModTesting\bin\Debug\AbatabOptionObject.dll.config
 C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\Modules\ModTesting\bin\Debug\NTST.ScriptLinkService.Objects.pdb
 C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\Modules\ModTesting\bin\Debug\NTST.ScriptLinkService.Objects.xml
-C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\Modules\ModTesting\bin\Debug\AbatabSystem.pdb
+C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\Modules\ModTesting\bin\Debug\Du.pdb
 C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\Modules\ModTesting\obj\Debug\ModTesting.csproj.AssemblyReference.cache
 C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\Modules\ModTesting\obj\Debug\ModTesting.csproj.CoreCompileInputs.cache
 C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\Modules\ModTesting\obj\Debug\ModTesting.csproj.CopyComplete

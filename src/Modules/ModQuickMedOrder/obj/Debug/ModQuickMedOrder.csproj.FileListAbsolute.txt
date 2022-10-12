@@ -5,7 +5,7 @@ C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\Modules\ModQuickMedOr
 C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\Modules\ModQuickMedOrder\bin\Debug\AbatabOptionObject.dll
 C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\Modules\ModQuickMedOrder\bin\Debug\ModCommon.dll
 C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\Modules\ModQuickMedOrder\bin\Debug\NTST.ScriptLinkService.Objects.dll
-C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\Modules\ModQuickMedOrder\bin\Debug\AbatabSystem.dll
+C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\Modules\ModQuickMedOrder\bin\Debug\Du.dll
 C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\Modules\ModQuickMedOrder\bin\Debug\AbatabData.pdb
 C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\Modules\ModQuickMedOrder\bin\Debug\AbatabData.dll.config
 C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\Modules\ModQuickMedOrder\bin\Debug\AbatabLogging.pdb
@@ -15,7 +15,7 @@ C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\Modules\ModQuickMedOr
 C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\Modules\ModQuickMedOrder\bin\Debug\ModCommon.pdb
 C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\Modules\ModQuickMedOrder\bin\Debug\NTST.ScriptLinkService.Objects.pdb
 C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\Modules\ModQuickMedOrder\bin\Debug\NTST.ScriptLinkService.Objects.xml
-C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\Modules\ModQuickMedOrder\bin\Debug\AbatabSystem.pdb
+C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\Modules\ModQuickMedOrder\bin\Debug\Du.pdb
 C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\Modules\ModQuickMedOrder\obj\Debug\ModQuickMedOrder.csproj.AssemblyReference.cache
 C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\Modules\ModQuickMedOrder\obj\Debug\ModQuickMedOrder.csproj.CoreCompileInputs.cache
 C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\Modules\ModQuickMedOrder\obj\Debug\ModQuickMedOrder.csproj.CopyComplete

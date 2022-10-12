@@ -5,7 +5,6 @@
 using Abatab.Properties;
 using AbatabLogging;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Reflection;
 
 namespace Abatab
@@ -26,19 +25,15 @@ namespace Abatab
         {
             Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG] Load Web.config.");
 
-            var ver = FileVersionInfo.GetVersionInfo(Assembly.GetEntryAssembly().Location).FileVersion;
-
-
             return new Dictionary<string, string>
             {
-                //{ "AbatabVer",                         ver },
-                { "DebugMode",                         Settings.Default.DebugMode.ToLower() },
-                { "DebugLogRoot",                      Settings.Default.DebugLogRoot.ToLower() },
                 { "AbatabMode",                        Settings.Default.AbatabMode.ToLower() },
                 { "AbatabRoot",                        Settings.Default.AbatabRoot.ToLower() },
-                { "LoggingMode",                       Settings.Default.LoggingMode.ToLower() },
-                { "LoggingDetail",                     Settings.Default.LoggingDetail.ToLower() },
-                { "LoggingDelay",                      Settings.Default.LoggingDelay.ToLower() },
+                { "DebugMode",                         Settings.Default.DebugMode.ToLower() },
+                { "DebugLogRoot",                      Settings.Default.DebugLogRoot.ToLower() },
+                { "LogMode",                           Settings.Default.LogMode.ToLower() },
+                { "LogDetail",                         Settings.Default.LogDetail.ToLower() },
+                { "LogDelay",                          Settings.Default.LogDelay.ToLower() },
                 { "AvatarFallbackUserName",            Settings.Default.AvatarFallbackUserName.ToLower() },
                 { "ModQuickMedOrderMode",              Settings.Default.ModQuickMedOrderMode.ToLower() },
                 { "ModQuickMedOrderValidUsers",        Settings.Default.ModQuickMedOrderValidUsers.ToLower() },

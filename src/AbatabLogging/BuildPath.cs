@@ -39,7 +39,8 @@ namespace AbatabLogging
             if (eventType != "session")
             {
                 fullPath += $@"\{eventType}";
-                AbatabSystem.Maintenance.VerifyDir(fullPath);
+                Du.WithDirectory.VerifyDir(fullPath);
+                //AbatabSystem.Maintenance.VerifyDir(fullPath);
             }
 
             fullPath += $@"\{DateTime.Now:HHmmss.fffffff}";

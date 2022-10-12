@@ -2,7 +2,7 @@
 // See the LICENSE file for more information.
 // b221012.150358
 
-using System.IO;
+// DEPRECIATED
 
 namespace AbatabSystem
 {
@@ -15,11 +15,11 @@ namespace AbatabSystem
         /// <summary>
         /// Verifies directory exists, and create if not.
         /// </summary>
-        public static void VerifyDir(string dir)
-        {
-            // No Debugger.BuildDebugLog() or LogEvent.Trace() here because it isn't worth it...yet.
+        //public static void VerifyDir(string dir)
+        //{
+        //    // No Debugger.BuildDebugLog() or LogEvent.Trace() here because it isn't worth it...yet.
 
-            _=Directory.CreateDirectory(dir);
-        }
+        //    _=Directory.CreateDirectory(dir);
+        //}
     }
 }

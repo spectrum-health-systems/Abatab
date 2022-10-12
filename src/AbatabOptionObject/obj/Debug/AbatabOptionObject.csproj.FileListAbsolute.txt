@@ -4,14 +4,14 @@ C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\AbatabOptionObject\bi
 C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\AbatabOptionObject\bin\Debug\AbatabData.dll
 C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\AbatabOptionObject\bin\Debug\AbatabLogging.dll
 C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\AbatabOptionObject\bin\Debug\NTST.ScriptLinkService.Objects.dll
-C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\AbatabOptionObject\bin\Debug\AbatabSystem.dll
+C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\AbatabOptionObject\bin\Debug\Du.dll
 C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\AbatabOptionObject\bin\Debug\AbatabData.pdb
 C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\AbatabOptionObject\bin\Debug\AbatabData.dll.config
 C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\AbatabOptionObject\bin\Debug\AbatabLogging.pdb
 C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\AbatabOptionObject\bin\Debug\AbatabLogging.dll.config
 C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\AbatabOptionObject\bin\Debug\NTST.ScriptLinkService.Objects.pdb
 C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\AbatabOptionObject\bin\Debug\NTST.ScriptLinkService.Objects.xml
-C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\AbatabOptionObject\bin\Debug\AbatabSystem.pdb
+C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\AbatabOptionObject\bin\Debug\Du.pdb
 C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\AbatabOptionObject\obj\Debug\AbatabOptionObject.csproj.AssemblyReference.cache
 C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\AbatabOptionObject\obj\Debug\AbatabOptionObject.csproj.CoreCompileInputs.cache
 C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\AbatabOptionObject\obj\Debug\AbatabOptionObject.csproj.CopyComplete

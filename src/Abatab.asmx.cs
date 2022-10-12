@@ -1,13 +1,12 @@
-﻿// Copyright (c) A Pretty Cool Program
+﻿// Abatab
+// Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
 // b221012.150358
 
 using Abatab.Properties;
 using AbatabData;
 using AbatabLogging;
-using AbatabSession;
 using NTST.ScriptLinkService.Objects;
-using System.Collections.Generic;
 using System.Reflection;
 using System.Web.Services;
 
@@ -48,15 +47,11 @@ namespace Abatab
         {
             Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG] Session started.");
 
-            Dictionary<string, string> webConfig = WebConfig.Load();
-
-            Session abatabSession = Instance.Build(sentOptionObject, scriptParameter, webConfig);
+            Session abatabSession = FlightPath.Start(sentOptionObject, scriptParameter); // Maybe use ref?
 
             Roundhouse.ParseRequest(abatabSession);
 
-            LogEvent.Session(abatabSession, "Session complete.");
-
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+            FlightPath.End(abatabSession);
 
             return abatabSession.FinalOptObj;
         }

@@ -53,8 +53,10 @@ C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\bin\roslyn\VBCSCompil
 C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\bin\AbatabData.dll
 C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\bin\AbatabLogging.dll
 C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\bin\AbatabOptionObject.dll
+C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\bin\AbatabParser.dll
 C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\bin\AbatabSession.dll
 C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\bin\AbatabSettings.dll
+C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\bin\Du.dll
 C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\bin\ModCommon.dll
 C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\bin\ModPrototype.dll
@@ -63,16 +65,17 @@ C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\bin\ModTesting.dll
 C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\bin\NTST.ScriptLinkService.Objects.dll
 C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\bin\NuGet.Common.dll
 C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\bin\NuGet.Frameworks.dll
-C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\bin\AbatabSystem.dll
 C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\bin\AbatabData.pdb
 C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\bin\AbatabData.dll.config
 C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\bin\AbatabLogging.pdb
 C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\bin\AbatabLogging.dll.config
 C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\bin\AbatabOptionObject.pdb
 C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\bin\AbatabOptionObject.dll.config
+C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\bin\AbatabParser.pdb
 C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\bin\AbatabSession.pdb
 C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\bin\AbatabSession.dll.config
 C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\bin\AbatabSettings.pdb
+C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\bin\Du.pdb
 C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\bin\ModCommon.pdb
 C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\bin\ModPrototype.pdb
 C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\bin\ModQuickMedOrder.pdb
@@ -82,7 +85,6 @@ C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\bin\NTST.ScriptLinkSe
 C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\bin\NuGet.Common.xml
 C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\bin\NuGet.Frameworks.xml
 C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\bin\AbatabSystem.pdb
 C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\obj\Debug\Abatab.csproj.AssemblyReference.cache
 C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\obj\Debug\Abatab.csproj.CoreCompileInputs.cache
 C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\obj\Debug\Abatab.csproj.CopyComplete

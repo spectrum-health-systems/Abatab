@@ -5,7 +5,7 @@
 * [ ] Setting do only test with specific users
 * [ ] Detailed log type
 * [ ] Cleanup project references
-* [ ] Cleanup public/private
+* [ ] Cleanup public/private/internal
 * [ ] Logging types: all-none-trace-session
 * [ ] //if (debugMode == "on" || debugMode == "undefined") // TODO Remove.
 * [ ] Test logging types via Web.config
@@ -14,6 +14,7 @@
 * [ ] Version someplace
 * [ ] Verify all session data is being logged 
 * [ ] Reorder WebConfig.Load() to match rest of code
+* [ ] Test parameter options
 
 # v0.92.0.0
 
@@ -29,3 +30,4 @@
 * [ ] Standardize all parametar orders
 * [ ] Standardize all XML paramater comments
 * [ ] Follow all traces
+* [ ] Cached session data?

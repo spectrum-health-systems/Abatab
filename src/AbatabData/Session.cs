@@ -38,10 +38,11 @@ namespace AbatabData
 
         // Set at runtime: General
         public string SessionDate { get; set; }
-        public string SessionTime { get; set; }
+        //public string SessionTime { get; set; }
         public string SessionLogRoot { get; set; }
         public string AvatarUserName { get; set; }
-        public string AbatabRequest { get; set; }
+        public string AvatarSystemCode { get; set; }
+        public string ScriptParameter { get; set; }
         public string AbatabModule { get; set; }
         public string AbatabCommand { get; set; }
         public string AbatabAction { get; set; }

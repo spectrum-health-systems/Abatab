@@ -83,6 +83,7 @@
       <DependentUpon>Abatab.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="FlightPath.cs" />
     <Compile Include="WebConfig.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
@@ -118,6 +119,10 @@
       <Project>{2741df45-7db8-4bea-89b4-4a70c7114192}</Project>
       <Name>AbatabOptionObject</Name>
     </ProjectReference>
+    <ProjectReference Include="AbatabParser\AbatabParser.csproj">
+      <Project>{dd3f7cac-c90e-4286-97cf-53c2378b7486}</Project>
+      <Name>AbatabParser</Name>
+    </ProjectReference>
     <ProjectReference Include="AbatabSession\AbatabSession.csproj">
       <Project>{5fcad3f6-0aa9-4bee-b390-097a6832568e}</Project>
       <Name>AbatabSession</Name>
@@ -125,6 +130,10 @@
     <ProjectReference Include="AbatabSettings\AbatabSettings.csproj">
       <Project>{eebf094a-b887-44b5-981b-7d9ae9482140}</Project>
       <Name>AbatabSettings</Name>
+    </ProjectReference>
+    <ProjectReference Include="Du\Du\Du.csproj">
+      <Project>{6dd34e25-a803-49ec-a540-4017f5d21b78}</Project>
+      <Name>Du</Name>
     </ProjectReference>
     <ProjectReference Include="Modules\ModCommon\ModCommon.csproj">
       <Project>{cbd27c27-b3cd-455e-af5d-4749ca219d53}</Project>
