@@ -1,10 +1,6 @@
-﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
- * Abatab                                                                                           v0.92.0
- * AbatabSession.csproj                                                                             v0.92.0
- * Instance.cs                                                                               b221011.093856
- * --------------------------------------------------------------------------------------------------------
- * Logic for Abatab sessions.
- * ================================= (c)2016-2022 A Pretty Cool Program ================================ */
+﻿// Copyright (c) A Pretty Cool Program
+// See the LICENSE file for more information.
+// b221012.082547
 
 using AbatabData;
 using AbatabLogging;
@@ -15,13 +11,18 @@ using System.Reflection;
 
 namespace AbatabSession
 {
+    /// <summary>
+    /// Logic for session instances.
+    /// </summary>
     public class Instance
     {
-        /// <summary>Build configuration settings for an Abatab session.</summary>
-        /// <param name="sentOptObj">OptionObject2015 sent from myAvatar.</param>
-        /// <param name="abatabRequest">Abatab request to be executed.</param>
+        /// <summary>
+        /// Builds configuration settings for an Abatab session.
+        /// </summary>
+        /// <param name="sentOptObj">The original OptionObject sent from Avatar.</param>
+        /// <param name="scriptParameter">The script parameter request from Avatar.</param>
         /// <returns>Session configuration settings.</returns>
-        public static Session Build(OptionObject2015 sentOptObj, string abatabRequest, Dictionary<string, string> abatabSettings)
+        public static Session Build(OptionObject2015 sentOptObj, string scriptParameter, Dictionary<string, string> abatabSettings)
         {
             Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"], "[DEBUG] Building session data.");
             // No LogEvent.Trace() here because we don't have the necessary information yet.
@@ -44,7 +45,7 @@ namespace AbatabSession
                 ModTestingMode                    = abatabSettings["ModTestingMode"],
                 SessionTimestamp                  = $"{DateTime.Now:yyMMdd}",
                 SessionLogRoot                    = "",
-                AbatabRequest                     = abatabRequest.ToLower(),
+                AbatabRequest                     = scriptParameter.ToLower(),
                 AbatabModule                      = "undefined",
                 AbatabCommand                     = "undefined",
                 AbatabAction                      = "undefined",
@@ -61,8 +62,7 @@ namespace AbatabSession
             AbatabSystem.Maintenance.VerifyDir(abatabSession.SessionLogRoot);
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 
-            abatabSession.AvatarUserName = VerifyAvatarUserName(abatabSession.AvatarUserName, abatabSession.AvatarFallbackUserName);
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+            VerifyAvatarUserName(abatabSession);
 
             ParseAbatabRequest(abatabSession);
 
@@ -70,19 +70,26 @@ namespace AbatabSession
             return abatabSession;
         }
 
-        /// <summary>Verify the session AvatarUserName is valid.</summary>
-        /// <param name="avatarUserName">User name sent from Avatar.</param>
-        /// <param name="fallbackAvatarUserName">Fallback username from Web.config</param>
-        /// <returns>Session object with verified AvatarUserName.</returns>
-        private static string VerifyAvatarUserName(string avatarUserName, string fallbackAvatarUserName)
+        /// <summary>
+        /// Verifies the session AvatarUserName is valid.
+        /// </summary>
+        /// <param name="abatabSession">Information/data for this session of Abatab.</param>
+        private static void VerifyAvatarUserName(Session abatabSession)
         {
-            return string.IsNullOrWhiteSpace(avatarUserName)
-                ? fallbackAvatarUserName
-                : avatarUserName;
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+
+            if (string.IsNullOrWhiteSpace(abatabSession.AvatarUserName))
+            {
+                abatabSession.AvatarUserName = abatabSession.AvatarFallbackUserName;
+            }
+
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
         }
 
-        /// <summary>Parse the abatabRequest into separate components.</summary>
-        /// <param name="abatabSession">Abatab session details.</param>
+        /// <summary>
+        /// Parses the abatabRequest into separate components.
+        /// </summary>
+        /// <param name="abatabSession">Information/data for this session of Abatab.</param>
         private static void ParseAbatabRequest(Session abatabSession)
         {
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);

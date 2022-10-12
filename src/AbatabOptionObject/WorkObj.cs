@@ -1,10 +1,6 @@
-﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
- * Abatab                                                                                           v0.92.0
- * AbatabOptionObject.csproj                                                                        v0.92.0
- * WorkObj.cs                                                                               b221011.093856
- * --------------------------------------------------------------------------------------------------------
- * Logic for the WorkOptObj.
- * ================================= (c)2016-2022 A Pretty Cool Program ================================ */
+﻿// Copyright (c) A Pretty Cool Program
+// See the LICENSE file for more information.
+// b221012.082547
 
 using AbatabData;
 using AbatabLogging;
@@ -13,23 +9,28 @@ using System.Reflection;
 
 namespace AbatabOptionObject
 {
+    /// <summary>
+    /// Logic for working with the FinalOptObj.
+    /// </summary>
     public class WorkObj
     {
-        /// <summary></summary>
-        /// <param name="sentOptObj"></param>
-        /// <returns></returns>
+        /// <summary>
+        /// Builds the WorkOptObj.
+        /// </summary>
+        /// <param name="sentOptObj">The original OptionObject sent from Avatar.</param>
         public static OptionObject2015 Build(OptionObject2015 sentOptObj)
         {
-            // No Debugger.BuildDebugLog() or LogEvent.Trace() here because it isn't worth it...yet.
-
-            /* Eventually we may want to do something more complex when building the workOptObj.
+            /* Eventually we may want to do something more complex when building the workOptObj, but for
+             * now this doesn't really do anything.
              */
             return sentOptObj;
         }
-        /// <summary></summary>
-        /// <param name="abatabSession"></param>
-        /// <param name="errCode"></param>
-        /// <param name="errMsg"></param>
+        /// <summary>
+        /// Clears the error information in the WorkOptObj.
+        /// </summary>
+        /// <param name="abatabSession">Information/data for this session of Abatab.</param>
+        /// <param name="errCode">The error code.</param>
+        /// <param name="errMsg">The error message.</param>
         public static void ClearErrorData(Session abatabSession, int errCode = 0, string errMsg = "")
         {
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);

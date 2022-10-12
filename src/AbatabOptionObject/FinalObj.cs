@@ -1,10 +1,6 @@
-﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
- * Abatab                                                                                           v0.92.0
- * AbatabOptionObject.csproj                                                                        v0.92.0
- * FinalObj.cs                                                                               b221011.093856
- * --------------------------------------------------------------------------------------------------------
- * Logic for the FinalOptObj.
- * ================================= (c)2016-2022 A Pretty Cool Program ================================ */
+﻿// Copyright (c) A Pretty Cool Program
+// See the LICENSE file for more information.
+// b221012.082547
 
 using AbatabData;
 using AbatabLogging;
@@ -12,10 +8,15 @@ using System.Reflection;
 
 namespace AbatabOptionObject
 {
+    /// <summary>
+    /// Logic for working with the FinalOptObj.
+    /// </summary>
     public class FinalObj
     {
-        /// <summary>Finalizes an OptionObject.</summary>
-        /// <param name="abatabSession">Abatab session settings.</param>
+        /// <summary>
+        /// Finalizes an OptionObject.
+        /// </summary>
+        /// <param name="abatabSession">Information/data for this session of Abatab.</param>
         public static void Finalize(Session abatabSession)
         {
             Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Finalizing finalOptObj");
@@ -36,13 +37,17 @@ namespace AbatabOptionObject
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
         }
 
+        /// <summary>
+        /// Builds the FinalOptObj stuff when the Abatab mode is set to passthrough.
+        /// </summary>
+        /// <param name="abatabSession">Information/data for this session of Abatab.</param>
         public static void ForPassthrough(Session abatabSession)
         {
-            Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Finalizing finalOptObj");
+            Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Finalizing finalOptObj for passthrough.");
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 
             abatabSession.FinalOptObj.ErrorCode = 0;
-            abatabSession.FinalOptObj.ErrorMesg = "For passthrough mode.";
+            abatabSession.FinalOptObj.ErrorMesg = "PASSTHROUGH";
 
             abatabSession.FinalOptObj.EntityID        = abatabSession.SentOptObj.EntityID;
             abatabSession.FinalOptObj.EpisodeNumber   = abatabSession.SentOptObj.EpisodeNumber;

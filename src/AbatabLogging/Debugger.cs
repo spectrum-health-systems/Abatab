@@ -1,19 +1,22 @@
-﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
- * Abatab                                                                                           v0.92.0
- * AbatabLogging.csproj                                                                             v0.92.0
- * LogDebug.cs                                                                               b221011.093856
- * --------------------------------------------------------------------------------------------------------
- * Build and write a debug log file.
- * ================================= (c)2016-2022 A Pretty Cool Program ================================ */
+﻿// Copyright (c) A Pretty Cool Program
+// See the LICENSE file for more information.
+// b221012.082547
 
-/* Logging is done a little differently in AbatabLogging.csproj, since trying to create logs using the same
- * code that creates  logs results in strange behavior. For the most part, LogEvent.Trace() is replaced
- * with Debugger.BuildDebugLog(), although in some cases log files aren't written at all. This makes it a
- * little difficult to troubleshoot logging, which is why it's a good idea to test the logging funcionality
- * extensively prior to deploying to production.
- */
+/* ========================================================================================================
+ * PLEASE READ #1
+ * --------------
+ * Logging is done a little differently in AbatabLogging.csproj, since trying to create logs using the same
+ * code that creates logs results in strange behavior.
+ *
+ * For the most part, LogEvent.Trace() is replaced with Debugger.BuildDebugLog(), although in some cases
+ * log files aren't written at all. This makes it a little difficult to troubleshoot logging, which is why
+ * it's a good idea to test the logging functionality extensively prior to deploying to production.
+ ========================================================================================================*/
 
-/* Abatab debugging functionality should only be used for development/debugging. There is a hardcoded 100ms
+/* ========================================================================================================
+ * PLEASE READ #2
+ * --------------
+ * Abatab debugging functionality should only be used for development/debugging. There is a hardcoded 100ms
  * delay when writing a debug log file, and there for should not be used production environments due to
  * the performance penalties it creates.
  *
@@ -32,7 +35,7 @@
  * You can also debug the debugger by setting "debugDebugger" to "true" in LogDebug.DebugContent(), which
  * will create additional debug files to aid in troubleshooting. These files have an additional hardcoded
  * 1000ms delay when they are written, and will cause significant performance issues when Abatab executes.
- */
+ ========================================================================================================*/
 
 using System;
 using System.IO;
@@ -41,16 +44,19 @@ using System.Threading;
 
 namespace AbatabLogging
 {
+    /// <summary>
+    /// Logic for debugging functionality.
+    /// </summary>
     public class Debugger
     {
-        /// <summary>Basic debugging.</summary>
-        /// <param name="debugMode">Debug log mode.</param>
-        /// <param name="debugMsg">Debug log message.</param>
-        /// <param name="debugLogRoot">Debug log root directory.</param>
-        /// <param name="exeAssembly">Name of executing assembly.</param>
-        /// <param name="callerPath">Filename of where the log is coming from.</param>
-        /// <param name="callerMember">Method of where the log is coming from.</param>
-        /// <param name="callerLine">File line of where the log is coming from.</param>
+        /// <summary>Builds a debug log file.</summary>
+        /// <param name="debugMode">The Abatab debug mode.</param>
+        /// <param name="debugMsg">The debug log message.</param>
+        /// <param name="debugLogRoot">The debug log root directory.</param>
+        /// <param name="exeAssembly">The name of executing assembly.</param>
+        /// <param name="callPath">The filename of where the log is coming from.</param>
+        /// <param name="callMember">The method name of where the log is coming from.</param>
+        /// <param name="callLine">The file line of where the log is coming from.</param>
         public static void BuildDebugLog(string exeAssembly, string debugMode, string debugLogRoot = "", string debugMsg = "", [CallerFilePath] string callPath = "", [CallerMemberName] string callMember = "", [CallerLineNumber] int callLine = 0)
         {
             //if (debugMode == "on" || debugMode == "undefined") // TODO Remove.
@@ -94,10 +100,10 @@ namespace AbatabLogging
             }
         }
 
-        /// <summary>Debug the debugger.</summary>
-        /// <param name="debugDebugger">Flag that determines if the debugger should be debugged.</param>
-        /// <param name="debugLogRoot">Debug log root directory.</param>
-        /// <param name="debugMsg">Debugger log message.</param>
+        /// <summary>Debugs the debugger.</summary>
+        /// <param name="debugDebugger">The flag that determines if the debugger should be debugged.</param>
+        /// <param name="debugLogRoot">The debug log root directory.</param>
+        /// <param name="debugMsg">The debugger log message.</param>
         private static void DebugTheDebugger(bool debugDebugger, string debugLogRoot, string debugMsg)
         {
             if (debugDebugger)

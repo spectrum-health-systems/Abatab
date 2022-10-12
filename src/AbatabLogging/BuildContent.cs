@@ -1,12 +1,17 @@
-﻿// b221011.093856
+﻿// Copyright (c) A Pretty Cool Program
+// See the LICENSE file for more information.
+// b221012.082547
 
-/* A note about this class:
+/* ========================================================================================================
+ * PLEASE READ
+ * -----------
  * Logging is done a little differently in AbatabLogging.csproj, since trying to create logs using the same
- * code that creates logs results in strange behavior. For the most part, LogEvent.Trace() is replaced with
- * Debugger.BuildDebugLog(), although in some cases log files aren't written at all. This makes it a little
- * difficult to troubleshoot logging, which is why it's a good idea to test the logging functionality
- * extensively prior to deploying to production.
- */
+ * code that creates logs results in strange behavior.
+ *
+ * For the most part, LogEvent.Trace() is replaced with Debugger.BuildDebugLog(), although in some cases
+ * log files aren't written at all. This makes it a little difficult to troubleshoot logging, which is why
+ * it's a good idea to test the logging functionality extensively prior to deploying to production.
+ ========================================================================================================*/
 
 using AbatabData;
 using NTST.ScriptLinkService.Objects;
@@ -17,7 +22,7 @@ using System.Reflection;
 namespace AbatabLogging
 {
     /// <summary>
-    /// Build the content components for a log file.
+    /// Logic for building log file content.
     /// </summary>
     public class BuildContent
     {
@@ -58,12 +63,12 @@ namespace AbatabLogging
         /// Builds the content for a debug log file.
         /// </summary>
         /// <param name="debugMode">The Abatab debug mode setting.</param>
-        /// <param name="debugMsg">The debug log message.</param>
         /// <param name="exeAssembly">The name of executing assembly.</param>
+        /// <param name="debugMsg">The debug log message.</param>
         /// <param name="callPath">The filename of where the log is coming from.</param>
         /// <param name="callMember">The method name of where the log is coming from.</param>
         /// <param name="callLine">The file line of where the log is coming from.</param>
-        /// <returns>The cmpleted content for a debug log file.</returns>
+        /// <returns>The completed content for a debug log file.</returns>
         public static string DebugComponents(string exeAssembly, string debugMode, string debugMsg, string callPath, string callMember, int callLine)
         {
             var logHead   = ComponentHead(debugMsg);

@@ -1,10 +1,6 @@
-﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
- * Abatab                                                                                           v0.92.0
- * ModQuickMedOrder.csproj                                                                          v0.92.0
- * Roundhouse.cs                                                                             b221011.093856
- * --------------------------------------------------------------------------------------------------------
- *
- * ================================= (c)2016-2022 A Pretty Cool Program ================================ */
+﻿// Copyright (c) A Pretty Cool Program
+// See the LICENSE file for more information.
+// b221012.082547
 
 using AbatabData;
 using AbatabLogging;

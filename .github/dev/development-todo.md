@@ -24,3 +24,6 @@
 * [ ] Debug descriptions are static in settings file.
 * [ ] Debug stuff moved to LogEvent.Debug()
 * [ ] Try...catch
+* [ ] Standardize all parametar orders
+* [ ] Standardize all XML paramater comments
+* [ ] Follow all traces

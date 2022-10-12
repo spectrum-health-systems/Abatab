@@ -1,10 +1,6 @@
-﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
- * Abatab                                                                                           v0.92.0
- * AbatabOptionObject.csproj                                                                        v0.92.0
- * Verify.cs                                                                                 b221011.093856
- * --------------------------------------------------------------------------------------------------------
- * Verify an OptionObject.
- * ================================= (c)2016-2022 A Pretty Cool Program ================================ */
+﻿// Copyright (c) A Pretty Cool Program
+// See the LICENSE file for more information.
+// b221012.082547
 
 // Used?
 
