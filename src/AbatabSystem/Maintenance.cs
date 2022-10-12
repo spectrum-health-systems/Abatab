@@ -1,18 +1,20 @@
-﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
- * Abatab                                                                                           v0.92.0
- * AbatabSystem.csproj                                                                              v0.92.0
- * Maintenance.cs                                                                            b221010.115437
- * --------------------------------------------------------------------------------------------------------
- * General maintenance logic
- * ================================= (c)2016-2022 A Pretty Cool Program ================================ */
+﻿// Copyright (c) A Pretty Cool Program
+// See the LICENSE file for more information.
+// b221012.150358
 
 using System.IO;
 
 namespace AbatabSystem
 {
+
+    /// <summary>
+    /// Logic for general maintenance stuff.
+    /// </summary>
     public class Maintenance
     {
-        /// <summary>Verify directory exists, and create if not.</summary>
+        /// <summary>
+        /// Verifies directory exists, and create if not.
+        /// </summary>
         public static void VerifyDir(string dir)
         {
             // No Debugger.BuildDebugLog() or LogEvent.Trace() here because it isn't worth it...yet.

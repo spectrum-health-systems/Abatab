@@ -1,10 +1,6 @@
-﻿/* ========================== https://github.com/spectrum-health-systems/Abatab ===========================
- * Abatab                                                                                           v0.92.0
- * Abatab.csproj                                                                                    v0.92.0
- * Abatab.Roundhouse.cs                                                                      b221010.115437
- * --------------------------------------------------------------------------------------------------------
- * Determines where the sentOptionObject should go for further work.
- * ================================= (c)2016-2022 A Pretty Cool Program ================================ */
+﻿// Copyright (c) A Pretty Cool Program
+// See the LICENSE file for more information.
+// b221012.150358
 
 using AbatabData;
 using AbatabLogging;
@@ -12,33 +8,40 @@ using System.Reflection;
 
 namespace Abatab
 {
-    public class Roundhouse
+    /// <summary>
+    /// Roundhouse functionality for Abatab.
+    /// </summary>
+    public static class Roundhouse
     {
-        /// <summary>Determine which module should receive the request.</summary>
-        /// <param name="abatabSession">Abatab session data.</param>
-        /// <returns>Abatab session data, potentially modified.</returns>
-        public static void ParseRequest(SessionData abatabSession)
+        /// <summary>
+        /// Determines where a script parameter request should go.
+        /// </summary>
+        /// <param name="abatabSession">Information/data for this session of Abatab.</param>
+        public static void ParseRequest(Session abatabSession)
         {
-            Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Parsing Abatab request..");
+            Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Parse script parameter request.");
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 
             switch (abatabSession.AbatabModule)
             {
-                case "date":
+                case "prototype":
                     LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+                    //ModPrototype.Roundhouse.ParseRequest(abatabSession);
                     break;
 
-                case "dose":
+                case "quickmedorder":
                     LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+                    ModQuickMedOrder.Roundhouse.ParseRequest(abatabSession);
                     break;
 
                 case "testing":
                     LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
-                    ModuleTesting.Roundhouse.ParseCommand(abatabSession);
+                    ModTesting.Roundhouse.ParseRequest(abatabSession);
                     break;
 
                 default:
                     LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+                    // Exit gracefully.
                     break;
             }
 

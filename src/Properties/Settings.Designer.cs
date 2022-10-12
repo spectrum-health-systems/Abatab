@@ -25,6 +25,24 @@ namespace Abatab.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("passthrough")]
+        public string AbatabMode {
+            get {
+                return ((string)(this["AbatabMode"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\AvatoolWebService\\Abatab_UAT")]
+        public string AbatabRoot {
+            get {
+                return ((string)(this["AbatabRoot"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("off")]
         public string DebugMode {
             get {
@@ -38,24 +56,6 @@ namespace Abatab.Properties {
         public string DebugLogRoot {
             get {
                 return ((string)(this["DebugLogRoot"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("enabled")]
-        public string AbatabMode {
-            get {
-                return ((string)(this["AbatabMode"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\AvatoolWebService\\Abatab_UAT")]
-        public string AbatabRoot {
-            get {
-                return ((string)(this["AbatabRoot"]));
             }
         }
         
@@ -98,27 +98,45 @@ namespace Abatab.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("enabled")]
-        public string ModuleTestingMode {
+        public string ModTestingMode {
             get {
-                return ((string)(this["ModuleTestingMode"]));
+                return ((string)(this["ModTestingMode"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("enabled")]
-        public string ModuleDateMode {
+        public string ModQuickMedOrderMode {
             get {
-                return ((string)(this["ModuleDateMode"]));
+                return ((string)(this["ModQuickMedOrderMode"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("all")]
+        public string ModQuickMedOrderValidUsers {
+            get {
+                return ((string)(this["ModQuickMedOrderValidUsers"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0.25")]
+        public string ModQuickMedOrderDosePercentMaxInc {
+            get {
+                return ((string)(this["ModQuickMedOrderDosePercentMaxInc"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("enabled")]
-        public string ModuleDoseMode {
+        public string ModPrototypeMode {
             get {
-                return ((string)(this["ModuleDoseMode"]));
+                return ((string)(this["ModPrototypeMode"]));
             }
         }
     }
