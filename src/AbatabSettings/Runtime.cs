@@ -13,11 +13,13 @@ namespace AbatabSettings
         /// <returns></returns>
         public static Dictionary<string, string> GetSettings()
         {
+
             List<Dictionary<string, string>> runtimeSettings = new List<Dictionary<string, string>>
             {
                 GetAbatabDetails(),
                 GetSessionDetails()
             };
+
 
             return Du.WithDictionary.JoinListOf(runtimeSettings);
         }
@@ -28,6 +30,7 @@ namespace AbatabSettings
         /// <returns></returns>
         public static Dictionary<string, string> GetAbatabDetails()
         {
+
             return new Dictionary<string, string>
             {
                 { "AbatabVer",   FileVersionInfo.GetVersionInfo(Assembly.GetEntryAssembly().Location).FileVersion }
@@ -40,6 +43,7 @@ namespace AbatabSettings
         /// <returns></returns>
         public static Dictionary<string, string> GetSessionDetails()
         {
+
             return new Dictionary<string, string>
             {
                 { "SessionDate", $"{DateTime.Now:yyMMdd}" }
