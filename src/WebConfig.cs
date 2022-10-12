@@ -26,9 +26,12 @@ namespace Abatab
         {
             Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG] Load Web.config.");
 
+            var ver = FileVersionInfo.GetVersionInfo(Assembly.GetEntryAssembly().Location).FileVersion;
+
+
             return new Dictionary<string, string>
             {
-                { "AbatabVer",                         FileVersionInfo.GetVersionInfo(Assembly.GetEntryAssembly().Location).FileVersion },
+                //{ "AbatabVer",                         ver },
                 { "DebugMode",                         Settings.Default.DebugMode.ToLower() },
                 { "DebugLogRoot",                      Settings.Default.DebugLogRoot.ToLower() },
                 { "AbatabMode",                        Settings.Default.AbatabMode.ToLower() },
