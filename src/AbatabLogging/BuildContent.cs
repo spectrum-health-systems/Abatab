@@ -169,11 +169,11 @@ namespace AbatabLogging
                                 $"Logging detail:      {abatabSession.LoggingDetail}{Environment.NewLine}" +
                                 $"Logging delay:       {abatabSession.LoggingDelay}{Environment.NewLine}" +
                                 $"Session datestamp:   {abatabSession.SessionDate}{Environment.NewLine}" +
-                                $"Session timestamp:   {abatabSession.SessionTime}{Environment.NewLine}" +
+                                //$"Session timestamp:   {abatabSession.SessionTime}{Environment.NewLine}" +
                                 $"Session log root:    {abatabSession.SessionLogRoot}{Environment.NewLine}" +
                                 $"Avatar username:     {abatabSession.AvatarUserName}{Environment.NewLine}" +
                                 $"Fallback username:   {abatabSession.AvatarFallbackUserName}{Environment.NewLine}" +
-                                $"Abatab request:      {abatabSession.AbatabRequest}{Environment.NewLine}" +
+                                $"Abatab request:      {abatabSession.ScriptParameter}{Environment.NewLine}" +
                                 $"    Module:          {abatabSession.AbatabModule}{Environment.NewLine}" +
                                 $"    Command:         {abatabSession.AbatabCommand}{Environment.NewLine}" +
                                 $"    Action:          {abatabSession.AbatabAction}{Environment.NewLine}" +
