@@ -15,7 +15,7 @@ namespace AbatabSettings
         //public static Dictionary<string, string> GetSettings()
         public static Dictionary<string, string> GetSettings(string debugMode, string debugLogRoot)
         {
-            Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, debugMode, debugLogRoot); //
+            Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, debugMode, debugLogRoot); // STOPPED HERE
 
             List<Dictionary<string, string>> runtimeSettings = new List<Dictionary<string, string>>
             {
