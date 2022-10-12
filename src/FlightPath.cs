@@ -8,7 +8,6 @@ using AbatabData;
 using AbatabLogging;
 using AbatabSession;
 using NTST.ScriptLinkService.Objects;
-using System.Collections.Generic;
 using System.Reflection;
 
 namespace Abatab
@@ -32,16 +31,25 @@ namespace Abatab
         {
             Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG] Session started.");
 
-            List<Dictionary<string, string>> settingsCollection = new List<Dictionary<string, string>>
-            {
-               WebConfig.Load(),
-               AbatabSettings.Runtime.GetSettings(),
-               AbatabSettings.FromAvatar.GetSettings(sentOptionObject, scriptParameter)
-            };
+            var t = WebConfig.Load();
+            Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG] Session started.");
+
+            var g = AbatabSettings.Runtime.GetSettings();
+            Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG] Session started.");
+
+            var m =AbatabSettings.FromAvatar.GetSettings(sentOptionObject, scriptParameter);
+            Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG] Session started.");
+
+            //List<Dictionary<string, string>> settingsCollection = new List<Dictionary<string, string>>
+            //{
+            //   WebConfig.Load(),
+            //   AbatabSettings.Runtime.GetSettings(),
+            //   AbatabSettings.FromAvatar.GetSettings(sentOptionObject, scriptParameter)
+            //};
 
             Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG] Session started.");
 
-            Dictionary<string, string> abatabSettings = Du.WithDictionary.JoinListOf(settingsCollection);
+            //Dictionary<string, string> abatabSettings = Du.WithDictionary.JoinListOf(settingsCollection);
 
             Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG] Session started.");
 
