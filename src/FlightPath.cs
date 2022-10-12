@@ -8,6 +8,7 @@ using AbatabData;
 using AbatabLogging;
 using AbatabSession;
 using NTST.ScriptLinkService.Objects;
+using System.Collections.Generic;
 using System.Reflection;
 
 namespace Abatab
@@ -50,6 +51,8 @@ namespace Abatab
             Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG] Session started.");
 
             //Dictionary<string, string> abatabSettings = Du.WithDictionary.JoinListOf(settingsCollection);
+            Dictionary<string, string> abatabSettings = new Dictionary<string, string>();
+
 
             Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG] Session started.");
 
