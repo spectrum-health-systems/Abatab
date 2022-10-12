@@ -1,0 +1,7 @@
+C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\Modules\ModuleDate\bin\Debug\ModuleDate.dll.config
+C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\Modules\ModuleDate\bin\Debug\ModuleDate.dll
+C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\Modules\ModuleDate\bin\Debug\ModuleDate.pdb
+C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\Modules\ModuleDate\obj\Debug\ModuleDate.csproj.AssemblyReference.cache
+C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\Modules\ModuleDate\obj\Debug\ModuleDate.csproj.CoreCompileInputs.cache
+C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\Modules\ModuleDate\obj\Debug\ModuleDate.dll
+C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\Modules\ModuleDate\obj\Debug\ModuleDate.pdb

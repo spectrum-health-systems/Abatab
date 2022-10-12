@@ -1,0 +1,6 @@
+C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\Modules\ModPrototype\bin\Debug\ModPrototype.dll
+C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\Modules\ModPrototype\bin\Debug\ModPrototype.pdb
+C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\Modules\ModPrototype\obj\Debug\ModPrototype.csproj.AssemblyReference.cache
+C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\Modules\ModPrototype\obj\Debug\ModPrototype.csproj.CoreCompileInputs.cache
+C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\Modules\ModPrototype\obj\Debug\ModPrototype.dll
+C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\Modules\ModPrototype\obj\Debug\ModPrototype.pdb

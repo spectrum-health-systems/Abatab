@@ -1,0 +1,6 @@
+C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\AbatabSystem\bin\Debug\AbatabSystem.dll
+C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\AbatabSystem\bin\Debug\AbatabSystem.pdb
+C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\AbatabSystem\obj\Debug\AbatabSystem.csproj.AssemblyReference.cache
+C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\AbatabSystem\obj\Debug\AbatabSystem.csproj.CoreCompileInputs.cache
+C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\AbatabSystem\obj\Debug\AbatabSystem.dll
+C:\Users\Chris.Banwarth\GitHub\Repositories\SHS\Abatab\src\AbatabSystem\obj\Debug\AbatabSystem.pdb
