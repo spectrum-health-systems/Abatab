@@ -3,6 +3,7 @@
 // See the LICENSE file for more information.
 // b221012.150358
 
+using Abatab.Properties;
 using AbatabData;
 using AbatabLogging;
 using AbatabSession;
@@ -29,6 +30,8 @@ namespace Abatab
         /// <returns></returns>
         public static Session Start(OptionObject2015 sentOptionObject, string scriptParameter)
         {
+            Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG] Session started.");
+
             List<Dictionary<string, string>> settingsCollection = new List<Dictionary<string, string>>
             {
                WebConfig.Load(),
@@ -36,7 +39,11 @@ namespace Abatab
                AbatabSettings.FromAvatar.GetSettings(sentOptionObject, scriptParameter)
             };
 
+            Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG] Session started.");
+
             Dictionary<string, string> abatabSettings = Du.WithDictionary.JoinListOf(settingsCollection);
+
+            Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG] Session started.");
 
             return Create.New(sentOptionObject, scriptParameter, abatabSettings);
         }
