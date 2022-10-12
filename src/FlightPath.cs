@@ -35,8 +35,12 @@ namespace Abatab
             var t = WebConfig.Load();
             Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot);
 
-            var g = AbatabSettings.Runtime.GetSettings();
-            Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot);
+            // temp
+            var g = AbatabSettings.Runtime.GetSettings(Settings.Default.DebugMode, Settings.Default.DebugLogRoot);
+            Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, $"{Settings.Default.DebugMode}", $"{Settings.Default.DebugLogRoot}");
+
+            //var g = AbatabSettings.Runtime.GetSettings();
+            //Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot);
 
             var m =AbatabSettings.FromAvatar.GetSettings(sentOptionObject, scriptParameter);
             Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot);

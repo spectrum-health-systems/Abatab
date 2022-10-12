@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AbatabLogging;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Reflection;
@@ -11,8 +12,10 @@ namespace AbatabSettings
         ///
         /// </summary>
         /// <returns></returns>
-        public static Dictionary<string, string> GetSettings()
+        //public static Dictionary<string, string> GetSettings()
+        public static Dictionary<string, string> GetSettings(string debugMode, string debugLogRoot)
         {
+            Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, debugMode, debugLogRoot); //
 
             List<Dictionary<string, string>> runtimeSettings = new List<Dictionary<string, string>>
             {
@@ -20,6 +23,7 @@ namespace AbatabSettings
                 GetSessionDetails()
             };
 
+            Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, debugMode, debugLogRoot); //
 
             return Du.WithDictionary.JoinListOf(runtimeSettings);
         }
