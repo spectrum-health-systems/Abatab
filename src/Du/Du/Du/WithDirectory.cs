@@ -1,24 +1,20 @@
-﻿// Copyright (c) A Pretty Cool Program
+﻿// Du
+// Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
 // b221013.091642
 
 using System.IO;
 
-namespace AbatabSystem
+namespace Du
 {
-
-    /// <summary>
-    /// Logic for general maintenance stuff.
-    /// </summary>
-    public class Maintenance
+    /// <summary></summary>
+    public class WithDirectory
     {
         /// <summary>
         /// Verifies directory exists, and create if not.
         /// </summary>
         public static void VerifyDir(string dir)
         {
-            // No Debugger.BuildDebugLog() or LogEvent.Trace() here because it isn't worth it...yet.
-
             _=Directory.CreateDirectory(dir);
         }
     }
