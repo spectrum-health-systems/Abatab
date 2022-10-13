@@ -36,6 +36,10 @@ namespace AbatabSettings
         {
             Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, debugMode, debugLogRoot, "[DEBUG]");
 
+            var t = FileVersionInfo.GetVersionInfo(Assembly.GetEntryAssembly().Location).FileVersion;
+
+            Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, debugMode, debugLogRoot, "[DEBUG]");
+
             return new Dictionary<string, string>
             {
                 { "AbatabVer",   FileVersionInfo.GetVersionInfo(Assembly.GetEntryAssembly().Location).FileVersion }
