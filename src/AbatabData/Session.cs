@@ -36,6 +36,7 @@ namespace AbatabData
         public string ModTestingMode { get; set; }
 
         // Set at runtime: General
+        public string AbatabVer { get; set; }
         public string SessionTimestamp { get; set; }
         public string SessionLogRoot { get; set; }
         public string AvatarUserName { get; set; }
