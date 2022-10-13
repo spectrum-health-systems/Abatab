@@ -47,7 +47,7 @@ namespace AbatabLogging
     /// <summary>
     /// Logic for debugging functionality.
     /// </summary>
-    public class Debugger
+    public class Debuggler
     {
         /// <summary>Builds a debug log file.</summary>
         /// <param name="debugMode">The Abatab debug mode.</param>
@@ -64,7 +64,7 @@ namespace AbatabLogging
             {
                 const bool debugDebugger = false;
 
-                DebugTheDebugger(debugDebugger, debugLogRoot, "001");
+                DebugTheDebuggler(debugDebugger, debugLogRoot, "001");
 
                 if (string.IsNullOrWhiteSpace(debugLogRoot))
                 {
@@ -74,29 +74,29 @@ namespace AbatabLogging
                 debugLogRoot = $@"{debugLogRoot}\{DateTime.Now:yyMMdd}"; // TODO Move this to where other dirs are created.
                 _=Directory.CreateDirectory(debugLogRoot);
 
-                DebugTheDebugger(debugDebugger, debugLogRoot, "002");
+                DebugTheDebuggler(debugDebugger, debugLogRoot, "002");
 
                 if (string.Equals(debugMode, "on", StringComparison.OrdinalIgnoreCase))
                 {
-                    DebugTheDebugger(debugDebugger, debugLogRoot, "003");
+                    DebugTheDebuggler(debugDebugger, debugLogRoot, "003");
 
                     /* Delay creating a debug log by 100ms, just to make sure we don't overwrite an
                      * existing log. This will have a negative affect on performance.
                      */
                     Thread.Sleep(100);
 
-                    DebugTheDebugger(debugDebugger, debugLogRoot, "004");
+                    DebugTheDebuggler(debugDebugger, debugLogRoot, "004");
 
                     var debugContent = BuildContent.DebugComponents(exeAssembly, debugMode, debugMsg, callPath, callMember, callLine);
 
-                    DebugTheDebugger(debugDebugger, debugLogRoot, "005");
+                    DebugTheDebuggler(debugDebugger, debugLogRoot, "005");
 
                     File.WriteAllText($@"{debugLogRoot}\{DateTime.Now:HHmmssfffffff}-{exeAssembly}-{Path.GetFileName(callPath)}-{callMember}-{callLine}.debug", debugContent);
 
-                    DebugTheDebugger(debugDebugger, debugLogRoot, "006");
+                    DebugTheDebuggler(debugDebugger, debugLogRoot, "006");
                 }
 
-                DebugTheDebugger(debugDebugger, debugLogRoot, "007");
+                DebugTheDebuggler(debugDebugger, debugLogRoot, "007");
             }
         }
 
@@ -104,7 +104,7 @@ namespace AbatabLogging
         /// <param name="debugDebugger">The flag that determines if the debugger should be debugged.</param>
         /// <param name="debugLogRoot">The debug log root directory.</param>
         /// <param name="debugMsg">The debugger log message.</param>
-        private static void DebugTheDebugger(bool debugDebugger, string debugLogRoot, string debugMsg)
+        private static void DebugTheDebuggler(bool debugDebugger, string debugLogRoot, string debugMsg)
         {
             if (debugDebugger)
             {

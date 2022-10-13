@@ -1,13 +1,12 @@
-﻿// Copyright (c) A Pretty Cool Program
+﻿// Abatab
+// Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
 // b221013.091642
 
 using Abatab.Properties;
 using AbatabData;
 using AbatabLogging;
-using AbatabSession;
 using NTST.ScriptLinkService.Objects;
-using System.Collections.Generic;
 using System.Reflection;
 using System.Web.Services;
 
@@ -46,17 +45,19 @@ namespace Abatab
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string scriptParameter)
         {
-            Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG] Session started.");
+            Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG]");
 
-            Dictionary<string, string> webConfig = WebConfig.Load();
+            Session abatabSession = new Session();
 
-            Session abatabSession = Instance.Build(sentOptionObject, scriptParameter, webConfig);
+            FlightPath.Start(sentOptionObject, scriptParameter, abatabSession);
 
-            Roundhouse.ParseRequest(abatabSession);
+            //Instance.Build(sentOptionObject, scriptParameter, webConfig);
 
-            LogEvent.Session(abatabSession, "Session complete.");
+            //Roundhouse.ParseRequest(abatabSession);
 
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+            //LogEvent.Session(abatabSession, "Session complete.");
+
+            //LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 
             return abatabSession.FinalOptObj;
         }

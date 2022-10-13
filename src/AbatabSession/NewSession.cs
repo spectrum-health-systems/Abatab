@@ -14,7 +14,7 @@ namespace AbatabSession
     /// <summary>
     /// Logic for session instances.
     /// </summary>
-    public class Instance
+    public class NewSession
     {
         /// <summary>
         /// Builds configuration settings for an Abatab session.
@@ -24,7 +24,7 @@ namespace AbatabSession
         /// <returns>Session configuration settings.</returns>
         public static Session Build(OptionObject2015 sentOptObj, string scriptParameter, Dictionary<string, string> abatabSettings)
         {
-            Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"], "[DEBUG] Building session data.");
+            Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"], "[DEBUG]");
             // No LogEvent.Trace() here because we don't have the necessary information yet.
 
             var abatabSession = new Session

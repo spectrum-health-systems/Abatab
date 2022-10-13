@@ -23,14 +23,14 @@ namespace Abatab
         /// <returns>A dictionary containing the settings from Web.config.</returns>
         public static Dictionary<string, string> Load()
         {
-            Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG] Load Web.config.");
+            Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG] Load Web.config.");
 
             return new Dictionary<string, string>
             {
-                { "DebugMode",                         Settings.Default.DebugMode.ToLower() },
-                { "DebugLogRoot",                      Settings.Default.DebugLogRoot.ToLower() },
                 { "AbatabMode",                        Settings.Default.AbatabMode.ToLower() },
                 { "AbatabRoot",                        Settings.Default.AbatabRoot.ToLower() },
+                { "DebugMode",                         Settings.Default.DebugMode.ToLower() },
+                { "DebugLogRoot",                      Settings.Default.DebugLogRoot.ToLower() },
                 { "LoggingMode",                       Settings.Default.LoggingMode.ToLower() },
                 { "LoggingDetail",                     Settings.Default.LoggingDetail.ToLower() },
                 { "LoggingDelay",                      Settings.Default.LoggingDelay.ToLower() },
