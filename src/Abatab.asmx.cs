@@ -1,6 +1,7 @@
-﻿// Copyright (c) A Pretty Cool Program
+﻿// Abatab
+// Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221012.150358
+// b221014.080942
 
 using Abatab.Properties;
 using AbatabData;
@@ -46,7 +47,7 @@ namespace Abatab
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string scriptParameter)
         {
-            Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG] Session started.");
+            Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG] Session started.");
 
             Dictionary<string, string> webConfig = WebConfig.Load();
 
