@@ -1,7 +1,7 @@
 ﻿// Abatab
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221014.103428
+// b221014.111420
 
 using AbatabData;
 using AbatabLogging;
@@ -9,13 +9,16 @@ using System.Reflection;
 
 namespace ModQuickMedOrder
 {
-    public class Roundhouse
+    /// <summary>
+    /// Roundhouse logic for the Quick Medication Order module.
+    /// </summary>
+    public static class Roundhouse
     {
         /// <summary>Parse the Abatab request command.</summary>
         /// <param name="abatabSession">Abatab session information.</param>
         public static void ParseRequest(Session abatabSession)
         {
-            Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Parsing QuickMedOrder Module command.");
+            Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG]");
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 
             switch (abatabSession.AbatabCommand.ToLower())
@@ -34,8 +37,10 @@ namespace ModQuickMedOrder
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
         }
 
-        /// <summary>Do a data dump.</summary>
-        /// <param name="abatabSession">Abatab session information.</param>
+        /// <summary>
+        /// Parses the Dose command.
+        /// </summary>
+        /// <param name="abatabSession">Information/data for this session of Abatab.</param>
         private static void ParseCommandDose(Session abatabSession)
         {
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);

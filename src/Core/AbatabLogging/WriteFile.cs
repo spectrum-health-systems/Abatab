@@ -1,7 +1,7 @@
 ﻿// Abatab
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221014.103428
+// b221014.111420
 
 /* ========================================================================================================
  * PLEASE READ
@@ -22,7 +22,7 @@ namespace AbatabLogging
     /// <summary>
     /// Logic for writing log files.
     /// </summary>
-    public class WriteFile
+    public static class WriteFile
     {
         /// <summary>Writes a log file.</summary>
         /// <param name="logPath">The log file path.</param>

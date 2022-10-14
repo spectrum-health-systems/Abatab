@@ -15,6 +15,8 @@
 * [ ] Verify all session data is being logged 
 * [ ] Reorder WebConfig.Load() to match rest of code
 * [ ] Test parameter options
+* [ ] Put "[TRACE]" on trace logs
+* [ ] reduce "[DEBUG]" on debug logs
 
 # v0.92.0.0
 

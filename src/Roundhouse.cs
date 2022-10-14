@@ -1,7 +1,7 @@
 ﻿// Abatab
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221014.103428
+// b221014.111420
 
 using AbatabData;
 using AbatabLogging;
@@ -27,12 +27,12 @@ namespace Abatab
             {
                 case "prototype":
                     LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
-                    //ModPrototype.Roundhouse.ParseRequest(abatabSession);
+                    ModPrototype.Roundhouse.ParseRequest(abatabSession);
                     break;
 
                 case "quickmedorder":
                     LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
-                    Roundhouse.ParseRequest(abatabSession);
+                    ModQuickMedOrder.Roundhouse.ParseRequest(abatabSession);
                     break;
 
                 case "testing":

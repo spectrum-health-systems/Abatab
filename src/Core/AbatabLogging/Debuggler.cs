@@ -1,7 +1,7 @@
 ﻿// Abatab
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221014.103428
+// b221014.111420
 
 /* ========================================================================================================
  * PLEASE READ #1
@@ -48,7 +48,7 @@ namespace AbatabLogging
     /// <summary>
     /// Logic for debugging functionality.
     /// </summary>
-    public class Debuggler
+    public static class Debuggler
     {
         /// <summary>Builds a debug log file.</summary>
         /// <param name="debugMode">The Abatab debug mode.</param>

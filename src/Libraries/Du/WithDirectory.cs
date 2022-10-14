@@ -1,17 +1,19 @@
 ﻿// Du
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221012.150358
+// b221014.111420
 
 using System.IO;
 
 namespace Du
 {
-    /// <summary></summary>
-    public class WithDirectory
+    /// <summary>
+    /// Does various things with system directories.
+    /// </summary>
+    public static class WithDirectory
     {
         /// <summary>
-        /// Verifies directory exists, and create if not.
+        /// Verifies a directory exists, and creates it if it does not.
         /// </summary>
         public static void VerifyDir(string dir)
         {

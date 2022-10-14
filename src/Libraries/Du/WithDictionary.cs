@@ -1,19 +1,22 @@
 ﻿// Du
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221012.150358
+// b221014.111420
 
 using System.Collections.Generic;
 using System.Linq;
 
 namespace Du
 {
-    /// <summary></summary>
-    public class WithDictionary
+    /// <summary>
+    /// Does various things with Dictionary objects.
+    /// </summary>
+    public static class WithDictionary
     {
-        /// <summary></summary>
+        /// <summary>
+        /// Join a list of dictionaries.</summary>
         /// <param name="dictionariesToJoin"></param>
-        /// <returns></returns>
+        /// <returns>A single dictionary containing all data from multiple dictionaries.</returns>
         public static Dictionary<string, string> JoinListOf(List<Dictionary<string, string>> dictionariesToJoin)
         {
             var wrkDictionary = new Dictionary<string, string>();

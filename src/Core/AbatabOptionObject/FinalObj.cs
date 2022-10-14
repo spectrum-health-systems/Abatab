@@ -1,7 +1,7 @@
 ﻿// Abatab
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221014.103428
+// b221014.111420
 
 using AbatabData;
 using AbatabLogging;
@@ -12,7 +12,7 @@ namespace AbatabOptionObject
     /// <summary>
     /// Logic for working with the FinalOptObj.
     /// </summary>
-    public class FinalObj
+    public static class FinalObj
     {
         /// <summary>
         /// Finalizes an OptionObject.
@@ -44,12 +44,12 @@ namespace AbatabOptionObject
         /// <param name="abatabSession">Information/data for this session of Abatab.</param>
         public static void ForPassthrough(Session abatabSession)
         {
+            // TODO Private?
             Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Finalizing finalOptObj for passthrough.");
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 
             abatabSession.FinalOptObj.ErrorCode = 0;
             abatabSession.FinalOptObj.ErrorMesg = "PASSTHROUGH";
-
             abatabSession.FinalOptObj.EntityID        = abatabSession.SentOptObj.EntityID;
             abatabSession.FinalOptObj.EpisodeNumber   = abatabSession.SentOptObj.EpisodeNumber;
             abatabSession.FinalOptObj.Facility        = abatabSession.SentOptObj.Facility;

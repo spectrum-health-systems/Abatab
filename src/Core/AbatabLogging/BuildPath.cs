@@ -1,7 +1,7 @@
 ﻿// Abatab
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221014.103428
+// b221014.111420
 
 /* ========================================================================================================
  * PLEASE READ
@@ -22,9 +22,8 @@ namespace AbatabLogging
     /// <summary>
     /// Logic for building log file paths.
     /// </summary>
-    public class BuildPath
+    public static class BuildPath
     {
-
         /// <summary>Builds a log file path.</summary>
         /// <param name="eventType">The type of log to create.</param>
         /// <param name="sessionLogRoot">The session root directory.</param>

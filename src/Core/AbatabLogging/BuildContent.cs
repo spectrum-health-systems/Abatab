@@ -1,7 +1,7 @@
 ﻿// Abatab
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221014.103428
+// b221014.111420
 
 /* ========================================================================================================
  * PLEASE READ
@@ -25,7 +25,7 @@ namespace AbatabLogging
     /// <summary>
     /// Logic for building log file content.
     /// </summary>
-    public class BuildContent
+    public static class BuildContent
     {
         /// <summary>
         /// Builds the content for a log file.
@@ -40,19 +40,19 @@ namespace AbatabLogging
         /// <returns>The completed content for a log file.</returns>
         public static string LogComponents(string eventType, Session abatabSession, string logMsg, string exeAssembly = "", string callPath = "", string callMember = "", int callLine = 0)
         {
-            Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Creating log components..");
+            Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG]");
 
             var logHead = ComponentHead(logMsg);
-            Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Created log header.");
+            Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG]");
 
             var logDetail = ComponentDetail(eventType, exeAssembly, callPath, callMember, callLine);
-            Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Created log detail.");
+            Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG]");
 
             var logBody = ComponentBody(eventType, abatabSession);
-            Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Created log body.");
+            Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG]");
 
             var logFoot = ComponentFoot();
-            Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Created log footer.");
+            Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG]");
 
             return $"{logHead}" +
                    $"{logDetail}" +
@@ -63,8 +63,8 @@ namespace AbatabLogging
         /// <summary>
         /// Builds the content for a debug log file.
         /// </summary>
-        /// <param name="debugMode">The Abatab debug mode setting.</param>
         /// <param name="exeAssembly">The name of executing assembly.</param>
+        /// <param name="debugMode">The Abatab debug mode setting.</param>
         /// <param name="debugMsg">The debug log message.</param>
         /// <param name="callPath">The filename of where the log is coming from.</param>
         /// <param name="callMember">The method name of where the log is coming from.</param>
@@ -280,18 +280,18 @@ namespace AbatabLogging
                              $"{optObjType}{Environment.NewLine}" +
                              $"------------{Environment.NewLine}";
 
-            var optObjDetail = $"EntityID:          {optObj.EntityID}{Environment.NewLine}" +
-                               $"Facility:          {optObj.Facility}{Environment.NewLine}" +
-                               $"NamespaceName:     {optObj.NamespaceName}{Environment.NewLine}" +
-                               $"OptionId:          {optObj.OptionId}{Environment.NewLine}" +
-                               $"ParentNamespace:   {optObj.ParentNamespace}{Environment.NewLine}" +
-                               $"ServerName:        {optObj.ServerName}{Environment.NewLine}" +
-                               $"SystemCode:        {optObj.SystemCode}{Environment.NewLine}" +
-                               $"EpisodeNumber:     {optObj.EpisodeNumber}{Environment.NewLine}" +
-                               $"OptionStaffId:     {optObj.OptionStaffId}{Environment.NewLine}" +
-                               $"OptionUserId:      {optObj.OptionUserId}{Environment.NewLine}" +
-                               $"ErrorCode:         {optObj.ErrorCode}{Environment.NewLine}" +
-                               $"ErrorMesg:         {optObj.ErrorMesg}";
+            var optObjDetail = $"EntityID:        {optObj.EntityID}{Environment.NewLine}" +
+                               $"Facility:        {optObj.Facility}{Environment.NewLine}" +
+                               $"NamespaceName:   {optObj.NamespaceName}{Environment.NewLine}" +
+                               $"OptionId:        {optObj.OptionId}{Environment.NewLine}" +
+                               $"ParentNamespace: {optObj.ParentNamespace}{Environment.NewLine}" +
+                               $"ServerName:      {optObj.ServerName}{Environment.NewLine}" +
+                               $"SystemCode:      {optObj.SystemCode}{Environment.NewLine}" +
+                               $"EpisodeNumber:   {optObj.EpisodeNumber}{Environment.NewLine}" +
+                               $"OptionStaffId:   {optObj.OptionStaffId}{Environment.NewLine}" +
+                               $"OptionUserId:    {optObj.OptionUserId}{Environment.NewLine}" +
+                               $"ErrorCode:       {optObj.ErrorCode}{Environment.NewLine}" +
+                               $"ErrorMesg:       {optObj.ErrorMesg}";
 
             return $"{optObjHead}" +
                    $"{optObjDetail}";

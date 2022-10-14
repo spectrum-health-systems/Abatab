@@ -1,7 +1,7 @@
 ﻿// Abatab
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221014.103428
+// b221014.111420
 
 using AbatabData;
 using AbatabLogging;
@@ -15,7 +15,7 @@ namespace AbatabSession
     /// <summary>
     /// Logic for session instances.
     /// </summary>
-    public class Instance
+    public static class Instance
     {
         /// <summary>
         /// Builds configuration settings for an Abatab session.
@@ -25,8 +25,7 @@ namespace AbatabSession
         /// <returns>Session configuration settings.</returns>
         public static Session Build(OptionObject2015 sentOptObj, string scriptParameter, Dictionary<string, string> abatabSettings)
         {
-            Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"], "[DEBUG] Building session data.");
-            // No LogEvent.Trace() here because we don't have the necessary information yet.
+            Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"], "[DEBUG]");
 
             var abatabSession = new Session
             {

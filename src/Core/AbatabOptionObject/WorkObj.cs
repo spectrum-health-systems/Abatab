@@ -1,7 +1,7 @@
 ﻿// Abatab
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221014.103428
+// b221014.111420
 
 using AbatabData;
 using AbatabLogging;
@@ -11,9 +11,9 @@ using System.Reflection;
 namespace AbatabOptionObject
 {
     /// <summary>
-    /// Logic for working with the FinalOptObj.
+    /// Logic for working with the WorkOptObj.
     /// </summary>
-    public class WorkObj
+    public static class WorkObj
     {
         /// <summary>
         /// Builds the WorkOptObj.
@@ -26,6 +26,7 @@ namespace AbatabOptionObject
              */
             return sentOptObj;
         }
+
         /// <summary>
         /// Clears the error information in the WorkOptObj.
         /// </summary>
@@ -34,6 +35,7 @@ namespace AbatabOptionObject
         /// <param name="errMsg">The error message.</param>
         public static void ClearErrorData(Session abatabSession, int errCode = 0, string errMsg = "")
         {
+            // TODO Private?
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
 
             abatabSession.WorkOptObj.ErrorCode = errCode;
