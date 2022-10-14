@@ -1,16 +1,15 @@
 ﻿using System.Reflection;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("AbatabSystem")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Spectrum Health Systems, Inc")]
+[assembly: AssemblyDescription("Core system logic for Abatab")]
+[assembly: AssemblyConfiguration("Development")]
+[assembly: AssemblyCompany("A Pretty Cool Program")]
 [assembly: AssemblyProduct("AbatabSystem")]
-[assembly: AssemblyCopyright("Copyright © Spectrum Health Systems, Inc 2022")]
+[assembly: AssemblyCopyright("Copyright © A Pretty Cool Program")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

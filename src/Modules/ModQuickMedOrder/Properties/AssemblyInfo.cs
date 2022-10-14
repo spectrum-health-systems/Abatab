@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("ModQuickMedOrder")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Spectrum Health Systems, Inc")]
+[assembly: AssemblyDescription("Quick Medication Order Module for Abatab")]
+[assembly: AssemblyConfiguration("Development")]
+[assembly: AssemblyCompany("A Pretty Cool Program")]
 [assembly: AssemblyProduct("ModQuickMedOrder")]
-[assembly: AssemblyCopyright("Copyright © Spectrum Health Systems, Inc 2022")]
+[assembly: AssemblyCopyright("Copyright © A Pretty Cool Program")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

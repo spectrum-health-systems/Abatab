@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("AbatabOptionObject")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Spectrum Health Systems, Inc")]
+[assembly: AssemblyDescription("Core OptionObject logic for Abatab")]
+[assembly: AssemblyConfiguration("Development")]
+[assembly: AssemblyCompany("A Pretty Cool Program")]
 [assembly: AssemblyProduct("AbatabOptionObject")]
-[assembly: AssemblyCopyright("Copyright © Spectrum Health Systems, Inc 2022")]
+[assembly: AssemblyCopyright("Copyright © A Pretty Cool Program")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
