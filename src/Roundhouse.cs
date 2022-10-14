@@ -32,7 +32,7 @@ namespace Abatab
 
                 case "quickmedorder":
                     LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
-                    ModQuickMedOrder.Roundhouse.ParseRequest(abatabSession);
+                    Roundhouse.ParseRequest(abatabSession);
                     break;
 
                 case "testing":

@@ -45,11 +45,5 @@
     <Compile Include="Roundhouse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\AbatabData\AbatabData.csproj">
-      <Project>{E3028CFD-5965-4555-9A96-3EBBDFD4D550}</Project>
-      <Name>AbatabData</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

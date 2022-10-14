@@ -60,7 +60,7 @@
       <Project>{a4467424-56e0-4260-bb21-d98263d7aefd}</Project>
       <Name>AbatabLogging</Name>
     </ProjectReference>
-    <ProjectReference Include="..\NTST.ScriptLinkService.Objects\NTST.ScriptLinkService.Objects.vbproj">
+    <ProjectReference Include="..\..\ThirdParty\NTST.ScriptLinkService.Objects\NTST.ScriptLinkService.Objects.vbproj">
       <Project>{8a8a6089-3286-42e6-9f76-b61784709654}</Project>
       <Name>NTST.ScriptLinkService.Objects</Name>
     </ProjectReference>
