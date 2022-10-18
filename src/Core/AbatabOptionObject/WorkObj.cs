@@ -36,12 +36,12 @@ namespace AbatabOptionObject
         public static void ClearErrorData(Session abatabSession, int errCode = 0, string errMsg = "")
         {
             // TODO Private?
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
             abatabSession.WorkOptObj.ErrorCode = errCode;
             abatabSession.WorkOptObj.ErrorMesg = errMsg;
 
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
         }
     }
 }

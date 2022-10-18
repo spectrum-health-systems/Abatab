@@ -21,7 +21,7 @@ namespace ModTesting
 
         public static void SessionData(Session abatabSession)
         {
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
             LogEvent.Session(abatabSession, "Testing data dump functionality.");
         }
     }

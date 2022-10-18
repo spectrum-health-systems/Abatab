@@ -20,22 +20,22 @@ namespace AbatabOptionObject
         /// <param name="abatabSession">Information/data for this session of Abatab.</param>
         public static void Finalize(Session abatabSession)
         {
-            Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Finalizing finalOptObj");
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, abatabSession.AbatabMode);
+            Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG]");
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, abatabSession.AbatabMode, "[TRACE]");
 
             switch (abatabSession.AbatabMode.ToLower())
             {
                 case "passthrough":
-                    LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+                    LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
                     ForPassthrough(abatabSession);
                     break;
 
                 default:
-                    LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+                    LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
                     break;
             }
 
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
         }
 
         /// <summary>
@@ -45,8 +45,8 @@ namespace AbatabOptionObject
         public static void ForPassthrough(Session abatabSession)
         {
             // TODO Private?
-            Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Finalizing finalOptObj for passthrough.");
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+            Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG]");
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
             abatabSession.FinalOptObj.ErrorCode = 0;
             abatabSession.FinalOptObj.ErrorMesg = "PASSTHROUGH";
@@ -61,7 +61,7 @@ namespace AbatabOptionObject
             abatabSession.FinalOptObj.NamespaceName   = abatabSession.SentOptObj.NamespaceName;
             abatabSession.FinalOptObj.ParentNamespace = abatabSession.SentOptObj.ParentNamespace;
 
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
         }
     }
 }

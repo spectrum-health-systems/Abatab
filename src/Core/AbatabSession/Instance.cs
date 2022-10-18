@@ -57,16 +57,16 @@ namespace AbatabSession
             };
 
             abatabSession.SessionLogRoot = $@"{abatabSession.AbatabRoot}\logs\{abatabSession.SessionTimestamp}\{abatabSession.AvatarUserName}";
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
             AbatabSystem.Maintenance.VerifyDir(abatabSession.SessionLogRoot);
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
             VerifyAvatarUserName(abatabSession);
 
             ParseAbatabRequest(abatabSession);
 
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
             return abatabSession;
         }
 
@@ -76,14 +76,14 @@ namespace AbatabSession
         /// <param name="abatabSession">Information/data for this session of Abatab.</param>
         private static void VerifyAvatarUserName(Session abatabSession)
         {
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
             if (string.IsNullOrWhiteSpace(abatabSession.AvatarUserName))
             {
                 abatabSession.AvatarUserName = abatabSession.AvatarFallbackUserName;
             }
 
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
         }
 
         /// <summary>
@@ -92,7 +92,7 @@ namespace AbatabSession
         /// <param name="abatabSession">Information/data for this session of Abatab.</param>
         private static void ParseAbatabRequest(Session abatabSession)
         {
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
             string[] req = abatabSession.AbatabRequest.Split('-');
 
@@ -102,12 +102,12 @@ namespace AbatabSession
 
             if (req.Length == 4)
             {
-                LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+                LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
                 abatabSession.AbatabOption = req[3].ToLower();
             }
 
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
         }
     }
 }

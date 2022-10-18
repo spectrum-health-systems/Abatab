@@ -21,22 +21,22 @@ namespace ModTesting
         public static void ParseRequest(Session abatabSession)
         {
             Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG]");
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
             switch (abatabSession.AbatabCommand)
             {
                 case "datadump":
-                    LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+                    LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
                     ParseCommandDataDump(abatabSession);
                     break;
 
                 default:
-                    LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+                    LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
                     // Gracefully exit.
                     break;
             }
 
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
         }
 
         /// <summary>
@@ -45,24 +45,24 @@ namespace ModTesting
         /// <param name="abatabSession">Information/data for this session of Abatab.</param>
         private static void ParseCommandDataDump(Session abatabSession)
         {
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
             switch (abatabSession.AbatabAction)
             {
                 case "sessiondata":
-                    LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+                    LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
                     AbatabOptionObject.FinalObj.Finalize(abatabSession);
                     DataDump.SessionData(abatabSession);
                     break;
 
                 default:
-                    LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+                    LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
                     // Gracefully exit.
                     break;
             }
 
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
         }
     }
 }

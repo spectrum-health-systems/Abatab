@@ -1,4 +1,4 @@
-﻿// Abatab
+﻿// Abatab v0.93.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
 // b221018.082641
@@ -47,7 +47,7 @@ namespace Abatab
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string scriptParameter)
         {
-            Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG] Session started.");
+            Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG]");
 
             Dictionary<string, string> webConfig = WebConfig.Load();
 
@@ -57,7 +57,7 @@ namespace Abatab
 
             LogEvent.Session(abatabSession, "Session complete.");
 
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
             return abatabSession.FinalOptObj;
         }

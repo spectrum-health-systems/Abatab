@@ -34,11 +34,11 @@ namespace AbatabLogging
         public static void ModQuickMedOrder(Session abatabSession, string logMsg = "QuickMedOrder detail log.")
         {
             Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG]");
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
             if (abatabSession.LoggingMode == "all" || abatabSession.LoggingMode.Contains("quickmedorder"))
             {
-                LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+                LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
                 var logPath    = BuildPath.FullPath("quickmedorder", abatabSession.SessionLogRoot);
                 var logContent = BuildContent.LogComponents("quickmedorder", abatabSession, logMsg);
@@ -46,7 +46,7 @@ namespace AbatabLogging
                 WriteFile.LocalFile(logPath, logContent, Convert.ToInt32(abatabSession.LoggingDelay));
             }
 
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
         }
 
         /// <summary>
@@ -57,11 +57,11 @@ namespace AbatabLogging
         public static void Session(Session abatabSession, string logMsg = "Session detail log.")
         {
             Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG]");
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
             if (abatabSession.LoggingMode == "all" || abatabSession.LoggingMode.Contains("session"))
             {
-                LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+                LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
                 var logPath    = BuildPath.FullPath("session", abatabSession.SessionLogRoot);
                 var logContent = BuildContent.LogComponents("session", abatabSession, logMsg);
@@ -69,7 +69,7 @@ namespace AbatabLogging
                 WriteFile.LocalFile(logPath, logContent, Convert.ToInt32(abatabSession.LoggingDelay));
             }
 
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
         }
 
         /// <summary>Build a trace log.</summary>

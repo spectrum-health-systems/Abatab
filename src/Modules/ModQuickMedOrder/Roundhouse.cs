@@ -19,22 +19,22 @@ namespace ModQuickMedOrder
         public static void ParseRequest(Session abatabSession)
         {
             Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG]");
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
             switch (abatabSession.AbatabCommand.ToLower())
             {
                 case "dose":
-                    LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+                    LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
                     ParseCommandDose(abatabSession);
                     break;
 
                 default:
-                    LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+                    LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
                     // Gracefully exit.
                     break;
             }
 
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
         }
 
         /// <summary>
@@ -43,23 +43,23 @@ namespace ModQuickMedOrder
         /// <param name="abatabSession">Information/data for this session of Abatab.</param>
         private static void ParseCommandDose(Session abatabSession)
         {
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
             switch (abatabSession.AbatabAction.ToLower())
             {
                 case "verifyundermaxpercentincrease":
-                    LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+                    LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
                     ModQuickMedOrder.Dose.VerifyUnderMaxPercentIncrease(abatabSession);
                     AbatabOptionObject.FinalObj.Finalize(abatabSession);
                     break;
 
                 default:
-                    LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+                    LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
                     // Gracefully exit.
                     break;
             }
 
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
         }
     }
 }

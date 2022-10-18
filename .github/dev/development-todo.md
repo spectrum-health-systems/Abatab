@@ -17,6 +17,8 @@
 * [ ] Test parameter options
 * [ ] Put "[TRACE]" on trace logs
 * [ ] reduce "[DEBUG]" on debug logs
+* [ ] Make sure all logging methods have plenty of trace/debug logs
+* [ ] Make sure all debug/trace statements are where they shuold be
 
 # v0.92.0.0
 
@@ -35,3 +37,4 @@
 * [ ] Cached session data?
 * [ ] Move classes in Abatab\ to Core\?
 * [ ] Du integration
+* [ ] Flightpath

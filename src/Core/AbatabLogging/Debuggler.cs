@@ -65,7 +65,7 @@ namespace AbatabLogging
             {
                 const bool debugDebugger = false;
 
-                DebugTheDebugger(debugDebugger, debugLogRoot, "001");
+                DebugTheDebugger(debugDebugger, debugLogRoot, "[DEBUG]");
 
                 if (string.IsNullOrWhiteSpace(debugLogRoot))
                 {
@@ -75,29 +75,29 @@ namespace AbatabLogging
                 debugLogRoot = $@"{debugLogRoot}\{DateTime.Now:yyMMdd}"; // TODO Move this to where other dirs are created.
                 _=Directory.CreateDirectory(debugLogRoot);
 
-                DebugTheDebugger(debugDebugger, debugLogRoot, "002");
+                DebugTheDebugger(debugDebugger, debugLogRoot, "[DEBUG]");
 
                 if (string.Equals(debugMode, "on", StringComparison.OrdinalIgnoreCase))
                 {
-                    DebugTheDebugger(debugDebugger, debugLogRoot, "003");
+                    DebugTheDebugger(debugDebugger, debugLogRoot, "[DEBUG]");
 
                     /* Delay creating a debug log by 100ms, just to make sure we don't overwrite an
                      * existing log. This will have a negative affect on performance.
                      */
                     Thread.Sleep(100);
 
-                    DebugTheDebugger(debugDebugger, debugLogRoot, "004");
+                    DebugTheDebugger(debugDebugger, debugLogRoot, "[DEBUG]");
 
                     var debugContent = BuildContent.DebugComponents(exeAssembly, debugMode, debugMsg, callPath, callMember, callLine);
 
-                    DebugTheDebugger(debugDebugger, debugLogRoot, "005");
+                    DebugTheDebugger(debugDebugger, debugLogRoot, "[DEBUG]");
 
                     File.WriteAllText($@"{debugLogRoot}\{DateTime.Now:HHmmssfffffff}-{exeAssembly}-{Path.GetFileName(callPath)}-{callMember}-{callLine}.debug", debugContent);
 
-                    DebugTheDebugger(debugDebugger, debugLogRoot, "006");
+                    DebugTheDebugger(debugDebugger, debugLogRoot, "[DEBUG]");
                 }
 
-                DebugTheDebugger(debugDebugger, debugLogRoot, "007");
+                DebugTheDebugger(debugDebugger, debugLogRoot, "[DEBUG]");
             }
         }
 

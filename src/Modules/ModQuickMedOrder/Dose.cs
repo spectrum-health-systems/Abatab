@@ -20,15 +20,15 @@ namespace ModQuickMedOrder
         /// <param name="abatabSession">Information/data for this session of Abatab.</param>
         public static void VerifyUnderMaxPercentIncrease(Session abatabSession)
         {
-            Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Parsing Abatab request..");
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+            Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG]");
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
             var shouldExecute = ModCommon.Verify.ValidUser(abatabSession.AvatarUserName, abatabSession.ModQuickMedOrderValidUsers);
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "Trailing trace log for valid user check.");
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
             if (shouldExecute)
             {
-                LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+                LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
                 InitializeDoseData(abatabSession);
 
@@ -37,7 +37,7 @@ namespace ModQuickMedOrder
                 LogEvent.ModQuickMedOrder(abatabSession);
             }
 
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
         }
 
         /// <summary>
@@ -46,7 +46,7 @@ namespace ModQuickMedOrder
         /// <param name="abatabSession">Information/data for this session of Abatab.</param>
         private static void InitializeDoseData(Session abatabSession)
         {
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
             abatabSession.ModQuickMedOrderData.PrevDosePrefix                = "Recurring Dosage:";
             abatabSession.ModQuickMedOrderData.PrevDoseSuffix                = " mgs";
@@ -61,7 +61,7 @@ namespace ModQuickMedOrder
             abatabSession.ModQuickMedOrderData.LastOrderScheduleText         = "";
             abatabSession.ModQuickMedOrderData.FoundAllRequiredFieldIds      = false;
 
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
         }
     }
 }
