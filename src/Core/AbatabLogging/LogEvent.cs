@@ -40,7 +40,7 @@ namespace AbatabLogging
             {
                 LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
-                var logPath    = BuildPath.FullPath("quickmedorder",abatabSession.SessionTimeStamp, abatabSession.SessionLogRoot);
+                var logPath    = BuildPath.FullPath("session",abatabSession.SessionLogRoot, abatabSession.SessionTimeStamp);
                 var logContent = BuildContent.LogComponents("quickmedorder", abatabSession, logMsg);
                 LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, logPath);
                 LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, logContent);
@@ -64,7 +64,7 @@ namespace AbatabLogging
             {
                 LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
-                var logPath    = BuildPath.FullPath("session", abatabSession.SessionTimeStamp, abatabSession.SessionLogRoot);
+                var logPath    = BuildPath.FullPath("session",abatabSession.SessionLogRoot, abatabSession.SessionTimeStamp);
                 var logContent = BuildContent.LogComponents("session", abatabSession, logMsg);
 
                 WriteFile.LocalFile(logPath, logContent, Convert.ToInt32(abatabSession.LoggingDelay));
@@ -88,7 +88,7 @@ namespace AbatabLogging
             if (abatabSession.LoggingMode == "all" || abatabSession.LoggingMode.Contains("trace"))
             {
                 // Can't really put a trace log here!
-                var logPath    = BuildPath.FullPath("trace", abatabSession.SessionTimeStamp, abatabSession.SessionLogRoot, exeAssembly, callPath, callMember, callLine);
+                var logPath    = BuildPath.FullPath("trace", abatabSession.SessionLogRoot, abatabSession.SessionTimeStamp, exeAssembly, callPath, callMember, callLine);
                 var logContent = BuildContent.LogComponents("trace", abatabSession, logMsg, exeAssembly, callPath, callMember, callLine);
 
                 WriteFile.LocalFile(logPath, logContent, Convert.ToInt32(abatabSession.LoggingDelay));
