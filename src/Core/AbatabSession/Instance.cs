@@ -48,12 +48,16 @@ namespace AbatabSession
                 FinalOptObj                       = new OptionObject2015()
             };
 
+            DebugglerEvent.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"]);
             BuildDebugglerConfig(abatabSettings, abatabSession);
 
+            DebugglerEvent.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"]);
             BuildLoggingConfig(abatabSettings, abatabSession);
 
+            DebugglerEvent.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"]);
             BuildModQuickMedOrderConfig(abatabSettings, abatabSession);
 
+            DebugglerEvent.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"]);
             BuildModTestingConfig(abatabSettings, abatabSession);
 
             abatabSession.LoggingConfig.SessionRoot = $@"{abatabSession.Root}\logs\{abatabSession.SessionDateStamp}\{abatabSession.AvatarUserName}\{abatabSession.SessionTimeStamp}";
