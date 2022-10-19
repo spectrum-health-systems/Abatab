@@ -125,9 +125,9 @@ namespace Abatab.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("0.25")]
-        public string ModQuickMedOrderDosePercentMaxInc {
+        public string ModQuickMedOrderDosePercentMaxIncrease {
             get {
-                return ((string)(this["ModQuickMedOrderDosePercentMaxInc"]));
+                return ((string)(this["ModQuickMedOrderDosePercentMaxIncrease"]));
             }
         }
         

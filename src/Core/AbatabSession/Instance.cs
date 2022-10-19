@@ -96,7 +96,7 @@ namespace AbatabSession
 
                 Mode                           = abatabSettings["ModQuickMedOrderMode"],
                 ValidUsers                     = abatabSettings["ModQuickMedOrderValidUsers"],
-                DosePercentMaxIncrease         = abatabSettings["ModQuickMedOrderDosePercentMaxInc"],
+                DosePercentMaxIncrease         = abatabSettings["ModQuickMedOrderDosePercentMaxIncrease"],
                 PrevDosePrefix                 = "Recurring Dosage:",
                 PrevDoseSuffix                 = " mgs",
                 DosageOneFieldId               = "107",

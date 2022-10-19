@@ -39,7 +39,7 @@ namespace Abatab
                 { "AvatarFallbackUserName",            Settings.Default.AvatarFallbackUserName.ToLower() },
                 { "ModQuickMedOrderMode",              Settings.Default.ModQuickMedOrderMode.ToLower() },
                 { "ModQuickMedOrderValidUsers",        Settings.Default.ModQuickMedOrderValidUsers.ToLower() },
-                { "ModQuickMedOrderDosePercentMaxInc", Settings.Default.ModQuickMedOrderDosePercentMaxInc.ToLower() },
+                { "ModQuickMedOrderDosePercentMaxInc", Settings.Default.ModQuickMedOrderDosePercentMaxIncrease.ToLower() },
                 { "ModPrototypeMode",                  Settings.Default.ModPrototypeMode.ToLower() },
                 { "ModTestingMode",                    Settings.Default.ModTestingMode.ToLower() }
             };
