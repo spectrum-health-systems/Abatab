@@ -25,6 +25,7 @@ namespace Abatab
         public static Dictionary<string, string> Load()
         {
             Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG]");
+            // Can't really put a trace log here.
 
             return new Dictionary<string, string>
             {
