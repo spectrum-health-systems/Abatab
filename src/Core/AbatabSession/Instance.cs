@@ -76,7 +76,7 @@ namespace AbatabSession
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="abatabSettings"></param>
         /// <param name="abatabSession"></param>
@@ -89,7 +89,7 @@ namespace AbatabSession
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="abatabSettings"></param>
         /// <param name="abatabSession"></param>
@@ -117,7 +117,7 @@ namespace AbatabSession
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="abatabSettings"></param>
         /// <param name="abatabSession"></param>
@@ -131,14 +131,16 @@ namespace AbatabSession
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="abatabSettings"></param>
         /// <param name="abatabSession"></param>
         private static void BuildLoggingConfig(Dictionary<string, string> abatabSettings, Session abatabSession)
         {
 
-            DebugglerEvent.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"]);
+            var debug_ = $"{abatabSettings["LogMode"]} - {abatabSettings["LogDetail"]} - {abatabSettings["LogWriteDelay"]}";
+
+            DebugglerEvent.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"], debug_);
 
             abatabSession.LoggingConfig  = new Logging
             {
