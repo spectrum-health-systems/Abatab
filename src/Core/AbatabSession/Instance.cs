@@ -138,7 +138,7 @@ namespace AbatabSession
         private static void BuildLoggingConfig(Dictionary<string, string> abatabSettings, Session abatabSession)
         {
 
-            var debug_ = $"{abatabSettings["LogMode"]} - {abatabSettings["LogDetail"]} - {abatabSettings["LogWriteDelay"]}";
+            var debug_ = $"TEST:{abatabSettings["LogMode"]} - {abatabSettings["LogDetail"]} - {abatabSettings["LogWriteDelay"]}";
 
             DebugglerEvent.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"], debug_);
 
