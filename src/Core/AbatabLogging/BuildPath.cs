@@ -53,6 +53,7 @@ namespace AbatabLogging
                 case "trace":
                     AbatabSystem.Maintenance.VerifyDir($@"{fullPath}\trace");
                     fullPath += $@"{fullPath}\trace\{DateTime.Now:HHmmss.fffffff}-{Path.GetFileName(callPath)}-{callMember}-{callLine}.trace";
+                    AbatabSystem.Maintenance.VerifyDir($@"{fullPath}");
                     break;
 
                 default:
