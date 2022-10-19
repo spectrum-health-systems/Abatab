@@ -33,7 +33,7 @@ namespace Abatab
                 { "DebugLogRoot",                      Settings.Default.DebugLogRoot.ToLower() },
                 { "AbatabMode",                        Settings.Default.AbatabMode.ToLower() },
                 { "AbatabRoot",                        Settings.Default.AbatabRoot.ToLower() },
-                { "LoggingMode",                       Settings.Default.LogMode.ToLower() },
+                { "LoggingMode",                       Settings.Default.LoggingMode.ToLower() },
                 { "LoggingDetail",                     Settings.Default.LogDetail.ToLower() },
                 { "LoggingDelay",                      Settings.Default.LogWriteDelay.ToLower() },
                 { "AvatarFallbackUserName",            Settings.Default.AvatarFallbackUserName.ToLower() },

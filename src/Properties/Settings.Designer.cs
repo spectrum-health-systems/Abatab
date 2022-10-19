@@ -62,9 +62,9 @@ namespace Abatab.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("session")]
-        public string LogMode {
+        public string LoggingMode {
             get {
-                return ((string)(this["LogMode"]));
+                return ((string)(this["LoggingMode"]));
             }
         }
         
