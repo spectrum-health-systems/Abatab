@@ -52,8 +52,8 @@ namespace AbatabLogging
 
                 case "trace":
                     AbatabSystem.Maintenance.VerifyDir($@"{fullPath}\trace");
-                    fullPath += $@"{fullPath}\trace\{DateTime.Now:HHmmss.fffffff}-{Path.GetFileName(callPath)}-{callMember}-{callLine}.trace";
-                    AbatabSystem.Maintenance.VerifyDir(fullPath);
+                    fullPath += $@"{fullPath}\trace\{DateTime.Now:HHmmss.fffffff}-{exeAssembly}-{Path.GetFileName(callPath)}-{callMember}-{callLine}.trace";
+                    File.WriteAllText(@"C:\AvatoolWebService\Abatab_UAT\logs\test.txt", fullPath);
                     break;
 
                 default:
