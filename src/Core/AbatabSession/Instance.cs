@@ -30,6 +30,10 @@ namespace AbatabSession
             DebugglerEvent.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"], "[DEBUG]");
             // Can't really put a trace log here.
 
+            var debug_ = $"TEST:{abatabSettings["LogMode"]} - {abatabSettings["LogDetail"]} - {abatabSettings["LogWriteDelay"]}";
+            DebugglerEvent.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"], debug_);
+
+
             var abatabSession = new Session
             {
                 Mode                              = abatabSettings["AbatabMode"],
@@ -137,9 +141,9 @@ namespace AbatabSession
         /// <param name="abatabSession"></param>
         private static void BuildLoggingConfig(Dictionary<string, string> abatabSettings, Session abatabSession)
         {
+            DebugglerEvent.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"]);
 
             var debug_ = $"TEST:{abatabSettings["LogMode"]} - {abatabSettings["LogDetail"]} - {abatabSettings["LogWriteDelay"]}";
-
             DebugglerEvent.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"], debug_);
 
             abatabSession.LoggingConfig  = new Logging
