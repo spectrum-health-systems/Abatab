@@ -1,7 +1,7 @@
 ﻿// Abatab
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221018.082641
+// b221019.100213
 
 namespace ModCommon
 {
@@ -18,6 +18,8 @@ namespace ModCommon
         /// <returns></returns>
         public static bool ValidUser(string userName, string validUsers)
         {
+            // TODO Add logging functionality.
+
             return validUsers.Trim().ToLower() == "all" || validUsers.ToLower().Contains(userName.ToLower()); // TODO More efficient way?
         }
     }

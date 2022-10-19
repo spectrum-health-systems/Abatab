@@ -1,7 +1,7 @@
 ﻿// Abatab
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221018.082641
+// b221019.100213
 
 using AbatabData;
 using AbatabLogging;
@@ -26,6 +26,7 @@ namespace AbatabSession
         public static Session Build(OptionObject2015 sentOptObj, string scriptParameter, Dictionary<string, string> abatabSettings)
         {
             Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"], "[DEBUG]");
+            // Can't really put a trace log here.
 
             var abatabSession = new Session
             {
@@ -67,6 +68,7 @@ namespace AbatabSession
             ParseAbatabRequest(abatabSession);
 
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+
             return abatabSession;
         }
 
@@ -76,10 +78,12 @@ namespace AbatabSession
         /// <param name="abatabSession">Information/data for this session of Abatab.</param>
         private static void VerifyAvatarUserName(Session abatabSession)
         {
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+            Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG]");
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, abatabSession.AbatabMode, "[TRACE]");
 
             if (string.IsNullOrWhiteSpace(abatabSession.AvatarUserName))
             {
+                LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
                 abatabSession.AvatarUserName = abatabSession.AvatarFallbackUserName;
             }
 
@@ -92,7 +96,8 @@ namespace AbatabSession
         /// <param name="abatabSession">Information/data for this session of Abatab.</param>
         private static void ParseAbatabRequest(Session abatabSession)
         {
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+            Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG]");
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, abatabSession.AbatabMode, "[TRACE]");
 
             string[] req = abatabSession.AbatabRequest.Split('-');
 
@@ -103,7 +108,6 @@ namespace AbatabSession
             if (req.Length == 4)
             {
                 LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
-
                 abatabSession.AbatabOption = req[3].ToLower();
             }
 

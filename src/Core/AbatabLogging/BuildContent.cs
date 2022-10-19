@@ -1,7 +1,7 @@
 ﻿// Abatab
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221018.082641
+// b221019.100213
 
 /* ========================================================================================================
  * PLEASE READ
@@ -72,6 +72,8 @@ namespace AbatabLogging
         /// <returns>The completed content for a debug log file.</returns>
         public static string DebugComponents(string exeAssembly, string debugMode, string debugMsg, string callPath, string callMember, int callLine)
         {
+            // No log statement here (see comments at top of file)
+
             var logHead   = ComponentHead(debugMsg);
             var logDetail = ComponentDetail("debug", exeAssembly, callPath, callMember, callLine);
             var logBody   = $"DebugMode: {debugMode}";
@@ -90,6 +92,8 @@ namespace AbatabLogging
         /// <returns>The completed log header component.</returns>
         private static string ComponentHead(string logMsg)
         {
+            // No log statement here.
+
             return $"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-={Environment.NewLine}" +
                    $"{logMsg}{Environment.NewLine}" +
                    $"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-={Environment.NewLine}";
@@ -106,6 +110,8 @@ namespace AbatabLogging
         /// <returns>The completed log details component.</returns>
         private static string ComponentDetail(string eventType, string exeAssembly, string callPath, string callMember, int callLine = 0)
         {
+            // No log statement here (see comments at top of file)
+
             var detailHead = $"{Environment.NewLine}" +
                              $"==========={Environment.NewLine}" +
                              $"Log details{Environment.NewLine}" +
@@ -133,6 +139,8 @@ namespace AbatabLogging
         /// <returns>The completed log body component.</returns>
         private static string ComponentBody(string eventType, Session abatabSession)
         {
+            // No log statement here (see comments at top of file)
+
             switch (eventType)
             {
                 case "session":
@@ -155,6 +163,8 @@ namespace AbatabLogging
         /// <returns>The completed log body component for session details.</returns>
         private static string BodySessionDetail(Session abatabSession)
         {
+            // No log statement here (see comments at top of file)
+
             var sessionHead = $"{Environment.NewLine}" +
                               $"==============={Environment.NewLine}" +
                               $"Session details{Environment.NewLine}" +
@@ -205,6 +215,8 @@ namespace AbatabLogging
         /// <returns>The completed log body component for module details.</returns>
         private static string BodyModuleDetail(Session abatabSession, string modName)
         {
+            // No log statement here (see comments at top of file)
+
             var moduleHead = $"{Environment.NewLine}" +
                              $"-------------{Environment.NewLine}" +
                              $"{modName}{Environment.NewLine}" +
@@ -244,6 +256,8 @@ namespace AbatabLogging
         /// <returns>The completed log body component for QuickMedOrder details.</returns>
         private static string BodyModQuickMedOrderDetail(Session abatabSession)
         {
+            // No log statement here (see comments at top of file)
+
             var modQuickMedOrderHead = $"{Environment.NewLine}" +
                                        $"====================={Environment.NewLine}" +
                                        $"QuickMedOrder details{Environment.NewLine}" +
@@ -275,6 +289,8 @@ namespace AbatabLogging
         /// <returns>The completed log body component for OptionObject details.</returns>
         private static string BodyOptObjDetail(OptionObject2015 optObj, string optObjType)
         {
+            // No log statement here (see comments at top of file)
+
             var optObjHead = $"{Environment.NewLine}" +
                              $"------------{Environment.NewLine}" +
                              $"{optObjType}{Environment.NewLine}" +
@@ -303,6 +319,8 @@ namespace AbatabLogging
         /// <returns>The completed log footer.</returns>
         private static string ComponentFoot(string footMsg = "End of log.")
         {
+            // No log statement here (see comments at top of file)
+
             return $"{Environment.NewLine}" +
                    $"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-={Environment.NewLine}" +
                    $"{footMsg}{Environment.NewLine}" +

@@ -1,7 +1,7 @@
 ﻿// Abatab
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221018.082641
+// b221019.100213
 
 /* ========================================================================================================
  * PLEASE READ
@@ -81,11 +81,12 @@ namespace AbatabLogging
         /// <param name="callLine">The file line of where the log is coming from.</param>
         public static void Trace(Session abatabSession, string exeAssembly, string logMsg = "Trace log start...", [CallerFilePath] string callPath = "", [CallerMemberName] string callMember = "", [CallerLineNumber] int callLine = 0)
         {
-            // Can't really put a trace log here!
             Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG]");
+            // Can't really put a trace log here!
 
             if (abatabSession.LoggingMode == "all" || abatabSession.LoggingMode.Contains("trace"))
             {
+                // Can't really put a trace log here!
                 var logPath    = BuildPath.FullPath("trace", abatabSession.SessionLogRoot, exeAssembly, callPath, callMember, callLine);
                 var logContent = BuildContent.LogComponents("trace", abatabSession, logMsg, exeAssembly, callPath, callMember, callLine);
 

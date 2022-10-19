@@ -1,7 +1,7 @@
 ﻿// Abatab
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221018.082641
+// b221019.100213
 
 using AbatabData;
 using AbatabLogging;
@@ -21,6 +21,7 @@ namespace ModTesting
 
         public static void SessionData(Session abatabSession)
         {
+            Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG]");
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
             LogEvent.Session(abatabSession, "Testing data dump functionality.");
         }

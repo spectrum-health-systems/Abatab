@@ -1,7 +1,7 @@
 ﻿// Abatab
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221018.082641
+// b221019.100213
 
 /* ========================================================================================================
  * PLEASE READ
@@ -34,6 +34,8 @@ namespace AbatabLogging
         /// <returns>A completed log file path.</returns>
         public static string FullPath(string eventType, string sessionLogRoot, string exeAssembly = "", string callPath = "", string callMember = "", int callLine = 0)
         {
+            // No log statement here (see comments at top of file)
+
             var fullPath = sessionLogRoot;
 
             if (eventType != "session")

@@ -1,7 +1,7 @@
 ﻿// Abatab
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221018.082641
+// b221019.100213
 
 /* ========================================================================================================
  * PLEASE READ
@@ -30,6 +30,8 @@ namespace AbatabLogging
         /// <param name="loggingDelay">The delay between writing log files.</param>
         public static void LocalFile(string logPath, string logContent, int loggingDelay)
         {
+            // No log statement here (see comments at top of file)
+
             Thread.Sleep(loggingDelay);
 
             File.WriteAllText(logPath, logContent);
