@@ -137,6 +137,9 @@ namespace AbatabSession
         /// <param name="abatabSession"></param>
         private static void BuildLoggingConfig(Dictionary<string, string> abatabSettings, Session abatabSession)
         {
+
+            DebugglerEvent.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"]);
+
             abatabSession.LoggingConfig  = new Logging
             {
                 Mode = abatabSettings["LogMode"],
@@ -148,6 +151,7 @@ namespace AbatabSession
                 EventWarningRoot = $@"{abatabSession.Root}\logs\warning",
             };
 
+            DebugglerEvent.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"]);
             abatabSession.LoggingConfig.EventTraceRoot = $@"{abatabSession.LoggingConfig.SessionRoot}\trace";
         }
 
