@@ -43,11 +43,11 @@ namespace AbatabLogging
             switch (eventType)
             {
                 case "quickmedorder":
-                    fullPath += "quickmedorder.log";
+                    fullPath += @"\quickmedorder.log";
                     break;
 
                 case "session":
-                    fullPath += "session.log";
+                    fullPath += @"\session.log";
                     break;
 
                 case "trace":
