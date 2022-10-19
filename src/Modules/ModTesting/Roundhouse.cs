@@ -1,6 +1,7 @@
-﻿// Copyright (c) A Pretty Cool Program
+﻿// Abatab
+// Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221012.150358
+// b221019.100213
 
 using AbatabData;
 using AbatabLogging;
@@ -8,53 +9,61 @@ using System.Reflection;
 
 namespace ModTesting
 {
-    public class Roundhouse
+    /// <summary>
+    /// Roundhouse logic for the Testing module.
+    /// </summary>
+    public static class Roundhouse
     {
-        /// <summary>Parse the Abatab request command.</summary>
-        /// <param name="abatabSession">Abatab session information.</param>
+        /// <summary>
+        /// Parse the Abatab request command.
+        /// </summary>
+        /// <param name="abatabSession">Information/data for this session of Abatab.</param>
         public static void ParseRequest(Session abatabSession)
         {
-            Debugger.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG] Parsing Testing Module command.");
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+            Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG]");
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
             switch (abatabSession.AbatabCommand)
             {
                 case "datadump":
-                    LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+                    LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
                     ParseCommandDataDump(abatabSession);
                     break;
 
                 default:
-                    LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+                    LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
                     // Gracefully exit.
                     break;
             }
 
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
         }
 
-        /// <summary>Do a data dump.</summary>
-        /// <param name="abatabSession">Abatab session information.</param>
+        /// <summary>
+        /// Do a data dump.
+        /// </summary>
+        /// <param name="abatabSession">Information/data for this session of Abatab.</param>
         private static void ParseCommandDataDump(Session abatabSession)
         {
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+            Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG]");
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
             switch (abatabSession.AbatabAction)
             {
                 case "sessiondata":
-                    LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+                    LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
                     AbatabOptionObject.FinalObj.Finalize(abatabSession);
                     DataDump.SessionData(abatabSession);
                     break;
 
                 default:
-                    LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+                    LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
                     // Gracefully exit.
                     break;
             }
 
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
         }
     }
 }

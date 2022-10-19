@@ -1,6 +1,7 @@
-﻿// Copyright (c) A Pretty Cool Program
+﻿// Abatab
+// Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221012.150358
+// b221019.100213
 
 using AbatabData;
 using AbatabLogging;
@@ -8,13 +9,20 @@ using System.Reflection;
 
 namespace ModTesting
 {
-    public class DataDump
+    /// <summary>
+    /// Logic for the Testing module.
+    /// </summary>
+    public static class DataDump
     {
-        /// <summary>Do a data dump.</summary>
-        /// <param name="abatabSession">Abatab session settings.</param>
+        /// <summary>
+        /// Create a data dump for this session.
+        /// </summary>
+        /// <param name="abatabSession">Information/data for this session of Abatab.</param>
+
         public static void SessionData(Session abatabSession)
         {
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name);
+            Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG]");
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
             LogEvent.Session(abatabSession, "Testing data dump functionality.");
         }
     }
