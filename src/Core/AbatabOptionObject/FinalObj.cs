@@ -21,7 +21,7 @@ namespace AbatabOptionObject
         public static void Finalize(Session abatabSession)
         {
             Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG]");
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, abatabSession.AbatabMode, "[TRACE]");
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
             switch (abatabSession.AbatabMode.ToLower())
             {

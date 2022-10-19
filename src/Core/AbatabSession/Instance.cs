@@ -79,7 +79,7 @@ namespace AbatabSession
         private static void VerifyAvatarUserName(Session abatabSession)
         {
             Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG]");
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, abatabSession.AbatabMode, "[TRACE]");
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
             if (string.IsNullOrWhiteSpace(abatabSession.AvatarUserName))
             {
@@ -97,7 +97,7 @@ namespace AbatabSession
         private static void ParseAbatabRequest(Session abatabSession)
         {
             Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG]");
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, abatabSession.AbatabMode, "[TRACE]");
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
             string[] req = abatabSession.AbatabRequest.Split('-');
 

@@ -34,7 +34,9 @@ namespace ModQuickMedOrder
 
                 AbatabOptionObject.WorkObj.ClearErrorData(abatabSession);
 
-                LogEvent.ModQuickMedOrder(abatabSession);
+                ComparePercentage(abatabSession);
+
+                //LogEvent.ModQuickMedOrder(abatabSession);
             }
 
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
@@ -62,7 +64,14 @@ namespace ModQuickMedOrder
             abatabSession.ModQuickMedOrderData.LastOrderScheduleText         = "";
             abatabSession.ModQuickMedOrderData.FoundAllRequiredFieldIds      = false;
 
+            LogEvent.ModQuickMedOrder(abatabSession);
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
         }
+
+        private static void ComparePercentage(Session abatabSession)
+        {
+
+        }
+
     }
 }

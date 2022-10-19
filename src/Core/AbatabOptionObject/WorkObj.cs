@@ -38,7 +38,7 @@ namespace AbatabOptionObject
         public static void ClearErrorData(Session abatabSession, int errCode = 0, string errMsg = "")
         {
             Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG]");
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, abatabSession.AbatabMode, "[TRACE]");
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
             abatabSession.WorkOptObj.ErrorCode = errCode;
             abatabSession.WorkOptObj.ErrorMesg = errMsg;

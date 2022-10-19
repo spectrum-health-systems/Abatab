@@ -42,7 +42,8 @@ namespace AbatabLogging
 
                 var logPath    = BuildPath.FullPath("quickmedorder", abatabSession.SessionLogRoot);
                 var logContent = BuildContent.LogComponents("quickmedorder", abatabSession, logMsg);
-
+                LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, logPath);
+                LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, logContent);
                 WriteFile.LocalFile(logPath, logContent, Convert.ToInt32(abatabSession.LoggingDelay));
             }
 
