@@ -36,27 +36,38 @@ namespace AbatabLogging
         {
             // No log statement here (see comments at top of file)
 
+            var timeStamp = $"{DateTime.Now:HHmmss.fffffff}";
+
             var fullPath = sessionLogRoot;
 
             AbatabSystem.Maintenance.VerifyDir(fullPath);
 
             switch (eventType)
             {
+                case "debug":
+                    AbatabSystem.Maintenance.VerifyDir($@"{fullPath}\debug");
+                    fullPath += $@"\debug\{timeStamp}-{exeAssembly}-{Path.GetFileName(callPath)}-{callMember}-{callLine}.debug";
+                    File.WriteAllText(@"C:\AvatoolWebService\Abatab_UAT\logs\test.txt", fullPath);
+                    break;
+
                 case "quickmedorder":
-                    fullPath += @"\quickmedorder.log";
+                    fullPath += $@"\{timeStamp}.quickmedorder";
                     break;
 
                 case "session":
-                    fullPath += @"\session.log";
+                    fullPath += $@"\{timeStamp}.session";
                     break;
 
                 case "trace":
                     AbatabSystem.Maintenance.VerifyDir($@"{fullPath}\trace");
-                    fullPath += $@"\trace\{DateTime.Now:HHmmss.fffffff}-{exeAssembly}-{Path.GetFileName(callPath)}-{callMember}-{callLine}.trace";
+                    fullPath += $@"\trace\{timeStamp}-{exeAssembly}-{Path.GetFileName(callPath)}-{callMember}-{callLine}.trace";
                     File.WriteAllText(@"C:\AvatoolWebService\Abatab_UAT\logs\test.txt", fullPath);
                     break;
 
                 default:
+                    AbatabSystem.Maintenance.VerifyDir($@"{fullPath}\lost");
+                    fullPath += $@"\lost\{timeStamp}.lost";
+                    File.WriteAllText($@"C:\AvatoolWebService\Abatab_UAT\logs\{timeStamp}.lost", fullPath);
                     break;
             }
 

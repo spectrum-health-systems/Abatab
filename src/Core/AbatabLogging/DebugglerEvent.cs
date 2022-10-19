@@ -48,7 +48,7 @@ namespace AbatabLogging
     /// <summary>
     /// Logic for debugging functionality.
     /// </summary>
-    public static class Debuggler
+    public static class DebugglerEvent
     {
         /// <summary>Builds a debug log file.</summary>
         /// <param name="debugMode">The Abatab debug mode.</param>

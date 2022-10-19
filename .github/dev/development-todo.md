@@ -8,14 +8,14 @@
 * [ ] Logging
   * [ ] Standard logging (session, modules, etc.)
   * [ ] Detailed log type
+  * [ ] logs/lost
+  * [ ] logs/warning
 * [ ] Cleanup
   * [ ] Project references
   * [ ] settings order
   * [ ] WebConfig.Load() order to match rest of code
   * [ ] XML comments
   * [ ] public/private/internal
-  * [ ] Put "[TRACE]" on trace logs
-  * [ ] Reduce "[DEBUG]" on debug logs
 * [ ] Logging types: all-none-trace-session
 * [ ] //if (debugMode == "on" || debugMode == "undefined") // TODO Remove.
 * [ ] Test logging types via Web.config
@@ -23,6 +23,7 @@
 * [ ] Version someplace
 * [ ] Test parameter options
 * [ ] Verify all session data is being logged
+* [ ] Change "logging" to "log"
 
 ## v0.93
 

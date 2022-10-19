@@ -4,6 +4,7 @@
 // b221019.101024
 
 using AbatabData;
+using AbatabData.Core;
 using AbatabLogging;
 using System.Reflection;
 
@@ -18,7 +19,7 @@ namespace ModQuickMedOrder
         /// <param name="abatabSession">Abatab session information.</param>
         public static void ParseRequest(Session abatabSession)
         {
-            Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG]");
+            DebugglerEvent.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
             switch (abatabSession.AbatabCommand.ToLower())
@@ -43,7 +44,7 @@ namespace ModQuickMedOrder
         /// <param name="abatabSession">Information/data for this session of Abatab.</param>
         private static void ParseCommandDose(Session abatabSession)
         {
-            Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG]");
+            DebugglerEvent.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
             switch (abatabSession.AbatabAction.ToLower())

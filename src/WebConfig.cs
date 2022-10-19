@@ -24,7 +24,7 @@ namespace Abatab
         /// <returns>A dictionary containing the settings from Web.config.</returns>
         public static Dictionary<string, string> Load()
         {
-            Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG]");
+            DebugglerEvent.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG]");
             // Can't really put a trace log here.
 
             return new Dictionary<string, string>
@@ -33,9 +33,9 @@ namespace Abatab
                 { "DebugLogRoot",                      Settings.Default.DebugLogRoot.ToLower() },
                 { "AbatabMode",                        Settings.Default.AbatabMode.ToLower() },
                 { "AbatabRoot",                        Settings.Default.AbatabRoot.ToLower() },
-                { "LoggingMode",                       Settings.Default.LoggingMode.ToLower() },
-                { "LoggingDetail",                     Settings.Default.LoggingDetail.ToLower() },
-                { "LoggingDelay",                      Settings.Default.LoggingDelay.ToLower() },
+                { "LoggingMode",                       Settings.Default.LogMode.ToLower() },
+                { "LoggingDetail",                     Settings.Default.LogDetail.ToLower() },
+                { "LoggingDelay",                      Settings.Default.LogWriteDelay.ToLower() },
                 { "AvatarFallbackUserName",            Settings.Default.AvatarFallbackUserName.ToLower() },
                 { "ModQuickMedOrderMode",              Settings.Default.ModQuickMedOrderMode.ToLower() },
                 { "ModQuickMedOrderValidUsers",        Settings.Default.ModQuickMedOrderValidUsers.ToLower() },

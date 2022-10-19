@@ -4,6 +4,8 @@
 // b221019.101024
 
 using AbatabData;
+using AbatabData.Core;
+using AbatabData.Module;
 using AbatabLogging;
 using NTST.ScriptLinkService.Objects;
 using System;
@@ -25,28 +27,16 @@ namespace AbatabSession
         /// <returns>Session configuration settings.</returns>
         public static Session Build(OptionObject2015 sentOptObj, string scriptParameter, Dictionary<string, string> abatabSettings)
         {
-            Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"], "[DEBUG]");
+            DebugglerEvent.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"], "[DEBUG]");
             // Can't really put a trace log here.
 
             var abatabSession = new Session
             {
-                AbatabMode                        = abatabSettings["AbatabMode"],
-                AbatabRoot                        = abatabSettings["AbatabRoot"],
-                DebugMode                         = abatabSettings["DebugMode"],
-                DebugLogRoot                      = abatabSettings["DebugLogRoot"],
-                LoggingMode                       = abatabSettings["LoggingMode"],
-                LoggingDetail                     = abatabSettings["LoggingDetail"],
-                LoggingDelay                      = abatabSettings["LoggingDelay"],
-                AvatarFallbackUserName            = abatabSettings["AvatarFallbackUserName"],
-                ModQuickMedOrderMode              = abatabSettings["ModQuickMedOrderMode"],
-                ModQuickMedOrderValidUsers        = abatabSettings["ModQuickMedOrderValidUsers"],
-                ModQuickMedOrderDosePercentMaxInc = abatabSettings["ModQuickMedOrderDosePercentMaxInc"],
-                ModQuickMedOrderData              = new QuickMedOrder(),
-                ModPrototypeMode                  = abatabSettings["ModPrototypeMode"],
-                ModTestingMode                    = abatabSettings["ModTestingMode"],
+                Mode                              = abatabSettings["AbatabMode"],
+                Root                              = abatabSettings["AbatabRoot"],
+                AvatarFallbackUserName = abatabSettings["AvatarFallbackUserName"],
                 SessionDateStamp                  = $"{DateTime.Now:yyMMdd}",
                 SessionTimeStamp                  = $"{DateTime.Now:HHmmss}",
-                SessionLogRoot                    = "",
                 AbatabRequest                     = scriptParameter.ToLower(),
                 AbatabModule                      = "undefined",
                 AbatabCommand                     = "undefined",
@@ -58,10 +48,18 @@ namespace AbatabSession
                 FinalOptObj                       = new OptionObject2015()
             };
 
-            abatabSession.SessionLogRoot = $@"{abatabSession.AbatabRoot}\logs\{abatabSession.SessionDateStamp}\{abatabSession.AvatarUserName}\{abatabSession.SessionTimeStamp}";
+            BuildDebugglerConfig(abatabSettings, abatabSession);
+
+            BuildLoggingConfig(abatabSettings, abatabSession);
+
+            BuildModQuickMedOrderConfig(abatabSettings, abatabSession);
+
+            BuildModTestingConfig(abatabSettings, abatabSession);
+
+            abatabSession.LoggingConfig.SessionRoot = $@"{abatabSession.Root}\logs\{abatabSession.SessionDateStamp}\{abatabSession.AvatarUserName}\{abatabSession.SessionTimeStamp}";
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
-            AbatabSystem.Maintenance.VerifyDir(abatabSession.SessionLogRoot);
+            AbatabSystem.Maintenance.VerifyDir(abatabSession.LoggingConfig.SessionRoot);
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
             VerifyAvatarUserName(abatabSession);
@@ -74,12 +72,88 @@ namespace AbatabSession
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="abatabSettings"></param>
+        /// <param name="abatabSession"></param>
+        private static void BuildModTestingConfig(Dictionary<string, string> abatabSettings, Session abatabSession)
+        {
+            abatabSession.ModTestingConfig = new Testing
+            {
+                Mode = abatabSettings["ModTestingMode"],
+            };
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="abatabSettings"></param>
+        /// <param name="abatabSession"></param>
+        private static void BuildModQuickMedOrderConfig(Dictionary<string, string> abatabSettings, Session abatabSession)
+        {
+            abatabSession.ModQuickMedOrderConfig = new QuickMedOrder
+            {
+
+                Mode                           = abatabSettings["ModQuickMedOrderMode"],
+                ValidUsers                     = abatabSettings["ModQuickMedOrderValidUsers"],
+                DosePercentMaxIncrease         = abatabSettings["ModQuickMedOrderDosePercentMaxInc"],
+                PrevDosePrefix                 = "Recurring Dosage:",
+                PrevDoseSuffix                 = " mgs",
+                DosageOneFieldId               = "107",
+                FoundDosageOneFieldId          = false,
+                CurrentDose                    = "0.0",
+                OrderTypeFieldId               = "121",
+                FoundOrderTypeFieldId          = false,
+                OrderType                      = "0",
+                LastOrderScheduleFieldId       = "142",
+                FoundLastOrderScheduleFieldId  = false,
+                LastOrderScheduleText          = "",
+                FoundAllRequiredFieldIds       = false
+            };
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="abatabSettings"></param>
+        /// <param name="abatabSession"></param>
+        private static void BuildDebugglerConfig(Dictionary<string, string> abatabSettings, Session abatabSession)
+        {
+            abatabSession.DebugglerConfig = new Debuggler
+            {
+                Mode           = abatabSettings["DebugMode"],
+                DebugEventRoot = abatabSettings["DebugLogRoot"],
+            };
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="abatabSettings"></param>
+        /// <param name="abatabSession"></param>
+        private static void BuildLoggingConfig(Dictionary<string, string> abatabSettings, Session abatabSession)
+        {
+            abatabSession.LoggingConfig  = new Logging
+            {
+                Mode = abatabSettings["LogMode"],
+                Detail = abatabSettings["LogDetail"],
+                WriteDelay = abatabSettings["LogWriteDelay"],
+                SessionRoot = $@"{abatabSession.Root}\logs\{abatabSession.SessionDateStamp}\{abatabSession.AvatarUserName}\{abatabSession.SessionTimeStamp}",
+                EventErrorRoot = $@"{abatabSession.Root}\logs\error",
+                EventLostRoot = $@"{abatabSession.Root}\logs\lost",
+                EventWarningRoot = $@"{abatabSession.Root}\logs\warning",
+            };
+
+            abatabSession.LoggingConfig.EventTraceRoot = $@"{abatabSession.LoggingConfig.SessionRoot}\trace";
+        }
+
+        /// <summary>
         /// Verifies the session AvatarUserName is valid.
         /// </summary>
         /// <param name="abatabSession">Information/data for this session of Abatab.</param>
         private static void VerifyAvatarUserName(Session abatabSession)
         {
-            Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG]");
+            DebugglerEvent.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
             if (string.IsNullOrWhiteSpace(abatabSession.AvatarUserName))
@@ -97,7 +171,7 @@ namespace AbatabSession
         /// <param name="abatabSession">Information/data for this session of Abatab.</param>
         private static void ParseAbatabRequest(Session abatabSession)
         {
-            Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG]");
+            DebugglerEvent.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
             string[] req = abatabSession.AbatabRequest.Split('-');
@@ -116,3 +190,26 @@ namespace AbatabSession
         }
     }
 }
+
+
+//private static void InitializeDoseData(Session abatabSession)
+//{
+//    DebugglerEvent.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
+//    LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+
+//    abatabSession.ModQuickMedOrderData.PrevDosePrefix                = "Recurring Dosage:";
+//    abatabSession.ModQuickMedOrderData.PrevDoseSuffix                = " mgs";
+//    abatabSession.ModQuickMedOrderData.DosageOneFieldId              = "107";
+//    abatabSession.ModQuickMedOrderData.FoundDosageOneFieldId         = false;
+//    abatabSession.ModQuickMedOrderData.CurrentDose                   = "0.0";
+//    abatabSession.ModQuickMedOrderData.OrderTypeFieldId              = "121";
+//    abatabSession.ModQuickMedOrderData.FoundOrderTypeFieldId         = false;
+//    abatabSession.ModQuickMedOrderData.OrderType                     = "0";
+//    abatabSession.ModQuickMedOrderData.LastOrderScheduleFieldId      = "142";
+//    abatabSession.ModQuickMedOrderData.FoundLastOrderScheduleFieldId = false;
+//    abatabSession.ModQuickMedOrderData.LastOrderScheduleText         = "";
+//    abatabSession.ModQuickMedOrderData.FoundAllRequiredFieldIds      = false;
+
+//    LogEvent.ModQuickMedOrder(abatabSession);
+//    LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+//}

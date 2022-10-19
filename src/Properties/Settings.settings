@@ -14,13 +14,13 @@
     <Setting Name="DebugLogRoot" Type="System.String" Scope="Application">
       <Value Profile="(Default)">C:\AvatoolWebService\Abatab_UAT\logs\debug</Value>
     </Setting>
-    <Setting Name="LoggingMode" Type="System.String" Scope="Application">
+    <Setting Name="LogMode" Type="System.String" Scope="Application">
       <Value Profile="(Default)">session</Value>
     </Setting>
-    <Setting Name="LoggingDetail" Type="System.String" Scope="Application">
+    <Setting Name="LogDetail" Type="System.String" Scope="Application">
       <Value Profile="(Default)">normal</Value>
     </Setting>
-    <Setting Name="LoggingDelay" Type="System.String" Scope="Application">
+    <Setting Name="LogWriteDelay" Type="System.String" Scope="Application">
       <Value Profile="(Default)">10</Value>
     </Setting>
     <Setting Name="AvatarFallbackUserName" Type="System.String" Scope="Application">
