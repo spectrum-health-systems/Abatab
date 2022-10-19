@@ -44,7 +44,8 @@ namespace AbatabSession
                 ModQuickMedOrderData              = new QuickMedOrder(),
                 ModPrototypeMode                  = abatabSettings["ModPrototypeMode"],
                 ModTestingMode                    = abatabSettings["ModTestingMode"],
-                SessionTimestamp                  = $"{DateTime.Now:yyMMdd}",
+                SessionDateStamp                  = $"{DateTime.Now:yyMMdd}",
+                SessionTimeStamp                  = $"{DateTime.Now:HHmmss}",
                 SessionLogRoot                    = "",
                 AbatabRequest                     = scriptParameter.ToLower(),
                 AbatabModule                      = "undefined",
@@ -57,7 +58,7 @@ namespace AbatabSession
                 FinalOptObj                       = new OptionObject2015()
             };
 
-            abatabSession.SessionLogRoot = $@"{abatabSession.AbatabRoot}\logs\{abatabSession.SessionTimestamp}\{abatabSession.AvatarUserName}";
+            abatabSession.SessionLogRoot = $@"{abatabSession.AbatabRoot}\logs\{abatabSession.SessionDateStamp}\{abatabSession.AvatarUserName}";
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
             AbatabSystem.Maintenance.VerifyDir(abatabSession.SessionLogRoot);

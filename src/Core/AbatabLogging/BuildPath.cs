@@ -32,31 +32,54 @@ namespace AbatabLogging
         /// <param name="callMember">The method name of where the log is coming from.</param>
         /// <param name="callLine">The file line of where the log is coming from.</param>
         /// <returns>A completed log file path.</returns>
-        public static string FullPath(string eventType, string sessionLogRoot, string exeAssembly = "", string callPath = "", string callMember = "", int callLine = 0)
+        public static string FullPath(string eventType, string sessionLogRoot, string sessionTimeStamp, string exeAssembly = "", string callPath = "", string callMember = "", int callLine = 0)
         {
             // No log statement here (see comments at top of file)
 
             var fullPath = sessionLogRoot;
 
-            if (eventType != "session")
+            switch (eventType)
             {
-                fullPath += $@"\{eventType}";
-                AbatabSystem.Maintenance.VerifyDir(fullPath);
+                case "quickmedorder":
+                    fullPath += $@"\{sessionTimeStamp}\quickmedorder";
+                    break;
+
+                case "session":
+                    fullPath += $@"\{sessionTimeStamp}\session";
+                    break;
+
+                case "trace":
+                    fullPath += $@"\{sessionTimeStamp}\trace\{DateTime.Now:HHmmss.fffffff}-{Path.GetFileName(callPath)}-{callMember}-{callLine}.trace";
+                    break;
+
+                default:
+                    break;
             }
 
-            fullPath += $@"\{DateTime.Now:HHmmss.fffffff}";
+            AbatabSystem.Maintenance.VerifyDir(fullPath);
 
-            if (!string.IsNullOrWhiteSpace(exeAssembly))
-            {
-                fullPath += $"-{exeAssembly}";
-            }
+            //if (eventType != "session")
+            //{
+            //    fullPath += $@"\{eventType}";
+            //    AbatabSystem.Maintenance.VerifyDir(fullPath);
+            //}
 
-            if (!string.IsNullOrWhiteSpace(callPath))
-            {
-                fullPath += $"-{Path.GetFileName(callPath)}-{callMember}-{callLine}";
-            }
 
-            return $"{fullPath}.{eventType}";
+            //fullPath += $@"\{DateTime.Now:HHmmss.fffffff}";
+
+            //if (!string.IsNullOrWhiteSpace(exeAssembly))
+            //{
+            //    fullPath += $"-{exeAssembly}";
+            //}
+
+            //if (!string.IsNullOrWhiteSpace(callPath))
+            //{
+            //    fullPath += $"-{Path.GetFileName(callPath)}-{callMember}-{callLine}";
+            //}
+
+            return fullPath;
+
+            //return $"{fullPath}.{eventType}";
         }
     }
 }

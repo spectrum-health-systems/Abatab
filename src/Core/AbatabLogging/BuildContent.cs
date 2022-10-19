@@ -178,7 +178,8 @@ namespace AbatabLogging
                                 $"Logging Mode:        {abatabSession.LoggingMode}{Environment.NewLine}" +
                                 $"Logging Detail:      {abatabSession.LoggingDetail}{Environment.NewLine}" +
                                 $"Logging Delay:       {abatabSession.LoggingDelay}{Environment.NewLine}" +
-                                $"Session Timestamp:   {abatabSession.SessionTimestamp}{Environment.NewLine}" +
+                                $"Session DateStamp:   {abatabSession.SessionDateStamp}{Environment.NewLine}" +
+                                $"Session TimeStamp:   {abatabSession.SessionTimeStamp}{Environment.NewLine}" +
                                 $"Session Log root:    {abatabSession.SessionLogRoot}{Environment.NewLine}" +
                                 $"Avatar username:     {abatabSession.AvatarUserName}{Environment.NewLine}" +
                                 $"Fallback username:   {abatabSession.AvatarFallbackUserName}{Environment.NewLine}" +
