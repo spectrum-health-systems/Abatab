@@ -5,7 +5,9 @@
 * [ ] Dose code
 * [ ] Test:
   * [ ] Valid user setting
-* [ ] Detailed log type
+* [ ] Logging
+  * [ ] Standard logging (session, modules, etc.)
+  * [ ] Detailed log type
 * [ ] Cleanup
   * [ ] Project references
   * [ ] settings order

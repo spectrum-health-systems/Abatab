@@ -43,16 +43,16 @@ namespace AbatabLogging
             switch (eventType)
             {
                 case "quickmedorder":
-                    fullPath += $@"{fullPath}\quickmedorder.log";
+                    fullPath += "quickmedorder.log";
                     break;
 
                 case "session":
-                    fullPath += $@"{fullPath}\session.log";
+                    fullPath += "session.log";
                     break;
 
                 case "trace":
                     AbatabSystem.Maintenance.VerifyDir($@"{fullPath}\trace");
-                    fullPath += $@"{fullPath}\trace\{DateTime.Now:HHmmss.fffffff}-{exeAssembly}-{Path.GetFileName(callPath)}-{callMember}-{callLine}.trace";
+                    fullPath += $@"\trace\{DateTime.Now:HHmmss.fffffff}-{exeAssembly}-{Path.GetFileName(callPath)}-{callMember}-{callLine}.trace";
                     File.WriteAllText(@"C:\AvatoolWebService\Abatab_UAT\logs\test.txt", fullPath);
                     break;
 
