@@ -58,7 +58,7 @@ namespace AbatabSession
                 FinalOptObj                       = new OptionObject2015()
             };
 
-            abatabSession.SessionLogRoot = $@"{abatabSession.AbatabRoot}\logs\{abatabSession.SessionDateStamp}\{abatabSession.AvatarUserName}";
+            abatabSession.SessionLogRoot = $@"{abatabSession.AbatabRoot}\logs\{abatabSession.SessionDateStamp}\{abatabSession.AvatarUserName}\{abatabSession.SessionTimeStamp}";
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
             AbatabSystem.Maintenance.VerifyDir(abatabSession.SessionLogRoot);

@@ -38,25 +38,28 @@ namespace AbatabLogging
 
             var fullPath = sessionLogRoot;
 
+            AbatabSystem.Maintenance.VerifyDir(fullPath);
+
             switch (eventType)
             {
                 case "quickmedorder":
-                    fullPath += $@"\{sessionTimeStamp}\quickmedorder";
+                    fullPath += $@"{fullPath}\quickmedorder.log";
                     break;
 
                 case "session":
-                    fullPath += $@"\{sessionTimeStamp}\session";
+                    fullPath += $@"{fullPath}\session.log";
                     break;
 
                 case "trace":
-                    fullPath += $@"\{sessionTimeStamp}\trace\{DateTime.Now:HHmmss.fffffff}-{Path.GetFileName(callPath)}-{callMember}-{callLine}.trace";
+                    AbatabSystem.Maintenance.VerifyDir($@"{fullPath}\trace");
+                    fullPath += $@"{fullPath}\trace\{DateTime.Now:HHmmss.fffffff}-{Path.GetFileName(callPath)}-{callMember}-{callLine}.trace";
                     break;
 
                 default:
                     break;
             }
 
-            AbatabSystem.Maintenance.VerifyDir(fullPath);
+            //AbatabSystem.Maintenance.VerifyDir(fullPath);
 
             //if (eventType != "session")
             //{
