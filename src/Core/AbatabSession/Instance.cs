@@ -156,7 +156,7 @@ namespace AbatabSession
             {
                 Mode = $"{abatabSettings["LogMode"]}",
                 Detail = $"{abatabSettings["LogDetail"]}",
-                WriteDelay = $"{abatabSettings["LogWriteDelayDetail"]}",
+                WriteDelay = $"{abatabSettings["LogWriteDelay"]}",
                 SessionRoot = $@"{abatabSession.Root}\logs\{abatabSession.SessionDateStamp}\{abatabSession.AvatarUserName}\{abatabSession.SessionTimeStamp}",
                 EventErrorRoot = $@"{abatabSession.Root}\logs\error",
                 EventLostRoot = $@"{abatabSession.Root}\logs\lost",
