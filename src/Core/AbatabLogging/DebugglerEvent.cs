@@ -84,7 +84,7 @@ namespace AbatabLogging
                     /* Delay creating a debug log by 100ms, just to make sure we don't overwrite an
                      * existing log. This will have a negative affect on performance.
                      */
-                    Thread.Sleep(100);
+                    Thread.Sleep(10);
 
                     DebugTheDebugger(debugDebugger, debugLogRoot, "[DEBUG]");
 
@@ -112,7 +112,7 @@ namespace AbatabLogging
                 /* Delay creating a debug log by 1000ms, just to make sure we don't overwrite an
                  * existing log. This will have a significant negative affect on performance.
                  */
-                Thread.Sleep(100);
+                Thread.Sleep(10);
 
                 File.WriteAllText($@"{debugLogRoot}\{DateTime.Now:HHmmssfffffff}-Debugger[{debugMsg}].debug", debugMsg);
             }
