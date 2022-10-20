@@ -36,7 +36,7 @@ namespace AbatabLogging
         {
             // No log statement here (see comments at top of file)
 
-            var currentTimeStamp = $"{DateTime.Now:HHmmss.fffffff}";
+            var currentTimeStamp = $"{DateTime.Now:HHmmss_fffffff}";
 
             var fullPath = sessionLogRoot;
 

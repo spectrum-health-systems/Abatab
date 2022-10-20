@@ -114,7 +114,7 @@ namespace AbatabLogging
                  */
                 Thread.Sleep(10);
 
-                File.WriteAllText($@"{debugLogRoot}\{DateTime.Now:HHmmssfffffff}-Debugger[{debugMsg}].debug", debugMsg);
+                File.WriteAllText($@"{debugLogRoot}\{DateTime.Now:HHmmss_fffffff}-Debugger[{debugMsg}].debug", debugMsg);
             }
         }
     }

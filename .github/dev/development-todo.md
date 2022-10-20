@@ -26,6 +26,7 @@
 * [ ] Change "logging" to "log"
 * [ ] Debug write delay in config
 * [ ] Verify all dirs in a loop at the beginning
+* [ ] Refactor debugging log stuff
 
 ## v0.93
 
