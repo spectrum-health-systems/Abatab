@@ -1,7 +1,7 @@
 ﻿// Abatab
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221020.074722
+// b221020.093428
 
 using AbatabData;
 using AbatabData.Core;
@@ -31,7 +31,7 @@ namespace AbatabSession
             // Can't really put a trace log here.
 
             //var debug_ = $"TEST:{abatabSettings["LogMode"]} - {abatabSettings["LogDetail"]} - {abatabSettings["LogWriteDelay"]}";
-            var debug_ = $"TEST-- {abatabSettings["LoggingMode"]}";
+            var debug_ = $"TEST-- {abatabSettings["LogMode"]}";
 
             DebugglerEvent.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"], debug_);
 
@@ -147,16 +147,16 @@ namespace AbatabSession
 
             DebugglerEvent.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"]);
 
-            //var debug_ = $"TEST:{abatabSettings["LoggingMode"]} - {abatabSettings["LoggingDetail"]} - {abatabSettings["LoggingWriteDelay"]}";
-            var debug_ = $"TEST:{abatabSettings["LoggingMode"]} - {abatabSettings["DebugLogRoot"]} - {abatabSettings["ModTestingMode"]}";
+            //var debug_ = $"TEST:{abatabSettings["LogMode"]} - {abatabSettings["LogDetail"]} - {abatabSettings["LogWriteDelayDetail"]}";
+            var debug_ = $"TEST:{abatabSettings["LogMode"]} - {abatabSettings["DebugLogRoot"]} - {abatabSettings["ModTestingMode"]}";
 
             DebugglerEvent.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"], debug_);
 
             abatabSession.LoggingConfig  = new Logging
             {
-                Mode = abatabSettings["LoggingMode"],
-                Detail = abatabSettings["LoggingDetail"],
-                WriteDelay = abatabSettings["LoggingWriteDelay"],
+                Mode = $"{abatabSettings["LogMode"]}",
+                Detail = $"{abatabSettings["LogDetail"]}",
+                WriteDelay = $"{abatabSettings["LogWriteDelayDetail"]}",
                 SessionRoot = $@"{abatabSession.Root}\logs\{abatabSession.SessionDateStamp}\{abatabSession.AvatarUserName}\{abatabSession.SessionTimeStamp}",
                 EventErrorRoot = $@"{abatabSession.Root}\logs\error",
                 EventLostRoot = $@"{abatabSession.Root}\logs\lost",

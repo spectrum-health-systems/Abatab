@@ -62,27 +62,27 @@ namespace Abatab.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("session")]
-        public string LoggingMode {
+        public string LogMode {
             get {
-                return ((string)(this["LoggingMode"]));
+                return ((string)(this["LogMode"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("normal")]
-        public string LoggingDetail {
+        public string LogDetail {
             get {
-                return ((string)(this["LoggingDetail"]));
+                return ((string)(this["LogDetail"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("10")]
-        public string LoggingWriteDelay {
+        public string LogWriteDelayDetail {
             get {
-                return ((string)(this["LoggingWriteDelay"]));
+                return ((string)(this["LogWriteDelayDetail"]));
             }
         }
         
