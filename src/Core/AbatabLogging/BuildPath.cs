@@ -36,7 +36,7 @@ namespace AbatabLogging
         {
             // No log statement here (see comments at top of file)
 
-            var timeStamp = $"{DateTime.Now:HHmmss.fffffff}";
+            var currentTimeStamp = $"{DateTime.Now:HHmmss.fffffff}";
 
             var fullPath = sessionLogRoot;
 
@@ -46,28 +46,26 @@ namespace AbatabLogging
             {
                 case "debug":
                     AbatabSystem.Maintenance.VerifyDir($@"{fullPath}\debug");
-                    fullPath += $@"\debug\{timeStamp}-{exeAssembly}-{Path.GetFileName(callPath)}-{callMember}-{callLine}.debug";
-                    File.WriteAllText(@"C:\AvatoolWebService\Abatab_UAT\logs\test.txt", fullPath);
+                    fullPath += $@"\debug\{currentTimeStamp}-{exeAssembly}-{Path.GetFileName(callPath)}-{callMember}-{callLine}.debug";
                     break;
 
                 case "quickmedorder":
-                    fullPath += $@"\{timeStamp}.quickmedorder";
+                    fullPath += $@"\{sessionTimeStamp}.quickmedorder";
                     break;
 
                 case "session":
-                    fullPath += $@"\{timeStamp}.session";
+                    fullPath += $@"\{sessionTimeStamp}.session";
                     break;
 
                 case "trace":
                     AbatabSystem.Maintenance.VerifyDir($@"{fullPath}\trace");
-                    fullPath += $@"\trace\{timeStamp}-{exeAssembly}-{Path.GetFileName(callPath)}-{callMember}-{callLine}.trace";
-                    File.WriteAllText(@"C:\AvatoolWebService\Abatab_UAT\logs\test.txt", fullPath);
+                    fullPath += $@"\trace\{currentTimeStamp}-{exeAssembly}-{Path.GetFileName(callPath)}-{callMember}-{callLine}.trace";
                     break;
 
                 default:
                     AbatabSystem.Maintenance.VerifyDir($@"{fullPath}\lost");
-                    fullPath += $@"\lost\{timeStamp}.lost";
-                    File.WriteAllText($@"C:\AvatoolWebService\Abatab_UAT\logs\{timeStamp}.lost", fullPath);
+                    fullPath += $@"\lost\{currentTimeStamp}.lost";
+                    File.WriteAllText($@"C:\AvatoolWebService\Abatab_UAT\logs\{currentTimeStamp}.lost", fullPath);
                     break;
             }
 

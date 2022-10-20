@@ -24,6 +24,8 @@
 * [ ] Test parameter options
 * [ ] Verify all session data is being logged
 * [ ] Change "logging" to "log"
+* [ ] Debug write delay in config
+* [ ] Verify all dirs in a loop at the beginning
 
 ## v0.93
 
