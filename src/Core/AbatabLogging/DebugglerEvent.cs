@@ -1,7 +1,7 @@
 ﻿// Abatab
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221020.101121
+// b221020.103236
 
 /* ========================================================================================================
  * PLEASE READ #1
@@ -92,7 +92,7 @@ namespace AbatabLogging
 
                     DebugTheDebugger(debugDebugger, debugLogRoot, "[DEBUG]");
 
-                    File.WriteAllText($@"{debugLogRoot}\{DateTime.Now:HHmmssfffffff}-{exeAssembly}-{Path.GetFileName(callPath)}-{callMember}-{callLine}.debug", debugContent);
+                    File.WriteAllText($@"{debugLogRoot}\{DateTime.Now:HHmmss_fffffff}-{exeAssembly}-{Path.GetFileName(callPath)}-{callMember}-{callLine}.debug", debugContent);
 
                     DebugTheDebugger(debugDebugger, debugLogRoot, "[DEBUG]");
                 }
