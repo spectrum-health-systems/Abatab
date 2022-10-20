@@ -223,28 +223,36 @@ namespace AbatabLogging
                              $"{modName}{Environment.NewLine}" +
                              $"-------------{Environment.NewLine}";
 
+            DebugglerEvent.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot);
+
             string moduleDetail;
 
             switch (modName.ToLower())
             {
                 case "quickmedorder":
+                    DebugglerEvent.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot);
                     moduleDetail = $"Mode:                 {abatabSession.ModQuickMedOrderConfig.Mode}{Environment.NewLine}" +
                                    $"Valid users:          {abatabSession.ModQuickMedOrderConfig.ValidUsers}{Environment.NewLine}" +
                                    $"Max percent increase: {abatabSession.ModQuickMedOrderConfig.DosePercentMaxIncrease}";
                     break;
 
                 case "prototype":
+                    DebugglerEvent.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot);
                     moduleDetail = $"Mode: {abatabSession.ModPrototypeConfig.Mode}";
                     break;
 
                 case "testing":
+                    DebugglerEvent.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot);
                     moduleDetail = $"Mode: {abatabSession.ModTestingConfig.Mode}";
                     break;
 
                 default:
+                    DebugglerEvent.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot);
                     moduleDetail = $"Undefined.";
                     break;
             }
+
+            DebugglerEvent.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot);
 
             return $"{moduleHead}" +
                    $"{moduleDetail}";
