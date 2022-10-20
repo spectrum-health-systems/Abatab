@@ -56,16 +56,18 @@ namespace Abatab
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="webConfig"></param>
         private static void WebConfigDebug(Dictionary<string, string> webConfig)
         {
-            var webConfigContents = "";
+            DebugglerEvent.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG]");
+
+            var webConfigContents = $"webConfig contents{Environment.NewLine}";
 
             foreach (var item in webConfig)
             {
-                webConfigContents += $"{item.Value}{Environment.NewLine}";
+                webConfigContents += $"{item.Key} = {item.Value}{Environment.NewLine}";
             }
 
             File.WriteAllText($@"{webConfig["DebugLogRoot"]}\webConfig.debug", webConfigContents);
