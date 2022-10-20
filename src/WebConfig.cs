@@ -37,7 +37,7 @@ namespace Abatab
                 { "AbatabRoot",                        Settings.Default.AbatabRoot.ToLower() },
                 { "LogMode",                       Settings.Default.LogMode.ToLower() },
                 { "LogDetail",                     Settings.Default.LogDetail.ToLower() },
-                { "LoggingDelay",                      Settings.Default.LogWriteDelayDetail.ToLower() },
+                { "LoggWriteDelay",                      Settings.Default.LogWriteDelayDetail.ToLower() },
                 { "AvatarFallbackUserName",            Settings.Default.AvatarFallbackUserName.ToLower() },
                 { "ModQuickMedOrderMode",              Settings.Default.ModQuickMedOrderMode.ToLower() },
                 { "ModQuickMedOrderValidUsers",        Settings.Default.ModQuickMedOrderValidUsers.ToLower() },
@@ -63,8 +63,9 @@ namespace Abatab
         {
             DebugglerEvent.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG]");
 
-            var webConfigContents = $"webConfig contents" +
-                                    $"------------------" +
+            var webConfigContents = $"------------------{Environment.NewLine}" +
+                                    $"webConfig contents{Environment.NewLine}" +
+                                    $"------------------{Environment.NewLine}" +
                                     $"{Environment.NewLine}";
 
             foreach (var item in webConfig)
