@@ -49,7 +49,9 @@ namespace Abatab
         {
             DebugglerEvent.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG]");
 
-            Dictionary<string, string> webConfig = WebConfig.Load();
+            Dictionary<string, string> webConfig = WebConfig.Load(true);
+
+
 
             Session abatabSession = Instance.Build(sentOptionObject, scriptParameter, webConfig);
 
