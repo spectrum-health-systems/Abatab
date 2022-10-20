@@ -1,7 +1,7 @@
 ﻿// Abatab
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221019.101024
+// b221020.074722
 
 using AbatabData;
 using AbatabData.Core;
@@ -34,7 +34,6 @@ namespace AbatabSession
             var debug_ = $"TEST-- {abatabSettings["LoggingMode"]}";
 
             DebugglerEvent.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"], debug_);
-
 
             var abatabSession = new Session
             {
@@ -143,16 +142,19 @@ namespace AbatabSession
         /// <param name="abatabSession"></param>
         private static void BuildLoggingConfig(Dictionary<string, string> abatabSettings, Session abatabSession)
         {
+            /* For some reason, if the log settings are called "Log*" (e.g., "LogMode"), Abatab crashes. For now I am leaving the log settings as "Logging*".
+             */
+
             DebugglerEvent.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"]);
 
-            var debug_ = $"TEST:{abatabSettings["LogMode"]} - {abatabSettings["LogDetail"]} - {abatabSettings["LogWriteDelay"]}";
+            var debug_ = $"TEST:{abatabSettings["LoggingMode"]} - {abatabSettings["LoggingDetail"]} - {abatabSettings["LoggingWriteDelay"]}";
             DebugglerEvent.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"], debug_);
 
             abatabSession.LoggingConfig  = new Logging
             {
-                Mode = abatabSettings["LogMode"],
-                Detail = abatabSettings["LogDetail"],
-                WriteDelay = abatabSettings["LogWriteDelay"],
+                Mode = abatabSettings["LoggingMode"],
+                Detail = abatabSettings["LoggingDetail"],
+                WriteDelay = abatabSettings["LoggingWriteDelay"],
                 SessionRoot = $@"{abatabSession.Root}\logs\{abatabSession.SessionDateStamp}\{abatabSession.AvatarUserName}\{abatabSession.SessionTimeStamp}",
                 EventErrorRoot = $@"{abatabSession.Root}\logs\error",
                 EventLostRoot = $@"{abatabSession.Root}\logs\lost",

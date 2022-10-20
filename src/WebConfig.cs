@@ -1,7 +1,7 @@
 ﻿// Abatab
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221014.081633
+// b221020.074722
 
 using Abatab.Properties;
 using AbatabLogging;
@@ -34,8 +34,8 @@ namespace Abatab
                 { "AbatabMode",                        Settings.Default.AbatabMode.ToLower() },
                 { "AbatabRoot",                        Settings.Default.AbatabRoot.ToLower() },
                 { "LoggingMode",                       Settings.Default.LoggingMode.ToLower() },
-                { "LoggingDetail",                     Settings.Default.LogDetail.ToLower() },
-                { "LoggingDelay",                      Settings.Default.LogWriteDelay.ToLower() },
+                { "LoggingDetail",                     Settings.Default.LoggingDetail.ToLower() },
+                { "LoggingDelay",                      Settings.Default.LoggingWriteDelay.ToLower() },
                 { "AvatarFallbackUserName",            Settings.Default.AvatarFallbackUserName.ToLower() },
                 { "ModQuickMedOrderMode",              Settings.Default.ModQuickMedOrderMode.ToLower() },
                 { "ModQuickMedOrderValidUsers",        Settings.Default.ModQuickMedOrderValidUsers.ToLower() },

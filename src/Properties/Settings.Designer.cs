@@ -71,18 +71,18 @@ namespace Abatab.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("normal")]
-        public string LogDetail {
+        public string LoggingDetail {
             get {
-                return ((string)(this["LogDetail"]));
+                return ((string)(this["LoggingDetail"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("10")]
-        public string LogWriteDelay {
+        public string LoggingWriteDelay {
             get {
-                return ((string)(this["LogWriteDelay"]));
+                return ((string)(this["LoggingWriteDelay"]));
             }
         }
         
