@@ -65,6 +65,9 @@ namespace AbatabSession
             DebugglerEvent.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"]);
             BuildModTestingConfig(abatabSettings, abatabSession);
 
+            DebugglerEvent.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"]);
+            BuildModPrototypeConfig(abatabSettings, abatabSession);
+
             abatabSession.LoggingConfig.SessionRoot = $@"{abatabSession.Root}\logs\{abatabSession.SessionDateStamp}\{abatabSession.AvatarUserName}\{abatabSession.SessionTimeStamp}";
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
@@ -92,7 +95,18 @@ namespace AbatabSession
                 Mode = abatabSettings["ModTestingMode"],
             };
         }
-
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="abatabSettings"></param>
+        /// <param name="abatabSession"></param>
+        private static void BuildModPrototypeConfig(Dictionary<string, string> abatabSettings, Session abatabSession)
+        {
+            abatabSession.ModPrototypeConfig = new Prototype
+            {
+                Mode = abatabSettings["ModPrototypeMode"],
+            };
+        }
         /// <summary>
         ///
         /// </summary>
