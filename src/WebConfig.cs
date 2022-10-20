@@ -5,6 +5,7 @@
 
 using Abatab.Properties;
 using AbatabLogging;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
@@ -64,10 +65,10 @@ namespace Abatab
 
             foreach (var item in webConfig)
             {
-                webConfigContents += $"{item.Value}";
+                webConfigContents += $"{item.Value}{Environment.NewLine}";
             }
 
-            File.WriteAllText($@"{webConfig["DebugLogRoot"]}\webConfig", webConfigContents);
+            File.WriteAllText($@"{webConfig["DebugLogRoot"]}\webConfig.debug", webConfigContents);
         }
     }
 }
