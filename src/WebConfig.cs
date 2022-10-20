@@ -63,7 +63,9 @@ namespace Abatab
         {
             DebugglerEvent.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG]");
 
-            var webConfigContents = $"webConfig contents{Environment.NewLine}";
+            var webConfigContents = $"webConfig contents" +
+                                    $"------------------" +
+                                    $"{Environment.NewLine}";
 
             foreach (var item in webConfig)
             {
