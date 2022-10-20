@@ -1,7 +1,7 @@
 ﻿// Abatab
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221020.093428
+// b221020.101121
 
 /* ========================================================================================================
  * PLEASE READ #1
@@ -112,7 +112,7 @@ namespace AbatabLogging
                 /* Delay creating a debug log by 1000ms, just to make sure we don't overwrite an
                  * existing log. This will have a significant negative affect on performance.
                  */
-                Thread.Sleep(1000);
+                Thread.Sleep(100);
 
                 File.WriteAllText($@"{debugLogRoot}\{DateTime.Now:HHmmssfffffff}-Debugger[{debugMsg}].debug", debugMsg);
             }
