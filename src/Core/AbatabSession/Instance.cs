@@ -148,7 +148,7 @@ namespace AbatabSession
             DebugglerEvent.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"]);
 
             //var debug_ = $"TEST:{abatabSettings["LoggingMode"]} - {abatabSettings["LoggingDetail"]} - {abatabSettings["LoggingWriteDelay"]}";
-            var debug_ = $"TEST:{abatabSettings["DebugMode"]} - {abatabSettings["DebugLogRoot"]} - {abatabSettings["ModTestingMode"]}";
+            var debug_ = $"TEST:{abatabSettings["LoggingMode"]} - {abatabSettings["DebugLogRoot"]} - {abatabSettings["ModTestingMode"]}";
 
             DebugglerEvent.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"], debug_);
 
