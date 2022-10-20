@@ -6,7 +6,7 @@
 namespace AbatabData.Core
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public class Debuggler
     {

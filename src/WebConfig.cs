@@ -23,7 +23,7 @@ namespace Abatab
         /// If a setting is added/removed/modified in Web.config, it needs to be reflected here.
         /// </remarks>
         /// <returns>A dictionary containing the settings from Web.config.</returns>
-        public static Dictionary<string, string> Load(bool debug = false)
+        public static Dictionary<string, string> Load()
         {
             DebugglerEvent.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG]");
             // Can't really put a trace log here.
@@ -45,7 +45,7 @@ namespace Abatab
                 { "ModTestingMode",                    Settings.Default.ModTestingMode.ToLower() }
             };
 
-            if (debug)
+            if (webConfig["DebugMode"] == "on")
             {
                 WebConfigDebug(webConfig);
             }
@@ -67,7 +67,7 @@ namespace Abatab
                 webConfigContents += $"{item.Value}";
             }
 
-            File.WriteAllText(@"C:\AvatoolWebService\Abatab_UAT", webConfigContents);
+            File.WriteAllText($@"{webConfig["DebugLogRoot"]}\webConfig", webConfigContents);
         }
     }
 }
