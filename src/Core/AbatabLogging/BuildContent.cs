@@ -237,7 +237,7 @@ namespace AbatabLogging
                     break;
 
                 case "prototype":
-                    DebugglerEvent.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot);
+                    DebugglerEvent.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, $"Mode: {abatabSession.ModPrototypeConfig.Mode}");
                     moduleDetail = $"Mode: {abatabSession.ModPrototypeConfig.Mode}";
                     break;
 
