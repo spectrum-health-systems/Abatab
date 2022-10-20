@@ -139,7 +139,7 @@ namespace AbatabLogging
         /// <returns>The completed log body component.</returns>
         private static string ComponentBody(string eventType, Session abatabSession)
         {
-            // No log statement here (see comments at top of file)
+            DebugglerEvent.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
 
             switch (eventType)
             {
@@ -163,7 +163,7 @@ namespace AbatabLogging
         /// <returns>The completed log body component for session details.</returns>
         private static string BodySessionDetail(Session abatabSession)
         {
-            // No log statement here (see comments at top of file)
+            DebugglerEvent.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
 
             var sessionHead = $"{Environment.NewLine}" +
                               $"==============={Environment.NewLine}" +
@@ -216,7 +216,7 @@ namespace AbatabLogging
         /// <returns>The completed log body component for module details.</returns>
         private static string BodyModuleDetail(Session abatabSession, string modName)
         {
-            // No log statement here (see comments at top of file)
+            DebugglerEvent.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
 
             var moduleHead = $"{Environment.NewLine}" +
                              $"-------------{Environment.NewLine}" +
@@ -257,7 +257,7 @@ namespace AbatabLogging
         /// <returns>The completed log body component for QuickMedOrder details.</returns>
         private static string BodyModQuickMedOrderDetail(Session abatabSession)
         {
-            // No log statement here (see comments at top of file)
+            DebugglerEvent.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
 
             var modQuickMedOrderHead = $"{Environment.NewLine}" +
                                        $"====================={Environment.NewLine}" +
