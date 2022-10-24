@@ -57,7 +57,7 @@ namespace AbatabLogging
         {
             /* Change this to "true" to write additional log files. This will significantly affect performance.
              */
-            const bool debugDebugger = false;
+            const bool debugDebugger = true;
 
             Debuggler.DebugTheDebugger(debugDebugger, debugLogRoot, "[DEBUGGLER]");
 
