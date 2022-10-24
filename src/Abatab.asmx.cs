@@ -47,7 +47,7 @@ namespace Abatab
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string scriptParameter)
         {
-            LogEvent.PrimevalDebug(Settings.Default.DebugMode, Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugLogRoot, "[DEBUG]");
+            LogEvent.PrimevalDebug(Settings.Default.DebugMode, Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugLogRoot);
 
             Dictionary<string, string> webConfig = WebConfig.Load();
 

@@ -40,7 +40,7 @@ namespace AbatabLogging
         {
             if (string.Equals(debugMode, "on", StringComparison.OrdinalIgnoreCase))
             {
-                var debugContent = BuildContent.DebugComponents(exeAssembly, debugMode, "[DEBUG]", callPath, callMember, callLine);
+                var debugContent = BuildContent.DebugComponents(exeAssembly, debugMode, "[PRIMEVAL DEBUG]", callPath, callMember, callLine);
 
                 /* Delay creating a debug log by 100ms, just to make sure we don't overwrite an
                  * existing log. This will have a negative affect on performance.
