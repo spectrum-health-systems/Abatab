@@ -45,7 +45,7 @@ namespace AbatabLogging
                 case "debug":
                 case "primevaldebug":
                     var debugLogDir = BuildDebugLogDir(logRoot, dateStamp);
-                    return $@"{logRoot}\{debugLogDir}\{timeStamp}-{exeAssembly}-{Path.GetFileName(callPath)}-{callMember}-{callLine}.{eventType}";
+                    return $@"{debugLogDir}\{timeStamp}-{exeAssembly}-{Path.GetFileName(callPath)}-{callMember}-{callLine}.{eventType}";
 
                 case "quickmedorder":
                 case "session":

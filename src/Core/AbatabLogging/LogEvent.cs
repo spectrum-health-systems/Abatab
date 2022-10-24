@@ -48,7 +48,6 @@ namespace AbatabLogging
                 //Thread.Sleep(10);
 
                 var debugLogPath = BuildPath.FullPath("primevaldebug", @"C:\AvatoolWebService\Abatab_UAT\logs\", $"{DateTime.Now:yyMMdd}", exeAssembly, callPath, callMember, callLine);
-
                 WriteLogFile.LocalFile(debugLogPath, debugContent, 10);
             }
         }
