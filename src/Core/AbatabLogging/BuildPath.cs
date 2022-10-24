@@ -36,17 +36,18 @@ namespace AbatabLogging
         {
             // No log statement here (see comments at top of file)
 
-            switch (eventType)
+            switch (eventType.ToLower())
             {
-                case "primevaldebug":
+                //case "primevaldebug":
                 case "debug":
-                case "debuggler":
+                    //case "debuggler":
+                    //case "webconfigdebug":
                     var debugLogDir = BuildDebugLogDir(logRoot);
                     return $@"{debugLogDir}\{DateTime.Now:HHmmss_fffffff}-{exeAssembly}-{Path.GetFileName(callPath)}-{callMember}-{callLine}.{eventType}";
 
-                case "quickmedorder":
-                case "session":
-                    return $@"{logRoot}\{DateTime.Now:yyMMdd}.{eventType}";
+                //case "quickmedorder":
+                //case "session":
+                //    return $@"{logRoot}\{DateTime.Now:yyMMdd}.{eventType}";
 
                 case "trace":
                     var traceLogDir = BuildTraceLogDir(logRoot);
@@ -55,6 +56,41 @@ namespace AbatabLogging
                 default:
                     var lostLogDir = BuildLostLogDir(logRoot);
                     return $@"{lostLogDir}\{DateTime.Now:HHmmss_fffffff}-{exeAssembly}-{Path.GetFileName(callPath)}-{callMember}-{callLine}.lost";
+            }
+        }
+
+        /// <summary>Builds a log file path.</summary>
+        /// <param name="eventType">The type of log to create.</param>
+        /// <param name="logRoot">The session root directory.</param>
+        /// <param name="exeAssembly">The name of executing assembly.</param>
+        /// <param name="callPath">The filename of where the log is coming from.</param>
+        /// <param name="callMember">The method name of where the log is coming from.</param>
+        /// <param name="callLine">The file line of where the log is coming from.</param>
+        /// <returns>A completed log file path.</returns>
+        public static string FullPath(string eventType, string logRoot)
+        {
+            // No log statement here (see comments at top of file)
+
+            switch (eventType.ToLower())
+            {
+                case "primevaldebug":
+                //case "debug":
+                case "debuggler":
+                case "webconfigdebug":
+                    var debugLogDir = BuildDebugLogDir(logRoot);
+                    return $@"{debugLogDir}\{DateTime.Now:HHmmss_fffffff}.{eventType}";
+
+                case "quickmedorder":
+                case "session":
+                    return $@"{logRoot}\{DateTime.Now:yyMMdd}.{eventType}";
+
+                //case "trace":
+                //    var traceLogDir = BuildTraceLogDir(logRoot);
+                //    return $@"{traceLogDir}\{DateTime.Now:HHmmss_fffffff}-{exeAssembly}-{Path.GetFileName(callPath)}-{callMember}-{callLine}.trace";
+
+                default:
+                    var lostLogDir = BuildLostLogDir(logRoot);
+                    return $@"{lostLogDir}\{DateTime.Now:HHmmss_fffffff}.lost";
             }
         }
 

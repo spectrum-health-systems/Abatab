@@ -26,7 +26,7 @@ namespace Abatab
         /// <returns>A dictionary containing the settings from Web.config.</returns>
         public static Dictionary<string, string> Load()
         {
-            LogEvent.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG]");
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG]");
             // Can't really put a trace log here.
 
             var webConfig =  new Dictionary<string, string>
@@ -63,7 +63,7 @@ namespace Abatab
         {
             // TODO This should be moved to Abatab.Logging.csproj.
 
-            LogEvent.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG]");
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG]");
 
             var webConfigContents = $"------------------{Environment.NewLine}" +
                                     $"webConfig contents{Environment.NewLine}" +
