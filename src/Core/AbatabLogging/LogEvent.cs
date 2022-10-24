@@ -165,7 +165,7 @@ namespace AbatabLogging
                 logContents += $"{item.Key} = {item.Value}{Environment.NewLine}";
             }
 
-            var logPath = BuildPath.FullPath("WebConfigDebug", webConfig["DebugLogRoot"]);
+            var logPath = BuildPath.FullPath("webconfigdebug", webConfig["DebugLogRoot"]);
             WriteLogFile.LocalFile(logPath, logContents, Convert.ToInt32(webConfig["LogWriteDelay"]));
 
             //File.WriteAllText($@"{webConfig["DebugLogRoot"]}\webConfig.debug", webConfigContents);
