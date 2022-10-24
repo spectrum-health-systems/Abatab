@@ -72,7 +72,7 @@ namespace AbatabLogging
             {
                 case "primevaldebug":
                 case "debuggler":
-                    logDir = BuildDebugLogDir(logRoot);
+                    logDir = BuildPrimevalDebugLogDir(logRoot);
                     return $@"{logDir}\{DateTime.Now:HHmmss_fffffff}.{eventType}";
 
                 case "webconfigdebug":
@@ -115,6 +115,20 @@ namespace AbatabLogging
             AbatabSystem.Maintenance.VerifyDir(lostLogDir);
 
             return lostLogDir;
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="logRoot"></param>
+        /// <param name="dateStamp"></param>
+        /// <returns></returns>
+        private static string BuildPrimevalDebugLogDir(string logRoot)
+        {
+            var debugLogDir = $@"{logRoot}\debug\{DateTime.Now:yyMMdd}";
+            AbatabSystem.Maintenance.VerifyDir(debugLogDir);
+
+            return debugLogDir;
         }
 
         /// <summary>
