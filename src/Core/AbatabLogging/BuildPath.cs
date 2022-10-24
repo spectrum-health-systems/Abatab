@@ -38,8 +38,9 @@ namespace AbatabLogging
 
             switch (eventType)
             {
-                case "debug":
                 case "primevaldebug":
+                case "debug":
+                case "debuggler":
                     var debugLogDir = BuildDebugLogDir(logRoot);
                     return $@"{debugLogDir}\{DateTime.Now:HHmmss_fffffff}-{exeAssembly}-{Path.GetFileName(callPath)}-{callMember}-{callLine}.{eventType}";
 

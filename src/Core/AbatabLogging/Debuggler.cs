@@ -38,7 +38,6 @@
  * 1000ms delay when they are written, and will cause significant performance issues when Abatab executes.
  ========================================================================================================*/
 
-using System;
 using System.IO;
 using System.Threading;
 
@@ -64,7 +63,10 @@ namespace AbatabLogging
                  * existing log. This will have a significant negative affect on performance.
                  */
                 Thread.Sleep(10);
-                File.WriteAllText($@"{debugLogRoot}\{DateTime.Now:yyMMdd}\{DateTime.Now:HHmmss_fffffff}-{debugMsg}.debuggler", debugMsg);
+
+                var debugLogPath = BuildPath.FullPath("debuggler", debugLogRoot);
+
+                File.WriteAllText(debugLogPath, debugMsg);
             }
         }
     }
