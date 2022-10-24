@@ -26,73 +26,81 @@ namespace AbatabLogging
     {
         /// <summary>Builds a log file path.</summary>
         /// <param name="eventType">The type of log to create.</param>
-        /// <param name="sessionLogRoot">The session root directory.</param>
+        /// <param name="logRoot">The session root directory.</param>
         /// <param name="exeAssembly">The name of executing assembly.</param>
         /// <param name="callPath">The filename of where the log is coming from.</param>
         /// <param name="callMember">The method name of where the log is coming from.</param>
         /// <param name="callLine">The file line of where the log is coming from.</param>
         /// <returns>A completed log file path.</returns>
-        public static string FullPath(string eventType, string sessionLogRoot, string sessionTimeStamp, string exeAssembly = "", string callPath = "", string callMember = "", int callLine = 0)
+        public static string FullPath(string eventType, string logRoot, string dateStamp, string exeAssembly = "", string callPath = "", string callMember = "", int callLine = 0)
         {
             // No log statement here (see comments at top of file)
 
-            var currentTimeStamp = $"{DateTime.Now:HHmmss_fffffff}";
+            var timeStamp = $"{DateTime.Now:HHmmss_fffffff}";
 
-            var fullPath = sessionLogRoot;
-
-            AbatabSystem.Maintenance.VerifyDir(fullPath);
+            //AbatabSystem.Maintenance.VerifyDir(fullPath);
 
             switch (eventType)
             {
                 case "debug":
-                    AbatabSystem.Maintenance.VerifyDir($@"{fullPath}\debug");
-                    fullPath += $@"\debug\{currentTimeStamp}-{exeAssembly}-{Path.GetFileName(callPath)}-{callMember}-{callLine}.debug";
-                    break;
+                case "primevaldebug":
+                    var debugLogDir = BuildDebugLogDir(logRoot, dateStamp);
+                    return $@"{logRoot}\{debugLogDir}\{timeStamp}-{exeAssembly}-{Path.GetFileName(callPath)}-{callMember}-{callLine}.{eventType}";
 
                 case "quickmedorder":
-                    fullPath += $@"\{sessionTimeStamp}.quickmedorder";
-                    break;
-
                 case "session":
-                    fullPath += $@"\{sessionTimeStamp}.session";
-                    break;
+                    return $@"{logRoot}\{dateStamp}.{eventType}";
 
                 case "trace":
-                    AbatabSystem.Maintenance.VerifyDir($@"{fullPath}\trace");
-                    fullPath += $@"\trace\{currentTimeStamp}-{exeAssembly}-{Path.GetFileName(callPath)}-{callMember}-{callLine}.trace";
-                    break;
+                    var traceLogDir = BuildTraceLogDir(logRoot);
+                    return $@"{traceLogDir}\{timeStamp}-{exeAssembly}-{Path.GetFileName(callPath)}-{callMember}-{callLine}.trace";
 
                 default:
-                    AbatabSystem.Maintenance.VerifyDir($@"{fullPath}\lost");
-                    fullPath += $@"\lost\{currentTimeStamp}.lost";
-                    File.WriteAllText($@"C:\AvatoolWebService\Abatab_UAT\logs\{currentTimeStamp}.lost", fullPath);
-                    break;
+                    var lostLogDir = BuildLostLogDir(logRoot, dateStamp);
+                    return $@"{lostLogDir}\{timeStamp}-{exeAssembly}-{Path.GetFileName(callPath)}-{callMember}-{callLine}.lost";
             }
+        }
 
-            //AbatabSystem.Maintenance.VerifyDir(fullPath);
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="logRoot"></param>
+        /// <param name="dateStamp"></param>
+        /// <returns></returns>
+        private static string BuildDebugLogDir(string logRoot, string dateStamp)
+        {
+            var debugLogDir = $@"{logRoot}\debug\{dateStamp}";
+            AbatabSystem.Maintenance.VerifyDir(debugLogDir);
 
-            //if (eventType != "session")
-            //{
-            //    fullPath += $@"\{eventType}";
-            //    AbatabSystem.Maintenance.VerifyDir(fullPath);
-            //}
+            return debugLogDir;
+        }
 
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="logRoot"></param>
+        /// <param name="dateStamp"></param>
+        /// <returns></returns>
+        private static string BuildLostLogDir(string logRoot, string dateStamp)
+        {
+            var lostLogDir = $@"{logRoot}\debug\{dateStamp}";
+            AbatabSystem.Maintenance.VerifyDir(lostLogDir);
 
-            //fullPath += $@"\{DateTime.Now:HHmmss.fffffff}";
+            return lostLogDir;
+        }
 
-            //if (!string.IsNullOrWhiteSpace(exeAssembly))
-            //{
-            //    fullPath += $"-{exeAssembly}";
-            //}
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="logRoot"></param>
+        /// <param name="dateStamp"></param>
+        /// <returns></returns>
+        private static string BuildTraceLogDir(string traceLogRoot)
+        {
+            var traceLogDir = $@"{traceLogRoot}\trace";
+            AbatabSystem.Maintenance.VerifyDir(traceLogDir);
 
-            //if (!string.IsNullOrWhiteSpace(callPath))
-            //{
-            //    fullPath += $"-{Path.GetFileName(callPath)}-{callMember}-{callLine}";
-            //}
-
-            return fullPath;
-
-            //return $"{fullPath}.{eventType}";
+            return traceLogDir;
         }
     }
 }

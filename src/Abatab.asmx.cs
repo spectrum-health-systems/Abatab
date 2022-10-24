@@ -42,12 +42,12 @@ namespace Abatab
         /// This method is required by Avatar.
         /// </remarks>
         /// <param name="sentOptionObject">The original OptionObject sent from Avatar.</param>
-        /// <param name="scriptParameter">The script parameter request from Avatar.</param>
+        /// <param name="scriptParameter">The original Script Parameter request from Avatar.</param>
         /// <returns>A finalized OptionObject.</returns>
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string scriptParameter)
         {
-            DebugglerEvent.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG]");
+            LogEvent.PrimevalDebug(Settings.Default.DebugMode, Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugLogRoot, "[DEBUG]");
 
             Dictionary<string, string> webConfig = WebConfig.Load();
 

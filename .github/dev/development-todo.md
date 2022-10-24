@@ -8,7 +8,7 @@
 * [ ] Logging
   * [ ] Standard logging (session, modules, etc.)
   * [ ] Detailed log type
-  * [ ] logs/lost
+  * [ ] logs/lost (and test)
   * [ ] logs/warning
 * [ ] Cleanup
   * [ ] Project references
@@ -59,3 +59,8 @@
 * [ ] Move classes in Abatab\ to Core\?
 * [ ] Du integration
 * [ ] Flightpath
+
+
+
+/// <param name="sentOptionObject">The original OptionObject sent from Avatar.</param>
+/// <param name="scriptParameter">The original Script Parameter request from Avatar.</param>
