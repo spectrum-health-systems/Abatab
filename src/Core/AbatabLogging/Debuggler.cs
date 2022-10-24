@@ -58,7 +58,7 @@ namespace AbatabLogging
             {
                 var debugLogPath = BuildPath.FullPath("debuggler", debugLogRoot);
 
-                WriteLogFile.LocalFile(debugLogPath, debugMsg, 5);
+                WriteLogFile.LocalFile(debugLogPath, debugMsg, 3);
             }
         }
     }
