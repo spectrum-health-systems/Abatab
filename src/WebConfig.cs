@@ -48,7 +48,8 @@ namespace Abatab
 
             if (webConfig["DebugMode"] == "on")
             {
-                WebConfigDebug(webConfig);
+                LogEvent.WebConfigDebug(webConfig);
+                //WebConfigDebug(webConfig);
             }
 
             return webConfig;
