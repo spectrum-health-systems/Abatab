@@ -16,10 +16,8 @@
 
 using AbatabData;
 using System;
-using System.IO;
 using System.Reflection;
 using System.Runtime.CompilerServices;
-using System.Threading;
 
 namespace AbatabLogging
 {
@@ -41,13 +39,8 @@ namespace AbatabLogging
             if (string.Equals(debugMode, "on", StringComparison.OrdinalIgnoreCase))
             {
                 var debugContent = BuildContent.DebugComponents(exeAssembly, debugMode, "[PRIMEVAL DEBUG]", callPath, callMember, callLine);
-
-                /* Delay creating a debug log by 100ms, just to make sure we don't overwrite an
-                 * existing log. This will have a negative affect on performance.
-                 */
-                //Thread.Sleep(10);
-
                 var debugLogPath = BuildPath.FullPath("primevaldebug", @"C:\AvatoolWebService\Abatab_UAT\logs\", $"{DateTime.Now:yyMMdd}", exeAssembly, callPath, callMember, callLine);
+
                 WriteLogFile.LocalFile(debugLogPath, debugContent, 10);
             }
         }
@@ -62,47 +55,25 @@ namespace AbatabLogging
         /// <param name="callLine">The file line of where the log is coming from.</param>
         public static void BuildDebugLog(string exeAssembly, string debugMode, string debugLogRoot = "", string debugMsg = "", [CallerFilePath] string callPath = "", [CallerMemberName] string callMember = "", [CallerLineNumber] int callLine = 0)
         {
-            //if (debugMode == "on" || debugMode == "undefined") // TODO Remove.
-            if (debugMode == "on")
+            /* Change this to "true" to write additional log files. This will significantly affect performance.
+             */
+            const bool debugDebugger = false;
+
+            Debuggler.DebugTheDebugger(debugDebugger, debugLogRoot, "[DEBUGGLER]");
+
+            if (string.Equals(debugMode, "on", StringComparison.OrdinalIgnoreCase))
             {
-                /* Change this to "true" to write additional log files. This will significantly affect performance.
-                 */
-                const bool debugDebugger = false;
+                Debuggler.DebugTheDebugger(debugDebugger, debugLogRoot, "[DEBUGGLER]");
+                var debugContent = BuildContent.DebugComponents(exeAssembly, debugMode, debugMsg, callPath, callMember, callLine);
 
-                Debuggler.DebugTheDebugger(debugDebugger, debugLogRoot, "[DEBUG]");
+                Debuggler.DebugTheDebugger(debugDebugger, debugLogRoot, "[DEBUGGLER]");
+                var debugLogPath = BuildPath.FullPath("debug", @"C:\AvatoolWebService\Abatab_UAT\logs\", $"{DateTime.Now:yyMMdd}", exeAssembly, callPath, callMember, callLine);
 
-                if (string.IsNullOrWhiteSpace(debugLogRoot))
-                {
-                    debugLogRoot = @"C:\AvatoolWebService\Abatab_UAT\logs\debug";
-                }
-
-                debugLogRoot = $@"{debugLogRoot}\{DateTime.Now:yyMMdd}"; // TODO Move this to where other dirs are created.
-                _=Directory.CreateDirectory(debugLogRoot);
-
-                Debuggler.DebugTheDebugger(debugDebugger, debugLogRoot, "[DEBUG]");
-
-                if (string.Equals(debugMode, "on", StringComparison.OrdinalIgnoreCase))
-                {
-                    Debuggler.DebugTheDebugger(debugDebugger, debugLogRoot, "[DEBUG]");
-
-                    /* Delay creating a debug log by 100ms, just to make sure we don't overwrite an
-                     * existing log. This will have a negative affect on performance.
-                     */
-                    Thread.Sleep(10);
-
-                    Debuggler.DebugTheDebugger(debugDebugger, debugLogRoot, "[DEBUG]");
-
-                    var debugContent = BuildContent.DebugComponents(exeAssembly, debugMode, debugMsg, callPath, callMember, callLine);
-
-                    Debuggler.DebugTheDebugger(debugDebugger, debugLogRoot, "[DEBUG]");
-
-                    File.WriteAllText($@"{debugLogRoot}\{DateTime.Now:HHmmss_fffffff}-{exeAssembly}-{Path.GetFileName(callPath)}-{callMember}-{callLine}.debug", debugContent);
-
-                    Debuggler.DebugTheDebugger(debugDebugger, debugLogRoot, "[DEBUG]");
-                }
-
-                Debuggler.DebugTheDebugger(debugDebugger, debugLogRoot, "[DEBUG]");
+                Debuggler.DebugTheDebugger(debugDebugger, debugLogRoot, "[DEBUGGLER]");
+                WriteLogFile.LocalFile(debugLogPath, debugContent, 10);
             }
+
+            Debuggler.DebugTheDebugger(debugDebugger, debugLogRoot, "[DEBUGGLER]");
         }
 
         /// <summary>
