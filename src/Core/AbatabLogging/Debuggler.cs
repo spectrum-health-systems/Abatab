@@ -60,12 +60,12 @@ namespace AbatabLogging
         {
             if (debugDebugger)
             {
-                /* Delay creating a debug log by 1000ms, just to make sure we don't overwrite an
+                /* Delay creating a debug log by 10ms, just to make sure we don't overwrite an
                  * existing log. This will have a significant negative affect on performance.
                  */
                 Thread.Sleep(10);
 
-                File.WriteAllText($@"{debugLogRoot}\{DateTime.Now:HHmmss_fffffff}-Debugger[{debugMsg}].debug", debugMsg);
+                File.WriteAllText($@"{debugLogRoot}\{DateTime.Now:HHmmss_fffffff}-Debuggler-{debugMsg}.debuggler", debugMsg);
             }
         }
     }
