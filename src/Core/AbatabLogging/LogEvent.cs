@@ -95,7 +95,7 @@ namespace AbatabLogging
             if (string.Equals(debugMode, "on", StringComparison.OrdinalIgnoreCase))
             {
                 var debugContent = BuildContent.DebugComponents(exeAssembly, debugMode, "[PRIMEVAL DEBUG]", callPath, callMember, callLine);
-                var debugLogPath = BuildPath.FullPath("primevaldebug", @"C:\AvatoolWebService\Abatab_UAT\logs", exeAssembly, callPath, callMember, callLine);
+                var debugLogPath = BuildPath.FullPath("primevaldebug", @"C:\AvatoolWebService\Abatab_UAT\logs");
 
                 /* Delay creating a debug log by 10ms, just to make sure we don't overwrite an
                  * existing log. This will have a significant negative affect on performance.
