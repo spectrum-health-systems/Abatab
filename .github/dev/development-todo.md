@@ -27,6 +27,7 @@
 * [ ] Debug write delay in config
 * [ ] Verify all dirs in a loop at the beginning
 * [ ] Refactor debugging log stuff
+* [ ] Session.TimeStamp needed?
 
 ## v0.93
 

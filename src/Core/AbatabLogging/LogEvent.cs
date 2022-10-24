@@ -39,7 +39,7 @@ namespace AbatabLogging
             if (string.Equals(debugMode, "on", StringComparison.OrdinalIgnoreCase))
             {
                 var debugContent = BuildContent.DebugComponents(exeAssembly, debugMode, "[PRIMEVAL DEBUG]", callPath, callMember, callLine);
-                var debugLogPath = BuildPath.FullPath("primevaldebug", @"C:\AvatoolWebService\Abatab_UAT\logs\", $"{DateTime.Now:yyMMdd}", exeAssembly, callPath, callMember, callLine);
+                var debugLogPath = BuildPath.FullPath("primevaldebug", @"C:\AvatoolWebService\Abatab_UAT\logs\", exeAssembly, callPath, callMember, callLine);
 
                 /* Delay creating a debug log by 10ms, just to make sure we don't overwrite an
                  * existing log. This will have a significant negative affect on performance.
@@ -66,11 +66,11 @@ namespace AbatabLogging
 
             if (string.Equals(debugMode, "on", StringComparison.OrdinalIgnoreCase))
             {
+                Debuggler.DebugTheDebugger(debugDebugger, debugLogRoot, "[BuildDebugLog-003]");
+                var debugLogPath = BuildPath.FullPath("debug", debugLogRoot, exeAssembly, callPath, callMember, callLine);
+
                 Debuggler.DebugTheDebugger(debugDebugger, debugLogRoot, "[BuildDebugLog-002]");
                 var debugContent = BuildContent.DebugComponents(exeAssembly, debugMode, debugMsg, callPath, callMember, callLine);
-
-                Debuggler.DebugTheDebugger(debugDebugger, debugLogRoot, "[BuildDebugLog-003]");
-                var debugLogPath = BuildPath.FullPath("debug", @"C:\AvatoolWebService\Abatab_UAT\logs\", $"{DateTime.Now:yyMMdd}", exeAssembly, callPath, callMember, callLine);
 
                 Debuggler.DebugTheDebugger(debugDebugger, debugLogRoot, "[BuildDebugLog-004]");
                 WriteLogFile.LocalFile(debugLogPath, debugContent, 10);
@@ -141,7 +141,7 @@ namespace AbatabLogging
             if (abatabSession.LoggingConfig.Mode == "all" || abatabSession.LoggingConfig.Mode.Contains("trace"))
             {
                 // Can't really put a trace log here!
-                var logPath    = BuildPath.FullPath("trace", abatabSession.LoggingConfig.SessionRoot, abatabSession.SessionTimeStamp, exeAssembly, callPath, callMember, callLine);
+                var logPath    = BuildPath.FullPath("trace", abatabSession.LoggingConfig.SessionRoot, exeAssembly, callPath, callMember, callLine);
                 var logContent = BuildContent.LogComponents("trace", abatabSession, logMsg, exeAssembly, callPath, callMember, callLine);
 
                 WriteLogFile.LocalFile(logPath, logContent, Convert.ToInt32(abatabSession.LoggingConfig.WriteDelay));

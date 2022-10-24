@@ -64,8 +64,7 @@ namespace AbatabLogging
                  * existing log. This will have a significant negative affect on performance.
                  */
                 Thread.Sleep(10);
-
-                File.WriteAllText($@"{debugLogRoot}\{DateTime.Now:HHmmss_fffffff}-Debuggler-{debugMsg}.debuggler", debugMsg);
+                File.WriteAllText($@"{debugLogRoot}\{DateTime.Now:yyMMdd}\{DateTime.Now:HHmmss_fffffff}-{debugMsg}.debuggler", debugMsg);
             }
         }
     }
