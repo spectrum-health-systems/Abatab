@@ -65,7 +65,7 @@ namespace AbatabLogging
         /// <returns></returns>
         private static string BuildDebugLogDir(string logRoot)
         {
-            var debugLogDir = $@"{logRoot}\debug\{DateTime.Now:yyMMdd}";
+            var debugLogDir = $@"{logRoot}\{DateTime.Now:yyMMdd}";
             AbatabSystem.Maintenance.VerifyDir(debugLogDir);
 
             return debugLogDir;
