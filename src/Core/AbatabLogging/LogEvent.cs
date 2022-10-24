@@ -44,7 +44,7 @@ namespace AbatabLogging
                 /* Delay creating a debug log by 10ms, just to make sure we don't overwrite an
                  * existing log. This will have a significant negative affect on performance.
                  */
-                WriteLogFile.LocalFile(debugLogPath, debugContent, 0);
+                WriteLogFile.LocalFile(debugLogPath, debugContent, 5);
             }
         }
 
@@ -73,7 +73,7 @@ namespace AbatabLogging
                 var debugContent = BuildContent.DebugComponents(exeAssembly, debugMode, debugMsg, callPath, callMember, callLine);
 
                 Debuggler.DebugTheDebugger(debugDebugger, debugLogRoot, "[BuildDebugLog-004]");
-                WriteLogFile.LocalFile(debugLogPath, debugContent, 0);
+                WriteLogFile.LocalFile(debugLogPath, debugContent, 5);
             }
 
             Debuggler.DebugTheDebugger(debugDebugger, debugLogRoot, "[BuildDebugLog-005]");
