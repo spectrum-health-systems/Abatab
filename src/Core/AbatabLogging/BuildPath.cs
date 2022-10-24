@@ -79,7 +79,7 @@ namespace AbatabLogging
         /// <returns></returns>
         private static string BuildLostLogDir(string logRoot)
         {
-            var lostLogDir = $@"{logRoot}\debug\{DateTime.Now:yyMMdd}";
+            var lostLogDir = $@"{logRoot}\{DateTime.Now:yyMMdd}";
             AbatabSystem.Maintenance.VerifyDir(lostLogDir);
 
             return lostLogDir;
