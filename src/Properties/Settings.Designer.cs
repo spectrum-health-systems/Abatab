@@ -43,10 +43,19 @@ namespace Abatab.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("off")]
+        [global::System.Configuration.DefaultSettingValueAttribute("on")]
         public string DebugMode {
             get {
                 return ((string)(this["DebugMode"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("all")]
+        public string DebugValidUsers {
+            get {
+                return ((string)(this["DebugValidUsers"]));
             }
         }
         
@@ -61,7 +70,7 @@ namespace Abatab.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("session")]
+        [global::System.Configuration.DefaultSettingValueAttribute("all")]
         public string LogMode {
             get {
                 return ((string)(this["LogMode"]));
@@ -137,15 +146,6 @@ namespace Abatab.Properties {
         public string ModPrototypeMode {
             get {
                 return ((string)(this["ModPrototypeMode"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("all")]
-        public string DebugValidUsers {
-            get {
-                return ((string)(this["DebugValidUsers"]));
             }
         }
     }
