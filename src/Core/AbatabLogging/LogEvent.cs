@@ -72,7 +72,7 @@ namespace AbatabLogging
             {
                 LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
-                var logPath    = BuildPath.FullPath("session",abatabSession.LoggingConfig.SessionRoot, abatabSession.SessionTimeStamp);
+                var logPath    = BuildPath.FullPath("session",abatabSession.LoggingConfig.SessionRoot);
                 var logContent = BuildContent.LogComponents("quickmedorder", abatabSession, logMsg);
                 LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, logPath);
                 LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, logContent);
@@ -118,7 +118,7 @@ namespace AbatabLogging
             {
                 LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
-                var logPath    = BuildPath.FullPath("session", abatabSession.LoggingConfig.SessionRoot, abatabSession.SessionTimeStamp);
+                var logPath    = BuildPath.FullPath("session", abatabSession.LoggingConfig.SessionRoot);
                 var logContent = BuildContent.LogComponents("session", abatabSession, logMsg);
 
                 WriteLogFile.LocalFile(logPath, logContent, Convert.ToInt32(abatabSession.LoggingConfig.WriteDelay));
