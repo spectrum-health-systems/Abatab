@@ -1,7 +1,7 @@
 ﻿// Abatab
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221024.091417
+// b221024.143625
 
 /* ========================================================================================================
  * PLEASE READ
@@ -149,6 +149,10 @@ namespace AbatabLogging
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="webConfig"></param>
         public static void WebConfigDebug(Dictionary<string, string> webConfig)
         {
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, webConfig["DebugMode"], webConfig["DebugLogRoot"], "[DEBUG]");
@@ -167,28 +171,6 @@ namespace AbatabLogging
 
             var logPath = BuildPath.FullPath("webconfigdebug", webConfig["DebugLogRoot"]);
             WriteLogFile.LocalFile(logPath, logContents, Convert.ToInt32(webConfig["LogWriteDelay"]));
-
-            //File.WriteAllText($@"{webConfig["DebugLogRoot"]}\webConfig.debug", webConfigContents);
-
-
-
-
-
-            //LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
-            //LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
-
-            //if (abatabSession.LoggingConfig.Mode == "all" || abatabSession.LoggingConfig.Mode.Contains("session"))
-            //{
-            //    LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
-
-            //    var logPath    = BuildPath.FullPath("session", abatabSession.LoggingConfig.SessionRoot, abatabSession.SessionTimeStamp);
-            //    var logContent = BuildContent.LogComponents("session", abatabSession, logMsg);
-
-            //    WriteLogFile.LocalFile(logPath, logContent, Convert.ToInt32(abatabSession.LoggingConfig.WriteDelay));
-            //}
-
-            //LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
         }
-
     }
 }

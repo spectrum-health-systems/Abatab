@@ -1,13 +1,11 @@
 ﻿// Abatab v0.94.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221024.091417
+// b221024.143625
 
 using Abatab.Properties;
 using AbatabLogging;
-using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Reflection;
 
 namespace Abatab
@@ -49,34 +47,10 @@ namespace Abatab
             if (webConfig["DebugMode"] == "on")
             {
                 LogEvent.WebConfigDebug(webConfig);
-                //WebConfigDebug(webConfig);
             }
 
             return webConfig;
 
-        }
-
-        /// <summary>
-        /// Debugs the Web.config.
-        /// </summary>
-        /// <param name="webConfig">Abatab settings from the local Web.config file.</param>
-        private static void WebConfigDebug(Dictionary<string, string> webConfig)
-        {
-            // TODO This should be moved to Abatab.Logging.csproj.
-
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG]");
-
-            var webConfigContents = $"------------------{Environment.NewLine}" +
-                                    $"webConfig contents{Environment.NewLine}" +
-                                    $"------------------{Environment.NewLine}" +
-                                    $"{Environment.NewLine}";
-
-            foreach (var item in webConfig)
-            {
-                webConfigContents += $"{item.Key} = {item.Value}{Environment.NewLine}";
-            }
-
-            File.WriteAllText($@"{webConfig["DebugLogRoot"]}\webConfig.debug", webConfigContents);
         }
     }
 }
