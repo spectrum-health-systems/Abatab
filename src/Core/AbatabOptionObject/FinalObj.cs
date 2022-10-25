@@ -1,10 +1,9 @@
-﻿// Abatab
+﻿// AbatabOptionObject 0.94.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221024.143625
+// b221025.074827
 
 using AbatabData;
-using AbatabData.Core;
 using AbatabLogging;
 using System.Reflection;
 
