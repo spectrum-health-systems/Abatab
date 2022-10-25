@@ -1,7 +1,7 @@
-﻿// Abatab
+﻿// AbatabOptionObject 0.94.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221019.100213
+// b221025.075408
 
 using AbatabData;
 using AbatabLogging;
@@ -20,10 +20,10 @@ namespace AbatabOptionObject
         /// <param name="abatabSession">Information/data for this session of Abatab.</param>
         public static void Finalize(Session abatabSession)
         {
-            Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG]");
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, abatabSession.AbatabMode, "[TRACE]");
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
-            switch (abatabSession.AbatabMode.ToLower())
+            switch (abatabSession.Mode.ToLower())
             {
                 case "passthrough":
                     LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
@@ -45,7 +45,7 @@ namespace AbatabOptionObject
         public static void ForPassthrough(Session abatabSession)
         {
             // TODO Private?
-            Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG]");
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
             abatabSession.FinalOptObj.ErrorCode = 0;

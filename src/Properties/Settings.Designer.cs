@@ -43,10 +43,19 @@ namespace Abatab.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("off")]
+        [global::System.Configuration.DefaultSettingValueAttribute("on")]
         public string DebugMode {
             get {
                 return ((string)(this["DebugMode"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("all")]
+        public string DebugValidUsers {
+            get {
+                return ((string)(this["DebugValidUsers"]));
             }
         }
         
@@ -61,28 +70,28 @@ namespace Abatab.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("session")]
-        public string LoggingMode {
+        [global::System.Configuration.DefaultSettingValueAttribute("all")]
+        public string LogMode {
             get {
-                return ((string)(this["LoggingMode"]));
+                return ((string)(this["LogMode"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("normal")]
-        public string LoggingDetail {
+        public string LogDetail {
             get {
-                return ((string)(this["LoggingDetail"]));
+                return ((string)(this["LogDetail"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("10")]
-        public string LoggingDelay {
+        public string LogWriteDelayDetail {
             get {
-                return ((string)(this["LoggingDelay"]));
+                return ((string)(this["LogWriteDelayDetail"]));
             }
         }
         
@@ -125,9 +134,9 @@ namespace Abatab.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("0.25")]
-        public string ModQuickMedOrderDosePercentMaxInc {
+        public string ModQuickMedOrderDosePercentMaxIncrease {
             get {
-                return ((string)(this["ModQuickMedOrderDosePercentMaxInc"]));
+                return ((string)(this["ModQuickMedOrderDosePercentMaxIncrease"]));
             }
         }
         

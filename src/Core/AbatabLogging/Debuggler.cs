@@ -1,7 +1,7 @@
-﻿// Abatab
+﻿// AbatabLogging 0.94.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221019.100213
+// b221025.075408
 
 /* ========================================================================================================
  * PLEASE READ #1
@@ -38,11 +38,6 @@
  * 1000ms delay when they are written, and will cause significant performance issues when Abatab executes.
  ========================================================================================================*/
 
-using System;
-using System.IO;
-using System.Runtime.CompilerServices;
-using System.Threading;
-
 namespace AbatabLogging
 {
     /// <summary>
@@ -50,71 +45,22 @@ namespace AbatabLogging
     /// </summary>
     public static class Debuggler
     {
-        /// <summary>Builds a debug log file.</summary>
-        /// <param name="debugMode">The Abatab debug mode.</param>
-        /// <param name="debugMsg">The debug log message.</param>
-        /// <param name="debugLogRoot">The debug log root directory.</param>
-        /// <param name="exeAssembly">The name of executing assembly.</param>
-        /// <param name="callPath">The filename of where the log is coming from.</param>
-        /// <param name="callMember">The method name of where the log is coming from.</param>
-        /// <param name="callLine">The file line of where the log is coming from.</param>
-        public static void BuildDebugLog(string exeAssembly, string debugMode, string debugLogRoot = "", string debugMsg = "", [CallerFilePath] string callPath = "", [CallerMemberName] string callMember = "", [CallerLineNumber] int callLine = 0)
-        {
-            //if (debugMode == "on" || debugMode == "undefined") // TODO Remove.
-            if (debugMode == "on")
-            {
-                const bool debugDebugger = false;
 
-                DebugTheDebugger(debugDebugger, debugLogRoot, "[DEBUG]");
 
-                if (string.IsNullOrWhiteSpace(debugLogRoot))
-                {
-                    debugLogRoot = @"C:\AvatoolWebService\Abatab_UAT\logs\debug";
-                }
-
-                debugLogRoot = $@"{debugLogRoot}\{DateTime.Now:yyMMdd}"; // TODO Move this to where other dirs are created.
-                _=Directory.CreateDirectory(debugLogRoot);
-
-                DebugTheDebugger(debugDebugger, debugLogRoot, "[DEBUG]");
-
-                if (string.Equals(debugMode, "on", StringComparison.OrdinalIgnoreCase))
-                {
-                    DebugTheDebugger(debugDebugger, debugLogRoot, "[DEBUG]");
-
-                    /* Delay creating a debug log by 100ms, just to make sure we don't overwrite an
-                     * existing log. This will have a negative affect on performance.
-                     */
-                    Thread.Sleep(100);
-
-                    DebugTheDebugger(debugDebugger, debugLogRoot, "[DEBUG]");
-
-                    var debugContent = BuildContent.DebugComponents(exeAssembly, debugMode, debugMsg, callPath, callMember, callLine);
-
-                    DebugTheDebugger(debugDebugger, debugLogRoot, "[DEBUG]");
-
-                    File.WriteAllText($@"{debugLogRoot}\{DateTime.Now:HHmmssfffffff}-{exeAssembly}-{Path.GetFileName(callPath)}-{callMember}-{callLine}.debug", debugContent);
-
-                    DebugTheDebugger(debugDebugger, debugLogRoot, "[DEBUG]");
-                }
-
-                DebugTheDebugger(debugDebugger, debugLogRoot, "[DEBUG]");
-            }
-        }
 
         /// <summary>Debugs the debugger.</summary>
         /// <param name="debugDebugger">The flag that determines if the debugger should be debugged.</param>
         /// <param name="debugLogRoot">The debug log root directory.</param>
         /// <param name="debugMsg">The debugger log message.</param>
-        private static void DebugTheDebugger(bool debugDebugger, string debugLogRoot, string debugMsg)
+        public static void DebugTheDebugger(bool debugDebugger, string debugLogRoot, string debugMsg)
         {
             if (debugDebugger)
             {
-                /* Delay creating a debug log by 1000ms, just to make sure we don't overwrite an
-                 * existing log. This will have a significant negative affect on performance.
-                 */
-                Thread.Sleep(1000);
+                var debugLogPath = BuildPath.FullPath("debuggler", debugLogRoot);
 
-                File.WriteAllText($@"{debugLogRoot}\{DateTime.Now:HHmmssfffffff}-Debugger[{debugMsg}].debug", debugMsg);
+                /* It is recommended that you keep this at 0.
+                 */
+                WriteLogFile.LocalFile(debugLogPath, debugMsg, 0);
             }
         }
     }

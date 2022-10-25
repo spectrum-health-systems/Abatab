@@ -1,7 +1,7 @@
-﻿// Abatab
+﻿// AbatabLogging 0.94.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221019.100213
+// b221025.075408
 
 /* ========================================================================================================
  * PLEASE READ
@@ -22,7 +22,7 @@ namespace AbatabLogging
     /// <summary>
     /// Logic for writing log files.
     /// </summary>
-    public static class WriteFile
+    public static class WriteLogFile
     {
         /// <summary>Writes a log file.</summary>
         /// <param name="logPath">The log file path.</param>

@@ -1,15 +1,18 @@
-﻿// Abatab
+﻿// AbatabData 0.94.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221019.100213
+// b221025.075408
 
-namespace AbatabData
+namespace AbatabData.Module
 {
     /// <summary>
     /// Defines the properties for the AbatabData.QuickMedOrderData object, containing the information needed for ModQuickMedOrder functionality.
     /// </summary>
     public class QuickMedOrder
     {
+        public string Mode { get; set; }
+        public string ValidUsers { get; set; }
+        public string DosePercentMaxIncrease { get; set; }
         public string PrevDosePrefix { get; set; }
         public string PrevDoseSuffix { get; set; }
         public string DosageOneFieldId { get; set; }

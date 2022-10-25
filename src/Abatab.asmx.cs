@@ -1,7 +1,7 @@
-﻿// Abatab v0.93.0
+﻿// Abatab 0.94.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221019.100213
+// b221025.075408
 
 using Abatab.Properties;
 using AbatabData;
@@ -42,12 +42,12 @@ namespace Abatab
         /// This method is required by Avatar.
         /// </remarks>
         /// <param name="sentOptionObject">The original OptionObject sent from Avatar.</param>
-        /// <param name="scriptParameter">The script parameter request from Avatar.</param>
+        /// <param name="scriptParameter">The original Script Parameter request from Avatar.</param>
         /// <returns>A finalized OptionObject.</returns>
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string scriptParameter)
         {
-            Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG]");
+            LogEvent.PrimevalDebug(Settings.Default.DebugMode, Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugLogRoot);
 
             Dictionary<string, string> webConfig = WebConfig.Load();
 

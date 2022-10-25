@@ -1,7 +1,7 @@
-﻿// Abatab
+﻿// AbatabLogging 0.94.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221019.100213
+// b221025.075408
 
 /* ========================================================================================================
  * PLEASE READ
@@ -26,37 +26,123 @@ namespace AbatabLogging
     {
         /// <summary>Builds a log file path.</summary>
         /// <param name="eventType">The type of log to create.</param>
-        /// <param name="sessionLogRoot">The session root directory.</param>
+        /// <param name="logRoot">The session root directory.</param>
         /// <param name="exeAssembly">The name of executing assembly.</param>
         /// <param name="callPath">The filename of where the log is coming from.</param>
         /// <param name="callMember">The method name of where the log is coming from.</param>
         /// <param name="callLine">The file line of where the log is coming from.</param>
         /// <returns>A completed log file path.</returns>
-        public static string FullPath(string eventType, string sessionLogRoot, string exeAssembly = "", string callPath = "", string callMember = "", int callLine = 0)
+        public static string FullPath(string eventType, string logRoot, string exeAssembly = "", string callPath = "", string callMember = "", int callLine = 0)
         {
             // No log statement here (see comments at top of file)
 
-            var fullPath = sessionLogRoot;
+            string logDir;
 
-            if (eventType != "session")
+            switch (eventType)
             {
-                fullPath += $@"\{eventType}";
-                AbatabSystem.Maintenance.VerifyDir(fullPath);
+                case "debug":
+                    logDir = BuildDebugLogDir(logRoot);
+                    return $@"{logDir}\{DateTime.Now:HHmmss_fffffff}-{exeAssembly}-{Path.GetFileName(callPath)}-{callMember}-{callLine}.{eventType}";
+
+                case "trace":
+                    logDir = BuildTraceLogDir(logRoot);
+                    return $@"{logDir}\{DateTime.Now:HHmmss_fffffff}-{exeAssembly}-{Path.GetFileName(callPath)}-{callMember}-{callLine}.trace";
+
+                default:
+                    logDir = BuildLostLogDir(logRoot);
+                    return $@"{logDir}\{DateTime.Now:HHmmss_fffffff}-{exeAssembly}-{Path.GetFileName(callPath)}-{callMember}-{callLine}.lost";
             }
+        }
 
-            fullPath += $@"\{DateTime.Now:HHmmss.fffffff}";
+        /// <summary>Builds a log file path.</summary>
+        /// <param name="eventType">The type of log to create.</param>
+        /// <param name="logRoot">The session root directory.</param>
+        /// <param name="exeAssembly">The name of executing assembly.</param>
+        /// <param name="callPath">The filename of where the log is coming from.</param>
+        /// <param name="callMember">The method name of where the log is coming from.</param>
+        /// <param name="callLine">The file line of where the log is coming from.</param>
+        /// <returns>A completed log file path.</returns>
+        public static string FullPath(string eventType, string logRoot)
+        {
+            // No log statement here (see comments at top of file)
 
-            if (!string.IsNullOrWhiteSpace(exeAssembly))
+            string logDir;
+
+            switch (eventType.ToLower())
             {
-                fullPath += $"-{exeAssembly}";
-            }
+                case "primevaldebug":
+                case "debuggler":
+                    logDir = BuildPrimevalDebugLogDir(logRoot);
+                    return $@"{logDir}\{DateTime.Now:HHmmss_fffffff}.{eventType}";
 
-            if (!string.IsNullOrWhiteSpace(callPath))
-            {
-                fullPath += $"-{Path.GetFileName(callPath)}-{callMember}-{callLine}";
-            }
+                case "webconfigdebug":
+                    logDir = BuildDebugLogDir(logRoot);
+                    return $@"{logDir}\{DateTime.Now:HHmmss_fffffff}.{eventType}";
 
-            return $"{fullPath}.{eventType}";
+                case "quickmedorder":
+                case "session":
+                    return $@"{logRoot}\{DateTime.Now:yyMMdd}.{eventType}";
+
+                default:
+                    logDir = BuildLostLogDir(logRoot);
+                    return $@"{logDir}\{DateTime.Now:HHmmss_fffffff}.lost";
+            }
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="logRoot"></param>
+        /// <param name="dateStamp"></param>
+        /// <returns></returns>
+        private static string BuildDebugLogDir(string logRoot)
+        {
+            var debugLogDir = $@"{logRoot}\{DateTime.Now:yyMMdd}";
+            AbatabSystem.Maintenance.VerifyDir(debugLogDir);
+
+            return debugLogDir;
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="logRoot"></param>
+        /// <param name="dateStamp"></param>
+        /// <returns></returns>
+        private static string BuildLostLogDir(string logRoot)
+        {
+            var lostLogDir = $@"{logRoot}\{DateTime.Now:yyMMdd}";
+            AbatabSystem.Maintenance.VerifyDir(lostLogDir);
+
+            return lostLogDir;
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="logRoot"></param>
+        /// <param name="dateStamp"></param>
+        /// <returns></returns>
+        private static string BuildPrimevalDebugLogDir(string logRoot)
+        {
+            var debugLogDir = $@"{logRoot}\debug\{DateTime.Now:yyMMdd}";
+            AbatabSystem.Maintenance.VerifyDir(debugLogDir);
+
+            return debugLogDir;
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="logRoot"></param>
+        /// <param name="dateStamp"></param>
+        /// <returns></returns>
+        private static string BuildTraceLogDir(string traceLogRoot)
+        {
+            var traceLogDir = $@"{traceLogRoot}\trace";
+            AbatabSystem.Maintenance.VerifyDir(traceLogDir);
+
+            return traceLogDir;
         }
     }
 }

@@ -1,7 +1,7 @@
-﻿// Abatab
+﻿// AbatabLogging 0.94.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221019.100213
+// b221025.075408
 
 /* ========================================================================================================
  * PLEASE READ
@@ -40,19 +40,19 @@ namespace AbatabLogging
         /// <returns>The completed content for a log file.</returns>
         public static string LogComponents(string eventType, Session abatabSession, string logMsg, string exeAssembly = "", string callPath = "", string callMember = "", int callLine = 0)
         {
-            Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG]");
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
 
             var logHead = ComponentHead(logMsg);
-            Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG]");
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
 
             var logDetail = ComponentDetail(eventType, exeAssembly, callPath, callMember, callLine);
-            Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG]");
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
 
             var logBody = ComponentBody(eventType, abatabSession);
-            Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG]");
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
 
             var logFoot = ComponentFoot();
-            Debuggler.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugMode, abatabSession.DebugLogRoot, "[DEBUG]");
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
 
             return $"{logHead}" +
                    $"{logDetail}" +
@@ -139,7 +139,7 @@ namespace AbatabLogging
         /// <returns>The completed log body component.</returns>
         private static string ComponentBody(string eventType, Session abatabSession)
         {
-            // No log statement here (see comments at top of file)
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
 
             switch (eventType)
             {
@@ -163,7 +163,7 @@ namespace AbatabLogging
         /// <returns>The completed log body component for session details.</returns>
         private static string BodySessionDetail(Session abatabSession)
         {
-            // No log statement here (see comments at top of file)
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
 
             var sessionHead = $"{Environment.NewLine}" +
                               $"==============={Environment.NewLine}" +
@@ -171,15 +171,16 @@ namespace AbatabLogging
                               $"===============";
 
             var sessionDetail = $"{Environment.NewLine}" +
-                                $"Abatab Mode:         {abatabSession.AbatabMode}{Environment.NewLine}" +
-                                $"Abatab Root:         {abatabSession.AbatabRoot}{Environment.NewLine}" +
-                                $"Debugging Mode:      {abatabSession.DebugMode}{Environment.NewLine}" +
-                                $"Debugging Log root:  {abatabSession.DebugLogRoot}{Environment.NewLine}" +
-                                $"Logging Mode:        {abatabSession.LoggingMode}{Environment.NewLine}" +
-                                $"Logging Detail:      {abatabSession.LoggingDetail}{Environment.NewLine}" +
-                                $"Logging Delay:       {abatabSession.LoggingDelay}{Environment.NewLine}" +
-                                $"Session Timestamp:   {abatabSession.SessionTimestamp}{Environment.NewLine}" +
-                                $"Session Log root:    {abatabSession.SessionLogRoot}{Environment.NewLine}" +
+                                $"Abatab Mode:         {abatabSession.Mode}{Environment.NewLine}" +
+                                $"Abatab Root:         {abatabSession.Root}{Environment.NewLine}" +
+                                $"Debugging Mode:      {abatabSession.DebugglerConfig.Mode}{Environment.NewLine}" +
+                                $"Debugging Log root:  {abatabSession.DebugglerConfig.DebugEventRoot}{Environment.NewLine}" +
+                                $"Logging Mode:        {abatabSession.LoggingConfig.Mode}{Environment.NewLine}" +
+                                $"Logging Detail:      {abatabSession.LoggingConfig.Detail}{Environment.NewLine}" +
+                                $"Logging Delay:       {abatabSession.LoggingConfig.WriteDelay}{Environment.NewLine}" +
+                                $"Session DateStamp:   {abatabSession.SessionDateStamp}{Environment.NewLine}" +
+                                $"Session TimeStamp:   {abatabSession.SessionTimeStamp}{Environment.NewLine}" +
+                                $"Session Log root:    {abatabSession.LoggingConfig.SessionRoot}{Environment.NewLine}" +
                                 $"Avatar username:     {abatabSession.AvatarUserName}{Environment.NewLine}" +
                                 $"Fallback username:   {abatabSession.AvatarFallbackUserName}{Environment.NewLine}" +
                                 $"Abatab request:      {abatabSession.AbatabRequest}{Environment.NewLine}" +
@@ -215,35 +216,43 @@ namespace AbatabLogging
         /// <returns>The completed log body component for module details.</returns>
         private static string BodyModuleDetail(Session abatabSession, string modName)
         {
-            // No log statement here (see comments at top of file)
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
 
             var moduleHead = $"{Environment.NewLine}" +
                              $"-------------{Environment.NewLine}" +
                              $"{modName}{Environment.NewLine}" +
                              $"-------------{Environment.NewLine}";
 
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot);
+
             string moduleDetail;
 
             switch (modName.ToLower())
             {
                 case "quickmedorder":
-                    moduleDetail = $"Mode:                 {abatabSession.ModQuickMedOrderMode}{Environment.NewLine}" +
-                                   $"Valid users:          {abatabSession.ModQuickMedOrderValidUsers}{Environment.NewLine}" +
-                                   $"Max percent increase: {abatabSession.ModQuickMedOrderDosePercentMaxInc}";
+                    LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot);
+                    moduleDetail = $"Mode:                 {abatabSession.ModQuickMedOrderConfig.Mode}{Environment.NewLine}" +
+                                   $"Valid users:          {abatabSession.ModQuickMedOrderConfig.ValidUsers}{Environment.NewLine}" +
+                                   $"Max percent increase: {abatabSession.ModQuickMedOrderConfig.DosePercentMaxIncrease}";
                     break;
 
                 case "prototype":
-                    moduleDetail = $"Mode: {abatabSession.ModPrototypeMode}";
+                    LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, $"Mode: {abatabSession.ModPrototypeConfig.Mode}");
+                    moduleDetail = $"Mode: {abatabSession.ModPrototypeConfig.Mode}";
                     break;
 
                 case "testing":
-                    moduleDetail = $"Mode: {abatabSession.ModTestingMode}";
+                    LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot);
+                    moduleDetail = $"Mode: {abatabSession.ModTestingConfig.Mode}";
                     break;
 
                 default:
+                    LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot);
                     moduleDetail = $"Undefined.";
                     break;
             }
+
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot);
 
             return $"{moduleHead}" +
                    $"{moduleDetail}";
@@ -256,7 +265,7 @@ namespace AbatabLogging
         /// <returns>The completed log body component for QuickMedOrder details.</returns>
         private static string BodyModQuickMedOrderDetail(Session abatabSession)
         {
-            // No log statement here (see comments at top of file)
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
 
             var modQuickMedOrderHead = $"{Environment.NewLine}" +
                                        $"====================={Environment.NewLine}" +
@@ -264,18 +273,18 @@ namespace AbatabLogging
                                        $"====================";
 
             var modQuickMedOrderDetail = $"{Environment.NewLine}" +
-                                         $"Previous dose prefix:              {abatabSession.ModQuickMedOrderData.PrevDosePrefix}{Environment.NewLine}" +
-                                         $"Previous dose suffix:              {abatabSession.ModQuickMedOrderData.PrevDoseSuffix}{Environment.NewLine}" +
-                                         $"OrderType field ID:                {abatabSession.ModQuickMedOrderData.OrderTypeFieldId}{Environment.NewLine}" +
-                                         $"Found OrderType field ID:          {abatabSession.ModQuickMedOrderData.FoundOrderTypeFieldId}{Environment.NewLine}" +
-                                         $"OrderType:                         {abatabSession.ModQuickMedOrderData.OrderType}{Environment.NewLine}" +
-                                         $"LastOrderScheduled field ID:       {abatabSession.ModQuickMedOrderData.LastOrderScheduleFieldId}{Environment.NewLine}" +
-                                         $"Found LastOrderScheduled field ID: {abatabSession.ModQuickMedOrderData.FoundLastOrderScheduleFieldId}{Environment.NewLine}" +
-                                         $"LastOrderScheduled text:           {abatabSession.ModQuickMedOrderData.LastOrderScheduleText}{Environment.NewLine}" +
-                                         $"DosageOne field ID:                {abatabSession.ModQuickMedOrderData.DosageOneFieldId}{Environment.NewLine}" +
-                                         $"Found DosageOne field ID:          {abatabSession.ModQuickMedOrderData.FoundDosageOneFieldId}{Environment.NewLine}" +
-                                         $"CurrentDose:                       {abatabSession.ModQuickMedOrderData.CurrentDose}{Environment.NewLine}" +
-                                         $"Found all required fields:         {abatabSession.ModQuickMedOrderData.FoundAllRequiredFieldIds}{Environment.NewLine}";
+                                         $"Previous dose prefix:              {abatabSession.ModQuickMedOrderConfig.PrevDosePrefix}{Environment.NewLine}" +
+                                         $"Previous dose suffix:              {abatabSession.ModQuickMedOrderConfig.PrevDoseSuffix}{Environment.NewLine}" +
+                                         $"OrderType field ID:                {abatabSession.ModQuickMedOrderConfig.OrderTypeFieldId}{Environment.NewLine}" +
+                                         $"Found OrderType field ID:          {abatabSession.ModQuickMedOrderConfig.FoundOrderTypeFieldId}{Environment.NewLine}" +
+                                         $"OrderType:                         {abatabSession.ModQuickMedOrderConfig.OrderType}{Environment.NewLine}" +
+                                         $"LastOrderScheduled field ID:       {abatabSession.ModQuickMedOrderConfig.LastOrderScheduleFieldId}{Environment.NewLine}" +
+                                         $"Found LastOrderScheduled field ID: {abatabSession.ModQuickMedOrderConfig.FoundLastOrderScheduleFieldId}{Environment.NewLine}" +
+                                         $"LastOrderScheduled text:           {abatabSession.ModQuickMedOrderConfig.LastOrderScheduleText}{Environment.NewLine}" +
+                                         $"DosageOne field ID:                {abatabSession.ModQuickMedOrderConfig.DosageOneFieldId}{Environment.NewLine}" +
+                                         $"Found DosageOne field ID:          {abatabSession.ModQuickMedOrderConfig.FoundDosageOneFieldId}{Environment.NewLine}" +
+                                         $"CurrentDose:                       {abatabSession.ModQuickMedOrderConfig.CurrentDose}{Environment.NewLine}" +
+                                         $"Found all required fields:         {abatabSession.ModQuickMedOrderConfig.FoundAllRequiredFieldIds}{Environment.NewLine}";
 
             return $"{modQuickMedOrderHead}" +
                    $"{modQuickMedOrderDetail}";

@@ -51,7 +51,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="WriteFile.cs" />
+    <Compile Include="WriteLogFile.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AbatabData\AbatabData.csproj">
