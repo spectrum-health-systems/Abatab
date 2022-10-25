@@ -83,6 +83,9 @@ namespace AbatabLogging
                 case "session":
                     return $@"{logRoot}\{DateTime.Now:yyMMdd}.{eventType}";
 
+                case "access":
+                    return $@"{logRoot}\{DateTime.Now:yyMMdd}.{eventType}";
+
                 default:
                     logDir = BuildLostLogDir(logRoot);
                     return $@"{logDir}\{DateTime.Now:HHmmss_fffffff}.lost";

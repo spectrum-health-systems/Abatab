@@ -27,6 +27,26 @@ namespace AbatabLogging
     /// </summary>
     public static class LogEvent
     {
+        public static void Access(Session abatabSession, string accessType)
+        {
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+
+            if (abatabSession.LoggingConfig.Mode == "all" || abatabSession.LoggingConfig.Mode.Contains("access"))
+            {
+                LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+                var logPath  = BuildPath.FullPath("access", abatabSession.LoggingConfig.SessionRoot);
+
+                LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+                var logContent = BuildContent.LogComponents("access", abatabSession, accessType);
+
+                LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+                WriteLogFile.LocalFile(logPath, logContent, Convert.ToInt32(abatabSession.LoggingConfig.WriteDelay));
+            }
+
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+        }
+
         /// <summary>Builds a debug log file.</summary>
         /// <param name="exeAssembly">The name of executing assembly.</param>
         /// <param name="debugMode">The Abatab debug mode.</param>

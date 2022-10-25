@@ -31,8 +31,7 @@ namespace Abatab
                     break;
 
                 case "quickmedorder":
-                    LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
-                    ModQuickMedOrder.Roundhouse.ParseRequest(abatabSession);
+                    ExecuteQuickMedOrder(abatabSession);
                     break;
 
                 case "testing":
@@ -47,6 +46,24 @@ namespace Abatab
             }
 
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+        }
+
+        private static void ExecuteQuickMedOrder(Session abatabSession)
+        {
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+
+            var validUser = ModCommon.Verify.ValidUser(abatabSession.AvatarUserName, abatabSession.ModQuickMedOrderConfig.ValidUsers);
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+
+            if (validUser)
+            {
+                LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+                ModQuickMedOrder.Roundhouse.ParseRequest(abatabSession);
+            }
+            else
+            {
+                LogEvent.Access(abatabSession, "invalidUser");
+            }
         }
     }
 }

@@ -23,21 +23,21 @@ namespace ModQuickMedOrder
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
-            var shouldExecute = ModCommon.Verify.ValidUser(abatabSession.AvatarUserName, abatabSession.ModQuickMedOrderConfig.ValidUsers);
+            //var shouldExecute = ModCommon.Verify.ValidUser(abatabSession.AvatarUserName, abatabSession.ModQuickMedOrderConfig.ValidUsers);
+            //LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+
+            //if (shouldExecute)
+            //{
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
-            if (shouldExecute)
-            {
-                LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+            InitializeDoseData(abatabSession);
 
-                InitializeDoseData(abatabSession);
+            AbatabOptionObject.WorkObj.ClearErrorData(abatabSession);
 
-                AbatabOptionObject.WorkObj.ClearErrorData(abatabSession);
+            ComparePercentage(abatabSession);
 
-                ComparePercentage(abatabSession);
-
-                //LogEvent.ModQuickMedOrder(abatabSession);
-            }
+            //LogEvent.ModQuickMedOrder(abatabSession);
+            //}
 
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
         }
