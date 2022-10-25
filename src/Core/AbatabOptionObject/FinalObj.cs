@@ -48,8 +48,8 @@ namespace AbatabOptionObject
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
-            abatabSession.FinalOptObj.ErrorCode = 0;
-            abatabSession.FinalOptObj.ErrorMesg = "PASSTHROUGH";
+            abatabSession.FinalOptObj.ErrorCode       = 0;
+            abatabSession.FinalOptObj.ErrorMesg       = "PASSTHROUGH";
             abatabSession.FinalOptObj.EntityID        = abatabSession.SentOptObj.EntityID;
             abatabSession.FinalOptObj.EpisodeNumber   = abatabSession.SentOptObj.EpisodeNumber;
             abatabSession.FinalOptObj.Facility        = abatabSession.SentOptObj.Facility;

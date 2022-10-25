@@ -63,6 +63,7 @@ namespace Abatab
             else
             {
                 LogEvent.Access(abatabSession, "invalidUser");
+                AbatabOptionObject.FinalObj.Finalize(abatabSession);
             }
         }
     }
