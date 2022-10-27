@@ -36,6 +36,7 @@ namespace AbatabLogging
         {
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, accessMsg);
 
             if (abatabSession.LoggingConfig.Mode == "all" || abatabSession.LoggingConfig.Mode.Contains("access"))
             {
