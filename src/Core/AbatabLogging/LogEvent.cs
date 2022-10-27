@@ -41,7 +41,7 @@ namespace AbatabLogging
             {
                 LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
-                var logPath    = BuildPath.Timestamped("access", abatabSession.LoggingConfig.SessionRoot);
+                var logPath    = BuildPath.MessageName("access", abatabSession.LoggingConfig.SessionRoot, accessMsg);
                 var logContent = BuildContent.LogComponents("access", abatabSession, accessMsg);
 
                 WriteLogFile.LocalFile(logPath, logContent, Convert.ToInt32(abatabSession.LoggingConfig.WriteDelay));
