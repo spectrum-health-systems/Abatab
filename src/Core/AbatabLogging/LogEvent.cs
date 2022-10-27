@@ -38,6 +38,7 @@ namespace AbatabLogging
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, accessMsg);
 
+
             if (abatabSession.LoggingConfig.Mode == "all" || abatabSession.LoggingConfig.Mode.Contains("access"))
             {
                 LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
