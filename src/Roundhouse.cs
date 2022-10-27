@@ -1,7 +1,7 @@
 ﻿// Abatab 0.95.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221025.075904
+// b221026.142607
 
 using AbatabData;
 using AbatabLogging;
@@ -31,7 +31,8 @@ namespace Abatab
                     break;
 
                 case "quickmedorder":
-                    ExecuteQuickMedOrder(abatabSession);
+                    LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+                    ModQuickMedOrderExecute(abatabSession);
                     break;
 
                 case "testing":
@@ -48,21 +49,23 @@ namespace Abatab
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
         }
 
-        private static void ExecuteQuickMedOrder(Session abatabSession)
+        /// <summary>
+        /// Allow verified users to execute ModQuickMedOrder functionality.
+        /// </summary>
+        /// <param name="abatabSession">Information/data for this session of Abatab.</param>
+        private static void ModQuickMedOrderExecute(Session abatabSession)
         {
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
-            var validUser = ModCommon.Verify.ValidUser(abatabSession.AvatarUserName, abatabSession.ModQuickMedOrderConfig.ValidUsers);
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
-
-            if (validUser)
+            if (ModCommon.Verify.ValidUser(abatabSession.AvatarUserName, abatabSession.ModQuickMedOrderConfig.ValidUsers))
             {
                 LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
                 ModQuickMedOrder.Roundhouse.ParseRequest(abatabSession);
             }
             else
             {
-                LogEvent.Access(abatabSession, "invalidUser");
+                LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+                LogEvent.Access(abatabSession, "Invalid ModQuickMedOrder user.");
                 AbatabOptionObject.FinalObj.Finalize(abatabSession);
             }
         }

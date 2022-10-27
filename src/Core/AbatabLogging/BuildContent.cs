@@ -1,7 +1,7 @@
 ﻿// AbatabLogging 0.95.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221025.075904
+// b221026.142607
 
 /* ========================================================================================================
  * PLEASE READ
@@ -168,7 +168,7 @@ namespace AbatabLogging
             var sessionHead = $"{Environment.NewLine}" +
                               $"==============={Environment.NewLine}" +
                               $"Session details{Environment.NewLine}" +
-                              $"===============";
+                              "===============";
 
             var sessionDetail = $"{Environment.NewLine}" +
                                 $"Abatab Mode:         {abatabSession.Mode}{Environment.NewLine}" +
@@ -248,7 +248,7 @@ namespace AbatabLogging
 
                 default:
                     LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot);
-                    moduleDetail = $"Undefined.";
+                    moduleDetail = "Undefined.";
                     break;
             }
 

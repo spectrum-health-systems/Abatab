@@ -4,7 +4,7 @@
 
 * [ ] Dose code
 * [ ] Test:
-  * [ ] Valid user setting
+  * [X] Valid user setting
 * [ ] Logging
   * [ ] Standard logging (session, modules, etc.)
   * [ ] Detailed log type
@@ -14,6 +14,8 @@
   * [ ] Project references
   * [ ] settings order
   * [ ] WebConfig.Load() order to match rest of code
+  * [ ] XML comments
+  * [ ] public/private/interna
 * [ ] Logging types: all-none-trace-session
 * [ ] Test logging types via Web.config
 * [ ] Version someplace
@@ -63,8 +65,4 @@
 * [ ] Move classes in Abatab\ to Core\?
 * [ ] Du integration
 * [ ] Flightpath
-
-
-
-/// <param name="sentOptionObject">The original OptionObject sent from Avatar.</param>
-/// <param name="scriptParameter">The original Script Parameter request from Avatar.</param>
+* [ ] static log messages in settings file

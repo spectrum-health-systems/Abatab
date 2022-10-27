@@ -1,7 +1,7 @@
 ﻿// AbatabLogging 0.95.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221025.075904
+// b221026.142607
 
 /* ========================================================================================================
  * PLEASE READ
@@ -27,7 +27,12 @@ namespace AbatabLogging
     /// </summary>
     public static class LogEvent
     {
-        public static void Access(Session abatabSession, string accessType)
+        /// <summary>
+        /// Log a user access event.
+        /// </summary>
+        /// <param name="abatabSession">Information/data for this session of Abatab.</param>
+        /// <param name="accessMsg">The access log message.</param>
+        public static void Access(Session abatabSession, string accessMsg)
         {
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
@@ -35,19 +40,19 @@ namespace AbatabLogging
             if (abatabSession.LoggingConfig.Mode == "all" || abatabSession.LoggingConfig.Mode.Contains("access"))
             {
                 LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
-                var logPath  = BuildPath.FullPath("access", abatabSession.LoggingConfig.SessionRoot);
 
-                LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
-                var logContent = BuildContent.LogComponents("access", abatabSession, accessType);
+                var logPath    = BuildPath.Timestamped("access", abatabSession.LoggingConfig.SessionRoot);
+                var logContent = BuildContent.LogComponents("access", abatabSession, accessMsg);
 
-                LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
                 WriteLogFile.LocalFile(logPath, logContent, Convert.ToInt32(abatabSession.LoggingConfig.WriteDelay));
             }
 
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
         }
 
-        /// <summary>Builds a debug log file.</summary>
+        /// <summary>
+        /// Builds a debug log file.
+        /// </summary>
         /// <param name="exeAssembly">The name of executing assembly.</param>
         /// <param name="debugMode">The Abatab debug mode.</param>
         /// <param name="debugLogRoot">The debug log root directory.</param>
@@ -66,7 +71,7 @@ namespace AbatabLogging
             if (string.Equals(debugMode, "on", StringComparison.OrdinalIgnoreCase))
             {
                 Debuggler.DebugTheDebugger(debugDebugger, debugLogRoot, "[BuildDebugLog-003]");
-                var debugLogPath = BuildPath.FullPath("debug", debugLogRoot, exeAssembly, callPath, callMember, callLine);
+                var debugLogPath = BuildPath.WithCaller("debug", debugLogRoot, exeAssembly, callPath, callMember, callLine);
 
                 Debuggler.DebugTheDebugger(debugDebugger, debugLogRoot, "[BuildDebugLog-002]");
                 var debugContent = BuildContent.DebugComponents(exeAssembly, debugMode, debugMsg, callPath, callMember, callLine);
@@ -92,19 +97,18 @@ namespace AbatabLogging
             {
                 LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
-                var logPath    = BuildPath.FullPath("session",abatabSession.LoggingConfig.SessionRoot);
+                var logPath    = BuildPath.Timestamped("session",abatabSession.LoggingConfig.SessionRoot);
                 var logContent = BuildContent.LogComponents("quickmedorder", abatabSession, logMsg);
-                LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, logPath);
-                LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, logContent);
+
                 WriteLogFile.LocalFile(logPath, logContent, Convert.ToInt32(abatabSession.LoggingConfig.WriteDelay));
             }
 
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
         }
 
-        /// <summary>Builds a debug log file.</summary>
-        /// <param name="debugLogRoot">The debug log root directory.</param>
-        /// <param name="debugMsg">The debug log message.</param>
+        /// <summary>
+        /// Builds a debug log file.
+        /// </summary>
         /// <param name="debugMode">The Abatab debug mode.</param>
         /// <param name="exeAssembly">The name of executing assembly.</param>
         /// <param name="callPath">The filename of where the log is coming from.</param>
@@ -115,7 +119,7 @@ namespace AbatabLogging
             if (string.Equals(debugMode, "on", StringComparison.OrdinalIgnoreCase))
             {
                 var debugContent = BuildContent.DebugComponents(exeAssembly, debugMode, "[PRIMEVAL DEBUG]", callPath, callMember, callLine);
-                var debugLogPath = BuildPath.FullPath("primevaldebug", @"C:\AvatoolWebService\Abatab_UAT\logs");
+                var debugLogPath = BuildPath.Timestamped("primevaldebug", @"C:\AvatoolWebService\Abatab_UAT\logs");
 
                 /* Delay creating a debug log by 10ms, just to make sure we don't overwrite an
                  * existing log. This will have a significant negative affect on performance.
@@ -138,7 +142,7 @@ namespace AbatabLogging
             {
                 LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
-                var logPath    = BuildPath.FullPath("session", abatabSession.LoggingConfig.SessionRoot);
+                var logPath    = BuildPath.Timestamped("session", abatabSession.LoggingConfig.SessionRoot);
                 var logContent = BuildContent.LogComponents("session", abatabSession, logMsg);
 
                 WriteLogFile.LocalFile(logPath, logContent, Convert.ToInt32(abatabSession.LoggingConfig.WriteDelay));
@@ -147,7 +151,9 @@ namespace AbatabLogging
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
         }
 
-        /// <summary>Build a trace log.</summary>
+        /// <summary>
+        /// Build a trace log.
+        /// </summary>
         /// <param name="abatabSession">Information/data for this session of Abatab.</param>
         /// <param name="exeAssembly">The name of executing assembly.</param
         /// <param name="logMsg">The log message.</param>
@@ -162,7 +168,7 @@ namespace AbatabLogging
             if (abatabSession.LoggingConfig.Mode == "all" || abatabSession.LoggingConfig.Mode.Contains("trace"))
             {
                 // Can't really put a trace log here!
-                var logPath    = BuildPath.FullPath("trace", abatabSession.LoggingConfig.SessionRoot, exeAssembly, callPath, callMember, callLine);
+                var logPath    = BuildPath.WithCaller("trace", abatabSession.LoggingConfig.SessionRoot, exeAssembly, callPath, callMember, callLine);
                 var logContent = BuildContent.LogComponents("trace", abatabSession, logMsg, exeAssembly, callPath, callMember, callLine);
 
                 WriteLogFile.LocalFile(logPath, logContent, Convert.ToInt32(abatabSession.LoggingConfig.WriteDelay));
@@ -170,9 +176,9 @@ namespace AbatabLogging
         }
 
         /// <summary>
-        /// 
+        /// Build a webConfig debug log.
         /// </summary>
-        /// <param name="webConfig"></param>
+        /// <param name="webConfig">The contents of Web.config.</param>
         public static void WebConfigDebug(Dictionary<string, string> webConfig)
         {
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, webConfig["DebugMode"], webConfig["DebugLogRoot"], "[DEBUG]");
@@ -189,7 +195,7 @@ namespace AbatabLogging
                 logContents += $"{item.Key} = {item.Value}{Environment.NewLine}";
             }
 
-            var logPath = BuildPath.FullPath("webconfigdebug", webConfig["DebugLogRoot"]);
+            var logPath = BuildPath.Timestamped("webconfigdebug", webConfig["DebugLogRoot"]);
             WriteLogFile.LocalFile(logPath, logContents, Convert.ToInt32(webConfig["LogWriteDelay"]));
         }
     }

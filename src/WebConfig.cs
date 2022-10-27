@@ -1,7 +1,7 @@
 ﻿// Abatab 0.95.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221025.075904
+// b221026.142607
 
 using Abatab.Properties;
 using AbatabLogging;
@@ -18,9 +18,6 @@ namespace Abatab
         /// <summary>
         /// Load the settings from Web.config.
         /// </summary>
-        /// <remarks>
-        /// If a setting is added/removed/modified in Web.config, it needs to be reflected here.
-        /// </remarks>
         /// <returns>A dictionary containing the settings from Web.config.</returns>
         public static Dictionary<string, string> Load()
         {
@@ -50,7 +47,6 @@ namespace Abatab
             }
 
             return webConfig;
-
         }
     }
 }
