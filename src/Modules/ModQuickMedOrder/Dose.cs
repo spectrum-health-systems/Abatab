@@ -213,16 +213,15 @@ namespace ModQuickMedOrder
                             double milligramDifference = (currDoseAsNumber - prevDoseAsNumber);
                             double basePercentage = prevDoseAsNumber / milligramDifference;
                             double percentDifference = 100.0 - basePercentage;
-                            decimal decimalDifference = Convert.ToDecimal(percentDifference);
+                            //decimal decimalDifference = Convert.ToDecimal(percentDifference);
 
-                            Decimal.Round(decimalDifference, 2);
+
 
 
                             // TODO This trace file should stay, and we might want to add a description to the msg.
                             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
-                            var debugMsg2_ = $"[{prevDoseAsNumber}] [{currDoseAsNumber}] [{milligramDifference}] [{basePercentage}] [{decimalDifference}]";
-
+                            var debugMsg2_ = $"[{prevDoseAsNumber}] [{currDoseAsNumber}] [{milligramDifference}] [{basePercentage}] [{percentDifference}]";
                             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, debugMsg2_);
 
                             // TODO Should be converted when setup.
@@ -236,13 +235,18 @@ namespace ModQuickMedOrder
                                 // TODO This trace file should stay, and we might want to add a description to the msg.
                                 LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
+                                var niceString = string.Format("{0:0.##}", percentDifference);
+
+                                var debugMsg3_ = $"[{prevDoseAsNumber}] [{currDoseAsNumber}] [{milligramDifference}] [{basePercentage}] [{percentDifference}] [{niceString}]";
+                                LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, debugMsg3_);
+
                                 abatabSession.WorkOptObj.ErrorCode = 4;
                                 abatabSession.WorkOptObj.ErrorMesg = $"WARNING!{Environment.NewLine}" +
                                                                      $"The percentage increase is too high.{Environment.NewLine}" +
                                                                      $"{Environment.NewLine}" +
                                                                      $"The previous dose was: {prevDoseAsNumber}mg{Environment.NewLine}" +
                                                                      $"The current dose is: {currDoseAsNumber}mg{Environment.NewLine}" +
-                                                                     $"That is a difference of: {decimalDifference}%{Environment.NewLine}" +
+                                                                     $"That is a difference of: {niceString}{Environment.NewLine}" +
                                                                      $"Are you sure you want to submit?";
                             }
                             else
