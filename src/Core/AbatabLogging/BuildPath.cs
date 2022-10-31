@@ -14,6 +14,7 @@
  * it's a good idea to test the logging functionality extensively prior to deploying to production.
  ========================================================================================================*/
 
+using AbatabSystem;
 using System;
 using System.IO;
 
@@ -120,7 +121,7 @@ namespace AbatabLogging
         private static string BuildDebugLogDir(string logRoot)
         {
             var debugLogDir = $@"{logRoot}\{DateTime.Now:yyMMdd}";
-            AbatabSystem.Maintenance.VerifyDir(debugLogDir);
+            Maintenance.VerifyDir(debugLogDir);
 
             return debugLogDir;
         }
@@ -133,7 +134,7 @@ namespace AbatabLogging
         private static string BuildLostLogDir(string logRoot)
         {
             var lostLogDir = $@"{logRoot}\{DateTime.Now:yyMMdd}";
-            AbatabSystem.Maintenance.VerifyDir(lostLogDir);
+            Maintenance.VerifyDir(lostLogDir);
 
             return lostLogDir;
         }
@@ -146,7 +147,7 @@ namespace AbatabLogging
         private static string BuildPrimevalDebugLogDir(string logRoot)
         {
             var debugLogDir = $@"{logRoot}\debug\{DateTime.Now:yyMMdd}";
-            AbatabSystem.Maintenance.VerifyDir(debugLogDir);
+            Maintenance.VerifyDir(debugLogDir);
 
             return debugLogDir;
         }
@@ -159,7 +160,7 @@ namespace AbatabLogging
         private static string BuildTraceLogDir(string traceLogRoot)
         {
             var traceLogDir = $@"{traceLogRoot}\trace";
-            AbatabSystem.Maintenance.VerifyDir(traceLogDir);
+            Maintenance.VerifyDir(traceLogDir);
 
             return traceLogDir;
         }
