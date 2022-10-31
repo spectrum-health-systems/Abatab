@@ -187,7 +187,7 @@ namespace ModQuickMedOrder
                         var prevDoseAsNumber = Convert.ToDouble(abatabSession.ModQuickMedOrderConfig.LastScheduledDosage);
                         var currDoseAsNumber = Convert.ToDouble(abatabSession.ModQuickMedOrderConfig.CurrentDose);
 
-                        if (prevDoseAsNumber != currDoseAsNumber)
+                        if ((prevDoseAsNumber != currDoseAsNumber) && (prevDoseAsNumber !=0 && currDoseAsNumber != 0))
                         {
                             // TODO This trace file should stay, and we might want to add a description to the msg.
                             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
