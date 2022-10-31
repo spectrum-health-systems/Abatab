@@ -187,6 +187,13 @@ namespace ModQuickMedOrder
                         var prevDoseAsNumber = Convert.ToDouble(abatabSession.ModQuickMedOrderConfig.LastScheduledDosage);
                         var currDoseAsNumber = Convert.ToDouble(abatabSession.ModQuickMedOrderConfig.CurrentDose);
 
+                        LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+
+                        var debugMsg1_ = $"{prevDoseAsNumber} - {currDoseAsNumber}";
+
+                        LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, debugMsg1_);
+
+
                         if ((prevDoseAsNumber != currDoseAsNumber) && (prevDoseAsNumber !=0 && currDoseAsNumber != 0))
                         {
                             // TODO This trace file should stay, and we might want to add a description to the msg.
@@ -199,10 +206,9 @@ namespace ModQuickMedOrder
                             // TODO This trace file should stay, and we might want to add a description to the msg.
                             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
-                            var debugMsg_ = $"{prevDoseAsNumber} - {currDoseAsNumber} - {milligramDifference} - {basePercentage} - {finalPercent}";
+                            var debugMsg2_ = $"{prevDoseAsNumber} - {currDoseAsNumber} - {milligramDifference} - {basePercentage} - {finalPercent}";
 
-
-                            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, debugMsg_);
+                            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, debugMsg2_);
 
                             // TODO Should be converted when setup.
                             var maxPercentIncrease = Convert.ToInt32(abatabSession.ModQuickMedOrderConfig.DosePercentMaxIncrease);
