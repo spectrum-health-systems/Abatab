@@ -212,12 +212,14 @@ namespace ModQuickMedOrder
 
                             double milligramDifference = (currDoseAsNumber - prevDoseAsNumber);
                             double basePercentage = prevDoseAsNumber / milligramDifference;
-                            double finalPercent = 100.0 - basePercentage;
+                            double percentDifference = 100.0 - basePercentage;
+                            decimal decimalDifference = Convert.ToDecimal(percentDifference);
+
 
                             // TODO This trace file should stay, and we might want to add a description to the msg.
                             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
-                            var debugMsg2_ = $"[{prevDoseAsNumber}] [{currDoseAsNumber}] [{milligramDifference}] [{basePercentage}] [{finalPercent}]";
+                            var debugMsg2_ = $"[{prevDoseAsNumber}] [{currDoseAsNumber}] [{milligramDifference}] [{basePercentage}] [{decimalDifference}]";
 
                             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, debugMsg2_);
 
@@ -227,7 +229,7 @@ namespace ModQuickMedOrder
                             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, maxPercentIncrease.ToString());
 
                             //if (basePercentage >= maxPercentIncrease)
-                            if (finalPercent >= maxPercentIncrease)
+                            if (percentDifference >= maxPercentIncrease)
                             {
                                 // TODO This trace file should stay, and we might want to add a description to the msg.
                                 LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
@@ -238,7 +240,7 @@ namespace ModQuickMedOrder
                                                                      $"{Environment.NewLine}" +
                                                                      $"The previous dose was: {prevDoseAsNumber}mg{Environment.NewLine}" +
                                                                      $"The current dose is: {currDoseAsNumber}mg{Environment.NewLine}" +
-                                                                     $"That is a difference of: {finalPercent}%{Environment.NewLine}" +
+                                                                     $"That is a difference of: {decimalDifference}%{Environment.NewLine}" +
                                                                      $"Are you sure you want to submit?";
                             }
                             else
