@@ -183,13 +183,16 @@ namespace ModQuickMedOrder
                         // TODO This trace file should stay, and we might want to add a description to the msg.
                         LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
-                        var debugMsg1a_ = $"{prevDoseAsNumber} - {currDoseAsNumber}";
+                        var debugMsg1a_ = $"{abatabSession.ModQuickMedOrderConfig.LastScheduledDosage} - {abatabSession.ModQuickMedOrderConfig.CurrentDose}";
 
                         LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, debugMsg1a_);
 
                         // TODO Should these be in the QMO settings?
                         var prevDoseAsNumber = Convert.ToDouble(abatabSession.ModQuickMedOrderConfig.LastScheduledDosage);
+                        LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, prevDoseAsNumber.ToString());
+
                         var currDoseAsNumber = Convert.ToDouble(abatabSession.ModQuickMedOrderConfig.CurrentDose);
+                        LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, currDoseAsNumber.ToString());
 
                         LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
