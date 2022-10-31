@@ -26,7 +26,7 @@ namespace AbatabOptionObject
             switch (abatabSession.Mode.ToLower())
             {
                 case "update":
-
+                    ForUpdate(abatabSession);
                     break;
 
                 case "passthrough":
