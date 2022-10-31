@@ -226,8 +226,8 @@ namespace ModQuickMedOrder
 
                             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, maxPercentIncrease.ToString());
 
-                            if (basePercentage >= maxPercentIncrease)
-                            //if (finalPercent >= maxPercentIncrease)
+                            //if (basePercentage >= maxPercentIncrease)
+                            if (finalPercent >= maxPercentIncrease)
                             {
                                 // TODO This trace file should stay, and we might want to add a description to the msg.
                                 LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
@@ -238,7 +238,7 @@ namespace ModQuickMedOrder
                                                                      $"{Environment.NewLine}" +
                                                                      $"The previous dose was: {prevDoseAsNumber}mg{Environment.NewLine}" +
                                                                      $"The current dose is: {currDoseAsNumber}mg{Environment.NewLine}" +
-                                                                     //$"That is a difference of: {finalPercent}%{Environment.NewLine}" +
+                                                                     $"That is a difference of: {finalPercent}%{Environment.NewLine}" +
                                                                      $"Are you sure you want to submit?";
                             }
                             else
