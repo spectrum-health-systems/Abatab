@@ -284,6 +284,7 @@ namespace AbatabLogging
                                          $"DosageOne field ID:                {abatabSession.ModQuickMedOrderConfig.DosageOneFieldId}{Environment.NewLine}" +
                                          $"Found DosageOne field ID:          {abatabSession.ModQuickMedOrderConfig.FoundDosageOneFieldId}{Environment.NewLine}" +
                                          $"CurrentDose:                       {abatabSession.ModQuickMedOrderConfig.CurrentDose}{Environment.NewLine}" +
+                                         $"LastScheduledDose:                 {abatabSession.ModQuickMedOrderConfig.LastScheduledDosage}{Environment.NewLine}" +
                                          $"Found all required fields:         {abatabSession.ModQuickMedOrderConfig.FoundAllRequiredFieldIds}{Environment.NewLine}";
 
             return $"{modQuickMedOrderHead}" +

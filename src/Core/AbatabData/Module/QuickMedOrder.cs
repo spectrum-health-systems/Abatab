@@ -24,6 +24,7 @@ namespace AbatabData.Module
         public string LastOrderScheduleFieldId { get; set; }
         public bool FoundLastOrderScheduleFieldId { get; set; }
         public string LastOrderScheduleText { get; set; }
+        public string LastScheduledDosage { get; set; }
         public bool FoundAllRequiredFieldIds { get; set; }
     }
 }

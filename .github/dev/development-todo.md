@@ -7,12 +7,13 @@
   * [X] Valid user setting
 * [ ] Logging
   * [ ] Standard logging (session, modules, etc.)
+  * [ ] Error logs
   * [ ] Detailed log type
   * [ ] logs/lost (and test)
   * [ ] logs/warning
 * [ ] Cleanup
   * [ ] Project references
-  * [ ] settings order
+  * [ ] settings order match logging order
   * [ ] WebConfig.Load() order to match rest of code
   * [ ] XML comments
   * [ ] public/private/interna
