@@ -235,7 +235,7 @@ namespace ModQuickMedOrder
                                 // TODO This trace file should stay, and we might want to add a description to the msg.
                                 LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
-                                var niceString = string.Format("{0:0}", percentDifference);
+                                var niceString = string.Format("{0:0.#}", percentDifference);
 
                                 var debugMsg3_ = $"[{prevDoseAsNumber}] [{currDoseAsNumber}] [{milligramDifference}] [{basePercentage}] [{percentDifference}] [{niceString}]";
                                 LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, debugMsg3_);
