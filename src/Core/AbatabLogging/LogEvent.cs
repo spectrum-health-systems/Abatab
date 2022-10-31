@@ -97,7 +97,7 @@ namespace AbatabLogging
             {
                 LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
-                var logPath    = BuildPath.Timestamped("session",abatabSession.LoggingConfig.SessionRoot);
+                var logPath    = BuildPath.Timestamped("quickmedorder",abatabSession.LoggingConfig.SessionRoot);
                 var logContent = BuildContent.LogComponents("quickmedorder", abatabSession, logMsg);
 
                 WriteLogFile.LocalFile(logPath, logContent, Convert.ToInt32(abatabSession.LoggingConfig.WriteDelay));
