@@ -210,8 +210,8 @@ namespace ModQuickMedOrder
                             // TODO This trace file should stay, and we might want to add a description to the msg.
                             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
-                            double milligramDifference = (prevDoseAsNumber - currDoseAsNumber);
-                            double basePercentage =  milligramDifference / prevDoseAsNumber;
+                            double milligramDifference = (currDoseAsNumber - prevDoseAsNumber);
+                            double basePercentage = prevDoseAsNumber / milligramDifference;
                             double finalPercent = 100.0 - basePercentage;
 
                             // TODO This trace file should stay, and we might want to add a description to the msg.
