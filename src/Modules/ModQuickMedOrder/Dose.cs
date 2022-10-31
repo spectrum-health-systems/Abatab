@@ -202,7 +202,7 @@ namespace ModQuickMedOrder
                             var debugMsg_ = $"{prevDoseAsNumber} - {currDoseAsNumber} - {milligramDifference} - {basePercentage} - {finalPercent}";
 
 
-                            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+                            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, debugMsg_);
 
                             // TODO Should be converted when setup.
                             var maxPercentIncrease = Convert.ToInt32(abatabSession.ModQuickMedOrderConfig.DosePercentMaxIncrease);
