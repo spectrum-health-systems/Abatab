@@ -17,7 +17,7 @@ namespace AbatabSession
     /// <summary>
     /// Logic for session instances.
     /// </summary>
-    public static class Instance
+    public static class Build
     {
         /// <summary>
         /// Builds configuration settings for an Abatab session.
@@ -25,7 +25,7 @@ namespace AbatabSession
         /// <param name="sentOptObj">The original OptionObject sent from Avatar.</param>
         /// <param name="scriptParameter">The script parameter request from Avatar.</param>
         /// <returns>Session configuration settings.</returns>
-        public static Session Build(OptionObject2015 sentOptObj, string scriptParameter, Dictionary<string, string> abatabSettings)
+        public static Session NewSession(OptionObject2015 sentOptObj, string scriptParameter, Dictionary<string, string> abatabSettings)
         {
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"], "[DEBUG]");
             // Can't really put a trace log here.

@@ -51,7 +51,7 @@ namespace Abatab
 
             Dictionary<string, string> webConfig = WebConfig.Load();
 
-            Session abatabSession = Instance.Build(sentOptionObject, scriptParameter, webConfig);
+            Session abatabSession = Build.NewSession(sentOptionObject, scriptParameter, webConfig);
 
             Roundhouse.ParseRequest(abatabSession);
 

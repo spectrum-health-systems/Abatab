@@ -46,6 +46,9 @@ namespace ModQuickMedOrder
         /// Initializes dosing information.
         /// </summary>
         /// <param name="abatabSession">Information/data for this session of Abatab.</param>
+        /// <remarks>
+        /// This information is hardcoded, but should be the same for all Avatar clients.
+        /// </remarks>
         private static void InitializeDoseData(Session abatabSession)
         {
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
@@ -70,6 +73,11 @@ namespace ModQuickMedOrder
 
         private static void ComparePercentage(Session abatabSession)
         {
+            //foreach (FormObject form in abatabSession.SentOptObj.Forms)
+            //{
+
+            //}
+
 
         }
 

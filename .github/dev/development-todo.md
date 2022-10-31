@@ -66,3 +66,8 @@
 * [ ] Du integration
 * [ ] Flightpath
 * [ ] static log messages in settings file
+
+
+
+* [ ] Better method names so user knows what/where things point from other projects.
+ex. AbatabOptionObject.FinalObj.Finalize(abatabSession) should be something like "FinalOptObj.Finalize", so we can declare the project in the usings section
