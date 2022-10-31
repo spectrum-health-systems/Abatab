@@ -169,15 +169,19 @@ namespace ModQuickMedOrder
                         // TODO This trace file should stay, and we might want to add a description to the msg.
                         LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
+                        LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, abatabSession.ModQuickMedOrderConfig.LastOrderScheduleText);
+
                         if (line.Contains(abatabSession.ModQuickMedOrderConfig.PrevDosePrefix) && line.Contains(abatabSession.ModQuickMedOrderConfig.PrevDoseSuffix))
                         {
                             // TODO This trace file should stay, and we might want to add a description to the msg.
                             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
                             var actualDose = line.Replace(abatabSession.ModQuickMedOrderConfig.PrevDosePrefix, "");
-                            actualDose     = actualDose.Replace(abatabSession.ModQuickMedOrderConfig.PrevDosePrefix, "");
+                            actualDose     = actualDose.Replace(abatabSession.ModQuickMedOrderConfig.PrevDoseSuffix, "");
 
                             abatabSession.ModQuickMedOrderConfig.LastScheduledDosage = actualDose;
+                            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, actualDose);
+
                         }
 
                         // TODO This trace file should stay, and we might want to add a description to the msg.
