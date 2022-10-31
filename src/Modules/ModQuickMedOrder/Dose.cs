@@ -215,6 +215,8 @@ namespace ModQuickMedOrder
                             double percentDifference = 100.0 - basePercentage;
                             decimal decimalDifference = Convert.ToDecimal(percentDifference);
 
+                            Decimal.Round(decimalDifference, 2);
+
 
                             // TODO This trace file should stay, and we might want to add a description to the msg.
                             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
