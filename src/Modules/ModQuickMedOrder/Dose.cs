@@ -1,7 +1,7 @@
 ﻿// Abatab ModQuickMedOrder 0.95.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221031.100659
+// b221031.163946
 
 using AbatabData;
 using AbatabLogging;
@@ -222,7 +222,7 @@ namespace ModQuickMedOrder
                             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, debugMsg2_);
 
                             // TODO Should be converted when setup.
-                            var maxPercentIncrease = Convert.ToDouble(abatabSession.ModQuickMedOrderConfig.DosePercentMaxIncrease);
+                            var maxPercentIncrease = Convert.ToDouble(abatabSession.ModQuickMedOrderConfig.DoseMaxPercentIncrease);
 
                             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, maxPercentIncrease.ToString());
 

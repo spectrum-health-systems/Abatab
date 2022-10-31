@@ -1,7 +1,7 @@
 ﻿// AbatabSession 0.95.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221031.100659
+// b221031.163946
 
 using AbatabData;
 using AbatabData.Core;
@@ -119,7 +119,7 @@ namespace AbatabSession
 
                 Mode                           = abatabSettings["ModQuickMedOrderMode"],
                 ValidUsers                     = abatabSettings["ModQuickMedOrderValidUsers"],
-                DosePercentMaxIncrease         = abatabSettings["ModQuickMedOrderDosePercentMaxIncrease"],
+                DoseMaxPercentIncrease         = abatabSettings["ModQuickMedOrderDoseMaxPercentIncrease"],
                 PrevDosePrefix                 = "Recurring Dosage:",
                 PrevDoseSuffix                 = " mgs",
                 DosageOneFieldId               = "107",

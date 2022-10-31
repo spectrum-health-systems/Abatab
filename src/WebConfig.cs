@@ -1,7 +1,7 @@
 ﻿// Abatab 0.95.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221031.100659
+// b221031.163946
 
 using Abatab.Properties;
 using AbatabLogging;
@@ -36,7 +36,7 @@ namespace Abatab
                 { "AvatarFallbackUserName",                 Settings.Default.AvatarFallbackUserName.ToLower() },
                 { "ModQuickMedOrderMode",                   Settings.Default.ModQuickMedOrderMode.ToLower() },
                 { "ModQuickMedOrderValidUsers",             Settings.Default.ModQuickMedOrderValidUsers.ToLower() },
-                { "ModQuickMedOrderDosePercentMaxIncrease", Settings.Default.ModQuickMedOrderDosePercentMaxIncrease.ToLower() },
+                { "ModQuickMedOrderDoseMaxPercentIncrease", Settings.Default.ModQuickMedOrderDoseMaxPercentIncrease.ToLower() },
                 { "ModPrototypeMode",                       Settings.Default.ModPrototypeMode.ToLower() },
                 { "ModTestingMode",                         Settings.Default.ModTestingMode.ToLower() }
             };

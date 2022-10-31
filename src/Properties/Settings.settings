@@ -38,7 +38,7 @@
     <Setting Name="ModQuickMedOrderValidUsers" Type="System.String" Scope="Application">
       <Value Profile="(Default)">all</Value>
     </Setting>
-    <Setting Name="ModQuickMedOrderDosePercentMaxIncrease" Type="System.String" Scope="Application">
+    <Setting Name="ModQuickMedOrderDoseMaxPercentIncrease" Type="System.String" Scope="Application">
       <Value Profile="(Default)">0.25</Value>
     </Setting>
     <Setting Name="ModPrototypeMode" Type="System.String" Scope="Application">
