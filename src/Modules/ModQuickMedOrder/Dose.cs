@@ -75,7 +75,7 @@ namespace ModQuickMedOrder
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="abatabSession"></param>
         private static void ComparePercentage(Session abatabSession)
@@ -198,6 +198,12 @@ namespace ModQuickMedOrder
 
                             // TODO This trace file should stay, and we might want to add a description to the msg.
                             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+
+                            var debugMsg_ = $"{prevDoseAsNumber} - {currDoseAsNumber} - {milligramDifference} - {basePercentage} - {finalPercent}";
+
+
+                            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+
                             // TODO Should be converted when setup.
                             var maxPercentIncrease = Convert.ToInt32(abatabSession.ModQuickMedOrderConfig.DosePercentMaxIncrease);
 
@@ -238,7 +244,7 @@ namespace ModQuickMedOrder
 
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="abatabSession"></param>
         /// <param name="fieldObject"></param>
@@ -274,7 +280,7 @@ namespace ModQuickMedOrder
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="abatabSession"></param>
         /// <param name="fieldObject"></param>
@@ -290,7 +296,7 @@ namespace ModQuickMedOrder
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="abatabSession"></param>
         /// <param name="fieldObject"></param>
@@ -306,7 +312,7 @@ namespace ModQuickMedOrder
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="abatabSession"></param>
         private static void WarningMissingPreviousDoseValue(Session abatabSession)
@@ -322,7 +328,7 @@ namespace ModQuickMedOrder
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="abatabSession"></param>
         private static void WarningMissingCurrentDoseValue(Session abatabSession)
