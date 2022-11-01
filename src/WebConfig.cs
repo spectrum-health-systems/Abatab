@@ -29,6 +29,7 @@ namespace Abatab
                 { "DebugMode",                              Settings.Default.DebugMode.ToLower() },
                 { "DebugLogRoot",                           Settings.Default.DebugLogRoot.ToLower() },
                 { "AbatabMode",                             Settings.Default.AbatabMode.ToLower() },
+                { "AbatabEnvironment",                      Settings.Default.AbatabEnvironment.ToLower() },
                 { "AbatabRoot",                             Settings.Default.AbatabRoot.ToLower() },
                 { "LogMode",                                Settings.Default.LogMode.ToLower() },
                 { "LogDetail",                              Settings.Default.LogDetail.ToLower() },

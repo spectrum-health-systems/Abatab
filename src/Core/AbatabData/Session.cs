@@ -13,6 +13,7 @@ namespace AbatabData
     public class Session
     {
         public string Mode { get; set; }
+        public string Env { get; set; }
         public string Root { get; set; }
         public string AvatarFallbackUserName { get; set; }
         public Core.Debuggler DebugglerConfig { get; set; }

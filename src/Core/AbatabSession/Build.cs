@@ -37,20 +37,21 @@ namespace AbatabSession
 
             var abatabSession = new Session
             {
-                Mode                              = abatabSettings["AbatabMode"],
-                Root                              = abatabSettings["AbatabRoot"],
+                Mode                   = abatabSettings["AbatabMode"],
+                Env                    = abatabSettings["AbatabEnvironment"],
+                Root                   = $@"{abatabSettings["AbatabRoot"]}\{abatabSettings["AbatabEnvironment"]}",
                 AvatarFallbackUserName = abatabSettings["AvatarFallbackUserName"],
-                SessionDateStamp                  = $"{DateTime.Now:yyMMdd}",
-                SessionTimeStamp                  = $"{DateTime.Now:HHmmss}",
-                AbatabRequest                     = scriptParameter.ToLower(),
-                AbatabModule                      = "undefined",
-                AbatabCommand                     = "undefined",
-                AbatabAction                      = "undefined",
-                AbatabOption                      = "undefined",
-                AvatarUserName                    = sentOptObj.OptionUserId,
-                SentOptObj                        = sentOptObj,
-                WorkOptObj                        = AbatabOptionObject.WorkObj.Build(sentOptObj),
-                FinalOptObj                       = new OptionObject2015()
+                SessionDateStamp       = $"{DateTime.Now:yyMMdd}",
+                SessionTimeStamp       = $"{DateTime.Now:HHmmss}",
+                AbatabRequest          = scriptParameter.ToLower(),
+                AbatabModule           = "undefined",
+                AbatabCommand          = "undefined",
+                AbatabAction           = "undefined",
+                AbatabOption           = "undefined",
+                AvatarUserName         = sentOptObj.OptionUserId,
+                SentOptObj             = sentOptObj,
+                WorkOptObj             = AbatabOptionObject.WorkObj.Build(sentOptObj),
+                FinalOptObj            = new OptionObject2015()
             };
 
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"]);
@@ -145,7 +146,7 @@ namespace AbatabSession
             abatabSession.DebugglerConfig = new AbatabData.Core.Debuggler
             {
                 Mode           = abatabSettings["DebugMode"],
-                DebugEventRoot = abatabSettings["DebugLogRoot"],
+                DebugEventRoot = $@"{abatabSession.Root}\{abatabSettings["DebugLogRoot"]}",
             };
         }
 
@@ -168,12 +169,12 @@ namespace AbatabSession
 
             abatabSession.LoggingConfig  = new Logging
             {
-                Mode = $"{abatabSettings["LogMode"]}",
-                Detail = $"{abatabSettings["LogDetail"]}",
-                WriteDelay = $"{abatabSettings["LogWriteDelay"]}",
-                SessionRoot = $@"{abatabSession.Root}\logs\{abatabSession.SessionDateStamp}\{abatabSession.AvatarUserName}\{abatabSession.SessionTimeStamp}",
-                EventErrorRoot = $@"{abatabSession.Root}\logs\error",
-                EventLostRoot = $@"{abatabSession.Root}\logs\lost",
+                Mode             = $"{abatabSettings["LogMode"]}",
+                Detail           = $"{abatabSettings["LogDetail"]}",
+                WriteDelay       = $"{abatabSettings["LogWriteDelay"]}",
+                SessionRoot      = $@"{abatabSession.Root}\logs\{abatabSession.SessionDateStamp}\{abatabSession.AvatarUserName}\{abatabSession.SessionTimeStamp}",
+                EventErrorRoot   = $@"{abatabSession.Root}\logs\error",
+                EventLostRoot    = $@"{abatabSession.Root}\logs\lost",
                 EventWarningRoot = $@"{abatabSession.Root}\logs\warning",
             };
 

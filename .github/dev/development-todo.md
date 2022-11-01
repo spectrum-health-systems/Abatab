@@ -26,6 +26,8 @@
 * [ ] Verify all dirs in a loop at the beginning
 * [ ] Refactor debugging log stuff
 
+Put environment in var
+
 LastScheduledDoseText:
 mgs diff
 QMO info after modification in .session  

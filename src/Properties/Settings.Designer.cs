@@ -34,7 +34,16 @@ namespace Abatab.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\AvatoolWebService\\Abatab_UAT")]
+        [global::System.Configuration.DefaultSettingValueAttribute("UAT")]
+        public string AbatabEnvironment {
+            get {
+                return ((string)(this["AbatabEnvironment"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\AvatoolWebService\\Abatab_")]
         public string AbatabRoot {
             get {
                 return ((string)(this["AbatabRoot"]));
@@ -61,7 +70,7 @@ namespace Abatab.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\AvatoolWebService\\Abatab_UAT\\logs\\debug")]
+        [global::System.Configuration.DefaultSettingValueAttribute("logs\\debug")]
         public string DebugLogRoot {
             get {
                 return ((string)(this["DebugLogRoot"]));
@@ -97,7 +106,7 @@ namespace Abatab.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("_Abatab_")]
+        [global::System.Configuration.DefaultSettingValueAttribute("_Abatab")]
         public string AvatarFallbackUserName {
             get {
                 return ((string)(this["AvatarFallbackUserName"]));
@@ -142,19 +151,19 @@ namespace Abatab.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("enabled")]
-        public string ModPrototypeMode {
+        [global::System.Configuration.DefaultSettingValueAttribute("20")]
+        public string ModQuickMedOrderDoseMaxMilligramIncrease {
             get {
-                return ((string)(this["ModPrototypeMode"]));
+                return ((string)(this["ModQuickMedOrderDoseMaxMilligramIncrease"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("20")]
-        public string ModQuickMedOrderDoseMaxMilligramIncrease {
+        [global::System.Configuration.DefaultSettingValueAttribute("enabled")]
+        public string ModPrototypeMode {
             get {
-                return ((string)(this["ModQuickMedOrderDoseMaxMilligramIncrease"]));
+                return ((string)(this["ModPrototypeMode"]));
             }
         }
     }
