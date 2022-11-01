@@ -273,8 +273,8 @@ namespace AbatabLogging
                                        $"====================";
 
             var modQuickMedOrderDetail = $"{Environment.NewLine}" +
-                                         $"Previous dose prefix:              \"{abatabSession.ModQuickMedOrderConfig.PrevDosePrefix}{Environment.NewLine}\"" +
-                                         $"Previous dose suffix:              \"{abatabSession.ModQuickMedOrderConfig.PrevDoseSuffix}{Environment.NewLine}\"" +
+                                         $"Previous dose prefix:              \"{abatabSession.ModQuickMedOrderConfig.PrevDosePrefix}\"{Environment.NewLine}" +
+                                         $"Previous dose suffix:              \"{abatabSession.ModQuickMedOrderConfig.PrevDoseSuffix}\"{Environment.NewLine}" +
                                          $"OrderType field ID:                {abatabSession.ModQuickMedOrderConfig.OrderTypeFieldId}{Environment.NewLine}" +
                                          $"Found OrderType field ID:          {abatabSession.ModQuickMedOrderConfig.FoundOrderTypeFieldId}{Environment.NewLine}" +
                                          $"OrderType:                         {abatabSession.ModQuickMedOrderConfig.OrderType}{Environment.NewLine}" +

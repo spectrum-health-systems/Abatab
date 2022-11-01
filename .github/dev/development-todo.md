@@ -26,8 +26,10 @@
 * [ ] Verify all dirs in a loop at the beginning
 * [ ] Refactor debugging log stuff
 
-LastScheduledDose:  
-
+LastScheduledDoseText:
+mgs diff
+QMO info after modification in .session  
+why is sentoptobj being modded?
 
 
 ## 0.94

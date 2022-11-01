@@ -81,88 +81,91 @@ namespace ModQuickMedOrder
 
                 foreach (FieldObject fieldObject in formObject.CurrentRow.Fields)
                 {
-                    /*
+                    /* Creating a trace log here would significantly impact performance, since hundreds of files would be created, so instead we will use a
+                     * debug log. This way trace log functionality won't be impacted elsewhere.
                      */
                     LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
-                    //LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
                     if (fieldObject.FieldNumber == abatabSession.ModQuickMedOrderConfig.DosageOneFieldId)
                     {
+                        LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+
                         ProcessDosageOneField(abatabSession, fieldObject);
                     }
                     else if (fieldObject.FieldNumber == abatabSession.ModQuickMedOrderConfig.OrderTypeFieldId)
                     {
+                        LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+
                         ProcessOrderTypeField(abatabSession, fieldObject);
                     }
                     else if (fieldObject.FieldNumber == abatabSession.ModQuickMedOrderConfig.LastOrderScheduleFieldId)
                     {
+                        LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+
                         ProcessLastScheduledOrderField(abatabSession, fieldObject);
                     }
                     else
                     {
-                        // TODO This trace file should stay, and we might want to add a description to the msg. Maybe this is an error log.
                         LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
-                        // Something may have gone wrong.
+                        // We aren't looking for whatever field we are currently on.
                     }
 
                     if (abatabSession.ModQuickMedOrderConfig.FoundDosageOneFieldId && abatabSession.ModQuickMedOrderConfig.FoundOrderTypeFieldId && abatabSession.ModQuickMedOrderConfig.FoundLastOrderScheduleFieldId)
                     {
-                        // TODO This trace file should stay, and we might want to add a description to the msg.
                         LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
-                        abatabSession.ModQuickMedOrderConfig.FoundAllRequiredFieldIds = true;
-                        // TODO Maybe go straight there? Maybe continue?
+                        abatabSession.ModQuickMedOrderConfig.FoundAllRequiredFieldIds = true; // TODO Maybe go straight there? Maybe continue?
+
                         break;
                     }
                 }
 
                 if (abatabSession.ModQuickMedOrderConfig.FoundAllRequiredFieldIds)
                 {
-                    // TODO This trace file should stay, and we might want to add a description to the msg.
+                    // TODO Might want to make put this in the original check.
+
                     LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
-                    // TODO Might want to make put this in the original check.
                     break;
                 }
             }
 
+            // TODO Break this out.
             /* OrderType 4 is recurring. Other order types may be added in the future.
              */
             if (abatabSession.ModQuickMedOrderConfig.OrderType == "4")
             {
-                /* Before we continue, we need to:
-                 *  1. Make sure there is a current dose (it's not blank)
-                 *  2. Get the previous dose. if there is one
-                 */
+                LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+
                 if (abatabSession.ModQuickMedOrderConfig.CurrentDose == "")
                 {
+                    LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+
                     WarningMissingCurrentDoseValue(abatabSession);
                 }
                 else if (abatabSession.ModQuickMedOrderConfig.LastOrderScheduleText == "")
                 {
+                    LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+
                     WarningMissingPreviousDoseValue(abatabSession);
                 }
                 else
                 {
-                    // TODO This trace file should stay, and we might want to add a description to the msg.
                     LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
                     var lastOrderScheduledLines = abatabSession.ModQuickMedOrderConfig.LastOrderScheduleText.Split('\n');
 
-                    // TODO This trace file should stay, and we might want to add a description to the msg.
                     LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
                     foreach (var line in lastOrderScheduledLines)
                     {
-                        // TODO This trace file should stay, and we might want to add a description to the msg.
                         LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
                         LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, abatabSession.ModQuickMedOrderConfig.LastOrderScheduleText);
 
                         if (line.Contains(abatabSession.ModQuickMedOrderConfig.PrevDosePrefix) && line.Contains(abatabSession.ModQuickMedOrderConfig.PrevDoseSuffix))
                         {
-                            // TODO This trace file should stay, and we might want to add a description to the msg.
                             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
                             var actualDose = line.Replace(abatabSession.ModQuickMedOrderConfig.PrevDosePrefix, "");
@@ -173,7 +176,6 @@ namespace ModQuickMedOrder
 
                         }
 
-                        // TODO This trace file should stay, and we might want to add a description to the msg.
                         LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
                         var debugMsg1a_ = $"{abatabSession.ModQuickMedOrderConfig.LastScheduledDosage} - {abatabSession.ModQuickMedOrderConfig.CurrentDose}";
@@ -196,18 +198,12 @@ namespace ModQuickMedOrder
 
                         if ((prevDoseAsNumber != currDoseAsNumber) && (prevDoseAsNumber !=0 && currDoseAsNumber != 0))
                         {
-                            // TODO This trace file should stay, and we might want to add a description to the msg.
                             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
                             double milligramDifference = (currDoseAsNumber - prevDoseAsNumber);
                             double basePercentage = prevDoseAsNumber / milligramDifference;
                             double percentDifference = 100.0 - basePercentage;
-                            //decimal decimalDifference = Convert.ToDecimal(percentDifference);
 
-
-
-
-                            // TODO This trace file should stay, and we might want to add a description to the msg.
                             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
                             var debugMsg2_ = $"[{prevDoseAsNumber}] [{currDoseAsNumber}] [{milligramDifference}] [{basePercentage}] [{percentDifference}]";
@@ -217,11 +213,8 @@ namespace ModQuickMedOrder
                             var maxPercentIncrease = Convert.ToDouble(abatabSession.ModQuickMedOrderConfig.DoseMaxPercentIncrease);
 
                             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, maxPercentIncrease.ToString());
-
-                            //if (basePercentage >= maxPercentIncrease)
                             if (percentDifference >= maxPercentIncrease)
                             {
-                                // TODO This trace file should stay, and we might want to add a description to the msg.
                                 LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
                                 var niceString = string.Format("{0:0.#}", percentDifference);
@@ -240,25 +233,27 @@ namespace ModQuickMedOrder
                             }
                             else
                             {
-                                // Everything is fine?
+                                LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+
+                                // Percentage isn't greater
+                                // TODO Maybe make this == or something.
                             }
                         }
                         else
                         {
-                            // Something goes here?
+                            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+
+                            // Dosages are the same
+                            // TODO More efficient way to do this?
                         }
                     }
                 }
             }
             else
             {
-                // Not a currently valid OrderType
+                // Not a currently valid OrderType (4)
             }
-
-
-
         }
-
 
         /// <summary>
         ///
