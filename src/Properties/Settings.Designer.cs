@@ -148,5 +148,14 @@ namespace Abatab.Properties {
                 return ((string)(this["ModPrototypeMode"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("20")]
+        public string ModQuickMedOrderDoseMaxMilligramIncrease {
+            get {
+                return ((string)(this["ModQuickMedOrderDoseMaxMilligramIncrease"]));
+            }
+        }
     }
 }

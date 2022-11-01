@@ -67,7 +67,7 @@ namespace ModQuickMedOrder
             abatabSession.ModQuickMedOrderConfig.LastOrderScheduleFieldId      = "142";
             abatabSession.ModQuickMedOrderConfig.FoundLastOrderScheduleFieldId = false;
             abatabSession.ModQuickMedOrderConfig.LastOrderScheduleText         = "";
-            abatabSession.ModQuickMedOrderConfig.LastOrderScheduleText         = "0.0";
+            abatabSession.ModQuickMedOrderConfig.LastScheduledDosage           = "0.0";
             abatabSession.ModQuickMedOrderConfig.FoundAllRequiredFieldIds      = false;
 
             LogEvent.ModQuickMedOrder(abatabSession);
