@@ -1,7 +1,7 @@
-﻿// AbatabLogging 0.95.0
+﻿// AbatabLogging 0.96.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221031.163946
+// b221101.093903
 
 /* ========================================================================================================
  * PLEASE READ
