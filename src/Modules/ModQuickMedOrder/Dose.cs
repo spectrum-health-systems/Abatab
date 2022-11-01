@@ -25,21 +25,11 @@ namespace ModQuickMedOrder
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
-            //var shouldExecute = ModCommon.Verify.ValidUser(abatabSession.AvatarUserName, abatabSession.ModQuickMedOrderConfig.ValidUsers);
-            //LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
-
-            //if (shouldExecute)
-            //{
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
-
             InitializeDoseData(abatabSession);
 
             AbatabOptionObject.WorkObj.ClearErrorData(abatabSession);
 
             ComparePercentage(abatabSession);
-
-            //LogEvent.ModQuickMedOrder(abatabSession);
-            //}
 
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
         }
@@ -74,9 +64,7 @@ namespace ModQuickMedOrder
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
         }
 
-        /// <summary>
-        ///
-        /// </summary>
+        /// <summary></summary>
         /// <param name="abatabSession"></param>
         private static void ComparePercentage(Session abatabSession)
         {
@@ -89,13 +77,14 @@ namespace ModQuickMedOrder
              */
             foreach (FormObject formObject in abatabSession.SentOptObj.Forms)
             {
-                // TODO This will create *tons* of log files, and should probably be it's own class of trace.
                 LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
                 foreach (FieldObject fieldObject in formObject.CurrentRow.Fields)
                 {
-                    // TODO This will create *tons* of log files, and should probably be it's own class of trace.
-                    LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+                    /*
+                     */
+                    LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
+                    //LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
                     if (fieldObject.FieldNumber == abatabSession.ModQuickMedOrderConfig.DosageOneFieldId)
                     {
