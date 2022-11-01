@@ -6,7 +6,6 @@
 using Abatab.Properties;
 using AbatabLogging;
 using System.Collections.Generic;
-using System.Reflection;
 
 namespace Abatab
 {
@@ -21,7 +20,7 @@ namespace Abatab
         /// <returns>A dictionary containing the settings from Web.config.</returns>
         public static Dictionary<string, string> Load()
         {
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG]");
+            //?LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG]");
             // Can't really put a trace log here.
 
             var webConfig =  new Dictionary<string, string>

@@ -27,13 +27,13 @@ namespace AbatabSession
         /// <returns>Session configuration settings.</returns>
         public static Session NewSession(OptionObject2015 sentOptObj, string scriptParameter, Dictionary<string, string> abatabSettings)
         {
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"], "[DEBUG]");
+            //?LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"], "[DEBUG]");
             // Can't really put a trace log here.
 
             //var debug_ = $"TEST:{abatabSettings["LogMode"]} - {abatabSettings["LogDetail"]} - {abatabSettings["LogWriteDelay"]}";
             var debug_ = $"TEST-- {abatabSettings["LogMode"]}";
 
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"], debug_);
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], $@"{abatabSettings["AbatabRoot"]}\{abatabSettings["DebugLogRoot"]}", debug_);
 
             var abatabSession = new Session
             {
