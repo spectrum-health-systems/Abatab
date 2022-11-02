@@ -28,6 +28,9 @@
 
 Put environment in var
 
+Valid users for testing, prototype, etc.
+
+
 LastScheduledDoseText:
 mgs diff
 QMO info after modification in .session  

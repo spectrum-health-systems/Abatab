@@ -2,9 +2,13 @@
 
 ## Debug logs
 
+* [DEBUG]
+
 ### PrimevalDebug log
 
 ## Trace logs
+
+* [TRACE]
 
 ## Session logs
 

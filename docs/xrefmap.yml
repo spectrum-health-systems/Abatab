@@ -540,6 +540,19 @@ references:
   isSpec: "True"
   fullName: AbatabData.Session.AbatabCommand
   nameWithType: Session.AbatabCommand
+- uid: AbatabData.Session.AbatabFallbackUserName
+  name: AbatabFallbackUserName
+  href: api/AbatabData.Session.html#AbatabData_Session_AbatabFallbackUserName
+  commentId: P:AbatabData.Session.AbatabFallbackUserName
+  fullName: AbatabData.Session.AbatabFallbackUserName
+  nameWithType: Session.AbatabFallbackUserName
+- uid: AbatabData.Session.AbatabFallbackUserName*
+  name: AbatabFallbackUserName
+  href: api/AbatabData.Session.html#AbatabData_Session_AbatabFallbackUserName_
+  commentId: Overload:AbatabData.Session.AbatabFallbackUserName
+  isSpec: "True"
+  fullName: AbatabData.Session.AbatabFallbackUserName
+  nameWithType: Session.AbatabFallbackUserName
 - uid: AbatabData.Session.AbatabModule
   name: AbatabModule
   href: api/AbatabData.Session.html#AbatabData_Session_AbatabModule
@@ -579,32 +592,19 @@ references:
   isSpec: "True"
   fullName: AbatabData.Session.AbatabRequest
   nameWithType: Session.AbatabRequest
-- uid: AbatabData.Session.AvatarFallbackUserName
-  name: AvatarFallbackUserName
-  href: api/AbatabData.Session.html#AbatabData_Session_AvatarFallbackUserName
-  commentId: P:AbatabData.Session.AvatarFallbackUserName
-  fullName: AbatabData.Session.AvatarFallbackUserName
-  nameWithType: Session.AvatarFallbackUserName
-- uid: AbatabData.Session.AvatarFallbackUserName*
-  name: AvatarFallbackUserName
-  href: api/AbatabData.Session.html#AbatabData_Session_AvatarFallbackUserName_
-  commentId: Overload:AbatabData.Session.AvatarFallbackUserName
+- uid: AbatabData.Session.AbatabUserName
+  name: AbatabUserName
+  href: api/AbatabData.Session.html#AbatabData_Session_AbatabUserName
+  commentId: P:AbatabData.Session.AbatabUserName
+  fullName: AbatabData.Session.AbatabUserName
+  nameWithType: Session.AbatabUserName
+- uid: AbatabData.Session.AbatabUserName*
+  name: AbatabUserName
+  href: api/AbatabData.Session.html#AbatabData_Session_AbatabUserName_
+  commentId: Overload:AbatabData.Session.AbatabUserName
   isSpec: "True"
-  fullName: AbatabData.Session.AvatarFallbackUserName
-  nameWithType: Session.AvatarFallbackUserName
-- uid: AbatabData.Session.AvatarUserName
-  name: AvatarUserName
-  href: api/AbatabData.Session.html#AbatabData_Session_AvatarUserName
-  commentId: P:AbatabData.Session.AvatarUserName
-  fullName: AbatabData.Session.AvatarUserName
-  nameWithType: Session.AvatarUserName
-- uid: AbatabData.Session.AvatarUserName*
-  name: AvatarUserName
-  href: api/AbatabData.Session.html#AbatabData_Session_AvatarUserName_
-  commentId: Overload:AbatabData.Session.AvatarUserName
-  isSpec: "True"
-  fullName: AbatabData.Session.AvatarUserName
-  nameWithType: Session.AvatarUserName
+  fullName: AbatabData.Session.AbatabUserName
+  nameWithType: Session.AbatabUserName
 - uid: AbatabData.Session.DebugglerConfig
   name: DebugglerConfig
   href: api/AbatabData.Session.html#AbatabData_Session_DebugglerConfig
@@ -1267,6 +1267,25 @@ references:
   commentId: N:ModCommon
   fullName: ModCommon
   nameWithType: ModCommon
+- uid: ModCommon.ModuleAccess
+  name: ModuleAccess
+  href: api/ModCommon.ModuleAccess.html
+  commentId: T:ModCommon.ModuleAccess
+  fullName: ModCommon.ModuleAccess
+  nameWithType: ModuleAccess
+- uid: ModCommon.ModuleAccess.IsValidUser(System.String,System.String)
+  name: IsValidUser(String, String)
+  href: api/ModCommon.ModuleAccess.html#ModCommon_ModuleAccess_IsValidUser_System_String_System_String_
+  commentId: M:ModCommon.ModuleAccess.IsValidUser(System.String,System.String)
+  fullName: ModCommon.ModuleAccess.IsValidUser(System.String, System.String)
+  nameWithType: ModuleAccess.IsValidUser(String, String)
+- uid: ModCommon.ModuleAccess.IsValidUser*
+  name: IsValidUser
+  href: api/ModCommon.ModuleAccess.html#ModCommon_ModuleAccess_IsValidUser_
+  commentId: Overload:ModCommon.ModuleAccess.IsValidUser
+  isSpec: "True"
+  fullName: ModCommon.ModuleAccess.IsValidUser
+  nameWithType: ModuleAccess.IsValidUser
 - uid: ModCommon.Roundhouse
   name: Roundhouse
   href: api/ModCommon.Roundhouse.html

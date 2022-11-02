@@ -33,7 +33,7 @@ namespace Abatab
                 { "LogMode",                                Settings.Default.LogMode.ToLower() },
                 { "LogDetail",                              Settings.Default.LogDetail.ToLower() },
                 { "LogWriteDelay",                          Settings.Default.LogWriteDelayDetail.ToLower() },
-                { "AvatarFallbackUserName",                 Settings.Default.AvatarFallbackUserName.ToLower() },
+                { "AbatabFallbackUserName",                 Settings.Default.AbatabFallbackUserName.ToLower() },
                 { "ModQuickMedOrderMode",                   Settings.Default.ModQuickMedOrderMode.ToLower() },
                 { "ModQuickMedOrderValidUsers",             Settings.Default.ModQuickMedOrderValidUsers.ToLower() },
                 { "ModQuickMedOrderDoseMaxPercentIncrease", Settings.Default.ModQuickMedOrderDoseMaxPercentIncrease.ToLower() },
