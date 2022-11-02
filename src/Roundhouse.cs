@@ -10,12 +10,12 @@ using System.Reflection;
 namespace Abatab
 {
     /// <summary>
-    /// Roundhouse functionality for Abatab.
+    /// Determines what should be done with the Command component of the Script Parameter sent from Avatar.
     /// </summary>
     public static class Roundhouse
     {
         /// <summary>
-        /// Determines where a script parameter request should go.
+        /// Determines which Abatab Module should get the Action/
         /// </summary>
         /// <param name="abatabSession">Information/data for this session of Abatab.</param>
         public static void ParseRequest(Session abatabSession)

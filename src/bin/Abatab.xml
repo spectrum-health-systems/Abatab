@@ -16,7 +16,7 @@
             <returns>The current version of Abatab.</returns>
             <remarks>
             * This method is required by Avatar.
-            * The version number is always the version that is in development. For example, while developing v1.0, this will return 1.0.
+            * The version number is always the version that is in development. For example, while developing v1.0, this will return <c>1.0</c>.
             </remarks>
             <example>1.0</example>
         </member>

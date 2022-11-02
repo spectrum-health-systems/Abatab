@@ -28,7 +28,7 @@ namespace Abatab
         /// <returns>The current version of Abatab.</returns>
         /// <remarks>
         /// * This method is required by Avatar.
-        /// * The version number is always the version that is in development. For example, while developing v1.0, this will return 1.0.
+        /// * The version number is always the version that is in development. For example, while developing v1.0, this will return <c>1.0</c>.
         /// </remarks>
         /// <example>1.0</example>
         [WebMethod]
@@ -40,12 +40,12 @@ namespace Abatab
         /// <summary>
         /// Executes script parameter request from Avatar, then returns a potentially modified OptionObject to Avatar.
         /// </summary>
-        /// <remarks>
-        /// This method is required by Avatar.
-        /// </remarks>
         /// <param name="sentOptionObject">The original OptionObject sent from Avatar.</param>
         /// <param name="scriptParameter">The original Script Parameter request from Avatar.</param>
         /// <returns>A finalized OptionObject.</returns>
+        /// <remarks>
+        /// * This method is required by Avatar.
+        /// </remarks>
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string scriptParameter)
         {
