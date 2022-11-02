@@ -12,8 +12,8 @@ namespace AbatabLogging
         /// summary describing its purpose.
         /// </summary>
         /// <remarks>
-        /// You can expand on that one sentence summary to provide more information for readers. In this case, the <c>ExampleClass</c> provides different C# elements to
-        /// show how you would add documentation comments for most elements in a typical class.
+        /// You can expand on that one sentence summary to provide more information for readers. In this case, the <c>ExampleClass</c> provides different C# elements to show
+        /// how you would add documentation comments for most elements in a typical class.
         /// <para>
         /// The remarks can add multiple paragraphs, so you can write detailed information for developers that use
         /// your work. You should add everything needed for
