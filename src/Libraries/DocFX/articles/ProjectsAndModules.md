@@ -6,38 +6,36 @@ Abatab is comprised of Abatab *projects*, and Abatab *modules*.
 
 Abatab projects make up the core functionality of Abatab, and most likely won't change that often.
 
-* [Abatab.csproj][SrcDocAbatab]  
+* **Abatab**  
 The main entry point for Abatab.
 
-* [AbatabData.csproj][SrcDocAbatabData]  
-TBD
+* **AbatabData**  
+Mostly object definitions
 
-* [AbatabLogging.csproj][SrcDocAbatabLogging]  
-TBD
+* **AbatabLogging**  
+Logging functionality.
 
-* [AbatabOptionObject.csproj][SrcDocAbatabOptionObject]  
-TBD
+* **AbatabOptionObject**  
+Logic for working with OptionObjects.
 
-* [AbatabSession.csproj][SrcDocAbatabSession]  
+* **AbatabSession.csproj**  
 Logic for Abatab sessions.
 
-* [AbatabSystem.csproj][SrcDocAbatabSystem]  
-TBD
+* **AbatabSystem.csproj**  
+Depreciated
 
 ## Modules
 
 Abatab modules make up the extended functionality of Abatab.
 
-* [Module: Common][SrcDocModCommon]  
-TBD
+* **Common**  
+Common fucntionality used by multiple modules.
 
-* [Module: Prototype][SrcDocModPrototype]  
-TBD
+* **Prototype**  
+Allows the development of functionality in the LIVE environment.
 
-* [Module: QuickMedOrder][SrcDocModQuickMedOrder]  
-TBD
+* **QuickMedOrder**  
+Quick Medication Order functionality.
 
-* [Module: Testing][SrcDocModTesting]  
-TBD
-
-<br>
+* **Testing**  
+Generally used for development/debugging.

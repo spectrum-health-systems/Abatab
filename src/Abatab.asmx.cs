@@ -30,7 +30,6 @@ namespace Abatab
         /// * This method is required by Avatar.
         /// * The version number is always the version that is in development. For example, while developing v1.0, this will return <c>1.0</c>.
         /// </remarks>
-        /// <example>1.0</example>
         [WebMethod]
         public string GetVersion()
         {
@@ -45,6 +44,8 @@ namespace Abatab
         /// <returns>A finalized OptionObject.</returns>
         /// <remarks>
         /// * This method is required by Avatar.
+        /// * This is the only time a PrimevalDebug log is written.
+        /// * This method should remain fairly static, sicne most of the logic is taken care of by external projects.
         /// </remarks>
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string scriptParameter)

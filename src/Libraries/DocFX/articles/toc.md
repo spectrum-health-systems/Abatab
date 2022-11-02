@@ -3,5 +3,6 @@
 # [Versioning](Versioning.md)
 # [Comments](Comments.md)
 # [Variables](Variables.md)
+# [Logging](Logging.md)
 # [Projects and modules](ProjectsAndModules.md)
 # [Additional reading](AdditionalReading.md)
