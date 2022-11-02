@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AbatabSystem</name>
+    </assembly>
+    <members>
+        <member name="T:AbatabSystem.Maintenance">
+            <summary>
+            Logic for general maintenance stuff.
+            </summary>
+        </member>
+        <member name="M:AbatabSystem.Maintenance.VerifyDir(System.String)">
+            <summary>
+            Verifies directory exists, and create if not.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,7 +1,7 @@
-﻿// AbatabLogging 0.94.0
+﻿// AbatabLogging 0.96.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221025.075408
+// b221102.094514
 
 /* ========================================================================================================
  * PLEASE READ
@@ -168,7 +168,7 @@ namespace AbatabLogging
             var sessionHead = $"{Environment.NewLine}" +
                               $"==============={Environment.NewLine}" +
                               $"Session details{Environment.NewLine}" +
-                              $"===============";
+                              "===============";
 
             var sessionDetail = $"{Environment.NewLine}" +
                                 $"Abatab Mode:         {abatabSession.Mode}{Environment.NewLine}" +
@@ -233,7 +233,7 @@ namespace AbatabLogging
                     LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot);
                     moduleDetail = $"Mode:                 {abatabSession.ModQuickMedOrderConfig.Mode}{Environment.NewLine}" +
                                    $"Valid users:          {abatabSession.ModQuickMedOrderConfig.ValidUsers}{Environment.NewLine}" +
-                                   $"Max percent increase: {abatabSession.ModQuickMedOrderConfig.DosePercentMaxIncrease}";
+                                   $"Max percent increase: {abatabSession.ModQuickMedOrderConfig.DoseMaxPercentIncrease}";
                     break;
 
                 case "prototype":
@@ -248,7 +248,7 @@ namespace AbatabLogging
 
                 default:
                     LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot);
-                    moduleDetail = $"Undefined.";
+                    moduleDetail = "Undefined.";
                     break;
             }
 
@@ -273,8 +273,8 @@ namespace AbatabLogging
                                        $"====================";
 
             var modQuickMedOrderDetail = $"{Environment.NewLine}" +
-                                         $"Previous dose prefix:              {abatabSession.ModQuickMedOrderConfig.PrevDosePrefix}{Environment.NewLine}" +
-                                         $"Previous dose suffix:              {abatabSession.ModQuickMedOrderConfig.PrevDoseSuffix}{Environment.NewLine}" +
+                                         $"Previous dose prefix:              \"{abatabSession.ModQuickMedOrderConfig.PrevDosePrefix}\"{Environment.NewLine}" +
+                                         $"Previous dose suffix:              \"{abatabSession.ModQuickMedOrderConfig.PrevDoseSuffix}\"{Environment.NewLine}" +
                                          $"OrderType field ID:                {abatabSession.ModQuickMedOrderConfig.OrderTypeFieldId}{Environment.NewLine}" +
                                          $"Found OrderType field ID:          {abatabSession.ModQuickMedOrderConfig.FoundOrderTypeFieldId}{Environment.NewLine}" +
                                          $"OrderType:                         {abatabSession.ModQuickMedOrderConfig.OrderType}{Environment.NewLine}" +
@@ -284,6 +284,7 @@ namespace AbatabLogging
                                          $"DosageOne field ID:                {abatabSession.ModQuickMedOrderConfig.DosageOneFieldId}{Environment.NewLine}" +
                                          $"Found DosageOne field ID:          {abatabSession.ModQuickMedOrderConfig.FoundDosageOneFieldId}{Environment.NewLine}" +
                                          $"CurrentDose:                       {abatabSession.ModQuickMedOrderConfig.CurrentDose}{Environment.NewLine}" +
+                                         $"LastScheduledDose:                 {abatabSession.ModQuickMedOrderConfig.LastScheduledDosage}{Environment.NewLine}" +
                                          $"Found all required fields:         {abatabSession.ModQuickMedOrderConfig.FoundAllRequiredFieldIds}{Environment.NewLine}";
 
             return $"{modQuickMedOrderHead}" +

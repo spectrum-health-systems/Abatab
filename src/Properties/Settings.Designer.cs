@@ -25,7 +25,7 @@ namespace Abatab.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("passthrough")]
+        [global::System.Configuration.DefaultSettingValueAttribute("normal")]
         public string AbatabMode {
             get {
                 return ((string)(this["AbatabMode"]));
@@ -34,7 +34,16 @@ namespace Abatab.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\AvatoolWebService\\Abatab_UAT")]
+        [global::System.Configuration.DefaultSettingValueAttribute("UAT")]
+        public string AbatabEnvironment {
+            get {
+                return ((string)(this["AbatabEnvironment"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\AvatoolWebService\\Abatab_")]
         public string AbatabRoot {
             get {
                 return ((string)(this["AbatabRoot"]));
@@ -43,7 +52,7 @@ namespace Abatab.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("on")]
+        [global::System.Configuration.DefaultSettingValueAttribute("off")]
         public string DebugMode {
             get {
                 return ((string)(this["DebugMode"]));
@@ -61,7 +70,7 @@ namespace Abatab.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\AvatoolWebService\\Abatab_UAT\\logs\\debug")]
+        [global::System.Configuration.DefaultSettingValueAttribute("logs\\debug")]
         public string DebugLogRoot {
             get {
                 return ((string)(this["DebugLogRoot"]));
@@ -97,7 +106,7 @@ namespace Abatab.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("_Abatab_")]
+        [global::System.Configuration.DefaultSettingValueAttribute("_Abatab")]
         public string AvatarFallbackUserName {
             get {
                 return ((string)(this["AvatarFallbackUserName"]));
@@ -134,9 +143,18 @@ namespace Abatab.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("0.25")]
-        public string ModQuickMedOrderDosePercentMaxIncrease {
+        public string ModQuickMedOrderDoseMaxPercentIncrease {
             get {
-                return ((string)(this["ModQuickMedOrderDosePercentMaxIncrease"]));
+                return ((string)(this["ModQuickMedOrderDoseMaxPercentIncrease"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("20")]
+        public string ModQuickMedOrderDoseMaxMilligramIncrease {
+            get {
+                return ((string)(this["ModQuickMedOrderDoseMaxMilligramIncrease"]));
             }
         }
         

@@ -1,7 +1,7 @@
-﻿// AbatabData 0.94.0
+﻿// AbatabData 0.96.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221025.075408
+// b221102.094514
 
 using NTST.ScriptLinkService.Objects;
 
@@ -13,6 +13,7 @@ namespace AbatabData
     public class Session
     {
         public string Mode { get; set; }
+        public string Env { get; set; }
         public string Root { get; set; }
         public string AvatarFallbackUserName { get; set; }
         public Core.Debuggler DebugglerConfig { get; set; }

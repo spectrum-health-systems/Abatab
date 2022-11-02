@@ -1,0 +1,221 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>
+    Abatab
+    v0.92.0
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="
+    Abatab
+    v0.92.0
+   ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc">
+    <meta property="docfx:tocrel" content="../toc">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+                
+                <ul class="nav level1 navbar-nav">
+                      <li>
+                          <a>Articles</a>
+                      </li>
+                      <li>
+                          <a href="../../api/index.html" title="API Documentation">API Documentation</a>
+                      </li>
+                </ul>    </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+
+<blockquote><p><a href="https://github.com/spectrum-health-systems/Abatab">Abatab</a> &gt; <strong>Source code documentation</strong></p>
+</blockquote>
+<p><br></p>
+<div align="center">
+
+  <img src="./res/img/SrcDocPng.png" alt="SrcDocPng">
+
+  <h1>
+    Abatab<br>
+    <b>v0.92.0</b>
+  </h1>
+
+</div>
+
+<h1 id="about">About</h1>
+<p>I would like to keep the Abatab source code pretty clean, so this documentation will provide details of what everthing does.</p>
+<p><br></p>
+<h1 id="sourcecode-headers">Sourcecode headers</h1>
+<p>Every class has a standard header:</p>
+<pre><code class="lang-#bash">/* Abatab.AbatabSettings.cs 0.92.0+221011.093856
+ * https://github.com/spectrum-health-systems/Abatab
+ * (c)2016-2022 A Pretty Cool Program
+ * https://github.com/spectrum-health-systems/Abatab/blob/main/doc/srcdoc/SrcDocHome.md
+ */
+</code></pre><h2 id="versions">Versions</h2>
+<p><a href="https://semver.org/">Semantic versioning</a> is used to indicate the current version of Abatab components.</p>
+<p><code>&lt;X&gt;.&lt;Y&gt;.&lt;Z&gt;-&lt;build type&gt;+&lt;yyMMdd.HHmmss&gt;</code></p>
+<p>Where:</p>
+<ul>
+<li><strong><code>&lt;X&gt;</code></strong> is a the major version</li>
+<li><strong><code>&lt;Y&gt;</code></strong> is a the minor version</li>
+<li><strong><code>&lt;Z&gt;</code></strong> is a the patch version</li>
+<li><strong><code>&lt;build type&gt;</code></strong> is a the (optional) release build type</li>
+<li><strong><code>&lt;yyMMdd.HHmmss&gt;</code></strong> is a the date/timestamp of the release (using 24-hour time)</li>
+</ul>
+<p>Examples:</p>
+<ul>
+<li>v1.0.0+210717.123033</li>
+<li>v1.1.1-rc.1+210717.123033</li>
+<li>v2.0.0-devbuild+210717.123033</li>
+</ul>
+<p><br></p>
+<h1 id="comments">Comments</h1>
+<p>Attempts have been made to make the Abatab source code as human-readable as possible, so I&#39;m keeping the comments to a minimum. The document you are currently reading is the primary source of information about how everything works.</p>
+<p>That being said, you will find the following types of comments in the MAWSC sourcecode:</p>
+<pre><code class="lang-#bash">/// XML comments used by Visual Studio
+</code></pre><pre><code class="lang-#bash">// Additional code description comment
+</code></pre><pre><code class="lang-#bash">/* Single-line narrative comment */
+</code></pre><pre><code class="lang-#bash">/* Multiple-line  
+ * narrative
+ * comment  
+ */
+</code></pre><h1 id="variables">Variables</h1>
+<h2 id="variable-prefixes">Variable prefixes</h2>
+<ul>
+<li><code>sent</code><br>If a variable name starts with &quot;sent&quot; (e.g., <code>sentValue</code>), the data it contains original data that should not be modified at any point.</li>
+<li><code>work</code><br>If a variable name starts with &quot;work&quot; (e.g., <code>workDictionary</code>), it will be used as a placeholder for modified data. </li>
+<li><code>final</code><br>If a variable name starts with &quot;final&quot; (e.g., <code>finalValue</code>), the data is in it&#39;s final form, and is most likely what will be returned from a method.</li>
+</ul>
+<h2 id="standard-casingtrimming-of-values">Standard casing/trimming of values</h2>
+<p>Most logic in Abatab is checked against lowercase values without any leading/trailing whitespace, so (in general) Abatab will reduce a variable to its trimmed, lowercase value. This is done as soon as possible, usually when a variable is declared.</p>
+<p>For example, if a variable has a value of &quot;<code>_ AValue_</code>&quot; (where the &quot;<code>_</code>&quot; character is whitespace), it will be converted to &quot;<code>avalue</code>&quot;. This way if the user has the incorrect casing for a setting called &quot;<code>EnableAllLogs</code>&quot;, Abayab will still be able to apply logic because it checks against &quot;<code>enablealllogs</code> (which isn&#39;t very user friendly).</p>
+<h2 id="multiple-value-strings">Multiple value strings</h2>
+<p>Multiple values are stored in strings, with each value seperated by a <code>-</code>&quot; character. For example, the following values:</p>
+<pre><code class="lang-#bash">Apple  
+Pear
+Orange
+</code></pre><p>would apprear as:</p>
+<p><code>Apple-Pear-Orange</code></p>
+<h1 id="projects-and-modules">Projects and Modules</h1>
+<p>Abatab is comprised of Abatab <em>projects</em>, and Abatab <em>modules</em>.</p>
+<h2 id="projects">Projects</h2>
+<p>Abatab projects make up the core functionality of Abatab, and most likely won&#39;t change that often.</p>
+<ul>
+<li><p><a href="/doc/srcdoc/SrcDocAbatab.md">Abatab.csproj</a><br>The main entry point for Abatab.</p>
+</li>
+<li><p><a href="/doc/srcdoc/SrcDocAbatabData.md">AbatabData.csproj</a><br>TBD</p>
+</li>
+<li><p><a href="/doc/srcdoc/SrcDocAbatabLogging.md">AbatabLogging.csproj</a><br>TBD</p>
+</li>
+<li><p><a href="/doc/srcdoc/SrcDocAbatabOptionObject.md">AbatabOptionObject.csproj</a><br>TBD</p>
+</li>
+<li><p><a href="/doc/srcdoc/SrcDocAbatabSession.md">AbatabSession.csproj</a><br>Logic for Abatab sessions.</p>
+</li>
+<li><p><a href="/doc/srcdoc/SrcDocAbatabSystem.md">AbatabSystem.csproj</a><br>TBD</p>
+</li>
+</ul>
+<h2 id="modules">Modules</h2>
+<p>Abatab modules make up the extended functionality of Abatab.</p>
+<ul>
+<li><p><a href="/doc/srcdoc/SrcDocModCommon.md">Module: Common</a><br>TBD</p>
+</li>
+<li><p><a href="/doc/srcdoc/SrcDocModPrototype.md">Module: Prototype</a><br>TBD</p>
+</li>
+<li><p><a href="/doc/srcdoc/SrcDocModQuickMedOrder.md">Module: QuickMedOrder</a><br>TBD</p>
+</li>
+<li><p><a href="/doc/srcdoc/SrcDocModTesting.md">Module: Testing</a><br>TBD</p>
+</li>
+</ul>
+<p><br></p>
+<h1 id="additional-reading">Additional reading</h1>
+<p>There is quite a bit of myAvatar-related information/documentation at the <a href="https://github.com/myAvatar-Development-Community/">myAvatar Development Community</a>.</p>
+<p><br></p>
+<hr>
+<blockquote><p><a href="https://github.com/spectrum-health-systems/Abatab">Abatab</a> &gt; <strong>Source code documentation</strong></p>
+</blockquote>
+<!-- REFERENCE LINKS -->
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

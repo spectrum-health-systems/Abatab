@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>AppData\Documentation\ModQuickMedOrder.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -63,6 +64,10 @@
       <Project>{2741df45-7db8-4bea-89b4-4a70c7114192}</Project>
       <Name>AbatabOptionObject</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\ThirdParty\NTST.ScriptLinkService.Objects\NTST.ScriptLinkService.Objects.vbproj">
+      <Project>{8a8a6089-3286-42e6-9f76-b61784709654}</Project>
+      <Name>NTST.ScriptLinkService.Objects</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ModCommon\ModCommon.csproj">
       <Project>{cbd27c27-b3cd-455e-af5d-4749ca219d53}</Project>
       <Name>ModCommon</Name>
@@ -73,6 +78,9 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AppData\Documentation\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

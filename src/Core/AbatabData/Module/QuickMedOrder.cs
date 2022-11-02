@@ -1,7 +1,7 @@
-﻿// AbatabData 0.94.0
+﻿// AbatabData 0.96.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221025.075408
+// b221102.094514
 
 namespace AbatabData.Module
 {
@@ -12,7 +12,7 @@ namespace AbatabData.Module
     {
         public string Mode { get; set; }
         public string ValidUsers { get; set; }
-        public string DosePercentMaxIncrease { get; set; }
+        public string DoseMaxPercentIncrease { get; set; }
         public string PrevDosePrefix { get; set; }
         public string PrevDoseSuffix { get; set; }
         public string DosageOneFieldId { get; set; }
@@ -24,6 +24,7 @@ namespace AbatabData.Module
         public string LastOrderScheduleFieldId { get; set; }
         public bool FoundLastOrderScheduleFieldId { get; set; }
         public string LastOrderScheduleText { get; set; }
+        public string LastScheduledDosage { get; set; }
         public bool FoundAllRequiredFieldIds { get; set; }
     }
 }

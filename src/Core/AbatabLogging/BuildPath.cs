@@ -1,7 +1,7 @@
-﻿// AbatabLogging 0.94.0
+﻿// AbatabLogging 0.96.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221025.075408
+// b221102.094514
 
 /* ========================================================================================================
  * PLEASE READ
@@ -14,6 +14,7 @@
  * it's a good idea to test the logging functionality extensively prior to deploying to production.
  ========================================================================================================*/
 
+using AbatabSystem;
 using System;
 using System.IO;
 
@@ -24,15 +25,17 @@ namespace AbatabLogging
     /// </summary>
     public static class BuildPath
     {
-        /// <summary>Builds a log file path.</summary>
+        /// <summary>
+        /// Builds a log file path with caller information.
+        /// </summary>
         /// <param name="eventType">The type of log to create.</param>
         /// <param name="logRoot">The session root directory.</param>
         /// <param name="exeAssembly">The name of executing assembly.</param>
         /// <param name="callPath">The filename of where the log is coming from.</param>
         /// <param name="callMember">The method name of where the log is coming from.</param>
         /// <param name="callLine">The file line of where the log is coming from.</param>
-        /// <returns>A completed log file path.</returns>
-        public static string FullPath(string eventType, string logRoot, string exeAssembly = "", string callPath = "", string callMember = "", int callLine = 0)
+        /// <returns>A completed log file path with caller information.</returns>
+        public static string WithCaller(string eventType, string logRoot, string exeAssembly = "", string callPath = "", string callMember = "", int callLine = 0)
         {
             // No log statement here (see comments at top of file)
 
@@ -54,15 +57,13 @@ namespace AbatabLogging
             }
         }
 
-        /// <summary>Builds a log file path.</summary>
+        /// <summary>
+        /// Builds a timestamped log file path.
+        /// </summary>
         /// <param name="eventType">The type of log to create.</param>
         /// <param name="logRoot">The session root directory.</param>
-        /// <param name="exeAssembly">The name of executing assembly.</param>
-        /// <param name="callPath">The filename of where the log is coming from.</param>
-        /// <param name="callMember">The method name of where the log is coming from.</param>
-        /// <param name="callLine">The file line of where the log is coming from.</param>
-        /// <returns>A completed log file path.</returns>
-        public static string FullPath(string eventType, string logRoot)
+        /// <returns>A completed log file path with a timestamp.</returns>
+        public static string Timestamped(string eventType, string logRoot)
         {
             // No log statement here (see comments at top of file)
 
@@ -90,57 +91,76 @@ namespace AbatabLogging
         }
 
         /// <summary>
-        ///
+        /// Builds a log file path with the log message in the name.
         /// </summary>
-        /// <param name="logRoot"></param>
-        /// <param name="dateStamp"></param>
-        /// <returns></returns>
+        /// <param name="eventType">The type of log to create.</param>
+        /// <param name="logRoot">The session root directory.</param>
+        /// <param name="logMsg">The log message.</param>
+        /// <returns>A log file path with the log message in the name.</returns>
+        public static string MessageName(string eventType, string logRoot, string logMsg)
+        {
+            // No log statement here (see comments at top of file)
+
+            string logDir;
+
+            switch (eventType.ToLower())
+            {
+                case "access":
+                    return $@"{logRoot}\{logMsg}.{eventType}";
+
+                default:
+                    logDir = BuildLostLogDir(logRoot);
+                    return $@"{logDir}\{DateTime.Now:HHmmss_fffffff}.{eventType}";
+            }
+        }
+        /// <summary>
+        /// Build the path to a debug log.
+        /// </summary>
+        /// <param name="logRoot">The log root.</param>
+        /// <returns>The path to the log root.</returns>
         private static string BuildDebugLogDir(string logRoot)
         {
             var debugLogDir = $@"{logRoot}\{DateTime.Now:yyMMdd}";
-            AbatabSystem.Maintenance.VerifyDir(debugLogDir);
+            Maintenance.VerifyDir(debugLogDir);
 
             return debugLogDir;
         }
 
         /// <summary>
-        ///
+        /// Build the path to a lost log.
         /// </summary>
-        /// <param name="logRoot"></param>
-        /// <param name="dateStamp"></param>
-        /// <returns></returns>
+        /// <param name="logRoot">The log root.</param>
+        /// <returns>The path to the log root.</returns>
         private static string BuildLostLogDir(string logRoot)
         {
             var lostLogDir = $@"{logRoot}\{DateTime.Now:yyMMdd}";
-            AbatabSystem.Maintenance.VerifyDir(lostLogDir);
+            Maintenance.VerifyDir(lostLogDir);
 
             return lostLogDir;
         }
 
         /// <summary>
-        ///
+        /// Build the path to a primeval debug log.
         /// </summary>
-        /// <param name="logRoot"></param>
-        /// <param name="dateStamp"></param>
-        /// <returns></returns>
+        /// <param name="logRoot">The log root.</param>
+        /// <returns>The path to the log root.</returns>
         private static string BuildPrimevalDebugLogDir(string logRoot)
         {
             var debugLogDir = $@"{logRoot}\debug\{DateTime.Now:yyMMdd}";
-            AbatabSystem.Maintenance.VerifyDir(debugLogDir);
+            Maintenance.VerifyDir(debugLogDir);
 
             return debugLogDir;
         }
 
         /// <summary>
-        ///
+        /// Build the path to a trace log.
         /// </summary>
-        /// <param name="logRoot"></param>
-        /// <param name="dateStamp"></param>
-        /// <returns></returns>
+        /// <param name="logRoot">The log root.</param>
+        /// <returns>The path to the log root.</returns>
         private static string BuildTraceLogDir(string traceLogRoot)
         {
             var traceLogDir = $@"{traceLogRoot}\trace";
-            AbatabSystem.Maintenance.VerifyDir(traceLogDir);
+            Maintenance.VerifyDir(traceLogDir);
 
             return traceLogDir;
         }

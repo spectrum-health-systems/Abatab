@@ -4,16 +4,19 @@
 
 * [ ] Dose code
 * [ ] Test:
-  * [ ] Valid user setting
+  * [X] Valid user setting
 * [ ] Logging
   * [ ] Standard logging (session, modules, etc.)
+  * [ ] Error logs
   * [ ] Detailed log type
   * [ ] logs/lost (and test)
   * [ ] logs/warning
 * [ ] Cleanup
   * [ ] Project references
-  * [ ] settings order
+  * [ ] settings order match logging order
   * [ ] WebConfig.Load() order to match rest of code
+  * [ ] XML comments
+  * [ ] public/private/interna
 * [ ] Logging types: all-none-trace-session
 * [ ] Test logging types via Web.config
 * [ ] Version someplace
@@ -22,6 +25,14 @@
 * [ ] Debug write delay in config
 * [ ] Verify all dirs in a loop at the beginning
 * [ ] Refactor debugging log stuff
+
+Put environment in var
+
+LastScheduledDoseText:
+mgs diff
+QMO info after modification in .session  
+why is sentoptobj being modded?
+
 
 ## 0.94
 
@@ -63,8 +74,9 @@
 * [ ] Move classes in Abatab\ to Core\?
 * [ ] Du integration
 * [ ] Flightpath
+* [ ] static log messages in settings file
 
 
 
-/// <param name="sentOptionObject">The original OptionObject sent from Avatar.</param>
-/// <param name="scriptParameter">The original Script Parameter request from Avatar.</param>
+* [ ] Better method names so user knows what/where things point from other projects.
+ex. AbatabOptionObject.FinalObj.Finalize(abatabSession) should be something like "FinalOptObj.Finalize", so we can declare the project in the usings section

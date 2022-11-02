@@ -32,6 +32,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>AppData\Documentation\Abatab.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -108,6 +109,10 @@
       <Project>{A4467424-56E0-4260-BB21-D98263D7AEFD}</Project>
       <Name>AbatabLogging</Name>
     </ProjectReference>
+    <ProjectReference Include="Core\AbatabOptionObject\AbatabOptionObject.csproj">
+      <Project>{2741df45-7db8-4bea-89b4-4a70c7114192}</Project>
+      <Name>AbatabOptionObject</Name>
+    </ProjectReference>
     <ProjectReference Include="Core\AbatabSession\AbatabSession.csproj">
       <Project>{5FCAD3F6-0AA9-4BEE-B390-097A6832568E}</Project>
       <Name>AbatabSession</Name>
@@ -133,7 +138,9 @@
       <Name>NTST.ScriptLinkService.Objects</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="AppData\Documentation\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

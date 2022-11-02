@@ -1,7 +1,7 @@
-﻿// AbatabLogging 0.94.0
+﻿// AbatabLogging 0.96.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221025.075408
+// b221102.094514
 
 /* ========================================================================================================
  * PLEASE READ #1
@@ -45,9 +45,6 @@ namespace AbatabLogging
     /// </summary>
     public static class Debuggler
     {
-
-
-
         /// <summary>Debugs the debugger.</summary>
         /// <param name="debugDebugger">The flag that determines if the debugger should be debugged.</param>
         /// <param name="debugLogRoot">The debug log root directory.</param>
@@ -56,7 +53,7 @@ namespace AbatabLogging
         {
             if (debugDebugger)
             {
-                var debugLogPath = BuildPath.FullPath("debuggler", debugLogRoot);
+                var debugLogPath = BuildPath.Timestamped("debuggler", debugLogRoot);
 
                 /* It is recommended that you keep this at 0.
                  */

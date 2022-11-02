@@ -1,12 +1,11 @@
-﻿// Abatab 0.94.0
+﻿// Abatab 0.96.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221025.075408
+// b221102.094514
 
 using Abatab.Properties;
 using AbatabLogging;
 using System.Collections.Generic;
-using System.Reflection;
 
 namespace Abatab
 {
@@ -18,13 +17,10 @@ namespace Abatab
         /// <summary>
         /// Load the settings from Web.config.
         /// </summary>
-        /// <remarks>
-        /// If a setting is added/removed/modified in Web.config, it needs to be reflected here.
-        /// </remarks>
         /// <returns>A dictionary containing the settings from Web.config.</returns>
         public static Dictionary<string, string> Load()
         {
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG]");
+            //?LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG]");
             // Can't really put a trace log here.
 
             var webConfig =  new Dictionary<string, string>
@@ -32,6 +28,7 @@ namespace Abatab
                 { "DebugMode",                              Settings.Default.DebugMode.ToLower() },
                 { "DebugLogRoot",                           Settings.Default.DebugLogRoot.ToLower() },
                 { "AbatabMode",                             Settings.Default.AbatabMode.ToLower() },
+                { "AbatabEnvironment",                      Settings.Default.AbatabEnvironment.ToLower() },
                 { "AbatabRoot",                             Settings.Default.AbatabRoot.ToLower() },
                 { "LogMode",                                Settings.Default.LogMode.ToLower() },
                 { "LogDetail",                              Settings.Default.LogDetail.ToLower() },
@@ -39,7 +36,7 @@ namespace Abatab
                 { "AvatarFallbackUserName",                 Settings.Default.AvatarFallbackUserName.ToLower() },
                 { "ModQuickMedOrderMode",                   Settings.Default.ModQuickMedOrderMode.ToLower() },
                 { "ModQuickMedOrderValidUsers",             Settings.Default.ModQuickMedOrderValidUsers.ToLower() },
-                { "ModQuickMedOrderDosePercentMaxIncrease", Settings.Default.ModQuickMedOrderDosePercentMaxIncrease.ToLower() },
+                { "ModQuickMedOrderDoseMaxPercentIncrease", Settings.Default.ModQuickMedOrderDoseMaxPercentIncrease.ToLower() },
                 { "ModPrototypeMode",                       Settings.Default.ModPrototypeMode.ToLower() },
                 { "ModTestingMode",                         Settings.Default.ModTestingMode.ToLower() }
             };
@@ -50,7 +47,6 @@ namespace Abatab
             }
 
             return webConfig;
-
         }
     }
 }
