@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CD517016-3ECF-43A5-8149-5CACD90DF2A3}</ProjectGuid>
+    <ProjectGuid>{F13365BE-B3C8-4D2E-B35D-A169CD6850D3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DocFX</RootNamespace>
