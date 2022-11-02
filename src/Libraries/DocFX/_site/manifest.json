@@ -489,7 +489,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ModQuickMedOrder.Dose.html",
-          "hash": "BmhuD69DX1lK3xyzEkGj8oq9drfSuX1qKtshqYPdme8="
+          "hash": "HATzadalFh9v9KGSh9xzw4vlvW0zRitJmZsCJwGnCVI="
         }
       },
       "is_incremental": false,
@@ -513,7 +513,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ModQuickMedOrder.html",
-          "hash": "AyQy0n2D1N1zLLE7N9j3PXX2bneeZqi36ncbsODoLG0="
+          "hash": "5clkPfqWI4CLdN/rvcYVcvAEdyjVP/fgRMK71BhFcSE="
         }
       },
       "is_incremental": false,

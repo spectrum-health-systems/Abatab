@@ -12,7 +12,7 @@ using System.Reflection;
 namespace ModQuickMedOrder
 {
     /// <summary>
-    /// Dose logic for the QuickMedOrder module.
+    /// Dose logic for the QuickMedOrder moduleeee.
     /// </summary>
     public static class Dose
     {

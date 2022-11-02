@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Abatab</name>
+    </assembly>
+    <members>
+        <member name="T:Abatab.Abatab">
+            <summary>
+            The entry point for Abatab.
+            </summary>
+        </member>
+        <member name="M:Abatab.Abatab.GetVersion">
+            <summary>
+            Returns the current version of Abatab.
+            </summary>
+            <remarks>
+            This method is required by Avatar.
+            </remarks>
+            <returns>The current version of Abatab.</returns>
+        </member>
+        <member name="M:Abatab.Abatab.RunScript(NTST.ScriptLinkService.Objects.OptionObject2015,System.String)">
+            <summary>
+            Executes script parameter request from Avatar, then returns a potentially modified OptionObject to Avatar.
+            </summary>
+            <remarks>
+            This method is required by Avatar.
+            </remarks>
+            <param name="sentOptionObject">The original OptionObject sent from Avatar.</param>
+            <param name="scriptParameter">The original Script Parameter request from Avatar.</param>
+            <returns>A finalized OptionObject.</returns>
+        </member>
+        <member name="T:Abatab.Roundhouse">
+            <summary>
+            Roundhouse functionality for Abatab.
+            </summary>
+        </member>
+        <member name="M:Abatab.Roundhouse.ParseRequest(AbatabData.Session)">
+            <summary>
+            Determines where a script parameter request should go.
+            </summary>
+            <param name="abatabSession">Information/data for this session of Abatab.</param>
+        </member>
+        <member name="M:Abatab.Roundhouse.ModQuickMedOrderExecute(AbatabData.Session)">
+            <summary>
+            Allow verified users to execute ModQuickMedOrder functionality.
+            </summary>
+            <param name="abatabSession">Information/data for this session of Abatab.</param>
+        </member>
+        <member name="T:Abatab.WebConfig">
+            <summary>
+            Logic for working with Web.config.
+            </summary>
+        </member>
+        <member name="M:Abatab.WebConfig.Load">
+            <summary>
+            Load the settings from Web.config.
+            </summary>
+            <returns>A dictionary containing the settings from Web.config.</returns>
+        </member>
+    </members>
+</doc>
