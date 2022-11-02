@@ -6,17 +6,19 @@
     <members>
         <member name="T:Abatab.Abatab">
             <summary>
-            The entry point for Abatab.
+            The main Abatab project. This is where the magic starts!
             </summary>
         </member>
         <member name="M:Abatab.Abatab.GetVersion">
             <summary>
             Returns the current version of Abatab.
             </summary>
-            <remarks>
-            This method is required by Avatar.
-            </remarks>
             <returns>The current version of Abatab.</returns>
+            <remarks>
+            * This method is required by Avatar.
+            * The version number is always the version that is in development. For example, while developing v1.0, this will return 1.0.
+            </remarks>
+            <example>1.0</example>
         </member>
         <member name="M:Abatab.Abatab.RunScript(NTST.ScriptLinkService.Objects.OptionObject2015,System.String)">
             <summary>

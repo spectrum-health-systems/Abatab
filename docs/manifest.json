@@ -129,7 +129,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Abatab.Abatab.html",
-          "hash": "Dz2Z5y7tFXlpmQ83ocXDjaipWrMI/LE7NjgQi0GCJ/s="
+          "hash": "p5s/BLqEWfA9H4JmPNOoQDaSYfTsM8J50pguHroOOdw="
         }
       },
       "is_incremental": false,
@@ -165,7 +165,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Abatab.html",
-          "hash": "YIG4cyfPKH3GPBXrIRAninGtCIf6a27drRLe5o0/Ss8="
+          "hash": "sWvvup7Vbkjzc0cKwyaewS6kFFr/YY/48pNNVZPLilQ="
         }
       },
       "is_incremental": false,
@@ -317,6 +317,30 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "obj/api/AbatabLogging.Class1.ExampleClass.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AbatabLogging.Class1.ExampleClass.html",
+          "hash": "0v47RfsQ+NmMLF8wHCg9XZ4vo3moOeWSk6G7QB4UHT8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/AbatabLogging.Class1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AbatabLogging.Class1.html",
+          "hash": "uLN5uiJYe700uNHyrTkNd3J/qjrUq+6TRNGobx1y+OU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "obj/api/AbatabLogging.Debuggler.yml",
       "output": {
         ".html": {
@@ -357,7 +381,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AbatabLogging.html",
-          "hash": "vL/HbUJQswVWIxO0YLaPwOllxfSk5ZYfq5yyLyyVYzs="
+          "hash": "2TAoWIVyykM6FAMC9fe6mM43gULCjYD8zS9oQSREM9c="
         }
       },
       "is_incremental": false,
@@ -693,7 +717,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "0Aq3hn6q/Y1zKvv6QD/Xq+fKhbKTHWFvlP2NsHkhoM0="
+          "hash": "XsjAEBT4SFzo7whc3YoW1yoVK/xEqM6ixenI8eB/V6o="
         }
       },
       "is_incremental": false,
@@ -732,7 +756,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 47,
+          "total_file_count": 49,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {

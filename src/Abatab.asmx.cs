@@ -1,7 +1,7 @@
 ﻿// Abatab 0.96.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221102.094514
+// b221102.151929
 
 using Abatab.Properties;
 using AbatabData;
@@ -15,7 +15,7 @@ using System.Web.Services;
 namespace Abatab
 {
     /// <summary>
-    /// The entry point for Abatab.
+    /// The main Abatab project. This is where the magic starts!
     /// </summary>
     [WebService(Namespace = "http://tempuri.org/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
@@ -25,10 +25,12 @@ namespace Abatab
         /// <summary>
         /// Returns the current version of Abatab.
         /// </summary>
-        /// <remarks>
-        /// This method is required by Avatar.
-        /// </remarks>
         /// <returns>The current version of Abatab.</returns>
+        /// <remarks>
+        /// * This method is required by Avatar.
+        /// * The version number is always the version that is in development. For example, while developing v1.0, this will return 1.0.
+        /// </remarks>
+        /// <example>1.0</example>
         [WebMethod]
         public string GetVersion()
         {
