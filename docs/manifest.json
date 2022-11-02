@@ -9,7 +9,7 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "ZcRFJgNhvhM6kAH28Vkb5TxxGPe7FlftmernEpHWKBw="
+          "hash": "oGAWvsrWgDs3pxy9dBJZFM9WQQtLvyuQKNzK/tyO1xw="
         }
       },
       "is_incremental": false,
@@ -17,11 +17,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/details1.md",
+      "source_relative_path": "articles/AdditionalReading.md",
       "output": {
         ".html": {
-          "relative_path": "articles/details1.html",
-          "hash": "jiHLInWCmFCQUR9E5sJEsSpL2H5XfO6pxF+jhGQvc2o="
+          "relative_path": "articles/AdditionalReading.html",
+          "hash": "RTZrcmMWC64vYuUKACYy24T5L7g3Y78r5L42ORQZaUU="
         }
       },
       "is_incremental": false,
@@ -29,11 +29,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/details2.md",
+      "source_relative_path": "articles/Comments.md",
       "output": {
         ".html": {
-          "relative_path": "articles/details2.html",
-          "hash": "EQsPUpPc64u5FL+53uIKtQaAjYFZk0mSF76DXcm4dIg="
+          "relative_path": "articles/Comments.html",
+          "hash": "/1/97xaXD6r0LeF8bvOwbTA5PvLkoYXs/xp1vzxSVz8="
         }
       },
       "is_incremental": false,
@@ -41,11 +41,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/details3.md",
+      "source_relative_path": "articles/Headers.md",
       "output": {
         ".html": {
-          "relative_path": "articles/details3.html",
-          "hash": "suYy0JYjXTYcTxhTbcCXmRvaG1yJEqt/ea3KbbNubxw="
+          "relative_path": "articles/Headers.html",
+          "hash": "aWHlNMXW6lyArtkyE5pwBCpm0HNwkahp79/35DRJq4c="
         }
       },
       "is_incremental": false,
@@ -53,11 +53,47 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/intro.md",
+      "source_relative_path": "articles/ProjectsAndModules.md",
       "output": {
         ".html": {
-          "relative_path": "articles/intro.html",
-          "hash": "yF4cM99miGSsrT64oV0kgkl56YkQylthgw5Gl1aJqzo="
+          "relative_path": "articles/ProjectsAndModules.html",
+          "hash": "jmSTq7kGkqo2WdjKexdQ7Q1Cub5xPKsCgzDqOjRx0JA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/TheAbatabSourceCode.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/TheAbatabSourceCode.html",
+          "hash": "Iy5kHCqLC7q7zJDZlet7S27fs+KRseTAYDApst4N4+A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/Variables.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/Variables.html",
+          "hash": "yJRDcOf8ysOIGeYKeZZoxjP4ytWAUWfatQIqTjHjgd8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/Versioning.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/Versioning.html",
+          "hash": "zY3C2ObMJzFaohYiC59qVNNhrgqFdCOwQiMsCAmnIzY="
         }
       },
       "is_incremental": false,
@@ -69,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "tBaKK0WWTywPaj3xoiV0s8AseEf93kWeApXKy5mVEJA="
+          "hash": "aiRnaEQdeNa00Ys7IOYN89S3Gk8oSWqSgU3aWYk0UEU="
         }
       },
       "is_incremental": false,
@@ -81,7 +117,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "GGOovSab6ZFxRkwbTiKX/AxcXz9WU1qSZOSIhjRqq74="
+          "hash": "j3tGpwipnilWSoED1qqf+WKH1J2Hq8yuXJ0oqDABs24="
         }
       },
       "is_incremental": false,
@@ -669,7 +705,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "Oa9PuD4E1hvZnCkVjUgzNBX6S00Zo5YilamTERTZo54="
+          "hash": "Xbzol/R1cN8Tt9LTSEDktIErFV0fPOlxfxZhXazxeyg="
         }
       },
       "is_incremental": false,
@@ -690,7 +726,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 6,
+          "total_file_count": 9,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {

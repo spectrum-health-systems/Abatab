@@ -6,7 +6,7 @@
 3. Add DocFX/ to Abatab/Libraries/"
 4. Add the DocFX project to Abatab, in the Libraries/ solution folder
 
-The *docfx.json" file should look like this
+## DocFX/docfx.json
 
 ```bash
 {
@@ -32,9 +32,7 @@ The *docfx.json" file should look like this
     "content": [
       {
         "files": [
-          "api/**.yml",
-          "index.md",
-          "toc.md"
+          "api/**.yml"
         ],
         "cwd": "obj"
       },
@@ -73,11 +71,46 @@ The *docfx.json" file should look like this
         ]
       }
     ],
-    "dest": "../../../doc/srcdoc/",
+    "dest": "../../../docs/",
     "template": [
-      "default",
-      "templates/darkfx"
+      "default"
     ]
   }
 }
+```
+
+## DocFX/toc.yml
+
+```bash
+- name: Articles
+  href: articles/
+- name: API Documentation
+  href: obj/api/
+  homepage: api/index.md
+```
+
+## DocFX/index.html
+
+```bash
+# Abatab documentation
+```
+
+## DocFX/api/index.html
+
+```bash
+# Source code documentation
+```
+
+## DocFX/articles/intro.md
+
+```bash
+# Add your introductions here!
+```
+
+## DocFX/articles/toc.md
+
+```bash
+#[Introduction](intro.md)
+#[Something else](details1.md)
+##[Another thing](details2.md)
 ```
