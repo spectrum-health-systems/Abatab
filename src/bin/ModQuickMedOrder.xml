@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ModQuickMedOrder</name>
+    </assembly>
+    <members>
+        <member name="T:ModQuickMedOrder.Dose">
+            <summary>
+            Dose logic for the QuickMedOrder moduleeee.
+            </summary>
+        </member>
+        <member name="M:ModQuickMedOrder.Dose.VerifyUnderMaxPercentIncrease(AbatabData.Session)">
+            <summary>
+            Verifies that the dose increase percentage is within bounds.
+            </summary>
+            <param name="abatabSession">Information/data for this session of Abatab.</param>
+        </member>
+        <member name="M:ModQuickMedOrder.Dose.InitializeDoseData(AbatabData.Session)">
+            <summary>
+            Initializes dosing information.
+            </summary>
+            <param name="abatabSession">Information/data for this session of Abatab.</param>
+            <remarks>
+            This information is hardcoded, but should be the same for all Avatar clients.
+            </remarks>
+        </member>
+        <member name="M:ModQuickMedOrder.Dose.ComparePercentage(AbatabData.Session)">
+            <summary></summary>
+            <param name="abatabSession"></param>
+        </member>
+        <member name="M:ModQuickMedOrder.Dose.ProcessDosageOneField(AbatabData.Session,NTST.ScriptLinkService.Objects.FieldObject)">
+             <summary>
+            
+             </summary>
+             <param name="abatabSession"></param>
+             <param name="fieldObject"></param>
+        </member>
+        <member name="M:ModQuickMedOrder.Dose.ProcessOrderTypeField(AbatabData.Session,NTST.ScriptLinkService.Objects.FieldObject)">
+             <summary>
+            
+             </summary>
+             <param name="abatabSession"></param>
+             <param name="fieldObject"></param>
+        </member>
+        <member name="M:ModQuickMedOrder.Dose.ProcessLastScheduledOrderField(AbatabData.Session,NTST.ScriptLinkService.Objects.FieldObject)">
+             <summary>
+            
+             </summary>
+             <param name="abatabSession"></param>
+             <param name="fieldObject"></param>
+        </member>
+        <member name="M:ModQuickMedOrder.Dose.WarningMissingPreviousDoseValue(AbatabData.Session)">
+             <summary>
+            
+             </summary>
+             <param name="abatabSession"></param>
+        </member>
+        <member name="M:ModQuickMedOrder.Dose.WarningMissingCurrentDoseValue(AbatabData.Session)">
+             <summary>
+            
+             </summary>
+             <param name="abatabSession"></param>
+        </member>
+        <member name="T:ModQuickMedOrder.Roundhouse">
+            <summary>
+            Roundhouse logic for the Quick Medication Order module.
+            </summary>
+        </member>
+        <member name="M:ModQuickMedOrder.Roundhouse.ParseRequest(AbatabData.Session)">
+            <summary>Parse the Abatab request command.</summary>
+            <param name="abatabSession">Abatab session information.</param>
+        </member>
+        <member name="M:ModQuickMedOrder.Roundhouse.ParseCommandDose(AbatabData.Session)">
+            <summary>
+            Parses the Dose command.
+            </summary>
+            <param name="abatabSession">Information/data for this session of Abatab.</param>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,390 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AbatabLogging</name>
+    </assembly>
+    <members>
+        <member name="T:AbatabLogging.BuildContent">
+            <summary>
+            Logic for building log file content.
+            </summary>
+        </member>
+        <member name="M:AbatabLogging.BuildContent.LogComponents(System.String,AbatabData.Session,System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Builds the content for a log file.
+            </summary>
+            <param name="eventType">The type of log to create.</param>
+            <param name="abatabSession">Information/data for this session of Abatab.</param>
+            <param name="logMsg">The log message.</param>
+            <param name="exeAssembly">The name of executing assembly.</param>
+            <param name="callPath">The filename of where the log is coming from.</param>
+            <param name="callMember">The method name of where the log is coming from.</param>
+            <param name="callLine">The file line of where the log is coming from.</param>
+            <returns>The completed content for a log file.</returns>
+        </member>
+        <member name="M:AbatabLogging.BuildContent.DebugComponents(System.String,System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Builds the content for a debug log file.
+            </summary>
+            <param name="exeAssembly">The name of executing assembly.</param>
+            <param name="debugMode">The Abatab debug mode setting.</param>
+            <param name="debugMsg">The debug log message.</param>
+            <param name="callPath">The filename of where the log is coming from.</param>
+            <param name="callMember">The method name of where the log is coming from.</param>
+            <param name="callLine">The file line of where the log is coming from.</param>
+            <returns>The completed content for a debug log file.</returns>
+        </member>
+        <member name="M:AbatabLogging.BuildContent.ComponentHead(System.String)">
+            <summary>
+            Builds the log header component.
+            </summary>
+            <param name="logMsg">The log message.</param>
+            <returns>The completed log header component.</returns>
+        </member>
+        <member name="M:AbatabLogging.BuildContent.ComponentDetail(System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Builds the log details component.
+            </summary>
+            <param name="eventType">The type of log to create.</param>
+            <param name="exeAssembly">The name of executing assembly.</param>
+            <param name="callPath">The filename of where the log is coming from.</param>
+            <param name="callMember">The method name of where the log is coming from.</param>
+            <param name="callLine">The file line of where the log is coming from.</param>
+            <returns>The completed log details component.</returns>
+        </member>
+        <member name="M:AbatabLogging.BuildContent.ComponentBody(System.String,AbatabData.Session)">
+            <summary>
+            Builds the log body component.
+            </summary>
+            <param name="eventType">The type of log to create.</param>
+            <param name="abatabSession">Information/data for this session of Abatab.</param>
+            <returns>The completed log body component.</returns>
+        </member>
+        <member name="M:AbatabLogging.BuildContent.BodySessionDetail(AbatabData.Session)">
+            <summary>
+            Builds a log body component for session details.
+            </summary>
+            <param name="abatabSession">Information/data for this session of Abatab.</param>
+            <returns>The completed log body component for session details.</returns>
+        </member>
+        <member name="M:AbatabLogging.BuildContent.BodyModuleDetail(AbatabData.Session,System.String)">
+            <summary>
+            Builds the log body component for module details.
+            </summary>
+            <param name="abatabSession">Information/data for this session of Abatab.</param>
+            <param name="modName">The name of the module.</param>
+            <returns>The completed log body component for module details.</returns>
+        </member>
+        <member name="M:AbatabLogging.BuildContent.BodyModQuickMedOrderDetail(AbatabData.Session)">
+            <summary>
+            Builds the log body component for the QuickMedOrder details.
+            </summary>
+            <param name="abatabSession">Information/data for this session of Abatab.</param>
+            <returns>The completed log body component for QuickMedOrder details.</returns>
+        </member>
+        <member name="M:AbatabLogging.BuildContent.BodyOptObjDetail(NTST.ScriptLinkService.Objects.OptionObject2015,System.String)">
+            <summary>
+            Builds the log body component for the OptionObject details.
+            </summary>
+            <param name="optObj">The OptionObject to build from.</param>
+            <param name="optObjType">The type of OptionObject.</param>
+            <returns>The completed log body component for OptionObject details.</returns>
+        </member>
+        <member name="M:AbatabLogging.BuildContent.ComponentFoot(System.String)">
+            <summary>
+            Builds the log footer.
+            </summary>
+            <returns>The completed log footer.</returns>
+        </member>
+        <member name="T:AbatabLogging.BuildPath">
+            <summary>
+            Logic for building log file paths.
+            </summary>
+        </member>
+        <member name="M:AbatabLogging.BuildPath.WithCaller(System.String,System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Builds a log file path with caller information.
+            </summary>
+            <param name="eventType">The type of log to create.</param>
+            <param name="logRoot">The session root directory.</param>
+            <param name="exeAssembly">The name of executing assembly.</param>
+            <param name="callPath">The filename of where the log is coming from.</param>
+            <param name="callMember">The method name of where the log is coming from.</param>
+            <param name="callLine">The file line of where the log is coming from.</param>
+            <returns>A completed log file path with caller information.</returns>
+        </member>
+        <member name="M:AbatabLogging.BuildPath.Timestamped(System.String,System.String)">
+            <summary>
+            Builds a timestamped log file path.
+            </summary>
+            <param name="eventType">The type of log to create.</param>
+            <param name="logRoot">The session root directory.</param>
+            <returns>A completed log file path with a timestamp.</returns>
+        </member>
+        <member name="M:AbatabLogging.BuildPath.MessageName(System.String,System.String,System.String)">
+            <summary>
+            Builds a log file path with the log message in the name.
+            </summary>
+            <param name="eventType">The type of log to create.</param>
+            <param name="logRoot">The session root directory.</param>
+            <param name="logMsg">The log message.</param>
+            <returns>A log file path with the log message in the name.</returns>
+        </member>
+        <member name="M:AbatabLogging.BuildPath.BuildDebugLogDir(System.String)">
+            <summary>
+            Build the path to a debug log.
+            </summary>
+            <param name="logRoot">The log root.</param>
+            <returns>The path to the log root.</returns>
+        </member>
+        <member name="M:AbatabLogging.BuildPath.BuildLostLogDir(System.String)">
+            <summary>
+            Build the path to a lost log.
+            </summary>
+            <param name="logRoot">The log root.</param>
+            <returns>The path to the log root.</returns>
+        </member>
+        <member name="M:AbatabLogging.BuildPath.BuildPrimevalDebugLogDir(System.String)">
+            <summary>
+            Build the path to a primeval debug log.
+            </summary>
+            <param name="logRoot">The log root.</param>
+            <returns>The path to the log root.</returns>
+        </member>
+        <member name="M:AbatabLogging.BuildPath.BuildTraceLogDir(System.String)">
+            <summary>
+            Build the path to a trace log.
+            </summary>
+            <param name="logRoot">The log root.</param>
+            <returns>The path to the log root.</returns>
+        </member>
+        <member name="T:AbatabLogging.Class1">
+            <summary>
+            sdfasdfadsf
+            </summary>
+        </member>
+        <member name="T:AbatabLogging.Class1.ExampleClass">
+            <summary>
+            Every class and member should have a one sentence
+            summary describing its purpose.
+            </summary>
+            <remarks>
+            You can expand on that one sentence summary to provide more information for readers. In this case, the <c>ExampleClass</c> provides different C# elements to show
+            how you would add documentation comments for most elements in a typical class.
+            <para>
+            The remarks can add multiple paragraphs, so you can write detailed information for developers that use
+            your work. You should add everything needed for
+            readers to be successful. This class contains
+            examples for the following:
+            </para>
+            <list type="table">
+            <item>
+            <term>Summary</term>
+            <description>
+            This should provide a one sentence summary of the class or member.
+            </description>
+            </item>
+            <item>
+            <term>Remarks</term>
+            <description>
+            This is typically a more detailed description of the class or member
+            </description>
+            </item>
+            <item>
+            <term>para</term>
+            <description>
+            The para tag separates a section into multiple paragraphs
+            </description>
+            </item>
+            <item>
+            <term>list</term>
+            <description>
+            Provides a list of terms or elements
+            </description>
+            </item>
+            <item>
+            <term>returns, param</term>
+            <description>
+            Used to describe parameters and return values
+            </description>
+            </item>
+            <item>
+            <term>value</term>
+            <description>Used to describe properties</description>
+            </item>
+            <item>
+            <term>exception</term>
+            <description>
+            Used to describe exceptions that may be thrown
+            </description>
+            </item>
+            <item>
+            <term>c, cref, see, seealso</term>
+            <description>
+            These provide code style and links to other
+            documentation elements
+            </description>
+            </item>
+            <item>
+            <term>example, code</term>
+            <description>
+            These are used for code examples
+            </description>
+            </item>
+            </list>
+            <para>
+            The list above uses the "table" style. You could
+            also use the "bullet" or "number" style. Neither
+            would typically use the "term" element.
+            <br/>
+            Note: paragraphs are double spaced. Use the *br*
+            tag for single spaced lines.
+            </para>
+            </remarks>
+        </member>
+        <member name="P:AbatabLogging.Class1.ExampleClass.Label">
+            <value>
+            The <c>Label</c> property represents a label
+            for this instance.
+            </value>
+            <remarks>
+            The <see cref="P:AbatabLogging.Class1.ExampleClass.Label"/> is a <see langword="string"/>
+            that you use for a label.
+            <para>
+            Note that there isn't a way to provide a "cref" to
+            each accessor, only to the property itself.
+            </para>
+            </remarks>
+        </member>
+        <member name="M:AbatabLogging.Class1.ExampleClass.Add(System.Int32,System.Int32)">
+            <summary>
+            Adds two integers and returns the result.
+            </summary>
+            <returns>
+            The sum of two integers.
+            </returns>
+            <param name="left">
+            The left operand of the addition.
+            </param>
+            <param name="right">
+            The right operand of the addition.
+            </param>
+            <example>
+            <code>
+            int c = Math.Add(4, 5);
+            if (c > 10)
+            {
+                Console.WriteLine(c);
+            }
+            </code>
+            </example>
+            <exception cref="T:System.OverflowException">
+            Thrown when one parameter is
+            <see cref="F:System.Int32.MaxValue">MaxValue</see> and the other is
+            greater than 0.
+            Note that here you can also use
+            <see href="https://docs.microsoft.com/dotnet/api/system.int32.maxvalue"/>
+             to point a web page instead.
+            </exception>
+            <see cref="T:AbatabLogging.Class1.ExampleClass"/> for a list of all
+            the tags in these examples.
+            <seealso cref="P:AbatabLogging.Class1.ExampleClass.Label"/>
+        </member>
+        <member name="M:AbatabLogging.Class1.ExampleClass.gsgsg(System.String,System.String)">
+            <summary>
+            This is an example of a positional record.
+            </summary>
+            <remarks>
+            There isn't a way to add XML comments for properties
+            created for positional records, yet. The language
+            design team is still considering what tags should
+            be supported, and where. Currently, you can use
+            the "param" tag to describe the parameters to the
+            primary constructor.
+            </remarks>
+            <param name="FirstName">
+            This tag will apply to the primary constructor parameter.
+            </param>
+            <param name="LastName">
+            This tag will apply to the primary constructor parameter.
+            </param>
+        </member>
+        <member name="T:AbatabLogging.Debuggler">
+            <summary>
+            Logic for debugging functionality.
+            </summary>
+        </member>
+        <member name="M:AbatabLogging.Debuggler.DebugTheDebugger(System.Boolean,System.String,System.String)">
+            <summary>Debugs the debugger.</summary>
+            <param name="debugDebugger">The flag that determines if the debugger should be debugged.</param>
+            <param name="debugLogRoot">The debug log root directory.</param>
+            <param name="debugMsg">The debugger log message.</param>
+        </member>
+        <member name="T:AbatabLogging.LogEvent">
+            <summary>
+            Logic for building log files for various events.
+            </summary>
+        </member>
+        <member name="M:AbatabLogging.LogEvent.Access(AbatabData.Session,System.String)">
+            <summary>
+            Log a user access event.
+            </summary>
+            <param name="abatabSession">Information/data for this session of Abatab.</param>
+            <param name="accessMsg">The access log message.</param>
+        </member>
+        <member name="M:AbatabLogging.LogEvent.Debug(System.String,System.String,System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Builds a debug log file.
+            </summary>
+            <param name="exeAssembly">The name of executing assembly.</param>
+            <param name="debugMode">The Abatab debug mode.</param>
+            <param name="debugLogRoot">The debug log root directory.</param>
+            <param name="debugMsg">The debug log message.</param>
+            <param name="callPath">The filename of where the log is coming from.</param>
+            <param name="callMember">The method name of where the log is coming from.</param>
+            <param name="callLine">The file line of where the log is coming from.</param>
+        </member>
+        <member name="M:AbatabLogging.LogEvent.ModQuickMedOrder(AbatabData.Session,System.String)">
+            <summary>
+            Builds detailed information for the QuickMedOrder module.
+            </summary>
+            <param name="abatabSession">Information/data for this session of Abatab.</param>
+            <param name="logMsg">The log message.</param>
+        </member>
+        <member name="M:AbatabLogging.LogEvent.PrimevalDebug(System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Builds a debug log file.
+            </summary>
+            <param name="debugMode">The Abatab debug mode.</param>
+            <param name="exeAssembly">The name of executing assembly.</param>
+            <param name="callPath">The filename of where the log is coming from.</param>
+            <param name="callMember">The method name of where the log is coming from.</param>
+            <param name="callLine">The file line of where the log is coming from.</param>
+        </member>
+        <member name="M:AbatabLogging.LogEvent.Session(AbatabData.Session,System.String)">
+            <summary>
+            Builds a session detail log.
+            </summary>
+            <param name="abatabSession">Information/data for this session of Abatab.</param>
+            <param name="logMsg">The log message.</param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:AbatabLogging.LogEvent.Trace(AbatabData.Session,System.String,System.String,System.String,System.String,System.Int32)" -->
+        <member name="M:AbatabLogging.LogEvent.WebConfigDebug(System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Build a webConfig debug log.
+            </summary>
+            <param name="webConfig">The contents of Web.config.</param>
+        </member>
+        <member name="T:AbatabLogging.WriteLogFile">
+            <summary>
+            Logic for writing log files.
+            </summary>
+        </member>
+        <member name="M:AbatabLogging.WriteLogFile.LocalFile(System.String,System.String,System.Int32)">
+            <summary>Writes a log file.</summary>
+            <param name="logPath">The log file path.</param>
+            <param name="logContent">The log file content.</param>
+            <param name="loggingDelay">The delay between writing log files.</param>
+        </member>
+    </members>
+</doc>

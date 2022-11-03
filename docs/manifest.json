@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "C:/Users/Chris.Banwarth/GitHub/Repositories/SHS/Abatab/src/Libraries/DocFX",
+  "source_base_path": "C:/Users/Chris.Banwarth/GitHub/Repositories/SHS/Abatab/Abatab/src/Libraries/DocFX",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -17,11 +17,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/AdditionalReading.md",
+      "source_relative_path": "articles/AboutAbatabArticles.md",
       "output": {
         ".html": {
-          "relative_path": "articles/AdditionalReading.html",
-          "hash": "RTZrcmMWC64vYuUKACYy24T5L7g3Y78r5L42ORQZaUU="
+          "relative_path": "articles/AboutAbatabArticles.html",
+          "hash": "cXzdDI0P6L+OFL5kn7ebgu1MxkN3GXWCroFAumf3Rgo="
         }
       },
       "is_incremental": false,
@@ -29,11 +29,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/Comments.md",
+      "source_relative_path": "articles/AdditionalReading/AdditionalReading.md",
       "output": {
         ".html": {
-          "relative_path": "articles/Comments.html",
-          "hash": "/1/97xaXD6r0LeF8bvOwbTA5PvLkoYXs/xp1vzxSVz8="
+          "relative_path": "articles/AdditionalReading/AdditionalReading.html",
+          "hash": "77+qkXGgX5+y0UnQ4Mze0vIx5dEnAQRlpz52VgDmkoo="
         }
       },
       "is_incremental": false,
@@ -41,11 +41,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/Headers.md",
+      "source_relative_path": "articles/DocFx/DocFx.md",
       "output": {
         ".html": {
-          "relative_path": "articles/Headers.html",
-          "hash": "aWHlNMXW6lyArtkyE5pwBCpm0HNwkahp79/35DRJq4c="
+          "relative_path": "articles/DocFx/DocFx.html",
+          "hash": "GieQhSHByJHt2tyeg/V4+Lrj7jeneNIIdA6q1lWzZLs="
         }
       },
       "is_incremental": false,
@@ -53,11 +53,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/Logging.md",
+      "source_relative_path": "articles/DocFx/DocFxNewProject.md",
       "output": {
         ".html": {
-          "relative_path": "articles/Logging.html",
-          "hash": "9WbZ/Wo8DXSQdUSTt92IF363shlGSOwVOyl8OlbxYuI="
+          "relative_path": "articles/DocFx/DocFxNewProject.html",
+          "hash": "TlZmuGE5EwQOdRIdgUH/mIHDdLBw/HhXRvZpiIqQO7M="
         }
       },
       "is_incremental": false,
@@ -65,11 +65,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/ProjectsAndModules.md",
+      "source_relative_path": "articles/SourceCode/Comments.md",
       "output": {
         ".html": {
-          "relative_path": "articles/ProjectsAndModules.html",
-          "hash": "xKV+5Pqq/d7NGOP2FQJGlsUWpYsstEfsDc15uJPJLKE="
+          "relative_path": "articles/SourceCode/Comments.html",
+          "hash": "CcumGEaXqgrRhvTRc0oEcl46+GpIohUl+2LmYyNedCM="
         }
       },
       "is_incremental": false,
@@ -77,11 +77,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/TheAbatabSourceCode.md",
+      "source_relative_path": "articles/SourceCode/Headers.md",
       "output": {
         ".html": {
-          "relative_path": "articles/TheAbatabSourceCode.html",
-          "hash": "Iy5kHCqLC7q7zJDZlet7S27fs+KRseTAYDApst4N4+A="
+          "relative_path": "articles/SourceCode/Headers.html",
+          "hash": "CKAXPGEPxbwJM16iyQUy3NEya5oe8wn35+UEUEiIr9Y="
         }
       },
       "is_incremental": false,
@@ -89,11 +89,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/Variables.md",
+      "source_relative_path": "articles/SourceCode/Logging.md",
       "output": {
         ".html": {
-          "relative_path": "articles/Variables.html",
-          "hash": "yJRDcOf8ysOIGeYKeZZoxjP4ytWAUWfatQIqTjHjgd8="
+          "relative_path": "articles/SourceCode/Logging.html",
+          "hash": "F9YfmrgcDfclM9KexlF9AoV6iyCP0WIOz1z/1fCics0="
         }
       },
       "is_incremental": false,
@@ -101,11 +101,47 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/Versioning.md",
+      "source_relative_path": "articles/SourceCode/ProjectsAndModules.md",
       "output": {
         ".html": {
-          "relative_path": "articles/Versioning.html",
-          "hash": "zY3C2ObMJzFaohYiC59qVNNhrgqFdCOwQiMsCAmnIzY="
+          "relative_path": "articles/SourceCode/ProjectsAndModules.html",
+          "hash": "m4yn9/gC8XN10pyib46hUQNirZIY0QUO1zubuz1KF7s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/SourceCode/SourceCode.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/SourceCode/SourceCode.html",
+          "hash": "5uOIWoelBG8QkpMBqDibhtVoK52mS850JOk3GHDBH2A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/SourceCode/Variables.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/SourceCode/Variables.html",
+          "hash": "7x7gyu546OKU1qCsQYINHJzeu0d6TRv6cYa5U53Nlqg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/SourceCode/Versioning.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/SourceCode/Versioning.html",
+          "hash": "AQwpueF16D/u/3fiple0LiDyvG2lDO3vH8KKGNRXsQM="
         }
       },
       "is_incremental": false,
@@ -117,7 +153,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "hsZQ8QrMJhaoSJ3B5KdjSUzPnxOoq36lXwMKdV1DKXw="
+          "hash": "19xShSBo/MgQvYDTGCW88SVYnyoyASSYo2/cZO6bdBY="
         }
       },
       "is_incremental": false,
@@ -130,6 +166,36 @@
         ".html": {
           "relative_path": "index.html",
           "hash": "j3tGpwipnilWSoED1qqf+WKH1J2Hq8yuXJ0oqDABs24="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "manual/ManHome.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/ManHome.html",
+          "hash": "Blacc42VCwiLHdrgeeHEbuPhuj3TnSH5Ym10evCsLLU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Toc",
+      "source_relative_path": "manual/toc.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/toc.html",
+          "hash": "Zu3d3/bPirLcc0bUEQ0dZF8Z5wMu3jpoYFST/Hcc6W8="
         }
       },
       "is_incremental": false,
@@ -533,18 +599,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "obj/api/ModCommon.ModuleAccess.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ModCommon.ModuleAccess.html",
-          "hash": "rZdKK0lxp9C3d4bccupUaXGH9BfSLx1c2BCI83LrdzQ="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "obj/api/ModCommon.Roundhouse.yml",
       "output": {
         ".html": {
@@ -569,11 +623,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "obj/api/ModCommon.VerifyAccess.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ModCommon.VerifyAccess.html",
+          "hash": "z283iTVQgEWyqKL0fh2+XSENzZkQagxKkhRVwjN1Qwo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "obj/api/ModCommon.yml",
       "output": {
         ".html": {
           "relative_path": "api/ModCommon.html",
-          "hash": "AuB6o16n9uBu2xw+mVa7TKae8wJktgbdtyX47X7be1M="
+          "hash": "Br4Nn8SrY4697kPsexrSmZt253NnDNeCprJMWMO+ygY="
         }
       },
       "is_incremental": false,
@@ -741,19 +807,22 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "bDlWgF7M/wRs4qpBufYAvVG9VeAqwj9GKqA0/u+MNQM="
+          "hash": "awYgThNSaD/twqfV6s1EcyzrJzQP61TJvdkHYug0Dg0="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "Xbzol/R1cN8Tt9LTSEDktIErFV0fPOlxfxZhXazxeyg="
+          "hash": "gR1SFSjzNjG/krwDmfd6mz8M7fhvYY9dZIqssQs6p1Q="
         }
       },
       "is_incremental": false,
@@ -764,17 +833,17 @@
     {
       "status": {
         "can_incremental": false,
-        "details": "Cannot build incrementally because last build info is missing.",
+        "details": "Disable incremental build by force rebuild option.",
         "incrementalPhase": "build",
         "total_file_count": 0,
         "skipped_file_count": 0,
-        "full_build_reason_code": "NoAvailableBuildCache"
+        "full_build_reason_code": "ForceRebuild"
       },
       "processors": {
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 10,
+          "total_file_count": 14,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
@@ -795,7 +864,7 @@
     {
       "status": {
         "can_incremental": false,
-        "details": "Cannot support incremental post processing, the reason is: last post processor info is null.",
+        "details": "Cannot support incremental post processing, the reason is: it's disabled.",
         "incrementalPhase": "postProcessing",
         "total_file_count": 0,
         "skipped_file_count": 0

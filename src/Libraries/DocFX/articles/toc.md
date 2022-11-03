@@ -1,8 +1,21 @@
-# [The Abatab source code](TheAbatabSourceCode.md)
-# [Headers](Headers.md)
-# [Versioning](Versioning.md)
-# [Comments](Comments.md)
-# [Variables](Variables.md)
-# [Logging](Logging.md)
-# [Projects and modules](ProjectsAndModules.md)
-# [Additional reading](AdditionalReading.md)
+# [About Abatab articles](AboutAbatabArticles.md)
+
+# DocFX
+
+## [Creating a new DocFX project](./DocFx/DocFxNewProject.md)
+
+# [Source code](./SourceCode/SourceCode.md)
+
+## [Headers](./SourceCode/Headers.md)
+
+## [Versioning](./SourceCode/Versioning.md)
+
+## [Comments](./SourceCode/Comments.md)
+
+## [Variables](./SourceCode/Variables.md)
+
+## [Logging](./SourceCode/Logging.md)
+
+## [Projects and modules](./SourceCode/ProjectsAndModules.md)
+
+# [Additional reading](./AdditionalReading/AdditionalReading.md)

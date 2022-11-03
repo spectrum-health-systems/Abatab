@@ -1267,25 +1267,6 @@ references:
   commentId: N:ModCommon
   fullName: ModCommon
   nameWithType: ModCommon
-- uid: ModCommon.ModuleAccess
-  name: ModuleAccess
-  href: api/ModCommon.ModuleAccess.html
-  commentId: T:ModCommon.ModuleAccess
-  fullName: ModCommon.ModuleAccess
-  nameWithType: ModuleAccess
-- uid: ModCommon.ModuleAccess.IsValidUser(System.String,System.String)
-  name: IsValidUser(String, String)
-  href: api/ModCommon.ModuleAccess.html#ModCommon_ModuleAccess_IsValidUser_System_String_System_String_
-  commentId: M:ModCommon.ModuleAccess.IsValidUser(System.String,System.String)
-  fullName: ModCommon.ModuleAccess.IsValidUser(System.String, System.String)
-  nameWithType: ModuleAccess.IsValidUser(String, String)
-- uid: ModCommon.ModuleAccess.IsValidUser*
-  name: IsValidUser
-  href: api/ModCommon.ModuleAccess.html#ModCommon_ModuleAccess_IsValidUser_
-  commentId: Overload:ModCommon.ModuleAccess.IsValidUser
-  isSpec: "True"
-  fullName: ModCommon.ModuleAccess.IsValidUser
-  nameWithType: ModuleAccess.IsValidUser
 - uid: ModCommon.Roundhouse
   name: Roundhouse
   href: api/ModCommon.Roundhouse.html
@@ -1311,6 +1292,38 @@ references:
   isSpec: "True"
   fullName: ModCommon.Verify.ValidUser
   nameWithType: Verify.ValidUser
+- uid: ModCommon.VerifyAccess
+  name: VerifyAccess
+  href: api/ModCommon.VerifyAccess.html
+  commentId: T:ModCommon.VerifyAccess
+  fullName: ModCommon.VerifyAccess
+  nameWithType: VerifyAccess
+- uid: ModCommon.VerifyAccess.CheckIfValidUser(System.String,System.String)
+  name: CheckIfValidUser(String, String)
+  href: api/ModCommon.VerifyAccess.html#ModCommon_VerifyAccess_CheckIfValidUser_System_String_System_String_
+  commentId: M:ModCommon.VerifyAccess.CheckIfValidUser(System.String,System.String)
+  fullName: ModCommon.VerifyAccess.CheckIfValidUser(System.String, System.String)
+  nameWithType: VerifyAccess.CheckIfValidUser(String, String)
+- uid: ModCommon.VerifyAccess.CheckIfValidUser*
+  name: CheckIfValidUser
+  href: api/ModCommon.VerifyAccess.html#ModCommon_VerifyAccess_CheckIfValidUser_
+  commentId: Overload:ModCommon.VerifyAccess.CheckIfValidUser
+  isSpec: "True"
+  fullName: ModCommon.VerifyAccess.CheckIfValidUser
+  nameWithType: VerifyAccess.CheckIfValidUser
+- uid: ModCommon.VerifyAccess.InvalidUser(AbatabData.Session)
+  name: InvalidUser(Session)
+  href: api/ModCommon.VerifyAccess.html#ModCommon_VerifyAccess_InvalidUser_AbatabData_Session_
+  commentId: M:ModCommon.VerifyAccess.InvalidUser(AbatabData.Session)
+  fullName: ModCommon.VerifyAccess.InvalidUser(AbatabData.Session)
+  nameWithType: VerifyAccess.InvalidUser(Session)
+- uid: ModCommon.VerifyAccess.InvalidUser*
+  name: InvalidUser
+  href: api/ModCommon.VerifyAccess.html#ModCommon_VerifyAccess_InvalidUser_
+  commentId: Overload:ModCommon.VerifyAccess.InvalidUser
+  isSpec: "True"
+  fullName: ModCommon.VerifyAccess.InvalidUser
+  nameWithType: VerifyAccess.InvalidUser
 - uid: ModPrototype
   name: ModPrototype
   href: api/ModPrototype.html
