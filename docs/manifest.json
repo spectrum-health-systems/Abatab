@@ -113,11 +113,23 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/SourceCode/LocalSettings.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/SourceCode/LocalSettings.html",
+          "hash": "RYdDLfsre55zB41VzQiCBqZXFb0gaS5qKH3NiogK2TY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/SourceCode/Logging.md",
       "output": {
         ".html": {
           "relative_path": "articles/SourceCode/Logging.html",
-          "hash": "F9YfmrgcDfclM9KexlF9AoV6iyCP0WIOz1z/1fCics0="
+          "hash": "4d9Ov/rF2sSxJG0MfLG1pHRvgnRSX1nKUyww5baWtgU="
         }
       },
       "is_incremental": false,
@@ -177,7 +189,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "7WiCFAC9a8tbEi1h6+JfhBmjvpf/Ukj5wYixf/kIt5k="
+          "hash": "SCngFPEU1EPliSfxnjaVpsqmpYzuivadSjoz1lmQ2B0="
         }
       },
       "is_incremental": false,
@@ -867,7 +879,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 16,
+          "total_file_count": 17,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {

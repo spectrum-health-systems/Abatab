@@ -18,6 +18,8 @@
 
 ## [Logging](./SourceCode/Logging.md)
 
+## [Local settings](./SourceCode/LocalSettings.md)
+
 ## [Projects and modules](./SourceCode/ProjectsAndModules.md)
 
 # [Additional reading](./AdditionalReading/AdditionalReading.md)
