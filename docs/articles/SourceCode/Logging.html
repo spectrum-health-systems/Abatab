@@ -74,7 +74,7 @@
 <p>Debug logs are only created when <a href="https://spectrum-health-systems.github.io/Abatab/articles/SourceCode/LocalSettings.html#DebugMode"><code>DebugMode</code></a> is set to <code>on</code>.    </p>
 <ul>
 <li>DebugMode should only be used while developing Abatab</li>
-<li>There is a 10ms pause when writing a debug logfile, so it will have an impact on performance.</li>
+<li>There is a hardcoded 10ms delay when writing a debug logfile, so DebugMode will have an impact on performance.</li>
 </ul>
 <h3 id="built-in-debug-statements">Built-in debug statements</h3>
 <p>Most methods start with a a built-in debug statements, which have a <code>[DEBUG]</code> message. These debug statements are part of the code, and should not be removed.</p>
@@ -92,22 +92,29 @@
 </code></pre><p>to</p>
 <pre><code class="lang-bash">const bool debugDebugger = true;
 </code></pre><h2 id="trace-logs">Trace logs</h2>
-<p>Trace logs are designed to let you follow what is happening during an Abatab session, and can be helpful when troubleshooting.</p>
-<p>Trace logs are only created when <code>LogMode</code> contains <code>trace</code>.</p>
+<p>Trace logs are designed to let you follow what is happening during an Abatab session, and can be helpful when troubleshooting. As such, trace statemnts are abundant.</p>
+<p>Trace logs are only created when <a href="https://spectrum-health-systems.github.io/Abatab/articles/SourceCode/LocalSettings.html#LogMode"><code>LogMode</code></a> contains <code>trace</code>.</p>
 <ul>
-<li>DebugMode should only be used while developing Abatab</li>
-<li>There is a 10ms pause when writing a debug logfile, so it will have an impact on performance.</li>
+<li>Trace logs should generally be used when troubleshooting development builds, although they can be enabled in production.</li>
+<li>There is a global <a href="(https://spectrum-health-systems.github.io/Abatab/articles/SourceCode/LocalSettings.html#LogWriteDelay)">delay</a> when writing log files, so enabling trace logs may have an negative impact on performance.</li>
 </ul>
-<h3 id="built-in-debug-statements-1">Built-in debug statements</h3>
-<p>Most methods start with a a built-in debug statements, which have a <code>[DEBUG]</code> message. These debug statements are part of the code, and should not be removed.</p>
-<pre><code class="lang-bash">LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, &quot;[DEBUG]&quot;);
-</code></pre><h3 id="custom-debug-statements-1">Custom debug statements</h3>
-<p>You can create your own debug statements by customizing the message. Temporary debug statments should be removed from production code.</p>
-<pre><code class="lang-bash">LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, $&quot;VariableName value is {value}&quot;);
+<h2 id="a-note-about-trace-logs-in-abatablogginglogeventcs">A note about trace logs in AbatabLogging.LogEvent.cs</h2>
+<p>Log statements in AbatabLogging.LogEvent.cs don&#39;t follow most of the standards below, since it&#39;s not easy to log the thing that&#39;s creating the thing that&#39;s logging a thing. Or something.</p>
+<h3 id="built-in-trace-statements">Built-in trace statements</h3>
+<p>Trace statements can be found:</p>
+<ul>
+<li>At the beginning of methods, immediately following debug statements</li>
+<li>At the beginning of any conditional statements, loops, or other expressions</li>
+<li>When it would be helpful to know where Abatab is</li>
+</ul>
+<p>These trace statements are part of the code, and should not be removed.</p>
+<pre><code class="lang-bash">LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, &quot;[TRACE]&quot;);
+</code></pre><h3 id="custom-trace-statements">Custom trace statements</h3>
+<p>You can create your own trace statements by customizing the message. Temporary trace statments should be removed from production code.</p>
+<pre><code class="lang-bash">LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, $&quot;VariableName value is {value}&quot;);
 </code></pre><h2 id="session-logs">Session logs</h2>
 <h2 id="access-logs">Access logs</h2>
 <h2 id="lost-logs">Lost logs</h2>
-<p>```</p>
 </article>
           </div>
           
