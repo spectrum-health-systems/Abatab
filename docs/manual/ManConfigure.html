@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>API documentation </title>
+    <title> </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="API documentation ">
+    <meta name="title" content=" ">
     <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -67,10 +67,14 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="api-documentation">API documentation</h1>
 
-<p>See all the links to the left? Click one.</p>
-</article>
+<pre><code>* `enabled`  
+This is the default setting, which processes Abatab requests normally, returns a modified OptionObject2015 to myAvatar, and logs everything.
+* `disabled`  
+Skip all Abatab functionality. Essentially Abatab will recieve the sentOptObj, then skip directly to finalizing and returning the retOptObj, so no changes are made. This should be used when you don&#39;t want myAvatar to call Abatab, but you don&#39;t want to disable scripts on every form you use  anything, including writing logs (aside from basic, informational logs).
+* `passthrough`  
+Use Abatab, but don&#39;t make changes, only write logs. This is like the &quot;disabled&quot; setting, since no modifications to the OptionObject are make, and also like the &quot;enabled&quot; setting, since Abatab will actually go through the motions and write logs normally.
+</code></pre></article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

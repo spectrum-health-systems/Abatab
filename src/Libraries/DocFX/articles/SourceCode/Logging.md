@@ -55,7 +55,7 @@ Trace logs are only created when [`LogMode`](https://spectrum-health-systems.git
 * Trace logs should generally be used when troubleshooting development builds, although they can be enabled in production.
 * There is a global [delay]((https://spectrum-health-systems.github.io/Abatab/articles/SourceCode/LocalSettings.html#LogWriteDelay)) when writing log files, so enabling trace logs may have an negative impact on performance.
 
-## A note about trace logs in AbatabLogging.LogEvent.cs
+#### A note about trace logs in AbatabLogging.LogEvent.cs
 
 Log statements in AbatabLogging.LogEvent.cs don't follow most of the standards below, since it's not easy to log the thing that's creating the thing that's logging a thing. Or something.
 
