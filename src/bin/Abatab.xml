@@ -28,8 +28,8 @@
             <returns>A finalized OptionObject.</returns>
             <remarks>
             * This method is required by Avatar.
-            * This is the only time a <see href="https://spectrum-health-systems.github.io/Abatab/articles/SourceCode/Logging.html#primevaldebug-log">PrimevalDebug log</see> is written.
-            * This method should remain fairly static, sicne most of the logic is taken care of by external projects.
+            * This is the only time a <see href="https://spectrum-health-systems.github.io/Abatab/articles/SourceCode/Logging.html#primevaldebug-log">PrimevalDebug</see> log is written.
+            * This method should remain fairly static, since most of the logic is taken care of by external projects.
             </remarks>
         </member>
         <member name="T:Abatab.Roundhouse">
@@ -46,8 +46,8 @@
             * Whenever a new Abatab Module is added, logic will need to be added to the switch statement using the following template:
             <code>
             case "newmodule":
-              LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
-              ModNewModule.Roundhouse.ParseRequest(abatabSession);
+                LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+                ModNewModule.Roundhouse.ParseRequest(abatabSession);
               break;
             </code>
             </remarks>

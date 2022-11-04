@@ -146,8 +146,8 @@
   <div class="markdown level1 remarks"><ul>
 <li>Whenever a new Abatab Module is added, logic will need to be added to the switch statement using the following template:
 <pre><code>case &quot;newmodule&quot;:
-LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, &quot;[TRACE]&quot;);
-ModNewModule.Roundhouse.ParseRequest(abatabSession);
+  LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, &quot;[TRACE]&quot;);
+  ModNewModule.Roundhouse.ParseRequest(abatabSession);
 break;</code></pre></li>
 </ul>
 </div>
