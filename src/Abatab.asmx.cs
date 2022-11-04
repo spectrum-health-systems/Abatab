@@ -15,7 +15,7 @@ using System.Web.Services;
 namespace Abatab
 {
     /// <summary>
-    /// The main Abatab project. This is where the magic starts!
+    /// The main Abatab project, and where the magic starts.
     /// </summary>
     [WebService(Namespace = "http://tempuri.org/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
@@ -44,7 +44,7 @@ namespace Abatab
         /// <returns>A finalized OptionObject.</returns>
         /// <remarks>
         /// * This method is required by Avatar.
-        /// * This is the only time a PrimevalDebug log is written.
+        /// * This is the only time a <see href="http://localhost:8080/articles/SourceCode/Logging.html#primevaldebug-log"/> log is written.
         /// * This method should remain fairly static, sicne most of the logic is taken care of by external projects.
         /// </remarks>
         [WebMethod]
