@@ -44,8 +44,8 @@ namespace Abatab
         /// <returns>A finalized OptionObject.</returns>
         /// <remarks>
         /// * This method is required by Avatar.
-        /// * This is the only time a <see href="https://spectrum-health-systems.github.io/Abatab/articles/SourceCode/Logging.html#primevaldebug-log">PrimevalDebug log</see> is written.
-        /// * This method should remain fairly static, sicne most of the logic is taken care of by external projects.
+        /// * This is the only time a <see href="https://spectrum-health-systems.github.io/Abatab/articles/SourceCode/Logging.html#primevaldebug-log">PrimevalDebug</see> log is written.
+        /// * This method should remain fairly static, since most of the logic is taken care of by external projects.
         /// </remarks>
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string scriptParameter)
