@@ -1,2 +1,1 @@
-
 # Abatab documentation

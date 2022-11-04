@@ -41,11 +41,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/DocFx/DocFx.md",
+      "source_relative_path": "articles/DocFx/AbatabAndDocFx.md",
       "output": {
         ".html": {
-          "relative_path": "articles/DocFx/DocFx.html",
-          "hash": "GieQhSHByJHt2tyeg/V4+Lrj7jeneNIIdA6q1lWzZLs="
+          "relative_path": "articles/DocFx/AbatabAndDocFx.html",
+          "hash": "fKvxgLrIlTRt6SSlOsMw/Rm/8h/SqSXOW2SBhdl2pco="
         }
       },
       "is_incremental": false,
@@ -65,11 +65,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/DocFx/TheDocFxJsonFile.md",
+      "source_relative_path": "articles/DocFx/DocFxRootFiles.md",
       "output": {
         ".html": {
-          "relative_path": "articles/DocFx/TheDocFxJsonFile.html",
-          "hash": "bUvqBLLmz1azorvLiSBuvgFueWfDa4A6aoOxj/R3rkc="
+          "relative_path": "articles/DocFx/DocFxRootFiles.html",
+          "hash": "d1K+OOVaZNIpchMRgWAfS7SACUVTBFVft+msNlOP2go="
         }
       },
       "is_incremental": false,
@@ -177,7 +177,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "YbKhrVwldVjLBP152ZsGRtMvyXYmyjSGX4jZUZUSfPs="
+          "hash": "7WiCFAC9a8tbEi1h6+JfhBmjvpf/Ukj5wYixf/kIt5k="
         }
       },
       "is_incremental": false,
@@ -189,7 +189,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "j3tGpwipnilWSoED1qqf+WKH1J2Hq8yuXJ0oqDABs24="
+          "hash": "bPhuF07Vxr//gDFcibw5VknxZf6lx0IVRFm1LNVkEIA="
         }
       },
       "is_incremental": false,
