@@ -69,7 +69,19 @@
       "output": {
         ".html": {
           "relative_path": "articles/DocFx/TheDocFxJsonFile.html",
-          "hash": "L6IA4hLukWeN93TE4/YxrqR56UFekXCDeozvpol9L4o="
+          "hash": "bUvqBLLmz1azorvLiSBuvgFueWfDa4A6aoOxj/R3rkc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/DocFx/TheDocFxToc.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/DocFx/TheDocFxToc.html",
+          "hash": "7gXTh5V3X5pKeEVidPYGpTJyf6Q0jYEttDYi1kfixlo="
         }
       },
       "is_incremental": false,
@@ -219,7 +231,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Abatab.Abatab.html",
-          "hash": "1RVZurLoaKCpfSpJ63fIsikbp5O9Z2LFpwLvQG+sjGE="
+          "hash": "fHJ5dJaUeTj9S3RntpcjNH6NGbUjNfzqsuiJ9ZlDeeE="
         }
       },
       "is_incremental": false,
@@ -255,7 +267,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Abatab.html",
-          "hash": "G994NQepfwLkLpyq2obsDDWFmF5IpZ3o6UG0/58KMqA="
+          "hash": "s1R9J/Jnb4urYnzskz0oXOiOaPQyYFVD+Jxp9M26gTI="
         }
       },
       "is_incremental": false,
@@ -855,7 +867,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 15,
+          "total_file_count": 16,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
