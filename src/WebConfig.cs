@@ -1,31 +1,31 @@
 ﻿// Abatab 0.97.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221104.075753
+// b221104.095356
 
 using Abatab.Properties;
 using AbatabLogging;
 using System.Collections.Generic;
+using System.Reflection;
 
 namespace Abatab
 {
     /// <summary>
-    /// Logic for working with Web.config.
+    /// Logic for working with the local Web.config file, which contains local settings for an Abatab session.
     /// </summary>
     public static class WebConfig
     {
         /// <summary>
-        /// Load the settings from Web.config.
+        /// Load the settings from the local Web.config file.
         /// </summary>
-        /// <remarks>
-        /// * This method is required by Avatar.
-        /// * This is the only time a <see href="https://spectrum-health-systems.github.io/Abatab/articles/SourceCode/Logging.html#primevaldebug-log"/> log is written.
-        /// * This method should remain fairly static, sicne most of the logic is taken care of by external projects.
-        /// </remarks>
         /// <returns>A dictionary containing the settings from Web.config.</returns>
+        /// <remarks>
+        /// * Whenever a new value is added to Properties/Settings.settings, it needs to be added here as well.
+        /// * Settings are trimmed and converted to lowercase <see href="https://spectrum-health-systems.github.io/Abatab/articles/SourceCode/Variables.html#casing-and-trimming">[more info]</see>
+        /// </remarks>
         public static Dictionary<string, string> Load()
         {
-            //?LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG]");
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG]");
             // Can't really put a trace log here.
 
             var webConfig =  new Dictionary<string, string>

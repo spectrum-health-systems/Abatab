@@ -6,7 +6,7 @@
     <members>
         <member name="T:ModQuickMedOrder.Dose">
             <summary>
-            Dose logic for the QuickMedOrder moduleeee.
+            Dose logic for the QuickMedOrder module.
             </summary>
         </member>
         <member name="M:ModQuickMedOrder.Dose.VerifyUnderMaxPercentIncrease(AbatabData.Session)">
