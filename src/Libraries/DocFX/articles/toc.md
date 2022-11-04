@@ -4,6 +4,8 @@
 
 ## [Creating a new DocFX project](./DocFx/DocFxNewProject.md)
 
+## [The docfx.json file](./DocFx/TheDocFxJsonFile.md)
+
 # [Source code](./SourceCode/SourceCode.md)
 
 ## [Headers](./SourceCode/Headers.md)

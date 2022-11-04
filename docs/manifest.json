@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "C:/Users/Chris.Banwarth/GitHub/Repositories/SHS/Abatab/Abatab/src/Libraries/DocFX",
+  "source_base_path": "C:/Users/Chris.Banwarth/GitHub/Repositories/SHS/Abatab/src/Libraries/DocFX",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -57,7 +57,19 @@
       "output": {
         ".html": {
           "relative_path": "articles/DocFx/DocFxNewProject.html",
-          "hash": "TlZmuGE5EwQOdRIdgUH/mIHDdLBw/HhXRvZpiIqQO7M="
+          "hash": "y7ECkEit6aW9gMR0kouXsOYgU35KVnEpdYcB3ZWdqus="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/DocFx/TheDocFxJsonFile.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/DocFx/TheDocFxJsonFile.html",
+          "hash": "L6IA4hLukWeN93TE4/YxrqR56UFekXCDeozvpol9L4o="
         }
       },
       "is_incremental": false,
@@ -153,7 +165,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "19xShSBo/MgQvYDTGCW88SVYnyoyASSYo2/cZO6bdBY="
+          "hash": "YbKhrVwldVjLBP152ZsGRtMvyXYmyjSGX4jZUZUSfPs="
         }
       },
       "is_incremental": false,
@@ -843,7 +855,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 14,
+          "total_file_count": 15,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
