@@ -6,7 +6,7 @@ Abatab has extensive built-in logging functionality.
 
 Debug logs are only created when [`DebugMode`](https://spectrum-health-systems.github.io/Abatab/articles/SourceCode/LocalSettings.html#DebugMode) is set to `on`.    
 * DebugMode should only be used while developing Abatab
-* There is a 10ms pause when writing a debug logfile, so it will have an impact on performance.
+* There is a hardcoded 10ms delay when writing a debug logfile, so DebugMode will have an impact on performance.
 
 ### Built-in debug statements
 
@@ -45,29 +45,39 @@ to
 ```bash
 const bool debugDebugger = true;
 ```
+
 ## Trace logs
 
-Trace logs are designed to let you follow what is happening during an Abatab session, and can be helpful when troubleshooting.
+Trace logs are designed to let you follow what is happening during an Abatab session, and can be helpful when troubleshooting. As such, trace statemnts are abundant.
 
-Trace logs are only created when `LogMode` contains `trace`.
+Trace logs are only created when [`LogMode`](https://spectrum-health-systems.github.io/Abatab/articles/SourceCode/LocalSettings.html#LogMode) contains `trace`.
 
+* Trace logs should generally be used when troubleshooting development builds, although they can be enabled in production.
+* There is a global [delay]((https://spectrum-health-systems.github.io/Abatab/articles/SourceCode/LocalSettings.html#LogWriteDelay)) when writing log files, so enabling trace logs may have an negative impact on performance.
 
-* DebugMode should only be used while developing Abatab
-* There is a 10ms pause when writing a debug logfile, so it will have an impact on performance.
+## A note about trace logs in AbatabLogging.LogEvent.cs
 
-### Built-in debug statements
+Log statements in AbatabLogging.LogEvent.cs don't follow most of the standards below, since it's not easy to log the thing that's creating the thing that's logging a thing. Or something.
 
-Most methods start with a a built-in debug statements, which have a `[DEBUG]` message. These debug statements are part of the code, and should not be removed.
+### Built-in trace statements
+
+Trace statements can be found:
+* At the beginning of methods, immediately following debug statements
+* At the beginning of any conditional statements, loops, or other expressions
+* When it would be helpful to know where Abatab is
+
+These trace statements are part of the code, and should not be removed.
 
 ```bash
-LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
+LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 ```
-### Custom debug statements
 
-You can create your own debug statements by customizing the message. Temporary debug statments should be removed from production code.
+### Custom trace statements
+
+You can create your own trace statements by customizing the message. Temporary trace statments should be removed from production code.
 
 ```bash
-LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, $"VariableName value is {value}");
+LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, $"VariableName value is {value}");
 ```
 
 ## Session logs
@@ -75,7 +85,3 @@ LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.Deb
 ## Access logs
 
 ## Lost logs
-
-
-
-```
