@@ -113,6 +113,10 @@
       <Project>{2741df45-7db8-4bea-89b4-4a70c7114192}</Project>
       <Name>AbatabOptionObject</Name>
     </ProjectReference>
+    <ProjectReference Include="Core\AbatabRoundhouse\AbatabRoundhouse.csproj">
+      <Project>{d2854caf-4b28-4df0-81c1-692c3e7b008f}</Project>
+      <Name>AbatabRoundhouse</Name>
+    </ProjectReference>
     <ProjectReference Include="Core\AbatabSession\AbatabSession.csproj">
       <Project>{5FCAD3F6-0AA9-4BEE-B390-097A6832568E}</Project>
       <Name>AbatabSession</Name>

@@ -1,4 +1,23 @@
-#[Introduction](intro.md)
-#[Something else](details1.md)
-##[Another thing](details2.md)
+# [About Abatab articles](AboutAbatabArticles.md)
 
+# DocFX
+
+## [Creating a new DocFX project](./DocFx/DocFxNewProject.md)
+
+## [The docfx.json file](./DocFx/TheDocFxJsonFile.md)
+
+# [Source code](./SourceCode/SourceCode.md)
+
+## [Headers](./SourceCode/Headers.md)
+
+## [Versioning](./SourceCode/Versioning.md)
+
+## [Comments](./SourceCode/Comments.md)
+
+## [Variables](./SourceCode/Variables.md)
+
+## [Logging](./SourceCode/Logging.md)
+
+## [Projects and modules](./SourceCode/ProjectsAndModules.md)
+
+# [Additional reading](./AdditionalReading/AdditionalReading.md)

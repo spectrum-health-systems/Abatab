@@ -6,45 +6,51 @@
     <members>
         <member name="T:Abatab.Abatab">
             <summary>
-            The entry point for Abatab.
+            The main Abatab project. This is where the magic starts!
             </summary>
         </member>
         <member name="M:Abatab.Abatab.GetVersion">
             <summary>
             Returns the current version of Abatab.
             </summary>
-            <remarks>
-            This method is required by Avatar.
-            </remarks>
             <returns>The current version of Abatab.</returns>
+            <remarks>
+            * This method is required by Avatar.
+            * The version number is always the version that is in development. For example, while developing v1.0, this will return <c>1.0</c>.
+            </remarks>
         </member>
         <member name="M:Abatab.Abatab.RunScript(NTST.ScriptLinkService.Objects.OptionObject2015,System.String)">
             <summary>
             Executes script parameter request from Avatar, then returns a potentially modified OptionObject to Avatar.
             </summary>
-            <remarks>
-            This method is required by Avatar.
-            </remarks>
             <param name="sentOptionObject">The original OptionObject sent from Avatar.</param>
             <param name="scriptParameter">The original Script Parameter request from Avatar.</param>
             <returns>A finalized OptionObject.</returns>
+            <remarks>
+            * This method is required by Avatar.
+            * This is the only time a PrimevalDebug log is written.
+            * This method should remain fairly static, sicne most of the logic is taken care of by external projects.
+            </remarks>
         </member>
         <member name="T:Abatab.Roundhouse">
             <summary>
-            Roundhouse functionality for Abatab.
+            Determines what should be done with the Module component of the Script Parameter sent from Avatar.
             </summary>
         </member>
         <member name="M:Abatab.Roundhouse.ParseRequest(AbatabData.Session)">
             <summary>
-            Determines where a script parameter request should go.
+            Determines which Abatab Module should get the Command/Action/Option components of the Script Parameter sent from Avatar.
             </summary>
-            <param name="abatabSession">Information/data for this session of Abatab.</param>
-        </member>
-        <member name="M:Abatab.Roundhouse.ModQuickMedOrderExecute(AbatabData.Session)">
-            <summary>
-            Allow verified users to execute ModQuickMedOrder functionality.
-            </summary>
-            <param name="abatabSession">Information/data for this session of Abatab.</param>
+            <param name="abatabSession">Settings and data for this session of Abatab.</param>
+            <remarks>
+            * Whenever a new Abatab Module is added, logic will need to be added to the switch statement using the following template:
+            <code>
+            case "newmodule":
+              LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+              ModNewModule.Roundhouse.ParseRequest(abatabSession);
+              break;
+            </code>
+            </remarks>
         </member>
         <member name="T:Abatab.WebConfig">
             <summary>

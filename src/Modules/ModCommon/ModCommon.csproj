@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="VerifyAccess.cs" />
     <Compile Include="Confirm.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -59,6 +60,20 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AppData\Documentation\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\AbatabData\AbatabData.csproj">
+      <Project>{E3028CFD-5965-4555-9A96-3EBBDFD4D550}</Project>
+      <Name>AbatabData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\AbatabLogging\AbatabLogging.csproj">
+      <Project>{A4467424-56E0-4260-BB21-D98263D7AEFD}</Project>
+      <Name>AbatabLogging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\AbatabOptionObject\AbatabOptionObject.csproj">
+      <Project>{2741df45-7db8-4bea-89b4-4a70c7114192}</Project>
+      <Name>AbatabOptionObject</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

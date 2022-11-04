@@ -1,7 +1,7 @@
 ﻿// Abatab 0.96.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221102.094514
+// b221103.213722
 
 using Abatab.Properties;
 using AbatabData;
@@ -15,7 +15,7 @@ using System.Web.Services;
 namespace Abatab
 {
     /// <summary>
-    /// The entry point for Abatab.
+    /// The main Abatab project. This is where the magic starts!
     /// </summary>
     [WebService(Namespace = "http://tempuri.org/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
@@ -25,10 +25,11 @@ namespace Abatab
         /// <summary>
         /// Returns the current version of Abatab.
         /// </summary>
-        /// <remarks>
-        /// This method is required by Avatar.
-        /// </remarks>
         /// <returns>The current version of Abatab.</returns>
+        /// <remarks>
+        /// * This method is required by Avatar.
+        /// * The version number is always the version that is in development. For example, while developing v1.0, this will return <c>1.0</c>.
+        /// </remarks>
         [WebMethod]
         public string GetVersion()
         {
@@ -38,12 +39,14 @@ namespace Abatab
         /// <summary>
         /// Executes script parameter request from Avatar, then returns a potentially modified OptionObject to Avatar.
         /// </summary>
-        /// <remarks>
-        /// This method is required by Avatar.
-        /// </remarks>
         /// <param name="sentOptionObject">The original OptionObject sent from Avatar.</param>
         /// <param name="scriptParameter">The original Script Parameter request from Avatar.</param>
         /// <returns>A finalized OptionObject.</returns>
+        /// <remarks>
+        /// * This method is required by Avatar.
+        /// * This is the only time a PrimevalDebug log is written.
+        /// * This method should remain fairly static, sicne most of the logic is taken care of by external projects.
+        /// </remarks>
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string scriptParameter)
         {

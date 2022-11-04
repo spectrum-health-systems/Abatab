@@ -52,9 +52,9 @@
              <param name="abatabSettings"></param>
              <param name="abatabSession"></param>
         </member>
-        <member name="M:AbatabSession.Build.VerifyAvatarUserName(AbatabData.Session)">
+        <member name="M:AbatabSession.Build.VerifyAbatabUserName(AbatabData.Session)">
             <summary>
-            Verifies the session AvatarUserName is valid.
+            Verifies the session AbatabUserName is valid.
             </summary>
             <param name="abatabSession">Information/data for this session of Abatab.</param>
         </member>

@@ -1,7 +1,7 @@
 ﻿// AbatabSession 0.96.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221102.094514
+// 221103.091818
 
 using AbatabData;
 using AbatabData.Core;
@@ -40,7 +40,7 @@ namespace AbatabSession
                 Mode                   = abatabSettings["AbatabMode"],
                 Env                    = abatabSettings["AbatabEnvironment"],
                 Root                   = $@"{abatabSettings["AbatabRoot"]}\{abatabSettings["AbatabEnvironment"]}",
-                AvatarFallbackUserName = abatabSettings["AvatarFallbackUserName"],
+                AbatabFallbackUserName = abatabSettings["AbatabFallbackUserName"],
                 SessionDateStamp       = $"{DateTime.Now:yyMMdd}",
                 SessionTimeStamp       = $"{DateTime.Now:HHmmss}",
                 AbatabRequest          = scriptParameter.ToLower(),
@@ -48,7 +48,7 @@ namespace AbatabSession
                 AbatabCommand          = "undefined",
                 AbatabAction           = "undefined",
                 AbatabOption           = "undefined",
-                AvatarUserName         = sentOptObj.OptionUserId,
+                AbatabUserName         = sentOptObj.OptionUserId,
                 SentOptObj             = sentOptObj,
                 WorkOptObj             = AbatabOptionObject.WorkObj.Build(sentOptObj),
                 FinalOptObj            = new OptionObject2015()
@@ -69,13 +69,13 @@ namespace AbatabSession
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"]);
             BuildModPrototypeConfig(abatabSettings, abatabSession);
 
-            abatabSession.LoggingConfig.SessionRoot = $@"{abatabSession.Root}\logs\{abatabSession.SessionDateStamp}\{abatabSession.AvatarUserName}\{abatabSession.SessionTimeStamp}";
+            abatabSession.LoggingConfig.SessionRoot = $@"{abatabSession.Root}\logs\{abatabSession.SessionDateStamp}\{abatabSession.AbatabUserName}\{abatabSession.SessionTimeStamp}";
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
             AbatabSystem.Maintenance.VerifyDir(abatabSession.LoggingConfig.SessionRoot);
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
-            VerifyAvatarUserName(abatabSession);
+            VerifyAbatabUserName(abatabSession);
 
             ParseAbatabRequest(abatabSession);
 
@@ -172,7 +172,7 @@ namespace AbatabSession
                 Mode             = $"{abatabSettings["LogMode"]}",
                 Detail           = $"{abatabSettings["LogDetail"]}",
                 WriteDelay       = $"{abatabSettings["LogWriteDelay"]}",
-                SessionRoot      = $@"{abatabSession.Root}\logs\{abatabSession.SessionDateStamp}\{abatabSession.AvatarUserName}\{abatabSession.SessionTimeStamp}",
+                SessionRoot      = $@"{abatabSession.Root}\logs\{abatabSession.SessionDateStamp}\{abatabSession.AbatabUserName}\{abatabSession.SessionTimeStamp}",
                 EventErrorRoot   = $@"{abatabSession.Root}\logs\error",
                 EventLostRoot    = $@"{abatabSession.Root}\logs\lost",
                 EventWarningRoot = $@"{abatabSession.Root}\logs\warning",
@@ -183,18 +183,18 @@ namespace AbatabSession
         }
 
         /// <summary>
-        /// Verifies the session AvatarUserName is valid.
+        /// Verifies the session AbatabUserName is valid.
         /// </summary>
         /// <param name="abatabSession">Information/data for this session of Abatab.</param>
-        private static void VerifyAvatarUserName(Session abatabSession)
+        private static void VerifyAbatabUserName(Session abatabSession)
         {
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
-            if (string.IsNullOrWhiteSpace(abatabSession.AvatarUserName))
+            if (string.IsNullOrWhiteSpace(abatabSession.AbatabUserName))
             {
                 LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
-                abatabSession.AvatarUserName = abatabSession.AvatarFallbackUserName;
+                abatabSession.AbatabUserName = abatabSession.AbatabFallbackUserName;
             }
 
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");

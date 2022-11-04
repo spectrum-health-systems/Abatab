@@ -1,7 +1,7 @@
 ﻿// Abatab 0.96.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221102.094514
+// 221103.091818
 
 using AbatabData;
 using AbatabLogging;
@@ -10,14 +10,23 @@ using System.Reflection;
 namespace Abatab
 {
     /// <summary>
-    /// Roundhouse functionality for Abatab.
+    /// Determines what should be done with the Module component of the Script Parameter sent from Avatar.
     /// </summary>
     public static class Roundhouse
     {
         /// <summary>
-        /// Determines where a script parameter request should go.
+        /// Determines which Abatab Module should get the Command/Action/Option components of the Script Parameter sent from Avatar.
         /// </summary>
-        /// <param name="abatabSession">Information/data for this session of Abatab.</param>
+        /// <param name="abatabSession">Settings and data for this session of Abatab.</param>
+        /// <remarks>
+        /// * Whenever a new Abatab Module is added, logic will need to be added to the switch statement using the following template:
+        /// <code>
+        /// case "newmodule":
+        ///   LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+        ///   ModNewModule.Roundhouse.ParseRequest(abatabSession);
+        ///   break;
+        /// </code>
+        /// </remarks>
         public static void ParseRequest(Session abatabSession)
         {
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
@@ -32,7 +41,16 @@ namespace Abatab
 
                 case "quickmedorder":
                     LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
-                    ModQuickMedOrderExecute(abatabSession);
+
+                    if (ModCommon.VerifyAccess.CheckIfValidUser(abatabSession.AbatabUserName, abatabSession.ModQuickMedOrderConfig.ValidUsers))
+                    {
+                        ModQuickMedOrder.Roundhouse.ParseRequest(abatabSession);
+                    }
+                    else
+                    {
+                        ModCommon.VerifyAccess.InvalidUser(abatabSession);
+                    }
+
                     break;
 
                 case "testing":
@@ -42,32 +60,11 @@ namespace Abatab
 
                 default:
                     LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
-                    // Exit gracefully.
+                    // TODO Exit gracefully.
                     break;
             }
 
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
-        }
-
-        /// <summary>
-        /// Allow verified users to execute ModQuickMedOrder functionality.
-        /// </summary>
-        /// <param name="abatabSession">Information/data for this session of Abatab.</param>
-        private static void ModQuickMedOrderExecute(Session abatabSession)
-        {
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
-
-            if (ModCommon.Verify.ValidUser(abatabSession.AvatarUserName, abatabSession.ModQuickMedOrderConfig.ValidUsers))
-            {
-                LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
-                ModQuickMedOrder.Roundhouse.ParseRequest(abatabSession);
-            }
-            else
-            {
-                LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
-                LogEvent.Access(abatabSession, "Invalid ModQuickMedOrder user.");
-                AbatabOptionObject.FinalObj.Finalize(abatabSession);
-            }
         }
     }
 }

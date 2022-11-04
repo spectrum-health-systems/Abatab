@@ -1,7 +1,7 @@
 ﻿// AbatabData 0.96.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221102.094514
+// 221103.091818
 
 using NTST.ScriptLinkService.Objects;
 
@@ -15,7 +15,7 @@ namespace AbatabData
         public string Mode { get; set; }
         public string Env { get; set; }
         public string Root { get; set; }
-        public string AvatarFallbackUserName { get; set; }
+        public string AbatabFallbackUserName { get; set; }
         public Core.Debuggler DebugglerConfig { get; set; }
         public Core.Logging LoggingConfig { get; set; }
         public Module.Common ModCommonConfig { get; set; }
@@ -24,7 +24,7 @@ namespace AbatabData
         public Module.Testing ModTestingConfig { get; set; }
         public string SessionDateStamp { get; set; }
         public string SessionTimeStamp { get; set; }
-        public string AvatarUserName { get; set; }
+        public string AbatabUserName { get; set; }
         public string AbatabRequest { get; set; }
         public string AbatabModule { get; set; }
         public string AbatabCommand { get; set; }
