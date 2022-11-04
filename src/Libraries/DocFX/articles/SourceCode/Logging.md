@@ -2,16 +2,9 @@
 
 Abatab has extensive built-in logging functionality.
 
-The following log-related settings are available in the local settings file:
-
-* [`DebugMode`](https://spectrum-health-systems.github.io/Abatab/articles/SourceCode/LocalSettings.html) enables/disables the creation of debug logs
-
-* `LogMode` enables/disables the creation of log file types
-
-
 ## Debug logs
 
-Debug logs are only created when `DebugMode` is set to `on`.    
+Debug logs are only created when [`DebugMode`](https://spectrum-health-systems.github.io/Abatab/articles/SourceCode/LocalSettings.html#DebugMode) is set to `on`.    
 * DebugMode should only be used while developing Abatab
 * There is a 10ms pause when writing a debug logfile, so it will have an impact on performance.
 
