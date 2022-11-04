@@ -1,7 +1,7 @@
 ﻿// Abatab ModQuickMedOrder 0.97.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221104.075753
+// b221104.095356
 
 using AbatabData;
 using AbatabLogging;
@@ -12,7 +12,7 @@ using System.Reflection;
 namespace ModQuickMedOrder
 {
     /// <summary>
-    /// Dose logic for the QuickMedOrder moduleeee.
+    /// Dose logic for the QuickMedOrder module.
     /// </summary>
     public static class Dose
     {

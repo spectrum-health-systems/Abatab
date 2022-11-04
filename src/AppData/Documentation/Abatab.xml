@@ -54,19 +54,18 @@
         </member>
         <member name="T:Abatab.WebConfig">
             <summary>
-            Logic for working with Web.config.
+            Logic for working with the local Web.config file, which contains local settings for an Abatab session.
             </summary>
         </member>
         <member name="M:Abatab.WebConfig.Load">
             <summary>
-            Load the settings from Web.config.
+            Load the settings from the local Web.config file.
             </summary>
-            <remarks>
-            * This method is required by Avatar.
-            * This is the only time a <see href="https://spectrum-health-systems.github.io/Abatab/articles/SourceCode/Logging.html#primevaldebug-log"/> log is written.
-            * This method should remain fairly static, sicne most of the logic is taken care of by external projects.
-            </remarks>
             <returns>A dictionary containing the settings from Web.config.</returns>
+            <remarks>
+            * Whenever a new value is added to Properties/Settings.settings, it needs to be added here as well.
+            * Settings are trimmed and converted to lowercase <see href="https://spectrum-health-systems.github.io/Abatab/articles/SourceCode/Variables.html#casing-and-trimming">[more info]</see>
+            </remarks>
         </member>
     </members>
 </doc>

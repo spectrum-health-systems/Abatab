@@ -73,7 +73,7 @@
   
   <h1 id="Abatab_WebConfig" data-uid="Abatab.WebConfig" class="text-break">Class WebConfig
   </h1>
-  <div class="markdown level0 summary"><p>Logic for working with Web.config.</p>
+  <div class="markdown level0 summary"><p>Logic for working with the local Web.config file, which contains local settings for an Abatab session.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -117,7 +117,7 @@
   
   <a id="Abatab_WebConfig_Load_" data-uid="Abatab.WebConfig.Load*"></a>
   <h4 id="Abatab_WebConfig_Load" data-uid="Abatab.WebConfig.Load">Load()</h4>
-  <div class="markdown level1 summary"><p>Load the settings from Web.config.</p>
+  <div class="markdown level1 summary"><p>Load the settings from the local Web.config file.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -142,9 +142,8 @@
   </table>
   <h5 id="Abatab_WebConfig_Load_remarks">Remarks</h5>
   <div class="markdown level1 remarks"><ul>
-<li>This method is required by Avatar.</li>
-<li>This is the only time a <a href="https://spectrum-health-systems.github.io/Abatab/articles/SourceCode/Logging.html#primevaldebug-log">https://spectrum-health-systems.github.io/Abatab/articles/SourceCode/Logging.html#primevaldebug-log</a> log is written.</li>
-<li>This method should remain fairly static, sicne most of the logic is taken care of by external projects.</li>
+<li>Whenever a new value is added to Properties/Settings.settings, it needs to be added here as well.</li>
+<li>Settings are trimmed and converted to lowercase <a href="https://spectrum-health-systems.github.io/Abatab/articles/SourceCode/Variables.html#casing-and-trimming">[more info]</a></li>
 </ul>
 </div>
 </article>
