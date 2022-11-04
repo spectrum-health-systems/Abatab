@@ -69,7 +69,14 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="logging">Logging</h1>
 
-<p>Abatab has extensive logging functionality built in.</p>
+<p>Abatab has extensive built-in logging functionality.</p>
+<p>The following log-related settings are available in the local settings file:</p>
+<ul>
+<li><p><a href="https://spectrum-health-systems.github.io/Abatab/articles/SourceCode/LocalSettings.html"><code>DebugMode</code></a> enables/disables the creation of debug logs</p>
+</li>
+<li><p><code>LogMode</code> enables/disables the creation of log file types</p>
+</li>
+</ul>
 <h2 id="debug-logs">Debug logs</h2>
 <p>Debug logs are only created when <code>DebugMode</code> is set to <code>on</code>.    </p>
 <ul>
@@ -84,7 +91,7 @@
 <pre><code class="lang-bash">LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, $&quot;VariableName value is {value}&quot;);
 </code></pre><h3 id="primevaldebug-log">PrimevalDebug log</h3>
 <p>The PrimevalDebug log file is the first line of Abatab.asmx.cs, and writes a debug logfile with the most basic, hardcoded setting information.</p>
-<pre><code class="lang-sh">LogEvent.PrimevalDebug(Settings.Default.DebugMode, Assembly.GetExecutingAssembly().GetName().Name, $@&quot;{Settings.Default.AbatabRoot}{Settings.Default.AbatabEnvironment}\{Settings.Default.DebugLogRoot}&quot;);
+<pre><code class="lang-bash">LogEvent.PrimevalDebug(Settings.Default.DebugMode, Assembly.GetExecutingAssembly().GetName().Name, $@&quot;{Settings.Default.AbatabRoot}{Settings.Default.AbatabEnvironment}\{Settings.Default.DebugLogRoot}&quot;);
 </code></pre><h3 id="the-debuggler">The Debuggler</h3>
 <p>Abatab can write debug files for debug logs, but this should <em>only</em> be used in development, as it will introduce <em>significant</em> performance issues.</p>
 <p>As such, enabling the debuggler can only be done in the source code by changing the following line in <code>AbatabLogging.LogEvent.Debug()</code> from</p>
@@ -92,10 +99,19 @@
 </code></pre><p>to</p>
 <pre><code class="lang-bash">const bool debugDebugger = true;
 </code></pre><h2 id="trace-logs">Trace logs</h2>
+<p>Trace logs are designed to let you follow what is happening during an Abatab session, and can be helpful when troubleshooting.</p>
+<p>Trace logs are only created when <code>LogMode</code> contains <code>trace</code>.</p>
 <ul>
-<li>[TRACE]</li>
+<li>DebugMode should only be used while developing Abatab</li>
+<li>There is a 10ms pause when writing a debug logfile, so it will have an impact on performance.</li>
 </ul>
-<h2 id="session-logs">Session logs</h2>
+<h3 id="built-in-debug-statements-1">Built-in debug statements</h3>
+<p>Most methods start with a a built-in debug statements, which have a <code>[DEBUG]</code> message. These debug statements are part of the code, and should not be removed.</p>
+<pre><code class="lang-bash">LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, &quot;[DEBUG]&quot;);
+</code></pre><h3 id="custom-debug-statements-1">Custom debug statements</h3>
+<p>You can create your own debug statements by customizing the message. Temporary debug statments should be removed from production code.</p>
+<pre><code class="lang-bash">LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, $&quot;VariableName value is {value}&quot;);
+</code></pre><h2 id="session-logs">Session logs</h2>
 <h2 id="access-logs">Access logs</h2>
 <h2 id="lost-logs">Lost logs</h2>
 <p>```</p>
