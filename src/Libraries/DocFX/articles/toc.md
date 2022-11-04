@@ -1,10 +1,10 @@
 # [About Abatab articles](AboutAbatabArticles.md)
 
-# DocFX
+# [Abatab and DocFX](./DocFx/AbatabAndDocFx.md)
 
 ## [Creating a new DocFX project](./DocFx/DocFxNewProject.md)
 
-## [The docfx.json file](./DocFx/TheDocFxJsonFile.md)
+## [Root files](./DocFx/DocFxRootFiles.md)
 
 # [Source code](./SourceCode/SourceCode.md)
 
@@ -17,6 +17,8 @@
 ## [Variables](./SourceCode/Variables.md)
 
 ## [Logging](./SourceCode/Logging.md)
+
+## [Local settings](./SourceCode/LocalSettings.md)
 
 ## [Projects and modules](./SourceCode/ProjectsAndModules.md)
 

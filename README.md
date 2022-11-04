@@ -45,6 +45,14 @@ The good news is that you can extend myAvatar™ functionality via Netsmart's my
 
 [Here](https://spectrum-health-systems.github.io/Abatab/)
 
+```bash
+LogEvent.PrimevalDebug(Settings.Default.DebugMode, Assembly.GetExecutingAssembly().GetName().Name, $@"{Settings.Default.AbatabRoot}{Settings.Default.AbatabEnvironment}\{Settings.Default.DebugLogRoot}");
+```
+
+```sh
+LogEvent.PrimevalDebug(Settings.Default.DebugMode, Assembly.GetExecutingAssembly().GetName().Name, $@"{Settings.Default.AbatabRoot}{Settings.Default.AbatabEnvironment}\{Settings.Default.DebugLogRoot}");
+```
+
 # The Abatab Manual
 
 This README is short and sweet because the [Abatab Manual][ManHome], which is updated with each release, contains everything you need to know about Abatab.

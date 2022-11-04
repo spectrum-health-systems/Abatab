@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Logging </title>
+    <title>Abatab and DocFx </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Logging ">
+    <meta name="title" content="Abatab and DocFx ">
     <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -67,38 +67,9 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="logging">Logging</h1>
+<h1 id="abatab-and-docfx">Abatab and DocFx</h1>
 
-<p>Abatab has extensive logging functionality built in.</p>
-<h2 id="debug-logs">Debug logs</h2>
-<p>Debug logs are only created when <code>DebugMode</code> is set to <code>on</code>.    </p>
-<ul>
-<li>DebugMode should only be used while developing Abatab</li>
-<li>There is a 10ms pause when writing a debug logfile, so it will have an impact on performance.</li>
-</ul>
-<h3 id="built-in-debug-statements">Built-in debug statements</h3>
-<p>Most methods start with a a built-in debug statements, which have a <code>[DEBUG]</code> message. These debug statements are part of the code, and should not be removed.</p>
-<pre><code class="lang-bash">LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, &quot;[DEBUG]&quot;);
-</code></pre><h3 id="custom-debug-statements">Custom debug statements</h3>
-<p>You can create your own debug statements by customizing the message. Temporary debug statments should be removed from production code.</p>
-<pre><code class="lang-bash">LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, $&quot;VariableName value is {value}&quot;);
-</code></pre><h3 id="primevaldebug-log">PrimevalDebug log</h3>
-<p>The PrimevalDebug log file is the first line of Abatab.asmx.cs, and writes a debug logfile with the most basic, hardcoded setting information.</p>
-<pre><code class="lang-sh">LogEvent.PrimevalDebug(Settings.Default.DebugMode, Assembly.GetExecutingAssembly().GetName().Name, $@&quot;{Settings.Default.AbatabRoot}{Settings.Default.AbatabEnvironment}\{Settings.Default.DebugLogRoot}&quot;);
-</code></pre><h3 id="the-debuggler">The Debuggler</h3>
-<p>Abatab can write debug files for debug logs, but this should <em>only</em> be used in development, as it will introduce <em>significant</em> performance issues.</p>
-<p>As such, enabling the debuggler can only be done in the source code by changing the following line in <code>AbatabLogging.LogEvent.Debug()</code> from</p>
-<pre><code class="lang-bash">const bool debugDebugger = false;
-</code></pre><p>to</p>
-<pre><code class="lang-bash">const bool debugDebugger = true;
-</code></pre><h2 id="trace-logs">Trace logs</h2>
-<ul>
-<li>[TRACE]</li>
-</ul>
-<h2 id="session-logs">Session logs</h2>
-<h2 id="access-logs">Access logs</h2>
-<h2 id="lost-logs">Lost logs</h2>
-<p>```</p>
+<p>Abatab uses <a href="https://dotnet.github.io/docfx/">DocFX</a> for documentation.</p>
 </article>
           </div>
           

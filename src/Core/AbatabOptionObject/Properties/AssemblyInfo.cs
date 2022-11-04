@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("AbatabOptionObject")]
-[assembly: AssemblyDescription("Core OptionObject logic for Abatab")]
+[assembly: AssemblyDescription("OptionObject logic for Abatab")]
 [assembly: AssemblyConfiguration("Development")]
 [assembly: AssemblyCompany("A Pretty Cool Program")]
 [assembly: AssemblyProduct("AbatabOptionObject")]
@@ -31,5 +31,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("0.96.0.0")]
-[assembly: AssemblyFileVersion("0.96.0.0")]
+[assembly: AssemblyVersion("0.97.0.0")]
+[assembly: AssemblyFileVersion("0.97.0.0")]

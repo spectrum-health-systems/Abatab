@@ -1,6 +1,8 @@
-# The docfx.json file
+# DocFX root files
 
-## Targeting the solution
+## docfx.json
+
+### Targeting the solution
 
 We want to target all of the projects in Abatab, so we will point DocFX to Abatab.sln by changing
 
@@ -46,7 +48,7 @@ to
     }
 ```
 
-## Adding the manual
+### Adding the manual
 
 The Abatab Manual will be created by DocFX, so in the "build" section we need to change
 
@@ -73,7 +75,7 @@ to
         ],
 ```
 
-## Changing the destination
+### Changing the destination
 
 We want to host all of the documentation using GitHub Pages, so all of the data DocFX creates needs to be available in docs/, so change
 
@@ -87,7 +89,7 @@ to
     "dest": "../../../docs/",
 ```
 
-## The final docfx.json file
+### The final docfx.json file
 
 The final docfx.json file should look like this:
 
@@ -161,4 +163,23 @@ The final docfx.json file should look like this:
     ]
   }
 }
+```
+
+## index.html
+
+TBD
+
+## toc.yml
+
+DocFx/toc.yml should look like this:
+
+```bash
+- name: Manual
+  href: manual/
+- name: Articles
+  href: articles/
+- name: API Documentation
+  href: obj/api/
+  homepage: api/index.md
+
 ```
