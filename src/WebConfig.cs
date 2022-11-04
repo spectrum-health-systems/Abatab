@@ -17,6 +17,11 @@ namespace Abatab
         /// <summary>
         /// Load the settings from Web.config.
         /// </summary>
+        /// <remarks>
+        /// * This method is required by Avatar.
+        /// * This is the only time a <see href="https://spectrum-health-systems.github.io/Abatab/articles/SourceCode/Logging.html#primevaldebug-log"/> log is written.
+        /// * This method should remain fairly static, sicne most of the logic is taken care of by external projects.
+        /// </remarks>
         /// <returns>A dictionary containing the settings from Web.config.</returns>
         public static Dictionary<string, string> Load()
         {
