@@ -74,11 +74,35 @@ Abatab/Web.config</p>
 <h2 id="abatabmode">AbatabMode</h2>
 <h2 id="abatabenvironment">AbatabEnvironment</h2>
 <h2 id="abatabroot">AbatabRoot</h2>
-<h2 id="debugroot">DebugRoot</h2>
+<h2 id="debugmode">DebugMode</h2>
+<blockquote><p><code>DebugMode=off</code></p>
+</blockquote>
+<ul>
+<li><p><code>on</code><br>Debug logs will be written. This may affect performance, and should not be enabled in production environments.</p>
+</li>
+<li><p><code>off</code>
+Debug logs will not be written.</p>
+</li>
+</ul>
 <h2 id="debugvalidusers">DebugValidUsers</h2>
+<p><em>Not currently used</em></p>
 <h2 id="debuglogroot">DebugLogRoot</h2>
 <h2 id="logmode">LogMode</h2>
+<blockquote><p><code>LogMode=session</code></p>
+</blockquote>
+<ul>
+<li><p><code>all</code><br>All log types will be written</p>
+</li>
+<li><p><code>none</code><br>No log files will be written</p>
+</li>
+<li><p><code>session</code>
+Only session logs will be written.</p>
+</li>
+<li><p><code>%logType01%-%logType02%-%logType03%</code><br>Log types included in this string will be written.<br>For example, to write <code>error</code> and <code>trace</code> logs:<br><code>LogMode=error-trace</code>  </p>
+</li>
+</ul>
 <h2 id="logdetail">LogDetail</h2>
+<p><em>Not currently used</em></p>
 <h2 id="logwritedelay">LogWriteDelay</h2>
 <h2 id="abatabfallbackusername">AbatabFallbackUserName</h2>
 <h2 id="modtestingmode">ModTestingMode</h2>
