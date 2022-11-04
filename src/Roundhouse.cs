@@ -22,7 +22,7 @@ namespace Abatab
         /// * Whenever a new Abatab Module is added, logic will need to be added to the switch statement using the following template:
         /// <code>
         /// case "newmodule":
-        ///     LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+        ///     LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");g
         ///     ModNewModule.Roundhouse.ParseRequest(abatabSession);
         ///   break;
         /// </code>
