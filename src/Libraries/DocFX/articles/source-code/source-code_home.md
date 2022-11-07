@@ -1,6 +1,6 @@
-# [About Abatab articles][about-abatab-articles]
+# The Abatab source code
 
-# [Source code][source-code_home]
+Blurb goes here.
 
 ## [Headers][source-code_headers]
 
@@ -28,11 +28,9 @@
 
 # [Additional reading](./AdditionalReading/AdditionalReading.md)
 
-[about-abatab-articles]: about-abatab-articles.md
 [source-code_home]: ./source-code/source-code_home.md
 [source-code_headers]: ./source-code/source-code_headers.md
 [source-code_versioning]: ./source-code/source-code_versioning.md
 [source-code_comments]: ./source-code/source-code_comments.md
 [source-code_variables]: ./source-code/source-code_variables.md
 [source-code_logging]: ./source-code/source-code_logging.md
-[abatab-functionality]: ./functionality/functionality_home.md

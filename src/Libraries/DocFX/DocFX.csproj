@@ -47,12 +47,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="api\index.md" />
-    <None Include="articles\intro.md" />
+    <None Include="articles\about-abatab-articles.md" />
+    <None Include="articles\additional-reading\additional-reading_home.md" />
+    <None Include="articles\docfx-integration\docfx_configuration.md" />
+    <None Include="articles\docfx-integration\docfx_documentation-output.md" />
+    <None Include="articles\docfx-integration\docfx_home.md" />
+    <None Include="articles\docfx-integration\docfx_new-project.md" />
+    <None Include="articles\functionality\functionality_core.md" />
+    <None Include="articles\functionality\functionality_home.md" />
+    <None Include="articles\functionality\functionality_modules.md" />
+    <None Include="articles\source-code\source-code_comments.md" />
+    <None Include="articles\source-code\source-code_headers.md" />
+    <None Include="articles\source-code\source-code_home.md" />
+    <None Include="articles\source-code\source-code_logging.md" />
+    <None Include="articles\source-code\source-code_variables.md" />
+    <None Include="articles\source-code\source-code_versioning.md" />
     <None Include="articles\toc.md" />
     <None Include="docfx.json" />
     <None Include="index.md" />
+    <None Include="manual\man-configuration\man_configuration_home.md" />
+    <None Include="manual\man-configuration\man_configuration_web-config-file.md" />
+    <None Include="manual\man-hosting\man-hosting-home.md" />
+    <None Include="manual\man_getting-started\man_getting-started_home.md" />
+    <None Include="manual\man_home.md" />
+    <None Include="manual\toc.md" />
     <None Include="packages.config" />
     <None Include="toc.yml" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="images\manual_logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\docfx.console.2.59.4\build\docfx.console.targets" Condition="Exists('packages\docfx.console.2.59.4\build\docfx.console.targets')" />
