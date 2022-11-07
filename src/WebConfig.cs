@@ -1,7 +1,7 @@
 ﻿// Abatab 0.97.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221104.095356
+// b221107.095059
 
 using Abatab.Properties;
 using AbatabLogging;
@@ -20,7 +20,7 @@ namespace Abatab
         /// </summary>
         /// <returns>A dictionary containing the settings from Web.config.</returns>
         /// <remarks>
-        /// * Whenever a new value is added to Properties/Settings.settings, it needs to be added here as well.
+        /// * Whenever a new value is added/removed to Properties/Settings.settings, it needs to be added/removed here as well.
         /// * Settings are trimmed and converted to lowercase <see href="https://spectrum-health-systems.github.io/Abatab/articles/SourceCode/Variables.html#casing-and-trimming">[more info]</see>
         /// </remarks>
         public static Dictionary<string, string> Load()
@@ -30,19 +30,20 @@ namespace Abatab
 
             var webConfig =  new Dictionary<string, string>
             {
-                { "DebugMode",                              Settings.Default.DebugMode.ToLower() },
-                { "DebugLogRoot",                           Settings.Default.DebugLogRoot.ToLower() },
                 { "AbatabMode",                             Settings.Default.AbatabMode.ToLower() },
                 { "AbatabEnvironment",                      Settings.Default.AbatabEnvironment.ToLower() },
                 { "AbatabRoot",                             Settings.Default.AbatabRoot.ToLower() },
+                { "DebugMode",                              Settings.Default.DebugMode.ToLower() },
+                { "DebugDebugValidUsers",                   Settings.Default.DebugMode.ToLower() },
+                { "DebugLogRoot",                           Settings.Default.DebugLogRoot.ToLower() },
                 { "LogMode",                                Settings.Default.LogMode.ToLower() },
                 { "LogDetail",                              Settings.Default.LogDetail.ToLower() },
-                { "LogWriteDelay",                          Settings.Default.LogWriteDelayDetail.ToLower() },
+                { "LogWriteDelay",                          Settings.Default.LogWriteDelay.ToLower() },
                 { "AbatabFallbackUserName",                 Settings.Default.AbatabFallbackUserName.ToLower() },
+                { "ModPrototypeMode",                       Settings.Default.ModPrototypeMode.ToLower() },
                 { "ModQuickMedOrderMode",                   Settings.Default.ModQuickMedOrderMode.ToLower() },
                 { "ModQuickMedOrderValidUsers",             Settings.Default.ModQuickMedOrderValidUsers.ToLower() },
                 { "ModQuickMedOrderDoseMaxPercentIncrease", Settings.Default.ModQuickMedOrderDoseMaxPercentIncrease.ToLower() },
-                { "ModPrototypeMode",                       Settings.Default.ModPrototypeMode.ToLower() },
                 { "ModTestingMode",                         Settings.Default.ModTestingMode.ToLower() }
             };
 

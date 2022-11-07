@@ -98,9 +98,9 @@ namespace Abatab.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("10")]
-        public string LogWriteDelayDetail {
+        public string LogWriteDelay {
             get {
-                return ((string)(this["LogWriteDelayDetail"]));
+                return ((string)(this["LogWriteDelay"]));
             }
         }
         

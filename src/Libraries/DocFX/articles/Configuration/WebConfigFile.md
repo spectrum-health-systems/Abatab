@@ -1,9 +1,20 @@
-# Local settings
+# Web.config file
 
-Abatab/Properties/Settings.settings
-Abatab/Web.config
+The Web.config file contains the local settings for Abatab. These settings are also in Settings.settings.
 
-## AbatabMode
+## Mode
+> `Mode=enabled`
+
+Abatab can operate in the following modes:
+
+* `enabled`  
+All Abatab functionality is available.
+
+* `disabled`  
+Abatab is disabled, and its functionality is not available.
+
+* `passthrough`
+Abatab is enabled, and all functionality is available, but no changes are made to Avatar.
 
 ## AbatabEnvironment
 
