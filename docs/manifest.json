@@ -40,33 +40,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "articles/Configuration/AbatabConfiguration.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/Configuration/AbatabConfiguration.html",
-          "hash": "VSPhn1y8E43HE6HG7KEt6ejRnJahluSJ29LoMZtsEU4="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/Configuration/WebConfigFile.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/Configuration/WebConfigFile.html",
-          "hash": "Xvk2IBP27Q1mOg/3nYWtH0vzEcvzPb1jR2pFfCUpRds="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
       "type": "Conceptual",
       "source_relative_path": "articles/DocFxIntegration/AbatabAndDocFx.md",
       "output": {
@@ -217,12 +190,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Toc",
       "source_relative_path": "articles/toc.md",
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "W/sLPoSKymkRxZz6ru9+8TGEij3275j0S43o+duumbA="
+          "hash": "78r2M8vGWJiL3gtqYlfS7jaZv0NyJRh/dQu9ywpzTtA="
         }
       },
       "is_incremental": false,
@@ -244,12 +220,39 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
-      "source_relative_path": "manual/ManConfigure.md",
+      "source_relative_path": "manual/Configuration/AbatabConfiguration.md",
       "output": {
         ".html": {
-          "relative_path": "manual/ManConfigure.html",
-          "hash": "1hx44si1/oRPaxoFdOewZEFpWSjl2R78Uq6I3uKIOKA="
+          "relative_path": "manual/Configuration/AbatabConfiguration.html",
+          "hash": "LT9c5x7kk4SkB8f58+7vgkl4i44I2wEqU8F33ZTehn0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/Configuration/ManConfigure.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/Configuration/ManConfigure.html",
+          "hash": "bwMPl2Mw2lFpQFb7TLnHeVceQfxESov/NT5NLhaYudo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/Configuration/WebConfigFile.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/Configuration/WebConfigFile.html",
+          "hash": "FuV9h1LUkLpXV+3cFvfHo9YZhTXid2ZmdLkNHOit6dc="
         }
       },
       "is_incremental": false,
@@ -301,12 +304,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Toc",
       "source_relative_path": "manual/toc.md",
       "output": {
         ".html": {
           "relative_path": "manual/toc.html",
-          "hash": "S+fR66CqqdCMHyoQ6Nm+tUN735/tWVblQ/DDfaNIexk="
+          "hash": "ZbRcMZ5xBbYd9Zi7BfAeknn8utpwg0P5/cJJxPCVd9c="
         }
       },
       "is_incremental": false,
@@ -342,7 +348,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Abatab.WebConfig.html",
-          "hash": "/DjbUnn5pi5Z+aa7XtdPTAkhNzlJG5lVETp65nipNOU="
+          "hash": "fHAF71RqOVI+vPXSqUJasegI5v0z2dJwxQBJ2+rME8Q="
         }
       },
       "is_incremental": false,
@@ -462,7 +468,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AbatabData.Session.html",
-          "hash": "dYeLiZIHVYtN1pgAREvdVu7AjdesRNiLM1bYj0hb7CI="
+          "hash": "WQJrnfmSsJuWVbfHfScnk1/oV48taVcdgBylVlAaLv8="
         }
       },
       "is_incremental": false,

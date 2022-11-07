@@ -553,6 +553,19 @@ references:
   isSpec: "True"
   fullName: AbatabData.Session.AbatabFallbackUserName
   nameWithType: Session.AbatabFallbackUserName
+- uid: AbatabData.Session.AbatabMode
+  name: AbatabMode
+  href: api/AbatabData.Session.html#AbatabData_Session_AbatabMode
+  commentId: P:AbatabData.Session.AbatabMode
+  fullName: AbatabData.Session.AbatabMode
+  nameWithType: Session.AbatabMode
+- uid: AbatabData.Session.AbatabMode*
+  name: AbatabMode
+  href: api/AbatabData.Session.html#AbatabData_Session_AbatabMode_
+  commentId: Overload:AbatabData.Session.AbatabMode
+  isSpec: "True"
+  fullName: AbatabData.Session.AbatabMode
+  nameWithType: Session.AbatabMode
 - uid: AbatabData.Session.AbatabModule
   name: AbatabModule
   href: api/AbatabData.Session.html#AbatabData_Session_AbatabModule
@@ -592,6 +605,19 @@ references:
   isSpec: "True"
   fullName: AbatabData.Session.AbatabRequest
   nameWithType: Session.AbatabRequest
+- uid: AbatabData.Session.AbatabRoot
+  name: AbatabRoot
+  href: api/AbatabData.Session.html#AbatabData_Session_AbatabRoot
+  commentId: P:AbatabData.Session.AbatabRoot
+  fullName: AbatabData.Session.AbatabRoot
+  nameWithType: Session.AbatabRoot
+- uid: AbatabData.Session.AbatabRoot*
+  name: AbatabRoot
+  href: api/AbatabData.Session.html#AbatabData_Session_AbatabRoot_
+  commentId: Overload:AbatabData.Session.AbatabRoot
+  isSpec: "True"
+  fullName: AbatabData.Session.AbatabRoot
+  nameWithType: Session.AbatabRoot
 - uid: AbatabData.Session.AbatabUserName
   name: AbatabUserName
   href: api/AbatabData.Session.html#AbatabData_Session_AbatabUserName
@@ -605,6 +631,19 @@ references:
   isSpec: "True"
   fullName: AbatabData.Session.AbatabUserName
   nameWithType: Session.AbatabUserName
+- uid: AbatabData.Session.AvatarEnvironment
+  name: AvatarEnvironment
+  href: api/AbatabData.Session.html#AbatabData_Session_AvatarEnvironment
+  commentId: P:AbatabData.Session.AvatarEnvironment
+  fullName: AbatabData.Session.AvatarEnvironment
+  nameWithType: Session.AvatarEnvironment
+- uid: AbatabData.Session.AvatarEnvironment*
+  name: AvatarEnvironment
+  href: api/AbatabData.Session.html#AbatabData_Session_AvatarEnvironment_
+  commentId: Overload:AbatabData.Session.AvatarEnvironment
+  isSpec: "True"
+  fullName: AbatabData.Session.AvatarEnvironment
+  nameWithType: Session.AvatarEnvironment
 - uid: AbatabData.Session.DebugglerConfig
   name: DebugglerConfig
   href: api/AbatabData.Session.html#AbatabData_Session_DebugglerConfig
@@ -618,19 +657,6 @@ references:
   isSpec: "True"
   fullName: AbatabData.Session.DebugglerConfig
   nameWithType: Session.DebugglerConfig
-- uid: AbatabData.Session.Env
-  name: Env
-  href: api/AbatabData.Session.html#AbatabData_Session_Env
-  commentId: P:AbatabData.Session.Env
-  fullName: AbatabData.Session.Env
-  nameWithType: Session.Env
-- uid: AbatabData.Session.Env*
-  name: Env
-  href: api/AbatabData.Session.html#AbatabData_Session_Env_
-  commentId: Overload:AbatabData.Session.Env
-  isSpec: "True"
-  fullName: AbatabData.Session.Env
-  nameWithType: Session.Env
 - uid: AbatabData.Session.FinalOptObj
   name: FinalOptObj
   href: api/AbatabData.Session.html#AbatabData_Session_FinalOptObj
@@ -670,19 +696,6 @@ references:
   isSpec: "True"
   fullName: AbatabData.Session.ModCommonConfig
   nameWithType: Session.ModCommonConfig
-- uid: AbatabData.Session.Mode
-  name: Mode
-  href: api/AbatabData.Session.html#AbatabData_Session_Mode
-  commentId: P:AbatabData.Session.Mode
-  fullName: AbatabData.Session.Mode
-  nameWithType: Session.Mode
-- uid: AbatabData.Session.Mode*
-  name: Mode
-  href: api/AbatabData.Session.html#AbatabData_Session_Mode_
-  commentId: Overload:AbatabData.Session.Mode
-  isSpec: "True"
-  fullName: AbatabData.Session.Mode
-  nameWithType: Session.Mode
 - uid: AbatabData.Session.ModPrototypeConfig
   name: ModPrototypeConfig
   href: api/AbatabData.Session.html#AbatabData_Session_ModPrototypeConfig
@@ -722,19 +735,6 @@ references:
   isSpec: "True"
   fullName: AbatabData.Session.ModTestingConfig
   nameWithType: Session.ModTestingConfig
-- uid: AbatabData.Session.Root
-  name: Root
-  href: api/AbatabData.Session.html#AbatabData_Session_Root
-  commentId: P:AbatabData.Session.Root
-  fullName: AbatabData.Session.Root
-  nameWithType: Session.Root
-- uid: AbatabData.Session.Root*
-  name: Root
-  href: api/AbatabData.Session.html#AbatabData_Session_Root_
-  commentId: Overload:AbatabData.Session.Root
-  isSpec: "True"
-  fullName: AbatabData.Session.Root
-  nameWithType: Session.Root
 - uid: AbatabData.Session.SentOptObj
   name: SentOptObj
   href: api/AbatabData.Session.html#AbatabData_Session_SentOptObj

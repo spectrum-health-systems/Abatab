@@ -35,9 +35,9 @@ namespace Abatab.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("UAT")]
-        public string AbatabEnvironment {
+        public string AvatarEnvironment {
             get {
-                return ((string)(this["AbatabEnvironment"]));
+                return ((string)(this["AvatarEnvironment"]));
             }
         }
         

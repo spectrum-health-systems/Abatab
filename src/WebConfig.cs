@@ -21,7 +21,8 @@ namespace Abatab
         /// <returns>A dictionary containing the settings from Web.config.</returns>
         /// <remarks>
         /// * Whenever a new value is added/removed to Properties/Settings.settings, it needs to be added/removed here as well.
-        /// * Settings are trimmed and converted to lowercase <see href="https://spectrum-health-systems.github.io/Abatab/articles/SourceCode/Variables.html#casing-and-trimming">[more info]</see>
+        /// * Configuration settings details can be found <see href="https://spectrum-health-systems.github.io/Abatab/manual/Configuration/WebConfigFile.html">here.</see>
+        /// * Settings are trimmed and converted to lowercase. <see href="https://spectrum-health-systems.github.io/Abatab/articles/SourceCode/Variables.html#casing-and-trimming">[more info]</see>
         /// </remarks>
         public static Dictionary<string, string> Load()
         {
@@ -31,7 +32,7 @@ namespace Abatab
             var webConfig =  new Dictionary<string, string>
             {
                 { "AbatabMode",                             Settings.Default.AbatabMode.ToLower() },
-                { "AbatabEnvironment",                      Settings.Default.AbatabEnvironment.ToLower() },
+                { "AvatarEnvironment",                      Settings.Default.AvatarEnvironment.ToLower() },
                 { "AbatabRoot",                             Settings.Default.AbatabRoot.ToLower() },
                 { "DebugMode",                              Settings.Default.DebugMode.ToLower() },
                 { "DebugDebugValidUsers",                   Settings.Default.DebugMode.ToLower() },
@@ -56,3 +57,4 @@ namespace Abatab
         }
     }
 }
+
