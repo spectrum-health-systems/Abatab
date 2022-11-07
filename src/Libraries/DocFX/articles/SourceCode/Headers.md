@@ -3,8 +3,8 @@
 Every class has a standard header:
 
 ```#bash
-// Abatab 0.96.0
+// Abatab X.Y.Z
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221102.094514
+// bYYMMDD.HHMMSS
 ```

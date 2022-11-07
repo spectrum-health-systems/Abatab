@@ -1,7 +1,7 @@
 ﻿// AbatabSession 0.97.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221104.095356
+// b221107.095059
 
 using AbatabData;
 using AbatabData.Core;
@@ -162,7 +162,7 @@ namespace AbatabSession
 
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"]);
 
-            //var debug_ = $"TEST:{abatabSettings["LogMode"]} - {abatabSettings["LogDetail"]} - {abatabSettings["LogWriteDelayDetail"]}";
+            //var debug_ = $"TEST:{abatabSettings["LogMode"]} - {abatabSettings["LogDetail"]} - {abatabSettings["LogWriteDelay"]}";
             var debug_ = $"TEST:{abatabSettings["LogMode"]} - {abatabSettings["DebugLogRoot"]} - {abatabSettings["ModTestingMode"]}";
 
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"], debug_);

@@ -1,6 +1,16 @@
-# DocFX root files
+# DocFX configuration
 
-## docfx.json
+There are a few changes that need to be made to the following files:
+
+* DocFx/docfx.json
+* DocFX/index.md
+* DocFX/toc.yml
+
+#### DocFX output
+
+When documentation is built, it will be created in Abatab/docs/. This makes it easy to use GitHub Pages to host the documentation on the repository.
+
+## DocFx/docfx.json
 
 ### Targeting the solution
 
@@ -165,11 +175,11 @@ The final docfx.json file should look like this:
 }
 ```
 
-## index.html
+## DocFx/index.html
 
 TBD
 
-## toc.yml
+## DocFx/toc.yml
 
 DocFx/toc.yml should look like this:
 

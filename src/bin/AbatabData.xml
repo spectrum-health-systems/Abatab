@@ -39,5 +39,13 @@
             Defines the properties for the AbatabData.Session object, containing the information/data that Abatab needs to do its job.
             </summary>
         </member>
+        <member name="P:AbatabData.Session.Mode">
+            <summary>
+            The Abatab Mode determines the default behavior of Abatab.
+            </summary>
+            <remarks>
+            * This is the only time a <see href="https://spectrum-health-systems.github.io/Abatab/articles/SourceCode/Logging.html#primevaldebug-log">PrimevalDebug</see> log is written.
+            </remarks>
+        </member>
     </members>
 </doc>

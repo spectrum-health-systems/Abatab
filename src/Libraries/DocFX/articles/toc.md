@@ -1,10 +1,8 @@
 # [About Abatab articles](AboutAbatabArticles.md)
 
-# [Abatab and DocFX](./DocFx/AbatabAndDocFx.md)
+# [Configuration](./Configuration/AbatabConfiguration.md)
 
-## [Creating a new DocFX project](./DocFx/DocFxNewProject.md)
-
-## [Root files](./DocFx/DocFxRootFiles.md)
+## [Local settings](./Configuration/WebConfig.md)
 
 # [Source code](./SourceCode/SourceCode.md)
 
@@ -18,8 +16,16 @@
 
 ## [Logging](./SourceCode/Logging.md)
 
-## [Local settings](./SourceCode/LocalSettings.md)
+## [Core functionality](./SourceCode/CoreFunctionality.md)
 
-## [Projects and modules](./SourceCode/ProjectsAndModules.md)
+## [Modules](./SourceCode/Modules.md)
+
+# [Abatab and DocFX](./DocFxIntegration/AbatabAndDocFx.md)
+
+## [Creating a new DocFX project](./DocFxIntegration/DocFxNewProject.md)
+
+## [Root files](./DocFxIntegration/DocFxConfiguration.md)
+
+## [The documentation](./DocFxIntegration/TheDocumentation.md)
 
 # [Additional reading](./AdditionalReading/AdditionalReading.md)

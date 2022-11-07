@@ -1,7 +1,7 @@
 ﻿// AbatabData 0.97.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221104.095356
+// b221107.095059
 
 using NTST.ScriptLinkService.Objects;
 
@@ -12,6 +12,12 @@ namespace AbatabData
     /// </summary>
     public class Session
     {
+        /// <summary>
+        /// The Abatab Mode determines the default behavior of Abatab.
+        /// </summary>
+        /// <remarks>
+        /// * This is the only time a <see href="https://spectrum-health-systems.github.io/Abatab/articles/SourceCode/Logging.html#primevaldebug-log">PrimevalDebug</see> log is written.
+        /// </remarks>
         public string Mode { get; set; }
         public string Env { get; set; }
         public string Root { get; set; }

@@ -4,21 +4,31 @@ Attempts have been made to make the Abatab source code as human-readable as poss
 
 That being said, you will find the following types of comments in the MAWSC sourcecode:
 
+## XML comments
+
+XML comments are used by DocFx to create the source code documentation.
+
 ```#bash
-/// XML comments used by Visual Studio
+/// <summary>
+/// The main Abatab project, and where the magic starts.
+/// </summary>
+```
+
+## Developer comments
+
+```#bash
+// Comments starting with `"//"` are developer comments that are intended to provide important information about source code that may not be clear. Developer comments should not be removed.
+```
+
+## Narrative comments
+
+```#bash
+/* Comments that start with `"/*"` and end with `"*/"` are narrative comments that provide additional details about source code that may be interesting to the reader, and may be removed. */
 ```
 
 ```#bash
-// Additional code description comment
-```
-
-```#bash
-/* Single-line narrative comment */
-```
-
-```#bash
-/* Multiple-line  
- * narrative
- * comment  
+/* Narrative comments can 
+ * also be
+ * multi-line. 
  */
 ```
