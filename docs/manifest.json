@@ -217,15 +217,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Toc",
       "source_relative_path": "articles/toc.md",
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "dIDdHJSk3+AUUeAA81DA7vRNbJrRqEkZNt4KRsdXNqk="
+          "hash": "W/sLPoSKymkRxZz6ru9+8TGEij3275j0S43o+duumbA="
         }
       },
       "is_incremental": false,
