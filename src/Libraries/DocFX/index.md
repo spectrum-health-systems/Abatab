@@ -1,6 +1,6 @@
 # Abatab documentation
 
-## [The Abatab Manual](./manual/ManHome.md)
+## [The Abatab Manual](./manual/man_home.md)
 
 Everything you need to know to create, host, and implement Abatab at your organization.
 
