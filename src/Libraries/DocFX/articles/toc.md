@@ -2,7 +2,7 @@
 
 # [Configuration](./Configuration/AbatabConfiguration.md)
 
-## [Local settings](./Configuration/WebConfig.md)
+## [Local settings](./Configuration/WebConfigFile.md)
 
 # [Source code](./SourceCode/SourceCode.md)
 
