@@ -171,8 +171,8 @@ namespace AbatabLogging
                               "===============";
 
             var sessionDetail = $"{Environment.NewLine}" +
-                                $"Abatab Mode:         {abatabSession.Mode}{Environment.NewLine}" +
-                                $"Abatab Root:         {abatabSession.Root}{Environment.NewLine}" +
+                                $"Abatab Mode:         {abatabSession.AbatabMode}{Environment.NewLine}" +
+                                $"Abatab Root:         {abatabSession.AbatabRoot}{Environment.NewLine}" +
                                 $"Debugging Mode:      {abatabSession.DebugglerConfig.Mode}{Environment.NewLine}" +
                                 $"Debugging Log root:  {abatabSession.DebugglerConfig.DebugEventRoot}{Environment.NewLine}" +
                                 $"Logging Mode:        {abatabSession.LoggingConfig.Mode}{Environment.NewLine}" +

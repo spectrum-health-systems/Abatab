@@ -2,23 +2,51 @@
 
 The Web.config file contains the local settings for Abatab. These settings are also in Settings.settings.
 
-## Mode
-> `Mode=enabled`
+## AbatabMode
 
-Abatab can operate in the following modes:
+```bash
+<setting name="AbatabMode" serializeAs="String">
+   <value>enabled</value>
+</setting>
+```
 
-* `enabled`  
+Determines which mode Abatab is currently using.
+
+* `enabled` (default)  
 All Abatab functionality is available.
 
 * `disabled`  
 Abatab is disabled, and its functionality is not available.
 
-* `passthrough`
+* `passthrough`  
 Abatab is enabled, and all functionality is available, but no changes are made to Avatar.
 
-## AbatabEnvironment
-
 ## AbatabRoot
+
+Defines the root directory for Abatab.
+
+```bash
+    <setting name="AbatabRoot" serializeAs="String">
+        <value>C:\AvatoolWebService\Abatab_</value>
+    </setting>
+```
+
+The Abatab root directory.
+
+## AvatarEnvironment
+
+> `AbatabEnvironment = LIVE`
+
+Abatab works in the following Avatar environments.
+
+* `LIVE`  
+The Avatar production environment.
+
+* `UAT`  
+The Avatar testing environment.
+
+* `SBOX`  
+The Avatar sandbox environment.
 
 ## DebugMode
 

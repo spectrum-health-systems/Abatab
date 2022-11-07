@@ -13,14 +13,19 @@ namespace AbatabData
     public class Session
     {
         /// <summary>
-        /// The Abatab Mode determines the default behavior of Abatab.
+        /// The default behavior of Abatab. <see href="https://spectrum-health-systems.github.io/Abatab/manual/Configuration/WebConfigFile.html#AbatabMode"> [more info]</see>
         /// </summary>
-        /// <remarks>
-        /// * This is the only time a <see href="https://spectrum-health-systems.github.io/Abatab/articles/SourceCode/Logging.html#primevaldebug-log">PrimevalDebug</see> log is written.
-        /// </remarks>
-        public string Mode { get; set; }
-        public string Env { get; set; }
-        public string Root { get; set; }
+        /// <value>The current Abatab mode.</value>
+        public string AbatabMode { get; set; }
+
+        public string AbatabRoot { get; set; }
+
+        /// <summary>
+        /// The current Avatar environment. <see href="https://spectrum-health-systems.github.io/Abatab/manual/Configuration/WebConfigFile.html#AvatarEnvironment">. [more info]</see>
+        /// </summary>
+        /// <value>The current Avatar environment.</value>
+        public string AvatarEnvironment { get; set; }
+
         public string AbatabFallbackUserName { get; set; }
         public Core.Debuggler DebugglerConfig { get; set; }
         public Core.Logging LoggingConfig { get; set; }
