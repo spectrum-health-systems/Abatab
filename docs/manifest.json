@@ -16,189 +16,11 @@
       "version": ""
     },
     {
-      "type": "Conceptual",
-      "source_relative_path": "articles/about-abatab-articles.md",
+      "type": "Resource",
+      "source_relative_path": "images/hosting-using-iis/iis-add-website-362x414.png",
       "output": {
-        ".html": {
-          "relative_path": "articles/about-abatab-articles.html",
-          "hash": "QUNGLuvEOsMSJmTDeNMnxzePiP++oGnq+ddoOpBtLe0="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/additional-reading/additional-reading_home.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/additional-reading/additional-reading_home.html",
-          "hash": "i6FGkHwsO8gaAZdhDy9y9hGM25TP+f7cXicbGRGnPP0="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/docfx-integration/docfx_configuration.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/docfx-integration/docfx_configuration.html",
-          "hash": "dgetg5D2q18VX8puaE2ih5QEXeLtn/2RVgNOwmfz0SU="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/docfx-integration/docfx_documentation-output.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/docfx-integration/docfx_documentation-output.html",
-          "hash": "qz7bM5IAef9PGDC9PCO5ewu4XGEYKbBiUWIxM9sTfPA="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/docfx-integration/docfx_home.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/docfx-integration/docfx_home.html",
-          "hash": "inbRVDbs2KJhX8JPnTAM8re7EE+ARfpg65jBMWSIr20="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/docfx-integration/docfx_new-project.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/docfx-integration/docfx_new-project.html",
-          "hash": "goBmyCT894QEEH+oJXL186H1pYvVk+F3+Zw087waAFo="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "articles/functionality/functionality_core.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/functionality/functionality_core.html",
-          "hash": "eEeqfWFIjm8DAUQE6YGRr/YSAx2CFu5qA7npegP/n5Y="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/functionality/functionality_home.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/functionality/functionality_home.html",
-          "hash": "fu43zcoG773i5ZgKaFs7T+VYTJFmY3b4p9HEvivsFEE="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "articles/functionality/functionality_modules.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/functionality/functionality_modules.html",
-          "hash": "POiVsYAYJGfyJ4uUQiWN2ah1hMQuEir+0csXCFCDhCc="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/source-code/source-code_comments.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/source-code/source-code_comments.html",
-          "hash": "IPOiPKSVez7mEmShEfm4AgJyEk76ooIDM+fkidT2E4A="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/source-code/source-code_headers.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/source-code/source-code_headers.html",
-          "hash": "uFn0xdVXGXYK/eNafgG1Qusl6hRfLhGzgPSFrqgT8MQ="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "articles/source-code/source-code_home.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/source-code/source-code_home.html",
-          "hash": "CeqDYX99lKzWU2CqmmEHO0Ola54/ppLzLScEa+pP75o="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/source-code/source-code_logging.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/source-code/source-code_logging.html",
-          "hash": "Gx23W+o8ux4zQRRy73lFN3Q8oPpvBJyAqlhlaG7TGMY="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/source-code/source-code_variables.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/source-code/source-code_variables.html",
-          "hash": "o+5fwz7H/d4Wq+2r1YY9/8yyAwbjK8iuVYkY4zlxz7M="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/source-code/source-code_versioning.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/source-code/source-code_versioning.html",
-          "hash": "aDDX4NFQwtjlcXknigMhOxwGu+TCHcfD/m7qX9gzCtY="
+        "resource": {
+          "relative_path": "images/hosting-using-iis/iis-add-website-362x414.png"
         }
       },
       "is_incremental": false,
@@ -206,10 +28,263 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/man_logo.png",
+      "source_relative_path": "images/hosting-using-iis/iis-application-pool-633x187.png",
       "output": {
         "resource": {
-          "relative_path": "images/man_logo.png"
+          "relative_path": "images/hosting-using-iis/iis-application-pool-633x187.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/hosting-using-iis/iis-directory-browsing-633x204.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/hosting-using-iis/iis-directory-browsing-633x204.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/hosting-using-iis/iis-roles-295x650.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/hosting-using-iis/iis-roles-295x650.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/hosting-using-iis/iis-site-home-633x206.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/hosting-using-iis/iis-site-home-633x206.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/importing-abatab/scriptlink-form-designer-settings-button-364x335.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/importing-abatab/scriptlink-form-designer-settings-button-364x335.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/importing-abatab/scriptlink-options-import-wsdl-847x375.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/importing-abatab/scriptlink-options-import-wsdl-847x375.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/importing-abatab/wsdl-xml-example-799x393.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/importing-abatab/wsdl-xml-example-799x393.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/man-logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/man-logo.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/other/ntst-portal-app-exchange-01-490x550.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/other/ntst-portal-app-exchange-01-490x550.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/other/ntst-portal-app-exchange-02-710x554.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/other/ntst-portal-app-exchange-02-710x554.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/other/scriptlink-event-example-839x369.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/other/scriptlink-event-example-839x369.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/other/vs2019-add-ntst-scriptlink-service-01-800x655.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/other/vs2019-add-ntst-scriptlink-service-01-800x655.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/other/vs2019-add-ntst-scriptlink-service-02-800x676.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/other/vs2019-add-ntst-scriptlink-service-02-800x676.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/other/vs2019-add-ntst-scriptlink-service-03-310x313.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/other/vs2019-add-ntst-scriptlink-service-03-310x313.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/other/vs2019-add-ntst-scriptlink-service-04-800x655.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/other/vs2019-add-ntst-scriptlink-service-04-800x655.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/other/vs2019-add-ntst-scriptlink-service-05-800x555.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/other/vs2019-add-ntst-scriptlink-service-05-800x555.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/other/vs2019-add-web-service-01-710x742.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/other/vs2019-add-web-service-01-710x742.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/other/vs2019-add-web-service-02-710x496.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/other/vs2019-add-web-service-02-710x496.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/other/vs2019-add-web-service-03-710x947.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/other/vs2019-add-web-service-03-710x947.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/other/vs2019-configure-new-project-800x535.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/other/vs2019-configure-new-project-800x535.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/other/vs2019-create-new-asp-app-800x540.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/other/vs2019-create-new-asp-app-800x540.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/other/vs2019-create-new-project-800x535.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/other/vs2019-create-new-project-800x535.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/other/vs2019-empty-app-800x655.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/other/vs2019-empty-app-800x655.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/other/vs2019-new-project-template-800x535.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/other/vs2019-new-project-template-800x535.png"
         }
       },
       "is_incremental": false,
@@ -224,7 +299,55 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "Utcm71iXhqdBGMo/WwDsAqkqbACZPSKEUJC5o8/8Plk="
+          "hash": "GDBnQC9IluX1MHrNsLXZBhKoc8pzqIDuKdLV5danz98="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "man/additional-reading.md",
+      "output": {
+        ".html": {
+          "relative_path": "man/additional-reading.html",
+          "hash": "iP6w4FK7ok8L/K17i2Q09bL8DqKin3n88NVJT0J3CZE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "man/man-configuration-home.md",
+      "output": {
+        ".html": {
+          "relative_path": "man/man-configuration-home.html",
+          "hash": "6ubVKcPwGOskw8LJW3L2EK2azzOUd/LwXEfNOfmuRWU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "man/man-configuration-local-settings.md",
+      "output": {
+        ".html": {
+          "relative_path": "man/man-configuration-local-settings.html",
+          "hash": "0XGy2D9nrBwTBUeWCQNORBqL5rbPnSNDnFVn6q+zCT0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "man/man-docfx-integration-home.md",
+      "output": {
+        ".html": {
+          "relative_path": "man/man-docfx-integration-home.html",
+          "hash": "MPx1qs+FjwVoySRWrQ3hN0HGDECCdQNJSR84M6fZBNE="
         }
       },
       "is_incremental": false,
@@ -235,11 +358,11 @@
         "InvalidFileLink"
       ],
       "type": "Conceptual",
-      "source_relative_path": "manual/man-configuration/man_configuration_home.md",
+      "source_relative_path": "man/man-functionality-core.md",
       "output": {
         ".html": {
-          "relative_path": "manual/man-configuration/man_configuration_home.html",
-          "hash": "1gmOveEnjcrPjBgGVTSR0xsr/hxgT4FWnbU0o5wx94Q="
+          "relative_path": "man/man-functionality-core.html",
+          "hash": "ia1FE3g17MVntx+MBiwFxXs4YWnu1AVrCx/wmPw9xhs="
         }
       },
       "is_incremental": false,
@@ -247,41 +370,23 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "manual/man-configuration/man_configuration_web-config-file.md",
+      "source_relative_path": "man/man-functionality-existing.md",
       "output": {
         ".html": {
-          "relative_path": "manual/man-configuration/man_configuration_web-config-file.html",
-          "hash": "nJLpLJjZGK1cNvsMtVdwwbTf+H7pJmKdQiyg5ga0wgA="
+          "relative_path": "man/man-functionality-existing.html",
+          "hash": "Wcbm1kVBVH+809p0oSuaqpz8GCocviqBx9WkbO2oyIs="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
-      "source_relative_path": "manual/man-hosting/man-hosting-home.md",
+      "source_relative_path": "man/man-functionality-home.md",
       "output": {
         ".html": {
-          "relative_path": "manual/man-hosting/man-hosting-home.html",
-          "hash": "ap5qi9if7sYDorSCTfUGjGfeHzgmW1paiuM0hWTA4Do="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "manual/man_getting-started/man_getting-started_home.md",
-      "output": {
-        ".html": {
-          "relative_path": "manual/man_getting-started/man_getting-started_home.html",
-          "hash": "fCMU/OpyCTfkiUpGjmL+FXFcv5BfvKkzMisfGj0WVPg="
+          "relative_path": "man/man-functionality-home.html",
+          "hash": "qavgOR9gbqsKV+ESQDVIuV8ripulAmmqFFL6BleRaeE="
         }
       },
       "is_incremental": false,
@@ -292,11 +397,113 @@
         "InvalidFileLink"
       ],
       "type": "Conceptual",
-      "source_relative_path": "manual/man_home.md",
+      "source_relative_path": "man/man-functionality-modules.md",
       "output": {
         ".html": {
-          "relative_path": "manual/man_home.html",
-          "hash": "tdCDY2M/7dpRMhDQu/1Tm8l/Zzlg00ii+J69foxcapI="
+          "relative_path": "man/man-functionality-modules.html",
+          "hash": "td4smzDnLgI7YoLUzg5KRbELVb99X3qBvEu8YxoECGk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "man/man-functionality-new.md",
+      "output": {
+        ".html": {
+          "relative_path": "man/man-functionality-new.html",
+          "hash": "6RDyOLUTH9hMbkZKaCn9rnn4t9GNo5VkU0xM6StSe4A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "man/man-getting-started-home.md",
+      "output": {
+        ".html": {
+          "relative_path": "man/man-getting-started-home.html",
+          "hash": "ggKCg4AOILxXYDDWKjbFGDRvQ4Gf6ZchVbRAIQAh5To="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "man/man-home.md",
+      "output": {
+        ".html": {
+          "relative_path": "man/man-home.html",
+          "hash": "HTb3D25jIZYlt+nZE068ihGlMQxYlILRRfktXlxBVgg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "man/man-hosting-home.md",
+      "output": {
+        ".html": {
+          "relative_path": "man/man-hosting-home.html",
+          "hash": "eB/nGFiZrL7a1OvXIMujYXl84aHpvqV4xVd73HnwAR8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "man/man-importing-home.md",
+      "output": {
+        ".html": {
+          "relative_path": "man/man-importing-home.html",
+          "hash": "w+9cd9yOpx4Z4DmlcafsWyBT0H05tiW8C+A/U3Hsh+0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "man/man-logging-home.md",
+      "output": {
+        ".html": {
+          "relative_path": "man/man-logging-home.html",
+          "hash": "2yfddDf28DRQVurEl8cuGw55O8i0tIVrP80Sm+1iCxk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "man/man-source-code-home.md",
+      "output": {
+        ".html": {
+          "relative_path": "man/man-source-code-home.html",
+          "hash": "ykGo7WJC62DuDdHApQ5byN4xhdd7KSfG8Qgze+jCUto="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Toc",
+      "source_relative_path": "man/toc.md",
+      "output": {
+        ".html": {
+          "relative_path": "man/toc.html",
+          "hash": "h70gzM/w0ssAqpL7yVjpLNItLi4ug6zcAPBsugW+WYU="
         }
       },
       "is_incremental": false,
@@ -920,7 +1127,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "WRWejT893Iv3Any4m3/CKHZBtSdo26usDqzC8v6pGqI="
+          "hash": "PRSqar+VFC4uER4QXxX6Y6yecAfy5cxdplapBvNB1iE="
         }
       },
       "is_incremental": false,
@@ -941,7 +1148,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 22,
+          "total_file_count": 17,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {

@@ -1,7 +1,5 @@
-- name: Manual
-  href: manual/
-- name: Articles
-  href: articles/
+- name: Abatab Manual
+  href: man/
 - name: API Documentation
   href: obj/api/
   homepage: api/index.md

@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>About the Abatab source code </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="About the Abatab source code ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+
+<div align="center">
+
+  <img src="../images/man-logo.png" alt="Abatab Manual" width="512">
+
+  <h4>
+    Abatab v1.0.0
+  </h4>
+
+</div>
+
+<hr>
+<h1 id="about-the-abatab-source-code">About the Abatab source code</h1>
+<p>Detailed documentation found here:</p>
+<h1 id="versioning">Versioning</h1>
+<p><a href="https://semver.org/">Semantic versioning</a> is used to indicate the current version of Abatab components.</p>
+<p><code>&lt;X&gt;.&lt;Y&gt;.&lt;Z&gt;-&lt;build type&gt;+&lt;yyMMdd.HHmmss&gt;</code></p>
+<p>Where:</p>
+<ul>
+<li><strong><code>&lt;X&gt;</code></strong> is a the major version</li>
+<li><strong><code>&lt;Y&gt;</code></strong> is a the minor version</li>
+<li><strong><code>&lt;Z&gt;</code></strong> is a the patch version</li>
+<li><strong><code>&lt;build type&gt;</code></strong> is a the (optional) release build type</li>
+<li><strong><code>&lt;yyMMdd.HHmmss&gt;</code></strong> is a the date/timestamp of the release (using 24-hour time)</li>
+</ul>
+<p>Examples:</p>
+<ul>
+<li>v1.0.0+210717.123033</li>
+<li>v1.1.1-rc.1+210717.123033</li>
+<li>v2.0.0-devbuild+210717.123033</li>
+</ul>
+<h1 id="headers">Headers</h1>
+<p>Every class has a standard header:</p>
+<pre><code class="lang-#bash">// Abatab X.Y.Z
+// Copyright (c) A Pretty Cool Program
+// See the LICENSE file for more information.
+// bYYMMDD.HHMMSS
+</code></pre><h1 id="comments">Comments</h1>
+<p>Attempts have been made to make the Abatab source code as human-readable as possible, so I&#39;m keeping the comments to a minimum. The document you are currently reading is the primary source of information about how everything works.</p>
+<p>That being said, you will find the following types of comments in the MAWSC sourcecode:</p>
+<h3 id="xml-comments">XML comments</h3>
+<p>XML comments are used by DocFx to create the source code documentation.</p>
+<pre><code class="lang-#bash">/// &lt;summary&gt;
+/// The main Abatab project, and where the magic starts.
+/// &lt;/summary&gt;
+</code></pre><h3 id="developer-comments">Developer comments</h3>
+<pre><code class="lang-#bash">// Comments starting with `&quot;//&quot;` are developer comments that are intended to provide important information about source code that may not be clear. Developer comments should not be removed.
+</code></pre><h3 id="narrative-comments">Narrative comments</h3>
+<pre><code class="lang-#bash">/* Comments that start with `&quot;/*&quot;` and end with `&quot;*/&quot;` are narrative comments that provide additional details about source code that may be interesting to the reader, and may be removed. */
+</code></pre><pre><code class="lang-#bash">/* Narrative comments can 
+ * also be
+ * multi-line. 
+ */
+</code></pre><h1 id="variables">Variables</h1>
+<h2 id="prefixes">Prefixes</h2>
+<ul>
+<li><code>sent</code><br>If a variable name starts with &quot;sent&quot; (e.g., <code>sentValue</code>), the data it contains original data that should not be modified at any point.</li>
+<li><code>work</code><br>If a variable name starts with &quot;work&quot; (e.g., <code>workDictionary</code>), it will be used as a placeholder for modified data. </li>
+<li><code>final</code><br>If a variable name starts with &quot;final&quot; (e.g., <code>finalValue</code>), the data is in it&#39;s final form, and is most likely what will be returned from a method.</li>
+</ul>
+<h2 id="casing-and-trimming">Casing and trimming</h2>
+<p>Most logic in Abatab is checked against lowercase values without any leading/trailing whitespace, so (in general) Abatab will reduce a variable to its trimmed, lowercase value. This is done as soon as possible, usually when a variable is declared.</p>
+<p>For example, if a variable has a value of &quot;<code>_ AValue_</code>&quot; (where the &quot;<code>_</code>&quot; character is whitespace), it will be converted to &quot;<code>avalue</code>&quot;. This way if the user has the incorrect casing for a setting called &quot;<code>EnableAllLogs</code>&quot;, Abayab will still be able to apply logic because it checks against &quot;<code>enablealllogs</code> (which isn&#39;t very user friendly).</p>
+<h2 id="multiple-values">Multiple values</h2>
+<p>Multiple values are stored in strings, with each value seperated by a <code>-</code>&quot; character. For example, the following values:</p>
+<pre><code class="lang-#bash">Apple  
+Pear
+Orange
+</code></pre><p>would apprear as:</p>
+<p><code>Apple-Pear-Orange</code></p>
+<hr>
+<p>Abatab is developed by <a href="https://github.com/APrettyCoolProgram">A Pretty Cool Program</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

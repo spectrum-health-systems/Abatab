@@ -28,8 +28,7 @@
       {
         "files": [
           "api/*.md",
-          "articles/**.md",
-          "manual/**.md",
+          "man/**.md",
           "toc.yml",
           "*.md"
         ],
