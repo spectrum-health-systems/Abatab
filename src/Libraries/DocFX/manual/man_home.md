@@ -57,7 +57,7 @@ Ready to implement Abatab in your environment? [Let's get started!][man_getting-
 <!-- REFERENCE LINKS -->
 [repository_url]: https://github.com/spectrum-health-systems/Abatab
 [netsmart-avatar_url]: https://www.ntst.com/Solutions-and-Services/Offerings/netsmart-avatar_url
-[man_logo]: ../images/man_logo.png
+[man_logo]: ../images/manual_logo.png
 [man_home]: man_home
 [man_getting-started_home]: ./man_getting-started/man_getting-started_home.md
 [man_hosting_home]: ./man-hosting/man-hosting-home.md

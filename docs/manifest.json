@@ -206,10 +206,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/manual_logo.png",
+      "source_relative_path": "images/man_logo.png",
       "output": {
         "resource": {
-          "relative_path": "images/manual_logo.png"
+          "relative_path": "images/man_logo.png"
         }
       },
       "is_incremental": false,
@@ -296,7 +296,7 @@
       "output": {
         ".html": {
           "relative_path": "manual/man_home.html",
-          "hash": "cZj9U0spdQpzCeIRD3PZaxugQo2hX7Jng+JpoJJ1PnA="
+          "hash": "tdCDY2M/7dpRMhDQu/1Tm8l/Zzlg00ii+J69foxcapI="
         }
       },
       "is_incremental": false,
