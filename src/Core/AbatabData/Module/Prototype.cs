@@ -1,7 +1,7 @@
 ﻿// AbatabData 22.11.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221108.094942
+// b221108.134404
 
 namespace AbatabData.Module
 {
@@ -10,6 +10,10 @@ namespace AbatabData.Module
     /// </summary>
     public class Prototype
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <value></value>
         public string Mode { get; set; }
     }
 }

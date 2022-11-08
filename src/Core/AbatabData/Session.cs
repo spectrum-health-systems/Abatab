@@ -1,7 +1,7 @@
 ﻿// AbatabData 22.11.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221108.094942
+// b221108.134404
 
 using NTST.ScriptLinkService.Objects;
 
@@ -35,10 +35,35 @@ namespace AbatabData
         /// </summary>
         /// <value>Default value is <c>_Abatab</c>.</value>
         public string AbatabFallbackUserName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <value></value>
         public Core.Debuggler DebugglerConfig { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <value></value>
         public Core.Logging LoggingConfig { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <value></value>
         public Module.Common ModCommonConfig { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <value></value>
         public Module.Prototype ModPrototypeConfig { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <value></value>
         public Module.QuickMedOrder ModQuickMedOrderConfig { get; set; }
 
         /// <summary>
@@ -46,17 +71,72 @@ namespace AbatabData
         /// </summary>
         /// <value>See documentation for the <see href="https://spectrum-health-systems.github.io/Abatab/api/AbatabData.Module.Testing.html"> Abatab Testing Module.</see></value>
         public Module.Testing ModTestingConfig { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <value></value>
         public string SessionDateStamp { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <value></value>
         public string SessionTimeStamp { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <value></value>
         public string AbatabUserName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <value></value>
         public string AbatabRequest { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <value></value>
         public string AbatabModule { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <value></value>
         public string AbatabCommand { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <value></value>
         public string AbatabAction { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <value></value>
         public string AbatabOption { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <value></value>
         public OptionObject2015 SentOptObj { get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <value></value>
+
         public OptionObject2015 WorkOptObj { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <value></value>
         public OptionObject2015 FinalOptObj { get; set; }
     }
 }
