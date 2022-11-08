@@ -93,8 +93,8 @@
 </code></pre><h3 id="custom-debug-statements">Custom debug statements</h3>
 <p>You can create your own debug statements by customizing the message. Temporary debug statments should be removed from production code.</p>
 <pre><code class="lang-bash">LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, $&quot;VariableName value is {value}&quot;);
-</code></pre><h3 id="primevaldebug-log">PrimevalDebug log</h3>
-<p>The PrimevalDebug log file is the first line of Abatab.asmx.cs, and writes a debug logfile with the most basic, hardcoded setting information.</p>
+</code></pre><h3 id="primeval-debug-log">Primeval debug log</h3>
+<p>The Primeval debug log file is the first line of Abatab.asmx.cs, and writes a debug logfile with the most basic, hardcoded setting information.</p>
 <pre><code class="lang-bash">LogEvent.PrimevalDebug(Settings.Default.DebugMode, Assembly.GetExecutingAssembly().GetName().Name, $@&quot;{Settings.Default.AbatabRoot}{Settings.Default.AbatabEnvironment}\{Settings.Default.DebugLogRoot}&quot;);
 </code></pre><h3 id="the-debuggler">The Debuggler</h3>
 <p>Abatab can write debug files for debug logs, but this should <em>only</em> be used in development, as it will introduce <em>significant</em> performance issues.</p>

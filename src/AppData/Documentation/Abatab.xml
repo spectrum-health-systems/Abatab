@@ -28,7 +28,7 @@
             <returns>A finalized OptionObject.</returns>
             <remarks>
             * This method is required by Avatar.
-            * This is the only time a <see href="https://spectrum-health-systems.github.io/Abatab/man/man-logging-home.html#primevaldebug-log">PrimevalDebug</see> log is written.
+            * This is the only time a <see href="https://spectrum-health-systems.github.io/Abatab/man/man-logging-home.html#primeval-debug-log">PrimevalDebug</see> log is written.
             * This method should remain fairly static, since most of the logic is taken care of by external projects.
             </remarks>
         </member>

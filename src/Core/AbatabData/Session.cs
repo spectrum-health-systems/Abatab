@@ -13,25 +13,25 @@ namespace AbatabData
     public class Session
     {
         /// <summary>
-        /// The default behavior of Abatab. <see href="https://spectrum-health-systems.github.io/Abatab/man/man-configuration-local-settings.html#AbatabMode"> [more info]</see>
+        /// The default behavior of Abatab. <see href="https://spectrum-health-systems.github.io/Abatab/man/man-configuration-local-settings.html#abatabmode"> [more info]</see>
         /// </summary>
         /// <value>Default value is <c>enabled</c>.</value>
         public string AbatabMode { get; set; }
 
         /// <summary>
-        /// The Abatab root directory. <see href="https://spectrum-health-systems.github.io/Abatab/man/man-configuration-local-settings.html#AbatabRoot">. [more info]</see>
+        /// The Abatab root directory. <see href="https://spectrum-health-systems.github.io/Abatab/man/man-configuration-local-settings.html#abatabroot">. [more info]</see>
         /// </summary>
         /// <value>Default value is <c>C:\Abatab_</c>.</value>
         public string AbatabRoot { get; set; }
 
         /// <summary>
-        /// The current Avatar environment. <see href="https://spectrum-health-systems.github.io/Abatab/man/man-configuration-local-settings.html#AvatarEnvironment">. [more info]</see>
+        /// The current Avatar environment. <see href="https://spectrum-health-systems.github.io/Abatab/man/man-configuration-local-settings.html#avatarenvironment">. [more info]</see>
         /// </summary>
         /// <value>Default value is <c>LIVE</c>.</value>
         public string AvatarEnvironment { get; set; }
 
         /// <summary>
-        /// The current Avatar environment. <see href="https://spectrum-health-systems.github.io/Abatab/man/man-configuration-local-settings.html#AbatabFallbackUserName">. [more info]</see>
+        /// The current Avatar environment. <see href="https://spectrum-health-systems.github.io/Abatab/man/man-configuration-local-settings.html#abatabfallbackusername">. [more info]</see>
         /// </summary>
         /// <value>Default value is <c>_Abatab</c>.</value>
         public string AbatabFallbackUserName { get; set; }
@@ -44,6 +44,7 @@ namespace AbatabData
         /// <summary>
         /// Properties for the <see href="https://spectrum-health-systems.github.io/Abatab/api/AbatabData.Module.Testing.html"> Abatab Testing Module.</see>
         /// </summary>
+        /// <value>See documentation for the <see href="https://spectrum-health-systems.github.io/Abatab/api/AbatabData.Module.Testing.html"> Abatab Testing Module.</see></value>
         public Module.Testing ModTestingConfig { get; set; }
         public string SessionDateStamp { get; set; }
         public string SessionTimeStamp { get; set; }
