@@ -34,15 +34,6 @@ namespace Abatab.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("UAT")]
-        public string AvatarEnvironment {
-            get {
-                return ((string)(this["AvatarEnvironment"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("C:\\AvatoolWebService\\Abatab_")]
         public string AbatabRoot {
             get {
@@ -52,19 +43,19 @@ namespace Abatab.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("off")]
-        public string DebugMode {
+        [global::System.Configuration.DefaultSettingValueAttribute("UAT")]
+        public string AvatarEnvironment {
             get {
-                return ((string)(this["DebugMode"]));
+                return ((string)(this["AvatarEnvironment"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("all")]
-        public string DebugValidUsers {
+        [global::System.Configuration.DefaultSettingValueAttribute("off")]
+        public string DebugMode {
             get {
-                return ((string)(this["DebugValidUsers"]));
+                return ((string)(this["DebugMode"]));
             }
         }
         

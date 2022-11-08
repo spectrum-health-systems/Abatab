@@ -1,6 +1,6 @@
 # v1.0
 
-## 0.95
+## 22.11
 
 * [ ] Dose code
 * [ ] Test:
@@ -26,6 +26,8 @@
 * [ ] Verify all dirs in a loop at the beginning
 * [ ] Refactor debugging log stuff
 
+Log details [TRACE_1]
+
 Put environment in var
 
 Valid users for testing, prototype, etc.
@@ -35,7 +37,6 @@ LastScheduledDoseText:
 mgs diff
 QMO info after modification in .session  
 why is sentoptobj being modded?
-
 
 ## 0.94
 

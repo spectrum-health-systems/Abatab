@@ -1,7 +1,7 @@
-﻿// AbatabSession 0.97.0
+﻿// AbatabSession 22.11.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221107.164836
+// b221108.083307
 
 using AbatabData;
 using AbatabData.Core;
@@ -37,9 +37,9 @@ namespace AbatabSession
 
             var abatabSession = new Session
             {
-                AbatabMode                   = abatabSettings["AbatabMode"],
-                AvatarEnvironment                    = abatabSettings["AvatarEnvironment"],
-                AbatabRoot                   = $@"{abatabSettings["AbatabRoot"]}\{abatabSettings["AvatarEnvironment"]}",
+                AbatabMode             = abatabSettings["AbatabMode"],
+                AvatarEnvironment      = abatabSettings["AvatarEnvironment"],
+                AbatabRoot             = $@"{abatabSettings["AbatabRoot"]}{abatabSettings["AvatarEnvironment"]}",
                 AbatabFallbackUserName = abatabSettings["AbatabFallbackUserName"],
                 SessionDateStamp       = $"{DateTime.Now:yyMMdd}",
                 SessionTimeStamp       = $"{DateTime.Now:HHmmss}",

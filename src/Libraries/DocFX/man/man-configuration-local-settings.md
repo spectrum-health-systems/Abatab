@@ -1,94 +1,134 @@
-# Web.config file
-
 The Web.config file contains the local settings for Abatab. These settings are also in Settings.settings.
 
-## AbatabMode
+# AbatabMode
 
-```bash
-<setting name="AbatabMode" serializeAs="String">
-   <value>enabled</value>
-</setting>
-```
-
+**DESCRIPTION**  
 Determines which mode Abatab is currently using.
 
-* `enabled` (default)  
-All Abatab functionality is available.
+**OPTIONS** 
+| Value              | Description                                                                                        |
+|--------------------|----------------------------------------------------------------------------------------------------|
+| **`enabled`**      | All Abatab functionality is available.                                                             |
+| `disabled`         | Abatab is disabled, and its functionality is not available.                                        |
+| `passthrough`      | Abatab is enabled, and all functionality is available, but no changes are made to Avatar.          |
 
-* `disabled`  
-Abatab is disabled, and its functionality is not available.
+**NOTES** 
+* None.
 
-* `passthrough`  
-Abatab is enabled, and all functionality is available, but no changes are made to Avatar.
+***
 
-## AbatabRoot
+# AbatabRoot
 
-Defines the root directory for Abatab.
+**DESCRIPTION**  
+The base Abatab root directory.
 
-```bash
-    <setting name="AbatabRoot" serializeAs="String">
-        <value>C:\AvatoolWebService\Abatab_</value>
-    </setting>
-```
+**NOTES** 
+* At runtime The `AvatarEnvironment` value is added to the end of `AbatabRoot` to form the complete path.  
+For example, `AbatabRoot` is "C:\Abatab_", and `AvatarEnvironment` is "LIVE", the root directory at runtime would be "C:\Abatab_LIVE".
+* This should be left at `C:\Abatab_`
 
-The Abatab root directory.
+***
 
 ## AvatarEnvironment
 
-> `AbatabEnvironment = LIVE`
+**DESCRIPTION**  
+Defines the Avatar environment where Abatab will be used.
 
-Abatab works in the following Avatar environments.
+**OPTIONS** 
+| Value              | Description                                                                                        |
+|--------------------|----------------------------------------------------------------------------------------------------|
+| **`LIVE`**         | Production environment.                                                                            |
+| `UAT`              | Testing environment.                                                                               |
+| `SBOX`             | Sandbox environment.                                                                               |
 
-* `LIVE`  
-The Avatar production environment.
+**NOTES** 
+* None.
 
-* `UAT`  
-The Avatar testing environment.
-
-* `SBOX`  
-The Avatar sandbox environment.
+***
 
 ## DebugMode
 
-> `DebugMode=off`
+**DESCRIPTION**  
+Indicates if Abatab is in debugging mode.
 
-* `on`  
-Debug logs will be written. This may affect performance, and should not be enabled in production environments.
+**OPTIONS** 
+| Value              | Description                                                                                        |
+|--------------------|----------------------------------------------------------------------------------------------------|
+| **`off`**          | Debugging mode is off.                                                                             |
+| `on`               | Debugging mode is on.                                                                              |
 
-* `off`
-Debug logs will not be written.
+**NOTES** 
+* Debug mode can have a significant impact on performance, and should not be enabled in production environments.
 
-## DebugValidUsers
-
-*Not currently used*
+***
 
 ## DebugLogRoot
 
+**DESCRIPTION**  
+The debugging root directory.
+
+**NOTES** 
+* This should be left at `logs\debug`
+
+***
+
 ## LogMode
 
-> `LogMode=session`
+**DESCRIPTION**  
+Defines the Avatar environment where Abatab will be used.
 
-* `all`  
-All log types will be written
+**OPTIONS** 
+| Value              | Description                                                                                        |
+|--------------------|----------------------------------------------------------------------------------------------------|
+| **`session`**      | Create session logs.                                                                               |
+| `trace`            | Create trace logs.                                                                                 |
+| `error`            | Create error logs.                                                                                 |
+| `warning`          | Create warning logs.                                                                               |
+| `all`              | Create all log types.                                                                              |
+| `none`             | Do not create any log files.                                                                       |
 
-* `none`  
-No log files will be written
+**NOTES** 
+* You can create multiple log types by separating them with a '-'.  
+For example, `LogMode=error-trace` will create both error *and* trace logs.
 
-* `session`
-Only session logs will be written.
-
-* `%logType01%-%logType02%-%logType03%`  
-Log types included in this string will be written.  
-For example, to write `error` and `trace` logs:  
-`LogMode=error-trace`  
+***
 
 ## LogDetail
 
-*Not currently used*
+**DESCRIPTION**  
+Defines the level of logging detail
+
+**OPTIONS** 
+| Value              | Description                                                                                        |
+|--------------------|----------------------------------------------------------------------------------------------------|
+| Not used yet       |                                                                                                    |
+
+**NOTES** 
+* None.
 
 ## LogWriteDelay
 
+**DESCRIPTION**  
+Sets a delay (in milliseconds) before writing a log file.
+
+**NOTES** 
+* Inserting a delay before writing a log file ensures that the timestamp in the filename is unique, and all logs are captured.
+* Since this delay is applied to all log types, setting this too high will have a significant impact on performance.
+* This should be left at `10`
+
+***
+
 ## AbatabFallbackUserName
+
+**DESCRIPTION**  
+Sets a delay (in milliseconds) before writing a log file.
+
+**NOTES** 
+* Inserting a delay before writing a log file ensures that the timestamp in the filename is unique, and all logs are captured.
+* Since this delay is applied to all log types, setting this too high will have a significant impact on performance.
+* This should be left at `10`
+
+***
 
 ## ModTestingMode
 
