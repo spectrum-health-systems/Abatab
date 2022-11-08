@@ -1,7 +1,7 @@
-﻿// Abatab 0.97.0
+﻿// Abatab 22.11.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221107.164836
+// b221108.081135
 
 using Abatab.Properties;
 using AbatabLogging;
@@ -21,8 +21,8 @@ namespace Abatab
         /// <returns>A dictionary containing the settings from Web.config.</returns>
         /// <remarks>
         /// * Whenever a new value is added/removed to Properties/Settings.settings, it needs to be added/removed here as well.
-        /// * Configuration settings details can be found <see href="https://spectrum-health-systems.github.io/Abatab/manual/Configuration/WebConfigFile.html">here.</see>
-        /// * Settings are trimmed and converted to lowercase. <see href="https://spectrum-health-systems.github.io/Abatab/articles/SourceCode/Variables.html#casing-and-trimming">[more info]</see>
+        /// * Configuration settings details can be found <see href="https://spectrum-health-systems.github.io/Abatab/man/man-configuration-local-settings.html">here.</see>
+        /// * Settings are trimmed and converted to lowercase. <see href="https://spectrum-health-systems.github.io/Abatab/man/man-source-code-home.html/#casing-and-trimming">[more info]</see>
         /// </remarks>
         public static Dictionary<string, string> Load()
         {

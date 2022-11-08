@@ -1,7 +1,7 @@
-﻿// Abatab 0.97.0
+﻿// Abatab 22.11.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221107.164836
+// b221108.081135
 
 using Abatab.Properties;
 using AbatabData;
@@ -44,7 +44,7 @@ namespace Abatab
         /// <returns>A finalized OptionObject.</returns>
         /// <remarks>
         /// * This method is required by Avatar.
-        /// * This is the only time a <see href="https://spectrum-health-systems.github.io/Abatab/articles/SourceCode/Logging.html#primevaldebug-log">PrimevalDebug</see> log is written.
+        /// * This is the only time a <see href="https://spectrum-health-systems.github.io/Abatab/man/man-logging-home.html#primevaldebug-log">PrimevalDebug</see> log is written.
         /// * This method should remain fairly static, since most of the logic is taken care of by external projects.
         /// </remarks>
         [WebMethod]

@@ -70,29 +70,43 @@
 <h1 id="webconfig-file">Web.config file</h1>
 
 <p>The Web.config file contains the local settings for Abatab. These settings are also in Settings.settings.</p>
-<h2 id="abatabmode">AbatabMode</h2>
-<pre><code class="lang-bash">&lt;setting name=&quot;AbatabMode&quot; serializeAs=&quot;String&quot;&gt;
-   &lt;value&gt;enabled&lt;/value&gt;
-&lt;/setting&gt;
-</code></pre><p>Determines which mode Abatab is currently using.</p>
-<ul>
-<li><p><code>enabled</code> (default)<br>All Abatab functionality is available.</p>
-</li>
-<li><p><code>disabled</code><br>Abatab is disabled, and its functionality is not available.</p>
-</li>
-<li><p><code>passthrough</code><br>Abatab is enabled, and all functionality is available, but no changes are made to Avatar.</p>
-</li>
-</ul>
+<h1 id="abatabmode">AbatabMode</h1>
+<p>Determines which mode Abatab is currently using.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><code>enabled</code></strong></td>
+<td>All Abatab functionality is available.</td>
+</tr>
+<tr>
+<td><code>disabled</code></td>
+<td>Abatab is disabled, and its functionality is not available.</td>
+</tr>
+<tr>
+<td><code>passthrough</code></td>
+<td>Abatab is enabled, and all functionality is available, but no changes are made to Avatar.</td>
+</tr>
+</tbody>
+</table>
+<hr>
 <h2 id="abatabroot">AbatabRoot</h2>
-<p>Defines the root directory for Abatab.</p>
 <pre><code class="lang-bash">    &lt;setting name=&quot;AbatabRoot&quot; serializeAs=&quot;String&quot;&gt;
-        &lt;value&gt;C:\AvatoolWebService\Abatab_&lt;/value&gt;
+        &lt;value&gt;C:\Abatab_&lt;/value&gt;
     &lt;/setting&gt;
 </code></pre><p>The Abatab root directory.</p>
+<p>At runtime The <code>AvatarEnvironment</code> value is added to the end of <code>AbatabRoot</code> to form the complete path.</p>
+<p>For example, <code>AbatabRoot</code> is &quot;C:\Abatab_&quot;, and <code>AvatarEnvironment</code> is &quot;LIVE&quot;, the root directory at runtime would be &quot;C:\Abatab_LIVE&quot;.</p>
 <h2 id="avatarenvironment">AvatarEnvironment</h2>
-<blockquote><p><code>AbatabEnvironment = LIVE</code></p>
-</blockquote>
-<p>Abatab works in the following Avatar environments.</p>
+<pre><code class="lang-bash">        &lt;setting name=&quot;AvatarEnvironment&quot; serializeAs=&quot;String&quot;&gt;
+            &lt;value&gt;LIVE&lt;/value&gt;
+        &lt;/setting&gt;
+</code></pre><p>Defines the Avatar environment where Abatab will be used.</p>
 <ul>
 <li><p><code>LIVE</code><br>The Avatar production environment.</p>
 </li>
@@ -102,8 +116,10 @@
 </li>
 </ul>
 <h2 id="debugmode">DebugMode</h2>
-<blockquote><p><code>DebugMode=off</code></p>
-</blockquote>
+<pre><code class="lang-bash">&lt;setting name=&quot;DebugMode&quot; serializeAs=&quot;String&quot;&gt;
+    &lt;value&gt;off&lt;/value&gt;
+&lt;/setting&gt;
+</code></pre><p>Indicates if Abatab is in debugging mode.</p>
 <ul>
 <li><p><code>on</code><br>Debug logs will be written. This may affect performance, and should not be enabled in production environments.</p>
 </li>
