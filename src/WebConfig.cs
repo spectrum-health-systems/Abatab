@@ -1,7 +1,7 @@
 ﻿// Abatab 22.11.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221108.083307
+// b221108.094942
 
 using Abatab.Properties;
 using AbatabLogging;
@@ -48,7 +48,7 @@ namespace Abatab
                 { "ModTestingMode",                         Settings.Default.ModTestingMode.ToLower() }
             };
 
-            if (webConfig["DebugMode"] == "on")
+            if (webConfig["DebugMode"] == "enabled")
             {
                 LogEvent.WebConfigDebug(webConfig);
             }
@@ -57,4 +57,3 @@ namespace Abatab
         }
     }
 }
-

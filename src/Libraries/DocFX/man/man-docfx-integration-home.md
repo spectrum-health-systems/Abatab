@@ -229,15 +229,15 @@ To build/rebuild the Abatab documentation:
 
 The documentation is created in https://github.com/spectrum-health-systems/Abatab/docs
 
-## Verifying the documentation
+# Verifying the documentation
 
 DocFx allows you to host the documentation via localhost, which makes it easy to verify any modifications.
 
-1. Open a terminal in the docs/ folder
+1. Open a terminal in the `docs/` folder
 2. Type "`docfx serve`"
 3. Point a web browser to http://localhost:8080/
 
-## On GitHub
+# GitHub Pages
 
 If you use GitHub pages, and point to /docs, the documentation will be available on the GitHub repository.
 

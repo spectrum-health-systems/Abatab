@@ -2,6 +2,28 @@
 
 ## 22.11
 
+* [ ] Logging
+  * [ ] Test all log types to make sure they are written to the correct folder
+  * [ ] Test debugMode to make sure that "on" -> "enabled" is working correctly
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 * [ ] Dose code
 * [ ] Test:
   * [X] Valid user setting

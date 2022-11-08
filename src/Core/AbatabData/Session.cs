@@ -1,7 +1,7 @@
 ﻿// AbatabData 22.11.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221108.083307
+// b221108.094942
 
 using NTST.ScriptLinkService.Objects;
 
@@ -30,12 +30,20 @@ namespace AbatabData
         /// <value>Default value is <c>LIVE</c>.</value>
         public string AvatarEnvironment { get; set; }
 
+        /// <summary>
+        /// The current Avatar environment. <see href="https://spectrum-health-systems.github.io/Abatab/man/man-configuration-local-settings.html#AbatabFallbackUserName">. [more info]</see>
+        /// </summary>
+        /// <value>Default value is <c>_Abatab</c>.</value>
         public string AbatabFallbackUserName { get; set; }
         public Core.Debuggler DebugglerConfig { get; set; }
         public Core.Logging LoggingConfig { get; set; }
         public Module.Common ModCommonConfig { get; set; }
         public Module.Prototype ModPrototypeConfig { get; set; }
         public Module.QuickMedOrder ModQuickMedOrderConfig { get; set; }
+
+        /// <summary>
+        /// Properties for the <see href="https://spectrum-health-systems.github.io/Abatab/api/AbatabData.Module.Testing.html"> Abatab Testing Module.</see>
+        /// </summary>
         public Module.Testing ModTestingConfig { get; set; }
         public string SessionDateStamp { get; set; }
         public string SessionTimeStamp { get; set; }

@@ -1,7 +1,7 @@
 ﻿// AbatabLogging 22.11.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221108.083307
+// b221108.094942
 
 /* ========================================================================================================
  * PLEASE READ
@@ -68,7 +68,7 @@ namespace AbatabLogging
 
             Debuggler.DebugTheDebugger(debugDebugger, debugLogRoot, "[BuildDebugLog-001]");
 
-            if (string.Equals(debugMode, "on", StringComparison.OrdinalIgnoreCase))
+            if (string.Equals(debugMode, "enabled", StringComparison.OrdinalIgnoreCase))
             {
                 Debuggler.DebugTheDebugger(debugDebugger, debugLogRoot, "[BuildDebugLog-003]");
                 var debugLogPath = BuildPath.WithCaller("debug", debugLogRoot, exeAssembly, callPath, callMember, callLine);
@@ -116,7 +116,7 @@ namespace AbatabLogging
         /// <param name="callLine">The file line of where the log is coming from.</param>
         public static void PrimevalDebug(string debugMode, string exeAssembly, [CallerFilePath] string callPath = "", [CallerMemberName] string callMember = "", [CallerLineNumber] int callLine = 0)
         {
-            if (string.Equals(debugMode, "on", StringComparison.OrdinalIgnoreCase))
+            if (string.Equals(debugMode, "enabled", StringComparison.OrdinalIgnoreCase))
             {
                 var debugContent = BuildContent.DebugComponents(exeAssembly, debugMode, "[PRIMEVAL DEBUG]", callPath, callMember, callLine);
                 var debugLogPath = BuildPath.Timestamped("primevaldebug", @"C:\AvatoolWebService\Abatab_UAT\logs");

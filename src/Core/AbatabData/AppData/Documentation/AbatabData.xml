@@ -29,6 +29,17 @@
             
              </summary>
         </member>
+        <member name="T:AbatabData.Module.Testing">
+            <summary>
+            Defines the properties for the AbatabData.Module.Testing object, containing the information/data that Abatab needs to do its job.
+            </summary>
+        </member>
+        <member name="P:AbatabData.Module.Testing.Mode">
+            <summary>
+            The default behavior of the Abatab Testing Module. <see href="https://spectrum-health-systems.github.io/Abatab/man/man-configuration-local-settings.html#ModTestingMode"> [more info]</see>
+            </summary>
+            <value>Default value is <c>enabled</c>.</value>
+        </member>
         <member name="T:AbatabData.Module.QuickMedOrder">
             <summary>
             Defines the properties for the AbatabData.QuickMedOrderData object, containing the information needed for ModQuickMedOrder functionality.
@@ -56,6 +67,17 @@
             The current Avatar environment. <see href="https://spectrum-health-systems.github.io/Abatab/man/man-configuration-local-settings.html#AvatarEnvironment">. [more info]</see>
             </summary>
             <value>Default value is <c>LIVE</c>.</value>
+        </member>
+        <member name="P:AbatabData.Session.AbatabFallbackUserName">
+            <summary>
+            The current Avatar environment. <see href="https://spectrum-health-systems.github.io/Abatab/man/man-configuration-local-settings.html#AbatabFallbackUserName">. [more info]</see>
+            </summary>
+            <value>Default value is <c>_Abatab</c>.</value>
+        </member>
+        <member name="P:AbatabData.Session.ModTestingConfig">
+            <summary>
+            Properties for the <see href="https://spectrum-health-systems.github.io/Abatab/api/AbatabData.Module.Testing.html"> Abatab Testing Module.</see>
+            </summary>
         </member>
     </members>
 </doc>
