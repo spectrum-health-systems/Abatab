@@ -11,7 +11,7 @@ namespace AbatabData.Module
     public class Testing
     {
         /// <summary>
-        /// The default behavior of the Abatab Testing Module. <see href="https://spectrum-health-systems.github.io/Abatab/man/man-configuration-local-settings.html#ModTestingMode"> [more info]</see>
+        /// The default behavior of the Abatab Testing Module. <see href="https://spectrum-health-systems.github.io/Abatab/man/man-configuration-local-settings.html#modtestingmode"> [more info]</see>
         /// </summary>
         /// <value>Default value is <c>enabled</c>.</value>
         public string Mode { get; set; }

@@ -35,9 +35,9 @@ You can create your own debug statements by customizing the message. Temporary d
 LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, $"VariableName value is {value}");
 ```
 
-### PrimevalDebug log
+### Primeval debug log
 
-The PrimevalDebug log file is the first line of Abatab.asmx.cs, and writes a debug logfile with the most basic, hardcoded setting information.
+The Primeval debug log file is the first line of Abatab.asmx.cs, and writes a debug logfile with the most basic, hardcoded setting information.
 
 ```bash
 LogEvent.PrimevalDebug(Settings.Default.DebugMode, Assembly.GetExecutingAssembly().GetName().Name, $@"{Settings.Default.AbatabRoot}{Settings.Default.AbatabEnvironment}\{Settings.Default.DebugLogRoot}");
