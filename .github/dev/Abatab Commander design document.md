@@ -1,1 +1,0 @@
-Abatab Comomander design document
