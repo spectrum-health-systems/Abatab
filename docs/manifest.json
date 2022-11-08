@@ -335,7 +335,7 @@
       "output": {
         ".html": {
           "relative_path": "man/man-configuration-local-settings.html",
-          "hash": "CmQqNvq6z0NkOdqiRMJRCPtV3iGhbDMstGzWeB7sV6E="
+          "hash": "dtdlcjr41rx3R/daKKG/luSJOQc1VrUefE92u1gPCz0="
         }
       },
       "is_incremental": false,
@@ -703,11 +703,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "obj/api/AbatabLogging.Class1.ExampleClass.yml",
+      "source_relative_path": "obj/api/AbatabLogging.CommentExamples.ExampleClass.yml",
       "output": {
         ".html": {
-          "relative_path": "api/AbatabLogging.Class1.ExampleClass.html",
-          "hash": "2Fc3Pf3d1rgO+/8iPkEXc6pYgJmW9OIBQPX4QYLrxSk="
+          "relative_path": "api/AbatabLogging.CommentExamples.ExampleClass.html",
+          "hash": "U5l2p295iUy0nRxMCpSq7bq/cgl8y2l/wFa8Ncyc6M0="
         }
       },
       "is_incremental": false,
@@ -715,11 +715,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "obj/api/AbatabLogging.Class1.yml",
+      "source_relative_path": "obj/api/AbatabLogging.CommentExamples.yml",
       "output": {
         ".html": {
-          "relative_path": "api/AbatabLogging.Class1.html",
-          "hash": "uLN5uiJYe700uNHyrTkNd3J/qjrUq+6TRNGobx1y+OU="
+          "relative_path": "api/AbatabLogging.CommentExamples.html",
+          "hash": "0HkxgAxhldCbU6pccBhmpOJ7g9ZN8C92LqakYmI1FYo="
         }
       },
       "is_incremental": false,
@@ -767,7 +767,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AbatabLogging.html",
-          "hash": "2TAoWIVyykM6FAMC9fe6mM43gULCjYD8zS9oQSREM9c="
+          "hash": "z6xqdGV16Pf+0nyODTx+g2w6T7lgZ4tbhBcqt6XZO8k="
         }
       },
       "is_incremental": false,
@@ -1115,7 +1115,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "awYgThNSaD/twqfV6s1EcyzrJzQP61TJvdkHYug0Dg0="
+          "hash": "TY7fI0UxRObBZqjce8BCEaZLkuDxrLz4K6AILaKpinI="
         }
       },
       "is_incremental": false,

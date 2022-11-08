@@ -1,11 +1,13 @@
-﻿using System;
+﻿// This is just for testing how DocFX renders comments.
+
+using System;
 
 namespace AbatabLogging
 {
     /// <summary>
     /// sdfasdfadsf
     /// </summary>
-    public static class Class1
+    public static class CommentExamples
     {
         /// <summary>
         /// Every class and member should have a one sentence

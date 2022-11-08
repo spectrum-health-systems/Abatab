@@ -158,12 +158,12 @@
             <param name="logRoot">The log root.</param>
             <returns>The path to the log root.</returns>
         </member>
-        <member name="T:AbatabLogging.Class1">
+        <member name="T:AbatabLogging.CommentExamples">
             <summary>
             sdfasdfadsf
             </summary>
         </member>
-        <member name="T:AbatabLogging.Class1.ExampleClass">
+        <member name="T:AbatabLogging.CommentExamples.ExampleClass">
             <summary>
             Every class and member should have a one sentence
             summary describing its purpose.
@@ -242,13 +242,13 @@
             </para>
             </remarks>
         </member>
-        <member name="P:AbatabLogging.Class1.ExampleClass.Label">
+        <member name="P:AbatabLogging.CommentExamples.ExampleClass.Label">
             <value>
             The <c>Label</c> property represents a label
             for this instance.
             </value>
             <remarks>
-            The <see cref="P:AbatabLogging.Class1.ExampleClass.Label"/> is a <see langword="string"/>
+            The <see cref="P:AbatabLogging.CommentExamples.ExampleClass.Label"/> is a <see langword="string"/>
             that you use for a label.
             <para>
             Note that there isn't a way to provide a "cref" to
@@ -256,7 +256,7 @@
             </para>
             </remarks>
         </member>
-        <member name="M:AbatabLogging.Class1.ExampleClass.Add(System.Int32,System.Int32)">
+        <member name="M:AbatabLogging.CommentExamples.ExampleClass.Add(System.Int32,System.Int32)">
             <summary>
             Adds two integers and returns the result.
             </summary>
@@ -286,11 +286,11 @@
             <see href="https://docs.microsoft.com/dotnet/api/system.int32.maxvalue"/>
              to point a web page instead.
             </exception>
-            <see cref="T:AbatabLogging.Class1.ExampleClass"/> for a list of all
+            <see cref="T:AbatabLogging.CommentExamples.ExampleClass"/> for a list of all
             the tags in these examples.
-            <seealso cref="P:AbatabLogging.Class1.ExampleClass.Label"/>
+            <seealso cref="P:AbatabLogging.CommentExamples.ExampleClass.Label"/>
         </member>
-        <member name="M:AbatabLogging.Class1.ExampleClass.gsgsg(System.String,System.String)">
+        <member name="M:AbatabLogging.CommentExamples.ExampleClass.gsgsg(System.String,System.String)">
             <summary>
             This is an example of a positional record.
             </summary>

@@ -870,57 +870,57 @@ references:
   isSpec: "True"
   fullName: AbatabLogging.BuildPath.WithCaller
   nameWithType: BuildPath.WithCaller
-- uid: AbatabLogging.Class1
-  name: Class1
-  href: api/AbatabLogging.Class1.html
-  commentId: T:AbatabLogging.Class1
-  fullName: AbatabLogging.Class1
-  nameWithType: Class1
-- uid: AbatabLogging.Class1.ExampleClass
-  name: Class1.ExampleClass
-  href: api/AbatabLogging.Class1.ExampleClass.html
-  commentId: T:AbatabLogging.Class1.ExampleClass
-  fullName: AbatabLogging.Class1.ExampleClass
-  nameWithType: Class1.ExampleClass
-- uid: AbatabLogging.Class1.ExampleClass.Add(System.Int32,System.Int32)
+- uid: AbatabLogging.CommentExamples
+  name: CommentExamples
+  href: api/AbatabLogging.CommentExamples.html
+  commentId: T:AbatabLogging.CommentExamples
+  fullName: AbatabLogging.CommentExamples
+  nameWithType: CommentExamples
+- uid: AbatabLogging.CommentExamples.ExampleClass
+  name: CommentExamples.ExampleClass
+  href: api/AbatabLogging.CommentExamples.ExampleClass.html
+  commentId: T:AbatabLogging.CommentExamples.ExampleClass
+  fullName: AbatabLogging.CommentExamples.ExampleClass
+  nameWithType: CommentExamples.ExampleClass
+- uid: AbatabLogging.CommentExamples.ExampleClass.Add(System.Int32,System.Int32)
   name: Add(Int32, Int32)
-  href: api/AbatabLogging.Class1.ExampleClass.html#AbatabLogging_Class1_ExampleClass_Add_System_Int32_System_Int32_
-  commentId: M:AbatabLogging.Class1.ExampleClass.Add(System.Int32,System.Int32)
-  fullName: AbatabLogging.Class1.ExampleClass.Add(System.Int32, System.Int32)
-  nameWithType: Class1.ExampleClass.Add(Int32, Int32)
-- uid: AbatabLogging.Class1.ExampleClass.Add*
+  href: api/AbatabLogging.CommentExamples.ExampleClass.html#AbatabLogging_CommentExamples_ExampleClass_Add_System_Int32_System_Int32_
+  commentId: M:AbatabLogging.CommentExamples.ExampleClass.Add(System.Int32,System.Int32)
+  fullName: AbatabLogging.CommentExamples.ExampleClass.Add(System.Int32, System.Int32)
+  nameWithType: CommentExamples.ExampleClass.Add(Int32, Int32)
+- uid: AbatabLogging.CommentExamples.ExampleClass.Add*
   name: Add
-  href: api/AbatabLogging.Class1.ExampleClass.html#AbatabLogging_Class1_ExampleClass_Add_
-  commentId: Overload:AbatabLogging.Class1.ExampleClass.Add
+  href: api/AbatabLogging.CommentExamples.ExampleClass.html#AbatabLogging_CommentExamples_ExampleClass_Add_
+  commentId: Overload:AbatabLogging.CommentExamples.ExampleClass.Add
   isSpec: "True"
-  fullName: AbatabLogging.Class1.ExampleClass.Add
-  nameWithType: Class1.ExampleClass.Add
-- uid: AbatabLogging.Class1.ExampleClass.gsgsg(System.String,System.String)
+  fullName: AbatabLogging.CommentExamples.ExampleClass.Add
+  nameWithType: CommentExamples.ExampleClass.Add
+- uid: AbatabLogging.CommentExamples.ExampleClass.gsgsg(System.String,System.String)
   name: gsgsg(String, String)
-  href: api/AbatabLogging.Class1.ExampleClass.html#AbatabLogging_Class1_ExampleClass_gsgsg_System_String_System_String_
-  commentId: M:AbatabLogging.Class1.ExampleClass.gsgsg(System.String,System.String)
-  fullName: AbatabLogging.Class1.ExampleClass.gsgsg(System.String, System.String)
-  nameWithType: Class1.ExampleClass.gsgsg(String, String)
-- uid: AbatabLogging.Class1.ExampleClass.gsgsg*
+  href: api/AbatabLogging.CommentExamples.ExampleClass.html#AbatabLogging_CommentExamples_ExampleClass_gsgsg_System_String_System_String_
+  commentId: M:AbatabLogging.CommentExamples.ExampleClass.gsgsg(System.String,System.String)
+  fullName: AbatabLogging.CommentExamples.ExampleClass.gsgsg(System.String, System.String)
+  nameWithType: CommentExamples.ExampleClass.gsgsg(String, String)
+- uid: AbatabLogging.CommentExamples.ExampleClass.gsgsg*
   name: gsgsg
-  href: api/AbatabLogging.Class1.ExampleClass.html#AbatabLogging_Class1_ExampleClass_gsgsg_
-  commentId: Overload:AbatabLogging.Class1.ExampleClass.gsgsg
+  href: api/AbatabLogging.CommentExamples.ExampleClass.html#AbatabLogging_CommentExamples_ExampleClass_gsgsg_
+  commentId: Overload:AbatabLogging.CommentExamples.ExampleClass.gsgsg
   isSpec: "True"
-  fullName: AbatabLogging.Class1.ExampleClass.gsgsg
-  nameWithType: Class1.ExampleClass.gsgsg
-- uid: AbatabLogging.Class1.ExampleClass.Label
+  fullName: AbatabLogging.CommentExamples.ExampleClass.gsgsg
+  nameWithType: CommentExamples.ExampleClass.gsgsg
+- uid: AbatabLogging.CommentExamples.ExampleClass.Label
   name: Label
-  href: api/AbatabLogging.Class1.ExampleClass.html#AbatabLogging_Class1_ExampleClass_Label
-  commentId: P:AbatabLogging.Class1.ExampleClass.Label
-  fullName: AbatabLogging.Class1.ExampleClass.Label
-  nameWithType: Class1.ExampleClass.Label
-- uid: AbatabLogging.Class1.ExampleClass.Label*
+  href: api/AbatabLogging.CommentExamples.ExampleClass.html#AbatabLogging_CommentExamples_ExampleClass_Label
+  commentId: P:AbatabLogging.CommentExamples.ExampleClass.Label
+  fullName: AbatabLogging.CommentExamples.ExampleClass.Label
+  nameWithType: CommentExamples.ExampleClass.Label
+- uid: AbatabLogging.CommentExamples.ExampleClass.Label*
   name: Label
-  href: api/AbatabLogging.Class1.ExampleClass.html#AbatabLogging_Class1_ExampleClass_Label_
-  commentId: Overload:AbatabLogging.Class1.ExampleClass.Label
+  href: api/AbatabLogging.CommentExamples.ExampleClass.html#AbatabLogging_CommentExamples_ExampleClass_Label_
+  commentId: Overload:AbatabLogging.CommentExamples.ExampleClass.Label
   isSpec: "True"
-  fullName: AbatabLogging.Class1.ExampleClass.Label
-  nameWithType: Class1.ExampleClass.Label
+  fullName: AbatabLogging.CommentExamples.ExampleClass.Label
+  nameWithType: CommentExamples.ExampleClass.Label
 - uid: AbatabLogging.Debuggler
   name: Debuggler
   href: api/AbatabLogging.Debuggler.html
