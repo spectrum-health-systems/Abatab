@@ -1,7 +1,7 @@
 ﻿// AbatabSession 22.11.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221108.134404
+// b221108.135130
 
 using AbatabData;
 using AbatabData.Core;
@@ -225,26 +225,3 @@ namespace AbatabSession
         }
     }
 }
-
-
-//private static void InitializeDoseData(Session abatabSession)
-//{
-//    LogEvent.BuildDebugLog(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
-//    LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
-
-//    abatabSession.ModQuickMedOrderData.PrevDosePrefix                = "Recurring Dosage:";
-//    abatabSession.ModQuickMedOrderData.PrevDoseSuffix                = " mgs";
-//    abatabSession.ModQuickMedOrderData.DosageOneFieldId              = "107";
-//    abatabSession.ModQuickMedOrderData.FoundDosageOneFieldId         = false;
-//    abatabSession.ModQuickMedOrderData.CurrentDose                   = "0.0";
-//    abatabSession.ModQuickMedOrderData.OrderTypeFieldId              = "121";
-//    abatabSession.ModQuickMedOrderData.FoundOrderTypeFieldId         = false;
-//    abatabSession.ModQuickMedOrderData.OrderType                     = "0";
-//    abatabSession.ModQuickMedOrderData.LastOrderScheduleFieldId      = "142";
-//    abatabSession.ModQuickMedOrderData.FoundLastOrderScheduleFieldId = false;
-//    abatabSession.ModQuickMedOrderData.LastOrderScheduleText         = "";
-//    abatabSession.ModQuickMedOrderData.FoundAllRequiredFieldIds      = false;
-
-//    LogEvent.ModQuickMedOrder(abatabSession);
-//    LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
-//}

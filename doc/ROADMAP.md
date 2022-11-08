@@ -11,6 +11,15 @@
 
 # Roadmap
 
+## 22.12.0
+
+* `NEW` Logging detail level
+* `ADDED` Documentation
+
+## 22.11.0
+
+* `INFO` Initial release
+
 <br>
 
 ***
