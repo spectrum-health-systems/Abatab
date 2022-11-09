@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Abatab</name>
+    </assembly>
+    <members>
+        <member name="T:Abatab.Abatab">
+            <summary>
+            The main Abatab project, and where the magic starts.
+            </summary>
+        </member>
+        <member name="M:Abatab.Abatab.GetVersion">
+            <summary>
+            Returns the current version of Abatab.
+            </summary>
+            <returns>The current version of Abatab.</returns>
+            <remarks>
+            * This method is required by Avatar.
+            * The version number is always the version that is in development. For example, while developing v1.0, this will return <c>1.0</c>.
+            </remarks>
+        </member>
+        <member name="M:Abatab.Abatab.RunScript(NTST.ScriptLinkService.Objects.OptionObject2015,System.String)">
+            <summary>
+            Executes script parameter request from Avatar, then returns a potentially modified OptionObject to Avatar.
+            </summary>
+            <param name="sentOptionObject">The original OptionObject sent from Avatar.</param>
+            <param name="scriptParameter">The original Script Parameter request from Avatar.</param>
+            <returns>A finalized OptionObject.</returns>
+            <remarks>
+            * This method is required by Avatar.
+            * This is the only time a <see href="https://spectrum-health-systems.github.io/Abatab/man/man-logging-home.html#primeval-debug-log">PrimevalDebug</see> log is written.
+            * This method should remain fairly static, since most of the logic is taken care of by external projects.
+            </remarks>
+        </member>
+        <member name="T:Abatab.Roundhouse">
+            <summary>
+            Determines what should be done with the Module component of the Script Parameter sent from Avatar.
+            </summary>
+        </member>
+        <member name="M:Abatab.Roundhouse.ParseRequest(AbatabData.Session)">
+            <summary>
+            Determines which Abatab Module should get the Command/Action/Option components of the Script Parameter sent from Avatar.
+            </summary>
+            <param name="abatabSession">Settings and data for this session of Abatab.</param>
+            <remarks>
+            * Whenever a new Abatab Module is added, logic will need to be added to the switch statement using the following template:
+            <code>
+            case "newmodule":
+                LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+                ModNewModule.Roundhouse.ParseRequest(abatabSession);
+                break;
+            </code>
+            </remarks>
+        </member>
+        <member name="T:Abatab.WebConfig">
+            <summary>
+            Logic for working with the local Web.config file, which contains local settings for an Abatab session.
+            </summary>
+        </member>
+        <member name="M:Abatab.WebConfig.Load">
+            <summary>
+            Load the settings from the local Web.config file.
+            </summary>
+            <returns>A dictionary containing the settings from Web.config.</returns>
+            <remarks>
+            * Whenever a new value is added/removed to Properties/Settings.settings, it needs to be added/removed here as well.
+            * Configuration settings details can be found <see href="https://spectrum-health-systems.github.io/Abatab/man/man-configuration-local-settings.html">here.</see>
+            * Settings are trimmed and converted to lowercase. <see href="https://spectrum-health-systems.github.io/Abatab/man/man-source-code-home.html/#casing-and-trimming">[more info]</see>
+            </remarks>
+        </member>
+    </members>
+</doc>

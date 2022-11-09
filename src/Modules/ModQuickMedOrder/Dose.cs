@@ -200,26 +200,35 @@ namespace ModQuickMedOrder
                         {
                             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
-                            double milligramDifference = (currDoseAsNumber - prevDoseAsNumber);
-                            double basePercentage = prevDoseAsNumber / milligramDifference;
-                            double percentDifference = 100.0 - basePercentage;
+                            double maxDose = prevDoseAsNumber * 1.25;
+
+
+
+                            //double milligramDifference = (currDoseAsNumber - prevDoseAsNumber);
+                            //double basePercentage = prevDoseAsNumber / milligramDifference;
+                            //double percentDifference = 100.0 - basePercentage;
 
                             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
-                            var debugMsg2_ = $"[{prevDoseAsNumber}] [{currDoseAsNumber}] [{milligramDifference}] [{basePercentage}] [{percentDifference}]";
-                            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, debugMsg2_);
+                            //var debugMsg2_ = $"[{prevDoseAsNumber}] [{currDoseAsNumber}] [{milligramDifference}] [{basePercentage}] [{percentDifference}]";
+                            //LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, debugMsg2_);
 
                             // TODO Should be converted when setup.
                             var maxPercentIncrease = Convert.ToDouble(abatabSession.ModQuickMedOrderConfig.DoseMaxPercentIncrease);
 
                             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, maxPercentIncrease.ToString());
-                            if (percentDifference >= maxPercentIncrease)
+
+                            //if (percentDifference >= maxPercentIncrease)
+                            if (currDoseAsNumber >= maxDose)
                             {
                                 LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
-                                var niceString = string.Format("{0:0.#}", percentDifference);
+                                var perc = ((currDoseAsNumber - prevDoseAsNumber) / prevDoseAsNumber) * 100;
 
-                                var debugMsg3_ = $"[{prevDoseAsNumber}] [{currDoseAsNumber}] [{milligramDifference}] [{basePercentage}] [{percentDifference}] [{niceString}]";
+                                //var niceString = string.Format("{0:0.#}", percentDifference);
+                                var niceString = string.Format("{0:0.#}", perc);
+
+                                var debugMsg3_ = $"[{prevDoseAsNumber}] [{currDoseAsNumber}] [{perc}] [{maxDose}] [{niceString}]";
                                 LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, debugMsg3_);
 
                                 abatabSession.WorkOptObj.ErrorCode = 4;
