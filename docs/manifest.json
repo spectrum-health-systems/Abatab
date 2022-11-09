@@ -299,7 +299,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "Uu8HIRpMXgbiClLcmjrDWRyyQ4os0SG8ldMvqXm4RG8="
+          "hash": "s1jMeckWIpkrTrrMs6pmemE2Fp/DsrdrDxBoFOwTmP0="
         }
       },
       "is_incremental": false,
@@ -1194,12 +1194,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "8eDGYMiCXKmdzmYSNvIFyoIOR+VDhc+mqF2CQrhfMAQ="
+          "hash": "pZiGf++jgCa7qUpkabrKVeRIvSkDJz5b0NBJ14KQaRw="
         }
       },
       "is_incremental": false,

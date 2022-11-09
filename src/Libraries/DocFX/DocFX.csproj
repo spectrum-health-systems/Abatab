@@ -47,22 +47,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="api\index.md" />
-    <None Include="documentation\about-abatab-articles.md" />
-    <None Include="documentation\additional-reading\additional-reading_home.md" />
-    <None Include="documentation\docfx-integration\docfx_configuration.md" />
-    <None Include="documentation\docfx-integration\docfx_documentation-output.md" />
-    <None Include="documentation\docfx-integration\docfx_home.md" />
-    <None Include="documentation\docfx-integration\docfx_new-project.md" />
-    <None Include="documentation\functionality\functionality_core.md" />
-    <None Include="documentation\functionality\functionality_home.md" />
-    <None Include="documentation\functionality\functionality_modules.md" />
-    <None Include="documentation\source-code\source-code_comments.md" />
-    <None Include="documentation\source-code\source-code_headers.md" />
-    <None Include="documentation\source-code\source-code_home.md" />
-    <None Include="documentation\source-code\source-code_logging.md" />
-    <None Include="documentation\source-code\source-code_variables.md" />
-    <None Include="documentation\source-code\source-code_versioning.md" />
-    <None Include="documentation\toc.md" />
     <None Include="docfx.json" />
     <None Include="index.md" />
     <None Include="man\additional-reading.md" />
@@ -82,6 +66,8 @@
     <None Include="man\man-source-code-home.md" />
     <None Include="man\toc.md" />
     <None Include="packages.config" />
+    <None Include="documentation\index.md" />
+    <None Include="documentation\toc.md" />
     <None Include="release-notes\22-11-0.md" />
     <None Include="release-notes\index.md" />
     <None Include="release-notes\toc.md" />
