@@ -1324,6 +1324,18 @@ references:
   isSpec: "True"
   fullName: ModCommon.VerifyAccess.InvalidUser
   nameWithType: VerifyAccess.InvalidUser
+- uid: ModProgressNote
+  name: ModProgressNote
+  href: api/ModProgressNote.html
+  commentId: N:ModProgressNote
+  fullName: ModProgressNote
+  nameWithType: ModProgressNote
+- uid: ModProgressNote.Roundhouse
+  name: Roundhouse
+  href: api/ModProgressNote.Roundhouse.html
+  commentId: T:ModProgressNote.Roundhouse
+  fullName: ModProgressNote.Roundhouse
+  nameWithType: Roundhouse
 - uid: ModPrototype
   name: ModPrototype
   href: api/ModPrototype.html

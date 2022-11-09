@@ -1,131 +1,225 @@
-# Roadmap
+# Abatab Roadmap
 
-## 22.11.0
+## 22.11.0 (November 2022)
 
-### Misc
+### Core functionality
 
 * [ ] Test to make sure that replacing DLL files works as expected
 
-### Core
-
-#### CoreData
+#### AbatabData
 
 * No changes
 
-### Core - Logging
+#### AbatabLogging
 
 * [ ] Test all log types to make sure they are written to the correct folder
 * [ ] Test debugMode to make sure that "on" -> "enabled" is working correctly
+* [ ] Fix access log filename/contents
 
-### Core - OptionObject
-
-* No changes
-
-### Core - Session
+#### AbatabOptionObject
 
 * No changes
 
-### Core - System
+#### AbatabSession
 
 * No changes
 
-### Modules - ModQuickMedOrder
+#### AbatabSystem
+
+* No changes
+
+### Abatab Modules
+
+#### ModCommon
+
+* No changes
+
+#### ModProgressNote
+
+* [ ] Test ProgressNote.??
+* [ ] Verify valid user settings
+
+#### ModPrototype
+
+* No changes
+
+#### ModQuickMedOrder
 
 * [ ] Test Dose.VerifyUnderMaxPercentIncrease
-* [ ] Test ProgressNote.??
-* [ ] Test valid user settings
-* [ ]
+* [ ] Verify valid user settings
 
+#### ModTesting
 
-
-
-
-
-
-
-
-
-## 22.11.1
-
-
-
-
-
-##
-
-
-
-
-
-
-
-
-
-# 22.12.0
-
-### Core functionlity
-
-#### Logging
-
-* `NEW` Logging detail level
-
-
-### Modules
-
+* No changes
 
 ### Documentation
 
-* `ADDED` Documentation
+* [ ] Details soon
 
 ***
 
-# **22.11**
+## 22.11.1 (November 2022)
 
-## 22.11.0
+### Core functionality
 
-> Initial release
+* [ ] Code/comment refactor
 
-### Core functionlity
+#### AbatabData
 
-#### Logging
+* No changes
 
-The following types of logs 
-* `NEW` Access logs
-* `NEW` Debug logs
-* `NEW` ModQuickMedOrder details log
-* `NEW` PrimevalDebug log
-* `NEW` Session logs
-* `NEW` Trace logs
-* `NEW` WebConfig details log
+#### AbatabLogging
 
-### Modules
+* No changes
 
-#### ModQuickMedOrder
+#### AbatabOptionObject
 
-* `NEW` Dose.VerifyUnderMaxPercentIncrease
+* No changes
+
+#### AbatabSession
+
+* No changes
+
+#### AbatabSystem
+
+* No changes
+
+### Abatab Modules
+
+#### ModCommon
+
+* No changes
 
 #### ModProgressNote
 
-* `NEW` ??.??
+* No changes
+
+#### ModPrototype
+
+* No changes
+
+#### ModQuickMedOrder
+
+* No changes
+
+#### ModTesting
+
+* No changes
 
 ### Documentation
 
-* `ADDED` Documentation
+* [ ] Cleanup DocFX folders
+
+***
+
+## 22.12.0 (December 2022)
+
+### Core functionality
+
+#### AbatabData
+
+* No changes
+
+#### AbatabLogging
+
+* [ ] Logging detail level
+
+#### AbatabOptionObject
+
+* No changes
+
+#### AbatabSession
+
+* No changes
+
+#### AbatabSystem
+
+* No changes
+
+### Abatab Modules
+
+#### ModCommon
+
+* No changes
+
+#### ModProgressNote
+
+* No changes
+
+#### ModPrototype
+
+* No changes
+
+#### ModQuickMedOrder
+
+* No changes
+
+#### ModTesting
+
+* No changes
+
+### Documentation
+
+* No changes
+
+
 
 ## 22.11.1
 
-> Refactor release
 
-### Core functionlity
+***
+***
 
-#### Logging
+> Template
 
-### Modules
+***
 
-#### ModQuickMedOrder
+## YY.MM.xx (%Month% %Year%)
+
+### Core functionality
+
+#### AbatabData
+
+* No changes
+
+#### AbatabLogging
+
+* No changes
+
+#### AbatabOptionObject
+
+* No changes
+
+#### AbatabSession
+
+* No changes
+
+#### AbatabSystem
+
+* No changes
+
+### Abatab Modules
+
+#### ModCommon
+
+* No changes
 
 #### ModProgressNote
 
+* No changes
+
+#### ModPrototype
+
+* No changes
+
+#### ModQuickMedOrder
+
+* No changes
+
+#### ModTesting
+
+* No changes
+
 ### Documentation
 
-* `ADDED` Documentation
+* No changes

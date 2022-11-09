@@ -299,7 +299,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "GDBnQC9IluX1MHrNsLXZBhKoc8pzqIDuKdLV5danz98="
+          "hash": "Uu8HIRpMXgbiClLcmjrDWRyyQ4os0SG8ldMvqXm4RG8="
         }
       },
       "is_incremental": false,
@@ -312,6 +312,18 @@
         ".html": {
           "relative_path": "man/additional-reading.html",
           "hash": "iP6w4FK7ok8L/K17i2Q09bL8DqKin3n88NVJT0J3CZE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "man/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "man/index.html",
+          "hash": "HpzXUW/msV0d0OIxXUqjO7lgTvcPA22W6WM+64C+y8I="
         }
       },
       "is_incremental": false,
@@ -413,7 +425,7 @@
       "output": {
         ".html": {
           "relative_path": "man/man-functionality-new.html",
-          "hash": "6RDyOLUTH9hMbkZKaCn9rnn4t9GNo5VkU0xM6StSe4A="
+          "hash": "aBgzwSdMBf01ZqGEAdIFpb99gyfWsCscceREyy8Sv7w="
         }
       },
       "is_incremental": false,
@@ -426,18 +438,6 @@
         ".html": {
           "relative_path": "man/man-getting-started-home.html",
           "hash": "ggKCg4AOILxXYDDWKjbFGDRvQ4Gf6ZchVbRAIQAh5To="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "man/man-home.md",
-      "output": {
-        ".html": {
-          "relative_path": "man/man-home.html",
-          "hash": "HTb3D25jIZYlt+nZE068ihGlMQxYlILRRfktXlxBVgg="
         }
       },
       "is_incremental": false,
@@ -503,7 +503,7 @@
       "output": {
         ".html": {
           "relative_path": "man/toc.html",
-          "hash": "h70gzM/w0ssAqpL7yVjpLNItLi4ug6zcAPBsugW+WYU="
+          "hash": "dmoDExtDbMc37XvlKlaBi2xeHw5/97IoJ+d3sk6VuOM="
         }
       },
       "is_incremental": false,
@@ -955,6 +955,30 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "obj/api/ModProgressNote.Roundhouse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ModProgressNote.Roundhouse.html",
+          "hash": "IfuDOIqxA9/pwzvSCKAOwvdN5PTHNpMHNrYyYsT1WJo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/ModProgressNote.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ModProgressNote.html",
+          "hash": "8WUi3h93ySPOqmA8DLpPflUgwC3xOUK84xiYR9fiCRo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "obj/api/ModPrototype.Roundhouse.yml",
       "output": {
         ".html": {
@@ -1115,7 +1139,55 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "TY7fI0UxRObBZqjce8BCEaZLkuDxrLz4K6AILaKpinI="
+          "hash": "RdKscHnm8+zKv6txGo74gnAP0sKo0JtxOmhp5wgNnWU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "release-notes/22-11-0.md",
+      "output": {
+        ".html": {
+          "relative_path": "release-notes/22-11-0.html",
+          "hash": "eHdvp9Cp+hl4GdHtW+eVY8egVm80abG4BXg8PNbmM2E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "release-notes/22-11-1.md",
+      "output": {
+        ".html": {
+          "relative_path": "release-notes/22-11-1.html",
+          "hash": "wZXSJraCvxGybqsG9Uzf5JV2s4DqeDT5rP2+t/Wq9oA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "release-notes/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "release-notes/index.html",
+          "hash": "Nha3TKxD7PoPNkbpQa+pI7uvzZWp85Sd+J1pWRkyOIQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "release-notes/toc.md",
+      "output": {
+        ".html": {
+          "relative_path": "release-notes/toc.html",
+          "hash": "7G0Zcp4ReclbSF9iH6MYzSBFdVM1ghJ5dTM8REHqay0="
         }
       },
       "is_incremental": false,
@@ -1127,7 +1199,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "PRSqar+VFC4uER4QXxX6Y6yecAfy5cxdplapBvNB1iE="
+          "hash": "8eDGYMiCXKmdzmYSNvIFyoIOR+VDhc+mqF2CQrhfMAQ="
         }
       },
       "is_incremental": false,
@@ -1148,13 +1220,13 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 17,
+          "total_file_count": 20,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 50,
+          "total_file_count": 52,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

@@ -121,6 +121,10 @@
       <Project>{cbd27c27-b3cd-455e-af5d-4749ca219d53}</Project>
       <Name>ModCommon</Name>
     </ProjectReference>
+    <ProjectReference Include="Modules\ModProgressNote\ModProgressNote.csproj">
+      <Project>{b129ebaf-4a98-47de-9c9e-4abe80883c52}</Project>
+      <Name>ModProgressNote</Name>
+    </ProjectReference>
     <ProjectReference Include="Modules\ModPrototype\ModPrototype.csproj">
       <Project>{312ec2a5-27d6-4abf-8697-022db3123933}</Project>
       <Name>ModPrototype</Name>
