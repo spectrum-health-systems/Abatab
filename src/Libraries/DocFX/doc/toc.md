@@ -1,5 +1,3 @@
-# Documentation
+# [Changelog](./CHANGELOG.md)
 
-## [Changelog](./CHANGELOG.md)
-
-## [Roadmap](./ROADMAP.md)
+# [Roadmap](./ROADMAP.md)
