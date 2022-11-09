@@ -1,5 +1,9 @@
 - name: Abatab Manual
   href: man/
+  homepage: man/index.md
 - name: API Documentation
   href: obj/api/
   homepage: api/index.md
+- name: Release Notes
+  href: release-notes/
+  homepage: release-notes/index.md
