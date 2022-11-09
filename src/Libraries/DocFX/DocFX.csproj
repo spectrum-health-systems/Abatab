@@ -48,6 +48,12 @@
   <ItemGroup>
     <None Include="api\index.md" />
     <None Include="docfx.json" />
+    <None Include="doc\CHANGELOG.md" />
+    <None Include="doc\index.md" />
+    <None Include="doc\release-notes\22-11-0.md" />
+    <None Include="doc\release-notes\22-11-1.md" />
+    <None Include="doc\ROADMAP.md" />
+    <None Include="doc\toc.md" />
     <None Include="index.md" />
     <None Include="man\additional-reading.md" />
     <None Include="man\man-configuration-home.md" />
@@ -66,11 +72,6 @@
     <None Include="man\man-source-code-home.md" />
     <None Include="man\toc.md" />
     <None Include="packages.config" />
-    <None Include="documentation\index.md" />
-    <None Include="documentation\toc.md" />
-    <None Include="release-notes\22-11-0.md" />
-    <None Include="release-notes\index.md" />
-    <None Include="release-notes\toc.md" />
     <None Include="toc.yml" />
   </ItemGroup>
   <ItemGroup>

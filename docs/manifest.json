@@ -52,12 +52,47 @@
       "version": ""
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "doc/release-notes/22-11-0.md",
+      "output": {
+        ".html": {
+          "relative_path": "doc/release-notes/22-11-0.html",
+          "hash": "ijQ46ApMx5cCHskcf0TNMF2dvyRqlzlBfyDdJmDr0u0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "doc/release-notes/22-11-1.md",
+      "output": {
+        ".html": {
+          "relative_path": "doc/release-notes/22-11-1.html",
+          "hash": "QyeyulTgtMsNeyOcek9mKiuZVm+TH8w0BppfGN2dYTU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Toc",
       "source_relative_path": "doc/toc.md",
       "output": {
         ".html": {
           "relative_path": "doc/toc.html",
-          "hash": "+0N7xZImhorqnofeW8+eOjtejexEm/9frrLsNCorL0k="
+          "hash": "TLjBll8n5UJp+7ZzxsVFfhhIHP+4VlSHoFJ7o+cqiUc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "favicon.ico",
+      "output": {
+        "resource": {
+          "relative_path": "favicon.ico"
         }
       },
       "is_incremental": false,
@@ -347,7 +382,18 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "6hk/fBV/KSDlee0I/KYR6oKVoyrbkSGybZ8+hhwdDkY="
+          "hash": "Zwt1spoyT8ixRzaYNS31zBTtlMS48FAfCfigTBU4Db4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "logo.svg",
+      "output": {
+        "resource": {
+          "relative_path": "logo.svg"
         }
       },
       "is_incremental": false,
@@ -1194,60 +1240,12 @@
       "version": ""
     },
     {
-      "type": "Conceptual",
-      "source_relative_path": "release-notes/22-11-0.md",
-      "output": {
-        ".html": {
-          "relative_path": "release-notes/22-11-0.html",
-          "hash": "vIqXo2lO1JBw6HLE3YeT50grYlUj5V+r3lFM78Fwnq0="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "release-notes/22-11-1.md",
-      "output": {
-        ".html": {
-          "relative_path": "release-notes/22-11-1.html",
-          "hash": "DkNUlTZcxdr2Hez4HA1vTk3BgPZYC+h39D0ull/WjXg="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "release-notes/index.md",
-      "output": {
-        ".html": {
-          "relative_path": "release-notes/index.html",
-          "hash": "Nha3TKxD7PoPNkbpQa+pI7uvzZWp85Sd+J1pWRkyOIQ="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Toc",
-      "source_relative_path": "release-notes/toc.md",
-      "output": {
-        ".html": {
-          "relative_path": "release-notes/toc.html",
-          "hash": "7G0Zcp4ReclbSF9iH6MYzSBFdVM1ghJ5dTM8REHqay0="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "2gnuNxwxZZwWDLkFs5NRHfMkYCIrlXZElAOGOAYCz6I="
+          "hash": "yIBzWyHDUIAJDMTHb/LvbdvCj5AxRIrz3Jsv2n4LwTg="
         }
       },
       "is_incremental": false,
@@ -1268,7 +1266,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 23,
+          "total_file_count": 22,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {

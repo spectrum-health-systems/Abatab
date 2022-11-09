@@ -30,7 +30,6 @@
           "api/*.md",
           "doc/**.md",
           "man/**.md",
-          "release-notes/**.md",
           "toc.yml",
           "*.md"
         ],
@@ -43,7 +42,9 @@
     "resource": [
       {
         "files": [
-          "images/**"
+          "images/**",
+          "logo.svg",
+          "favicon.ico"
         ],
         "exclude": [
           "obj/**",

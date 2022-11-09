@@ -10,7 +10,7 @@ Abatab documentation.
 
 ## [API Documentation](./api/)
 
-Complete source code documentation.
+Changelog, release notes, etc.
 
 ## [Release notes](./release-notes/index.md)
 
