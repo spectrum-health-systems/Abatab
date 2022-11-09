@@ -1,10 +1,14 @@
-# v1.0
 
-## 22.11
+# 22.11.0
 
-* [ ] Logging
-  * [ ] Test all log types to make sure they are written to the correct folder
-  * [ ] Test debugMode to make sure that "on" -> "enabled" is working correctly
+* [ ] Logging - Test all log types to make sure they are written to the correct folder
+* [ ] Logging - Test debugMode to make sure that "on" -> "enabled" is working correctly
+* [ ] Test to make sure that replacing DLL files works as expected
+* [ ] Test Dose.VerifyUnderMaxPercentIncrease
+* [ ] Test ProgressNote.??
+* [ ] Test valid user settings
+* [ ]
+
 
 
 

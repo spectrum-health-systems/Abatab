@@ -1,7 +1,7 @@
 ﻿// Abatab 22.11.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221108.094942
+// b221109.080452
 
 using AbatabData;
 using AbatabLogging;
@@ -34,6 +34,11 @@ namespace Abatab
 
             switch (abatabSession.AbatabModule)
             {
+                case "progressnote":
+                    LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+                    ModProgressNote.Roundhouse.ParseRequest(abatabSession);
+                    break;
+
                 case "prototype":
                     LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
                     ModPrototype.Roundhouse.ParseRequest(abatabSession);

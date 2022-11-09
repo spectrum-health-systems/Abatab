@@ -1,26 +1,37 @@
-> [Abatab][AbatabRepoUrl] > Changelog
 
-***
 
-<br>
-<div align="center">
 
-  ![REPOSITORY-LOGO][REPOSITORY-LOGO]
+# 22.11.0
 
-# Changelog
+# **22.11**
 
-</div>
+## 22.11.0
 
-## v0.5.0
-`INFO` Comment cleanup
+> Initial release
 
-<br>
+### Core functionlity
 
-***
+#### Logging
 
-> [Abatab][AbatabRepoUrl] > Changelog
+The following types of logs 
+* `NEW` Access logs
+* `NEW` Debug logs
+* `NEW` ModQuickMedOrder details log
+* `NEW` PrimevalDebug log
+* `NEW` Session logs
+* `NEW` Trace logs
+* `NEW` WebConfig details log
 
-<!-- REFERENCE LINKS -->
-[AbatabRepoUrl]: https://github.com/spectrum-health-systems/Abatab
-[AbatabCurrentBranchUrl]: README.md
-[AbatabLogo]: /.github/res/img/logo/RepositoryLogo.png
+### Modules
+
+#### ModQuickMedOrder
+
+* `NEW` Dose.VerifyUnderMaxPercentIncrease
+
+#### ModProgressNote
+
+* `NEW` ??.??
+
+### Documentation
+
+* `ADDED` Documentation

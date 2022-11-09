@@ -1,7 +1,7 @@
 ﻿// AbatabData 22.11.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221108.094942
+// b221109.080452
 
 namespace AbatabData.Core
 {
@@ -10,14 +10,58 @@ namespace AbatabData.Core
     /// </summary>
     public class Logging
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <value></value>
         public string Detail { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <value></value>
         public string Mode { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <value></value>
         public string EventErrorRoot { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <value></value>
         public string EventLostRoot { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <value></value>
         public string EventTraceRoot { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <value></value>
         public string EventWarningRoot { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <value></value>
         public string Root { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <value></value>
         public string SessionRoot { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <value></value>
         public string WriteDelay { get; set; }
     }
 }

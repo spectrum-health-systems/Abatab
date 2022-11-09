@@ -1,7 +1,7 @@
 ﻿// AbatabData 22.11.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221108.094942
+// b221109.080452
 
 namespace AbatabData.Module
 {
@@ -10,21 +10,100 @@ namespace AbatabData.Module
     /// </summary>
     public class QuickMedOrder
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <value></value>
         public string Mode { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <value></value>
         public string ValidUsers { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <value></value>
         public string DoseMaxPercentIncrease { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <value></value>
         public string PrevDosePrefix { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <value></value>
         public string PrevDoseSuffix { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <value></value>
         public string DosageOneFieldId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <value></value>
         public bool FoundDosageOneFieldId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <value></value>
         public string CurrentDose { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <value></value>
         public string OrderTypeFieldId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <value></value>
         public bool FoundOrderTypeFieldId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <value></value>
         public string OrderType { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <value></value>
         public string LastOrderScheduleFieldId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <value></value>
         public bool FoundLastOrderScheduleFieldId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <value></value>
         public string LastOrderScheduleText { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <value></value>
         public string LastScheduledDosage { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <value></value>
         public bool FoundAllRequiredFieldIds { get; set; }
     }
 }

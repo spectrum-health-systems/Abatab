@@ -37,6 +37,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbatabSession", "Core\Abata
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocFX", "Libraries\DocFX\DocFX.csproj", "{F13365BE-B3C8-4D2E-B35D-A169CD6850D3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModProgressNote", "Modules\ModProgressNote\ModProgressNote.csproj", "{B129EBAF-4A98-47DE-9C9E-4ABE80883C52}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -95,6 +97,10 @@ Global
 		{F13365BE-B3C8-4D2E-B35D-A169CD6850D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F13365BE-B3C8-4D2E-B35D-A169CD6850D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F13365BE-B3C8-4D2E-B35D-A169CD6850D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B129EBAF-4A98-47DE-9C9E-4ABE80883C52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B129EBAF-4A98-47DE-9C9E-4ABE80883C52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B129EBAF-4A98-47DE-9C9E-4ABE80883C52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B129EBAF-4A98-47DE-9C9E-4ABE80883C52}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -112,6 +118,7 @@ Global
 		{2741DF45-7DB8-4BEA-89B4-4A70C7114192} = {879AB063-ECE4-4AFB-AECA-C055AA168BBA}
 		{5FCAD3F6-0AA9-4BEE-B390-097A6832568E} = {879AB063-ECE4-4AFB-AECA-C055AA168BBA}
 		{F13365BE-B3C8-4D2E-B35D-A169CD6850D3} = {C796B776-7072-41F9-B04E-C52E6BA056D6}
+		{B129EBAF-4A98-47DE-9C9E-4ABE80883C52} = {02BF6478-CF2B-4E5C-B7C0-2C1BAE3A83BE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1DB591AE-5191-4FBB-97BC-CD7AE711CF4F}
