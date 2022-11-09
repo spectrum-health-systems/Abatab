@@ -4,7 +4,7 @@
 
 Everything you need to know to create, host, and implement Abatab at your organization.
 
-## [Abatab Documentation](./documentation/index.md)
+## [Abatab Documentation](./doc/index.md)
 
 Abatab documentation.
 

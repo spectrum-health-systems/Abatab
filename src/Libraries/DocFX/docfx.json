@@ -28,6 +28,7 @@
       {
         "files": [
           "api/*.md",
+          "doc/**.md",
           "man/**.md",
           "release-notes/**.md",
           "toc.yml",

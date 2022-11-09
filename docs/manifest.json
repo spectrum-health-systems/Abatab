@@ -16,6 +16,54 @@
       "version": ""
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "doc/CHANGELOG.md",
+      "output": {
+        ".html": {
+          "relative_path": "doc/CHANGELOG.html",
+          "hash": "iNt5CJqGP33rhSenzrtN3gw3fTmedp2AoWOsCXr/MxA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "doc/ROADMAP.md",
+      "output": {
+        ".html": {
+          "relative_path": "doc/ROADMAP.html",
+          "hash": "R+VJDXRJHGp+7/iyQM4EQIV0FgypAui7VfsUHp0QLko="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "doc/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "doc/index.html",
+          "hash": "BwzGu9TVJE0YVVJ25m6Mlj1MwyUixCOa6TTx/NrxpR0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "doc/toc.md",
+      "output": {
+        ".html": {
+          "relative_path": "doc/toc.html",
+          "hash": "+0N7xZImhorqnofeW8+eOjtejexEm/9frrLsNCorL0k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Resource",
       "source_relative_path": "images/hosting-using-iis/iis-add-website-362x414.png",
       "output": {
@@ -299,7 +347,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "s1jMeckWIpkrTrrMs6pmemE2Fp/DsrdrDxBoFOwTmP0="
+          "hash": "6hk/fBV/KSDlee0I/KYR6oKVoyrbkSGybZ8+hhwdDkY="
         }
       },
       "is_incremental": false,
@@ -1194,15 +1242,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "pZiGf++jgCa7qUpkabrKVeRIvSkDJz5b0NBJ14KQaRw="
+          "hash": "2gnuNxwxZZwWDLkFs5NRHfMkYCIrlXZElAOGOAYCz6I="
         }
       },
       "is_incremental": false,
@@ -1223,7 +1268,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 20,
+          "total_file_count": 23,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
