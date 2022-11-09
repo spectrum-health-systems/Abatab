@@ -71,10 +71,12 @@ namespace ModQuickMedOrder
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
+            // TODO This should probably be moved to ModCommon so other functionality can use it.
+
             /* Loop through each field of every form in the original SentOptionObject from Avatar, and do
-             * something special if we land on "abatabSession.ModQuickMedOrderConfig.DosageOneFieldId" or
-             * "abatabSession.ModQuickMedOrderConfig.LastOrderScheduleFieldId".
-             */
+            * something special if we land on "abatabSession.ModQuickMedOrderConfig.DosageOneFieldId" or
+            * "abatabSession.ModQuickMedOrderConfig.LastOrderScheduleFieldId".
+            */
             foreach (FormObject formObject in abatabSession.SentOptObj.Forms)
             {
                 LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
@@ -132,6 +134,7 @@ namespace ModQuickMedOrder
             }
 
             // TODO Break this out.
+            // TODO Add the OrderType to Web.config
             /* OrderType 4 is recurring. Other order types may be added in the future.
              */
             if (abatabSession.ModQuickMedOrderConfig.OrderType == "4")
@@ -200,13 +203,7 @@ namespace ModQuickMedOrder
                         {
                             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
-                            double maxDose = prevDoseAsNumber * 1.25;
-
-
-
-                            //double milligramDifference = (currDoseAsNumber - prevDoseAsNumber);
-                            //double basePercentage = prevDoseAsNumber / milligramDifference;
-                            //double percentDifference = 100.0 - basePercentage;
+                            double maximumDose = prevDoseAsNumber * 1.25;
 
                             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
@@ -218,8 +215,7 @@ namespace ModQuickMedOrder
 
                             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, maxPercentIncrease.ToString());
 
-                            //if (percentDifference >= maxPercentIncrease)
-                            if (currDoseAsNumber >= maxDose)
+                            if (currDoseAsNumber >= maximumDose)
                             {
                                 LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
@@ -228,7 +224,7 @@ namespace ModQuickMedOrder
                                 //var niceString = string.Format("{0:0.#}", percentDifference);
                                 var niceString = string.Format("{0:0.#}", perc);
 
-                                var debugMsg3_ = $"[{prevDoseAsNumber}] [{currDoseAsNumber}] [{perc}] [{maxDose}] [{niceString}]";
+                                var debugMsg3_ = $"[{prevDoseAsNumber}] [{currDoseAsNumber}] [{perc}] [{maximumDose}] [{niceString}]";
                                 LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, debugMsg3_);
 
                                 abatabSession.WorkOptObj.ErrorCode = 4;
