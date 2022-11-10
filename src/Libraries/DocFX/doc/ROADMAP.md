@@ -1,6 +1,6 @@
 # Abatab Roadmap
 
-## 22.11.0 (November 2022)
+## 22.11.0 (November 16 2022)
 
 ### Abatab
 
@@ -24,7 +24,10 @@
 
 * [ ] Test all log types to make sure they are written to the correct folder
 * [ ] Test debugMode to make sure that "on" -> "enabled" is working correctly
+* [ ] Warning logs
+* [ ] Log all QMO data in session log
 * [ ] Fix access log filename/contents
+* [ ] Warning logs
 
 #### AbatabOptionObject
 
@@ -57,7 +60,9 @@
 
 * [ ] Test Dose.VerifyUnderMaxPercentIncrease
 * [ ] Test Dose.VerifyUnderMaxMilligramIncrease
-* [ ] Verify valid user settings
+* [ ] Test Dose.VerifyUnderMaxPercentIncrease
+* [ ] Test Dose.VerifyUnderMaxMilligramIncrease
+* [ ] Verify authorized user settings
 
 #### ModTesting
 
@@ -147,7 +152,6 @@
 * [ ] Veriry all combinations of log events work
 * [ ] Logging detail level (e.g., "TRACE-01", "TRACE-02")
 * [ ] Error logs
-* [ ] Warning logs
 * [ ] Lost logs
 
 #### AbatabOptionObject
@@ -190,9 +194,6 @@
 ### Documentation
 
 * No changes
-
-## 22.11.1
-
 
 ***
 ***

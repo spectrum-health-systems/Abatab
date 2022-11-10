@@ -1,7 +1,7 @@
 ﻿// AbatabLogging 22.11.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221109.095502
+// b221110.094956
 
 /* ========================================================================================================
  * PLEASE READ
@@ -232,8 +232,8 @@ namespace AbatabLogging
                 case "quickmedorder":
                     LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot);
                     moduleDetail = $"Mode:                 {abatabSession.ModQuickMedOrderConfig.Mode}{Environment.NewLine}" +
-                                   $"Valid users:          {abatabSession.ModQuickMedOrderConfig.ValidUsers}{Environment.NewLine}" +
-                                   $"Max percent increase: {abatabSession.ModQuickMedOrderConfig.DoseMaxPercentIncrease}";
+                                   $"Valid users:          {abatabSession.ModQuickMedOrderConfig.AuthorizedUsers}{Environment.NewLine}" +
+                                   $"Max percent increase: {abatabSession.ModQuickMedOrderConfig.DosePercentIncrease}";
                     break;
 
                 case "prototype":

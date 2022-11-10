@@ -1,4 +1,4 @@
-# Abatab documentation
+# Abatab
 
 ## [The Abatab Manual](./man/index.md)
 
@@ -11,7 +11,3 @@ Abatab documentation.
 ## [API Documentation](./api/)
 
 Changelog, release notes, etc.
-
-## [Release notes](./release-notes/index.md)
-
-Release notes.

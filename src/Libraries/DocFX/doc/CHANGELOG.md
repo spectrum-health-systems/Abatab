@@ -7,4 +7,4 @@
 * `NEW` Module functionality
 * `NEW` Documentation
 
-Please see the [release notes](https://spectrum-health-systems.github.io/Abatab/release-notes/22-11-0.html) for more information.
+Please see the [release notes](./release-notes/22-11-0.html) for more information.

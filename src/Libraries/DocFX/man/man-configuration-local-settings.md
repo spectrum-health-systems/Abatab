@@ -149,10 +149,10 @@ Indicates if the Abatab Testing Module functionality is enabled.
 
 # ModQuickMedOrderMode
 
-# ModQuickMedOrderValidUsers
+# ModQuickMedOrderAuthorizedUsers
 
-# ModQuickMedOrderDoseMaxPercentIncrease
+# ModQuickMedOrderDosePercentIncrease
 
-# ModQuickMedOrderDoseMaxMilligramIncrease
+# ModQuickMedOrderDoseMgsIncrease
 
 # ModPrototypeMode

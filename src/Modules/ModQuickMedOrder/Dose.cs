@@ -1,7 +1,7 @@
 ﻿// Abatab ModQuickMedOrder 22.11.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221109.095502
+// b221110.094956
 
 using AbatabData;
 using AbatabLogging;
@@ -20,7 +20,7 @@ namespace ModQuickMedOrder
         /// Verifies that the dose increase percentage is within bounds.
         /// </summary>
         /// <param name="abatabSession">Information/data for this session of Abatab.</param>
-        public static void VerifyUnderMaxPercentIncrease(Session abatabSession)
+        public static void VerifyAmount(Session abatabSession)
         {
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
@@ -29,7 +29,7 @@ namespace ModQuickMedOrder
 
             AbatabOptionObject.WorkObj.ClearErrorData(abatabSession);
 
-            ComparePercentage(abatabSession);
+            CheckPercentage(abatabSession);
 
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
         }
@@ -66,7 +66,7 @@ namespace ModQuickMedOrder
 
         /// <summary></summary>
         /// <param name="abatabSession"></param>
-        private static void ComparePercentage(Session abatabSession)
+        private static void CheckPercentage(Session abatabSession)
         {
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
@@ -211,7 +211,7 @@ namespace ModQuickMedOrder
                             //LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, debugMsg2_);
 
                             // TODO Should be converted when setup.
-                            var maxPercentIncrease = Convert.ToDouble(abatabSession.ModQuickMedOrderConfig.DoseMaxPercentIncrease);
+                            var maxPercentIncrease = Convert.ToDouble(abatabSession.ModQuickMedOrderConfig.DosePercentIncrease);
 
                             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, maxPercentIncrease.ToString());
 

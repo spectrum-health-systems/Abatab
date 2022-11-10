@@ -1,7 +1,7 @@
 ﻿// Abatab 22.11.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221109.095502
+// b221110.094956
 
 using AbatabData;
 using AbatabLogging;
@@ -47,7 +47,7 @@ namespace Abatab
                 case "quickmedorder":
                     LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
-                    if (ModCommon.VerifyAccess.CheckIfValidUser(abatabSession.AbatabUserName, abatabSession.ModQuickMedOrderConfig.ValidUsers))
+                    if (ModCommon.VerifyAccess.CheckIfValidUser(abatabSession.AbatabUserName, abatabSession.ModQuickMedOrderConfig.AuthorizedUsers))
                     {
                         ModQuickMedOrder.Roundhouse.ParseRequest(abatabSession);
                     }

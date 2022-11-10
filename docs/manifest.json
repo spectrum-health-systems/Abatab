@@ -16,12 +16,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "doc/CHANGELOG.md",
       "output": {
         ".html": {
           "relative_path": "doc/CHANGELOG.html",
-          "hash": "iNt5CJqGP33rhSenzrtN3gw3fTmedp2AoWOsCXr/MxA="
+          "hash": "XEQpKFlhIld3KWPrpJha79Ve5RlLzO/19AhBWdAhZ+Q="
         }
       },
       "is_incremental": false,
@@ -81,7 +84,7 @@
       "output": {
         ".html": {
           "relative_path": "doc/toc.html",
-          "hash": "TLjBll8n5UJp+7ZzxsVFfhhIHP+4VlSHoFJ7o+cqiUc="
+          "hash": "Bcl3V2xRymAB9y+E/PQyKF792TJlCnzLjRJI14dGxXk="
         }
       },
       "is_incremental": false,
@@ -382,7 +385,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "Zwt1spoyT8ixRzaYNS31zBTtlMS48FAfCfigTBU4Db4="
+          "hash": "aw7+rVC35ylRheUibdboAufv5UbXgITxckHdocz795I="
         }
       },
       "is_incremental": false,

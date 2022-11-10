@@ -12,7 +12,7 @@ namespace Abatab.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.3.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.4.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -125,27 +125,45 @@ namespace Abatab.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("all")]
-        public string ModQuickMedOrderValidUsers {
+        public string ModQuickMedOrderAuthorizedUsers {
             get {
-                return ((string)(this["ModQuickMedOrderValidUsers"]));
+                return ((string)(this["ModQuickMedOrderAuthorizedUsers"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("0.25")]
-        public string ModQuickMedOrderDoseMaxPercentIncrease {
+        public string ModQuickMedOrderDosePercentIncrease {
             get {
-                return ((string)(this["ModQuickMedOrderDoseMaxPercentIncrease"]));
+                return ((string)(this["ModQuickMedOrderDosePercentIncrease"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("20")]
-        public string ModQuickMedOrderDoseMaxMilligramIncrease {
+        public string ModQuickMedOrderDoseMgsIncrease {
             get {
-                return ((string)(this["ModQuickMedOrderDoseMaxMilligramIncrease"]));
+                return ((string)(this["ModQuickMedOrderDoseMgsIncrease"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0.25")]
+        public string ModQuickMedOrderDosePercentDecrease {
+            get {
+                return ((string)(this["ModQuickMedOrderDosePercentDecrease"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("20")]
+        public string ModQuickMedOrderDoseMgsDecrease {
+            get {
+                return ((string)(this["ModQuickMedOrderDoseMgsDecrease"]));
             }
         }
         
@@ -155,6 +173,15 @@ namespace Abatab.Properties {
         public string ModPrototypeMode {
             get {
                 return ((string)(this["ModPrototypeMode"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("4")]
+        public string ModQuickMedOrderValidOrderTypes {
+            get {
+                return ((string)(this["ModQuickMedOrderValidOrderTypes"]));
             }
         }
     }
