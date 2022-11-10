@@ -1,15 +1,14 @@
 <div align="center">
 
-  <img src="../images/man-logo.png" alt="Abatab Manual" width="512">
+  <img src="../../images/man-logo.png" alt="Abatab Manual" width="512">
 
   <h4>
-    Abatab v1.0.0
+    Abatab v22.11.0
   </h4>
 
 </div>
 
 ***
-
 # About the Abatab logging
 
 Abatab has extensive built-in logging functionality.

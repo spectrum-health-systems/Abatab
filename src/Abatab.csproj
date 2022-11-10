@@ -115,12 +115,86 @@
     <Compile Include="WebConfig.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="docs\api\index.md" />
     <Content Include="docs\doc\CHANGELOG.md" />
     <Content Include="docs\doc\index.md" />
     <Content Include="docs\doc\release-notes\22-11-0.md" />
     <Content Include="docs\doc\release-notes\22-11-1.md" />
     <Content Include="docs\doc\ROADMAP.md" />
     <Content Include="docs\doc\toc.md" />
+    <Content Include="docs\index.md" />
+    <Content Include="docs\man\additional-reading\man_additional-reading_home.md" />
+    <Content Include="docs\man\configuration\man_configuration_local-settings.md" />
+    <Content Include="docs\man\configuration\man_configuration_home.md" />
+    <Content Include="docs\man\index.md" />
+    <Content Include="docs\man\docfx-integration\man_docfx-integration_home.md" />
+    <Content Include="docs\man\functionality\man_functionality_core.md" />
+    <Content Include="docs\man\functionality\man_functionality_existing.md" />
+    <Content Include="docs\man\functionality\man_functionality_home.md" />
+    <Content Include="docs\man\functionality\man_functionality_modules.md" />
+    <Content Include="docs\man\functionality\man_functionality_new.md" />
+    <Content Include="docs\man\getting-started\man_getting-started_home.md" />
+    <Content Include="docs\man\hosting\man_hosting_home.md" />
+    <Content Include="docs\man\importing\man_importing_home.md" />
+    <Content Include="docs\man\logging\man_logging_home.md" />
+    <Content Include="docs\man\source-code\man_source-code_home.md" />
+    <Content Include="docs\man\toc.md" />
+    <Content Include="docs\obj\api\.manifest" />
+    <Content Include="docs\obj\api\Abatab.Abatab.yml" />
+    <Content Include="docs\obj\api\Abatab.Roundhouse.yml" />
+    <Content Include="docs\obj\api\Abatab.WebConfig.yml" />
+    <Content Include="docs\obj\api\Abatab.yml" />
+    <Content Include="docs\obj\api\AbatabData.Core.Debuggler.yml" />
+    <Content Include="docs\obj\api\AbatabData.Core.Logging.yml" />
+    <Content Include="docs\obj\api\AbatabData.Core.yml" />
+    <Content Include="docs\obj\api\AbatabData.Module.Common.yml" />
+    <Content Include="docs\obj\api\AbatabData.Module.Prototype.yml" />
+    <Content Include="docs\obj\api\AbatabData.Module.QuickMedOrder.yml" />
+    <Content Include="docs\obj\api\AbatabData.Module.Testing.yml" />
+    <Content Include="docs\obj\api\AbatabData.Module.yml" />
+    <Content Include="docs\obj\api\AbatabData.Session.yml" />
+    <Content Include="docs\obj\api\AbatabData.yml" />
+    <Content Include="docs\obj\api\AbatabLogging.BuildContent.yml" />
+    <Content Include="docs\obj\api\AbatabLogging.BuildPath.yml" />
+    <Content Include="docs\obj\api\AbatabLogging.CommentExamples.ExampleClass.yml" />
+    <Content Include="docs\obj\api\AbatabLogging.CommentExamples.yml" />
+    <Content Include="docs\obj\api\AbatabLogging.Debuggler.yml" />
+    <Content Include="docs\obj\api\AbatabLogging.LogEvent.yml" />
+    <Content Include="docs\obj\api\AbatabLogging.WriteLogFile.yml" />
+    <Content Include="docs\obj\api\AbatabLogging.yml" />
+    <Content Include="docs\obj\api\AbatabOptionObject.FinalObj.yml" />
+    <Content Include="docs\obj\api\AbatabOptionObject.Verify.yml" />
+    <Content Include="docs\obj\api\AbatabOptionObject.WorkObj.yml" />
+    <Content Include="docs\obj\api\AbatabOptionObject.yml" />
+    <Content Include="docs\obj\api\AbatabSession.Build.yml" />
+    <Content Include="docs\obj\api\AbatabSession.yml" />
+    <Content Include="docs\obj\api\AbatabSystem.Maintenance.yml" />
+    <Content Include="docs\obj\api\AbatabSystem.yml" />
+    <Content Include="docs\obj\api\Du.WithDictionary.yml" />
+    <Content Include="docs\obj\api\Du.WithDirectory.yml" />
+    <Content Include="docs\obj\api\Du.yml" />
+    <Content Include="docs\obj\api\ModCommon.Roundhouse.yml" />
+    <Content Include="docs\obj\api\ModCommon.Verify.yml" />
+    <Content Include="docs\obj\api\ModCommon.VerifyAccess.yml" />
+    <Content Include="docs\obj\api\ModCommon.yml" />
+    <Content Include="docs\obj\api\ModProgressNote.Roundhouse.yml" />
+    <Content Include="docs\obj\api\ModProgressNote.yml" />
+    <Content Include="docs\obj\api\ModPrototype.Roundhouse.yml" />
+    <Content Include="docs\obj\api\ModPrototype.yml" />
+    <Content Include="docs\obj\api\ModQuickMedOrder.Dose.yml" />
+    <Content Include="docs\obj\api\ModQuickMedOrder.Roundhouse.yml" />
+    <Content Include="docs\obj\api\ModQuickMedOrder.yml" />
+    <Content Include="docs\obj\api\ModTesting.DataDump.yml" />
+    <Content Include="docs\obj\api\ModTesting.Roundhouse.yml" />
+    <Content Include="docs\obj\api\ModTesting.yml" />
+    <Content Include="docs\obj\api\NTST.ScriptLinkService.Objects.FieldObject.yml" />
+    <Content Include="docs\obj\api\NTST.ScriptLinkService.Objects.FormObject.yml" />
+    <Content Include="docs\obj\api\NTST.ScriptLinkService.Objects.OptionObject2015.yml" />
+    <Content Include="docs\obj\api\NTST.ScriptLinkService.Objects.RowObject.yml" />
+    <Content Include="docs\obj\api\NTST.ScriptLinkService.Objects.yml" />
+    <Content Include="docs\obj\api\toc.yml" />
+    <Content Include="docs\toc.yml" />
+    <Content Include="docs\man\using\man_using_home.md" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -177,7 +251,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AppData\Documentation\" />
-    <Folder Include="docs\obj\api\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
