@@ -71,6 +71,33 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Abatab.asmx" />
+    <Content Include="docs\favicon.ico" />
+    <Content Include="docs\images\hosting-using-iis\iis-add-website-362x414.png" />
+    <Content Include="docs\images\hosting-using-iis\iis-application-pool-633x187.png" />
+    <Content Include="docs\images\hosting-using-iis\iis-directory-browsing-633x204.png" />
+    <Content Include="docs\images\hosting-using-iis\iis-roles-295x650.png" />
+    <Content Include="docs\images\hosting-using-iis\iis-site-home-633x206.png" />
+    <Content Include="docs\images\importing-abatab\scriptlink-form-designer-settings-button-364x335.png" />
+    <Content Include="docs\images\importing-abatab\scriptlink-options-import-wsdl-847x375.png" />
+    <Content Include="docs\images\importing-abatab\wsdl-xml-example-799x393.png" />
+    <Content Include="docs\images\man-logo.png" />
+    <Content Include="docs\images\other\ntst-portal-app-exchange-01-490x550.png" />
+    <Content Include="docs\images\other\ntst-portal-app-exchange-02-710x554.png" />
+    <Content Include="docs\images\other\scriptlink-event-example-839x369.png" />
+    <Content Include="docs\images\other\vs2019-add-ntst-scriptlink-service-01-800x655.png" />
+    <Content Include="docs\images\other\vs2019-add-ntst-scriptlink-service-02-800x676.png" />
+    <Content Include="docs\images\other\vs2019-add-ntst-scriptlink-service-03-310x313.png" />
+    <Content Include="docs\images\other\vs2019-add-ntst-scriptlink-service-04-800x655.png" />
+    <Content Include="docs\images\other\vs2019-add-ntst-scriptlink-service-05-800x555.png" />
+    <Content Include="docs\images\other\vs2019-add-web-service-01-710x742.png" />
+    <Content Include="docs\images\other\vs2019-add-web-service-02-710x496.png" />
+    <Content Include="docs\images\other\vs2019-add-web-service-03-710x947.png" />
+    <Content Include="docs\images\other\vs2019-configure-new-project-800x535.png" />
+    <Content Include="docs\images\other\vs2019-create-new-asp-app-800x540.png" />
+    <Content Include="docs\images\other\vs2019-create-new-project-800x535.png" />
+    <Content Include="docs\images\other\vs2019-empty-app-800x655.png" />
+    <Content Include="docs\images\other\vs2019-new-project-template-800x535.png" />
+    <Content Include="docs\logo.svg" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -88,6 +115,12 @@
     <Compile Include="WebConfig.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="docs\doc\CHANGELOG.md" />
+    <Content Include="docs\doc\index.md" />
+    <Content Include="docs\doc\release-notes\22-11-0.md" />
+    <Content Include="docs\doc\release-notes\22-11-1.md" />
+    <Content Include="docs\doc\ROADMAP.md" />
+    <Content Include="docs\doc\toc.md" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -144,6 +177,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AppData\Documentation\" />
+    <Folder Include="docs\obj\api\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

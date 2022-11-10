@@ -144,8 +144,9 @@
   </table>
   <h5 id="Abatab_Roundhouse_ParseRequest_AbatabData_Session__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><ul>
+<li>The only component of the Script Parameter sent from Avatar that matters at this point is the AbatabMethod component.</li>
 <li>Whenever a new Abatab Module is added, logic will need to be added to the switch statement using the following template:
-<pre><code>case &quot;newmodule&quot;:
+<pre><code>case &quot;%newmodule-name%&quot;:
   LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, &quot;[TRACE]&quot;);
   ModNewModule.Roundhouse.ParseRequest(abatabSession);
   break;</code></pre></li>

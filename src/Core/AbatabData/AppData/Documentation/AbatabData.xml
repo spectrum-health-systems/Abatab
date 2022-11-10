@@ -118,100 +118,124 @@
             </summary>
         </member>
         <member name="P:AbatabData.Module.QuickMedOrder.Mode">
-            <summary>
+             <summary>
             
-            </summary>
-            <value></value>
+             </summary>
+             <value></value>
         </member>
-        <member name="P:AbatabData.Module.QuickMedOrder.ValidUsers">
-            <summary>
+        <member name="P:AbatabData.Module.QuickMedOrder.AuthorizedUsers">
+             <summary>
             
-            </summary>
-            <value></value>
+             </summary>
+             <value></value>
         </member>
-        <member name="P:AbatabData.Module.QuickMedOrder.DoseMaxPercentIncrease">
-            <summary>
+        <member name="P:AbatabData.Module.QuickMedOrder.ValidOrderTypes">
+             <summary>
             
-            </summary>
-            <value></value>
+             </summary>
+             <value></value>
+        </member>
+        <member name="P:AbatabData.Module.QuickMedOrder.DosePercentIncrease">
+             <summary>
+            
+             </summary>
+             <value></value>
+        </member>
+        <member name="P:AbatabData.Module.QuickMedOrder.DoseMgsIncrease">
+             <summary>
+            
+             </summary>
+             <value></value>
+        </member>
+        <member name="P:AbatabData.Module.QuickMedOrder.DosePercentDecrease">
+             <summary>
+            
+             </summary>
+             <value></value>
+        </member>
+        <member name="P:AbatabData.Module.QuickMedOrder.DoseMgsDecrease">
+             <summary>
+            
+             </summary>
+             <value></value>
         </member>
         <member name="P:AbatabData.Module.QuickMedOrder.PrevDosePrefix">
-            <summary>
+             <summary>
             
-            </summary>
-            <value></value>
+             </summary>
+             <value></value>
         </member>
         <member name="P:AbatabData.Module.QuickMedOrder.PrevDoseSuffix">
-            <summary>
+             <summary>
             
-            </summary>
-            <value></value>
+             </summary>
+             <value></value>
         </member>
         <member name="P:AbatabData.Module.QuickMedOrder.DosageOneFieldId">
-            <summary>
+             <summary>
             
-            </summary>
-            <value></value>
+             </summary>
+             <value></value>
         </member>
         <member name="P:AbatabData.Module.QuickMedOrder.FoundDosageOneFieldId">
-            <summary>
+             <summary>
             
-            </summary>
-            <value></value>
+             </summary>
+             <value></value>
         </member>
         <member name="P:AbatabData.Module.QuickMedOrder.CurrentDose">
-            <summary>
+             <summary>
             
-            </summary>
-            <value></value>
+             </summary>
+             <value></value>
         </member>
         <member name="P:AbatabData.Module.QuickMedOrder.OrderTypeFieldId">
-            <summary>
+             <summary>
             
-            </summary>
-            <value></value>
+             </summary>
+             <value></value>
         </member>
         <member name="P:AbatabData.Module.QuickMedOrder.FoundOrderTypeFieldId">
-            <summary>
+             <summary>
             
-            </summary>
-            <value></value>
+             </summary>
+             <value></value>
         </member>
         <member name="P:AbatabData.Module.QuickMedOrder.OrderType">
-            <summary>
+             <summary>
             
-            </summary>
-            <value></value>
+             </summary>
+             <value></value>
         </member>
         <member name="P:AbatabData.Module.QuickMedOrder.LastOrderScheduleFieldId">
-            <summary>
+             <summary>
             
-            </summary>
-            <value></value>
+             </summary>
+             <value></value>
         </member>
         <member name="P:AbatabData.Module.QuickMedOrder.FoundLastOrderScheduleFieldId">
-            <summary>
+             <summary>
             
-            </summary>
-            <value></value>
+             </summary>
+             <value></value>
         </member>
         <member name="P:AbatabData.Module.QuickMedOrder.LastOrderScheduleText">
-            <summary>
+             <summary>
             
-            </summary>
-            <value></value>
+             </summary>
+             <value></value>
         </member>
         <member name="P:AbatabData.Module.QuickMedOrder.LastScheduledDosage">
-            <summary>
+             <summary>
             
-            </summary>
-            <value></value>
+             </summary>
+             <value></value>
         </member>
         <member name="P:AbatabData.Module.QuickMedOrder.FoundAllRequiredFieldIds">
-            <summary>
+             <summary>
             
-            </summary>
-            <value></value>
+             </summary>
+             <value></value>
         </member>
         <member name="T:AbatabData.Session">
             <summary>

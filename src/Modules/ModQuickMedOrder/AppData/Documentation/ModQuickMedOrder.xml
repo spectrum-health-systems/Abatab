@@ -9,7 +9,7 @@
             Dose logic for the QuickMedOrder module.
             </summary>
         </member>
-        <member name="M:ModQuickMedOrder.Dose.VerifyUnderMaxPercentIncrease(AbatabData.Session)">
+        <member name="M:ModQuickMedOrder.Dose.VerifyAmount(AbatabData.Session)">
             <summary>
             Verifies that the dose increase percentage is within bounds.
             </summary>
@@ -24,7 +24,7 @@
             This information is hardcoded, but should be the same for all Avatar clients.
             </remarks>
         </member>
-        <member name="M:ModQuickMedOrder.Dose.ComparePercentage(AbatabData.Session)">
+        <member name="M:ModQuickMedOrder.Dose.CheckPercentage(AbatabData.Session)">
             <summary></summary>
             <param name="abatabSession"></param>
         </member>
