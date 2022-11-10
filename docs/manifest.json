@@ -439,15 +439,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
-      "source_relative_path": "../../docs/man/docfx-integration/man_docfx-integration_home.md",
+      "source_relative_path": "../../docs/man/docfx/man_docfx_home.md",
       "output": {
         ".html": {
-          "relative_path": "man/docfx-integration/man_docfx-integration_home.html",
-          "hash": "+h95NAZ/W6n3SJnSnsBbgTsApmxMd69LxWEZ8XLFSSE="
+          "relative_path": "man/docfx/man_docfx_home.html",
+          "hash": "nbaiwQ9yK0TY5zQEI9uIQh/I2SR9FSJCO+B119AehUU="
         }
       },
       "is_incremental": false,
@@ -606,7 +603,7 @@
       "output": {
         ".html": {
           "relative_path": "man/toc.html",
-          "hash": "+vs/IurepX19MWLoaALIFTrsAWqu/k08ao9MK/HSgvA="
+          "hash": "kGVK+QnDItTKPy0fUk+kUbse3EHgNzO2m/S70JjrH8A="
         }
       },
       "is_incremental": false,

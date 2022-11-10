@@ -127,7 +127,6 @@
     <Content Include="docs\man\configuration\man_configuration_local-settings.md" />
     <Content Include="docs\man\configuration\man_configuration_home.md" />
     <Content Include="docs\man\index.md" />
-    <Content Include="docs\man\docfx-integration\man_docfx-integration_home.md" />
     <Content Include="docs\man\functionality\man_functionality_core.md" />
     <Content Include="docs\man\functionality\man_functionality_existing.md" />
     <Content Include="docs\man\functionality\man_functionality_home.md" />
@@ -195,6 +194,7 @@
     <Content Include="docs\obj\api\toc.yml" />
     <Content Include="docs\toc.yml" />
     <Content Include="docs\man\using\man_using_home.md" />
+    <Content Include="docs\man\docfx\man_docfx_home.md" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

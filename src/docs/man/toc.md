@@ -26,6 +26,6 @@
 
 # [Source code](./source-code/man_source-code_home.md)
 
-# [DocFX Integration](./docfx-integration/man_docfx-integration_home.md)
+# [DocFX Integration](./docfx/man_docfx_home.md)
 
 # [Additional reading](./additional-reading/man_additional-reading_home.md)
