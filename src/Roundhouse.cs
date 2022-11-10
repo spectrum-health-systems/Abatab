@@ -1,7 +1,7 @@
 ﻿// Abatab 22.11.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221109.095502
+// b221110.112516
 
 using AbatabData;
 using AbatabLogging;
@@ -19,9 +19,10 @@ namespace Abatab
         /// </summary>
         /// <param name="abatabSession">Settings and data for this session of Abatab.</param>
         /// <remarks>
+        /// * The only component of the Script Parameter sent from Avatar that matters at this point is the AbatabMethod component.
         /// * Whenever a new Abatab Module is added, logic will need to be added to the switch statement using the following template:
         /// <code>
-        /// case "newmodule":
+        /// case "%newmodule-name%":
         ///     LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
         ///     ModNewModule.Roundhouse.ParseRequest(abatabSession);
         ///     break;
@@ -47,7 +48,7 @@ namespace Abatab
                 case "quickmedorder":
                     LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
-                    if (ModCommon.VerifyAccess.CheckIfValidUser(abatabSession.AbatabUserName, abatabSession.ModQuickMedOrderConfig.ValidUsers))
+                    if (ModCommon.VerifyAccess.CheckIfValidUser(abatabSession.AbatabUserName, abatabSession.ModQuickMedOrderConfig.AuthorizedUsers))
                     {
                         ModQuickMedOrder.Roundhouse.ParseRequest(abatabSession);
                     }

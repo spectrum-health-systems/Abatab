@@ -281,6 +281,19 @@ references:
   commentId: T:AbatabData.Module.QuickMedOrder
   fullName: AbatabData.Module.QuickMedOrder
   nameWithType: QuickMedOrder
+- uid: AbatabData.Module.QuickMedOrder.AuthorizedUsers
+  name: AuthorizedUsers
+  href: api/AbatabData.Module.QuickMedOrder.html#AbatabData_Module_QuickMedOrder_AuthorizedUsers
+  commentId: P:AbatabData.Module.QuickMedOrder.AuthorizedUsers
+  fullName: AbatabData.Module.QuickMedOrder.AuthorizedUsers
+  nameWithType: QuickMedOrder.AuthorizedUsers
+- uid: AbatabData.Module.QuickMedOrder.AuthorizedUsers*
+  name: AuthorizedUsers
+  href: api/AbatabData.Module.QuickMedOrder.html#AbatabData_Module_QuickMedOrder_AuthorizedUsers_
+  commentId: Overload:AbatabData.Module.QuickMedOrder.AuthorizedUsers
+  isSpec: "True"
+  fullName: AbatabData.Module.QuickMedOrder.AuthorizedUsers
+  nameWithType: QuickMedOrder.AuthorizedUsers
 - uid: AbatabData.Module.QuickMedOrder.CurrentDose
   name: CurrentDose
   href: api/AbatabData.Module.QuickMedOrder.html#AbatabData_Module_QuickMedOrder_CurrentDose
@@ -307,19 +320,58 @@ references:
   isSpec: "True"
   fullName: AbatabData.Module.QuickMedOrder.DosageOneFieldId
   nameWithType: QuickMedOrder.DosageOneFieldId
-- uid: AbatabData.Module.QuickMedOrder.DoseMaxPercentIncrease
-  name: DoseMaxPercentIncrease
-  href: api/AbatabData.Module.QuickMedOrder.html#AbatabData_Module_QuickMedOrder_DoseMaxPercentIncrease
-  commentId: P:AbatabData.Module.QuickMedOrder.DoseMaxPercentIncrease
-  fullName: AbatabData.Module.QuickMedOrder.DoseMaxPercentIncrease
-  nameWithType: QuickMedOrder.DoseMaxPercentIncrease
-- uid: AbatabData.Module.QuickMedOrder.DoseMaxPercentIncrease*
-  name: DoseMaxPercentIncrease
-  href: api/AbatabData.Module.QuickMedOrder.html#AbatabData_Module_QuickMedOrder_DoseMaxPercentIncrease_
-  commentId: Overload:AbatabData.Module.QuickMedOrder.DoseMaxPercentIncrease
+- uid: AbatabData.Module.QuickMedOrder.DoseMgsDecrease
+  name: DoseMgsDecrease
+  href: api/AbatabData.Module.QuickMedOrder.html#AbatabData_Module_QuickMedOrder_DoseMgsDecrease
+  commentId: P:AbatabData.Module.QuickMedOrder.DoseMgsDecrease
+  fullName: AbatabData.Module.QuickMedOrder.DoseMgsDecrease
+  nameWithType: QuickMedOrder.DoseMgsDecrease
+- uid: AbatabData.Module.QuickMedOrder.DoseMgsDecrease*
+  name: DoseMgsDecrease
+  href: api/AbatabData.Module.QuickMedOrder.html#AbatabData_Module_QuickMedOrder_DoseMgsDecrease_
+  commentId: Overload:AbatabData.Module.QuickMedOrder.DoseMgsDecrease
   isSpec: "True"
-  fullName: AbatabData.Module.QuickMedOrder.DoseMaxPercentIncrease
-  nameWithType: QuickMedOrder.DoseMaxPercentIncrease
+  fullName: AbatabData.Module.QuickMedOrder.DoseMgsDecrease
+  nameWithType: QuickMedOrder.DoseMgsDecrease
+- uid: AbatabData.Module.QuickMedOrder.DoseMgsIncrease
+  name: DoseMgsIncrease
+  href: api/AbatabData.Module.QuickMedOrder.html#AbatabData_Module_QuickMedOrder_DoseMgsIncrease
+  commentId: P:AbatabData.Module.QuickMedOrder.DoseMgsIncrease
+  fullName: AbatabData.Module.QuickMedOrder.DoseMgsIncrease
+  nameWithType: QuickMedOrder.DoseMgsIncrease
+- uid: AbatabData.Module.QuickMedOrder.DoseMgsIncrease*
+  name: DoseMgsIncrease
+  href: api/AbatabData.Module.QuickMedOrder.html#AbatabData_Module_QuickMedOrder_DoseMgsIncrease_
+  commentId: Overload:AbatabData.Module.QuickMedOrder.DoseMgsIncrease
+  isSpec: "True"
+  fullName: AbatabData.Module.QuickMedOrder.DoseMgsIncrease
+  nameWithType: QuickMedOrder.DoseMgsIncrease
+- uid: AbatabData.Module.QuickMedOrder.DosePercentDecrease
+  name: DosePercentDecrease
+  href: api/AbatabData.Module.QuickMedOrder.html#AbatabData_Module_QuickMedOrder_DosePercentDecrease
+  commentId: P:AbatabData.Module.QuickMedOrder.DosePercentDecrease
+  fullName: AbatabData.Module.QuickMedOrder.DosePercentDecrease
+  nameWithType: QuickMedOrder.DosePercentDecrease
+- uid: AbatabData.Module.QuickMedOrder.DosePercentDecrease*
+  name: DosePercentDecrease
+  href: api/AbatabData.Module.QuickMedOrder.html#AbatabData_Module_QuickMedOrder_DosePercentDecrease_
+  commentId: Overload:AbatabData.Module.QuickMedOrder.DosePercentDecrease
+  isSpec: "True"
+  fullName: AbatabData.Module.QuickMedOrder.DosePercentDecrease
+  nameWithType: QuickMedOrder.DosePercentDecrease
+- uid: AbatabData.Module.QuickMedOrder.DosePercentIncrease
+  name: DosePercentIncrease
+  href: api/AbatabData.Module.QuickMedOrder.html#AbatabData_Module_QuickMedOrder_DosePercentIncrease
+  commentId: P:AbatabData.Module.QuickMedOrder.DosePercentIncrease
+  fullName: AbatabData.Module.QuickMedOrder.DosePercentIncrease
+  nameWithType: QuickMedOrder.DosePercentIncrease
+- uid: AbatabData.Module.QuickMedOrder.DosePercentIncrease*
+  name: DosePercentIncrease
+  href: api/AbatabData.Module.QuickMedOrder.html#AbatabData_Module_QuickMedOrder_DosePercentIncrease_
+  commentId: Overload:AbatabData.Module.QuickMedOrder.DosePercentIncrease
+  isSpec: "True"
+  fullName: AbatabData.Module.QuickMedOrder.DosePercentIncrease
+  nameWithType: QuickMedOrder.DosePercentIncrease
 - uid: AbatabData.Module.QuickMedOrder.FoundAllRequiredFieldIds
   name: FoundAllRequiredFieldIds
   href: api/AbatabData.Module.QuickMedOrder.html#AbatabData_Module_QuickMedOrder_FoundAllRequiredFieldIds
@@ -476,19 +528,19 @@ references:
   isSpec: "True"
   fullName: AbatabData.Module.QuickMedOrder.PrevDoseSuffix
   nameWithType: QuickMedOrder.PrevDoseSuffix
-- uid: AbatabData.Module.QuickMedOrder.ValidUsers
-  name: ValidUsers
-  href: api/AbatabData.Module.QuickMedOrder.html#AbatabData_Module_QuickMedOrder_ValidUsers
-  commentId: P:AbatabData.Module.QuickMedOrder.ValidUsers
-  fullName: AbatabData.Module.QuickMedOrder.ValidUsers
-  nameWithType: QuickMedOrder.ValidUsers
-- uid: AbatabData.Module.QuickMedOrder.ValidUsers*
-  name: ValidUsers
-  href: api/AbatabData.Module.QuickMedOrder.html#AbatabData_Module_QuickMedOrder_ValidUsers_
-  commentId: Overload:AbatabData.Module.QuickMedOrder.ValidUsers
+- uid: AbatabData.Module.QuickMedOrder.ValidOrderTypes
+  name: ValidOrderTypes
+  href: api/AbatabData.Module.QuickMedOrder.html#AbatabData_Module_QuickMedOrder_ValidOrderTypes
+  commentId: P:AbatabData.Module.QuickMedOrder.ValidOrderTypes
+  fullName: AbatabData.Module.QuickMedOrder.ValidOrderTypes
+  nameWithType: QuickMedOrder.ValidOrderTypes
+- uid: AbatabData.Module.QuickMedOrder.ValidOrderTypes*
+  name: ValidOrderTypes
+  href: api/AbatabData.Module.QuickMedOrder.html#AbatabData_Module_QuickMedOrder_ValidOrderTypes_
+  commentId: Overload:AbatabData.Module.QuickMedOrder.ValidOrderTypes
   isSpec: "True"
-  fullName: AbatabData.Module.QuickMedOrder.ValidUsers
-  nameWithType: QuickMedOrder.ValidUsers
+  fullName: AbatabData.Module.QuickMedOrder.ValidOrderTypes
+  nameWithType: QuickMedOrder.ValidOrderTypes
 - uid: AbatabData.Module.Testing
   name: Testing
   href: api/AbatabData.Module.Testing.html
@@ -1373,19 +1425,19 @@ references:
   commentId: T:ModQuickMedOrder.Dose
   fullName: ModQuickMedOrder.Dose
   nameWithType: Dose
-- uid: ModQuickMedOrder.Dose.VerifyUnderMaxPercentIncrease(AbatabData.Session)
-  name: VerifyUnderMaxPercentIncrease(Session)
-  href: api/ModQuickMedOrder.Dose.html#ModQuickMedOrder_Dose_VerifyUnderMaxPercentIncrease_AbatabData_Session_
-  commentId: M:ModQuickMedOrder.Dose.VerifyUnderMaxPercentIncrease(AbatabData.Session)
-  fullName: ModQuickMedOrder.Dose.VerifyUnderMaxPercentIncrease(AbatabData.Session)
-  nameWithType: Dose.VerifyUnderMaxPercentIncrease(Session)
-- uid: ModQuickMedOrder.Dose.VerifyUnderMaxPercentIncrease*
-  name: VerifyUnderMaxPercentIncrease
-  href: api/ModQuickMedOrder.Dose.html#ModQuickMedOrder_Dose_VerifyUnderMaxPercentIncrease_
-  commentId: Overload:ModQuickMedOrder.Dose.VerifyUnderMaxPercentIncrease
+- uid: ModQuickMedOrder.Dose.VerifyAmount(AbatabData.Session)
+  name: VerifyAmount(Session)
+  href: api/ModQuickMedOrder.Dose.html#ModQuickMedOrder_Dose_VerifyAmount_AbatabData_Session_
+  commentId: M:ModQuickMedOrder.Dose.VerifyAmount(AbatabData.Session)
+  fullName: ModQuickMedOrder.Dose.VerifyAmount(AbatabData.Session)
+  nameWithType: Dose.VerifyAmount(Session)
+- uid: ModQuickMedOrder.Dose.VerifyAmount*
+  name: VerifyAmount
+  href: api/ModQuickMedOrder.Dose.html#ModQuickMedOrder_Dose_VerifyAmount_
+  commentId: Overload:ModQuickMedOrder.Dose.VerifyAmount
   isSpec: "True"
-  fullName: ModQuickMedOrder.Dose.VerifyUnderMaxPercentIncrease
-  nameWithType: Dose.VerifyUnderMaxPercentIncrease
+  fullName: ModQuickMedOrder.Dose.VerifyAmount
+  nameWithType: Dose.VerifyAmount
 - uid: ModQuickMedOrder.Roundhouse
   name: Roundhouse
   href: api/ModQuickMedOrder.Roundhouse.html

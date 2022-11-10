@@ -25,10 +25,10 @@
             </summary>
             <param name="sentOptionObject">The original OptionObject sent from Avatar.</param>
             <param name="scriptParameter">The original Script Parameter request from Avatar.</param>
-            <returns>A finalized OptionObject.</returns>
+            <returns>A finalized OptionObject that will be returned to Avatar.</returns>
             <remarks>
             * This method is required by Avatar.
-            * This is the only time a <see href="https://spectrum-health-systems.github.io/Abatab/man/man-logging-home.html#primeval-debug-log">PrimevalDebug</see> log is written.
+            * This is the only time a <see href="https://spectrum-health-systems.github.io/Abatab/man/man-logging-home.html#primeval-debug-log">Primeval debug log</see> is written.
             * This method should remain fairly static, since most of the logic is taken care of by external projects.
             </remarks>
         </member>
@@ -43,9 +43,10 @@
             </summary>
             <param name="abatabSession">Settings and data for this session of Abatab.</param>
             <remarks>
+            * The only component of the Script Parameter sent from Avatar that matters at this point is the AbatabMethod component.
             * Whenever a new Abatab Module is added, logic will need to be added to the switch statement using the following template:
             <code>
-            case "newmodule":
+            case "%newmodule-name%":
                 LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
                 ModNewModule.Roundhouse.ParseRequest(abatabSession);
                 break;
