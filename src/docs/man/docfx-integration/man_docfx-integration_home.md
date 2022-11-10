@@ -1,9 +1,9 @@
 <div align="center">
 
-  <img src="../images/man-logo.png" alt="Abatab Manual" width="512">
+  <img src="../../images/man-logo.png" alt="Abatab Manual" width="512">
 
   <h4>
-    Abatab v1.0.0
+    Abatab v22.11.0
   </h4>
 
 </div>
@@ -18,7 +18,7 @@ Abatab uses [DocFX](https://dotnet.github.io/docfx/) for documentation.
 
 DocFX is integrated directly to Abatab via a class library.
 
-You can use the included DocFX project, or create your own by following these steps:
+You can use the included [DocFX project](../dep/DocFX-for-Abatab.7z), or create your own by following these steps:
 
 1. Create a new .NET Framework 4.8 Class Library project named "DocFX"
 2. Add the docfx.console NuGet package

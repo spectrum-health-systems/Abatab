@@ -1,31 +1,31 @@
-# [The Abatab Manual](./man-home.md)
+# [The Abatab Manual](index.md)
 
-# [Getting started](./man-getting-started-home.md)
+# [Getting started](./getting-started/man_getting-started_home.md)
 
-# [Hosting Abatab](./man-hosting-home.md)
+# [Hosting Abatab](./hosting/man_hosting_home.md)
 
-# [Importing Abatab](./man-importing-home.md)
+# [Importing Abatab](./importing/man_importing_home.md)
 
-# [Configuring Abatab](./man-configuration-home.md)
+# [Configuring Abatab](./configuration/man_configuration_home.md)
 
-## [Local settings](./man-configuration-local-settings.md)
+## [Local settings](./configuration/man_configuration_local-settings.md)
 
-# [Using Abatab](./man-using-home.md)
+# [Using Abatab](./using/man_using_home.md)
 
-# [Abatab functionality](./man-functionality-home.md)
+# [Abatab functionality](./functionality/man_functionality_home.md)
 
-## [Core functionality](./man-functionality-core.md)
+## [Core functionality](./functionality/man_functionality_core.md)
 
-## [Abatab Modules](./man-functionality-modules.md)
+## [Abatab Modules](./functionality/man_functionality_modules.md)
 
-## [Modifying existing modules](./man-functionality-existing.md)
+## [Modifying existing modules](./functionality/man_functionality_existing.md)
 
-## [Adding new modules](./man-functionality-new.md)
+## [Adding new modules](./modules/man_functionality_new.md)
 
-# [Logging](./man-logging-home.md)
+# [Logging](./logging/man_logging_home.md)
 
-# [Source code](./man-source-code-home.md)
+# [Source code](./source-code/man_source-code_home.md)
 
-# [DocFX Integration](./man-docfx-integration-home.md)
+# [DocFX Integration](./docfx-integration/man_docfx-integration_home.md)
 
-# [Additional reading](./man-additional-reading-home.md)
+# [Additional reading](./additional-reading/man_additional-reading_home.md)

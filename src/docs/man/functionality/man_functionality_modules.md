@@ -1,21 +1,38 @@
 <div align="center">
 
-  <img src="../images/man-logo.png" alt="Abatab Manual" width="512">
+  <img src="../../images/man-logo.png" alt="Abatab Manual" width="512">
 
   <h4>
-    Abatab v1.0.0
+    Abatab v22.11.0
   </h4>
 
 </div>
 
 ***
 
-Abatab is comprised of Abatab *projects*, and Abatab [*modules*](./AbatabModules.md).
+Abatab is comprised of Abatab [*projects*](./AbatabCoreProjects.md), and Abatab *modules*.
 
-Abatab projects make up the core functionality of Abatab, and most likely won't change that often.
+Abatab modules make up the extended functionality of Abatab.
 
-# AbatabLogging 
-Logging functionality.
+# Common module
+Common fucntionality used by multiple modules.
+
+# Prototype module
+Allows the development of functionality in the LIVE environment.
+
+# QuickMedOrder module
+Quick Medication Order functionality.
+
+# Testing module
+Generally used for development/debugging.
+
+# Working with existing modules
+
+TBD
+
+# Creating a new module
+
+TBD
 
 ***
 

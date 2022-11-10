@@ -404,11 +404,158 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "../../docs/man/additional-reading.md",
+      "source_relative_path": "../../docs/man/additional-reading/man_additional-reading_home.md",
       "output": {
         ".html": {
-          "relative_path": "man/additional-reading.html",
-          "hash": "39pfN0xHX/+azFOQMiL+qz8lP9alhLkBWk/ABmtMENY="
+          "relative_path": "man/additional-reading/man_additional-reading_home.html",
+          "hash": "cCtMetlOqZdhqs6wUbbjH8pR69EAxZOknuC3VYkyz0I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../../docs/man/configuration/man_configuration_home.md",
+      "output": {
+        ".html": {
+          "relative_path": "man/configuration/man_configuration_home.html",
+          "hash": "ISiqXGUX5w6lHDss0ldPp8VTSFVHo3CJillZZ5mhdKQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../../docs/man/configuration/man_configuration_local-settings.md",
+      "output": {
+        ".html": {
+          "relative_path": "man/configuration/man_configuration_local-settings.html",
+          "hash": "W6pGz40lxVCWLfbtqEjaer3IFMJfh5w4De7NWDTXGLc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "../../docs/man/docfx-integration/man_docfx-integration_home.md",
+      "output": {
+        ".html": {
+          "relative_path": "man/docfx-integration/man_docfx-integration_home.html",
+          "hash": "+h95NAZ/W6n3SJnSnsBbgTsApmxMd69LxWEZ8XLFSSE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "../../docs/man/functionality/man_functionality_core.md",
+      "output": {
+        ".html": {
+          "relative_path": "man/functionality/man_functionality_core.html",
+          "hash": "/hNnlYHPAKvQtakVDgogXtNYLlbpXQxYE7b8v7+OQ6A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../../docs/man/functionality/man_functionality_existing.md",
+      "output": {
+        ".html": {
+          "relative_path": "man/functionality/man_functionality_existing.html",
+          "hash": "sjQnHmNuIYMJT6qRk1GXOvK3OXYp8rPM/ZIDnc9swgk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../../docs/man/functionality/man_functionality_home.md",
+      "output": {
+        ".html": {
+          "relative_path": "man/functionality/man_functionality_home.html",
+          "hash": "S5fl1Gjmo4h0+GPHYxdaPz3u+anQwVawtWNj+tl/r1Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "../../docs/man/functionality/man_functionality_modules.md",
+      "output": {
+        ".html": {
+          "relative_path": "man/functionality/man_functionality_modules.html",
+          "hash": "NS/peoEVUvOFGXj4n15U0E8IixvcZFIOLB4V1H7QzMw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../../docs/man/functionality/man_functionality_new.md",
+      "output": {
+        ".html": {
+          "relative_path": "man/functionality/man_functionality_new.html",
+          "hash": "+nUAhNa5VSgH4LX6pg8cgLPTofabpY5PjVoEJ4VjHmo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../../docs/man/getting-started/man_getting-started_home.md",
+      "output": {
+        ".html": {
+          "relative_path": "man/getting-started/man_getting-started_home.html",
+          "hash": "H6H+9qnvocAzwmzYDCWsK9QNeWUGcc++Xk4n6Q2RA88="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "../../docs/man/hosting/man_hosting_home.md",
+      "output": {
+        ".html": {
+          "relative_path": "man/hosting/man_hosting_home.html",
+          "hash": "iqRHjOfjtYCdoT5jKCuN3M0qUd1WNrywZGKCCnf6q6Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "../../docs/man/importing/man_importing_home.md",
+      "output": {
+        ".html": {
+          "relative_path": "man/importing/man_importing_home.html",
+          "hash": "sp9c8ZIvyBvgXGgWPNYRmJRvn9D85XxPTuHCMCVy/fA="
         }
       },
       "is_incremental": false,
@@ -420,7 +567,7 @@
       "output": {
         ".html": {
           "relative_path": "man/index.html",
-          "hash": "aPPjkAizuuq/PezN879p9dR8PBbbayPZ8oOV7lOkHh0="
+          "hash": "ULDrKb5CLO6QdsuuLsOo+s9ubUwuOqNqRMLIn/8T+Aw="
         }
       },
       "is_incremental": false,
@@ -428,11 +575,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "../../docs/man/man-configuration-home.md",
+      "source_relative_path": "../../docs/man/logging/man_logging_home.md",
       "output": {
         ".html": {
-          "relative_path": "man/man-configuration-home.html",
-          "hash": "JTCK5mVeNtX8rGtF2VRYIW3bCObOuXsLcsWgjQLTTOw="
+          "relative_path": "man/logging/man_logging_home.html",
+          "hash": "C2dTUzdipr6r3C7prEKCQ04Fe9NSkZU0bNDzKNsPsos="
         }
       },
       "is_incremental": false,
@@ -440,152 +587,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "../../docs/man/man-configuration-local-settings.md",
+      "source_relative_path": "../../docs/man/source-code/man_source-code_home.md",
       "output": {
         ".html": {
-          "relative_path": "man/man-configuration-local-settings.html",
-          "hash": "lHR2EFzKjLci3+eBi6tWLHJQb7P2wK5vfOy41Zszqkc="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "../../docs/man/man-docfx-integration-home.md",
-      "output": {
-        ".html": {
-          "relative_path": "man/man-docfx-integration-home.html",
-          "hash": "f4q6j06mgW1znJGp1wsRKqGsOtU1SX4lzUnHpux0aoY="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "../../docs/man/man-functionality-core.md",
-      "output": {
-        ".html": {
-          "relative_path": "man/man-functionality-core.html",
-          "hash": "hIgqwTl3krKhreGvTf0hfW725NFd3SZsyI//5acaQic="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "../../docs/man/man-functionality-existing.md",
-      "output": {
-        ".html": {
-          "relative_path": "man/man-functionality-existing.html",
-          "hash": "21+b4gBZHkNtPqbQtRXfDvO3madQ9fk4t4NJKcDj1lI="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "../../docs/man/man-functionality-home.md",
-      "output": {
-        ".html": {
-          "relative_path": "man/man-functionality-home.html",
-          "hash": "2n2hwdvci7v9RvFONdMqdNoZFWQ94Faqtvii8wReSF8="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "../../docs/man/man-functionality-modules.md",
-      "output": {
-        ".html": {
-          "relative_path": "man/man-functionality-modules.html",
-          "hash": "F0H62klTpOAmOnAip1b8jrwjSoPQRbaVmTIwUbX/eag="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "../../docs/man/man-functionality-new.md",
-      "output": {
-        ".html": {
-          "relative_path": "man/man-functionality-new.html",
-          "hash": "ZJazyle2qtaMPMdkfInSukqwN6aHgGk5ZtoSYsZDMVQ="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "../../docs/man/man-getting-started-home.md",
-      "output": {
-        ".html": {
-          "relative_path": "man/man-getting-started-home.html",
-          "hash": "Tmb09K6S+PtBmwVPJWVHBb1aSKUcoHesPR2Pxp6IlwM="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "../../docs/man/man-hosting-home.md",
-      "output": {
-        ".html": {
-          "relative_path": "man/man-hosting-home.html",
-          "hash": "lxx8/5xohSJ3Y4nIXd0dJ4XeZGHOwIe7EWurXwgwzS0="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "../../docs/man/man-importing-home.md",
-      "output": {
-        ".html": {
-          "relative_path": "man/man-importing-home.html",
-          "hash": "bTYoYQBfOju8VTaC/FOIDrYNz/o/GdTE/dPylgXNRvQ="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "../../docs/man/man-logging-home.md",
-      "output": {
-        ".html": {
-          "relative_path": "man/man-logging-home.html",
-          "hash": "VGrFh/ysz+GM7CDDj/CWC0yqjgG+8uTrQOWLSgLbGbw="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "../../docs/man/man-source-code-home.md",
-      "output": {
-        ".html": {
-          "relative_path": "man/man-source-code-home.html",
-          "hash": "T7SCvqFULXOTI3sPXHAv/K21ZGvYDuUUOLvJm90bLsw="
+          "relative_path": "man/source-code/man_source-code_home.html",
+          "hash": "BklJ2MNxsK9wzoQWMtR8ur191xHRuZqLTruyYW/tv/c="
         }
       },
       "is_incremental": false,
@@ -600,7 +606,22 @@
       "output": {
         ".html": {
           "relative_path": "man/toc.html",
-          "hash": "dmoDExtDbMc37XvlKlaBi2xeHw5/97IoJ+d3sk6VuOM="
+          "hash": "+vs/IurepX19MWLoaALIFTrsAWqu/k08ao9MK/HSgvA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "../../docs/man/using/man_using_home.md",
+      "output": {
+        ".html": {
+          "relative_path": "man/using/man_using_home.html",
+          "hash": "br1vA0Ow5jMHHxD+1e9UBtn34bHXB5D3XKYDvrhbiVQ="
         }
       },
       "is_incremental": false,
@@ -1269,7 +1290,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 22,
+          "total_file_count": 23,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {

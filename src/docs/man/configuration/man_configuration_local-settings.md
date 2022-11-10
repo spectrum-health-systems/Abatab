@@ -1,3 +1,15 @@
+<div align="center">
+
+  <img src="../../images/man-logo.png" alt="Abatab Manual" width="512">
+
+  <h4>
+    Abatab v22.11.0
+  </h4>
+
+</div>
+
+***
+
 The Web.config file contains the local settings for Abatab. These settings are also in Settings.settings.
 
 # AbatabMode
