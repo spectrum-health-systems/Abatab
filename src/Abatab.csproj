@@ -195,6 +195,7 @@
     <Content Include="docs\toc.yml" />
     <Content Include="docs\man\using\man_using_home.md" />
     <Content Include="docs\man\docfx\man_docfx_home.md" />
+    <Content Include="docs\man\docfx\man_docfx_how-to.md" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

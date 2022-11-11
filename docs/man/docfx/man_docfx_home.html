@@ -80,39 +80,49 @@
 
 <hr>
 <h1 id="abatab-and-docfx">Abatab and DocFX</h1>
-<p>Abatab uses <a href="https://dotnet.github.io/docfx/">DocFX</a> for documentation.</p>
-<h1 id="creating-a-new-docfx-project">Creating a new DocFX project</h1>
+<p>Abatab uses <a href="https://dotnet.github.io/docfx/"><strong>DocFX</strong></a> to generate documentation. DocFX is a cross-platform, extensible, scalable static documentation generator that can produce documentation from source code as well as raw Markdown files.</p>
+<p>By default, <em>most</em> of the data that DocFX needs to generate documentation is located at <code>src/ThirdParty/DocFX/</code>.</p>
+<p>For Abatab, I wanted that information a little closer to the rest of the code, so I&#39;ve moved it to <code>src/docs/</code>.</p>
+<p>This document will walk through what you need to get DocFX working in Abatab.</p>
+<h2 id="creating-a-new-docfx-project">Creating a new DocFX project</h2>
+<p>The official release of Abatab already contains DocFX</p>
 <p>DocFX is integrated directly to Abatab via a class library.</p>
 <p>You can use the pre-built <a href="https://github.com/spectrum-health-systems/Abatab/blob/main/dep/DocFX/DocFX-for-Abatab.7z">DocFX for abatab</a> project, or create your own by following these steps:</p>
 <ol>
-<li>Create a new .NET Framework 4.8 Class Library project named &quot;DocFX&quot;</li>
+<li>Create a new .NET Framework 4.8 Class Library project named <strong>DocFX</strong></li>
 <li>Add the <code>docfx.console</code> NuGet package</li>
-<li>Add the DocFX/ folder to the src/ThirdParty/&quot; folder</li>
-<li>Add a reference to the DocFX project to Abatab</li>
+<li>Add the <em>DocFX/</em> folder to the <em>src/ThirdParty/</em> folder</li>
+<li>Add a reference to the <strong>DocFX</strong> project to Abatab</li>
 </ol>
-<h1 id="configuring-docfx-for-abatab">Configuring DocFX for Abatab</h1>
-<p>Abatab doesn&#39;t use the defauly DocFX locations, so we&#39;ll make a few changes.</p>
+<h1 id="-"></h1>
+<p> Most of these changes will involve moving data from the default DocFX folder and creating folders and files specific to Abatab.</p>
+<p>The one file that will stay in the default DocFx location is the DocFX configuration file, <code>docfx.json</code>.</p>
 <h2 id="creating-a-folder-for-documentation">Creating a folder for documentation</h2>
-<p>Create a folder named &quot;src/docs/&quot;.</p>
-<p>This is where the content that DocFX will build from is located.</p>
 <h2 id="copying-existing-data-to-srcdocs">Copying existing data to <em>src/docs/</em></h2>
-<p>Copy the following files and folders located in <em>src/ThirdParty/DocFX/</em> to <em>src/docs/</em>:</p>
+<p>There are some standard folders and files in <em>src/ThirdParty/DocFX/</em> that DocFX expects, and will need to be moved to <em>src/docs/</em>:</p>
 <pre><code class="lang-bash">images/*
 obj/*
 index.md
 toc.yml
-</code></pre><h2 id="creating-abatab-specific-data-in-srcdocs">Creating Abatab-specific data in <em>src/docs/</em></h2>
-<p>Create the following files and folders in <em>src/docs/</em>:</p>
-<pre><code class="lang-bash">api/*
-doc/*
-man/*
-favicon.ico
-logo.svg
-</code></pre><h2 id="modifying-srcthirdpartydocfxdocfxjson">Modifying <em>src/ThirdParty/DocFX/docfx.json</em></h2>
-<p>The docfx.json file is the only file that stays in the default location.</p>
-<h3 id="modifying-metadata">Modifying <code>metadata</code></h3>
-<p>We want to target all of the projects in Abatab, so we will point DocFX to Abatab.sln by changing the metadata section of the docfx.json file to:</p>
-<pre><code class="lang-bash">&quot;metadata&quot;: [
+</code></pre><h1 id="modifying-the-docfxjson-configuration-file">Modifying the <em>docfx.json</em> configuration file</h1>
+<p>The <em>src/ThirdParty/DocFX/docfx.json</em> file contains the configuration information for DocFX.</p>
+<p>For reference, the default docfx.json configuration looks like <a href="https://github.com/spectrum-health-systems/Abatab/blob/main/src/ThirdParty/DocFX/docfx_default.json">this</a>.</p>
+<p>We will need to make a few modifications to <em>docfx.json</em> in order for it to work with Abatab.</p>
+<h2 id="targeting-all-abatab-projects">Targeting all Abatab projects</h2>
+<p>Since want to target all of the current/future projects in Abatab, we will point DocFX to Abatab.sln by changing the <code>{&quot;metadata&quot; {&quot;src&quot; {&quot;files:&quot;}}}</code> section of the <code>docfx.json</code> file from <code>*.csproj</code> to <code>Abatab.sln</code> by changing this:</p>
+<pre><code class="lang-bash">&quot;files&quot;: [
+  &quot;*.csproj&quot;
+],
+</code></pre><p>to this:</p>
+<pre><code class="lang-bash">&quot;files&quot;: [
+  &quot;*.sln&quot;
+],
+</code></pre><h3 id="pointing-docfx-to-srcdocs">Pointing DocFX to <em>src/docs/</em></h3>
+<p>We need to let DocFX knowe will be storing the information used to generate DocFX documentation in <em>src/docs/</em>, and we will do that by changing the <code>{&quot;metadata&quot; {&quot;dest:&quot;}}</code> section of the <code>docfx.json</code> file from <code>&quot;obj/api&quot;</code> to <code>&quot;../../docs/obj/api&quot;</code> by changing this:</p>
+<pre><code class="lang-bash">&quot;dest&quot;: &quot;obj/api&quot;
+</code></pre><p>to this:</p>
+<pre><code class="lang-bash">&quot;dest&quot;: &quot;../../docs/obj/api&quot;
+</code></pre><pre><code class="lang-bash">&quot;metadata&quot;: [
   {
     &quot;src&quot;: [
       {
@@ -130,7 +140,7 @@ logo.svg
     &quot;dest&quot;: &quot;../../docs/obj/api&quot;
   }
 ],
-</code></pre><h3 id="modifying-build-content">Modifying <code>build: content</code></h3>
+</code></pre><h3 id="modifying-the-build-section">Modifying the <code>build</code> section</h3>
 <p>Since we be storing the conceptual data and building the documentation in a non-standard locations, change the <code>build</code> section to:</p>
 <pre><code class="lang-bash">&quot;build&quot;: {
     &quot;content&quot;: [
@@ -184,6 +194,13 @@ logo.svg
     &quot;template&quot;: [
       &quot;default&quot;
     ]
+</code></pre><h2 id="creating-abatab-specific-data-in-srcdocs">Creating Abatab-specific data in <em>src/docs/</em></h2>
+<p>Create the following files and folders in <em>src/docs/</em>:</p>
+<pre><code class="lang-bash">api/*
+doc/*
+man/*
+favicon.ico
+logo.svg
 </code></pre><h2 id="modifying-srcdocstocyml">Modifying <em>src/docs/toc.yml</em></h2>
 <p>The src/docs/toc.yml file should look like this:</p>
 <pre><code class="lang-bash">- name: Abatab Manual
