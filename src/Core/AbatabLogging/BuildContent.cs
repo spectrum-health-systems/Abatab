@@ -233,7 +233,7 @@ namespace AbatabLogging
                     LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot);
                     moduleDetail = $"Mode:                 {abatabSession.ModQuickMedOrderConfig.Mode}{Environment.NewLine}" +
                                    $"Valid users:          {abatabSession.ModQuickMedOrderConfig.AuthorizedUsers}{Environment.NewLine}" +
-                                   $"Max percent increase: {abatabSession.ModQuickMedOrderConfig.DosePercentIncrease}";
+                                   $"Max percent increase: {abatabSession.ModQuickMedOrderConfig.DosePercentBoundary}";
                     break;
 
                 case "prototype":

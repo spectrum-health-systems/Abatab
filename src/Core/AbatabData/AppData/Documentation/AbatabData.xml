@@ -135,25 +135,13 @@
              </summary>
              <value></value>
         </member>
-        <member name="P:AbatabData.Module.QuickMedOrder.DosePercentIncrease">
+        <member name="P:AbatabData.Module.QuickMedOrder.DosePercentBoundary">
              <summary>
             
              </summary>
              <value></value>
         </member>
-        <member name="P:AbatabData.Module.QuickMedOrder.DoseMgsIncrease">
-             <summary>
-            
-             </summary>
-             <value></value>
-        </member>
-        <member name="P:AbatabData.Module.QuickMedOrder.DosePercentDecrease">
-             <summary>
-            
-             </summary>
-             <value></value>
-        </member>
-        <member name="P:AbatabData.Module.QuickMedOrder.DoseMgsDecrease">
+        <member name="P:AbatabData.Module.QuickMedOrder.DoseMilligramsBoundary">
              <summary>
             
              </summary>

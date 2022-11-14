@@ -32,25 +32,13 @@ namespace AbatabData.Module
         ///
         /// </summary>
         /// <value></value>
-        public string DosePercentIncrease { get; set; }
+        public string DosePercentBoundary { get; set; }
 
         /// <summary>
         ///
         /// </summary>
         /// <value></value>
-        public string DoseMgsIncrease { get; set; }
-
-        /// <summary>
-        ///
-        /// </summary>
-        /// <value></value>
-        public string DosePercentDecrease { get; set; }
-
-        /// <summary>
-        ///
-        /// </summary>
-        /// <value></value>
-        public string DoseMgsDecrease { get; set; }
+        public string DoseMilligramsBoundary { get; set; }
 
         /// <summary>
         ///

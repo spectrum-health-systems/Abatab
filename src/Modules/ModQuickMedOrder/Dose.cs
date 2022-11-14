@@ -205,7 +205,9 @@ namespace ModQuickMedOrder
                         {
                             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
-                            double maxPercentChange = prevDoseAsNumber * 1.25;
+                            //double maxPercentChange = prevDoseAsNumber * 1.25;
+
+                            double percentDifference = Math.Abs(((prevDoseAsNumber - currDoseAsNumber) / prevDoseAsNumber) * 100);
 
                             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
@@ -213,29 +215,45 @@ namespace ModQuickMedOrder
                             //LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, debugMsg2_);
 
                             // TODO Should be converted when setup.
-                            var maxPercentIncrease = Convert.ToDouble(abatabSession.ModQuickMedOrderConfig.DosePercentIncrease);
+                            var percentBoundary    = Convert.ToDouble(abatabSession.ModQuickMedOrderConfig.DosePercentBoundary);
+                            var milligramsBoundary = Convert.ToDouble(abatabSession.ModQuickMedOrderConfig.DosePercentBoundary);
 
-                            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, maxPercentIncrease.ToString());
+                            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, percentBoundary.ToString());
 
-                            if (currDoseAsNumber >= maxPercentChange || currDoseAsNumber <= maxPercentChange)
+                            var currentMinusPrevious = Math.Abs(currDoseAsNumber - prevDoseAsNumber);
+                            var previousMinusCurrent = Math.Abs(prevDoseAsNumber - currDoseAsNumber);
+
+                            var outsideBoundary = false;
+
+                            if (currentMinusPrevious >= milligramsBoundary || previousMinusCurrent <= milligramsBoundary)
+                            {
+                                outsideBoundary = true;
+                            }
+                            else if (percentDifference < (Convert.ToDouble(abatabSession.ModQuickMedOrderConfig.DosePercentBoundary) * 100))
+                            {
+                                outsideBoundary = true;
+                            }
+
+                            //if (currDoseAsNumber >= maxPercentChange || currDoseAsNumber <= maxPercentChange)
+                            if (outsideBoundary)
                             {
                                 LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
-                                var perc = Math.Abs(((currDoseAsNumber - prevDoseAsNumber) / prevDoseAsNumber) * 100);
+                                //var percentDifference = ((currDoseAsNumber - prevDoseAsNumber) / prevDoseAsNumber) * 100;
 
                                 //var niceString = string.Format("{0:0.#}", percentDifference);
-                                var niceString = string.Format("{0:0.#}", perc);
+                                //var niceString = string.Format("{0:0.#}", percentDifference);
 
-                                var debugMsg3_ = $"[{prevDoseAsNumber}] [{currDoseAsNumber}] [{perc}] [{maxPercentChange}] [{niceString}]";
-                                LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, debugMsg3_);
+                                //var debugMsg3_ = $"[{prevDoseAsNumber}] [{currDoseAsNumber}] [{percentDifference}] [{maxPercentChange}] [{niceString}]";
+                                LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
                                 abatabSession.WorkOptObj.ErrorCode = 4;
                                 abatabSession.WorkOptObj.ErrorMesg = $"WARNING!{Environment.NewLine}" +
-                                                                     $"The percentage increase is too high.{Environment.NewLine}" +
+                                                                     $"The current dose value is significantly different than the previous dose.{Environment.NewLine}" +
                                                                      $"{Environment.NewLine}" +
-                                                                     $"The previous dose was: {prevDoseAsNumber}mg{Environment.NewLine}" +
-                                                                     $"The current dose is: {currDoseAsNumber}mg{Environment.NewLine}" +
-                                                                     $"That is a difference of: {niceString}%{Environment.NewLine}" +
+                                                                     $"The previous dose was: {prevDoseAsNumber}mg(s){Environment.NewLine}" +
+                                                                     $"The current dose is: {currDoseAsNumber}mg(s){Environment.NewLine}" +
+                                                                     $"{Environment.NewLine}" +
                                                                      $"Are you sure you want to submit?";
                             }
                             else

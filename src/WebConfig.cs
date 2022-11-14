@@ -44,7 +44,7 @@ namespace Abatab
                 { "ModPrototypeMode",                       Settings.Default.ModPrototypeMode.ToLower() },
                 { "ModQuickMedOrderMode",                   Settings.Default.ModQuickMedOrderMode.ToLower() },
                 { "ModQuickMedOrderAuthorizedUsers",             Settings.Default.ModQuickMedOrderAuthorizedUsers.ToLower() },
-                { "ModQuickMedOrderDosePercentIncrease", Settings.Default.ModQuickMedOrderDosePercentIncrease.ToLower() },
+                { "ModQuickMedOrderDoseBoundary", Settings.Default.ModQuickMedOrderDoseBoundary.ToLower() },
                 { "ModTestingMode",                         Settings.Default.ModTestingMode.ToLower() }
             };
 
