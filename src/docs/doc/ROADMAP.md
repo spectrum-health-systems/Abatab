@@ -25,7 +25,7 @@
 * [ ] Test all log types to make sure they are written to the correct folder
 * [ ] Test debugMode to make sure that "on" -> "enabled" is working correctly
 * [ ] Warning logs
-* [ ] Log all QMO data in session log
+* [ ] Log all QMO data in session log (e.g., LastOrderScheduledText)
 * [ ] Fix access log filename/contents
 * [ ] Warning logs
 
