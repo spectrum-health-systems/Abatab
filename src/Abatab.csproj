@@ -71,6 +71,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Abatab.asmx" />
+    <None Include="AppData\version.json" />
     <Content Include="docs\favicon.ico" />
     <Content Include="docs\images\hosting-using-iis\iis-add-website-362x414.png" />
     <Content Include="docs\images\hosting-using-iis\iis-application-pool-633x187.png" />
