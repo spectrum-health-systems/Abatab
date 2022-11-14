@@ -1,7 +1,7 @@
 ﻿// Abatab 22.11.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221111.074612
+// b221114.085820
 
 using Abatab.Properties;
 using AbatabData;
@@ -33,7 +33,7 @@ namespace Abatab
         [WebMethod]
         public string GetVersion()
         {
-            return "VERSION 1.0";
+            return "VERSION 22.11";
         }
 
         /// <summary>
