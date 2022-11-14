@@ -225,12 +225,19 @@ namespace ModQuickMedOrder
 
                             var outsideBoundary = false;
 
+                            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, $"[TRACE_02] {percentBoundary} | {milligramsBoundary} | {currentMinusPrevious} | {previousMinusCurrent} | {outsideBoundary} |   ");
+
+
                             if (currentMinusPrevious >= milligramsBoundary || previousMinusCurrent <= milligramsBoundary)
                             {
+                                LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+
                                 outsideBoundary = true;
                             }
                             else if (percentDifference < (Convert.ToDouble(abatabSession.ModQuickMedOrderConfig.DosePercentBoundary) * 100))
                             {
+                                LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+
                                 outsideBoundary = true;
                             }
 
@@ -243,6 +250,8 @@ namespace ModQuickMedOrder
 
                                 //var niceString = string.Format("{0:0.#}", percentDifference);
                                 //var niceString = string.Format("{0:0.#}", percentDifference);
+
+                                LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, $"[TRACE_02] {percentBoundary} | {milligramsBoundary} | {currentMinusPrevious} | {previousMinusCurrent} | {outsideBoundary} |   ");
 
                                 //var debugMsg3_ = $"[{prevDoseAsNumber}] [{currDoseAsNumber}] [{percentDifference}] [{maxPercentChange}] [{niceString}]";
                                 LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");

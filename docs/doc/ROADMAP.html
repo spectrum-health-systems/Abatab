@@ -69,8 +69,18 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="abatab-roadmap">Abatab Roadmap</h1>
 
-<h2 id="22110-november-16-2022">22.11.0 (November 16 2022)</h2>
+<h2 id="22120-december-1-2022">22.12.0 (December 1, 2022)</h2>
 <h3 id="abatab">Abatab</h3>
+<ul>
+<li><strong>[-]</strong> <code>ModQuickMedOrderDoseBoundary</code> should be <code>25</code>, not <code>.25</code></li>
+<li><strong>[-]</strong> Cleanup project references</li>
+<li><strong>[-]</strong> Verify Settings.settings order matches objects (including WebConfig.cs)</li>
+<li><strong>[-]</strong> Cleanup public/private/internal</li>
+<li><strong>[-]</strong> Add the Abatab version to related log files</li>
+<li><strong>[-]</strong> Verify that the AbatabOption doesn&#39;t get in the way of anything</li>
+<li><strong>[-]</strong> Experiment with &lt;10ms log file delay</li>
+<li><strong>[-]</strong> Better method names so user knows what/where things point from other projects. ex. AbatabOptionObject.FinalObj.Finalize(abatabSession) should be something like &quot;FinalOptObj.Finalize&quot;, so we can declare the project in the usings section</li>
+</ul>
 <h4 id="abatababatabasmxcs">Abatab.Abatab.asmx.cs</h4>
 <ul>
 <li>No changes</li>
@@ -79,7 +89,7 @@
 <h4 id="abatabwebconfigcs">Abatab.WebConfig.cs</h4>
 <h3 id="core-functionality">Core functionality</h3>
 <ul>
-<li>[ ] Test to make sure that replacing DLL files works as expected</li>
+<li><strong>[X]</strong> Test to make sure that replacing DLL files works as expected. (22.11.0.0-testbuild+221114.1128)</li>
 </ul>
 <h4 id="abatabdata">AbatabData</h4>
 <ul>
@@ -87,225 +97,47 @@
 </ul>
 <h4 id="abatablogging">AbatabLogging</h4>
 <ul>
-<li>[ ] Test all log types to make sure they are written to the correct folder</li>
-<li>[ ] Test debugMode to make sure that &quot;on&quot; -&gt; &quot;enabled&quot; is working correctly</li>
-<li>[ ] Warning logs</li>
-<li>[ ] Log all QMO data in session log (e.g., LastOrderScheduledText)</li>
-<li>[ ] Fix access log filename/contents</li>
-<li>[ ] Warning logs</li>
+<li><strong>[-]</strong> Test all log types to make sure they are written to the correct folder</li>
+<li><strong>[-]</strong> Test debugMode to make sure that &quot;on&quot; -&gt; &quot;enabled&quot; is working correctly</li>
+<li><strong>[-]</strong> Warning logs</li>
+<li><strong>[-]</strong> Log all QMO data in session log (e.g., LastOrderScheduledText)</li>
+<li><strong>[-]</strong> Fix access log filename/contents</li>
+<li><strong>[-]</strong> Warning logs</li>
+<li><strong>[-]</strong> Verify &quot;none&quot; works</li>
+<li><strong>[-]</strong> Veriry all combinations of log events work</li>
+<li><strong>[-]</strong> Logging detail level (e.g., &quot;TRACE_01&quot;, &quot;TRACE_02&quot;, etc.)</li>
+<li><strong>[-]</strong> Error logs</li>
+<li><strong>[-]</strong> Lost logs</li>
 </ul>
 <h4 id="abataboptionobject">AbatabOptionObject</h4>
-<ul>
-<li>No changes</li>
-</ul>
+<p>No changes</p>
 <h4 id="abatabsession">AbatabSession</h4>
-<ul>
-<li>No changes</li>
-</ul>
+<p>No changes</p>
 <h4 id="abatabsystem">AbatabSystem</h4>
-<ul>
-<li>No changes</li>
-</ul>
+<p>No changes</p>
 <h3 id="abatab-modules">Abatab Modules</h3>
 <h4 id="modcommon">ModCommon</h4>
-<ul>
-<li>No changes</li>
-</ul>
+<p>No changes</p>
 <h4 id="modprogressnote">ModProgressNote</h4>
 <ul>
-<li>[ ] Test ProgressNote.??</li>
-<li>[ ] Verify valid user settings</li>
+<li><strong>[-]</strong> Test ProgressNote.??</li>
+<li><strong>[-]</strong> Verify valid user settings</li>
 </ul>
 <h4 id="modprototype">ModPrototype</h4>
-<ul>
-<li>No changes</li>
-</ul>
+<p>No changes</p>
 <h4 id="modquickmedorder">ModQuickMedOrder</h4>
 <ul>
-<li>[ ] Test Dose.VerifyUnderMaxPercentIncrease</li>
-<li>[ ] Test Dose.VerifyUnderMaxMilligramIncrease</li>
-<li>[ ] Test Dose.VerifyUnderMaxPercentIncrease</li>
-<li>[ ] Test Dose.VerifyUnderMaxMilligramIncrease</li>
-<li>[ ] Verify authorized user settings</li>
+<li><strong>[-]</strong> Test Dose.VerifyUnderMaxPercentIncrease</li>
+<li><strong>[-]</strong> Test Dose.VerifyUnderMaxMilligramIncrease</li>
+<li><strong>[-]</strong> Test Dose.VerifyUnderMaxPercentIncrease</li>
+<li><strong>[-]</strong> Verify authorized user settings</li>
 </ul>
 <h4 id="modtesting">ModTesting</h4>
-<ul>
-<li>No changes</li>
-</ul>
+<p>No changes</p>
 <h3 id="documentation">Documentation</h3>
-<ul>
-<li>[ ] Details soon</li>
-</ul>
+<p><strong>[-]</strong> Cleanup DocFX folders
+<strong>[-]</strong> Complete all XML documentation</p>
 <hr>
-<h2 id="22111-november-2022">22.11.1 (November 2022)</h2>
-<h3 id="core-functionality-1">Core functionality</h3>
-<ul>
-<li>[ ] Code/comment refactor</li>
-</ul>
-<h4 id="abatabdata-1">AbatabData</h4>
-<ul>
-<li>No changes</li>
-</ul>
-<h4 id="abatablogging-1">AbatabLogging</h4>
-<ul>
-<li>No changes</li>
-</ul>
-<h4 id="abataboptionobject-1">AbatabOptionObject</h4>
-<ul>
-<li>No changes</li>
-</ul>
-<h4 id="abatabsession-1">AbatabSession</h4>
-<ul>
-<li>No changes</li>
-</ul>
-<h4 id="abatabsystem-1">AbatabSystem</h4>
-<ul>
-<li>No changes</li>
-</ul>
-<h3 id="abatab-modules-1">Abatab Modules</h3>
-<h4 id="modcommon-1">ModCommon</h4>
-<ul>
-<li>No changes</li>
-</ul>
-<h4 id="modprogressnote-1">ModProgressNote</h4>
-<ul>
-<li>No changes</li>
-</ul>
-<h4 id="modprototype-1">ModPrototype</h4>
-<ul>
-<li>No changes</li>
-</ul>
-<h4 id="modquickmedorder-1">ModQuickMedOrder</h4>
-<ul>
-<li>[ ] Cleanup/refactor Dose.VerifyUnderMaxPercentIncrease</li>
-<li>[ ] Cleanup/refactor Dose.VerifyUnderMaxPercentIncrease</li>
-</ul>
-<h4 id="modtesting-1">ModTesting</h4>
-<ul>
-<li>No changes</li>
-</ul>
-<h3 id="documentation-1">Documentation</h3>
-<ul>
-<li>[ ] Cleanup DocFX folders</li>
-<li>[ ] Complete all XML documentation</li>
-</ul>
-<hr>
-<h2 id="22120-december-2022">22.12.0 (December 2022)</h2>
-<h3 id="core-functionality-2">Core functionality</h3>
-<ul>
-<li>[ ] Cleanup project references</li>
-<li>[ ] Verify Settings.settings order matches objects (including WebConfig.cs)</li>
-<li>[ ] Cleanup public/private/internal</li>
-<li>[ ] Add the Abatab version to related log files</li>
-<li>[ ] Verify that the AbatabOption doesn&#39;t get in the way of anything</li>
-<li>[ ] Experiment with &lt;10ms log file delay</li>
-<li>[ ] Better method names so user knows what/where things point from other projects. ex. AbatabOptionObject.FinalObj.Finalize(abatabSession) should be something like &quot;FinalOptObj.Finalize&quot;, so we can declare the project in the usings section</li>
-</ul>
-<h4 id="abatabdata-2">AbatabData</h4>
-<ul>
-<li>No changes</li>
-</ul>
-<h4 id="abatablogging-2">AbatabLogging</h4>
-<ul>
-<li>[ ] Verify &quot;none&quot; works</li>
-<li>[ ] Veriry all combinations of log events work</li>
-<li>[ ] Logging detail level (e.g., &quot;TRACE-01&quot;, &quot;TRACE-02&quot;)</li>
-<li>[ ] Error logs</li>
-<li>[ ] Lost logs</li>
-</ul>
-<h4 id="abataboptionobject-2">AbatabOptionObject</h4>
-<ul>
-<li>No changes</li>
-</ul>
-<h4 id="abatabsession-2">AbatabSession</h4>
-<ul>
-<li>No changes</li>
-</ul>
-<h4 id="abatabsystem-2">AbatabSystem</h4>
-<ul>
-<li>No changes</li>
-</ul>
-<h3 id="abatab-modules-2">Abatab Modules</h3>
-<ul>
-<li>[ ] Separate the main looping somewhere else.</li>
-</ul>
-<h4 id="modcommon-2">ModCommon</h4>
-<ul>
-<li>No changes</li>
-</ul>
-<h4 id="modprogressnote-2">ModProgressNote</h4>
-<ul>
-<li>No changes</li>
-</ul>
-<h4 id="modprototype-2">ModPrototype</h4>
-<ul>
-<li>No changes</li>
-</ul>
-<h4 id="modquickmedorder-2">ModQuickMedOrder</h4>
-<ul>
-<li>[ ] Test Dose.VerifyUnderMaxPercentDecrease</li>
-<li>[ ] Test Dose.VerifyUnderMaxMilligramDecrease</li>
-</ul>
-<h4 id="modtesting-2">ModTesting</h4>
-<ul>
-<li>No changes</li>
-</ul>
-<h3 id="documentation-2">Documentation</h3>
-<ul>
-<li>No changes</li>
-</ul>
-<hr>
-<hr>
-<blockquote><p>Template</p>
-</blockquote>
-<hr>
-<h2 id="yymmxx-month-year">YY.MM.xx (%Month% %Year%)</h2>
-<h3 id="core-functionality-3">Core functionality</h3>
-<h4 id="abatabdata-3">AbatabData</h4>
-<ul>
-<li>No changes</li>
-</ul>
-<h4 id="abatablogging-3">AbatabLogging</h4>
-<ul>
-<li>No changes</li>
-</ul>
-<h4 id="abataboptionobject-3">AbatabOptionObject</h4>
-<ul>
-<li>No changes</li>
-</ul>
-<h4 id="abatabsession-3">AbatabSession</h4>
-<ul>
-<li>No changes</li>
-</ul>
-<h4 id="abatabsystem-3">AbatabSystem</h4>
-<ul>
-<li>No changes</li>
-</ul>
-<h3 id="abatab-modules-3">Abatab Modules</h3>
-<h4 id="modcommon-3">ModCommon</h4>
-<ul>
-<li>No changes</li>
-</ul>
-<h4 id="modprogressnote-3">ModProgressNote</h4>
-<ul>
-<li>No changes</li>
-</ul>
-<h4 id="modprototype-3">ModPrototype</h4>
-<ul>
-<li>No changes</li>
-</ul>
-<h4 id="modquickmedorder-3">ModQuickMedOrder</h4>
-<ul>
-<li>No changes</li>
-</ul>
-<h4 id="modtesting-3">ModTesting</h4>
-<ul>
-<li>No changes</li>
-</ul>
-<h3 id="documentation-3">Documentation</h3>
-<ul>
-<li>No changes</li>
-</ul>
 </article>
           </div>
           
