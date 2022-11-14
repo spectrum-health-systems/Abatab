@@ -22,6 +22,10 @@
 
 ## [Adding new modules](./modules/man_functionality_new.md)
 
+# [Testing](./testing/man_testing_home.md)
+
+# [Quick Med Order Module](./testing/man_testing_modquickmedorder.md)
+
 # [Logging](./logging/man_logging_home.md)
 
 # [Source code](./source-code/man_source-code_home.md)

@@ -48,7 +48,7 @@ namespace ModQuickMedOrder
 
             switch (abatabSession.AbatabAction.ToLower())
             {
-                case "verifyundermaxpercentincrease":
+                case "verifyamount":
                     LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
                     ModQuickMedOrder.Dose.VerifyAmount(abatabSession);
                     AbatabOptionObject.FinalObj.Finalize(abatabSession);
