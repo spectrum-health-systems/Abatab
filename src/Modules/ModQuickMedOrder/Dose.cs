@@ -84,8 +84,8 @@ namespace ModQuickMedOrder
                 foreach (FieldObject fieldObject in formObject.CurrentRow.Fields)
                 {
                     /* Creating a trace log here would significantly impact performance, since hundreds of files would be created, so instead we will use a
-                     * debug log. This way trace log functionality won't be impacted elsewhere.
-                     */
+                    * debug log. This way trace log functionality won't be impacted elsewhere.
+                    */
                     LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
 
                     if (fieldObject.FieldNumber == abatabSession.ModQuickMedOrderConfig.DosageOneFieldId)
@@ -97,6 +97,8 @@ namespace ModQuickMedOrder
                     else if (fieldObject.FieldNumber == abatabSession.ModQuickMedOrderConfig.OrderTypeFieldId)
                     {
                         LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+
+                        // TODO
 
                         ProcessOrderTypeField(abatabSession, fieldObject);
                     }
@@ -310,6 +312,8 @@ namespace ModQuickMedOrder
             abatabSession.ModQuickMedOrderConfig.OrderType = fieldObject.FieldValue;
 
             abatabSession.ModQuickMedOrderConfig.FoundOrderTypeFieldId = true;
+
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, $"[TRACE_02]: OrderType = {fieldObject.FieldValue}/{abatabSession.ModQuickMedOrderConfig.OrderType} | FoundOrderTypeFieldId = {abatabSession.ModQuickMedOrderConfig.FoundOrderTypeFieldId}");
         }
 
         /// <summary>
