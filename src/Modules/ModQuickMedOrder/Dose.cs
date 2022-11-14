@@ -216,7 +216,7 @@ namespace ModQuickMedOrder
 
                             // TODO Should be converted when setup.
                             var percentBoundary    = Convert.ToDouble(abatabSession.ModQuickMedOrderConfig.DosePercentBoundary);
-                            var milligramsBoundary = Convert.ToDouble(abatabSession.ModQuickMedOrderConfig.DosePercentBoundary);
+                            var milligramsBoundary = Convert.ToDouble(abatabSession.ModQuickMedOrderConfig.DoseMilligramsBoundary);
 
                             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, percentBoundary.ToString());
 
