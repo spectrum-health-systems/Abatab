@@ -16,6 +16,8 @@ Detailed documentation found here:
 
 # Versioning
 
+Abatab versions syntax is `YY.MM.patch`, and internally the Abatab syntax is `YY.MM.patch-prerelease+build`.
+
 [Semantic versioning](https://semver.org/) is used to indicate the current version of Abatab components.
 
 `<X>.<Y>.<Z>-<build type>+<yyMMdd.HHmmss>`

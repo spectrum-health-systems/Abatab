@@ -143,18 +143,18 @@ namespace Abatab.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("25")]
-        public string ModQuickMedOrderDoseBoundary {
+        public string ModQuickMedOrderDosePercentBoundary {
             get {
-                return ((string)(this["ModQuickMedOrderDoseBoundary"]));
+                return ((string)(this["ModQuickMedOrderDosePercentBoundary"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("20")]
-        public string ModQuickMedOrderMilligramsBoundary {
+        public string ModQuickMedOrderDoseMilligramsBoundary {
             get {
-                return ((string)(this["ModQuickMedOrderMilligramsBoundary"]));
+                return ((string)(this["ModQuickMedOrderDoseMilligramsBoundary"]));
             }
         }
         

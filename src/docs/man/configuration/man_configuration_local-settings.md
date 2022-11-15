@@ -163,8 +163,8 @@ Indicates if the Abatab Testing Module functionality is enabled.
 
 # ModQuickMedOrderAuthorizedUsers
 
-# ModQuickMedOrderDoseBoundary
+# ModQuickMedOrderDosePercentBoundary
 
-# ModQuickMedOrderMilligramsBoundary
+# ModQuickMedOrderDoseMilligramsBoundary
 
 # ModPrototypeMode

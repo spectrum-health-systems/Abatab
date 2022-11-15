@@ -3,66 +3,77 @@
 		{
 			"version": "22.11.0.0",
 			"pre-release": "development",
-			"build": "221114.1128"
+			"build": "221115.0903"
+		}
 	],
 	"AbatabData": [
 		{
 			"version": "22.11.0.0",
 			"pre-release": "development",
-			"build": "221114.1128"
+			"build": "221115.0903"
+		}
 	],
 	"AbatabLogging": [
 		{
 			"version": "22.11.0.0",
 			"pre-release": "development",
-			"build": "221114.1128"
+			"build": "221115.0903"
+		}
 	],
 	"AbatabOptionObject": [
 		{
 			"version": "22.11.0.0",
 			"pre-release": "development",
-			"build": "221114.1128"
+			"build": "221115.0903"
+		}
 	],
 	"AbatabSession": [
 		{
 			"version": "22.11.0.0",
 			"pre-release": "development",
-			"build": "221114.1128"
+			"build": "221115.0903"
+		}
 	],
 	"AbatabSystem": [
 		{
 			"version": "22.11.0.0",
 			"pre-release": "development",
-			"build": "221114.1128"
+			"build": "221115.0903"
+		}
 	],
 	"ModCommon": [
 		{
 			"version": "22.11.0.0",
 			"pre-release": "development",
-			"build": "221114.1128"
+			"build": "221115.0903"
+		}
 	],
 	"ModProgressNote": [
 		{
 			"version": "22.11.0.0",
 			"pre-release": "development",
-			"build": "221114.1128"
+			"build": "221115.0903"
+		}
 	],
 	"ModPrototype": [
 		{
 			"version": "22.11.0.0",
 			"pre-release": "development",
-			"build": "221114.1128"
+			"build": "221115.0903"
+		}
 	],
 	"ModQuickMedOrder": [
 		{
 			"version": "22.11.0.0",
 			"pre-release": "development",
-			"build": "221114.1128"
+			"build": "221115.0903"
+		}
 	],
 	"ModTesting": [
 		{
 			"version": "22.11.0.0",
 			"pre-release": "development",
-			"build": "221114.1128"
+			"build": "221115.0903"
+		}
 	]
 }

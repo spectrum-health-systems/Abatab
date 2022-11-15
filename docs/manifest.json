@@ -607,6 +607,30 @@
       "version": ""
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "../../docs/man/testing/man_testing_home.md",
+      "output": {
+        ".html": {
+          "relative_path": "man/testing/man_testing_home.html",
+          "hash": "omlCFYVFIi8aIzrPIrZKchp2QNdxUP+q3M0n7Bzj3mQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../../docs/man/testing/man_testing_modquickmedorder.md",
+      "output": {
+        ".html": {
+          "relative_path": "man/testing/man_testing_modquickmedorder.html",
+          "hash": "zcmQZFyaemaJWadZyaZRstV4+MB5j3X4deCAm2V65fA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "log_codes": [
         "InvalidFileLink"
       ],
@@ -615,7 +639,7 @@
       "output": {
         ".html": {
           "relative_path": "man/toc.html",
-          "hash": "kGVK+QnDItTKPy0fUk+kUbse3EHgNzO2m/S70JjrH8A="
+          "hash": "76PfQNX5qz/RFdLEpTg6VTarcx0hoeNyov/ou406oMo="
         }
       },
       "is_incremental": false,
@@ -1299,7 +1323,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 24,
+          "total_file_count": 26,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
