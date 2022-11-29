@@ -12,7 +12,7 @@
 * **[-]** Verify that the AbatabOption doesn't get in the way of anything
 * **[-]** Experiment with <10ms log file delay
 * **[-]** Better method names so user knows what/where things point from other projects. ex. AbatabOptionObject.FinalObj.Finalize(abatabSession) should be something like "FinalOptObj.Finalize", so we can declare the project in the usings section
-
+* **[-]** Add emailing functionality
 
 #### Abatab.Abatab.asmx.cs
 
@@ -24,7 +24,7 @@
 
 ### Core functionality
 
-* **[X]** Test to make sure that replacing DLL files works as expected. (22.11.0.0-testbuild+221115.0903)
+* **[X]** Test to make sure that replacing DLL files works as expected. (22.12.0.0-testbuild+221115.0903)
 * **[-]** Confirm that we don't need other .DLLs (e.g., Roslyn stuff)
 
 #### AbatabData

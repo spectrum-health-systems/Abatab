@@ -72,7 +72,7 @@
 <h2 id="22120-december-1-2022">22.12.0 (December 1, 2022)</h2>
 <h3 id="abatab">Abatab</h3>
 <ul>
-<li><strong>[-]</strong> <code>ModQuickMedOrderDoseBoundary</code> should be <code>25</code>, not <code>.25</code></li>
+<li><strong>[-]</strong> <code>ModQuickMedOrderDosePercentBoundary</code> should be <code>25</code>, not <code>.25</code></li>
 <li><strong>[-]</strong> Cleanup project references</li>
 <li><strong>[-]</strong> Verify Settings.settings order matches objects (including WebConfig.cs)</li>
 <li><strong>[-]</strong> Cleanup public/private/internal</li>
@@ -80,6 +80,7 @@
 <li><strong>[-]</strong> Verify that the AbatabOption doesn&#39;t get in the way of anything</li>
 <li><strong>[-]</strong> Experiment with &lt;10ms log file delay</li>
 <li><strong>[-]</strong> Better method names so user knows what/where things point from other projects. ex. AbatabOptionObject.FinalObj.Finalize(abatabSession) should be something like &quot;FinalOptObj.Finalize&quot;, so we can declare the project in the usings section</li>
+<li><strong>[-]</strong> Add emailing functionality</li>
 </ul>
 <h4 id="abatababatabasmxcs">Abatab.Abatab.asmx.cs</h4>
 <ul>
@@ -89,7 +90,7 @@
 <h4 id="abatabwebconfigcs">Abatab.WebConfig.cs</h4>
 <h3 id="core-functionality">Core functionality</h3>
 <ul>
-<li><strong>[X]</strong> Test to make sure that replacing DLL files works as expected. (22.11.0.0-testbuild+221114.1128)</li>
+<li><strong>[X]</strong> Test to make sure that replacing DLL files works as expected. (22.12.0.0-testbuild+221115.0903)</li>
 <li><strong>[-]</strong> Confirm that we don&#39;t need other .DLLs (e.g., Roslyn stuff)</li>
 </ul>
 <h4 id="abatabdata">AbatabData</h4>

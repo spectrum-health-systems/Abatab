@@ -1,7 +1,7 @@
-﻿// Abatab ModQuickMedOrder 22.11.0
+﻿// Abatab ModQuickMedOrder 22.12.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221115.0903
+// b221129.0806
 
 using AbatabData;
 using AbatabLogging;
@@ -258,7 +258,7 @@ namespace ModQuickMedOrder
 
                                 abatabSession.WorkOptObj.ErrorCode = 4;
                                 abatabSession.WorkOptObj.ErrorMesg = $"WARNING!{Environment.NewLine}" +
-                                                                     $"The current dose value is significantly different than the previous dose.{Environment.NewLine}" +
+                                                                     $"COURTNET! The current dose value is significantly different than the previous dose.{Environment.NewLine}" +
                                                                      $"{Environment.NewLine}" +
                                                                      $"The previous dose was: {prevDoseAsNumber}mg(s){Environment.NewLine}" +
                                                                      $"The current dose is: {currDoseAsNumber}mg(s){Environment.NewLine}" +
