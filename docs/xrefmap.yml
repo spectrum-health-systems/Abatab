@@ -1050,19 +1050,6 @@ references:
   isSpec: "True"
   fullName: AbatabLogging.LogEvent.Trace
   nameWithType: LogEvent.Trace
-- uid: AbatabLogging.LogEvent.Warning(AbatabData.Session,System.String)
-  name: Warning(Session, String)
-  href: api/AbatabLogging.LogEvent.html#AbatabLogging_LogEvent_Warning_AbatabData_Session_System_String_
-  commentId: M:AbatabLogging.LogEvent.Warning(AbatabData.Session,System.String)
-  fullName: AbatabLogging.LogEvent.Warning(AbatabData.Session, System.String)
-  nameWithType: LogEvent.Warning(Session, String)
-- uid: AbatabLogging.LogEvent.Warning*
-  name: Warning
-  href: api/AbatabLogging.LogEvent.html#AbatabLogging_LogEvent_Warning_
-  commentId: Overload:AbatabLogging.LogEvent.Warning
-  isSpec: "True"
-  fullName: AbatabLogging.LogEvent.Warning
-  nameWithType: LogEvent.Warning
 - uid: AbatabLogging.LogEvent.WebConfigDebug(System.Collections.Generic.Dictionary{System.String,System.String})
   name: WebConfigDebug(Dictionary<String, String>)
   href: api/AbatabLogging.LogEvent.html#AbatabLogging_LogEvent_WebConfigDebug_System_Collections_Generic_Dictionary_System_String_System_String__

@@ -45,7 +45,7 @@ namespace AbatabLogging
             {
                 case "debug":
                     logDir = BuildDebugLogDir(logRoot);
-                    return $@"{logDir}\{DateTime.Now:HHmmss_fffffff}-{exeAssembly}-{Path.GetFileName(callPath)}-{callMember}-{callLine}.{eventType}";
+                    return $@"{logDir}\debug\{DateTime.Now:HHmmss_fffffff}-{exeAssembly}-{Path.GetFileName(callPath)}-{callMember}-{callLine}.{eventType}";
 
                 case "trace":
                     logDir = BuildTraceLogDir(logRoot);
