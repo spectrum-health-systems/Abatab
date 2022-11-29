@@ -77,13 +77,17 @@ namespace AbatabLogging
                     return $@"{logDir}\{DateTime.Now:HHmmss_fffffff}.{eventType}";
 
                 case "webconfigdebug":
+                    // ??
                     logDir = BuildDebugLogDir(logRoot);
                     return $@"{logDir}\{DateTime.Now:HHmmss_fffffff}.{eventType}";
 
                 case "quickmedorder":
                 case "session":
-                case "warning":
                     return $@"{logRoot}\{DateTime.Now:yyMMdd}.{eventType}";
+
+                case "warning":
+                    logDir = BuildWarningLogDir(logRoot);
+                    return $@"{logDir}\{DateTime.Now:yyMMdd}.{eventType}";
 
                 default:
                     logDir = BuildLostLogDir(logRoot);
