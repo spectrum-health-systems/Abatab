@@ -175,6 +175,23 @@ namespace AbatabLogging
             }
         }
 
+
+        public static void Warning(Session abatabSession, string logMsg = "WARNING!")
+        {
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+
+            // Always want to write warning logs!
+
+            var logPath    = BuildPath.Timestamped("warning", abatabSession.LoggingConfig.SessionRoot);
+            var logContent = BuildContent.LogComponents("quickmedorder", abatabSession, logMsg);
+
+            WriteLogFile.LocalFile(logPath, logContent, Convert.ToInt32(abatabSession.LoggingConfig.WriteDelay));
+
+            // Warning logs are also written to warning/
+            WriteLogFile.LocalFile($@"{abatabSession.LoggingConfig.EventWarningRoot}\{abatabSession.AbatabUserName}", logContent, Convert.ToInt32(abatabSession.LoggingConfig.WriteDelay));
+        }
+
         /// <summary>
         /// Build a webConfig debug log.
         /// </summary>

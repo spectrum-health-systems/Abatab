@@ -82,6 +82,7 @@ namespace AbatabLogging
 
                 case "quickmedorder":
                 case "session":
+                case "warning":
                     return $@"{logRoot}\{DateTime.Now:yyMMdd}.{eventType}";
 
                 default:
@@ -113,6 +114,7 @@ namespace AbatabLogging
                     return $@"{logDir}\{DateTime.Now:HHmmss_fffffff}.{eventType}";
             }
         }
+
         /// <summary>
         /// Build the path to a debug log.
         /// </summary>
@@ -125,6 +127,20 @@ namespace AbatabLogging
 
             return debugLogDir;
         }
+
+        /// <summary>
+        /// Build the path to a waring log.
+        /// </summary>
+        /// <param name="logRoot">The log root.</param>
+        /// <returns>The path to the log root.</returns>
+        private static string BuildWarningLogDir(string logRoot)
+        {
+            var warningLogDir = $@"{logRoot}\{DateTime.Now:yyMMdd}";
+            Maintenance.VerifyDir(warningLogDir);
+
+            return warningLogDir;
+        }
+
 
         /// <summary>
         /// Build the path to a lost log.

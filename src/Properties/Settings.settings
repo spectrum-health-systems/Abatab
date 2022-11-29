@@ -26,6 +26,9 @@
     <Setting Name="LogWriteDelay" Type="System.String" Scope="Application">
       <Value Profile="(Default)">10</Value>
     </Setting>
+    <Setting Name="WarningLogRoot" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">logs\warning</Value>
+    </Setting>
     <Setting Name="AbatabFallbackUserName" Type="System.String" Scope="Application">
       <Value Profile="(Default)">_Abatab</Value>
     </Setting>

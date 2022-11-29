@@ -264,6 +264,10 @@ namespace ModQuickMedOrder
                                                                      $"The current dose is: {currDoseAsNumber}mg(s){Environment.NewLine}" +
                                                                      $"{Environment.NewLine}" +
                                                                      $"Are you sure you want to submit?";
+
+                                LogEvent.Warning(abatabSession, "Quick Medication Order Dose discrepancy!");
+
+
                             }
                             else
                             {

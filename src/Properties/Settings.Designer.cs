@@ -166,5 +166,23 @@ namespace Abatab.Properties {
                 return ((string)(this["ModPrototypeMode"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("enabled")]
+        public string WarningLogMode {
+            get {
+                return ((string)(this["WarningLogMode"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("logs\\warning")]
+        public string WarningLogRoot {
+            get {
+                return ((string)(this["WarningLogRoot"]));
+            }
+        }
     }
 }

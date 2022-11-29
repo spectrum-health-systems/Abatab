@@ -137,6 +137,13 @@
             <param name="logRoot">The log root.</param>
             <returns>The path to the log root.</returns>
         </member>
+        <member name="M:AbatabLogging.BuildPath.BuildWarningLogDir(System.String)">
+            <summary>
+            Build the path to a waring log.
+            </summary>
+            <param name="logRoot">The log root.</param>
+            <returns>The path to the log root.</returns>
+        </member>
         <member name="M:AbatabLogging.BuildPath.BuildLostLogDir(System.String)">
             <summary>
             Build the path to a lost log.
