@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ModCommon</name>
+    </assembly>
+    <members>
+        <member name="T:ModCommon.VerifyAccess">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:ModCommon.VerifyAccess.CheckIfValidUser(System.String,System.String)">
+             <summary>
+            
+             </summary>
+             <param name="abatabUser"></param>
+             <param name="validUsers"></param>
+             <returns></returns>
+        </member>
+        <member name="M:ModCommon.VerifyAccess.InvalidUser(AbatabData.Session)">
+            <summary>
+            
+            </summary>
+            <param name="abatabSession"></param>
+        </member>
+        <member name="T:ModCommon.Verify">
+            <summary>
+            Confirms various things.
+            </summary>
+        </member>
+        <member name="M:ModCommon.Verify.ValidUser(System.String,System.String)">
+            <summary>
+            Confirm that a userName exists in the list of valid userNames.
+            </summary>
+            <param name="userName"></param>
+            <param name="validUsers"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ModCommon.Roundhouse">
+            <summary>
+            
+            </summary>
+        </member>
+    </members>
+</doc>
