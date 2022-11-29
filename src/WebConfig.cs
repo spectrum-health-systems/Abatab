@@ -26,7 +26,10 @@ namespace Abatab
         /// </remarks>
         public static Dictionary<string, string> Load()
         {
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG]");
+            // Extra setup for this log file
+            var logRoot = $@"{Settings.Default.AbatabRoot}{Settings.Default.AvatarEnvironment}\{Settings.Default.DebugLogRoot}";
+
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, logRoot, "[DEBUG]");
             // Can't really put a trace log here.
 
             var webConfig =  new Dictionary<string, string>
