@@ -227,7 +227,7 @@ namespace ModQuickMedOrder
 
                             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, $"[TRACE_02] {percentBoundary} | {milligramsBoundary} | {currentMinusPrevious} | {previousMinusCurrent} | {outsideBoundary} |   ");
 
-                            var warningId = $"[{abatabSession.SessionDateStamp}.{abatabSession.SessionTimeStamp}.{percentBoundary}.{milligramsBoundary}.{currentMinusPrevious}.{previousMinusCurrent}]";
+                            var warningId = $"[Warning ID: {abatabSession.SessionDateStamp}.{abatabSession.SessionTimeStamp}-{percentBoundary}.{milligramsBoundary}-{currentMinusPrevious}.{previousMinusCurrent}]";
 
                             if (currentMinusPrevious >= milligramsBoundary || previousMinusCurrent <= milligramsBoundary)
                             {
