@@ -1,6 +1,0 @@
-C:\IT\GitHub\SHS\Abatab\src\ThirdParty\DocFX\bin\Debug\DocFX.dll
-C:\IT\GitHub\SHS\Abatab\src\ThirdParty\DocFX\bin\Debug\DocFX.pdb
-C:\IT\GitHub\SHS\Abatab\src\ThirdParty\DocFX\obj\Debug\DocFX.csproj.AssemblyReference.cache
-C:\IT\GitHub\SHS\Abatab\src\ThirdParty\DocFX\obj\Debug\DocFX.csproj.CoreCompileInputs.cache
-C:\IT\GitHub\SHS\Abatab\src\ThirdParty\DocFX\obj\Debug\DocFX.dll
-C:\IT\GitHub\SHS\Abatab\src\ThirdParty\DocFX\obj\Debug\DocFX.pdb

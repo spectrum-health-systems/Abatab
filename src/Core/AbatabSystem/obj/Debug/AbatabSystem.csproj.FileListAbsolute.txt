@@ -1,7 +1,0 @@
-C:\IT\GitHub\SHS\Abatab\src\Core\AbatabSystem\bin\Debug\AbatabSystem.dll
-C:\IT\GitHub\SHS\Abatab\src\Core\AbatabSystem\bin\Debug\AbatabSystem.pdb
-C:\IT\GitHub\SHS\Abatab\src\Core\AbatabSystem\bin\Debug\AbatabSystem.xml
-C:\IT\GitHub\SHS\Abatab\src\Core\AbatabSystem\obj\Debug\AbatabSystem.csproj.AssemblyReference.cache
-C:\IT\GitHub\SHS\Abatab\src\Core\AbatabSystem\obj\Debug\AbatabSystem.csproj.CoreCompileInputs.cache
-C:\IT\GitHub\SHS\Abatab\src\Core\AbatabSystem\obj\Debug\AbatabSystem.dll
-C:\IT\GitHub\SHS\Abatab\src\Core\AbatabSystem\obj\Debug\AbatabSystem.pdb

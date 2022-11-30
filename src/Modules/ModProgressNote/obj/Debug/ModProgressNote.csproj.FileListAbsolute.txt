@@ -1,7 +1,0 @@
-C:\IT\GitHub\SHS\Abatab\src\Modules\ModProgressNote\bin\Debug\ModProgressNote.dll
-C:\IT\GitHub\SHS\Abatab\src\Modules\ModProgressNote\bin\Debug\ModProgressNote.pdb
-C:\IT\GitHub\SHS\Abatab\src\Modules\ModProgressNote\bin\Debug\ModProgressNote.xml
-C:\IT\GitHub\SHS\Abatab\src\Modules\ModProgressNote\obj\Debug\ModProgressNote.csproj.AssemblyReference.cache
-C:\IT\GitHub\SHS\Abatab\src\Modules\ModProgressNote\obj\Debug\ModProgressNote.csproj.CoreCompileInputs.cache
-C:\IT\GitHub\SHS\Abatab\src\Modules\ModProgressNote\obj\Debug\ModProgressNote.dll
-C:\IT\GitHub\SHS\Abatab\src\Modules\ModProgressNote\obj\Debug\ModProgressNote.pdb

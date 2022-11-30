@@ -1,7 +1,0 @@
-C:\IT\GitHub\SHS\Abatab\src\Libraries\Du\bin\Debug\Du.dll
-C:\IT\GitHub\SHS\Abatab\src\Libraries\Du\bin\Debug\Du.pdb
-C:\IT\GitHub\SHS\Abatab\src\Libraries\Du\bin\Debug\Du.xml
-C:\IT\GitHub\SHS\Abatab\src\Libraries\Du\obj\Debug\Du.csproj.AssemblyReference.cache
-C:\IT\GitHub\SHS\Abatab\src\Libraries\Du\obj\Debug\Du.csproj.CoreCompileInputs.cache
-C:\IT\GitHub\SHS\Abatab\src\Libraries\Du\obj\Debug\Du.dll
-C:\IT\GitHub\SHS\Abatab\src\Libraries\Du\obj\Debug\Du.pdb
