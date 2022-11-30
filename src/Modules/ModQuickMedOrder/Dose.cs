@@ -235,7 +235,7 @@ namespace ModQuickMedOrder
 
                                 outsideBoundary = true;
                             }
-                            else if (percentDifference < (Convert.ToDouble(abatabSession.ModQuickMedOrderConfig.DosePercentBoundary) * 100))
+                            else if (percentDifference > (Convert.ToDouble(abatabSession.ModQuickMedOrderConfig.DosePercentBoundary) * 100))
                             {
                                 LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
