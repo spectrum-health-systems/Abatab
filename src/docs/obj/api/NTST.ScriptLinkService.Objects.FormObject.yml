@@ -1,0 +1,525 @@
+### YamlMime:ManagedReference
+items:
+- uid: NTST.ScriptLinkService.Objects.FormObject
+  commentId: T:NTST.ScriptLinkService.Objects.FormObject
+  id: FormObject
+  parent: NTST.ScriptLinkService.Objects
+  children:
+  - NTST.ScriptLinkService.Objects.FormObject.CurrentRow
+  - NTST.ScriptLinkService.Objects.FormObject.FormId
+  - NTST.ScriptLinkService.Objects.FormObject.MultipleIteration
+  - NTST.ScriptLinkService.Objects.FormObject.OtherRows
+  langs:
+  - csharp
+  - vb
+  name: FormObject
+  nameWithType: FormObject
+  fullName: NTST.ScriptLinkService.Objects.FormObject
+  type: Class
+  source:
+    id: FormObject
+    path: C:\IT\GitHub\SHS\Abatab\src\ThirdParty\NTST.ScriptLinkService.Objects\FormObject.vb
+  assemblies:
+  - NTST.ScriptLinkService.Objects
+  namespace: NTST.ScriptLinkService.Objects
+  syntax:
+    content: public class FormObject
+    content.vb: Public Class FormObject
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.Finalize
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: NTST.ScriptLinkService.Objects.FormObject.CurrentRow
+  commentId: F:NTST.ScriptLinkService.Objects.FormObject.CurrentRow
+  id: CurrentRow
+  parent: NTST.ScriptLinkService.Objects.FormObject
+  langs:
+  - csharp
+  - vb
+  name: CurrentRow
+  nameWithType: FormObject.CurrentRow
+  fullName: NTST.ScriptLinkService.Objects.FormObject.CurrentRow
+  type: Field
+  source:
+    id: CurrentRow
+    path: C:\IT\GitHub\SHS\Abatab\src\ThirdParty\NTST.ScriptLinkService.Objects\FormObject.vb
+    startLine: 2
+  assemblies:
+  - NTST.ScriptLinkService.Objects
+  namespace: NTST.ScriptLinkService.Objects
+  syntax:
+    content: public RowObject CurrentRow
+    return:
+      type: NTST.ScriptLinkService.Objects.RowObject
+    content.vb: Public CurrentRow As RowObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NTST.ScriptLinkService.Objects.FormObject.FormId
+  commentId: F:NTST.ScriptLinkService.Objects.FormObject.FormId
+  id: FormId
+  parent: NTST.ScriptLinkService.Objects.FormObject
+  langs:
+  - csharp
+  - vb
+  name: FormId
+  nameWithType: FormObject.FormId
+  fullName: NTST.ScriptLinkService.Objects.FormObject.FormId
+  type: Field
+  source:
+    id: FormId
+    path: C:\IT\GitHub\SHS\Abatab\src\ThirdParty\NTST.ScriptLinkService.Objects\FormObject.vb
+    startLine: 4
+  assemblies:
+  - NTST.ScriptLinkService.Objects
+  namespace: NTST.ScriptLinkService.Objects
+  syntax:
+    content: public string FormId
+    return:
+      type: System.String
+    content.vb: Public FormId As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NTST.ScriptLinkService.Objects.FormObject.MultipleIteration
+  commentId: F:NTST.ScriptLinkService.Objects.FormObject.MultipleIteration
+  id: MultipleIteration
+  parent: NTST.ScriptLinkService.Objects.FormObject
+  langs:
+  - csharp
+  - vb
+  name: MultipleIteration
+  nameWithType: FormObject.MultipleIteration
+  fullName: NTST.ScriptLinkService.Objects.FormObject.MultipleIteration
+  type: Field
+  source:
+    id: MultipleIteration
+    path: C:\IT\GitHub\SHS\Abatab\src\ThirdParty\NTST.ScriptLinkService.Objects\FormObject.vb
+    startLine: 6
+  assemblies:
+  - NTST.ScriptLinkService.Objects
+  namespace: NTST.ScriptLinkService.Objects
+  syntax:
+    content: public bool MultipleIteration
+    return:
+      type: System.Boolean
+    content.vb: Public MultipleIteration As Boolean
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NTST.ScriptLinkService.Objects.FormObject.OtherRows
+  commentId: F:NTST.ScriptLinkService.Objects.FormObject.OtherRows
+  id: OtherRows
+  parent: NTST.ScriptLinkService.Objects.FormObject
+  langs:
+  - csharp
+  - vb
+  name: OtherRows
+  nameWithType: FormObject.OtherRows
+  fullName: NTST.ScriptLinkService.Objects.FormObject.OtherRows
+  type: Field
+  source:
+    id: OtherRows
+    path: C:\IT\GitHub\SHS\Abatab\src\ThirdParty\NTST.ScriptLinkService.Objects\FormObject.vb
+    startLine: 8
+  assemblies:
+  - NTST.ScriptLinkService.Objects
+  namespace: NTST.ScriptLinkService.Objects
+  syntax:
+    content: public RowObject[] OtherRows
+    return:
+      type: NTST.ScriptLinkService.Objects.RowObject[]
+    content.vb: Public OtherRows As RowObject()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: NTST.ScriptLinkService.Objects
+  commentId: N:NTST.ScriptLinkService.Objects
+  name: NTST.ScriptLinkService.Objects
+  nameWithType: NTST.ScriptLinkService.Objects
+  fullName: NTST.ScriptLinkService.Objects
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Finalize
+  commentId: M:System.Object.Finalize
+  parent: System.Object
+  isExternal: true
+  name: Finalize()
+  nameWithType: Object.Finalize()
+  fullName: System.Object.Finalize()
+  spec.csharp:
+  - uid: System.Object.Finalize
+    name: Finalize
+    nameWithType: Object.Finalize
+    fullName: System.Object.Finalize
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Finalize
+    name: Finalize
+    nameWithType: Object.Finalize
+    fullName: System.Object.Finalize
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: NTST.ScriptLinkService.Objects.RowObject
+  commentId: T:NTST.ScriptLinkService.Objects.RowObject
+  parent: NTST.ScriptLinkService.Objects
+  name: RowObject
+  nameWithType: RowObject
+  fullName: NTST.ScriptLinkService.Objects.RowObject
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: NTST.ScriptLinkService.Objects.RowObject[]
+  commentId: T:NTST.ScriptLinkService.Objects.RowObject[]
+  name: RowObject[]
+  nameWithType: RowObject[]
+  fullName: NTST.ScriptLinkService.Objects.RowObject[]
+  nameWithType.vb: RowObject()
+  fullName.vb: NTST.ScriptLinkService.Objects.RowObject()
+  name.vb: RowObject()
+  spec.csharp:
+  - uid: NTST.ScriptLinkService.Objects.RowObject
+    name: RowObject
+    nameWithType: RowObject
+    fullName: NTST.ScriptLinkService.Objects.RowObject
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: NTST.ScriptLinkService.Objects.RowObject
+    name: RowObject
+    nameWithType: RowObject
+    fullName: NTST.ScriptLinkService.Objects.RowObject
+  - name: ()
+    nameWithType: ()
+    fullName: ()

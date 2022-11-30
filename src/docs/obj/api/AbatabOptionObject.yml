@@ -1,0 +1,34 @@
+### YamlMime:ManagedReference
+items:
+- uid: AbatabOptionObject
+  commentId: N:AbatabOptionObject
+  id: AbatabOptionObject
+  children:
+  - AbatabOptionObject.FinalObj
+  - AbatabOptionObject.Verify
+  - AbatabOptionObject.WorkObj
+  langs:
+  - csharp
+  - vb
+  name: AbatabOptionObject
+  nameWithType: AbatabOptionObject
+  fullName: AbatabOptionObject
+  type: Namespace
+  assemblies:
+  - AbatabOptionObject
+references:
+- uid: AbatabOptionObject.WorkObj
+  commentId: T:AbatabOptionObject.WorkObj
+  name: WorkObj
+  nameWithType: WorkObj
+  fullName: AbatabOptionObject.WorkObj
+- uid: AbatabOptionObject.FinalObj
+  commentId: T:AbatabOptionObject.FinalObj
+  name: FinalObj
+  nameWithType: FinalObj
+  fullName: AbatabOptionObject.FinalObj
+- uid: AbatabOptionObject.Verify
+  commentId: T:AbatabOptionObject.Verify
+  name: Verify
+  nameWithType: Verify
+  fullName: AbatabOptionObject.Verify

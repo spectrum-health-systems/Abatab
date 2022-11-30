@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: AbatabSystem
+  commentId: N:AbatabSystem
+  id: AbatabSystem
+  children:
+  - AbatabSystem.Maintenance
+  langs:
+  - csharp
+  - vb
+  name: AbatabSystem
+  nameWithType: AbatabSystem
+  fullName: AbatabSystem
+  type: Namespace
+  assemblies:
+  - AbatabSystem
+references:
+- uid: AbatabSystem.Maintenance
+  commentId: T:AbatabSystem.Maintenance
+  name: Maintenance
+  nameWithType: Maintenance
+  fullName: AbatabSystem.Maintenance

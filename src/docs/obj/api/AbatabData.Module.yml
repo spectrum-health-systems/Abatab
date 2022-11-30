@@ -1,0 +1,49 @@
+### YamlMime:ManagedReference
+items:
+- uid: AbatabData.Module
+  commentId: N:AbatabData.Module
+  id: AbatabData.Module
+  children:
+  - AbatabData.Module.Common
+  - AbatabData.Module.Prototype
+  - AbatabData.Module.QuickMedOrder
+  - AbatabData.Module.Testing
+  langs:
+  - csharp
+  - vb
+  name: AbatabData.Module
+  nameWithType: AbatabData.Module
+  fullName: AbatabData.Module
+  type: Namespace
+  assemblies:
+  - AbatabData
+references:
+- uid: AbatabData.Module.Common
+  commentId: T:AbatabData.Module.Common
+  parent: AbatabData.Module
+  name: Common
+  nameWithType: Common
+  fullName: AbatabData.Module.Common
+- uid: AbatabData.Module.Prototype
+  commentId: T:AbatabData.Module.Prototype
+  parent: AbatabData.Module
+  name: Prototype
+  nameWithType: Prototype
+  fullName: AbatabData.Module.Prototype
+- uid: AbatabData.Module.Testing
+  commentId: T:AbatabData.Module.Testing
+  parent: AbatabData.Module
+  name: Testing
+  nameWithType: Testing
+  fullName: AbatabData.Module.Testing
+- uid: AbatabData.Module.QuickMedOrder
+  commentId: T:AbatabData.Module.QuickMedOrder
+  parent: AbatabData.Module
+  name: QuickMedOrder
+  nameWithType: QuickMedOrder
+  fullName: AbatabData.Module.QuickMedOrder
+- uid: AbatabData.Module
+  commentId: N:AbatabData.Module
+  name: AbatabData.Module
+  nameWithType: AbatabData.Module
+  fullName: AbatabData.Module

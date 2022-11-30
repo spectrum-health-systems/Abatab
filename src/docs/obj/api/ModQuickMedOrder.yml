@@ -1,0 +1,28 @@
+### YamlMime:ManagedReference
+items:
+- uid: ModQuickMedOrder
+  commentId: N:ModQuickMedOrder
+  id: ModQuickMedOrder
+  children:
+  - ModQuickMedOrder.Dose
+  - ModQuickMedOrder.Roundhouse
+  langs:
+  - csharp
+  - vb
+  name: ModQuickMedOrder
+  nameWithType: ModQuickMedOrder
+  fullName: ModQuickMedOrder
+  type: Namespace
+  assemblies:
+  - ModQuickMedOrder
+references:
+- uid: ModQuickMedOrder.Dose
+  commentId: T:ModQuickMedOrder.Dose
+  name: Dose
+  nameWithType: Dose
+  fullName: ModQuickMedOrder.Dose
+- uid: ModQuickMedOrder.Roundhouse
+  commentId: T:ModQuickMedOrder.Roundhouse
+  name: Roundhouse
+  nameWithType: Roundhouse
+  fullName: ModQuickMedOrder.Roundhouse

@@ -1,0 +1,707 @@
+### YamlMime:ManagedReference
+items:
+- uid: AbatabData.Core.Logging
+  commentId: T:AbatabData.Core.Logging
+  id: Logging
+  parent: AbatabData.Core
+  children:
+  - AbatabData.Core.Logging.Detail
+  - AbatabData.Core.Logging.EventErrorRoot
+  - AbatabData.Core.Logging.EventLostRoot
+  - AbatabData.Core.Logging.EventTraceRoot
+  - AbatabData.Core.Logging.EventWarningRoot
+  - AbatabData.Core.Logging.Mode
+  - AbatabData.Core.Logging.Root
+  - AbatabData.Core.Logging.SessionRoot
+  - AbatabData.Core.Logging.WriteDelay
+  langs:
+  - csharp
+  - vb
+  name: Logging
+  nameWithType: Logging
+  fullName: AbatabData.Core.Logging
+  type: Class
+  source:
+    id: Logging
+    path: C:\IT\GitHub\SHS\Abatab\src\Core\AbatabData\Core\Logging.cs
+    startLine: 10
+  assemblies:
+  - AbatabData
+  namespace: AbatabData.Core
+  summary: "\n\n"
+  example: []
+  syntax:
+    content: public class Logging
+    content.vb: Public Class Logging
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: AbatabData.Core.Logging.Detail
+  commentId: P:AbatabData.Core.Logging.Detail
+  id: Detail
+  parent: AbatabData.Core.Logging
+  langs:
+  - csharp
+  - vb
+  name: Detail
+  nameWithType: Logging.Detail
+  fullName: AbatabData.Core.Logging.Detail
+  type: Property
+  source:
+    id: Detail
+    path: C:\IT\GitHub\SHS\Abatab\src\Core\AbatabData\Core\Logging.cs
+    startLine: 16
+  assemblies:
+  - AbatabData
+  namespace: AbatabData.Core
+  summary: "\n\n"
+  example: []
+  syntax:
+    content: public string Detail { get; set; }
+    parameters: []
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Property Detail As String
+  overload: AbatabData.Core.Logging.Detail*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AbatabData.Core.Logging.Mode
+  commentId: P:AbatabData.Core.Logging.Mode
+  id: Mode
+  parent: AbatabData.Core.Logging
+  langs:
+  - csharp
+  - vb
+  name: Mode
+  nameWithType: Logging.Mode
+  fullName: AbatabData.Core.Logging.Mode
+  type: Property
+  source:
+    id: Mode
+    path: C:\IT\GitHub\SHS\Abatab\src\Core\AbatabData\Core\Logging.cs
+    startLine: 22
+  assemblies:
+  - AbatabData
+  namespace: AbatabData.Core
+  summary: "\n\n"
+  example: []
+  syntax:
+    content: public string Mode { get; set; }
+    parameters: []
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Property Mode As String
+  overload: AbatabData.Core.Logging.Mode*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AbatabData.Core.Logging.EventErrorRoot
+  commentId: P:AbatabData.Core.Logging.EventErrorRoot
+  id: EventErrorRoot
+  parent: AbatabData.Core.Logging
+  langs:
+  - csharp
+  - vb
+  name: EventErrorRoot
+  nameWithType: Logging.EventErrorRoot
+  fullName: AbatabData.Core.Logging.EventErrorRoot
+  type: Property
+  source:
+    id: EventErrorRoot
+    path: C:\IT\GitHub\SHS\Abatab\src\Core\AbatabData\Core\Logging.cs
+    startLine: 28
+  assemblies:
+  - AbatabData
+  namespace: AbatabData.Core
+  summary: "\n\n"
+  example: []
+  syntax:
+    content: public string EventErrorRoot { get; set; }
+    parameters: []
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Property EventErrorRoot As String
+  overload: AbatabData.Core.Logging.EventErrorRoot*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AbatabData.Core.Logging.EventLostRoot
+  commentId: P:AbatabData.Core.Logging.EventLostRoot
+  id: EventLostRoot
+  parent: AbatabData.Core.Logging
+  langs:
+  - csharp
+  - vb
+  name: EventLostRoot
+  nameWithType: Logging.EventLostRoot
+  fullName: AbatabData.Core.Logging.EventLostRoot
+  type: Property
+  source:
+    id: EventLostRoot
+    path: C:\IT\GitHub\SHS\Abatab\src\Core\AbatabData\Core\Logging.cs
+    startLine: 34
+  assemblies:
+  - AbatabData
+  namespace: AbatabData.Core
+  summary: "\n\n"
+  example: []
+  syntax:
+    content: public string EventLostRoot { get; set; }
+    parameters: []
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Property EventLostRoot As String
+  overload: AbatabData.Core.Logging.EventLostRoot*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AbatabData.Core.Logging.EventTraceRoot
+  commentId: P:AbatabData.Core.Logging.EventTraceRoot
+  id: EventTraceRoot
+  parent: AbatabData.Core.Logging
+  langs:
+  - csharp
+  - vb
+  name: EventTraceRoot
+  nameWithType: Logging.EventTraceRoot
+  fullName: AbatabData.Core.Logging.EventTraceRoot
+  type: Property
+  source:
+    id: EventTraceRoot
+    path: C:\IT\GitHub\SHS\Abatab\src\Core\AbatabData\Core\Logging.cs
+    startLine: 40
+  assemblies:
+  - AbatabData
+  namespace: AbatabData.Core
+  summary: "\n\n"
+  example: []
+  syntax:
+    content: public string EventTraceRoot { get; set; }
+    parameters: []
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Property EventTraceRoot As String
+  overload: AbatabData.Core.Logging.EventTraceRoot*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AbatabData.Core.Logging.EventWarningRoot
+  commentId: P:AbatabData.Core.Logging.EventWarningRoot
+  id: EventWarningRoot
+  parent: AbatabData.Core.Logging
+  langs:
+  - csharp
+  - vb
+  name: EventWarningRoot
+  nameWithType: Logging.EventWarningRoot
+  fullName: AbatabData.Core.Logging.EventWarningRoot
+  type: Property
+  source:
+    id: EventWarningRoot
+    path: C:\IT\GitHub\SHS\Abatab\src\Core\AbatabData\Core\Logging.cs
+    startLine: 46
+  assemblies:
+  - AbatabData
+  namespace: AbatabData.Core
+  summary: "\n\n"
+  example: []
+  syntax:
+    content: public string EventWarningRoot { get; set; }
+    parameters: []
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Property EventWarningRoot As String
+  overload: AbatabData.Core.Logging.EventWarningRoot*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AbatabData.Core.Logging.Root
+  commentId: P:AbatabData.Core.Logging.Root
+  id: Root
+  parent: AbatabData.Core.Logging
+  langs:
+  - csharp
+  - vb
+  name: Root
+  nameWithType: Logging.Root
+  fullName: AbatabData.Core.Logging.Root
+  type: Property
+  source:
+    id: Root
+    path: C:\IT\GitHub\SHS\Abatab\src\Core\AbatabData\Core\Logging.cs
+    startLine: 52
+  assemblies:
+  - AbatabData
+  namespace: AbatabData.Core
+  summary: "\n\n"
+  example: []
+  syntax:
+    content: public string Root { get; set; }
+    parameters: []
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Property Root As String
+  overload: AbatabData.Core.Logging.Root*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AbatabData.Core.Logging.SessionRoot
+  commentId: P:AbatabData.Core.Logging.SessionRoot
+  id: SessionRoot
+  parent: AbatabData.Core.Logging
+  langs:
+  - csharp
+  - vb
+  name: SessionRoot
+  nameWithType: Logging.SessionRoot
+  fullName: AbatabData.Core.Logging.SessionRoot
+  type: Property
+  source:
+    id: SessionRoot
+    path: C:\IT\GitHub\SHS\Abatab\src\Core\AbatabData\Core\Logging.cs
+    startLine: 58
+  assemblies:
+  - AbatabData
+  namespace: AbatabData.Core
+  summary: "\n\n"
+  example: []
+  syntax:
+    content: public string SessionRoot { get; set; }
+    parameters: []
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Property SessionRoot As String
+  overload: AbatabData.Core.Logging.SessionRoot*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AbatabData.Core.Logging.WriteDelay
+  commentId: P:AbatabData.Core.Logging.WriteDelay
+  id: WriteDelay
+  parent: AbatabData.Core.Logging
+  langs:
+  - csharp
+  - vb
+  name: WriteDelay
+  nameWithType: Logging.WriteDelay
+  fullName: AbatabData.Core.Logging.WriteDelay
+  type: Property
+  source:
+    id: WriteDelay
+    path: C:\IT\GitHub\SHS\Abatab\src\Core\AbatabData\Core\Logging.cs
+    startLine: 64
+  assemblies:
+  - AbatabData
+  namespace: AbatabData.Core
+  summary: "\n\n"
+  example: []
+  syntax:
+    content: public string WriteDelay { get; set; }
+    parameters: []
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Property WriteDelay As String
+  overload: AbatabData.Core.Logging.WriteDelay*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: AbatabData.Core
+  commentId: N:AbatabData.Core
+  name: AbatabData.Core
+  nameWithType: AbatabData.Core
+  fullName: AbatabData.Core
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AbatabData.Core.Logging.Detail*
+  commentId: Overload:AbatabData.Core.Logging.Detail
+  name: Detail
+  nameWithType: Logging.Detail
+  fullName: AbatabData.Core.Logging.Detail
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: AbatabData.Core.Logging.Mode*
+  commentId: Overload:AbatabData.Core.Logging.Mode
+  name: Mode
+  nameWithType: Logging.Mode
+  fullName: AbatabData.Core.Logging.Mode
+- uid: AbatabData.Core.Logging.EventErrorRoot*
+  commentId: Overload:AbatabData.Core.Logging.EventErrorRoot
+  name: EventErrorRoot
+  nameWithType: Logging.EventErrorRoot
+  fullName: AbatabData.Core.Logging.EventErrorRoot
+- uid: AbatabData.Core.Logging.EventLostRoot*
+  commentId: Overload:AbatabData.Core.Logging.EventLostRoot
+  name: EventLostRoot
+  nameWithType: Logging.EventLostRoot
+  fullName: AbatabData.Core.Logging.EventLostRoot
+- uid: AbatabData.Core.Logging.EventTraceRoot*
+  commentId: Overload:AbatabData.Core.Logging.EventTraceRoot
+  name: EventTraceRoot
+  nameWithType: Logging.EventTraceRoot
+  fullName: AbatabData.Core.Logging.EventTraceRoot
+- uid: AbatabData.Core.Logging.EventWarningRoot*
+  commentId: Overload:AbatabData.Core.Logging.EventWarningRoot
+  name: EventWarningRoot
+  nameWithType: Logging.EventWarningRoot
+  fullName: AbatabData.Core.Logging.EventWarningRoot
+- uid: AbatabData.Core.Logging.Root*
+  commentId: Overload:AbatabData.Core.Logging.Root
+  name: Root
+  nameWithType: Logging.Root
+  fullName: AbatabData.Core.Logging.Root
+- uid: AbatabData.Core.Logging.SessionRoot*
+  commentId: Overload:AbatabData.Core.Logging.SessionRoot
+  name: SessionRoot
+  nameWithType: Logging.SessionRoot
+  fullName: AbatabData.Core.Logging.SessionRoot
+- uid: AbatabData.Core.Logging.WriteDelay*
+  commentId: Overload:AbatabData.Core.Logging.WriteDelay
+  name: WriteDelay
+  nameWithType: Logging.WriteDelay
+  fullName: AbatabData.Core.Logging.WriteDelay

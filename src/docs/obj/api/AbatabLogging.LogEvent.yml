@@ -1,0 +1,812 @@
+### YamlMime:ManagedReference
+items:
+- uid: AbatabLogging.LogEvent
+  commentId: T:AbatabLogging.LogEvent
+  id: LogEvent
+  parent: AbatabLogging
+  children:
+  - AbatabLogging.LogEvent.Access(AbatabData.Session,System.String)
+  - AbatabLogging.LogEvent.Debug(System.String,System.String,System.String,System.String,System.String,System.String,System.Int32)
+  - AbatabLogging.LogEvent.ModQuickMedOrder(AbatabData.Session,System.String)
+  - AbatabLogging.LogEvent.PrimevalDebug(System.String,System.String,System.String,System.String,System.Int32)
+  - AbatabLogging.LogEvent.Session(AbatabData.Session,System.String)
+  - AbatabLogging.LogEvent.Trace(AbatabData.Session,System.String,System.String,System.String,System.String,System.Int32)
+  - AbatabLogging.LogEvent.WebConfigDebug(System.Collections.Generic.Dictionary{System.String,System.String})
+  langs:
+  - csharp
+  - vb
+  name: LogEvent
+  nameWithType: LogEvent
+  fullName: AbatabLogging.LogEvent
+  type: Class
+  source:
+    id: LogEvent
+    path: C:\IT\GitHub\SHS\Abatab\src\Core\AbatabLogging\LogEvent.cs
+    startLine: 27
+  assemblies:
+  - AbatabLogging
+  namespace: AbatabLogging
+  summary: "\nLogic for building log files for various events.\n"
+  example: []
+  syntax:
+    content: public static class LogEvent
+    content.vb: Public Module LogEvent
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: AbatabLogging.LogEvent.Access(AbatabData.Session,System.String)
+  commentId: M:AbatabLogging.LogEvent.Access(AbatabData.Session,System.String)
+  id: Access(AbatabData.Session,System.String)
+  parent: AbatabLogging.LogEvent
+  langs:
+  - csharp
+  - vb
+  name: Access(Session, String)
+  nameWithType: LogEvent.Access(Session, String)
+  fullName: AbatabLogging.LogEvent.Access(AbatabData.Session, System.String)
+  type: Method
+  source:
+    id: Access
+    path: C:\IT\GitHub\SHS\Abatab\src\Core\AbatabLogging\LogEvent.cs
+    startLine: 34
+  assemblies:
+  - AbatabLogging
+  namespace: AbatabLogging
+  summary: "\nLog a user access event.\n"
+  example: []
+  syntax:
+    content: public static void Access(Session abatabSession, string accessMsg)
+    parameters:
+    - id: abatabSession
+      type: AbatabData.Session
+      description: Information/data for this session of Abatab.
+    - id: accessMsg
+      type: System.String
+      description: The access log message.
+    content.vb: Public Shared Sub Access(abatabSession As Session, accessMsg As String)
+  overload: AbatabLogging.LogEvent.Access*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AbatabLogging.LogEvent.Debug(System.String,System.String,System.String,System.String,System.String,System.String,System.Int32)
+  commentId: M:AbatabLogging.LogEvent.Debug(System.String,System.String,System.String,System.String,System.String,System.String,System.Int32)
+  id: Debug(System.String,System.String,System.String,System.String,System.String,System.String,System.Int32)
+  parent: AbatabLogging.LogEvent
+  langs:
+  - csharp
+  - vb
+  name: Debug(String, String, String, String, String, String, Int32)
+  nameWithType: LogEvent.Debug(String, String, String, String, String, String, Int32)
+  fullName: AbatabLogging.LogEvent.Debug(System.String, System.String, System.String, System.String, System.String, System.String, System.Int32)
+  type: Method
+  source:
+    id: Debug
+    path: C:\IT\GitHub\SHS\Abatab\src\Core\AbatabLogging\LogEvent.cs
+    startLine: 62
+  assemblies:
+  - AbatabLogging
+  namespace: AbatabLogging
+  summary: "\nBuilds a debug log file.\n"
+  example: []
+  syntax:
+    content: public static void Debug(string exeAssembly, string debugMode, string debugLogRoot = "", string debugMsg = "", string callPath = "", string callMember = "", int callLine = 0)
+    parameters:
+    - id: exeAssembly
+      type: System.String
+      description: The name of executing assembly.
+    - id: debugMode
+      type: System.String
+      description: The Abatab debug mode.
+    - id: debugLogRoot
+      type: System.String
+      description: The debug log root directory.
+    - id: debugMsg
+      type: System.String
+      description: The debug log message.
+    - id: callPath
+      type: System.String
+      description: The filename of where the log is coming from.
+    - id: callMember
+      type: System.String
+      description: The method name of where the log is coming from.
+    - id: callLine
+      type: System.Int32
+      description: The file line of where the log is coming from.
+    content.vb: Public Shared Sub Debug(exeAssembly As String, debugMode As String, debugLogRoot As String = "", debugMsg As String = "", callPath As String = "", callMember As String = "", callLine As Integer = 0)
+  overload: AbatabLogging.LogEvent.Debug*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AbatabLogging.LogEvent.ModQuickMedOrder(AbatabData.Session,System.String)
+  commentId: M:AbatabLogging.LogEvent.ModQuickMedOrder(AbatabData.Session,System.String)
+  id: ModQuickMedOrder(AbatabData.Session,System.String)
+  parent: AbatabLogging.LogEvent
+  langs:
+  - csharp
+  - vb
+  name: ModQuickMedOrder(Session, String)
+  nameWithType: LogEvent.ModQuickMedOrder(Session, String)
+  fullName: AbatabLogging.LogEvent.ModQuickMedOrder(AbatabData.Session, System.String)
+  type: Method
+  source:
+    id: ModQuickMedOrder
+    path: C:\IT\GitHub\SHS\Abatab\src\Core\AbatabLogging\LogEvent.cs
+    startLine: 90
+  assemblies:
+  - AbatabLogging
+  namespace: AbatabLogging
+  summary: "\nBuilds detailed information for the QuickMedOrder module.\n"
+  example: []
+  syntax:
+    content: public static void ModQuickMedOrder(Session abatabSession, string logMsg = "QuickMedOrder detail log.")
+    parameters:
+    - id: abatabSession
+      type: AbatabData.Session
+      description: Information/data for this session of Abatab.
+    - id: logMsg
+      type: System.String
+      description: The log message.
+    content.vb: Public Shared Sub ModQuickMedOrder(abatabSession As Session, logMsg As String = "QuickMedOrder detail log.")
+  overload: AbatabLogging.LogEvent.ModQuickMedOrder*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AbatabLogging.LogEvent.PrimevalDebug(System.String,System.String,System.String,System.String,System.Int32)
+  commentId: M:AbatabLogging.LogEvent.PrimevalDebug(System.String,System.String,System.String,System.String,System.Int32)
+  id: PrimevalDebug(System.String,System.String,System.String,System.String,System.Int32)
+  parent: AbatabLogging.LogEvent
+  langs:
+  - csharp
+  - vb
+  name: PrimevalDebug(String, String, String, String, Int32)
+  nameWithType: LogEvent.PrimevalDebug(String, String, String, String, Int32)
+  fullName: AbatabLogging.LogEvent.PrimevalDebug(System.String, System.String, System.String, System.String, System.Int32)
+  type: Method
+  source:
+    id: PrimevalDebug
+    path: C:\IT\GitHub\SHS\Abatab\src\Core\AbatabLogging\LogEvent.cs
+    startLine: 116
+  assemblies:
+  - AbatabLogging
+  namespace: AbatabLogging
+  summary: "\nBuilds a debug log file.\n"
+  example: []
+  syntax:
+    content: public static void PrimevalDebug(string debugMode, string exeAssembly, string callPath = "", string callMember = "", int callLine = 0)
+    parameters:
+    - id: debugMode
+      type: System.String
+      description: The Abatab debug mode.
+    - id: exeAssembly
+      type: System.String
+      description: The name of executing assembly.
+    - id: callPath
+      type: System.String
+      description: The filename of where the log is coming from.
+    - id: callMember
+      type: System.String
+      description: The method name of where the log is coming from.
+    - id: callLine
+      type: System.Int32
+      description: The file line of where the log is coming from.
+    content.vb: Public Shared Sub PrimevalDebug(debugMode As String, exeAssembly As String, callPath As String = "", callMember As String = "", callLine As Integer = 0)
+  overload: AbatabLogging.LogEvent.PrimevalDebug*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AbatabLogging.LogEvent.Session(AbatabData.Session,System.String)
+  commentId: M:AbatabLogging.LogEvent.Session(AbatabData.Session,System.String)
+  id: Session(AbatabData.Session,System.String)
+  parent: AbatabLogging.LogEvent
+  langs:
+  - csharp
+  - vb
+  name: Session(Session, String)
+  nameWithType: LogEvent.Session(Session, String)
+  fullName: AbatabLogging.LogEvent.Session(AbatabData.Session, System.String)
+  type: Method
+  source:
+    id: Session
+    path: C:\IT\GitHub\SHS\Abatab\src\Core\AbatabLogging\LogEvent.cs
+    startLine: 135
+  assemblies:
+  - AbatabLogging
+  namespace: AbatabLogging
+  summary: "\nBuilds a session detail log.\n"
+  example: []
+  syntax:
+    content: public static void Session(Session abatabSession, string logMsg = "Session detail log.")
+    parameters:
+    - id: abatabSession
+      type: AbatabData.Session
+      description: Information/data for this session of Abatab.
+    - id: logMsg
+      type: System.String
+      description: The log message.
+    content.vb: Public Shared Sub Session(abatabSession As Session, logMsg As String = "Session detail log.")
+  overload: AbatabLogging.LogEvent.Session*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AbatabLogging.LogEvent.Trace(AbatabData.Session,System.String,System.String,System.String,System.String,System.Int32)
+  commentId: M:AbatabLogging.LogEvent.Trace(AbatabData.Session,System.String,System.String,System.String,System.String,System.Int32)
+  id: Trace(AbatabData.Session,System.String,System.String,System.String,System.String,System.Int32)
+  parent: AbatabLogging.LogEvent
+  langs:
+  - csharp
+  - vb
+  name: Trace(Session, String, String, String, String, Int32)
+  nameWithType: LogEvent.Trace(Session, String, String, String, String, Int32)
+  fullName: AbatabLogging.LogEvent.Trace(AbatabData.Session, System.String, System.String, System.String, System.String, System.Int32)
+  type: Method
+  source:
+    id: Trace
+    path: C:\IT\GitHub\SHS\Abatab\src\Core\AbatabLogging\LogEvent.cs
+    startLine: 162
+  assemblies:
+  - AbatabLogging
+  namespace: AbatabLogging
+  syntax:
+    content: public static void Trace(Session abatabSession, string exeAssembly, string logMsg = "Trace log start...", string callPath = "", string callMember = "", int callLine = 0)
+    parameters:
+    - id: abatabSession
+      type: AbatabData.Session
+    - id: exeAssembly
+      type: System.String
+    - id: logMsg
+      type: System.String
+    - id: callPath
+      type: System.String
+    - id: callMember
+      type: System.String
+    - id: callLine
+      type: System.Int32
+    content.vb: Public Shared Sub Trace(abatabSession As Session, exeAssembly As String, logMsg As String = "Trace log start...", callPath As String = "", callMember As String = "", callLine As Integer = 0)
+  overload: AbatabLogging.LogEvent.Trace*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AbatabLogging.LogEvent.WebConfigDebug(System.Collections.Generic.Dictionary{System.String,System.String})
+  commentId: M:AbatabLogging.LogEvent.WebConfigDebug(System.Collections.Generic.Dictionary{System.String,System.String})
+  id: WebConfigDebug(System.Collections.Generic.Dictionary{System.String,System.String})
+  parent: AbatabLogging.LogEvent
+  langs:
+  - csharp
+  - vb
+  name: WebConfigDebug(Dictionary<String, String>)
+  nameWithType: LogEvent.WebConfigDebug(Dictionary<String, String>)
+  fullName: AbatabLogging.LogEvent.WebConfigDebug(System.Collections.Generic.Dictionary<System.String, System.String>)
+  type: Method
+  source:
+    id: WebConfigDebug
+    path: C:\IT\GitHub\SHS\Abatab\src\Core\AbatabLogging\LogEvent.cs
+    startLine: 181
+  assemblies:
+  - AbatabLogging
+  namespace: AbatabLogging
+  summary: "\nBuild a webConfig debug log.\n"
+  example: []
+  syntax:
+    content: public static void WebConfigDebug(Dictionary<string, string> webConfig)
+    parameters:
+    - id: webConfig
+      type: System.Collections.Generic.Dictionary{System.String,System.String}
+      description: The contents of Web.config.
+    content.vb: Public Shared Sub WebConfigDebug(webConfig As Dictionary(Of String, String))
+  overload: AbatabLogging.LogEvent.WebConfigDebug*
+  nameWithType.vb: LogEvent.WebConfigDebug(Dictionary(Of String, String))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: AbatabLogging.LogEvent.WebConfigDebug(System.Collections.Generic.Dictionary(Of System.String, System.String))
+  name.vb: WebConfigDebug(Dictionary(Of String, String))
+references:
+- uid: AbatabLogging
+  commentId: N:AbatabLogging
+  name: AbatabLogging
+  nameWithType: AbatabLogging
+  fullName: AbatabLogging
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AbatabLogging.LogEvent.Access*
+  commentId: Overload:AbatabLogging.LogEvent.Access
+  name: Access
+  nameWithType: LogEvent.Access
+  fullName: AbatabLogging.LogEvent.Access
+- uid: AbatabData.Session
+  commentId: T:AbatabData.Session
+  parent: AbatabData
+  name: Session
+  nameWithType: Session
+  fullName: AbatabData.Session
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: AbatabData
+  commentId: N:AbatabData
+  name: AbatabData
+  nameWithType: AbatabData
+  fullName: AbatabData
+- uid: AbatabLogging.LogEvent.Debug*
+  commentId: Overload:AbatabLogging.LogEvent.Debug
+  name: Debug
+  nameWithType: LogEvent.Debug
+  fullName: AbatabLogging.LogEvent.Debug
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: AbatabLogging.LogEvent.ModQuickMedOrder*
+  commentId: Overload:AbatabLogging.LogEvent.ModQuickMedOrder
+  name: ModQuickMedOrder
+  nameWithType: LogEvent.ModQuickMedOrder
+  fullName: AbatabLogging.LogEvent.ModQuickMedOrder
+- uid: AbatabLogging.LogEvent.PrimevalDebug*
+  commentId: Overload:AbatabLogging.LogEvent.PrimevalDebug
+  name: PrimevalDebug
+  nameWithType: LogEvent.PrimevalDebug
+  fullName: AbatabLogging.LogEvent.PrimevalDebug
+- uid: AbatabLogging.LogEvent.Session*
+  commentId: Overload:AbatabLogging.LogEvent.Session
+  name: Session
+  nameWithType: LogEvent.Session
+  fullName: AbatabLogging.LogEvent.Session
+- uid: AbatabLogging.LogEvent.Trace*
+  commentId: Overload:AbatabLogging.LogEvent.Trace
+  name: Trace
+  nameWithType: LogEvent.Trace
+  fullName: AbatabLogging.LogEvent.Trace
+- uid: AbatabLogging.LogEvent.WebConfigDebug*
+  commentId: Overload:AbatabLogging.LogEvent.WebConfigDebug
+  name: WebConfigDebug
+  nameWithType: LogEvent.WebConfigDebug
+  fullName: AbatabLogging.LogEvent.WebConfigDebug
+- uid: System.Collections.Generic.Dictionary{System.String,System.String}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  name: Dictionary<String, String>
+  nameWithType: Dictionary<String, String>
+  fullName: System.Collections.Generic.Dictionary<System.String, System.String>
+  nameWithType.vb: Dictionary(Of String, String)
+  fullName.vb: System.Collections.Generic.Dictionary(Of System.String, System.String)
+  name.vb: Dictionary(Of String, String)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic

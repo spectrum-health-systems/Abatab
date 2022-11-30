@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Hosting Abatab </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Hosting Abatab ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+
+<div align="center">
+
+  <img src="../../images/man-logo.png" alt="Abatab Manual" width="512">
+
+  <h4>
+    Abatab v22.12.0
+  </h4>
+
+</div>
+
+<hr>
+<h1 id="hosting-abatab" sourcefile="../../docs/man/hosting/man_hosting_home.md" sourcestartlinenumber="13" sourceendlinenumber="13">Hosting Abatab</h1>
+<p sourcefile="../../docs/man/hosting/man_hosting_home.md" sourcestartlinenumber="14" sourceendlinenumber="14">In order to use any web service that interfaces with myAvatar™, that web service needs to be <strong><em>hosted</em></strong> at a location that myAvatar™ has access to</p>
+<p sourcefile="../../docs/man/hosting/man_hosting_home.md" sourcestartlinenumber="16" sourceendlinenumber="16">There are two options for hosting Abatab:</p>
+<ol sourcefile="../../docs/man/hosting/man_hosting_home.md" sourcestartlinenumber="18" sourceendlinenumber="22">
+<li sourcefile="../../docs/man/hosting/man_hosting_home.md" sourcestartlinenumber="18" sourceendlinenumber="19"><p sourcefile="../../docs/man/hosting/man_hosting_home.md" sourcestartlinenumber="18" sourceendlinenumber="19"><strong>Host Abatab on Netsmart servers</strong><br>If your myAvatar™ environments are hosted by Netsmart, they can also host custom web services, including Abatab. If you choose to have Netsmart host Abatab, you can skip this section of the manual, and go straight to <a href="#importing-Abatab" data-raw-source="[importing Abatab](#importing-Abatab)" sourcefile="../../docs/man/hosting/man_hosting_home.md" sourcestartlinenumber="19" sourceendlinenumber="19">importing Abatab</a>. Please keep in mind that Abatab has not been tested in a Netsmart-hosted environment.</p>
+</li>
+<li sourcefile="../../docs/man/hosting/man_hosting_home.md" sourcestartlinenumber="21" sourceendlinenumber="22"><p sourcefile="../../docs/man/hosting/man_hosting_home.md" sourcestartlinenumber="21" sourceendlinenumber="22"><strong>Self-host Abatab</strong><br>If you self-host your myAvatar™ environments, or would rather have complete control over your custom web services, you can self-host them. <a href="man-hosting-using-iis" data-raw-source="[Here](man-hosting-using-iis)" sourcefile="../../docs/man/hosting/man_hosting_home.md" sourcestartlinenumber="22" sourceendlinenumber="22">Here</a> are some general guidelines to hosting Abatab using Microsoft IIS.</p>
+</li>
+</ol>
+<h1 id="using-microsoft-iis-to-host-abatab" sourcefile="../../docs/man/hosting/man_hosting_home.md" sourcestartlinenumber="24" sourceendlinenumber="24">Using Microsoft IIS to host Abatab</h1>
+<p sourcefile="../../docs/man/hosting/man_hosting_home.md" sourcestartlinenumber="25" sourceendlinenumber="25">You can probably host Abatab using many web server/operating systems combinations, but these guidelines will focus on getting Abatab setup on Microsoft IIS.</p>
+<p sourcefile="../../docs/man/hosting/man_hosting_home.md" sourcestartlinenumber="27" sourceendlinenumber="27">These are the steps that I used - twice! - to host Abatab in our environment, but they are more of a <em>guideline</em> than a perfect set of instructions. It&#39;s quite possible that I didn&#39;t follow best-practices, or maybe I have something setup incorrectly, so please use caution when following these steps. And since I (hopefully?) won&#39;t have to do this again, this section will probably not be updated.</p>
+<p sourcefile="../../docs/man/hosting/man_hosting_home.md" sourcestartlinenumber="29" sourceendlinenumber="29">This document assumes that you already have a IIS version 10 up and running.</p>
+<p sourcefile="../../docs/man/hosting/man_hosting_home.md" sourcestartlinenumber="31" sourceendlinenumber="31">Please keep in mind that myAvatar™ can only communicate with web services via the HTTPS:// protocol.</p>
+<h2 id="creating-an-application-pool" sourcefile="../../docs/man/hosting/man_hosting_home.md" sourcestartlinenumber="33" sourceendlinenumber="33">Creating an Application Pool</h2>
+<p sourcefile="../../docs/man/hosting/man_hosting_home.md" sourcestartlinenumber="34" sourceendlinenumber="34">I’m not sure this step is necessary, but it helps to make things a little more organized…maybe? I’m not an IIS expert, so I’m not sure.</p>
+<p sourcefile="../../docs/man/hosting/man_hosting_home.md" sourcestartlinenumber="36" sourceendlinenumber="36">From within IIS:</p>
+<ol sourcefile="../../docs/man/hosting/man_hosting_home.md" sourcestartlinenumber="37" sourceendlinenumber="38">
+<li sourcefile="../../docs/man/hosting/man_hosting_home.md" sourcestartlinenumber="37" sourceendlinenumber="37">Right-click the <strong>Application Pools</strong> connection</li>
+<li sourcefile="../../docs/man/hosting/man_hosting_home.md" sourcestartlinenumber="38" sourceendlinenumber="38">Choose <strong>Add Application Pool…</strong></li>
+</ol>
+<p sourcefile="../../docs/man/hosting/man_hosting_home.md" sourcestartlinenumber="40" sourceendlinenumber="40">The new application pool should be a <strong>&quot;.NET 4.0 CLR (.NET 4.5)&quot;</strong> pool. I’ve chosen .NET 4.5, since it lines up with the Netsmart ScriptLink Objects that we will be using.</p>
+<p sourcefile="../../docs/man/hosting/man_hosting_home.md" sourcestartlinenumber="42" sourceendlinenumber="42">I’ve named the application pool <em>AvatoolWebService</em>.</p>
+<h6 align="center">
+
+  <img src="../images/hosting-using-iis/iis-application-pool-633x187.png" width="633">
+  <br>
+  What my Application Pools setup looks like
+  <br>
+
+</h6>
+
+<h2 id="creating-a-new-site" sourcefile="../../docs/man/hosting/man_hosting_home.md" sourcestartlinenumber="53" sourceendlinenumber="53">Creating a new site</h2>
+<p sourcefile="../../docs/man/hosting/man_hosting_home.md" sourcestartlinenumber="54" sourceendlinenumber="54">From within IIS:</p>
+<ol sourcefile="../../docs/man/hosting/man_hosting_home.md" sourcestartlinenumber="55" sourceendlinenumber="61">
+<li sourcefile="../../docs/man/hosting/man_hosting_home.md" sourcestartlinenumber="55" sourceendlinenumber="55">Right-click the <strong>Sites</strong> connection</li>
+<li sourcefile="../../docs/man/hosting/man_hosting_home.md" sourcestartlinenumber="56" sourceendlinenumber="56">Choose <strong>Add Website</strong></li>
+<li sourcefile="../../docs/man/hosting/man_hosting_home.md" sourcestartlinenumber="57" sourceendlinenumber="57">The <strong>Site name</strong> should be: <em>AvatoolWebService</em></li>
+<li sourcefile="../../docs/man/hosting/man_hosting_home.md" sourcestartlinenumber="58" sourceendlinenumber="58">The <strong>Application pool</strong> should be: <em>AvatoolWebService</em></li>
+<li sourcefile="../../docs/man/hosting/man_hosting_home.md" sourcestartlinenumber="59" sourceendlinenumber="59">The <strong>Physical path</strong> should be: <em>/path/to/your/files/</em></li>
+<li sourcefile="../../docs/man/hosting/man_hosting_home.md" sourcestartlinenumber="60" sourceendlinenumber="60">Set the binding for port :80</li>
+<li sourcefile="../../docs/man/hosting/man_hosting_home.md" sourcestartlinenumber="61" sourceendlinenumber="61">Set the binding for port :443</li>
+</ol>
+<h6 align="center">
+
+  <img src="../images/hosting-using-iis/iis-add-website-362x414.png" width="362">
+  <br>
+  Adding a new website
+  <br>
+
+</h6>
+
+<h2 id="installing-the-aspnet-role" sourcefile="../../docs/man/hosting/man_hosting_home.md" sourcestartlinenumber="72" sourceendlinenumber="72">Installing the ASP.NET role</h2>
+<p sourcefile="../../docs/man/hosting/man_hosting_home.md" sourcestartlinenumber="73" sourceendlinenumber="73">ASP.NET is required by Web Services, so add the ASP.NET role to IIS.</p>
+<p sourcefile="../../docs/man/hosting/man_hosting_home.md" sourcestartlinenumber="75" sourceendlinenumber="75">Once that’s done, your IIS roles should look like this:</p>
+<h6 align="center">
+
+  <img src="../images/hosting-using-iis/iis-roles-295x650.png" width="295">
+  <br>
+  Probably?
+  <br>
+
+</h6>
+
+<h2 id="disabling-the-default-site" sourcefile="../../docs/man/hosting/man_hosting_home.md" sourcestartlinenumber="86" sourceendlinenumber="86">Disabling the default site</h2>
+<p sourcefile="../../docs/man/hosting/man_hosting_home.md" sourcestartlinenumber="87" sourceendlinenumber="87">Might as well do this? Probably?</p>
+<p sourcefile="../../docs/man/hosting/man_hosting_home.md" sourcestartlinenumber="89" sourceendlinenumber="89">From within IIS:</p>
+<ol sourcefile="../../docs/man/hosting/man_hosting_home.md" sourcestartlinenumber="90" sourceendlinenumber="92">
+<li sourcefile="../../docs/man/hosting/man_hosting_home.md" sourcestartlinenumber="90" sourceendlinenumber="90">Right-click the Default Web Site</li>
+<li sourcefile="../../docs/man/hosting/man_hosting_home.md" sourcestartlinenumber="91" sourceendlinenumber="91">Choose <strong>Manage Web Site</strong></li>
+<li sourcefile="../../docs/man/hosting/man_hosting_home.md" sourcestartlinenumber="92" sourceendlinenumber="92">Choose <strong>Stop</strong></li>
+</ol>
+<h2 id="enabling-directory-browsing" sourcefile="../../docs/man/hosting/man_hosting_home.md" sourcestartlinenumber="94" sourceendlinenumber="94">Enabling directory browsing</h2>
+<p sourcefile="../../docs/man/hosting/man_hosting_home.md" sourcestartlinenumber="95" sourceendlinenumber="95">From within IIS:</p>
+<ol sourcefile="../../docs/man/hosting/man_hosting_home.md" sourcestartlinenumber="96" sourceendlinenumber="98">
+<li sourcefile="../../docs/man/hosting/man_hosting_home.md" sourcestartlinenumber="96" sourceendlinenumber="96">Double-click on the <strong>Directory Browsing</strong> icon</li>
+<li sourcefile="../../docs/man/hosting/man_hosting_home.md" sourcestartlinenumber="97" sourceendlinenumber="97">Choose <strong>Enable</strong></li>
+<li sourcefile="../../docs/man/hosting/man_hosting_home.md" sourcestartlinenumber="98" sourceendlinenumber="98">Click <strong>Apply</strong></li>
+</ol>
+<h6 align="center">
+
+  <img src="../images/hosting-using-iis/iis-directory-browsing-633x204.png" width="633">
+  <br>
+  Enabling directory browsing
+  <br>
+
+</h6>
+
+<h2 id="verifying-the-new-site" sourcefile="../../docs/man/hosting/man_hosting_home.md" sourcestartlinenumber="109" sourceendlinenumber="109">Verifying the new site</h2>
+<p sourcefile="../../docs/man/hosting/man_hosting_home.md" sourcestartlinenumber="110" sourceendlinenumber="110">Your AvatoolWebService site should look like this:</p>
+<h6 align="center">
+
+  <img src="../images/hosting-using-iis/iis-site-home-633x206.png" width="633">
+  <br>
+  Maybe?
+  <br>
+
+</h6>
+
+<p sourcefile="../../docs/man/hosting/man_hosting_home.md" sourcestartlinenumber="121" sourceendlinenumber="121">At this point, you should be able to point a browser to your website, and see the landing page.</p>
+<hr>
+<p sourcefile="../../docs/man/hosting/man_hosting_home.md" sourcestartlinenumber="126" sourceendlinenumber="126">Abatab is developed by <a href="https://github.com/APrettyCoolProgram" data-raw-source="[A Pretty Cool Program][a-pretty-cool-program-url]" sourcefile="../../docs/man/hosting/man_hosting_home.md" sourcestartlinenumber="126" sourceendlinenumber="126">A Pretty Cool Program</a></p>
+<hr>
+<p sourcefile="../../docs/man/hosting/man_hosting_home.md" sourcestartlinenumber="130" sourceendlinenumber="130">Abatab is developed by <a href="https://github.com/APrettyCoolProgram" data-raw-source="[A Pretty Cool Program][a-pretty-cool-program-url]" sourcefile="../../docs/man/hosting/man_hosting_home.md" sourcestartlinenumber="130" sourceendlinenumber="130">A Pretty Cool Program</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,642 @@
+id: AbatabSession
+language: CSharp
+name:
+  Default: AbatabSession
+qualifiedName:
+  Default: AbatabSession
+type: Assembly
+modifiers: {}
+items:
+- id: AbatabSession
+  commentId: N:AbatabSession
+  language: CSharp
+  name:
+    CSharp: AbatabSession
+    VB: AbatabSession
+  nameWithType:
+    CSharp: AbatabSession
+    VB: AbatabSession
+  qualifiedName:
+    CSharp: AbatabSession
+    VB: AbatabSession
+  type: Namespace
+  assemblies:
+  - AbatabSession
+  modifiers: {}
+  items:
+  - id: AbatabSession.Build
+    commentId: T:AbatabSession.Build
+    language: CSharp
+    name:
+      CSharp: Build
+      VB: Build
+    nameWithType:
+      CSharp: Build
+      VB: Build
+    qualifiedName:
+      CSharp: AbatabSession.Build
+      VB: AbatabSession.Build
+    type: Class
+    assemblies:
+    - AbatabSession
+    namespace: AbatabSession
+    source:
+      id: Build
+      path: C:\IT\GitHub\SHS\Abatab\src\Core\AbatabSession\Build.cs
+      startLine: 19
+    summary: "\nLogic for session instances.\n"
+    example: []
+    syntax:
+      content:
+        CSharp: public static class Build
+        VB: Public Module Build
+    inheritance:
+    - System.Object
+    inheritedMembers:
+    - System.Object.ToString
+    - System.Object.Equals(System.Object)
+    - System.Object.Equals(System.Object,System.Object)
+    - System.Object.ReferenceEquals(System.Object,System.Object)
+    - System.Object.GetHashCode
+    - System.Object.GetType
+    - System.Object.MemberwiseClone
+    modifiers:
+      CSharp:
+      - public
+      - static
+      - class
+      VB:
+      - Public
+      - Module
+    items:
+    - id: AbatabSession.Build.NewSession(NTST.ScriptLinkService.Objects.OptionObject2015,System.String,System.Collections.Generic.Dictionary{System.String,System.String})
+      commentId: M:AbatabSession.Build.NewSession(NTST.ScriptLinkService.Objects.OptionObject2015,System.String,System.Collections.Generic.Dictionary{System.String,System.String})
+      language: CSharp
+      name:
+        CSharp: NewSession(OptionObject2015, String, Dictionary<String, String>)
+        VB: NewSession(OptionObject2015, String, Dictionary(Of String, String))
+      nameWithType:
+        CSharp: Build.NewSession(OptionObject2015, String, Dictionary<String, String>)
+        VB: Build.NewSession(OptionObject2015, String, Dictionary(Of String, String))
+      qualifiedName:
+        CSharp: AbatabSession.Build.NewSession(NTST.ScriptLinkService.Objects.OptionObject2015, System.String, System.Collections.Generic.Dictionary<System.String, System.String>)
+        VB: AbatabSession.Build.NewSession(NTST.ScriptLinkService.Objects.OptionObject2015, System.String, System.Collections.Generic.Dictionary(Of System.String, System.String))
+      type: Method
+      assemblies:
+      - AbatabSession
+      namespace: AbatabSession
+      source:
+        id: NewSession
+        path: C:\IT\GitHub\SHS\Abatab\src\Core\AbatabSession\Build.cs
+        startLine: 27
+      summary: "\nBuilds configuration settings for an Abatab session.\n"
+      example: []
+      syntax:
+        content:
+          CSharp: public static Session NewSession(OptionObject2015 sentOptObj, string scriptParameter, Dictionary<string, string> abatabSettings)
+          VB: Public Shared Function NewSession(sentOptObj As OptionObject2015, scriptParameter As String, abatabSettings As Dictionary(Of String, String)) As Session
+        parameters:
+        - id: sentOptObj
+          type: NTST.ScriptLinkService.Objects.OptionObject2015
+          description: The original OptionObject sent from Avatar.
+        - id: scriptParameter
+          type: System.String
+          description: The script parameter request from Avatar.
+        - id: abatabSettings
+          type: System.Collections.Generic.Dictionary{System.String,System.String}
+        return:
+          type: AbatabData.Session
+          description: Session configuration settings.
+      overload: AbatabSession.Build.NewSession*
+      modifiers:
+        CSharp:
+        - public
+        - static
+        VB:
+        - Public
+        - Shared
+references:
+  System:
+    name:
+      CSharp:
+      - name: System
+        nameWithType: System
+        qualifiedName: System
+        isExternal: true
+      VB:
+      - name: System
+        nameWithType: System
+        qualifiedName: System
+    isDefinition: true
+    commentId: N:System
+  System.Object:
+    name:
+      CSharp:
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      VB:
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+    isDefinition: true
+    parent: System
+    commentId: T:System.Object
+  System.Object.ToString:
+    name:
+      CSharp:
+      - id: System.Object.ToString
+        name: ToString
+        nameWithType: Object.ToString
+        qualifiedName: System.Object.ToString
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: System.Object.ToString
+        name: ToString
+        nameWithType: Object.ToString
+        qualifiedName: System.Object.ToString
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.ToString
+  System.Object.Equals(System.Object):
+    name:
+      CSharp:
+      - id: System.Object.Equals(System.Object)
+        name: Equals
+        nameWithType: Object.Equals
+        qualifiedName: System.Object.Equals
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: System.Object.Equals(System.Object)
+        name: Equals
+        nameWithType: Object.Equals
+        qualifiedName: System.Object.Equals
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.Equals(System.Object)
+  System.Object.Equals(System.Object,System.Object):
+    name:
+      CSharp:
+      - id: System.Object.Equals(System.Object,System.Object)
+        name: Equals
+        nameWithType: Object.Equals
+        qualifiedName: System.Object.Equals
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: System.Object.Equals(System.Object,System.Object)
+        name: Equals
+        nameWithType: Object.Equals
+        qualifiedName: System.Object.Equals
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.Equals(System.Object,System.Object)
+  System.Object.ReferenceEquals(System.Object,System.Object):
+    name:
+      CSharp:
+      - id: System.Object.ReferenceEquals(System.Object,System.Object)
+        name: ReferenceEquals
+        nameWithType: Object.ReferenceEquals
+        qualifiedName: System.Object.ReferenceEquals
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: System.Object.ReferenceEquals(System.Object,System.Object)
+        name: ReferenceEquals
+        nameWithType: Object.ReferenceEquals
+        qualifiedName: System.Object.ReferenceEquals
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  System.Object.GetHashCode:
+    name:
+      CSharp:
+      - id: System.Object.GetHashCode
+        name: GetHashCode
+        nameWithType: Object.GetHashCode
+        qualifiedName: System.Object.GetHashCode
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: System.Object.GetHashCode
+        name: GetHashCode
+        nameWithType: Object.GetHashCode
+        qualifiedName: System.Object.GetHashCode
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.GetHashCode
+  System.Object.GetType:
+    name:
+      CSharp:
+      - id: System.Object.GetType
+        name: GetType
+        nameWithType: Object.GetType
+        qualifiedName: System.Object.GetType
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: System.Object.GetType
+        name: GetType
+        nameWithType: Object.GetType
+        qualifiedName: System.Object.GetType
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.GetType
+  System.Object.MemberwiseClone:
+    name:
+      CSharp:
+      - id: System.Object.MemberwiseClone
+        name: MemberwiseClone
+        nameWithType: Object.MemberwiseClone
+        qualifiedName: System.Object.MemberwiseClone
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: System.Object.MemberwiseClone
+        name: MemberwiseClone
+        nameWithType: Object.MemberwiseClone
+        qualifiedName: System.Object.MemberwiseClone
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.MemberwiseClone
+  AbatabData:
+    name:
+      CSharp:
+      - name: AbatabData
+        nameWithType: AbatabData
+        qualifiedName: AbatabData
+      VB:
+      - name: AbatabData
+        nameWithType: AbatabData
+        qualifiedName: AbatabData
+    isDefinition: true
+    commentId: N:AbatabData
+  AbatabData.Session:
+    name:
+      CSharp:
+      - id: AbatabData.Session
+        name: Session
+        nameWithType: Session
+        qualifiedName: AbatabData.Session
+      VB:
+      - id: AbatabData.Session
+        name: Session
+        nameWithType: Session
+        qualifiedName: AbatabData.Session
+    isDefinition: true
+    parent: AbatabData
+    commentId: T:AbatabData.Session
+  NTST.ScriptLinkService.Objects:
+    name:
+      CSharp:
+      - name: NTST.ScriptLinkService.Objects
+        nameWithType: NTST.ScriptLinkService.Objects
+        qualifiedName: NTST.ScriptLinkService.Objects
+        isExternal: true
+      VB:
+      - name: NTST.ScriptLinkService.Objects
+        nameWithType: NTST.ScriptLinkService.Objects
+        qualifiedName: NTST.ScriptLinkService.Objects
+    isDefinition: true
+    commentId: N:NTST.ScriptLinkService.Objects
+  NTST.ScriptLinkService.Objects.OptionObject2015:
+    name:
+      CSharp:
+      - id: NTST.ScriptLinkService.Objects.OptionObject2015
+        name: OptionObject2015
+        nameWithType: OptionObject2015
+        qualifiedName: NTST.ScriptLinkService.Objects.OptionObject2015
+        isExternal: true
+      VB:
+      - id: NTST.ScriptLinkService.Objects.OptionObject2015
+        name: OptionObject2015
+        nameWithType: OptionObject2015
+        qualifiedName: NTST.ScriptLinkService.Objects.OptionObject2015
+        isExternal: true
+    isDefinition: true
+    parent: NTST.ScriptLinkService.Objects
+    commentId: T:NTST.ScriptLinkService.Objects.OptionObject2015
+  System.String:
+    name:
+      CSharp:
+      - id: System.String
+        name: String
+        nameWithType: String
+        qualifiedName: System.String
+        isExternal: true
+      VB:
+      - id: System.String
+        name: String
+        nameWithType: String
+        qualifiedName: System.String
+        isExternal: true
+    isDefinition: true
+    parent: System
+    commentId: T:System.String
+  System.Collections.Generic.Dictionary`2:
+    name:
+      CSharp:
+      - id: System.Collections.Generic.Dictionary`2
+        name: Dictionary
+        nameWithType: Dictionary
+        qualifiedName: System.Collections.Generic.Dictionary
+        isExternal: true
+      - name: <
+        nameWithType: <
+        qualifiedName: <
+      - name: TKey
+        nameWithType: TKey
+        qualifiedName: TKey
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - name: TValue
+        nameWithType: TValue
+        qualifiedName: TValue
+      - name: '>'
+        nameWithType: '>'
+        qualifiedName: '>'
+      VB:
+      - id: System.Collections.Generic.Dictionary`2
+        name: Dictionary
+        nameWithType: Dictionary
+        qualifiedName: System.Collections.Generic.Dictionary
+        isExternal: true
+      - name: '(Of '
+        nameWithType: '(Of '
+        qualifiedName: '(Of '
+      - name: TKey
+        nameWithType: TKey
+        qualifiedName: TKey
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - name: TValue
+        nameWithType: TValue
+        qualifiedName: TValue
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    commentId: T:System.Collections.Generic.Dictionary`2
+  System.Collections.Generic:
+    name:
+      CSharp:
+      - name: System.Collections.Generic
+        nameWithType: System.Collections.Generic
+        qualifiedName: System.Collections.Generic
+        isExternal: true
+      VB:
+      - name: System.Collections.Generic
+        nameWithType: System.Collections.Generic
+        qualifiedName: System.Collections.Generic
+    isDefinition: true
+    commentId: N:System.Collections.Generic
+  System.Collections.Generic.Dictionary{System.String,System.String}:
+    name:
+      CSharp:
+      - id: System.Collections.Generic.Dictionary`2
+        name: Dictionary
+        nameWithType: Dictionary
+        qualifiedName: System.Collections.Generic.Dictionary
+        isExternal: true
+      - name: <
+        nameWithType: <
+        qualifiedName: <
+      - id: System.String
+        name: String
+        nameWithType: String
+        qualifiedName: System.String
+        isExternal: true
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: System.String
+        name: String
+        nameWithType: String
+        qualifiedName: System.String
+        isExternal: true
+      - name: '>'
+        nameWithType: '>'
+        qualifiedName: '>'
+      VB:
+      - id: System.Collections.Generic.Dictionary`2
+        name: Dictionary
+        nameWithType: Dictionary
+        qualifiedName: System.Collections.Generic.Dictionary
+        isExternal: true
+      - name: '(Of '
+        nameWithType: '(Of '
+        qualifiedName: '(Of '
+      - id: System.String
+        name: String
+        nameWithType: String
+        qualifiedName: System.String
+        isExternal: true
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: System.String
+        name: String
+        nameWithType: String
+        qualifiedName: System.String
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: false
+    definition: System.Collections.Generic.Dictionary`2
+    parent: System.Collections.Generic
+    commentId: T:System.Collections.Generic.Dictionary{System.String,System.String}
+  AbatabSession.Build.NewSession*:
+    name:
+      CSharp:
+      - id: AbatabSession.Build.NewSession*
+        name: NewSession
+        nameWithType: Build.NewSession
+        qualifiedName: AbatabSession.Build.NewSession
+      VB:
+      - id: AbatabSession.Build.NewSession*
+        name: NewSession
+        nameWithType: Build.NewSession
+        qualifiedName: AbatabSession.Build.NewSession
+    isDefinition: true
+    commentId: Overload:AbatabSession.Build.NewSession
+  AbatabSession.Build:
+    name:
+      CSharp:
+      - id: AbatabSession.Build
+        name: Build
+        nameWithType: Build
+        qualifiedName: AbatabSession.Build
+      VB:
+      - id: AbatabSession.Build
+        name: Build
+        nameWithType: Build
+        qualifiedName: AbatabSession.Build
+    isDefinition: true
+    commentId: T:AbatabSession.Build
+  AbatabSession:
+    name:
+      CSharp:
+      - name: AbatabSession
+        nameWithType: AbatabSession
+        qualifiedName: AbatabSession
+      VB:
+      - name: AbatabSession
+        nameWithType: AbatabSession
+        qualifiedName: AbatabSession
+    isDefinition: true
+    commentId: N:AbatabSession

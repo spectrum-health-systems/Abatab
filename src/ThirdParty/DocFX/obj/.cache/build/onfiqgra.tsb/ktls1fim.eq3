@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>AbatabMode </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="AbatabMode ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+
+<div align="center">
+
+  <img src="../../images/man-logo.png" alt="Abatab Manual" width="512">
+
+  <h4>
+    Abatab v22.12.0
+  </h4>
+
+</div>
+
+<hr>
+<p sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="13" sourceendlinenumber="13">The Web.config file contains the local settings for Abatab. These settings are also in Settings.settings.</p>
+<h1 id="abatabmode" sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="15" sourceendlinenumber="15">AbatabMode</h1>
+<p sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="17" sourceendlinenumber="18"><strong>DESCRIPTION</strong><br>Determines which mode Abatab is currently using.</p>
+<p sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="20" sourceendlinenumber="20"><strong>OPTIONS</strong> </p>
+<table sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="21" sourceendlinenumber="25">
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><code>enabled</code></strong></td>
+<td>All Abatab functionality is available.</td>
+</tr>
+<tr>
+<td><code>disabled</code></td>
+<td>Abatab is disabled, and its functionality is not available.</td>
+</tr>
+<tr>
+<td><code>passthrough</code></td>
+<td>Abatab is enabled, and all functionality is available, but no changes are made to Avatar.</td>
+</tr>
+</tbody>
+</table>
+<p sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="27" sourceendlinenumber="27"><strong>NOTES</strong> </p>
+<ul sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="28" sourceendlinenumber="28">
+<li sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="28" sourceendlinenumber="28">None.</li>
+</ul>
+<hr>
+<h1 id="abatabroot" sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="32" sourceendlinenumber="32">AbatabRoot</h1>
+<p sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="34" sourceendlinenumber="35"><strong>DESCRIPTION</strong><br>The base Abatab root directory.</p>
+<p sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="37" sourceendlinenumber="37"><strong>NOTES</strong> </p>
+<ul sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="38" sourceendlinenumber="40">
+<li sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="38" sourceendlinenumber="39">At runtime The <code>AvatarEnvironment</code> value is added to the end of <code>AbatabRoot</code> to form the complete path.<br>For example, <code>AbatabRoot</code> is &quot;C:\Abatab_&quot;, and <code>AvatarEnvironment</code> is &quot;LIVE&quot;, the root directory at runtime would be &quot;C:\Abatab_LIVE&quot;.</li>
+<li sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="40" sourceendlinenumber="40">This should be left at <code>C:\Abatab_</code></li>
+</ul>
+<hr>
+<h1 id="avatarenvironment" sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="44" sourceendlinenumber="44">AvatarEnvironment</h1>
+<p sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="46" sourceendlinenumber="47"><strong>DESCRIPTION</strong><br>Defines the Avatar environment where Abatab will be used.</p>
+<p sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="49" sourceendlinenumber="49"><strong>OPTIONS</strong> </p>
+<table sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="50" sourceendlinenumber="54">
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><code>LIVE</code></strong></td>
+<td>Production environment.</td>
+</tr>
+<tr>
+<td><code>UAT</code></td>
+<td>Testing environment.</td>
+</tr>
+<tr>
+<td><code>SBOX</code></td>
+<td>Sandbox environment.</td>
+</tr>
+</tbody>
+</table>
+<p sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="56" sourceendlinenumber="56"><strong>NOTES</strong> </p>
+<ul sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="57" sourceendlinenumber="57">
+<li sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="57" sourceendlinenumber="57">None.</li>
+</ul>
+<hr>
+<h1 id="debugmode" sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="61" sourceendlinenumber="61">DebugMode</h1>
+<p sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="63" sourceendlinenumber="64"><strong>DESCRIPTION</strong><br>Indicates if Abatab is in debugging mode.</p>
+<p sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="66" sourceendlinenumber="66"><strong>OPTIONS</strong> </p>
+<table sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="67" sourceendlinenumber="70">
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><code>disabled</code></strong></td>
+<td>Debugging mode is disabled.</td>
+</tr>
+<tr>
+<td><code>enabled</code></td>
+<td>Debugging mode is enabled.</td>
+</tr>
+</tbody>
+</table>
+<p sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="72" sourceendlinenumber="72"><strong>NOTES</strong> </p>
+<ul sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="73" sourceendlinenumber="73">
+<li sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="73" sourceendlinenumber="73">Debug mode can have a significant impact on performance, and should not be enabled in production environments.</li>
+</ul>
+<hr>
+<h1 id="debuglogroot" sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="77" sourceendlinenumber="77">DebugLogRoot</h1>
+<p sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="79" sourceendlinenumber="80"><strong>DESCRIPTION</strong><br>The debugging root directory.</p>
+<p sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="82" sourceendlinenumber="82"><strong>NOTES</strong> </p>
+<ul sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="83" sourceendlinenumber="83">
+<li sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="83" sourceendlinenumber="83">This should be left at <code>logs\debug</code></li>
+</ul>
+<hr>
+<h1 id="logmode" sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="87" sourceendlinenumber="87">LogMode</h1>
+<p sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="89" sourceendlinenumber="90"><strong>DESCRIPTION</strong><br>Defines the Avatar environment where Abatab will be used.</p>
+<p sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="92" sourceendlinenumber="92"><strong>OPTIONS</strong> </p>
+<table sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="93" sourceendlinenumber="100">
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><code>session</code></strong></td>
+<td>Create session logs.</td>
+</tr>
+<tr>
+<td><code>trace</code></td>
+<td>Create trace logs.</td>
+</tr>
+<tr>
+<td><code>error</code></td>
+<td>Create error logs.</td>
+</tr>
+<tr>
+<td><code>warning</code></td>
+<td>Create warning logs.</td>
+</tr>
+<tr>
+<td><code>all</code></td>
+<td>Create all log types.</td>
+</tr>
+<tr>
+<td><code>none</code></td>
+<td>Do not create any log files.</td>
+</tr>
+</tbody>
+</table>
+<p sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="102" sourceendlinenumber="102"><strong>NOTES</strong> </p>
+<ul sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="103" sourceendlinenumber="104">
+<li sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="103" sourceendlinenumber="104">You can create multiple log types by separating them with a &#39;-&#39;.<br>For example, <code>LogMode=error-trace</code> will create both error <em>and</em> trace logs.</li>
+</ul>
+<hr>
+<h1 id="logdetail" sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="108" sourceendlinenumber="108">LogDetail</h1>
+<p sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="110" sourceendlinenumber="111"><strong>DESCRIPTION</strong><br>Defines the level of logging detail</p>
+<p sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="113" sourceendlinenumber="113"><strong>OPTIONS</strong> </p>
+<table sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="114" sourceendlinenumber="116">
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Not used yet</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="118" sourceendlinenumber="118"><strong>NOTES</strong> </p>
+<ul sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="119" sourceendlinenumber="119">
+<li sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="119" sourceendlinenumber="119">None.</li>
+</ul>
+<h1 id="logwritedelay" sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="121" sourceendlinenumber="121">LogWriteDelay</h1>
+<p sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="123" sourceendlinenumber="124"><strong>DESCRIPTION</strong><br>Sets a delay (in milliseconds) before writing a log file.</p>
+<p sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="126" sourceendlinenumber="126"><strong>NOTES</strong> </p>
+<ul sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="127" sourceendlinenumber="129">
+<li sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="127" sourceendlinenumber="127">Inserting a delay before writing a log file ensures that the timestamp in the filename is unique, and all logs are captured.</li>
+<li sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="128" sourceendlinenumber="128">Since this delay is applied to all log types, setting this too high will have a significant impact on performance.</li>
+<li sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="129" sourceendlinenumber="129">This should be left at <code>10</code></li>
+</ul>
+<hr>
+<h1 id="abatabfallbackusername" sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="133" sourceendlinenumber="133">AbatabFallbackUserName</h1>
+<p sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="135" sourceendlinenumber="136"><strong>DESCRIPTION</strong><br>Ensures there is valid Abatab user.</p>
+<p sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="138" sourceendlinenumber="138"><strong>NOTES</strong> </p>
+<ul sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="139" sourceendlinenumber="141">
+<li sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="139" sourceendlinenumber="139">The AbatabUserName is the same as the Avatar Username stored in <code>sentOptObj.OptionUserId</code>, and is used to create session information/folders.</li>
+<li sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="140" sourceendlinenumber="140">If for some reason the <code>sentOptObj.OptionUserId</code> is empty, the AbatabUserName will be set to this fallback value.</li>
+<li sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="141" sourceendlinenumber="141">This should be left at <code>_Abatab</code></li>
+</ul>
+<hr>
+<h1 id="modtestingmode" sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="145" sourceendlinenumber="145">ModTestingMode</h1>
+<p sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="147" sourceendlinenumber="148"><strong>DESCRIPTION</strong><br>Indicates if the Abatab Testing Module functionality is enabled.</p>
+<p sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="150" sourceendlinenumber="150"><strong>OPTIONS</strong> </p>
+<table sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="151" sourceendlinenumber="154">
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><code>enabled</code></strong></td>
+<td>The Testing Module functionality is enabled.</td>
+</tr>
+<tr>
+<td><code>disabled</code></td>
+<td>The Testing Module functionality is disabled.</td>
+</tr>
+</tbody>
+</table>
+<p sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="156" sourceendlinenumber="156"><strong>NOTES</strong> </p>
+<ul sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="157" sourceendlinenumber="158">
+<li sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="157" sourceendlinenumber="157">The Testing Module is generally used while developing Abatab, but may have some use in production.</li>
+<li sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="158" sourceendlinenumber="158">There are no performance issues when the Testing Module functionality is enabled.</li>
+</ul>
+<hr>
+<h1 id="modquickmedordermode" sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="162" sourceendlinenumber="162">ModQuickMedOrderMode</h1>
+<h1 id="modquickmedorderauthorizedusers" sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="164" sourceendlinenumber="164">ModQuickMedOrderAuthorizedUsers</h1>
+<h1 id="modquickmedorderdosepercentboundary" sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="166" sourceendlinenumber="166">ModQuickMedOrderDosePercentBoundary</h1>
+<h1 id="modquickmedorderdosemilligramsboundary" sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="168" sourceendlinenumber="168">ModQuickMedOrderDoseMilligramsBoundary</h1>
+<h1 id="modprototypemode" sourcefile="../../docs/man/configuration/man_configuration_local-settings.md" sourcestartlinenumber="170" sourceendlinenumber="170">ModPrototypeMode</h1>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

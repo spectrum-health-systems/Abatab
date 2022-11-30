@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Abatab Roadmap </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Abatab Roadmap ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="abatab-roadmap">Abatab Roadmap</h1>
+
+<h2 id="22120-december-1-2022">22.12.0 (December 1, 2022)</h2>
+<h3 id="abatab">Abatab</h3>
+<ul>
+<li><strong>[-]</strong> <code>ModQuickMedOrderDosePercentBoundary</code> should be <code>25</code>, not <code>.25</code></li>
+<li><strong>[-]</strong> Cleanup project references</li>
+<li><strong>[-]</strong> Verify Settings.settings order matches objects (including WebConfig.cs)</li>
+<li><strong>[-]</strong> Cleanup public/private/internal</li>
+<li><strong>[-]</strong> Add the Abatab version to related log files</li>
+<li><strong>[-]</strong> Verify that the AbatabOption doesn&#39;t get in the way of anything</li>
+<li><strong>[-]</strong> Experiment with &lt;10ms log file delay</li>
+<li><strong>[-]</strong> Better method names so user knows what/where things point from other projects. ex. AbatabOptionObject.FinalObj.Finalize(abatabSession) should be something like &quot;FinalOptObj.Finalize&quot;, so we can declare the project in the usings section</li>
+</ul>
+<h4 id="abatababatabasmxcs">Abatab.Abatab.asmx.cs</h4>
+<ul>
+<li>No changes</li>
+</ul>
+<h4 id="abatabroundhousecs">Abatab.Roundhouse.cs</h4>
+<h4 id="abatabwebconfigcs">Abatab.WebConfig.cs</h4>
+<h3 id="core-functionality">Core functionality</h3>
+<ul>
+<li><strong>[X]</strong> Test to make sure that replacing DLL files works as expected. (22.12.0.0-testbuild+221115.0903)</li>
+<li><strong>[-]</strong> Confirm that we don&#39;t need other .DLLs (e.g., Roslyn stuff)</li>
+</ul>
+<h4 id="abatabdata">AbatabData</h4>
+<ul>
+<li>No changes</li>
+</ul>
+<h4 id="abatablogging">AbatabLogging</h4>
+<ul>
+<li><strong>[-]</strong> Test all log types to make sure they are written to the correct folder</li>
+<li><strong>[-]</strong> Test debugMode to make sure that &quot;on&quot; -&gt; &quot;enabled&quot; is working correctly</li>
+<li><strong>[-]</strong> Warning logs</li>
+<li><strong>[-]</strong> Log all QMO data in session log (e.g., LastOrderScheduledText)</li>
+<li><strong>[-]</strong> Fix access log filename/contents</li>
+<li><strong>[-]</strong> Warning logs</li>
+<li><strong>[-]</strong> Verify &quot;none&quot; works</li>
+<li><strong>[-]</strong> Veriry all combinations of log events work</li>
+<li><strong>[-]</strong> Logging detail level (e.g., &quot;TRACE_01&quot;, &quot;TRACE_02&quot;, etc.)</li>
+<li><strong>[-]</strong> Error logs</li>
+<li><strong>[-]</strong> Lost logs</li>
+</ul>
+<h4 id="abataboptionobject">AbatabOptionObject</h4>
+<p>No changes</p>
+<h4 id="abatabsession">AbatabSession</h4>
+<p>No changes</p>
+<h4 id="abatabsystem">AbatabSystem</h4>
+<p>No changes</p>
+<h3 id="abatab-modules">Abatab Modules</h3>
+<h4 id="modcommon">ModCommon</h4>
+<p>No changes</p>
+<h4 id="modprogressnote">ModProgressNote</h4>
+<ul>
+<li><strong>[-]</strong> Test ProgressNote.??</li>
+<li><strong>[-]</strong> Verify valid user settings</li>
+</ul>
+<h4 id="modprototype">ModPrototype</h4>
+<p>No changes</p>
+<h4 id="modquickmedorder">ModQuickMedOrder</h4>
+<ul>
+<li><strong>[-]</strong> Test Dose.VerifyUnderMaxPercentIncrease</li>
+<li><strong>[-]</strong> Test Dose.VerifyUnderMaxMilligramIncrease</li>
+<li><strong>[-]</strong> Test Dose.VerifyUnderMaxPercentIncrease</li>
+<li><strong>[-]</strong> Verify authorized user settings</li>
+</ul>
+<h4 id="modtesting">ModTesting</h4>
+<p>No changes</p>
+<h3 id="documentation">Documentation</h3>
+<p><strong>[-]</strong> Cleanup DocFX folders
+<strong>[-]</strong> Complete all XML documentation</p>
+<hr>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,738 @@
+id: ModCommon
+language: CSharp
+name:
+  Default: ModCommon
+qualifiedName:
+  Default: ModCommon
+type: Assembly
+modifiers: {}
+items:
+- id: ModCommon
+  commentId: N:ModCommon
+  language: CSharp
+  name:
+    CSharp: ModCommon
+    VB: ModCommon
+  nameWithType:
+    CSharp: ModCommon
+    VB: ModCommon
+  qualifiedName:
+    CSharp: ModCommon
+    VB: ModCommon
+  type: Namespace
+  assemblies:
+  - ModCommon
+  modifiers: {}
+  items:
+  - id: ModCommon.VerifyAccess
+    commentId: T:ModCommon.VerifyAccess
+    language: CSharp
+    name:
+      CSharp: VerifyAccess
+      VB: VerifyAccess
+    nameWithType:
+      CSharp: VerifyAccess
+      VB: VerifyAccess
+    qualifiedName:
+      CSharp: ModCommon.VerifyAccess
+      VB: ModCommon.VerifyAccess
+    type: Class
+    assemblies:
+    - ModCommon
+    namespace: ModCommon
+    source:
+      id: VerifyAccess
+      path: C:\IT\GitHub\SHS\Abatab\src\Modules\ModCommon\VerifyAccess.cs
+      startLine: 13
+    summary: "\n\n"
+    example: []
+    syntax:
+      content:
+        CSharp: public class VerifyAccess
+        VB: Public Class VerifyAccess
+    inheritance:
+    - System.Object
+    inheritedMembers:
+    - System.Object.ToString
+    - System.Object.Equals(System.Object)
+    - System.Object.Equals(System.Object,System.Object)
+    - System.Object.ReferenceEquals(System.Object,System.Object)
+    - System.Object.GetHashCode
+    - System.Object.GetType
+    - System.Object.MemberwiseClone
+    modifiers:
+      CSharp:
+      - public
+      - class
+      VB:
+      - Public
+      - Class
+    items:
+    - id: ModCommon.VerifyAccess.CheckIfValidUser(System.String,System.String)
+      commentId: M:ModCommon.VerifyAccess.CheckIfValidUser(System.String,System.String)
+      language: CSharp
+      name:
+        CSharp: CheckIfValidUser(String, String)
+        VB: CheckIfValidUser(String, String)
+      nameWithType:
+        CSharp: VerifyAccess.CheckIfValidUser(String, String)
+        VB: VerifyAccess.CheckIfValidUser(String, String)
+      qualifiedName:
+        CSharp: ModCommon.VerifyAccess.CheckIfValidUser(System.String, System.String)
+        VB: ModCommon.VerifyAccess.CheckIfValidUser(System.String, System.String)
+      type: Method
+      assemblies:
+      - ModCommon
+      namespace: ModCommon
+      source:
+        id: CheckIfValidUser
+        path: C:\IT\GitHub\SHS\Abatab\src\Modules\ModCommon\VerifyAccess.cs
+        startLine: 21
+      summary: "\n\n"
+      example: []
+      syntax:
+        content:
+          CSharp: public static bool CheckIfValidUser(string abatabUser, string validUsers)
+          VB: Public Shared Function CheckIfValidUser(abatabUser As String, validUsers As String) As Boolean
+        parameters:
+        - id: abatabUser
+          type: System.String
+          description: ''
+        - id: validUsers
+          type: System.String
+          description: ''
+        return:
+          type: System.Boolean
+          description: ''
+      overload: ModCommon.VerifyAccess.CheckIfValidUser*
+      modifiers:
+        CSharp:
+        - public
+        - static
+        VB:
+        - Public
+        - Shared
+    - id: ModCommon.VerifyAccess.InvalidUser(AbatabData.Session)
+      commentId: M:ModCommon.VerifyAccess.InvalidUser(AbatabData.Session)
+      language: CSharp
+      name:
+        CSharp: InvalidUser(Session)
+        VB: InvalidUser(Session)
+      nameWithType:
+        CSharp: VerifyAccess.InvalidUser(Session)
+        VB: VerifyAccess.InvalidUser(Session)
+      qualifiedName:
+        CSharp: ModCommon.VerifyAccess.InvalidUser(AbatabData.Session)
+        VB: ModCommon.VerifyAccess.InvalidUser(AbatabData.Session)
+      type: Method
+      assemblies:
+      - ModCommon
+      namespace: ModCommon
+      source:
+        id: InvalidUser
+        path: C:\IT\GitHub\SHS\Abatab\src\Modules\ModCommon\VerifyAccess.cs
+        startLine: 31
+      summary: "\n\n"
+      example: []
+      syntax:
+        content:
+          CSharp: public static void InvalidUser(Session abatabSession)
+          VB: Public Shared Sub InvalidUser(abatabSession As Session)
+        parameters:
+        - id: abatabSession
+          type: AbatabData.Session
+          description: ''
+      overload: ModCommon.VerifyAccess.InvalidUser*
+      modifiers:
+        CSharp:
+        - public
+        - static
+        VB:
+        - Public
+        - Shared
+  - id: ModCommon.Verify
+    commentId: T:ModCommon.Verify
+    language: CSharp
+    name:
+      CSharp: Verify
+      VB: Verify
+    nameWithType:
+      CSharp: Verify
+      VB: Verify
+    qualifiedName:
+      CSharp: ModCommon.Verify
+      VB: ModCommon.Verify
+    type: Class
+    assemblies:
+    - ModCommon
+    namespace: ModCommon
+    source:
+      id: Verify
+      path: C:\IT\GitHub\SHS\Abatab\src\Modules\ModCommon\Confirm.cs
+      startLine: 10
+    summary: "\nConfirms various things.\n"
+    example: []
+    syntax:
+      content:
+        CSharp: public static class Verify
+        VB: Public Module Verify
+    inheritance:
+    - System.Object
+    inheritedMembers:
+    - System.Object.ToString
+    - System.Object.Equals(System.Object)
+    - System.Object.Equals(System.Object,System.Object)
+    - System.Object.ReferenceEquals(System.Object,System.Object)
+    - System.Object.GetHashCode
+    - System.Object.GetType
+    - System.Object.MemberwiseClone
+    modifiers:
+      CSharp:
+      - public
+      - static
+      - class
+      VB:
+      - Public
+      - Module
+    items:
+    - id: ModCommon.Verify.ValidUser(System.String,System.String)
+      commentId: M:ModCommon.Verify.ValidUser(System.String,System.String)
+      language: CSharp
+      name:
+        CSharp: ValidUser(String, String)
+        VB: ValidUser(String, String)
+      nameWithType:
+        CSharp: Verify.ValidUser(String, String)
+        VB: Verify.ValidUser(String, String)
+      qualifiedName:
+        CSharp: ModCommon.Verify.ValidUser(System.String, System.String)
+        VB: ModCommon.Verify.ValidUser(System.String, System.String)
+      type: Method
+      assemblies:
+      - ModCommon
+      namespace: ModCommon
+      source:
+        id: ValidUser
+        path: C:\IT\GitHub\SHS\Abatab\src\Modules\ModCommon\Confirm.cs
+        startLine: 18
+      summary: "\nConfirm that a userName exists in the list of valid userNames.\n"
+      example: []
+      syntax:
+        content:
+          CSharp: public static bool ValidUser(string userName, string validUsers)
+          VB: Public Shared Function ValidUser(userName As String, validUsers As String) As Boolean
+        parameters:
+        - id: userName
+          type: System.String
+          description: ''
+        - id: validUsers
+          type: System.String
+          description: ''
+        return:
+          type: System.Boolean
+          description: ''
+      overload: ModCommon.Verify.ValidUser*
+      modifiers:
+        CSharp:
+        - public
+        - static
+        VB:
+        - Public
+        - Shared
+  - id: ModCommon.Roundhouse
+    commentId: T:ModCommon.Roundhouse
+    language: CSharp
+    name:
+      CSharp: Roundhouse
+      VB: Roundhouse
+    nameWithType:
+      CSharp: Roundhouse
+      VB: Roundhouse
+    qualifiedName:
+      CSharp: ModCommon.Roundhouse
+      VB: ModCommon.Roundhouse
+    type: Class
+    assemblies:
+    - ModCommon
+    namespace: ModCommon
+    source:
+      id: Roundhouse
+      path: C:\IT\GitHub\SHS\Abatab\src\Modules\ModCommon\Roundhouse.cs
+      startLine: 10
+    summary: "\n\n"
+    example: []
+    syntax:
+      content:
+        CSharp: public class Roundhouse
+        VB: Public Class Roundhouse
+    inheritance:
+    - System.Object
+    inheritedMembers:
+    - System.Object.ToString
+    - System.Object.Equals(System.Object)
+    - System.Object.Equals(System.Object,System.Object)
+    - System.Object.ReferenceEquals(System.Object,System.Object)
+    - System.Object.GetHashCode
+    - System.Object.GetType
+    - System.Object.MemberwiseClone
+    modifiers:
+      CSharp:
+      - public
+      - class
+      VB:
+      - Public
+      - Class
+    items: []
+references:
+  System:
+    name:
+      CSharp:
+      - name: System
+        nameWithType: System
+        qualifiedName: System
+        isExternal: true
+      VB:
+      - name: System
+        nameWithType: System
+        qualifiedName: System
+    isDefinition: true
+    commentId: N:System
+  System.Object:
+    name:
+      CSharp:
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      VB:
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+    isDefinition: true
+    parent: System
+    commentId: T:System.Object
+  System.Object.ToString:
+    name:
+      CSharp:
+      - id: System.Object.ToString
+        name: ToString
+        nameWithType: Object.ToString
+        qualifiedName: System.Object.ToString
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: System.Object.ToString
+        name: ToString
+        nameWithType: Object.ToString
+        qualifiedName: System.Object.ToString
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.ToString
+  System.Object.Equals(System.Object):
+    name:
+      CSharp:
+      - id: System.Object.Equals(System.Object)
+        name: Equals
+        nameWithType: Object.Equals
+        qualifiedName: System.Object.Equals
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: System.Object.Equals(System.Object)
+        name: Equals
+        nameWithType: Object.Equals
+        qualifiedName: System.Object.Equals
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.Equals(System.Object)
+  System.Object.Equals(System.Object,System.Object):
+    name:
+      CSharp:
+      - id: System.Object.Equals(System.Object,System.Object)
+        name: Equals
+        nameWithType: Object.Equals
+        qualifiedName: System.Object.Equals
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: System.Object.Equals(System.Object,System.Object)
+        name: Equals
+        nameWithType: Object.Equals
+        qualifiedName: System.Object.Equals
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.Equals(System.Object,System.Object)
+  System.Object.ReferenceEquals(System.Object,System.Object):
+    name:
+      CSharp:
+      - id: System.Object.ReferenceEquals(System.Object,System.Object)
+        name: ReferenceEquals
+        nameWithType: Object.ReferenceEquals
+        qualifiedName: System.Object.ReferenceEquals
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: System.Object.ReferenceEquals(System.Object,System.Object)
+        name: ReferenceEquals
+        nameWithType: Object.ReferenceEquals
+        qualifiedName: System.Object.ReferenceEquals
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  System.Object.GetHashCode:
+    name:
+      CSharp:
+      - id: System.Object.GetHashCode
+        name: GetHashCode
+        nameWithType: Object.GetHashCode
+        qualifiedName: System.Object.GetHashCode
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: System.Object.GetHashCode
+        name: GetHashCode
+        nameWithType: Object.GetHashCode
+        qualifiedName: System.Object.GetHashCode
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.GetHashCode
+  System.Object.GetType:
+    name:
+      CSharp:
+      - id: System.Object.GetType
+        name: GetType
+        nameWithType: Object.GetType
+        qualifiedName: System.Object.GetType
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: System.Object.GetType
+        name: GetType
+        nameWithType: Object.GetType
+        qualifiedName: System.Object.GetType
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.GetType
+  System.Object.MemberwiseClone:
+    name:
+      CSharp:
+      - id: System.Object.MemberwiseClone
+        name: MemberwiseClone
+        nameWithType: Object.MemberwiseClone
+        qualifiedName: System.Object.MemberwiseClone
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: System.Object.MemberwiseClone
+        name: MemberwiseClone
+        nameWithType: Object.MemberwiseClone
+        qualifiedName: System.Object.MemberwiseClone
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.MemberwiseClone
+  System.Boolean:
+    name:
+      CSharp:
+      - id: System.Boolean
+        name: Boolean
+        nameWithType: Boolean
+        qualifiedName: System.Boolean
+        isExternal: true
+      VB:
+      - id: System.Boolean
+        name: Boolean
+        nameWithType: Boolean
+        qualifiedName: System.Boolean
+        isExternal: true
+    isDefinition: true
+    parent: System
+    commentId: T:System.Boolean
+  System.String:
+    name:
+      CSharp:
+      - id: System.String
+        name: String
+        nameWithType: String
+        qualifiedName: System.String
+        isExternal: true
+      VB:
+      - id: System.String
+        name: String
+        nameWithType: String
+        qualifiedName: System.String
+        isExternal: true
+    isDefinition: true
+    parent: System
+    commentId: T:System.String
+  ModCommon.VerifyAccess.CheckIfValidUser*:
+    name:
+      CSharp:
+      - id: ModCommon.VerifyAccess.CheckIfValidUser*
+        name: CheckIfValidUser
+        nameWithType: VerifyAccess.CheckIfValidUser
+        qualifiedName: ModCommon.VerifyAccess.CheckIfValidUser
+      VB:
+      - id: ModCommon.VerifyAccess.CheckIfValidUser*
+        name: CheckIfValidUser
+        nameWithType: VerifyAccess.CheckIfValidUser
+        qualifiedName: ModCommon.VerifyAccess.CheckIfValidUser
+    isDefinition: true
+    commentId: Overload:ModCommon.VerifyAccess.CheckIfValidUser
+  AbatabData:
+    name:
+      CSharp:
+      - name: AbatabData
+        nameWithType: AbatabData
+        qualifiedName: AbatabData
+      VB:
+      - name: AbatabData
+        nameWithType: AbatabData
+        qualifiedName: AbatabData
+    isDefinition: true
+    commentId: N:AbatabData
+  AbatabData.Session:
+    name:
+      CSharp:
+      - id: AbatabData.Session
+        name: Session
+        nameWithType: Session
+        qualifiedName: AbatabData.Session
+      VB:
+      - id: AbatabData.Session
+        name: Session
+        nameWithType: Session
+        qualifiedName: AbatabData.Session
+    isDefinition: true
+    parent: AbatabData
+    commentId: T:AbatabData.Session
+  ModCommon.VerifyAccess.InvalidUser*:
+    name:
+      CSharp:
+      - id: ModCommon.VerifyAccess.InvalidUser*
+        name: InvalidUser
+        nameWithType: VerifyAccess.InvalidUser
+        qualifiedName: ModCommon.VerifyAccess.InvalidUser
+      VB:
+      - id: ModCommon.VerifyAccess.InvalidUser*
+        name: InvalidUser
+        nameWithType: VerifyAccess.InvalidUser
+        qualifiedName: ModCommon.VerifyAccess.InvalidUser
+    isDefinition: true
+    commentId: Overload:ModCommon.VerifyAccess.InvalidUser
+  ModCommon.VerifyAccess:
+    name:
+      CSharp:
+      - id: ModCommon.VerifyAccess
+        name: VerifyAccess
+        nameWithType: VerifyAccess
+        qualifiedName: ModCommon.VerifyAccess
+      VB:
+      - id: ModCommon.VerifyAccess
+        name: VerifyAccess
+        nameWithType: VerifyAccess
+        qualifiedName: ModCommon.VerifyAccess
+    isDefinition: true
+    commentId: T:ModCommon.VerifyAccess
+  ModCommon.Verify.ValidUser*:
+    name:
+      CSharp:
+      - id: ModCommon.Verify.ValidUser*
+        name: ValidUser
+        nameWithType: Verify.ValidUser
+        qualifiedName: ModCommon.Verify.ValidUser
+      VB:
+      - id: ModCommon.Verify.ValidUser*
+        name: ValidUser
+        nameWithType: Verify.ValidUser
+        qualifiedName: ModCommon.Verify.ValidUser
+    isDefinition: true
+    commentId: Overload:ModCommon.Verify.ValidUser
+  ModCommon.Verify:
+    name:
+      CSharp:
+      - id: ModCommon.Verify
+        name: Verify
+        nameWithType: Verify
+        qualifiedName: ModCommon.Verify
+      VB:
+      - id: ModCommon.Verify
+        name: Verify
+        nameWithType: Verify
+        qualifiedName: ModCommon.Verify
+    isDefinition: true
+    commentId: T:ModCommon.Verify
+  ModCommon.Roundhouse:
+    name:
+      CSharp:
+      - id: ModCommon.Roundhouse
+        name: Roundhouse
+        nameWithType: Roundhouse
+        qualifiedName: ModCommon.Roundhouse
+      VB:
+      - id: ModCommon.Roundhouse
+        name: Roundhouse
+        nameWithType: Roundhouse
+        qualifiedName: ModCommon.Roundhouse
+    isDefinition: true
+    commentId: T:ModCommon.Roundhouse
+  ModCommon:
+    name:
+      CSharp:
+      - name: ModCommon
+        nameWithType: ModCommon
+        qualifiedName: ModCommon
+      VB:
+      - name: ModCommon
+        nameWithType: ModCommon
+        qualifiedName: ModCommon
+    isDefinition: true
+    commentId: N:ModCommon

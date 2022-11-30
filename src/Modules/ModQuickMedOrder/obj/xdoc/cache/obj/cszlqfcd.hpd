@@ -1,0 +1,583 @@
+id: ModQuickMedOrder
+language: CSharp
+name:
+  Default: ModQuickMedOrder
+qualifiedName:
+  Default: ModQuickMedOrder
+type: Assembly
+modifiers: {}
+items:
+- id: ModQuickMedOrder
+  commentId: N:ModQuickMedOrder
+  language: CSharp
+  name:
+    CSharp: ModQuickMedOrder
+    VB: ModQuickMedOrder
+  nameWithType:
+    CSharp: ModQuickMedOrder
+    VB: ModQuickMedOrder
+  qualifiedName:
+    CSharp: ModQuickMedOrder
+    VB: ModQuickMedOrder
+  type: Namespace
+  assemblies:
+  - ModQuickMedOrder
+  modifiers: {}
+  items:
+  - id: ModQuickMedOrder.Dose
+    commentId: T:ModQuickMedOrder.Dose
+    language: CSharp
+    name:
+      CSharp: Dose
+      VB: Dose
+    nameWithType:
+      CSharp: Dose
+      VB: Dose
+    qualifiedName:
+      CSharp: ModQuickMedOrder.Dose
+      VB: ModQuickMedOrder.Dose
+    type: Class
+    assemblies:
+    - ModQuickMedOrder
+    namespace: ModQuickMedOrder
+    source:
+      id: Dose
+      path: C:\IT\GitHub\SHS\Abatab\src\Modules\ModQuickMedOrder\Dose.cs
+      startLine: 16
+    summary: "\nDose logic for the QuickMedOrder module.\n"
+    example: []
+    syntax:
+      content:
+        CSharp: public static class Dose
+        VB: Public Module Dose
+    inheritance:
+    - System.Object
+    inheritedMembers:
+    - System.Object.ToString
+    - System.Object.Equals(System.Object)
+    - System.Object.Equals(System.Object,System.Object)
+    - System.Object.ReferenceEquals(System.Object,System.Object)
+    - System.Object.GetHashCode
+    - System.Object.GetType
+    - System.Object.MemberwiseClone
+    modifiers:
+      CSharp:
+      - public
+      - static
+      - class
+      VB:
+      - Public
+      - Module
+    items:
+    - id: ModQuickMedOrder.Dose.VerifyAmount(AbatabData.Session)
+      commentId: M:ModQuickMedOrder.Dose.VerifyAmount(AbatabData.Session)
+      language: CSharp
+      name:
+        CSharp: VerifyAmount(Session)
+        VB: VerifyAmount(Session)
+      nameWithType:
+        CSharp: Dose.VerifyAmount(Session)
+        VB: Dose.VerifyAmount(Session)
+      qualifiedName:
+        CSharp: ModQuickMedOrder.Dose.VerifyAmount(AbatabData.Session)
+        VB: ModQuickMedOrder.Dose.VerifyAmount(AbatabData.Session)
+      type: Method
+      assemblies:
+      - ModQuickMedOrder
+      namespace: ModQuickMedOrder
+      source:
+        id: VerifyAmount
+        path: C:\IT\GitHub\SHS\Abatab\src\Modules\ModQuickMedOrder\Dose.cs
+        startLine: 22
+      summary: "\nVerifies that the dose increase percentage is within bounds.\n"
+      example: []
+      syntax:
+        content:
+          CSharp: public static void VerifyAmount(Session abatabSession)
+          VB: Public Shared Sub VerifyAmount(abatabSession As Session)
+        parameters:
+        - id: abatabSession
+          type: AbatabData.Session
+          description: Information/data for this session of Abatab.
+      overload: ModQuickMedOrder.Dose.VerifyAmount*
+      modifiers:
+        CSharp:
+        - public
+        - static
+        VB:
+        - Public
+        - Shared
+  - id: ModQuickMedOrder.Roundhouse
+    commentId: T:ModQuickMedOrder.Roundhouse
+    language: CSharp
+    name:
+      CSharp: Roundhouse
+      VB: Roundhouse
+    nameWithType:
+      CSharp: Roundhouse
+      VB: Roundhouse
+    qualifiedName:
+      CSharp: ModQuickMedOrder.Roundhouse
+      VB: ModQuickMedOrder.Roundhouse
+    type: Class
+    assemblies:
+    - ModQuickMedOrder
+    namespace: ModQuickMedOrder
+    source:
+      id: Roundhouse
+      path: C:\IT\GitHub\SHS\Abatab\src\Modules\ModQuickMedOrder\Roundhouse.cs
+      startLine: 14
+    summary: "\nRoundhouse logic for the Quick Medication Order module.\n"
+    example: []
+    syntax:
+      content:
+        CSharp: public static class Roundhouse
+        VB: Public Module Roundhouse
+    inheritance:
+    - System.Object
+    inheritedMembers:
+    - System.Object.ToString
+    - System.Object.Equals(System.Object)
+    - System.Object.Equals(System.Object,System.Object)
+    - System.Object.ReferenceEquals(System.Object,System.Object)
+    - System.Object.GetHashCode
+    - System.Object.GetType
+    - System.Object.MemberwiseClone
+    modifiers:
+      CSharp:
+      - public
+      - static
+      - class
+      VB:
+      - Public
+      - Module
+    items:
+    - id: ModQuickMedOrder.Roundhouse.ParseRequest(AbatabData.Session)
+      commentId: M:ModQuickMedOrder.Roundhouse.ParseRequest(AbatabData.Session)
+      language: CSharp
+      name:
+        CSharp: ParseRequest(Session)
+        VB: ParseRequest(Session)
+      nameWithType:
+        CSharp: Roundhouse.ParseRequest(Session)
+        VB: Roundhouse.ParseRequest(Session)
+      qualifiedName:
+        CSharp: ModQuickMedOrder.Roundhouse.ParseRequest(AbatabData.Session)
+        VB: ModQuickMedOrder.Roundhouse.ParseRequest(AbatabData.Session)
+      type: Method
+      assemblies:
+      - ModQuickMedOrder
+      namespace: ModQuickMedOrder
+      source:
+        id: ParseRequest
+        path: C:\IT\GitHub\SHS\Abatab\src\Modules\ModQuickMedOrder\Roundhouse.cs
+        startLine: 18
+      summary: Parse the Abatab request command.
+      example: []
+      syntax:
+        content:
+          CSharp: public static void ParseRequest(Session abatabSession)
+          VB: Public Shared Sub ParseRequest(abatabSession As Session)
+        parameters:
+        - id: abatabSession
+          type: AbatabData.Session
+          description: Abatab session information.
+      overload: ModQuickMedOrder.Roundhouse.ParseRequest*
+      modifiers:
+        CSharp:
+        - public
+        - static
+        VB:
+        - Public
+        - Shared
+references:
+  System:
+    name:
+      CSharp:
+      - name: System
+        nameWithType: System
+        qualifiedName: System
+        isExternal: true
+      VB:
+      - name: System
+        nameWithType: System
+        qualifiedName: System
+    isDefinition: true
+    commentId: N:System
+  System.Object:
+    name:
+      CSharp:
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      VB:
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+    isDefinition: true
+    parent: System
+    commentId: T:System.Object
+  System.Object.ToString:
+    name:
+      CSharp:
+      - id: System.Object.ToString
+        name: ToString
+        nameWithType: Object.ToString
+        qualifiedName: System.Object.ToString
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: System.Object.ToString
+        name: ToString
+        nameWithType: Object.ToString
+        qualifiedName: System.Object.ToString
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.ToString
+  System.Object.Equals(System.Object):
+    name:
+      CSharp:
+      - id: System.Object.Equals(System.Object)
+        name: Equals
+        nameWithType: Object.Equals
+        qualifiedName: System.Object.Equals
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: System.Object.Equals(System.Object)
+        name: Equals
+        nameWithType: Object.Equals
+        qualifiedName: System.Object.Equals
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.Equals(System.Object)
+  System.Object.Equals(System.Object,System.Object):
+    name:
+      CSharp:
+      - id: System.Object.Equals(System.Object,System.Object)
+        name: Equals
+        nameWithType: Object.Equals
+        qualifiedName: System.Object.Equals
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: System.Object.Equals(System.Object,System.Object)
+        name: Equals
+        nameWithType: Object.Equals
+        qualifiedName: System.Object.Equals
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.Equals(System.Object,System.Object)
+  System.Object.ReferenceEquals(System.Object,System.Object):
+    name:
+      CSharp:
+      - id: System.Object.ReferenceEquals(System.Object,System.Object)
+        name: ReferenceEquals
+        nameWithType: Object.ReferenceEquals
+        qualifiedName: System.Object.ReferenceEquals
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: System.Object.ReferenceEquals(System.Object,System.Object)
+        name: ReferenceEquals
+        nameWithType: Object.ReferenceEquals
+        qualifiedName: System.Object.ReferenceEquals
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  System.Object.GetHashCode:
+    name:
+      CSharp:
+      - id: System.Object.GetHashCode
+        name: GetHashCode
+        nameWithType: Object.GetHashCode
+        qualifiedName: System.Object.GetHashCode
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: System.Object.GetHashCode
+        name: GetHashCode
+        nameWithType: Object.GetHashCode
+        qualifiedName: System.Object.GetHashCode
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.GetHashCode
+  System.Object.GetType:
+    name:
+      CSharp:
+      - id: System.Object.GetType
+        name: GetType
+        nameWithType: Object.GetType
+        qualifiedName: System.Object.GetType
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: System.Object.GetType
+        name: GetType
+        nameWithType: Object.GetType
+        qualifiedName: System.Object.GetType
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.GetType
+  System.Object.MemberwiseClone:
+    name:
+      CSharp:
+      - id: System.Object.MemberwiseClone
+        name: MemberwiseClone
+        nameWithType: Object.MemberwiseClone
+        qualifiedName: System.Object.MemberwiseClone
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: System.Object.MemberwiseClone
+        name: MemberwiseClone
+        nameWithType: Object.MemberwiseClone
+        qualifiedName: System.Object.MemberwiseClone
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.MemberwiseClone
+  AbatabData:
+    name:
+      CSharp:
+      - name: AbatabData
+        nameWithType: AbatabData
+        qualifiedName: AbatabData
+      VB:
+      - name: AbatabData
+        nameWithType: AbatabData
+        qualifiedName: AbatabData
+    isDefinition: true
+    commentId: N:AbatabData
+  AbatabData.Session:
+    name:
+      CSharp:
+      - id: AbatabData.Session
+        name: Session
+        nameWithType: Session
+        qualifiedName: AbatabData.Session
+      VB:
+      - id: AbatabData.Session
+        name: Session
+        nameWithType: Session
+        qualifiedName: AbatabData.Session
+    isDefinition: true
+    parent: AbatabData
+    commentId: T:AbatabData.Session
+  ModQuickMedOrder.Dose.VerifyAmount*:
+    name:
+      CSharp:
+      - id: ModQuickMedOrder.Dose.VerifyAmount*
+        name: VerifyAmount
+        nameWithType: Dose.VerifyAmount
+        qualifiedName: ModQuickMedOrder.Dose.VerifyAmount
+      VB:
+      - id: ModQuickMedOrder.Dose.VerifyAmount*
+        name: VerifyAmount
+        nameWithType: Dose.VerifyAmount
+        qualifiedName: ModQuickMedOrder.Dose.VerifyAmount
+    isDefinition: true
+    commentId: Overload:ModQuickMedOrder.Dose.VerifyAmount
+  ModQuickMedOrder.Dose:
+    name:
+      CSharp:
+      - id: ModQuickMedOrder.Dose
+        name: Dose
+        nameWithType: Dose
+        qualifiedName: ModQuickMedOrder.Dose
+      VB:
+      - id: ModQuickMedOrder.Dose
+        name: Dose
+        nameWithType: Dose
+        qualifiedName: ModQuickMedOrder.Dose
+    isDefinition: true
+    commentId: T:ModQuickMedOrder.Dose
+  ModQuickMedOrder.Roundhouse.ParseRequest*:
+    name:
+      CSharp:
+      - id: ModQuickMedOrder.Roundhouse.ParseRequest*
+        name: ParseRequest
+        nameWithType: Roundhouse.ParseRequest
+        qualifiedName: ModQuickMedOrder.Roundhouse.ParseRequest
+      VB:
+      - id: ModQuickMedOrder.Roundhouse.ParseRequest*
+        name: ParseRequest
+        nameWithType: Roundhouse.ParseRequest
+        qualifiedName: ModQuickMedOrder.Roundhouse.ParseRequest
+    isDefinition: true
+    commentId: Overload:ModQuickMedOrder.Roundhouse.ParseRequest
+  ModQuickMedOrder.Roundhouse:
+    name:
+      CSharp:
+      - id: ModQuickMedOrder.Roundhouse
+        name: Roundhouse
+        nameWithType: Roundhouse
+        qualifiedName: ModQuickMedOrder.Roundhouse
+      VB:
+      - id: ModQuickMedOrder.Roundhouse
+        name: Roundhouse
+        nameWithType: Roundhouse
+        qualifiedName: ModQuickMedOrder.Roundhouse
+    isDefinition: true
+    commentId: T:ModQuickMedOrder.Roundhouse
+  ModQuickMedOrder:
+    name:
+      CSharp:
+      - name: ModQuickMedOrder
+        nameWithType: ModQuickMedOrder
+        qualifiedName: ModQuickMedOrder
+      VB:
+      - name: ModQuickMedOrder
+        nameWithType: ModQuickMedOrder
+        qualifiedName: ModQuickMedOrder
+    isDefinition: true
+    commentId: N:ModQuickMedOrder

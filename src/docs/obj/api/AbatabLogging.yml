@@ -1,0 +1,58 @@
+### YamlMime:ManagedReference
+items:
+- uid: AbatabLogging
+  commentId: N:AbatabLogging
+  id: AbatabLogging
+  children:
+  - AbatabLogging.BuildContent
+  - AbatabLogging.BuildPath
+  - AbatabLogging.CommentExamples
+  - AbatabLogging.CommentExamples.ExampleClass
+  - AbatabLogging.Debuggler
+  - AbatabLogging.LogEvent
+  - AbatabLogging.WriteLogFile
+  langs:
+  - csharp
+  - vb
+  name: AbatabLogging
+  nameWithType: AbatabLogging
+  fullName: AbatabLogging
+  type: Namespace
+  assemblies:
+  - AbatabLogging
+references:
+- uid: AbatabLogging.BuildContent
+  commentId: T:AbatabLogging.BuildContent
+  name: BuildContent
+  nameWithType: BuildContent
+  fullName: AbatabLogging.BuildContent
+- uid: AbatabLogging.BuildPath
+  commentId: T:AbatabLogging.BuildPath
+  name: BuildPath
+  nameWithType: BuildPath
+  fullName: AbatabLogging.BuildPath
+- uid: AbatabLogging.CommentExamples
+  commentId: T:AbatabLogging.CommentExamples
+  name: CommentExamples
+  nameWithType: CommentExamples
+  fullName: AbatabLogging.CommentExamples
+- uid: AbatabLogging.CommentExamples.ExampleClass
+  commentId: T:AbatabLogging.CommentExamples.ExampleClass
+  name: CommentExamples.ExampleClass
+  nameWithType: CommentExamples.ExampleClass
+  fullName: AbatabLogging.CommentExamples.ExampleClass
+- uid: AbatabLogging.Debuggler
+  commentId: T:AbatabLogging.Debuggler
+  name: Debuggler
+  nameWithType: Debuggler
+  fullName: AbatabLogging.Debuggler
+- uid: AbatabLogging.LogEvent
+  commentId: T:AbatabLogging.LogEvent
+  name: LogEvent
+  nameWithType: LogEvent
+  fullName: AbatabLogging.LogEvent
+- uid: AbatabLogging.WriteLogFile
+  commentId: T:AbatabLogging.WriteLogFile
+  name: WriteLogFile
+  nameWithType: WriteLogFile
+  fullName: AbatabLogging.WriteLogFile

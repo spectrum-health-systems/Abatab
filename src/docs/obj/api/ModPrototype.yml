@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: ModPrototype
+  commentId: N:ModPrototype
+  id: ModPrototype
+  children:
+  - ModPrototype.Roundhouse
+  langs:
+  - csharp
+  - vb
+  name: ModPrototype
+  nameWithType: ModPrototype
+  fullName: ModPrototype
+  type: Namespace
+  assemblies:
+  - ModPrototype
+references:
+- uid: ModPrototype.Roundhouse
+  commentId: T:ModPrototype.Roundhouse
+  name: Roundhouse
+  nameWithType: Roundhouse
+  fullName: ModPrototype.Roundhouse

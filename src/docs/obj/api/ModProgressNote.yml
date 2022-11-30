@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: ModProgressNote
+  commentId: N:ModProgressNote
+  id: ModProgressNote
+  children:
+  - ModProgressNote.Roundhouse
+  langs:
+  - csharp
+  - vb
+  name: ModProgressNote
+  nameWithType: ModProgressNote
+  fullName: ModProgressNote
+  type: Namespace
+  assemblies:
+  - ModProgressNote
+references:
+- uid: ModProgressNote.Roundhouse
+  commentId: T:ModProgressNote.Roundhouse
+  name: Roundhouse
+  nameWithType: Roundhouse
+  fullName: ModProgressNote.Roundhouse

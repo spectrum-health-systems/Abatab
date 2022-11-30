@@ -1,0 +1,802 @@
+id: Du
+language: CSharp
+name:
+  Default: Du
+qualifiedName:
+  Default: Du
+type: Assembly
+modifiers: {}
+items:
+- id: Du
+  commentId: N:Du
+  language: CSharp
+  name:
+    CSharp: Du
+    VB: Du
+  nameWithType:
+    CSharp: Du
+    VB: Du
+  qualifiedName:
+    CSharp: Du
+    VB: Du
+  type: Namespace
+  assemblies:
+  - Du
+  modifiers: {}
+  items:
+  - id: Du.WithDictionary
+    commentId: T:Du.WithDictionary
+    language: CSharp
+    name:
+      CSharp: WithDictionary
+      VB: WithDictionary
+    nameWithType:
+      CSharp: WithDictionary
+      VB: WithDictionary
+    qualifiedName:
+      CSharp: Du.WithDictionary
+      VB: Du.WithDictionary
+    type: Class
+    assemblies:
+    - Du
+    namespace: Du
+    source:
+      id: WithDictionary
+      path: C:\IT\GitHub\SHS\Abatab\src\Libraries\Du\WithDictionary.cs
+      startLine: 13
+    summary: "\nDoes various things with Dictionary objects.\n"
+    example: []
+    syntax:
+      content:
+        CSharp: public static class WithDictionary
+        VB: Public Module WithDictionary
+    inheritance:
+    - System.Object
+    inheritedMembers:
+    - System.Object.ToString
+    - System.Object.Equals(System.Object)
+    - System.Object.Equals(System.Object,System.Object)
+    - System.Object.ReferenceEquals(System.Object,System.Object)
+    - System.Object.GetHashCode
+    - System.Object.GetType
+    - System.Object.MemberwiseClone
+    modifiers:
+      CSharp:
+      - public
+      - static
+      - class
+      VB:
+      - Public
+      - Module
+    items:
+    - id: Du.WithDictionary.JoinListOf(System.Collections.Generic.List{System.Collections.Generic.Dictionary{System.String,System.String}})
+      commentId: M:Du.WithDictionary.JoinListOf(System.Collections.Generic.List{System.Collections.Generic.Dictionary{System.String,System.String}})
+      language: CSharp
+      name:
+        CSharp: JoinListOf(List<Dictionary<String, String>>)
+        VB: JoinListOf(List(Of Dictionary(Of String, String)))
+      nameWithType:
+        CSharp: WithDictionary.JoinListOf(List<Dictionary<String, String>>)
+        VB: WithDictionary.JoinListOf(List(Of Dictionary(Of String, String)))
+      qualifiedName:
+        CSharp: Du.WithDictionary.JoinListOf(System.Collections.Generic.List<System.Collections.Generic.Dictionary<System.String, System.String>>)
+        VB: Du.WithDictionary.JoinListOf(System.Collections.Generic.List(Of System.Collections.Generic.Dictionary(Of System.String, System.String)))
+      type: Method
+      assemblies:
+      - Du
+      namespace: Du
+      source:
+        id: JoinListOf
+        path: C:\IT\GitHub\SHS\Abatab\src\Libraries\Du\WithDictionary.cs
+        startLine: 19
+      summary: "\nJoin a list of dictionaries."
+      example: []
+      syntax:
+        content:
+          CSharp: public static Dictionary<string, string> JoinListOf(List<Dictionary<string, string>> dictionariesToJoin)
+          VB: Public Shared Function JoinListOf(dictionariesToJoin As List(Of Dictionary(Of String, String))) As Dictionary(Of String, String)
+        parameters:
+        - id: dictionariesToJoin
+          type: System.Collections.Generic.List{System.Collections.Generic.Dictionary{System.String,System.String}}
+          description: ''
+        return:
+          type: System.Collections.Generic.Dictionary{System.String,System.String}
+          description: A single dictionary containing all data from multiple dictionaries.
+      overload: Du.WithDictionary.JoinListOf*
+      modifiers:
+        CSharp:
+        - public
+        - static
+        VB:
+        - Public
+        - Shared
+  - id: Du.WithDirectory
+    commentId: T:Du.WithDirectory
+    language: CSharp
+    name:
+      CSharp: WithDirectory
+      VB: WithDirectory
+    nameWithType:
+      CSharp: WithDirectory
+      VB: WithDirectory
+    qualifiedName:
+      CSharp: Du.WithDirectory
+      VB: Du.WithDirectory
+    type: Class
+    assemblies:
+    - Du
+    namespace: Du
+    source:
+      id: WithDirectory
+      path: C:\IT\GitHub\SHS\Abatab\src\Libraries\Du\WithDirectory.cs
+      startLine: 12
+    summary: "\nDoes various things with system directories.\n"
+    example: []
+    syntax:
+      content:
+        CSharp: public static class WithDirectory
+        VB: Public Module WithDirectory
+    inheritance:
+    - System.Object
+    inheritedMembers:
+    - System.Object.ToString
+    - System.Object.Equals(System.Object)
+    - System.Object.Equals(System.Object,System.Object)
+    - System.Object.ReferenceEquals(System.Object,System.Object)
+    - System.Object.GetHashCode
+    - System.Object.GetType
+    - System.Object.MemberwiseClone
+    modifiers:
+      CSharp:
+      - public
+      - static
+      - class
+      VB:
+      - Public
+      - Module
+    items:
+    - id: Du.WithDirectory.VerifyDir(System.String)
+      commentId: M:Du.WithDirectory.VerifyDir(System.String)
+      language: CSharp
+      name:
+        CSharp: VerifyDir(String)
+        VB: VerifyDir(String)
+      nameWithType:
+        CSharp: WithDirectory.VerifyDir(String)
+        VB: WithDirectory.VerifyDir(String)
+      qualifiedName:
+        CSharp: Du.WithDirectory.VerifyDir(System.String)
+        VB: Du.WithDirectory.VerifyDir(System.String)
+      type: Method
+      assemblies:
+      - Du
+      namespace: Du
+      source:
+        id: VerifyDir
+        path: C:\IT\GitHub\SHS\Abatab\src\Libraries\Du\WithDirectory.cs
+        startLine: 17
+      summary: "\nVerifies a directory exists, and creates it if it does not.\n"
+      example: []
+      syntax:
+        content:
+          CSharp: public static void VerifyDir(string dir)
+          VB: Public Shared Sub VerifyDir(dir As String)
+        parameters:
+        - id: dir
+          type: System.String
+      overload: Du.WithDirectory.VerifyDir*
+      modifiers:
+        CSharp:
+        - public
+        - static
+        VB:
+        - Public
+        - Shared
+references:
+  System:
+    name:
+      CSharp:
+      - name: System
+        nameWithType: System
+        qualifiedName: System
+        isExternal: true
+      VB:
+      - name: System
+        nameWithType: System
+        qualifiedName: System
+    isDefinition: true
+    commentId: N:System
+  System.Object:
+    name:
+      CSharp:
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      VB:
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+    isDefinition: true
+    parent: System
+    commentId: T:System.Object
+  System.Object.ToString:
+    name:
+      CSharp:
+      - id: System.Object.ToString
+        name: ToString
+        nameWithType: Object.ToString
+        qualifiedName: System.Object.ToString
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: System.Object.ToString
+        name: ToString
+        nameWithType: Object.ToString
+        qualifiedName: System.Object.ToString
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.ToString
+  System.Object.Equals(System.Object):
+    name:
+      CSharp:
+      - id: System.Object.Equals(System.Object)
+        name: Equals
+        nameWithType: Object.Equals
+        qualifiedName: System.Object.Equals
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: System.Object.Equals(System.Object)
+        name: Equals
+        nameWithType: Object.Equals
+        qualifiedName: System.Object.Equals
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.Equals(System.Object)
+  System.Object.Equals(System.Object,System.Object):
+    name:
+      CSharp:
+      - id: System.Object.Equals(System.Object,System.Object)
+        name: Equals
+        nameWithType: Object.Equals
+        qualifiedName: System.Object.Equals
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: System.Object.Equals(System.Object,System.Object)
+        name: Equals
+        nameWithType: Object.Equals
+        qualifiedName: System.Object.Equals
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.Equals(System.Object,System.Object)
+  System.Object.ReferenceEquals(System.Object,System.Object):
+    name:
+      CSharp:
+      - id: System.Object.ReferenceEquals(System.Object,System.Object)
+        name: ReferenceEquals
+        nameWithType: Object.ReferenceEquals
+        qualifiedName: System.Object.ReferenceEquals
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: System.Object.ReferenceEquals(System.Object,System.Object)
+        name: ReferenceEquals
+        nameWithType: Object.ReferenceEquals
+        qualifiedName: System.Object.ReferenceEquals
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  System.Object.GetHashCode:
+    name:
+      CSharp:
+      - id: System.Object.GetHashCode
+        name: GetHashCode
+        nameWithType: Object.GetHashCode
+        qualifiedName: System.Object.GetHashCode
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: System.Object.GetHashCode
+        name: GetHashCode
+        nameWithType: Object.GetHashCode
+        qualifiedName: System.Object.GetHashCode
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.GetHashCode
+  System.Object.GetType:
+    name:
+      CSharp:
+      - id: System.Object.GetType
+        name: GetType
+        nameWithType: Object.GetType
+        qualifiedName: System.Object.GetType
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: System.Object.GetType
+        name: GetType
+        nameWithType: Object.GetType
+        qualifiedName: System.Object.GetType
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.GetType
+  System.Object.MemberwiseClone:
+    name:
+      CSharp:
+      - id: System.Object.MemberwiseClone
+        name: MemberwiseClone
+        nameWithType: Object.MemberwiseClone
+        qualifiedName: System.Object.MemberwiseClone
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: System.Object.MemberwiseClone
+        name: MemberwiseClone
+        nameWithType: Object.MemberwiseClone
+        qualifiedName: System.Object.MemberwiseClone
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.MemberwiseClone
+  System.Collections.Generic.Dictionary`2:
+    name:
+      CSharp:
+      - id: System.Collections.Generic.Dictionary`2
+        name: Dictionary
+        nameWithType: Dictionary
+        qualifiedName: System.Collections.Generic.Dictionary
+        isExternal: true
+      - name: <
+        nameWithType: <
+        qualifiedName: <
+      - name: TKey
+        nameWithType: TKey
+        qualifiedName: TKey
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - name: TValue
+        nameWithType: TValue
+        qualifiedName: TValue
+      - name: '>'
+        nameWithType: '>'
+        qualifiedName: '>'
+      VB:
+      - id: System.Collections.Generic.Dictionary`2
+        name: Dictionary
+        nameWithType: Dictionary
+        qualifiedName: System.Collections.Generic.Dictionary
+        isExternal: true
+      - name: '(Of '
+        nameWithType: '(Of '
+        qualifiedName: '(Of '
+      - name: TKey
+        nameWithType: TKey
+        qualifiedName: TKey
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - name: TValue
+        nameWithType: TValue
+        qualifiedName: TValue
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    commentId: T:System.Collections.Generic.Dictionary`2
+  System.Collections.Generic:
+    name:
+      CSharp:
+      - name: System.Collections.Generic
+        nameWithType: System.Collections.Generic
+        qualifiedName: System.Collections.Generic
+        isExternal: true
+      VB:
+      - name: System.Collections.Generic
+        nameWithType: System.Collections.Generic
+        qualifiedName: System.Collections.Generic
+    isDefinition: true
+    commentId: N:System.Collections.Generic
+  System.Collections.Generic.Dictionary{System.String,System.String}:
+    name:
+      CSharp:
+      - id: System.Collections.Generic.Dictionary`2
+        name: Dictionary
+        nameWithType: Dictionary
+        qualifiedName: System.Collections.Generic.Dictionary
+        isExternal: true
+      - name: <
+        nameWithType: <
+        qualifiedName: <
+      - id: System.String
+        name: String
+        nameWithType: String
+        qualifiedName: System.String
+        isExternal: true
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: System.String
+        name: String
+        nameWithType: String
+        qualifiedName: System.String
+        isExternal: true
+      - name: '>'
+        nameWithType: '>'
+        qualifiedName: '>'
+      VB:
+      - id: System.Collections.Generic.Dictionary`2
+        name: Dictionary
+        nameWithType: Dictionary
+        qualifiedName: System.Collections.Generic.Dictionary
+        isExternal: true
+      - name: '(Of '
+        nameWithType: '(Of '
+        qualifiedName: '(Of '
+      - id: System.String
+        name: String
+        nameWithType: String
+        qualifiedName: System.String
+        isExternal: true
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: System.String
+        name: String
+        nameWithType: String
+        qualifiedName: System.String
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: false
+    definition: System.Collections.Generic.Dictionary`2
+    parent: System.Collections.Generic
+    commentId: T:System.Collections.Generic.Dictionary{System.String,System.String}
+  System.Collections.Generic.List`1:
+    name:
+      CSharp:
+      - id: System.Collections.Generic.List`1
+        name: List
+        nameWithType: List
+        qualifiedName: System.Collections.Generic.List
+        isExternal: true
+      - name: <
+        nameWithType: <
+        qualifiedName: <
+      - name: T
+        nameWithType: T
+        qualifiedName: T
+      - name: '>'
+        nameWithType: '>'
+        qualifiedName: '>'
+      VB:
+      - id: System.Collections.Generic.List`1
+        name: List
+        nameWithType: List
+        qualifiedName: System.Collections.Generic.List
+        isExternal: true
+      - name: '(Of '
+        nameWithType: '(Of '
+        qualifiedName: '(Of '
+      - name: T
+        nameWithType: T
+        qualifiedName: T
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    commentId: T:System.Collections.Generic.List`1
+  System.Collections.Generic.List{System.Collections.Generic.Dictionary{System.String,System.String}}:
+    name:
+      CSharp:
+      - id: System.Collections.Generic.List`1
+        name: List
+        nameWithType: List
+        qualifiedName: System.Collections.Generic.List
+        isExternal: true
+      - name: <
+        nameWithType: <
+        qualifiedName: <
+      - id: System.Collections.Generic.Dictionary`2
+        name: Dictionary
+        nameWithType: Dictionary
+        qualifiedName: System.Collections.Generic.Dictionary
+        isExternal: true
+      - name: <
+        nameWithType: <
+        qualifiedName: <
+      - id: System.String
+        name: String
+        nameWithType: String
+        qualifiedName: System.String
+        isExternal: true
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: System.String
+        name: String
+        nameWithType: String
+        qualifiedName: System.String
+        isExternal: true
+      - name: '>'
+        nameWithType: '>'
+        qualifiedName: '>'
+      - name: '>'
+        nameWithType: '>'
+        qualifiedName: '>'
+      VB:
+      - id: System.Collections.Generic.List`1
+        name: List
+        nameWithType: List
+        qualifiedName: System.Collections.Generic.List
+        isExternal: true
+      - name: '(Of '
+        nameWithType: '(Of '
+        qualifiedName: '(Of '
+      - id: System.Collections.Generic.Dictionary`2
+        name: Dictionary
+        nameWithType: Dictionary
+        qualifiedName: System.Collections.Generic.Dictionary
+        isExternal: true
+      - name: '(Of '
+        nameWithType: '(Of '
+        qualifiedName: '(Of '
+      - id: System.String
+        name: String
+        nameWithType: String
+        qualifiedName: System.String
+        isExternal: true
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: System.String
+        name: String
+        nameWithType: String
+        qualifiedName: System.String
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: false
+    definition: System.Collections.Generic.List`1
+    parent: System.Collections.Generic
+    commentId: T:System.Collections.Generic.List{System.Collections.Generic.Dictionary{System.String,System.String}}
+  Du.WithDictionary.JoinListOf*:
+    name:
+      CSharp:
+      - id: Du.WithDictionary.JoinListOf*
+        name: JoinListOf
+        nameWithType: WithDictionary.JoinListOf
+        qualifiedName: Du.WithDictionary.JoinListOf
+      VB:
+      - id: Du.WithDictionary.JoinListOf*
+        name: JoinListOf
+        nameWithType: WithDictionary.JoinListOf
+        qualifiedName: Du.WithDictionary.JoinListOf
+    isDefinition: true
+    commentId: Overload:Du.WithDictionary.JoinListOf
+  Du.WithDictionary:
+    name:
+      CSharp:
+      - id: Du.WithDictionary
+        name: WithDictionary
+        nameWithType: WithDictionary
+        qualifiedName: Du.WithDictionary
+      VB:
+      - id: Du.WithDictionary
+        name: WithDictionary
+        nameWithType: WithDictionary
+        qualifiedName: Du.WithDictionary
+    isDefinition: true
+    commentId: T:Du.WithDictionary
+  System.String:
+    name:
+      CSharp:
+      - id: System.String
+        name: String
+        nameWithType: String
+        qualifiedName: System.String
+        isExternal: true
+      VB:
+      - id: System.String
+        name: String
+        nameWithType: String
+        qualifiedName: System.String
+        isExternal: true
+    isDefinition: true
+    parent: System
+    commentId: T:System.String
+  Du.WithDirectory.VerifyDir*:
+    name:
+      CSharp:
+      - id: Du.WithDirectory.VerifyDir*
+        name: VerifyDir
+        nameWithType: WithDirectory.VerifyDir
+        qualifiedName: Du.WithDirectory.VerifyDir
+      VB:
+      - id: Du.WithDirectory.VerifyDir*
+        name: VerifyDir
+        nameWithType: WithDirectory.VerifyDir
+        qualifiedName: Du.WithDirectory.VerifyDir
+    isDefinition: true
+    commentId: Overload:Du.WithDirectory.VerifyDir
+  Du.WithDirectory:
+    name:
+      CSharp:
+      - id: Du.WithDirectory
+        name: WithDirectory
+        nameWithType: WithDirectory
+        qualifiedName: Du.WithDirectory
+      VB:
+      - id: Du.WithDirectory
+        name: WithDirectory
+        nameWithType: WithDirectory
+        qualifiedName: Du.WithDirectory
+    isDefinition: true
+    commentId: T:Du.WithDirectory
+  Du:
+    name:
+      CSharp:
+      - name: Du
+        nameWithType: Du
+        qualifiedName: Du
+      VB:
+      - name: Du
+        nameWithType: Du
+        qualifiedName: Du
+    isDefinition: true
+    commentId: N:Du

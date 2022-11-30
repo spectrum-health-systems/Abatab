@@ -1,0 +1,28 @@
+### YamlMime:ManagedReference
+items:
+- uid: AbatabData
+  commentId: N:AbatabData
+  id: AbatabData
+  children:
+  - AbatabData.Session
+  langs:
+  - csharp
+  - vb
+  name: AbatabData
+  nameWithType: AbatabData
+  fullName: AbatabData
+  type: Namespace
+  assemblies:
+  - AbatabData
+references:
+- uid: AbatabData.Session
+  commentId: T:AbatabData.Session
+  parent: AbatabData
+  name: Session
+  nameWithType: Session
+  fullName: AbatabData.Session
+- uid: AbatabData
+  commentId: N:AbatabData
+  name: AbatabData
+  nameWithType: AbatabData
+  fullName: AbatabData
