@@ -24,7 +24,7 @@
 
 # [Testing](./testing/man_testing_home.md)
 
-# [Quick Med Order Module](./testing/man_testing_modquickmedorder.md)
+## [Quick Med Order Module](./testing/man_testing_modquickmedorder.md)
 
 # [Logging](./logging/man_logging_home.md)
 
