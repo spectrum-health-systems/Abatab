@@ -245,7 +245,7 @@ namespace ModQuickMedOrder
                             //    outsideBoundary = true;
                             //}
                             //if (overage >= milligramsBoundary || underage <= milligramsBoundary)
-                            if (differ >= milligramsBoundary || differ <= milligramsBoundary)
+                            if (differ >= milligramsBoundary)
                             {
                                 LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
