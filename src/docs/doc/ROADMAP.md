@@ -24,7 +24,7 @@
 
 ### Core functionality
 
-* **[X]** Test to make sure that replacing DLL files works as expected. (22.11.0.0-testbuild+221115.0903)
+* **[X]** Test to make sure that replacing DLL files works as expected. (22.12.0.0-testbuild+221115.0903)
 * **[-]** Confirm that we don't need other .DLLs (e.g., Roslyn stuff)
 
 #### AbatabData

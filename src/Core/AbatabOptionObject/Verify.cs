@@ -1,7 +1,7 @@
-﻿// AbatabOptionObject 22.11.0
+﻿// AbatabOptionObject 22.12.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221115.0903
+// b221130.0736
 
 // NOT USED.
 
