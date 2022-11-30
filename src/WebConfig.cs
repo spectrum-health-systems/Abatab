@@ -1,7 +1,7 @@
 ﻿// Abatab 22.12.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221130.1026
+// b221130.1107
 
 using Abatab.Properties;
 using AbatabLogging;
@@ -35,7 +35,6 @@ namespace Abatab
                 { "AvatarEnvironment",                      Settings.Default.AvatarEnvironment.ToLower() },
                 { "AbatabRoot",                             Settings.Default.AbatabRoot.ToLower() },
                 { "DebugMode",                              Settings.Default.DebugMode.ToLower() },
-                { "DebugDebugValidUsers",                   Settings.Default.DebugMode.ToLower() },
                 { "DebugLogRoot",                           Settings.Default.DebugLogRoot.ToLower() },
                 { "LogMode",                                Settings.Default.LogMode.ToLower() },
                 { "LogDetail",                              Settings.Default.LogDetail.ToLower() },
@@ -43,6 +42,7 @@ namespace Abatab
                 { "AbatabFallbackUserName",                 Settings.Default.AbatabFallbackUserName.ToLower() },
                 { "ModPrototypeMode",                       Settings.Default.ModPrototypeMode.ToLower() },
                 { "ModQuickMedOrderMode",                   Settings.Default.ModQuickMedOrderMode.ToLower() },
+                { "ModQuickMedOrderValidOrderTypes",        Settings.Default.ModQuickMedOrderValidOrderTypes.ToLower() },
                 { "ModQuickMedOrderAuthorizedUsers",        Settings.Default.ModQuickMedOrderAuthorizedUsers.ToLower() },
                 { "ModQuickMedOrderDosePercentBoundary",    Settings.Default.ModQuickMedOrderDosePercentBoundary.ToLower() },
                 { "ModQuickMedOrderDoseMilligramsBoundary", Settings.Default.ModQuickMedOrderDoseMilligramsBoundary.ToLower() },

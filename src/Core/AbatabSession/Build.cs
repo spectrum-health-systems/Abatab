@@ -1,7 +1,7 @@
 ﻿// AbatabSession 22.12.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221130.1026
+// b221130.1107
 
 using AbatabData;
 using AbatabData.Core;
@@ -118,22 +118,23 @@ namespace AbatabSession
             abatabSession.ModQuickMedOrderConfig = new QuickMedOrder
             {
 
-                Mode                           = abatabSettings["ModQuickMedOrderMode"],
-                AuthorizedUsers                = abatabSettings["ModQuickMedOrderAuthorizedUsers"],
-                DosePercentBoundary            = abatabSettings["ModQuickMedOrderDosePercentBoundary"],
-                DoseMilligramsBoundary         = abatabSettings["ModQuickMedOrderDoseMilligramsBoundary"],
-                PrevDosePrefix                 = "Recurring Dosage:",
-                PrevDoseSuffix                 = " mgs",
-                DosageOneFieldId               = "107",
-                FoundDosageOneFieldId          = false,
-                CurrentDose                    = "0.0",
-                OrderTypeFieldId               = "121",
-                FoundOrderTypeFieldId          = false,
-                OrderType                      = "0",
-                LastOrderScheduleFieldId       = "142",
-                FoundLastOrderScheduleFieldId  = false,
-                LastOrderScheduleText          = "",
-                FoundAllRequiredFieldIds       = false
+                Mode                            = abatabSettings["ModQuickMedOrderMode"],
+                AuthorizedUsers                 = abatabSettings["ModQuickMedOrderAuthorizedUsers"],
+                ValidOrderTypes                 = abatabSettings["ModQuickMedOrderValidOrderTypes"],
+                DosePercentBoundary             = abatabSettings["ModQuickMedOrderDosePercentBoundary"],
+                DoseMilligramsBoundary          = abatabSettings["ModQuickMedOrderDoseMilligramsBoundary"],
+                PrevDosePrefix                  = "Recurring Dosage:",
+                PrevDoseSuffix                  = " mgs",
+                DosageOneFieldId                = "107",
+                FoundDosageOneFieldId           = false,
+                CurrentDose                     = "0.0",
+                OrderTypeFieldId                = "121",
+                FoundOrderTypeFieldId           = false,
+                OrderType                       = "0",
+                LastOrderScheduleFieldId        = "142",
+                FoundLastOrderScheduleFieldId   = false,
+                LastOrderScheduleText           = "",
+                FoundAllRequiredFieldIds        = false
             };
         }
 

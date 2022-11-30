@@ -1,7 +1,7 @@
 ﻿// Abatab ModQuickMedOrder 22.12.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221130.1026
+// b221130.1107
 
 using AbatabData;
 using AbatabLogging;
@@ -137,6 +137,7 @@ namespace ModQuickMedOrder
 
             // TODO Break this out.
             // TODO Add the OrderType to Web.config
+            // CONTAINS
             /* OrderType 4 is recurring. Other order types may be added in the future.
              */
             if (abatabSession.ModQuickMedOrderConfig.OrderType == "4")

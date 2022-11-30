@@ -1,7 +1,7 @@
 ﻿// Abatab 22.12.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221130.1026
+// b221130.1107
 
 using Abatab.Properties;
 using AbatabData;
@@ -50,7 +50,7 @@ namespace Abatab
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string scriptParameter)
         {
-            LogEvent.PrimevalDebug(Settings.Default.DebugMode, Assembly.GetExecutingAssembly().GetName().Name, $@"{Settings.Default.AbatabRoot}{Settings.Default.AvatarEnvironment}\{Settings.Default.DebugLogRoot}");
+            LogEvent.PrimevalDebug(Settings.Default.DebugMode, Assembly.GetExecutingAssembly().GetName().Name);
 
             Dictionary<string, string> webConfig = WebConfig.Load();
 
