@@ -106,37 +106,30 @@
 </ol>
 <p>You should recieve a pop-up message.</p>
 <h3 id="confirm-within-boundaries-works">Confirm within boundaries works</h3>
+<p>The following tests assume that:</p>
+<ul>
+<li>You are starting with a dose of 10mgs</li>
+<li>The percentage boundary is 25%</li>
+<li>The milligrams boundary is 20mgs</li>
+</ul>
 <ol>
-<li>Choose an Order Type 4</li>
-<li>Set the Single Dose to something within 25% and submit the form.</li>
+<li><p>Set the Single Dose to 13mg<br>You should receive a popup message, since this is over the percentage boundary.</p>
+</li>
+<li><p>Set the Single Dose to 12mg<br>The order should submit, since this is within the boundaries.</p>
+</li>
+<li><p>Set the Single Dose to 10mg<br>The order should submit, since this is within the boundaries.</p>
+</li>
+<li><p>Set the Single Dose to 7mg<br>You should receive a popup message, since this is under the percentage boundary.</p>
+</li>
+<li><p>Set the Single Dose to 1000mg<br>You should receive a popup message, since this is over the boundaries. Submit the order.</p>
+</li>
+<li><p>Set the Single Dose to 1021mg<br>You should receive a popup message, since this is over milligram boundary.</p>
+</li>
+<li><p>Set the Single Dose to 1019mg<br>The order should submit, since this is within the boundaries.</p>
+</li>
+<li><p>Set the Single Dose to 999mg<br>You should receive a popup message, since this is under milligram boundary.</p>
+</li>
 </ol>
-<p>The form should submit.</p>
-<ol>
-<li>Choose an Order Type 4</li>
-<li>Set the Single Dose to something within 20mgs and submit the form.</li>
-</ol>
-<p>The form should submit.</p>
-<h3 id="confirm-outside-boundaries-works">Confirm outside boundaries works</h3>
-<ol>
-<li>Choose an Order Type 4</li>
-<li>Set the Single Dose to something over 25% and submit the form.</li>
-</ol>
-<p>You should recieve a pop-up message.</p>
-<ol>
-<li>Choose an Order Type 4</li>
-<li>Set the Single Dose to something under 25% and submit the form.</li>
-</ol>
-<p>You should recieve a pop-up message.</p>
-<ol>
-<li>Choose an Order Type 4</li>
-<li>Set the Single Dose to something over 20mgs and submit the form.</li>
-</ol>
-<p>You should recieve a pop-up message.</p>
-<ol>
-<li>Choose an Order Type 4</li>
-<li>Set the Single Dose to something under 20mgs and submit the form.</li>
-</ol>
-<p>You should recieve a pop-up message.</p>
 </article>
           </div>
           

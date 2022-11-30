@@ -1,7 +1,7 @@
 ﻿// Abatab ModPrototype 22.12.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221130.0736
+// b221130.1026
 
 using AbatabData;
 using AbatabLogging;

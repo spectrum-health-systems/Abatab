@@ -43,34 +43,32 @@ You should recieve a pop-up message.
 
 ### Confirm within boundaries works
 
-1. Choose an Order Type 4
-2. Set the Single Dose to something within 25% and submit the form.
+The following tests assume that:
 
-The form should submit.
+* You are starting with a dose of 10mgs
+* The percentage boundary is 25%
+* The milligrams boundary is 20mgs
 
-3. Choose an Order Type 4
-4. Set the Single Dose to something within 20mgs and submit the form.
+1. Set the Single Dose to 13mg  
+You should receive a popup message, since this is over the percentage boundary.
 
-The form should submit.
+2. Set the Single Dose to 12mg  
+The order should submit, since this is within the boundaries.
 
-### Confirm outside boundaries works
+3. Set the Single Dose to 10mg  
+The order should submit, since this is within the boundaries.
 
-1. Choose an Order Type 4
-2. Set the Single Dose to something over 25% and submit the form.
+4. Set the Single Dose to 7mg  
+You should receive a popup message, since this is under the percentage boundary.
 
-You should recieve a pop-up message.
+5. Set the Single Dose to 1000mg  
+You should receive a popup message, since this is over the boundaries. Submit the order.
 
-3. Choose an Order Type 4
-4. Set the Single Dose to something under 25% and submit the form.
+6. Set the Single Dose to 1021mg  
+You should receive a popup message, since this is over milligram boundary.
 
-You should recieve a pop-up message.
+7. Set the Single Dose to 1019mg  
+The order should submit, since this is within the boundaries.
 
-5. Choose an Order Type 4
-6. Set the Single Dose to something over 20mgs and submit the form.
-
-You should recieve a pop-up message.
-
-7. Choose an Order Type 4
-8. Set the Single Dose to something under 20mgs and submit the form.
-
-You should recieve a pop-up message.
+8. Set the Single Dose to 999mg  
+You should receive a popup message, since this is under milligram boundary.
