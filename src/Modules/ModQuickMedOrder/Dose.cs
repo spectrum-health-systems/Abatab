@@ -226,7 +226,7 @@ namespace ModQuickMedOrder
                             var overage  = Math.Abs(currDoseAsNumber - prevDoseAsNumber);
                             var underage = Math.Abs(prevDoseAsNumber - currDoseAsNumber);
 
-                            var diff = Math.Abs(currDoseAsNumber - prevDoseAsNumber);
+                            var differ = Math.Abs(currDoseAsNumber - prevDoseAsNumber);
 
                             var outsideBoundary = false;
 
@@ -235,7 +235,7 @@ namespace ModQuickMedOrder
                             //var warningId = $"[ Warning ID: {abatabSession.SessionDateStamp}.{abatabSession.SessionTimeStamp}-{percentBoundary}.{percentDifference}-{milligramsBoundary}.{currentMinusPrevious}.{previousMinusCurrent} ]";
 
                             //var warningId = $"[ Warning ID: {abatabSession.SessionDateStamp}.{abatabSession.SessionTimeStamp}-{percentBoundary}.{percentDifference}-{milligramsBoundary}.{overage}.{underage} ]";
-                            var warningId = $"[ Warning ID: {abatabSession.SessionDateStamp}.{abatabSession.SessionTimeStamp}-{percentBoundary}.{percentDifference}-{milligramsBoundary}.{diff} ]";
+                            var warningId = $"[ Warning ID: {abatabSession.SessionDateStamp}.{abatabSession.SessionTimeStamp}-{percentBoundary}.{percentDifference}-{milligramsBoundary}.{differ} ]";
 
 
                             //if (currentMinusPrevious >= milligramsBoundary || previousMinusCurrent <= milligramsBoundary)
@@ -244,7 +244,8 @@ namespace ModQuickMedOrder
 
                             //    outsideBoundary = true;
                             //}
-                            if (overage >= milligramsBoundary || underage <= milligramsBoundary)
+                            //if (overage >= milligramsBoundary || underage <= milligramsBoundary)
+                            if (differ >= milligramsBoundary || differ <= milligramsBoundary)
                             {
                                 LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
