@@ -227,6 +227,7 @@ namespace ModQuickMedOrder
 
                             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, $"[TRACE_02] {percentBoundary} | {milligramsBoundary} | {currentMinusPrevious} | {previousMinusCurrent} | {outsideBoundary} |   ");
 
+                            var warningId = $"[{abatabSession.SessionDateStamp}.{abatabSession.SessionTimeStamp}.{percentBoundary}.{milligramsBoundary}.{currentMinusPrevious}.{previousMinusCurrent}]";
 
                             if (currentMinusPrevious >= milligramsBoundary || previousMinusCurrent <= milligramsBoundary)
                             {
@@ -258,12 +259,16 @@ namespace ModQuickMedOrder
 
                                 abatabSession.WorkOptObj.ErrorCode = 4;
                                 abatabSession.WorkOptObj.ErrorMesg = $"WARNING!{Environment.NewLine}" +
+                                                                     $"{Environment.NewLine}" +
                                                                      $"The current dose value is significantly different than the previous dose.{Environment.NewLine}" +
                                                                      $"{Environment.NewLine}" +
                                                                      $"The previous dose was: {prevDoseAsNumber}mg(s){Environment.NewLine}" +
                                                                      $"The current dose is: {currDoseAsNumber}mg(s){Environment.NewLine}" +
                                                                      $"{Environment.NewLine}" +
-                                                                     $"Are you sure you want to submit?";
+                                                                     $"Are you sure you want to submit?" +
+                                                                     $"{Environment.NewLine}" +
+                                                                     $"{Environment.NewLine}" +
+                                                                     $"{warningId}";
                             }
                             else
                             {
