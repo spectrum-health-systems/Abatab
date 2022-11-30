@@ -276,7 +276,7 @@ namespace ModQuickMedOrder
                                 abatabSession.WorkOptObj.ErrorCode = 4;
                                 abatabSession.WorkOptObj.ErrorMesg = $"WARNING!{Environment.NewLine}" +
                                                                      $"{Environment.NewLine}" +
-                                                                     $"The current dose value is significantly different than the previous dose.{Environment.NewLine}" +
+                                                                     $"The current dose is significantly different than the previous dose.{Environment.NewLine}" +
                                                                      $"{Environment.NewLine}" +
                                                                      $"The previous dose was: {prevDoseAsNumber}mg(s){Environment.NewLine}" +
                                                                      $"The current dose is: {currDoseAsNumber}mg(s){Environment.NewLine}" +
