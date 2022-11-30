@@ -13,7 +13,6 @@
 * **[-]** Experiment with <10ms log file delay
 * **[-]** Better method names so user knows what/where things point from other projects. ex. AbatabOptionObject.FinalObj.Finalize(abatabSession) should be something like "FinalOptObj.Finalize", so we can declare the project in the usings section
 
-
 #### Abatab.Abatab.asmx.cs
 
 * No changes
@@ -33,6 +32,7 @@
 
 #### AbatabLogging
 
+* **[-]** Fix debug mode (currently causes a crash)
 * **[-]** Test all log types to make sure they are written to the correct folder
 * **[-]** Test debugMode to make sure that "on" -> "enabled" is working correctly
 * **[-]** Warning logs

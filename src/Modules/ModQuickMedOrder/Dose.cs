@@ -263,7 +263,9 @@ namespace ModQuickMedOrder
                                                                      $"The previous dose was: {prevDoseAsNumber}mg(s){Environment.NewLine}" +
                                                                      $"The current dose is: {currDoseAsNumber}mg(s){Environment.NewLine}" +
                                                                      $"{Environment.NewLine}" +
-                                                                     $"Are you sure you want to submit?";
+                                                                     $"Are you sure you want to submit?" +
+                                                                     $"{Environment.NewLine}" +
+                                                                     $"[E-{outsideBoundary}-{percentBoundary}-{milligramsBoundary}-{currentMinusPrevious}-{previousMinusCurrent}]";
                             }
                             else
                             {
