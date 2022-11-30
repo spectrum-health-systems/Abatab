@@ -265,7 +265,7 @@ namespace ModQuickMedOrder
                                                                      $"{Environment.NewLine}" +
                                                                      $"Are you sure you want to submit?" +
                                                                      $"{Environment.NewLine}" +
-                                                                     $"[E-{outsideBoundary}-{percentBoundary}-{milligramsBoundary}-{currentMinusPrevious}-{previousMinusCurrent}]";
+                                                                     $"[ERROR ID: {percentBoundary}.{milligramsBoundary}.{currentMinusPrevious}.{previousMinusCurrent}]";
                             }
                             else
                             {

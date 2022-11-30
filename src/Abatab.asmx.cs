@@ -3,7 +3,6 @@
 // See the LICENSE file for more information.
 // b221130.0736
 
-using Abatab.Properties;
 using AbatabData;
 using AbatabLogging;
 using AbatabSession;
@@ -50,7 +49,7 @@ namespace Abatab
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string scriptParameter)
         {
-            LogEvent.PrimevalDebug(Settings.Default.DebugMode, Assembly.GetExecutingAssembly().GetName().Name);
+            //LogEvent.PrimevalDebug(Settings.Default.DebugMode, Assembly.GetExecutingAssembly().GetName().Name);
 
             Dictionary<string, string> webConfig = WebConfig.Load();
 
