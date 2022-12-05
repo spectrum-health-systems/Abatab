@@ -566,6 +566,19 @@ references:
   isSpec: "True"
   fullName: AbatabData.Session.AbatabCommand
   nameWithType: Session.AbatabCommand
+- uid: AbatabData.Session.AbatabDataRoot
+  name: AbatabDataRoot
+  href: api/AbatabData.Session.html#AbatabData_Session_AbatabDataRoot
+  commentId: P:AbatabData.Session.AbatabDataRoot
+  fullName: AbatabData.Session.AbatabDataRoot
+  nameWithType: Session.AbatabDataRoot
+- uid: AbatabData.Session.AbatabDataRoot*
+  name: AbatabDataRoot
+  href: api/AbatabData.Session.html#AbatabData_Session_AbatabDataRoot_
+  commentId: Overload:AbatabData.Session.AbatabDataRoot
+  isSpec: "True"
+  fullName: AbatabData.Session.AbatabDataRoot
+  nameWithType: Session.AbatabDataRoot
 - uid: AbatabData.Session.AbatabFallbackUserName
   name: AbatabFallbackUserName
   href: api/AbatabData.Session.html#AbatabData_Session_AbatabFallbackUserName

@@ -25,6 +25,12 @@ namespace AbatabData
         public string AbatabRoot { get; set; }
 
         /// <summary>
+        /// The Abatab root directory. <see href="https://spectrum-health-systems.github.io/Abatab/man/man-configuration-local-settings.html#abatabroot">. [more info]</see>
+        /// </summary>
+        /// <value>Default value is <c>C:\Abatab_</c>.</value>
+        public string AbatabDataRoot { get; set; }
+
+        /// <summary>
         /// The current Avatar environment. <see href="https://spectrum-health-systems.github.io/Abatab/man/man-configuration-local-settings.html#avatarenvironment">. [more info]</see>
         /// </summary>
         /// <value>Default value is <c>LIVE</c>.</value>

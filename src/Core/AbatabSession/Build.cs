@@ -40,6 +40,7 @@ namespace AbatabSession
                 AbatabMode             = abatabSettings["AbatabMode"],
                 AvatarEnvironment      = abatabSettings["AvatarEnvironment"],
                 AbatabRoot             = $@"{abatabSettings["AbatabRoot"]}{abatabSettings["AvatarEnvironment"]}",
+                AbatabDataRoot         = $@"{abatabSettings["AbatabDataRoot"]}{abatabSettings["AvatarEnvironment"]}",
                 AbatabFallbackUserName = abatabSettings["AbatabFallbackUserName"],
                 SessionDateStamp       = $"{DateTime.Now:yyMMdd}",
                 SessionTimeStamp       = $"{DateTime.Now:HHmmss}",
@@ -69,9 +70,8 @@ namespace AbatabSession
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"]);
             BuildModPrototypeConfig(abatabSettings, abatabSession);
 
-            //abatabSession.LoggingConfig.SessionRoot = $@"{abatabSession.AbatabRoot}\logs\{abatabSession.SessionDateStamp}\{abatabSession.AbatabUserName}\{abatabSession.SessionTimeStamp}";
-            abatabSession.LoggingConfig.SessionRoot = $@"C:\AbatabData\logs\{abatabSession.SessionDateStamp}\{abatabSession.AbatabUserName}\{abatabSession.SessionTimeStamp}";
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+            // abatabSession.LoggingConfig.SessionRoot = $@"{abatabSession.AbatabDataRoot}\logs\{abatabSession.SessionDateStamp}\{abatabSession.AbatabUserName}\{abatabSession.SessionTimeStamp}";
+            // LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
             AbatabSystem.Maintenance.VerifyDir(abatabSession.LoggingConfig.SessionRoot);
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
@@ -174,8 +174,7 @@ namespace AbatabSession
                 Mode             = $"{abatabSettings["LogMode"]}",
                 Detail           = $"{abatabSettings["LogDetail"]}",
                 WriteDelay       = $"{abatabSettings["LogWriteDelay"]}",
-                //SessionRoot      = $@"{abatabSession.AbatabRoot}\logs\{abatabSession.SessionDateStamp}\{abatabSession.AbatabUserName}\{abatabSession.SessionTimeStamp}",
-                SessionRoot      = $@"C:\AbatabData\logs\{abatabSession.SessionDateStamp}\{abatabSession.AbatabUserName}\{abatabSession.SessionTimeStamp}",
+                SessionRoot      = $@"{abatabSession.AbatabDataRoot}\logs\{abatabSession.SessionDateStamp}\{abatabSession.AbatabUserName}\{abatabSession.SessionTimeStamp}",
                 EventErrorRoot   = $@"{abatabSession.AbatabRoot}\logs\error",
                 EventLostRoot    = $@"{abatabSession.AbatabRoot}\logs\lost",
                 EventWarningRoot = $@"{abatabSession.AbatabRoot}\logs\warning",

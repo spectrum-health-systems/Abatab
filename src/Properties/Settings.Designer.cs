@@ -166,5 +166,14 @@ namespace Abatab.Properties {
                 return ((string)(this["ModPrototypeMode"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\AbatabData")]
+        public string AbatabDataRoot {
+            get {
+                return ((string)(this["AbatabDataRoot"]));
+            }
+        }
     }
 }
