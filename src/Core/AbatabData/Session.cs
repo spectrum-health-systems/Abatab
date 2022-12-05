@@ -25,9 +25,9 @@ namespace AbatabData
         public string AbatabRoot { get; set; }
 
         /// <summary>
-        /// The Abatab root directory. <see href="https://spectrum-health-systems.github.io/Abatab/man/man-configuration-local-settings.html#abatabroot">. [more info]</see>
+        /// The Abatab data root directory. <see href="https://spectrum-health-systems.github.io/Abatab/man/man-configuration-local-settings.html#abatabroot">. [more info]</see>
         /// </summary>
-        /// <value>Default value is <c>C:\Abatab_</c>.</value>
+        /// <value>Default value is <c>C:\AbatabData</c>.</value>
         public string AbatabDataRoot { get; set; }
 
         /// <summary>

@@ -244,9 +244,9 @@
         </member>
         <member name="P:AbatabData.Session.AbatabDataRoot">
             <summary>
-            The Abatab root directory. <see href="https://spectrum-health-systems.github.io/Abatab/man/man-configuration-local-settings.html#abatabroot">. [more info]</see>
+            The Abatab data root directory. <see href="https://spectrum-health-systems.github.io/Abatab/man/man-configuration-local-settings.html#abatabroot">. [more info]</see>
             </summary>
-            <value>Default value is <c>C:\Abatab_</c>.</value>
+            <value>Default value is <c>C:\AbatabData</c>.</value>
         </member>
         <member name="P:AbatabData.Session.AvatarEnvironment">
             <summary>

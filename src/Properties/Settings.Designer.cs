@@ -43,6 +43,15 @@ namespace Abatab.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\AbatabData")]
+        public string AbatabDataRoot {
+            get {
+                return ((string)(this["AbatabDataRoot"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("UAT")]
         public string AvatarEnvironment {
             get {
@@ -164,15 +173,6 @@ namespace Abatab.Properties {
         public string ModPrototypeMode {
             get {
                 return ((string)(this["ModPrototypeMode"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\AbatabData")]
-        public string AbatabDataRoot {
-            get {
-                return ((string)(this["AbatabDataRoot"]));
             }
         }
     }

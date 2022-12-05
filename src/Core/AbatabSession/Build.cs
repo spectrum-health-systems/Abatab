@@ -40,7 +40,7 @@ namespace AbatabSession
                 AbatabMode             = abatabSettings["AbatabMode"],
                 AvatarEnvironment      = abatabSettings["AvatarEnvironment"],
                 AbatabRoot             = $@"{abatabSettings["AbatabRoot"]}{abatabSettings["AvatarEnvironment"]}",
-                AbatabDataRoot         = $@"{abatabSettings["AbatabDataRoot"]}{abatabSettings["AvatarEnvironment"]}",
+                AbatabDataRoot         = $@"{abatabSettings["AbatabDataRoot"]}\{abatabSettings["AvatarEnvironment"]}",
                 AbatabFallbackUserName = abatabSettings["AbatabFallbackUserName"],
                 SessionDateStamp       = $"{DateTime.Now:yyMMdd}",
                 SessionTimeStamp       = $"{DateTime.Now:HHmmss}",
@@ -70,8 +70,8 @@ namespace AbatabSession
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"]);
             BuildModPrototypeConfig(abatabSettings, abatabSession);
 
-            // abatabSession.LoggingConfig.SessionRoot = $@"{abatabSession.AbatabDataRoot}\logs\{abatabSession.SessionDateStamp}\{abatabSession.AbatabUserName}\{abatabSession.SessionTimeStamp}";
-            // LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+            abatabSession.LoggingConfig.SessionRoot = $@"{abatabSession.AbatabDataRoot}\logs\{abatabSession.SessionDateStamp}\{abatabSession.AbatabUserName}\{abatabSession.SessionTimeStamp}";
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
             AbatabSystem.Maintenance.VerifyDir(abatabSession.LoggingConfig.SessionRoot);
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
