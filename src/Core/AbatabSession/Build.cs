@@ -69,7 +69,8 @@ namespace AbatabSession
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"]);
             BuildModPrototypeConfig(abatabSettings, abatabSession);
 
-            abatabSession.LoggingConfig.SessionRoot = $@"{abatabSession.AbatabRoot}\logs\{abatabSession.SessionDateStamp}\{abatabSession.AbatabUserName}\{abatabSession.SessionTimeStamp}";
+            //abatabSession.LoggingConfig.SessionRoot = $@"{abatabSession.AbatabRoot}\logs\{abatabSession.SessionDateStamp}\{abatabSession.AbatabUserName}\{abatabSession.SessionTimeStamp}";
+            abatabSession.LoggingConfig.SessionRoot = $@"C:\AbatabData\logs\{abatabSession.SessionDateStamp}\{abatabSession.AbatabUserName}\{abatabSession.SessionTimeStamp}";
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
             AbatabSystem.Maintenance.VerifyDir(abatabSession.LoggingConfig.SessionRoot);

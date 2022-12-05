@@ -1,7 +1,7 @@
 ﻿// Abatab 22.12.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221205.1241
+// b221205.1244
 
 using Abatab.Properties;
 using AbatabData;
