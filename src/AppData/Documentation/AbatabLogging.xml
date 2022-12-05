@@ -351,7 +351,7 @@
             <param name="abatabSession">Information/data for this session of Abatab.</param>
             <param name="logMsg">The log message.</param>
         </member>
-        <member name="M:AbatabLogging.LogEvent.PrimevalDebug(System.String,System.String,System.String,System.String,System.Int32)">
+        <member name="M:AbatabLogging.LogEvent.PrimevalDebug(System.String,System.String,System.String,System.String,System.String,System.Int32)">
             <summary>
             Builds a debug log file.
             </summary>

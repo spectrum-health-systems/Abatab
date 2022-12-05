@@ -251,13 +251,13 @@
   
   
   <a id="AbatabLogging_LogEvent_PrimevalDebug_" data-uid="AbatabLogging.LogEvent.PrimevalDebug*"></a>
-  <h4 id="AbatabLogging_LogEvent_PrimevalDebug_System_String_System_String_System_String_System_String_System_Int32_" data-uid="AbatabLogging.LogEvent.PrimevalDebug(System.String,System.String,System.String,System.String,System.Int32)">PrimevalDebug(String, String, String, String, Int32)</h4>
+  <h4 id="AbatabLogging_LogEvent_PrimevalDebug_System_String_System_String_System_String_System_String_System_String_System_Int32_" data-uid="AbatabLogging.LogEvent.PrimevalDebug(System.String,System.String,System.String,System.String,System.String,System.Int32)">PrimevalDebug(String, String, String, String, String, Int32)</h4>
   <div class="markdown level1 summary"><p>Builds a debug log file.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void PrimevalDebug(string debugMode, string exeAssembly, string callPath = &quot;&quot;, string callMember = &quot;&quot;, int callLine = 0)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void PrimevalDebug(string debugMode, string exeAssembly, string primevalPath, string callPath = &quot;&quot;, string callMember = &quot;&quot;, int callLine = 0)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -280,6 +280,11 @@
         <td><span class="parametername">exeAssembly</span></td>
         <td><p>The name of executing assembly.</p>
 </td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">primevalPath</span></td>
+        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>

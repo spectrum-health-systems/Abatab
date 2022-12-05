@@ -114,12 +114,12 @@ namespace AbatabLogging
         /// <param name="callPath">The filename of where the log is coming from.</param>
         /// <param name="callMember">The method name of where the log is coming from.</param>
         /// <param name="callLine">The file line of where the log is coming from.</param>
-        public static void PrimevalDebug(string debugMode, string exeAssembly, [CallerFilePath] string callPath = "", [CallerMemberName] string callMember = "", [CallerLineNumber] int callLine = 0)
+        public static void PrimevalDebug(string debugMode, string exeAssembly, string primevalPath, [CallerFilePath] string callPath = "", [CallerMemberName] string callMember = "", [CallerLineNumber] int callLine = 0)
         {
             if (string.Equals(debugMode, "enabled", StringComparison.OrdinalIgnoreCase))
             {
                 var debugContent = BuildContent.DebugComponents(exeAssembly, debugMode, "[PRIMEVAL DEBUG]", callPath, callMember, callLine);
-                var debugLogPath = BuildPath.Timestamped("primevaldebug", @"C:\AvatoolWebService\Abatab_UAT\logs");
+                var debugLogPath = BuildPath.Timestamped("primevaldebug", primevalPath);
 
                 /* Delay creating a debug log by 10ms, just to make sure we don't overwrite an
                  * existing log. This will have a significant negative affect on performance.
