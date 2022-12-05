@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ModProgressNote</name>
+    </assembly>
+    <members>
+        <member name="T:ModProgressNote.Roundhouse">
+            <summary>
+            
+            </summary>
+        </member>
+    </members>
+</doc>
