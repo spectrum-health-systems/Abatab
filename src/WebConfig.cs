@@ -1,7 +1,7 @@
-﻿// Abatab 22.12.0
+﻿// Abatab 23.0.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221205.1233
+// b221209.0649
 
 using Abatab.Properties;
 using AbatabLogging;
@@ -35,6 +35,7 @@ namespace Abatab
                 { "AbatabMode",                             Settings.Default.AbatabMode.ToLower() },
                 { "AvatarEnvironment",                      Settings.Default.AvatarEnvironment.ToLower() },
                 { "AbatabRoot",                             Settings.Default.AbatabRoot.ToLower() },
+                { "AbatabDataRoot",                         Settings.Default.AbatabDataRoot.ToLower() },
                 { "DebugMode",                              Settings.Default.DebugMode.ToLower() },
                 { "DebugDebugValidUsers",                   Settings.Default.DebugMode.ToLower() },
                 { "DebugLogRoot",                           Settings.Default.DebugLogRoot.ToLower() },

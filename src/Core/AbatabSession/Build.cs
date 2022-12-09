@@ -1,7 +1,7 @@
-﻿// AbatabSession 22.12.0
+﻿// AbatabSession 23.0.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221205.1233
+// b221209.0649
 
 using AbatabData;
 using AbatabData.Core;
@@ -25,23 +25,23 @@ namespace AbatabSession
         /// <param name="sentOptObj">The original OptionObject sent from Avatar.</param>
         /// <param name="scriptParameter">The script parameter request from Avatar.</param>
         /// <returns>Session configuration settings.</returns>
-        public static Session NewSession(OptionObject2015 sentOptObj, string scriptParameter, Dictionary<string, string> abatabSettings)
+        public static Session NewSession(OptionObject2015 sentOptObj, string scriptParameter, Dictionary<string, string> webConfig)
         {
             //?LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"], "[DEBUG]");
             // Can't really put a trace log here.
 
             //var debug_ = $"TEST:{abatabSettings["LogMode"]} - {abatabSettings["LogDetail"]} - {abatabSettings["LogWriteDelay"]}";
-            var debug_ = $"TEST-- {abatabSettings["LogMode"]}";
+            var debug_ = $"TEST-- {webConfig["LogMode"]}";
 
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], $@"{abatabSettings["AbatabRoot"]}\{abatabSettings["DebugLogRoot"]}", debug_);
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, webConfig["DebugMode"], $@"{webConfig["AbatabRoot"]}\{webConfig["DebugLogRoot"]}", debug_);
 
             var abatabSession = new Session
             {
-                AbatabMode             = abatabSettings["AbatabMode"],
-                AvatarEnvironment      = abatabSettings["AvatarEnvironment"],
-                AbatabRoot             = $@"{abatabSettings["AbatabRoot"]}{abatabSettings["AvatarEnvironment"]}",
-                AbatabDataRoot         = $@"{abatabSettings["AbatabDataRoot"]}\{abatabSettings["AvatarEnvironment"]}",
-                AbatabFallbackUserName = abatabSettings["AbatabFallbackUserName"],
+                AbatabMode             = webConfig["AbatabMode"],
+                AvatarEnvironment      = webConfig["AvatarEnvironment"],
+                AbatabRoot             = $@"{webConfig["AbatabRoot"]}{webConfig["AvatarEnvironment"]}",
+                AbatabDataRoot         = $@"{webConfig["AbatabDataRoot"]}\{webConfig["AvatarEnvironment"]}",
+                AbatabFallbackUserName = webConfig["AbatabFallbackUserName"],
                 SessionDateStamp       = $"{DateTime.Now:yyMMdd}",
                 SessionTimeStamp       = $"{DateTime.Now:HHmmss}",
                 AbatabRequest          = scriptParameter.ToLower(),
@@ -55,20 +55,20 @@ namespace AbatabSession
                 FinalOptObj            = new OptionObject2015()
             };
 
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"]);
-            BuildDebugglerConfig(abatabSettings, abatabSession);
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, webConfig["DebugMode"], webConfig["DebugLogRoot"]);
+            BuildDebugglerConfig(webConfig, abatabSession);
 
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"]);
-            BuildLoggingConfig(abatabSettings, abatabSession);
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, webConfig["DebugMode"], webConfig["DebugLogRoot"]);
+            BuildLoggingConfig(webConfig, abatabSession);
 
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"]);
-            BuildModQuickMedOrderConfig(abatabSettings, abatabSession);
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, webConfig["DebugMode"], webConfig["DebugLogRoot"]);
+            BuildModQuickMedOrderConfig(webConfig, abatabSession);
 
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"]);
-            BuildModTestingConfig(abatabSettings, abatabSession);
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, webConfig["DebugMode"], webConfig["DebugLogRoot"]);
+            BuildModTestingConfig(webConfig, abatabSession);
 
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"]);
-            BuildModPrototypeConfig(abatabSettings, abatabSession);
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, webConfig["DebugMode"], webConfig["DebugLogRoot"]);
+            BuildModPrototypeConfig(webConfig, abatabSession);
 
             abatabSession.LoggingConfig.SessionRoot = $@"{abatabSession.AbatabDataRoot}\logs\{abatabSession.SessionDateStamp}\{abatabSession.AbatabUserName}\{abatabSession.SessionTimeStamp}";
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");

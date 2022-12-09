@@ -1,35 +1,35 @@
 # [The Abatab Manual](index.md)
 
-# [Getting started](./getting-started/man_getting-started_home.md)
+# [Getting started](./GettingStarted/man-GettingStarted-Home.md)
 
-# [Hosting Abatab](./hosting/man_hosting_home.md)
+# [Hosting Abatab](./hosting/man-Hosting-Home.md)
 
-# [Importing Abatab](./importing/man_importing_home.md)
+# [Importing Abatab](./importing/man-Importing-Home.md)
 
-# [Configuring Abatab](./configuration/man_configuration_home.md)
+# [Configuring Abatab](./configuration/man-Configuration-Home.md)
 
-## [Local settings](./configuration/man_configuration_local-settings.md)
+## [Local settings](./configuration/man-Configuration-LocalSettings.md)
 
-# [Using Abatab](./using/man_using_home.md)
+# [Using Abatab](./using/man-Using-Home.md)
 
-# [Abatab functionality](./functionality/man_functionality_home.md)
+# [Abatab functionality](./functionality/man-Functionality-Home.md)
 
-## [Core functionality](./functionality/man_functionality_core.md)
+## [Core functionality](./functionality/man-Functionality-Core.md)
 
-## [Abatab Modules](./functionality/man_functionality_modules.md)
+## [Abatab Modules](./functionality/man-Functionality-Modules.md)
 
-## [Modifying existing modules](./functionality/man_functionality_existing.md)
+## [Modifying existing modules](./functionality/man-Functionality-Existing.md)
 
-## [Adding new modules](./modules/man_functionality_new.md)
+## [Adding new modules](./modules/man-Functionality-New.md)
 
-# [Testing](./testing/man_testing_home.md)
+# [Testing](./testing/man-Testing-Home.md)
 
-## [Quick Med Order Module](./testing/man_testing_modquickmedorder.md)
+## [Quick Med Order Module](./testing/man-Testing-ModQuickMedOrder.md)
 
-# [Logging](./logging/man_logging_home.md)
+# [Logging](./logging/man-Logging-Home.md)
 
-# [Source code](./source-code/man_source-code_home.md)
+# [Source code](./source-code/man-SourceCode-Home.md)
 
-# [DocFX Integration](./docfx/man_docfx_home.md)
+# [DocFX Integration](./docfx/man-DocFx-Home.md)
 
-# [Additional reading](./additional-reading/man_additional-reading_home.md)
+# [Additional reading](./AdditionalInformation/man-AdditionalInformation-Home.md)

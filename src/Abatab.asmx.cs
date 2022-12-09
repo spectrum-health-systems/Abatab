@@ -1,7 +1,7 @@
-﻿// Abatab 22.12.0
+﻿// Abatab 23.0.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221205.1244
+// b221209.0649
 
 using Abatab.Properties;
 using AbatabData;
@@ -33,7 +33,7 @@ namespace Abatab
         [WebMethod]
         public string GetVersion()
         {
-            return "VERSION 22.12";
+            return "VERSION 23.0";
         }
 
         /// <summary>
@@ -44,7 +44,8 @@ namespace Abatab
         /// <returns>A finalized OptionObject that will be returned to Avatar.</returns>
         /// <remarks>
         /// * This method is required by Avatar.
-        /// * This is the only time a <see href="https://spectrum-health-systems.github.io/Abatab/man/man-logging-home.html#primeval-debug-log">Primeval debug log</see> is written.
+        /// * This is the only time a <see href="../man/man-Logging-Home.html#primeval-debug-log">Primeval debug log</see> is written.
+        /// * TEST <see href="https://spectrum-health-systems.github.io/Abatab/man/man-logging-home.html#primeval-debug-log">Primeval debug log</see> is written.
         /// * This method should remain fairly static, since most of the logic is taken care of by external projects.
         /// </remarks>
         [WebMethod]
