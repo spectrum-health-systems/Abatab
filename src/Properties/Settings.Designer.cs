@@ -43,6 +43,15 @@ namespace Abatab.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\AbatabData")]
+        public string AbatabDataRoot {
+            get {
+                return ((string)(this["AbatabDataRoot"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("UAT")]
         public string AvatarEnvironment {
             get {
@@ -133,37 +142,28 @@ namespace Abatab.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0.25")]
-        public string ModQuickMedOrderDosePercentIncrease {
+        [global::System.Configuration.DefaultSettingValueAttribute("4")]
+        public string ModQuickMedOrderValidOrderTypes {
             get {
-                return ((string)(this["ModQuickMedOrderDosePercentIncrease"]));
+                return ((string)(this["ModQuickMedOrderValidOrderTypes"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("25")]
+        public string ModQuickMedOrderDosePercentBoundary {
+            get {
+                return ((string)(this["ModQuickMedOrderDosePercentBoundary"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("20")]
-        public string ModQuickMedOrderDoseMgsIncrease {
+        public string ModQuickMedOrderDoseMilligramsBoundary {
             get {
-                return ((string)(this["ModQuickMedOrderDoseMgsIncrease"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0.25")]
-        public string ModQuickMedOrderDosePercentDecrease {
-            get {
-                return ((string)(this["ModQuickMedOrderDosePercentDecrease"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("20")]
-        public string ModQuickMedOrderDoseMgsDecrease {
-            get {
-                return ((string)(this["ModQuickMedOrderDoseMgsDecrease"]));
+                return ((string)(this["ModQuickMedOrderDoseMilligramsBoundary"]));
             }
         }
         
@@ -173,15 +173,6 @@ namespace Abatab.Properties {
         public string ModPrototypeMode {
             get {
                 return ((string)(this["ModPrototypeMode"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("4")]
-        public string ModQuickMedOrderValidOrderTypes {
-            get {
-                return ((string)(this["ModQuickMedOrderValidOrderTypes"]));
             }
         }
     }

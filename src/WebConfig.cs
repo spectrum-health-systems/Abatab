@@ -1,7 +1,7 @@
-﻿// Abatab 22.11.0
+﻿// Abatab 23.0.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221110.112516
+// b221209.0649
 
 using Abatab.Properties;
 using AbatabLogging;
@@ -26,7 +26,8 @@ namespace Abatab
         /// </remarks>
         public static Dictionary<string, string> Load()
         {
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG]");
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, $@"{Settings.Default.AbatabDataRoot}\{Settings.Default.AvatarEnvironment}\logs", "[DEBUG]");
+            //LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, Settings.Default.DebugMode, Settings.Default.DebugLogRoot, "[DEBUG]");
             // Can't really put a trace log here.
 
             var webConfig =  new Dictionary<string, string>
@@ -34,6 +35,7 @@ namespace Abatab
                 { "AbatabMode",                             Settings.Default.AbatabMode.ToLower() },
                 { "AvatarEnvironment",                      Settings.Default.AvatarEnvironment.ToLower() },
                 { "AbatabRoot",                             Settings.Default.AbatabRoot.ToLower() },
+                { "AbatabDataRoot",                         Settings.Default.AbatabDataRoot.ToLower() },
                 { "DebugMode",                              Settings.Default.DebugMode.ToLower() },
                 { "DebugDebugValidUsers",                   Settings.Default.DebugMode.ToLower() },
                 { "DebugLogRoot",                           Settings.Default.DebugLogRoot.ToLower() },
@@ -43,8 +45,9 @@ namespace Abatab
                 { "AbatabFallbackUserName",                 Settings.Default.AbatabFallbackUserName.ToLower() },
                 { "ModPrototypeMode",                       Settings.Default.ModPrototypeMode.ToLower() },
                 { "ModQuickMedOrderMode",                   Settings.Default.ModQuickMedOrderMode.ToLower() },
-                { "ModQuickMedOrderAuthorizedUsers",             Settings.Default.ModQuickMedOrderAuthorizedUsers.ToLower() },
-                { "ModQuickMedOrderDosePercentIncrease", Settings.Default.ModQuickMedOrderDosePercentIncrease.ToLower() },
+                { "ModQuickMedOrderAuthorizedUsers",        Settings.Default.ModQuickMedOrderAuthorizedUsers.ToLower() },
+                { "ModQuickMedOrderDosePercentBoundary",    Settings.Default.ModQuickMedOrderDosePercentBoundary.ToLower() },
+                { "ModQuickMedOrderDoseMilligramsBoundary", Settings.Default.ModQuickMedOrderDoseMilligramsBoundary.ToLower() },
                 { "ModTestingMode",                         Settings.Default.ModTestingMode.ToLower() }
             };
 

@@ -8,6 +8,9 @@
     <Setting Name="AbatabRoot" Type="System.String" Scope="Application">
       <Value Profile="(Default)">C:\AvatoolWebService\Abatab_</Value>
     </Setting>
+    <Setting Name="AbatabDataRoot" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\AbatabData</Value>
+    </Setting>
     <Setting Name="AvatarEnvironment" Type="System.String" Scope="Application">
       <Value Profile="(Default)">UAT</Value>
     </Setting>
@@ -38,19 +41,13 @@
     <Setting Name="ModQuickMedOrderAuthorizedUsers" Type="System.String" Scope="Application">
       <Value Profile="(Default)">all</Value>
     </Setting>
-	<Setting Name="ModQuickMedOrderValidOrderTypes" Type="System.String" Scope="Application">
+    <Setting Name="ModQuickMedOrderValidOrderTypes" Type="System.String" Scope="Application">
       <Value Profile="(Default)">4</Value>
     </Setting>
-    <Setting Name="ModQuickMedOrderDosePercentIncrease" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">0.25</Value>
+    <Setting Name="ModQuickMedOrderDosePercentBoundary" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">25</Value>
     </Setting>
-    <Setting Name="ModQuickMedOrderDoseMgsIncrease" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">20</Value>
-    </Setting>
-    <Setting Name="ModQuickMedOrderDosePercentDecrease" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">0.25</Value>
-    </Setting>
-    <Setting Name="ModQuickMedOrderDoseMgsDecrease" Type="System.String" Scope="Application">
+    <Setting Name="ModQuickMedOrderDoseMilligramsBoundary" Type="System.String" Scope="Application">
       <Value Profile="(Default)">20</Value>
     </Setting>
     <Setting Name="ModPrototypeMode" Type="System.String" Scope="Application">

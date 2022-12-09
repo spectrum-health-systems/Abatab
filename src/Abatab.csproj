@@ -71,6 +71,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Abatab.asmx" />
+    <None Include="AppData\version.json" />
     <Content Include="docs\favicon.ico" />
     <Content Include="docs\images\hosting-using-iis\iis-add-website-362x414.png" />
     <Content Include="docs\images\hosting-using-iis\iis-application-pool-633x187.png" />
@@ -127,7 +128,6 @@
     <Content Include="docs\man\configuration\man_configuration_local-settings.md" />
     <Content Include="docs\man\configuration\man_configuration_home.md" />
     <Content Include="docs\man\index.md" />
-    <Content Include="docs\man\docfx-integration\man_docfx-integration_home.md" />
     <Content Include="docs\man\functionality\man_functionality_core.md" />
     <Content Include="docs\man\functionality\man_functionality_existing.md" />
     <Content Include="docs\man\functionality\man_functionality_home.md" />
@@ -195,6 +195,10 @@
     <Content Include="docs\obj\api\toc.yml" />
     <Content Include="docs\toc.yml" />
     <Content Include="docs\man\using\man_using_home.md" />
+    <Content Include="docs\man\docfx\man_docfx_home.md" />
+    <Content Include="docs\man\docfx\man_docfx_how-to.md" />
+    <Content Include="docs\man\testing\man_testing_home.md" />
+    <Content Include="docs\man\testing\man_testing_modquickmedorder.md" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

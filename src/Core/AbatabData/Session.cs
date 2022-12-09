@@ -1,7 +1,7 @@
-﻿// AbatabData 22.11.0
+﻿// AbatabData 23.0.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221110.112516
+// b221209.0649
 
 using NTST.ScriptLinkService.Objects;
 
@@ -23,6 +23,12 @@ namespace AbatabData
         /// </summary>
         /// <value>Default value is <c>C:\Abatab_</c>.</value>
         public string AbatabRoot { get; set; }
+
+        /// <summary>
+        /// The Abatab data root directory. <see href="https://spectrum-health-systems.github.io/Abatab/man/man-configuration-local-settings.html#abatabroot">. [more info]</see>
+        /// </summary>
+        /// <value>Default value is <c>C:\AbatabData</c>.</value>
+        public string AbatabDataRoot { get; set; }
 
         /// <summary>
         /// The current Avatar environment. <see href="https://spectrum-health-systems.github.io/Abatab/man/man-configuration-local-settings.html#avatarenvironment">. [more info]</see>

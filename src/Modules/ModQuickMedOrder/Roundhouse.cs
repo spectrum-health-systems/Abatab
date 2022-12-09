@@ -1,7 +1,7 @@
-﻿// Abatab ModQuickMedOrder 22.11.0
+﻿// Abatab ModQuickMedOrder 23.0.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221110.112516
+// b221209.0649
 
 using AbatabData;
 using AbatabLogging;
@@ -48,7 +48,7 @@ namespace ModQuickMedOrder
 
             switch (abatabSession.AbatabAction.ToLower())
             {
-                case "verifyundermaxpercentincrease":
+                case "verifyamount":
                     LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
                     ModQuickMedOrder.Dose.VerifyAmount(abatabSession);
                     AbatabOptionObject.FinalObj.Finalize(abatabSession);

@@ -18,8 +18,8 @@ Documentation to the left
 
 Abatab is developed by [A Pretty Cool Program][a-pretty-cool-program-url]
 
-[abatab-repository-url]: https://github.com/spectrum-health-systems/Abatab
-[netsmart-avatar-url]: https://www.ntst.com/Offerings/myAvatarg
+[AbatabUrl]: https://github.com/spectrum-health-systems/Abatab
+[AvatarUrl]: https://www.ntst.com/Offerings/myAvatarg
 [man-getting-started]: ./man-getting-started.md
 [man-hosting]: ./man-hosting.md
 [man-importing]: ./man-importing.md

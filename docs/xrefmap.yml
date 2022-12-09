@@ -320,58 +320,32 @@ references:
   isSpec: "True"
   fullName: AbatabData.Module.QuickMedOrder.DosageOneFieldId
   nameWithType: QuickMedOrder.DosageOneFieldId
-- uid: AbatabData.Module.QuickMedOrder.DoseMgsDecrease
-  name: DoseMgsDecrease
-  href: api/AbatabData.Module.QuickMedOrder.html#AbatabData_Module_QuickMedOrder_DoseMgsDecrease
-  commentId: P:AbatabData.Module.QuickMedOrder.DoseMgsDecrease
-  fullName: AbatabData.Module.QuickMedOrder.DoseMgsDecrease
-  nameWithType: QuickMedOrder.DoseMgsDecrease
-- uid: AbatabData.Module.QuickMedOrder.DoseMgsDecrease*
-  name: DoseMgsDecrease
-  href: api/AbatabData.Module.QuickMedOrder.html#AbatabData_Module_QuickMedOrder_DoseMgsDecrease_
-  commentId: Overload:AbatabData.Module.QuickMedOrder.DoseMgsDecrease
+- uid: AbatabData.Module.QuickMedOrder.DoseMilligramsBoundary
+  name: DoseMilligramsBoundary
+  href: api/AbatabData.Module.QuickMedOrder.html#AbatabData_Module_QuickMedOrder_DoseMilligramsBoundary
+  commentId: P:AbatabData.Module.QuickMedOrder.DoseMilligramsBoundary
+  fullName: AbatabData.Module.QuickMedOrder.DoseMilligramsBoundary
+  nameWithType: QuickMedOrder.DoseMilligramsBoundary
+- uid: AbatabData.Module.QuickMedOrder.DoseMilligramsBoundary*
+  name: DoseMilligramsBoundary
+  href: api/AbatabData.Module.QuickMedOrder.html#AbatabData_Module_QuickMedOrder_DoseMilligramsBoundary_
+  commentId: Overload:AbatabData.Module.QuickMedOrder.DoseMilligramsBoundary
   isSpec: "True"
-  fullName: AbatabData.Module.QuickMedOrder.DoseMgsDecrease
-  nameWithType: QuickMedOrder.DoseMgsDecrease
-- uid: AbatabData.Module.QuickMedOrder.DoseMgsIncrease
-  name: DoseMgsIncrease
-  href: api/AbatabData.Module.QuickMedOrder.html#AbatabData_Module_QuickMedOrder_DoseMgsIncrease
-  commentId: P:AbatabData.Module.QuickMedOrder.DoseMgsIncrease
-  fullName: AbatabData.Module.QuickMedOrder.DoseMgsIncrease
-  nameWithType: QuickMedOrder.DoseMgsIncrease
-- uid: AbatabData.Module.QuickMedOrder.DoseMgsIncrease*
-  name: DoseMgsIncrease
-  href: api/AbatabData.Module.QuickMedOrder.html#AbatabData_Module_QuickMedOrder_DoseMgsIncrease_
-  commentId: Overload:AbatabData.Module.QuickMedOrder.DoseMgsIncrease
+  fullName: AbatabData.Module.QuickMedOrder.DoseMilligramsBoundary
+  nameWithType: QuickMedOrder.DoseMilligramsBoundary
+- uid: AbatabData.Module.QuickMedOrder.DosePercentBoundary
+  name: DosePercentBoundary
+  href: api/AbatabData.Module.QuickMedOrder.html#AbatabData_Module_QuickMedOrder_DosePercentBoundary
+  commentId: P:AbatabData.Module.QuickMedOrder.DosePercentBoundary
+  fullName: AbatabData.Module.QuickMedOrder.DosePercentBoundary
+  nameWithType: QuickMedOrder.DosePercentBoundary
+- uid: AbatabData.Module.QuickMedOrder.DosePercentBoundary*
+  name: DosePercentBoundary
+  href: api/AbatabData.Module.QuickMedOrder.html#AbatabData_Module_QuickMedOrder_DosePercentBoundary_
+  commentId: Overload:AbatabData.Module.QuickMedOrder.DosePercentBoundary
   isSpec: "True"
-  fullName: AbatabData.Module.QuickMedOrder.DoseMgsIncrease
-  nameWithType: QuickMedOrder.DoseMgsIncrease
-- uid: AbatabData.Module.QuickMedOrder.DosePercentDecrease
-  name: DosePercentDecrease
-  href: api/AbatabData.Module.QuickMedOrder.html#AbatabData_Module_QuickMedOrder_DosePercentDecrease
-  commentId: P:AbatabData.Module.QuickMedOrder.DosePercentDecrease
-  fullName: AbatabData.Module.QuickMedOrder.DosePercentDecrease
-  nameWithType: QuickMedOrder.DosePercentDecrease
-- uid: AbatabData.Module.QuickMedOrder.DosePercentDecrease*
-  name: DosePercentDecrease
-  href: api/AbatabData.Module.QuickMedOrder.html#AbatabData_Module_QuickMedOrder_DosePercentDecrease_
-  commentId: Overload:AbatabData.Module.QuickMedOrder.DosePercentDecrease
-  isSpec: "True"
-  fullName: AbatabData.Module.QuickMedOrder.DosePercentDecrease
-  nameWithType: QuickMedOrder.DosePercentDecrease
-- uid: AbatabData.Module.QuickMedOrder.DosePercentIncrease
-  name: DosePercentIncrease
-  href: api/AbatabData.Module.QuickMedOrder.html#AbatabData_Module_QuickMedOrder_DosePercentIncrease
-  commentId: P:AbatabData.Module.QuickMedOrder.DosePercentIncrease
-  fullName: AbatabData.Module.QuickMedOrder.DosePercentIncrease
-  nameWithType: QuickMedOrder.DosePercentIncrease
-- uid: AbatabData.Module.QuickMedOrder.DosePercentIncrease*
-  name: DosePercentIncrease
-  href: api/AbatabData.Module.QuickMedOrder.html#AbatabData_Module_QuickMedOrder_DosePercentIncrease_
-  commentId: Overload:AbatabData.Module.QuickMedOrder.DosePercentIncrease
-  isSpec: "True"
-  fullName: AbatabData.Module.QuickMedOrder.DosePercentIncrease
-  nameWithType: QuickMedOrder.DosePercentIncrease
+  fullName: AbatabData.Module.QuickMedOrder.DosePercentBoundary
+  nameWithType: QuickMedOrder.DosePercentBoundary
 - uid: AbatabData.Module.QuickMedOrder.FoundAllRequiredFieldIds
   name: FoundAllRequiredFieldIds
   href: api/AbatabData.Module.QuickMedOrder.html#AbatabData_Module_QuickMedOrder_FoundAllRequiredFieldIds
@@ -592,6 +566,19 @@ references:
   isSpec: "True"
   fullName: AbatabData.Session.AbatabCommand
   nameWithType: Session.AbatabCommand
+- uid: AbatabData.Session.AbatabDataRoot
+  name: AbatabDataRoot
+  href: api/AbatabData.Session.html#AbatabData_Session_AbatabDataRoot
+  commentId: P:AbatabData.Session.AbatabDataRoot
+  fullName: AbatabData.Session.AbatabDataRoot
+  nameWithType: Session.AbatabDataRoot
+- uid: AbatabData.Session.AbatabDataRoot*
+  name: AbatabDataRoot
+  href: api/AbatabData.Session.html#AbatabData_Session_AbatabDataRoot_
+  commentId: Overload:AbatabData.Session.AbatabDataRoot
+  isSpec: "True"
+  fullName: AbatabData.Session.AbatabDataRoot
+  nameWithType: Session.AbatabDataRoot
 - uid: AbatabData.Session.AbatabFallbackUserName
   name: AbatabFallbackUserName
   href: api/AbatabData.Session.html#AbatabData_Session_AbatabFallbackUserName
@@ -1037,12 +1024,12 @@ references:
   isSpec: "True"
   fullName: AbatabLogging.LogEvent.ModQuickMedOrder
   nameWithType: LogEvent.ModQuickMedOrder
-- uid: AbatabLogging.LogEvent.PrimevalDebug(System.String,System.String,System.String,System.String,System.Int32)
-  name: PrimevalDebug(String, String, String, String, Int32)
-  href: api/AbatabLogging.LogEvent.html#AbatabLogging_LogEvent_PrimevalDebug_System_String_System_String_System_String_System_String_System_Int32_
-  commentId: M:AbatabLogging.LogEvent.PrimevalDebug(System.String,System.String,System.String,System.String,System.Int32)
-  fullName: AbatabLogging.LogEvent.PrimevalDebug(System.String, System.String, System.String, System.String, System.Int32)
-  nameWithType: LogEvent.PrimevalDebug(String, String, String, String, Int32)
+- uid: AbatabLogging.LogEvent.PrimevalDebug(System.String,System.String,System.String,System.String,System.String,System.Int32)
+  name: PrimevalDebug(String, String, String, String, String, Int32)
+  href: api/AbatabLogging.LogEvent.html#AbatabLogging_LogEvent_PrimevalDebug_System_String_System_String_System_String_System_String_System_String_System_Int32_
+  commentId: M:AbatabLogging.LogEvent.PrimevalDebug(System.String,System.String,System.String,System.String,System.String,System.Int32)
+  fullName: AbatabLogging.LogEvent.PrimevalDebug(System.String, System.String, System.String, System.String, System.String, System.Int32)
+  nameWithType: LogEvent.PrimevalDebug(String, String, String, String, String, Int32)
 - uid: AbatabLogging.LogEvent.PrimevalDebug*
   name: PrimevalDebug
   href: api/AbatabLogging.LogEvent.html#AbatabLogging_LogEvent_PrimevalDebug_

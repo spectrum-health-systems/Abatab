@@ -1,7 +1,7 @@
-﻿// AbatabLogging 22.11.0
+﻿// AbatabLogging 23.0.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221110.112516
+// b221209.0649
 
 /* ========================================================================================================
  * PLEASE READ
@@ -233,7 +233,7 @@ namespace AbatabLogging
                     LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot);
                     moduleDetail = $"Mode:                 {abatabSession.ModQuickMedOrderConfig.Mode}{Environment.NewLine}" +
                                    $"Valid users:          {abatabSession.ModQuickMedOrderConfig.AuthorizedUsers}{Environment.NewLine}" +
-                                   $"Max percent increase: {abatabSession.ModQuickMedOrderConfig.DosePercentIncrease}";
+                                   $"Max percent increase: {abatabSession.ModQuickMedOrderConfig.DosePercentBoundary}";
                     break;
 
                 case "prototype":

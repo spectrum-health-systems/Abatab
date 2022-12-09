@@ -1,6 +1,6 @@
 # Abatab Changelog
 
-## 22.11.0 (November XX 2022)
+## 23.0.0 (November XX 2022)
 
 * `NEW` Core functionality
 * `NEW` Modules

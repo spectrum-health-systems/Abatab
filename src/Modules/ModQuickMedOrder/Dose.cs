@@ -1,7 +1,7 @@
-﻿// Abatab ModQuickMedOrder 22.11.0
+﻿// Abatab ModQuickMedOrder 23.0.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221110.112516
+// b221209.0649
 
 using AbatabData;
 using AbatabLogging;
@@ -84,8 +84,8 @@ namespace ModQuickMedOrder
                 foreach (FieldObject fieldObject in formObject.CurrentRow.Fields)
                 {
                     /* Creating a trace log here would significantly impact performance, since hundreds of files would be created, so instead we will use a
-                     * debug log. This way trace log functionality won't be impacted elsewhere.
-                     */
+                    * debug log. This way trace log functionality won't be impacted elsewhere.
+                    */
                     LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
 
                     if (fieldObject.FieldNumber == abatabSession.ModQuickMedOrderConfig.DosageOneFieldId)
@@ -97,6 +97,8 @@ namespace ModQuickMedOrder
                     else if (fieldObject.FieldNumber == abatabSession.ModQuickMedOrderConfig.OrderTypeFieldId)
                     {
                         LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+
+                        // TODO
 
                         ProcessOrderTypeField(abatabSession, fieldObject);
                     }
@@ -203,7 +205,9 @@ namespace ModQuickMedOrder
                         {
                             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
-                            double maximumDose = prevDoseAsNumber * 1.25;
+                            //double maxPercentChange = prevDoseAsNumber * 1.25;
+
+                            double percentDifference = Math.Abs(((prevDoseAsNumber - currDoseAsNumber) / prevDoseAsNumber) * 100);
 
                             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
@@ -211,30 +215,77 @@ namespace ModQuickMedOrder
                             //LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, debugMsg2_);
 
                             // TODO Should be converted when setup.
-                            var maxPercentIncrease = Convert.ToDouble(abatabSession.ModQuickMedOrderConfig.DosePercentIncrease);
+                            var percentBoundary    = Convert.ToDouble(abatabSession.ModQuickMedOrderConfig.DosePercentBoundary);
+                            var milligramsBoundary = Convert.ToDouble(abatabSession.ModQuickMedOrderConfig.DoseMilligramsBoundary);
 
-                            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, maxPercentIncrease.ToString());
+                            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, percentBoundary.ToString());
 
-                            if (currDoseAsNumber >= maximumDose)
+                            //var currentMinusPrevious = Math.Abs(currDoseAsNumber - prevDoseAsNumber);
+                            //var previousMinusCurrent = Math.Abs(prevDoseAsNumber - currDoseAsNumber);
+
+                            var overage  = Math.Abs(currDoseAsNumber - prevDoseAsNumber);
+                            var underage = Math.Abs(prevDoseAsNumber - currDoseAsNumber);
+
+                            var differ = Math.Abs(currDoseAsNumber - prevDoseAsNumber);
+
+                            var outsideBoundary = false;
+
+                            // REINSTATE LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, $"[TRACE_02] {percentBoundary} | {milligramsBoundary} | {currentMinusPrevious} | {previousMinusCurrent} | {outsideBoundary} |   ");
+
+                            //var warningId = $"[ Warning ID: {abatabSession.SessionDateStamp}.{abatabSession.SessionTimeStamp}-{percentBoundary}.{percentDifference}-{milligramsBoundary}.{currentMinusPrevious}.{previousMinusCurrent} ]";
+
+                            //var warningId = $"[ Warning ID: {abatabSession.SessionDateStamp}.{abatabSession.SessionTimeStamp}-{percentBoundary}.{percentDifference}-{milligramsBoundary}.{overage}.{underage} ]";
+                            var warningId = $"[ Warning ID: {abatabSession.SessionDateStamp}.{abatabSession.SessionTimeStamp}-{percentBoundary}.{percentDifference}-{milligramsBoundary}.{differ} ]";
+
+
+                            //if (currentMinusPrevious >= milligramsBoundary || previousMinusCurrent <= milligramsBoundary)
+                            //{
+                            //    LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+
+                            //    outsideBoundary = true;
+                            //}
+                            //if (overage >= milligramsBoundary || underage <= milligramsBoundary)
+                            if (differ >= milligramsBoundary)
                             {
                                 LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
-                                var perc = ((currDoseAsNumber - prevDoseAsNumber) / prevDoseAsNumber) * 100;
+                                outsideBoundary = true;
+                            }
+                            //else if (percentDifference < (Convert.ToDouble(abatabSession.ModQuickMedOrderConfig.DosePercentBoundary) * 100))
+                            else if (percentDifference >= percentBoundary)
+                            {
+                                LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+
+                                outsideBoundary = true;
+                            }
+
+                            //if (currDoseAsNumber >= maxPercentChange || currDoseAsNumber <= maxPercentChange)
+                            if (outsideBoundary)
+                            {
+                                LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+
+                                //var percentDifference = ((currDoseAsNumber - prevDoseAsNumber) / prevDoseAsNumber) * 100;
 
                                 //var niceString = string.Format("{0:0.#}", percentDifference);
-                                var niceString = string.Format("{0:0.#}", perc);
+                                //var niceString = string.Format("{0:0.#}", percentDifference);
 
-                                var debugMsg3_ = $"[{prevDoseAsNumber}] [{currDoseAsNumber}] [{perc}] [{maximumDose}] [{niceString}]";
-                                LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, debugMsg3_);
+                                // REINSTATE LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, $"[TRACE_02] {percentBoundary} | {milligramsBoundary} | {currentMinusPrevious} | {previousMinusCurrent} | {outsideBoundary} |   ");
+
+                                //var debugMsg3_ = $"[{prevDoseAsNumber}] [{currDoseAsNumber}] [{percentDifference}] [{maxPercentChange}] [{niceString}]";
+                                LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
                                 abatabSession.WorkOptObj.ErrorCode = 4;
                                 abatabSession.WorkOptObj.ErrorMesg = $"WARNING!{Environment.NewLine}" +
-                                                                     $"The percentage increase is too high.{Environment.NewLine}" +
                                                                      $"{Environment.NewLine}" +
-                                                                     $"The previous dose was: {prevDoseAsNumber}mg{Environment.NewLine}" +
-                                                                     $"The current dose is: {currDoseAsNumber}mg{Environment.NewLine}" +
-                                                                     $"That is a difference of: {niceString}%{Environment.NewLine}" +
-                                                                     $"Are you sure you want to submit?";
+                                                                     $"The current dose is significantly different than the previous dose.{Environment.NewLine}" +
+                                                                     $"{Environment.NewLine}" +
+                                                                     $"The previous dose was: {prevDoseAsNumber}mg(s){Environment.NewLine}" +
+                                                                     $"The current dose is: {currDoseAsNumber}mg(s){Environment.NewLine}" +
+                                                                     $"{Environment.NewLine}" +
+                                                                     $"Are you sure you want to submit?" +
+                                                                     $"{Environment.NewLine}" +
+                                                                     $"{Environment.NewLine}" +
+                                                                     $"{warningId}";
                             }
                             else
                             {
@@ -310,6 +361,8 @@ namespace ModQuickMedOrder
             abatabSession.ModQuickMedOrderConfig.OrderType = fieldObject.FieldValue;
 
             abatabSession.ModQuickMedOrderConfig.FoundOrderTypeFieldId = true;
+
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, $"[TRACE_02]: OrderType = {fieldObject.FieldValue}/{abatabSession.ModQuickMedOrderConfig.OrderType} | FoundOrderTypeFieldId = {abatabSession.ModQuickMedOrderConfig.FoundOrderTypeFieldId}");
         }
 
         /// <summary>

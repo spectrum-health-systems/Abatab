@@ -3,7 +3,7 @@
   <img src="../images/man-logo.png" alt="Abatab Manual" width="512">
 
   <h4>
-    Abatab v22.11.0
+    Abatab v23.0.0
   </h4>
 
 </div>
@@ -12,7 +12,7 @@
 
 # About Abatab
 
-This is the manual for [**Abatab**][abatab-repository-url], a custom web service for [Netsmart's myAvatar™][netsmart-avatar-url].
+This is the manual for [**Abatab**][AbatabUrl], a custom web service for [Netsmart's myAvatar™][AvatarUrl].
 
 This manual is updated with each release, and contains everything you need to know about Abatab.
 
@@ -20,8 +20,8 @@ This manual is updated with each release, and contains everything you need to kn
 
 Abatab is developed by [A Pretty Cool Program][a-pretty-cool-program-url]
 
-[abatab-repository-url]: https://github.com/spectrum-health-systems/Abatab
-[netsmart-avatar-url]: https://www.ntst.com/Offerings/myAvatarg
+[AbatabUrl]: https://github.com/spectrum-health-systems/Abatab
+[AvatarUrl]: https://www.ntst.com/Offerings/myAvatarg
 [man-getting-started]: ./man-getting-started.md
 [man-hosting]: ./man-hosting.md
 [man-importing]: ./man-importing.md

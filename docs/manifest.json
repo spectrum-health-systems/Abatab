@@ -1,8 +1,20 @@
 {
   "homepages": [],
-  "source_base_path": "C:/Users/Chris.Banwarth/GitHub/Repositories/SHS/Abatab/src/ThirdParty/DocFX",
+  "source_base_path": "C:/IT/GitHub/SHS/Abatab/src/ThirdParty/DocFX",
   "xrefmap": "xrefmap.yml",
   "files": [
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../../docs/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "README.html",
+          "hash": "/g7K3QIULuX231Hrt17mJpKnRCPQnkFVY3LZ8hxJ4DI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
     {
       "type": "Conceptual",
       "source_relative_path": "../../docs/api/index.md",
@@ -24,7 +36,7 @@
       "output": {
         ".html": {
           "relative_path": "doc/CHANGELOG.html",
-          "hash": "0EoRtZZwChbh9ySJO2CnoqrDBmgrTVCvwqqgmygoYRw="
+          "hash": "9lO6biKtV7I4UNZ2tIhr9TiOji3LyHkVTWqIRnWfdDM="
         }
       },
       "is_incremental": false,
@@ -36,7 +48,7 @@
       "output": {
         ".html": {
           "relative_path": "doc/ROADMAP.html",
-          "hash": "RP3RsLQJHCKiq0KUlKoC/VkB4UUOH1Ora+4COWXTTFs="
+          "hash": "VjmjopetS0vHGEgbrZz2noKiw37FvjAQJDT4uwuxEkc="
         }
       },
       "is_incremental": false,
@@ -60,7 +72,7 @@
       "output": {
         ".html": {
           "relative_path": "doc/release-notes/22-11-0.html",
-          "hash": "S8V682fI/DpZm+M1DsvOKA2/dOnYh0MxWKBK4BpC1CI="
+          "hash": "hE7YleKabaqxagaEx+m/d7pYZce5kT6SjGkTpdDI2w0="
         }
       },
       "is_incremental": false,
@@ -84,7 +96,7 @@
       "output": {
         ".html": {
           "relative_path": "doc/toc.html",
-          "hash": "Bcl3V2xRymAB9y+E/PQyKF792TJlCnzLjRJI14dGxXk="
+          "hash": "L6GBQmxcSQBK2y5kpe3DlWtC8Ksd3QP7CKHQ0RluA9s="
         }
       },
       "is_incremental": false,
@@ -103,10 +115,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "../../docs/images/hosting-using-iis/iis-add-website-362x414.png",
+      "source_relative_path": "../../docs/images/HostUsingIis/iis-add-website-362x414.png",
       "output": {
         "resource": {
-          "relative_path": "images/hosting-using-iis/iis-add-website-362x414.png"
+          "relative_path": "images/HostUsingIis/iis-add-website-362x414.png"
         }
       },
       "is_incremental": false,
@@ -114,10 +126,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "../../docs/images/hosting-using-iis/iis-application-pool-633x187.png",
+      "source_relative_path": "../../docs/images/HostUsingIis/iis-application-pool-633x187.png",
       "output": {
         "resource": {
-          "relative_path": "images/hosting-using-iis/iis-application-pool-633x187.png"
+          "relative_path": "images/HostUsingIis/iis-application-pool-633x187.png"
         }
       },
       "is_incremental": false,
@@ -125,10 +137,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "../../docs/images/hosting-using-iis/iis-directory-browsing-633x204.png",
+      "source_relative_path": "../../docs/images/HostUsingIis/iis-directory-browsing-633x204.png",
       "output": {
         "resource": {
-          "relative_path": "images/hosting-using-iis/iis-directory-browsing-633x204.png"
+          "relative_path": "images/HostUsingIis/iis-directory-browsing-633x204.png"
         }
       },
       "is_incremental": false,
@@ -136,10 +148,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "../../docs/images/hosting-using-iis/iis-roles-295x650.png",
+      "source_relative_path": "../../docs/images/HostUsingIis/iis-roles-295x650.png",
       "output": {
         "resource": {
-          "relative_path": "images/hosting-using-iis/iis-roles-295x650.png"
+          "relative_path": "images/HostUsingIis/iis-roles-295x650.png"
         }
       },
       "is_incremental": false,
@@ -147,10 +159,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "../../docs/images/hosting-using-iis/iis-site-home-633x206.png",
+      "source_relative_path": "../../docs/images/HostUsingIis/iis-site-home-633x206.png",
       "output": {
         "resource": {
-          "relative_path": "images/hosting-using-iis/iis-site-home-633x206.png"
+          "relative_path": "images/HostUsingIis/iis-site-home-633x206.png"
         }
       },
       "is_incremental": false,
@@ -158,10 +170,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "../../docs/images/importing-abatab/scriptlink-form-designer-settings-button-364x335.png",
+      "source_relative_path": "../../docs/images/Importing/scriptlink-form-designer-settings-button-364x335.png",
       "output": {
         "resource": {
-          "relative_path": "images/importing-abatab/scriptlink-form-designer-settings-button-364x335.png"
+          "relative_path": "images/Importing/scriptlink-form-designer-settings-button-364x335.png"
         }
       },
       "is_incremental": false,
@@ -169,10 +181,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "../../docs/images/importing-abatab/scriptlink-options-import-wsdl-847x375.png",
+      "source_relative_path": "../../docs/images/Importing/scriptlink-options-import-wsdl-847x375.png",
       "output": {
         "resource": {
-          "relative_path": "images/importing-abatab/scriptlink-options-import-wsdl-847x375.png"
+          "relative_path": "images/Importing/scriptlink-options-import-wsdl-847x375.png"
         }
       },
       "is_incremental": false,
@@ -180,10 +192,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "../../docs/images/importing-abatab/wsdl-xml-example-799x393.png",
+      "source_relative_path": "../../docs/images/Importing/wsdl-xml-example-799x393.png",
       "output": {
         "resource": {
-          "relative_path": "images/importing-abatab/wsdl-xml-example-799x393.png"
+          "relative_path": "images/Importing/wsdl-xml-example-799x393.png"
         }
       },
       "is_incremental": false,
@@ -404,11 +416,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "../../docs/man/additional-reading/man_additional-reading_home.md",
+      "source_relative_path": "../../docs/man/AdditionalInformation/man-AdditionalInformation-Home.md",
       "output": {
         ".html": {
-          "relative_path": "man/additional-reading/man_additional-reading_home.html",
-          "hash": "cCtMetlOqZdhqs6wUbbjH8pR69EAxZOknuC3VYkyz0I="
+          "relative_path": "man/AdditionalInformation/man-AdditionalInformation-Home.html",
+          "hash": "HnywQqQnsMCpm28u3gNQp7gsapSGIsHg41Gj60KGXps="
         }
       },
       "is_incremental": false,
@@ -416,11 +428,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "../../docs/man/configuration/man_configuration_home.md",
+      "source_relative_path": "../../docs/man/Configuration/man-Configuration-Home.md",
       "output": {
         ".html": {
-          "relative_path": "man/configuration/man_configuration_home.html",
-          "hash": "ISiqXGUX5w6lHDss0ldPp8VTSFVHo3CJillZZ5mhdKQ="
+          "relative_path": "man/Configuration/man-Configuration-Home.html",
+          "hash": "wCyaeW7ZSI9f9ko4/9dORdUpQFYVyfB/ocsK36WiHeU="
         }
       },
       "is_incremental": false,
@@ -428,41 +440,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "../../docs/man/configuration/man_configuration_local-settings.md",
+      "source_relative_path": "../../docs/man/Configuration/man-Configuration-LocalSettings.md",
       "output": {
         ".html": {
-          "relative_path": "man/configuration/man_configuration_local-settings.html",
-          "hash": "W6pGz40lxVCWLfbtqEjaer3IFMJfh5w4De7NWDTXGLc="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "../../docs/man/docfx-integration/man_docfx-integration_home.md",
-      "output": {
-        ".html": {
-          "relative_path": "man/docfx-integration/man_docfx-integration_home.html",
-          "hash": "+h95NAZ/W6n3SJnSnsBbgTsApmxMd69LxWEZ8XLFSSE="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "../../docs/man/functionality/man_functionality_core.md",
-      "output": {
-        ".html": {
-          "relative_path": "man/functionality/man_functionality_core.html",
-          "hash": "/hNnlYHPAKvQtakVDgogXtNYLlbpXQxYE7b8v7+OQ6A="
+          "relative_path": "man/Configuration/man-Configuration-LocalSettings.html",
+          "hash": "x7SLKBD0xYtKWzgeQiSvY+akZgjr0+wiuw/Fw1yl/IQ="
         }
       },
       "is_incremental": false,
@@ -470,11 +452,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "../../docs/man/functionality/man_functionality_existing.md",
+      "source_relative_path": "../../docs/man/DocFx/man-DocFx-Home.md",
       "output": {
         ".html": {
-          "relative_path": "man/functionality/man_functionality_existing.html",
-          "hash": "sjQnHmNuIYMJT6qRk1GXOvK3OXYp8rPM/ZIDnc9swgk="
+          "relative_path": "man/DocFx/man-DocFx-Home.html",
+          "hash": "ceXBpH9zzo6cpLVhxYCS+KjQC6vYc5rAacZeMIMKsJw="
         }
       },
       "is_incremental": false,
@@ -482,11 +464,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "../../docs/man/functionality/man_functionality_home.md",
+      "source_relative_path": "../../docs/man/DocFx/man-DocFx-HowTo.md",
       "output": {
         ".html": {
-          "relative_path": "man/functionality/man_functionality_home.html",
-          "hash": "S5fl1Gjmo4h0+GPHYxdaPz3u+anQwVawtWNj+tl/r1Y="
+          "relative_path": "man/DocFx/man-DocFx-HowTo.html",
+          "hash": "H+e4Ub7O8XDBcrwDcFYjEjBPa+KK9g52lQK9499ZsFU="
         }
       },
       "is_incremental": false,
@@ -497,11 +479,11 @@
         "InvalidFileLink"
       ],
       "type": "Conceptual",
-      "source_relative_path": "../../docs/man/functionality/man_functionality_modules.md",
+      "source_relative_path": "../../docs/man/Functionality/man-Functionality-Core.md",
       "output": {
         ".html": {
-          "relative_path": "man/functionality/man_functionality_modules.html",
-          "hash": "NS/peoEVUvOFGXj4n15U0E8IixvcZFIOLB4V1H7QzMw="
+          "relative_path": "man/Functionality/man-Functionality-Core.html",
+          "hash": "BER7jVnqoyzja3bFKMpyZQ7SfQABQCUTQZFGQKqetgg="
         }
       },
       "is_incremental": false,
@@ -509,11 +491,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "../../docs/man/functionality/man_functionality_new.md",
+      "source_relative_path": "../../docs/man/Functionality/man-Functionality-Existing.md",
       "output": {
         ".html": {
-          "relative_path": "man/functionality/man_functionality_new.html",
-          "hash": "+nUAhNa5VSgH4LX6pg8cgLPTofabpY5PjVoEJ4VjHmo="
+          "relative_path": "man/Functionality/man-Functionality-Existing.html",
+          "hash": "mCLhvPIv9m85NtHYw5w2R+3jOHBnnnHFsmWQr+Abe+Y="
         }
       },
       "is_incremental": false,
@@ -521,26 +503,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "../../docs/man/getting-started/man_getting-started_home.md",
+      "source_relative_path": "../../docs/man/Functionality/man-Functionality-Home.md",
       "output": {
         ".html": {
-          "relative_path": "man/getting-started/man_getting-started_home.html",
-          "hash": "H6H+9qnvocAzwmzYDCWsK9QNeWUGcc++Xk4n6Q2RA88="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "../../docs/man/hosting/man_hosting_home.md",
-      "output": {
-        ".html": {
-          "relative_path": "man/hosting/man_hosting_home.html",
-          "hash": "iqRHjOfjtYCdoT5jKCuN3M0qUd1WNrywZGKCCnf6q6Q="
+          "relative_path": "man/Functionality/man-Functionality-Home.html",
+          "hash": "UFHensWBf5SBEq61PQeyieeio5m8HWofCAlMaKEzE9Q="
         }
       },
       "is_incremental": false,
@@ -551,11 +518,125 @@
         "InvalidFileLink"
       ],
       "type": "Conceptual",
-      "source_relative_path": "../../docs/man/importing/man_importing_home.md",
+      "source_relative_path": "../../docs/man/Functionality/man-Functionality-Modules.md",
       "output": {
         ".html": {
-          "relative_path": "man/importing/man_importing_home.html",
-          "hash": "sp9c8ZIvyBvgXGgWPNYRmJRvn9D85XxPTuHCMCVy/fA="
+          "relative_path": "man/Functionality/man-Functionality-Modules.html",
+          "hash": "UQdGQEFLkvZgJIN289Q6Gdk+iS4skx3M3sKOKcefMos="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../../docs/man/Functionality/man-Functionality-New.md",
+      "output": {
+        ".html": {
+          "relative_path": "man/Functionality/man-Functionality-New.html",
+          "hash": "+xy5GsgWPRdl1Ytabq73KTfiAXg18qRP0w8omaC6sLg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "../../docs/man/GettingStarted/man-GettingStarted-Home.md",
+      "output": {
+        ".html": {
+          "relative_path": "man/GettingStarted/man-GettingStarted-Home.html",
+          "hash": "VCV8W1gu4CITwW9xxG4WGJpNg1eu0OVc0x9MrDux15k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../../docs/man/Hosting/man-Hosting-Home.md",
+      "output": {
+        ".html": {
+          "relative_path": "man/Hosting/man-Hosting-Home.html",
+          "hash": "GJqQPpQucmVX/eIf8A7Xf5fdcdQFeVW0RIGbB3JwBlc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "../../docs/man/Importing/man-Importing-Home.md",
+      "output": {
+        ".html": {
+          "relative_path": "man/Importing/man-Importing-Home.html",
+          "hash": "GLC02m2VYHlAuaUyWRsuU5HddlBIhhyH4hCWwWJ55/I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../../docs/man/Logging/man-Logging-Home.md",
+      "output": {
+        ".html": {
+          "relative_path": "man/Logging/man-Logging-Home.html",
+          "hash": "Ke6SGX1CPGEu/JLRLTENSlZLiras6QSC9eKnbmxUz4I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../../docs/man/SourceCode/man-SourceCode-Home.md",
+      "output": {
+        ".html": {
+          "relative_path": "man/SourceCode/man-SourceCode-Home.html",
+          "hash": "9PhklQWXzkIAkjJquCemDeczSBbf41rdt9DT8heYH7s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../../docs/man/Testing/man-Testing-Home.md",
+      "output": {
+        ".html": {
+          "relative_path": "man/Testing/man-Testing-Home.html",
+          "hash": "wOkm4O6lVk4d3trkXsVk5aLzvzPFmKl4s4XG+/euydg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../../docs/man/Testing/man-Testing-ModQuickMedOrder.md",
+      "output": {
+        ".html": {
+          "relative_path": "man/Testing/man-Testing-ModQuickMedOrder.html",
+          "hash": "DylK1LvgckYD7bRVqGFGsehX4HUfwNdT9t66Cf2MmEA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../../docs/man/Using/man-Using-Home.md",
+      "output": {
+        ".html": {
+          "relative_path": "man/Using/man-Using-Home.html",
+          "hash": "bbaLmcR1BONWz2Q1POatjMZta1S9x0VN4Ww6+XEd66o="
         }
       },
       "is_incremental": false,
@@ -567,31 +648,7 @@
       "output": {
         ".html": {
           "relative_path": "man/index.html",
-          "hash": "ULDrKb5CLO6QdsuuLsOo+s9ubUwuOqNqRMLIn/8T+Aw="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "../../docs/man/logging/man_logging_home.md",
-      "output": {
-        ".html": {
-          "relative_path": "man/logging/man_logging_home.html",
-          "hash": "C2dTUzdipr6r3C7prEKCQ04Fe9NSkZU0bNDzKNsPsos="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "../../docs/man/source-code/man_source-code_home.md",
-      "output": {
-        ".html": {
-          "relative_path": "man/source-code/man_source-code_home.html",
-          "hash": "BklJ2MNxsK9wzoQWMtR8ur191xHRuZqLTruyYW/tv/c="
+          "hash": "SVyCu/xeMzl3PDxSY12JmiSLqQKII3OGaIuV8wGlVf0="
         }
       },
       "is_incremental": false,
@@ -606,7 +663,7 @@
       "output": {
         ".html": {
           "relative_path": "man/toc.html",
-          "hash": "+vs/IurepX19MWLoaALIFTrsAWqu/k08ao9MK/HSgvA="
+          "hash": "KjnEniF4YQMp/y+9v98Ug+W+WgXQthJo124pYNcnpr4="
         }
       },
       "is_incremental": false,
@@ -616,24 +673,12 @@
       "log_codes": [
         "InvalidFileLink"
       ],
-      "type": "Conceptual",
-      "source_relative_path": "../../docs/man/using/man_using_home.md",
-      "output": {
-        ".html": {
-          "relative_path": "man/using/man_using_home.html",
-          "hash": "br1vA0Ow5jMHHxD+1e9UBtn34bHXB5D3XKYDvrhbiVQ="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
       "type": "ManagedReference",
       "source_relative_path": "../../docs/obj/api/Abatab.Abatab.yml",
       "output": {
         ".html": {
           "relative_path": "api/Abatab.Abatab.html",
-          "hash": "OY8EBdbOjyr2QGL4Ll0OaGjeJPzDrFkB+tJyQGBBJC8="
+          "hash": "stG8ttCqu6WqStoiscUc0Gco+13/ijc+C0hZVCc9nSA="
         }
       },
       "is_incremental": false,
@@ -741,7 +786,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AbatabData.Module.QuickMedOrder.html",
-          "hash": "ipR6ZZcN5Nknhhl4KKooQNQyp2DxDs5Y2RpIua5d6l4="
+          "hash": "bAJtlGRFDZr5zU8FBOyT6DI0DMsaQgNjoYNoOr9bDvM="
         }
       },
       "is_incremental": false,
@@ -777,7 +822,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AbatabData.Session.html",
-          "hash": "Nek9gOqOt7MzjR+/DXTJln08g9AWSFkm//SEDOYgxPI="
+          "hash": "hIKGHz2lulJ+YRLOe5oXWcuT81ZXJu+mdXwnrE0XOLI="
         }
       },
       "is_incremental": false,
@@ -861,7 +906,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AbatabLogging.LogEvent.html",
-          "hash": "ZHSYu5lGkQcujN/r+fqhWnJYtaeBwmZRFjtVVWfJWFY="
+          "hash": "04kJltPVpVguAoyjKQuH1ZuqrpAgd5RfRIsXDfA0QNg="
         }
       },
       "is_incremental": false,
@@ -945,7 +990,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AbatabSession.Build.html",
-          "hash": "EWHbsgDKbrWRYsXF9xkZrjIXacpnnZ6d/uDzaAv8sqg="
+          "hash": "YAFWJ6yXSLRy+cmFNQInE6VE8fdsLRcylY71DoGlS1U="
         }
       },
       "is_incremental": false,
@@ -1290,7 +1335,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 23,
+          "total_file_count": 27,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
