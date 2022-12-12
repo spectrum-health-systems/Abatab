@@ -20,9 +20,9 @@ namespace Abatab
         /// </summary>
         /// <returns>A dictionary containing the settings from Web.config.</returns>
         /// <remarks>
-        /// * Whenever a new value is added/removed to Properties/Settings.settings, it needs to be added/removed here as well.
-        /// * Configuration settings details can be found <see href="../man/man-Configuration-LocalSettings.html">here.</see>
-        /// * Settings are trimmed and converted to lowercase. <see href="../man/man-SourceCode-Home.html#casing-and-trimming">[more info]</see>
+        /// * These <see href="../man/manGlossary.html#configuration-settings">configuration setting.</see> are setup in <c>src/Properties/Settings.settings</c>, and modified in the <see href="../man/manGlossary.html#webconfig">Web.config.</see> file.
+        /// * Whenever a new value is added/removed to <c>src/Properties/Settings.settings</c>, it needs to be added/removed here as well.
+        /// * Settings are trimmed and converted to lowercase. <see href="../man/manSourceCode.html#casing-and-trimming">[more info]</see>
         /// </remarks>
         public static Dictionary<string, string> Load()
         {

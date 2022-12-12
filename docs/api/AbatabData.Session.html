@@ -73,9 +73,7 @@
   
   <h1 id="AbatabData_Session" data-uid="AbatabData.Session" class="text-break">Class Session
   </h1>
-  <div class="markdown level0 summary"><p>
-This class defines the properties for the Abatab session, built from the local Web.config file, and at runtime.
-</p>
+  <div class="markdown level0 summary"><p>This class defines the properties for the Abatab session, built from the local Web.config file, and at runtime.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -169,7 +167,7 @@ This class defines the properties for the Abatab session, built from the local W
   
   <a id="AbatabData_Session_AbatabDataRoot_" data-uid="AbatabData.Session.AbatabDataRoot*"></a>
   <h4 id="AbatabData_Session_AbatabDataRoot" data-uid="AbatabData.Session.AbatabDataRoot">AbatabDataRoot</h4>
-  <div class="markdown level1 summary"><p>The Abatab data root directory. <a href="https://spectrum-health-systems.github.io/Abatab/man/man-configuration-local-settings.html#abatabroot">. [more info]</a></p>
+  <div class="markdown level1 summary"><p>The root directory where the Abatab data is stored.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -187,16 +185,25 @@ This class defines the properties for the Abatab session, built from the local W
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td><p>Default value is <code>C:\AbatabData</code>.</p>
+        <td><p>Default value is <code>C:\Abatab</code></p>
 </td>
       </tr>
     </tbody>
   </table>
+  <h5 id="AbatabData_Session_AbatabDataRoot_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><ul>
+<li>At runtime The <code>AvatarEnvironment</code> value is created as a sub-directory of the <code>AbatabDataRoot</code>.</li>
+<li>This is the directory where exported data/logs should be stored.</li>
+</ul>
+</div>
+  <h5 id="AbatabData_Session_AbatabDataRoot_examples">Examples</h5>
+  <p>If <code>AbatabDataRoot</code> is <em>&quot;C:\Abatab&quot;</em>, and <code>AvatarEnvironment</code> is <em>&quot;LIVE&quot;</em>, the root directory at runtime would be <code>C:\Abatab\LIVE</code>.</p>
+
   
   
   <a id="AbatabData_Session_AbatabFallbackUserName_" data-uid="AbatabData.Session.AbatabFallbackUserName*"></a>
   <h4 id="AbatabData_Session_AbatabFallbackUserName" data-uid="AbatabData.Session.AbatabFallbackUserName">AbatabFallbackUserName</h4>
-  <div class="markdown level1 summary"><p>The current Avatar environment. <a href="https://spectrum-health-systems.github.io/Abatab/man/man-configuration-local-settings.html#abatabfallbackusername">. [more info]</a></p>
+  <div class="markdown level1 summary"><p>The current Avatar environment. </p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -214,16 +221,19 @@ This class defines the properties for the Abatab session, built from the local W
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td><p>Default value is <code>_Abatab</code>.</p>
+        <td><p>Default value is <code>LIVE</code></p>
 </td>
       </tr>
     </tbody>
   </table>
+  <h5 id="AbatabData_Session_AbatabFallbackUserName_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><table><thead><tr><th>Environment name</th><th>Description</th></tr></thead><tbody><tr><td><strong><em>LIVE</em></strong></td><td>The Avatar production environment.</td></tr><tr><td>UAT</td><td>The Avatar testing environment.</td></tr><tr><td>SBOX</td><td>The Avatar sandbox environment.</td></tr></tbody></table>
+</div>
   
   
   <a id="AbatabData_Session_AbatabMode_" data-uid="AbatabData.Session.AbatabMode*"></a>
   <h4 id="AbatabData_Session_AbatabMode" data-uid="AbatabData.Session.AbatabMode">AbatabMode</h4>
-  <div class="markdown level1 summary"><p>The default behavior of Abatab. <a href="../man/man-Configuration-LocalSettings.index.html#abatabmode"> [more info]</a></p>
+  <div class="markdown level1 summary"><p>The current Abatab mode.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -241,11 +251,18 @@ This class defines the properties for the Abatab session, built from the local W
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td><p>Default value is <code>enabled</code>.</p>
+        <td><p>Default value is <code>enabled</code></p>
 </td>
       </tr>
     </tbody>
   </table>
+  <h5 id="AbatabData_Session_AbatabMode_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p><table><thead><tr><th>Setting</th><th>Description</th></tr></thead><tbody><tr><td><strong><em>enabled</em></strong></td><td>All Abatab functionality is (potentially) available.</td></tr><tr><td>disabled</td><td>Abatab functionality is not available.</td></tr><tr><td>passthrough</td><td>All functionality is available, but no changes are made to Avatar.</td></tr></tbody></table></p>
+<ul>
+<li>If Abatab is <code>enabled</code>, you are still able to disable specific functionality.</li>
+<li>The <code>passthrough</code> mode is intended for development, not production.</li>
+</ul>
+</div>
   
   
   <a id="AbatabData_Session_AbatabModule_" data-uid="AbatabData.Session.AbatabModule*"></a>
@@ -325,7 +342,7 @@ This class defines the properties for the Abatab session, built from the local W
   
   <a id="AbatabData_Session_AbatabRoot_" data-uid="AbatabData.Session.AbatabRoot*"></a>
   <h4 id="AbatabData_Session_AbatabRoot" data-uid="AbatabData.Session.AbatabRoot">AbatabRoot</h4>
-  <div class="markdown level1 summary"><p>The Abatab root directory. <a href="https://spectrum-health-systems.github.io/Abatab/man/man-configuration-local-settings.html#abatabroot">. [more info]</a></p>
+  <div class="markdown level1 summary"><p>The root directory where the Abatab web service has been deployed.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -343,11 +360,19 @@ This class defines the properties for the Abatab session, built from the local W
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td><p>Default value is <code>C:\Abatab_</code>.</p>
+        <td><p>Default value is <code>C:\Abatab_</code></p>
 </td>
       </tr>
     </tbody>
   </table>
+  <h5 id="AbatabData_Session_AbatabRoot_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><ul>
+<li>At runtime The <code>AvatarEnvironment</code> value is added to the end of <code>AbatabRoot</code> to form the complete path.</li>
+</ul>
+</div>
+  <h5 id="AbatabData_Session_AbatabRoot_examples">Examples</h5>
+  <p>If <code>AbatabRoot</code> is <em>&quot;C:\Abatab_&quot;</em>, and <code>AvatarEnvironment</code> is <em>&quot;LIVE&quot;</em>, the root directory at runtime would be <code>C:\Abatab_LIVE</code>.</p>
+
   
   
   <a id="AbatabData_Session_AbatabUserName_" data-uid="AbatabData.Session.AbatabUserName*"></a>
@@ -377,7 +402,7 @@ This class defines the properties for the Abatab session, built from the local W
   
   <a id="AbatabData_Session_AvatarEnvironment_" data-uid="AbatabData.Session.AvatarEnvironment*"></a>
   <h4 id="AbatabData_Session_AvatarEnvironment" data-uid="AbatabData.Session.AvatarEnvironment">AvatarEnvironment</h4>
-  <div class="markdown level1 summary"><p>The current Avatar environment. <a href="https://spectrum-health-systems.github.io/Abatab/man/man-configuration-local-settings.html#avatarenvironment">. [more info]</a></p>
+  <div class="markdown level1 summary"><p>The Avatar environment that will use Abatab.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -404,7 +429,8 @@ This class defines the properties for the Abatab session, built from the local W
   
   <a id="AbatabData_Session_DebugglerConfig_" data-uid="AbatabData.Session.DebugglerConfig*"></a>
   <h4 id="AbatabData_Session_DebugglerConfig" data-uid="AbatabData.Session.DebugglerConfig">DebugglerConfig</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Properties for the debugging functionality.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -421,7 +447,8 @@ This class defines the properties for the Abatab session, built from the local W
     <tbody>
       <tr>
         <td><a class="xref" href="AbatabData.Core.Debuggler.html">Debuggler</a></td>
-        <td></td>
+        <td><p>&lt;-- Click for more info</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -454,7 +481,8 @@ This class defines the properties for the Abatab session, built from the local W
   
   <a id="AbatabData_Session_LoggingConfig_" data-uid="AbatabData.Session.LoggingConfig*"></a>
   <h4 id="AbatabData_Session_LoggingConfig" data-uid="AbatabData.Session.LoggingConfig">LoggingConfig</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Properties for the logging functionality.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -471,7 +499,8 @@ This class defines the properties for the Abatab session, built from the local W
     <tbody>
       <tr>
         <td><a class="xref" href="AbatabData.Core.Logging.html">Logging</a></td>
-        <td></td>
+        <td><p>&lt;-- Click for more info</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -479,7 +508,8 @@ This class defines the properties for the Abatab session, built from the local W
   
   <a id="AbatabData_Session_ModCommonConfig_" data-uid="AbatabData.Session.ModCommonConfig*"></a>
   <h4 id="AbatabData_Session_ModCommonConfig" data-uid="AbatabData.Session.ModCommonConfig">ModCommonConfig</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Properties for the Common module.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -496,7 +526,8 @@ This class defines the properties for the Abatab session, built from the local W
     <tbody>
       <tr>
         <td><a class="xref" href="AbatabData.Module.Common.html">Common</a></td>
-        <td></td>
+        <td><p>&lt;-- Click for more info</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -504,7 +535,8 @@ This class defines the properties for the Abatab session, built from the local W
   
   <a id="AbatabData_Session_ModPrototypeConfig_" data-uid="AbatabData.Session.ModPrototypeConfig*"></a>
   <h4 id="AbatabData_Session_ModPrototypeConfig" data-uid="AbatabData.Session.ModPrototypeConfig">ModPrototypeConfig</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Properties for the Prototype module.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -521,7 +553,8 @@ This class defines the properties for the Abatab session, built from the local W
     <tbody>
       <tr>
         <td><a class="xref" href="AbatabData.Module.Prototype.html">Prototype</a></td>
-        <td></td>
+        <td><p>&lt;-- Click for more info</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -529,7 +562,8 @@ This class defines the properties for the Abatab session, built from the local W
   
   <a id="AbatabData_Session_ModQuickMedOrderConfig_" data-uid="AbatabData.Session.ModQuickMedOrderConfig*"></a>
   <h4 id="AbatabData_Session_ModQuickMedOrderConfig" data-uid="AbatabData.Session.ModQuickMedOrderConfig">ModQuickMedOrderConfig</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Properties for the QuickMedOrder module.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -546,7 +580,8 @@ This class defines the properties for the Abatab session, built from the local W
     <tbody>
       <tr>
         <td><a class="xref" href="AbatabData.Module.QuickMedOrder.html">QuickMedOrder</a></td>
-        <td></td>
+        <td><p>&lt;-- Click for more info</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -554,7 +589,7 @@ This class defines the properties for the Abatab session, built from the local W
   
   <a id="AbatabData_Session_ModTestingConfig_" data-uid="AbatabData.Session.ModTestingConfig*"></a>
   <h4 id="AbatabData_Session_ModTestingConfig" data-uid="AbatabData.Session.ModTestingConfig">ModTestingConfig</h4>
-  <div class="markdown level1 summary"><p>Properties for the <a href="https://spectrum-health-systems.github.io/Abatab/api/AbatabData.Module.Testing.html"> Abatab Testing Module.</a></p>
+  <div class="markdown level1 summary"><p>Properties for the Testing module.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -572,7 +607,7 @@ This class defines the properties for the Abatab session, built from the local W
     <tbody>
       <tr>
         <td><a class="xref" href="AbatabData.Module.Testing.html">Testing</a></td>
-        <td><p>See documentation for the <a href="https://spectrum-health-systems.github.io/Abatab/api/AbatabData.Module.Testing.html"> Abatab Testing Module.</a></p>
+        <td><p>&lt;-- Click for more info</p>
 </td>
       </tr>
     </tbody>
@@ -606,7 +641,8 @@ This class defines the properties for the Abatab session, built from the local W
   
   <a id="AbatabData_Session_SessionDateStamp_" data-uid="AbatabData.Session.SessionDateStamp*"></a>
   <h4 id="AbatabData_Session_SessionDateStamp" data-uid="AbatabData.Session.SessionDateStamp">SessionDateStamp</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The session date.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -623,15 +659,22 @@ This class defines the properties for the Abatab session, built from the local W
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>Set at runtime</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="AbatabData_Session_SessionDateStamp_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><ul>
+<li>Uses the following syntax: <code>yyMMdd</code></li>
+</ul>
+</div>
   
   
   <a id="AbatabData_Session_SessionTimeStamp_" data-uid="AbatabData.Session.SessionTimeStamp*"></a>
   <h4 id="AbatabData_Session_SessionTimeStamp" data-uid="AbatabData.Session.SessionTimeStamp">SessionTimeStamp</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The session time.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -648,10 +691,16 @@ This class defines the properties for the Abatab session, built from the local W
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>Set at runtime</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="AbatabData_Session_SessionTimeStamp_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><ul>
+<li>Uses the following syntax: <code>HHmmss</code></li>
+</ul>
+</div>
   
   
   <a id="AbatabData_Session_WorkOptObj_" data-uid="AbatabData.Session.WorkOptObj*"></a>

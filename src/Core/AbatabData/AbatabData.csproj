@@ -45,6 +45,8 @@
     <Compile Include="Core\Debuggler.cs" />
     <Compile Include="Core\Logging.cs" />
     <Compile Include="Core\OptionObject.cs" />
+    <Compile Include="DocEx.cs" />
+    <Compile Include="Maths.cs" />
     <Compile Include="Module\Common.cs" />
     <Compile Include="Module\Prototype.cs" />
     <Compile Include="Module\Testing.cs" />

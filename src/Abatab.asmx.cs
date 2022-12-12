@@ -15,18 +15,19 @@ using System.Web.Services;
 namespace Abatab
 {
     /// <summary>
+    /// The entry point for Abatab.
+    /// </summary>
+    /// <remarks>
     /// <para>
-    /// The main Abatab project, and where the magic starts.
-    /// </para>
-    /// <para>
-    /// Abatab receives two things from Avatar:<br/>
-    /// 1. An <c>OptionObject</c>, which contains all of the information that Abatab needs to do it's thing, and<br/>
+    /// Abatab receives two things from Avatar:
+    /// <br/>
+    /// 1. An <c>OptionObject</c>, which contains all of the information that Abatab needs to do it's thing<br/>
     /// 2. A <c>Script Parameter</c> that tells Abatab what it needs to do with the OptionObject.
     /// </para>
     /// <para>
-    /// For more information about OptionObjects and Script Parameters, please see the <see href="../man/index.html">Abatab Manual.</see>
+    /// For more information about <see href="../man/manGlossary.html#optionobject">OptionObjects</see> and <see href="../man/manGlossary.html#script-paramater">Script Parameters</see>, please see the <see href="../man/index.html">Abatab Manual.</see>
     /// </para>
-    /// </summary>
+    /// </remarks>
     [WebService(Namespace = "http://tempuri.org/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
@@ -55,9 +56,7 @@ namespace Abatab
         /// <returns>A finalized OptionObject that will be returned to Avatar.</returns>
         /// <remarks>
         /// * This method is required by Avatar.
-        /// * This is the only time a <see href="../man/man-Logging-Home.html#primeval-debug-log">Primeval debug log</see> is written.
-        /// * This method should remain fairly static, since most of the logic is taken care of by external
-        /// projects.
+        /// * This is the only time a <see href="../man/manGlossary.html#primeval-debug-log">Primeval debug log</see> is written.
         /// </remarks>
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string scriptParameter)

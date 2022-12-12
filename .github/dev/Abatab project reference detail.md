@@ -1,3 +1,17 @@
+<div align="center">
+
+![Logo][Logo]
+
+# PROJECT REFERENCE
+
+<h3>
+  Last updated December 12, 2022
+</h3>
+
+</div>
+
+***
+
 # Abatab project reference detail
 
 * `X`: Would result in a circular reference
@@ -21,3 +35,5 @@
 |                     ModTesting |  NoRef |   **REF**  |    **REF**    |       **REF**      |       _Dep_      |     NoRef     |      _Dep_     |     NoRef    |   NoRef   |     NoRef    |       NoRef      |      X     | NoRef |              NoRef             |
 |                             Du |  NoRef |    NoRef   |     NoRef     |        NoRef       |       _Dep_      |     NoRef     |      _Dep_     |     NoRef    |   NoRef   |     NoRef    |       NoRef      |    NoRef   |   X   |              NoRef             |
 | NTST.ScriptLinkService.Objects |  NoRef |    NoRef   |     NoRef     |        NoRef       |       _Dep_      |     NoRef     |      _Dep_     |     NoRef    |   NoRef   |     NoRef    |       NoRef      |    NoRef   |       |                X               |
+
+[Logo]: /.github/res/img/logo/RepositoryLogo.png

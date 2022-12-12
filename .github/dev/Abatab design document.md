@@ -1,10 +1,24 @@
-Abatab design document
+<div align="center">
+
+![Logo][Logo]
+
+# DESIGN DOCUMENT
+
+<h3>
+  Last updated December 12, 2022
+</h3>
+
+</div>
+
+***
+
+# About Abatab
 
 Abatab is a custom web service framework for Netsmart’s myAvatar EHR, which includes:
 
 Abatab is designed with the following in mind:
 
-* Functionality can be tested and deployed without affecting existing functionality. This is possible since the core of Abatab is fairly static, and functionality is contained in separate projects.
+* Functionality can be tested and deployed without affecting existing functionality. 
 
 * Configuration is stored in external, plain text files.
 
@@ -22,179 +36,10 @@ Abatab is designed with the following in mind:
 
 * System health monitoring
 
-v1.0 (October 2022)
+# Abatab Manual
 
-v1.0 (December 2022)
+The Abatab Manual is updated with each Abatab release.
 
-# Abatab v1.0 (Autumn 2022)
+You can find the manual framework in src/docs/main/toc.md
 
-* Modules
-    * Quick Medication Order Dose
-        * Verify percentage
-        * Verfiy milligrams
-    * User verification
-        * Jeff's thing
-    * Billing
-        * Kristy’s thing
-* Logging
-    * Debug logs
-    * Trace logs
-    * Session logs
-* External configuration files
-
-
-# Abatab Next
-* Modules
-    * Inpatient Admission Date
-        * Verify
-    * Open incident form (see below)
-* Logging
-    * TBD
-* External configuration files
-    * TBD
-* Functionality
-    * Email
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Open Incident form
-Incident Classification meets one of a number of criteria
-Incident Severity = Critical
-Potential email when this happens
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Abatap
-Abatap is custom web service framework for Netsmart’s myAvatar EHR, which includes:
-•	The Abatap web service
-•	Abatap web service modules
-•	The Abatap Commander
-
-Abatap is designed with the following in mind:
-•	Functionality can be tested and deployed without affecting existing functionality. This is possible since the core of Abatap is fairly static, and functionality is contained in separate projects.
-•	Configuration is stored in external, plain text files.
-•	Everything is logged, and there are different levels of logging
-•	Ability to enable/disable the entire framework, or individual components
-•	Automatic deployments
-•	Running backups
-•	Information about all environments
-•	Log archiving
-•	System health monitoring
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Abatap v1.0 (Autumn 2022)
-•	Functionality
-o	New
-	Dose check
-	User verification
-	Kristy’s thing
-o	Updated
-	TBD
-•	Features
-o	New
-	Logging
-	External configuration files
-o	Updated
-	TBD
-
-Abatap v1.2 (Winter 2022)
-•	Functionality
-o	New
-	Inpatient Admission Date
-	Open Incident form classification/severity
-o	Updated
-	TBD
-•	Features
-o	New
-	Emailing
-o	Updated
-	Logging
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Open Incident form
-Incident Classification meets one of a number of criteria
-Incident Severity = Critical
-Potential email when this happens
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+[Logo]: /.github/res/img/logo/RepositoryLogo.png

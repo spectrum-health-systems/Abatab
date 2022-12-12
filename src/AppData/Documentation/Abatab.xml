@@ -6,18 +6,19 @@
     <members>
         <member name="T:Abatab.Abatab">
             <summary>
+            The entry point for Abatab.
+            </summary>
+            <remarks>
             <para>
-            The main Abatab project, and where the magic starts.
-            </para>
-            <para>
-            Abatab receives two things from Avatar:<br/>
-            1. An <c>OptionObject</c>, which contains all of the information that Abatab needs to do it's thing, and<br/>
+            Abatab receives two things from Avatar:
+            <br/>
+            1. An <c>OptionObject</c>, which contains all of the information that Abatab needs to do it's thing<br/>
             2. A <c>Script Parameter</c> that tells Abatab what it needs to do with the OptionObject.
             </para>
             <para>
-            For more information about OptionObjects and Script Parameters, please see the <see href="../man/index.html">Abatab Manual.</see>
+            For more information about <see href="../man/manGlossary.html#optionobject">OptionObjects</see> and <see href="../man/manGlossary.html#script-paramater">Script Parameters</see>, please see the <see href="../man/index.html">Abatab Manual.</see>
             </para>
-            </summary>
+            </remarks>
         </member>
         <member name="M:Abatab.Abatab.GetVersion">
             <summary>
@@ -39,9 +40,7 @@
             <returns>A finalized OptionObject that will be returned to Avatar.</returns>
             <remarks>
             * This method is required by Avatar.
-            * This is the only time a <see href="../man/man-Logging-Home.html#primeval-debug-log">Primeval debug log</see> is written.
-            * This method should remain fairly static, since most of the logic is taken care of by external
-            projects.
+            * This is the only time a <see href="../man/manGlossary.html#primeval-debug-log">Primeval debug log</see> is written.
             </remarks>
         </member>
         <member name="T:Abatab.Roundhouse">
@@ -64,12 +63,14 @@
             <remarks>
             * The only component of the Script Parameter sent from Avatar that matters at this point is the AbatabMethod component.
             * Whenever a new Abatab Module is added, logic will need to be added to the switch statement using the following template:
+            <example>
             <code>
             case "%newmodule-name%":
                 LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
                 ModNewModule.Roundhouse.ParseRequest(abatabSession);
                 break;
             </code>
+            </example>
             </remarks>
         </member>
         <member name="T:Abatab.WebConfig">
@@ -83,9 +84,9 @@
             </summary>
             <returns>A dictionary containing the settings from Web.config.</returns>
             <remarks>
-            * Whenever a new value is added/removed to Properties/Settings.settings, it needs to be added/removed here as well.
-            * Configuration settings details can be found <see href="../man/man-Configuration-LocalSettings.html">here.</see>
-            * Settings are trimmed and converted to lowercase. <see href="../man/man-SourceCode-Home.html#casing-and-trimming">[more info]</see>
+            * These <see href="../man/manGlossary.html#configuration-settings">configuration setting.</see> are setup in <c>src/Properties/Settings.settings</c>, and modified in the <see href="../man/manGlossary.html#webconfig">Web.config.</see> file.
+            * Whenever a new value is added/removed to <c>src/Properties/Settings.settings</c>, it needs to be added/removed here as well.
+            * Settings are trimmed and converted to lowercase. <see href="../man/manSourceCode.html#casing-and-trimming">[more info]</see>
             </remarks>
         </member>
     </members>

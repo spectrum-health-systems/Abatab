@@ -408,7 +408,31 @@
       "output": {
         ".html": {
           "relative_path": "man/index.html",
-          "hash": "SVyCu/xeMzl3PDxSY12JmiSLqQKII3OGaIuV8wGlVf0="
+          "hash": "Y+I7ujXGmshxp5xCGFjePteTMsT2BqVkSyxuqUO2OAc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../../docs/man/manAdditionalInformation.md",
+      "output": {
+        ".html": {
+          "relative_path": "man/manAdditionalInformation.html",
+          "hash": "iqY9uGG6t1aMDeBpTbdBUsrFTPZeofSleJxQsYDEDEE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../../docs/man/manConfiguringAbatab.md",
+      "output": {
+        ".html": {
+          "relative_path": "man/manConfiguringAbatab.html",
+          "hash": "dmObrRgjkCsp+Qa83GR/eoS97QAHmkh7SAjMtirklEg="
         }
       },
       "is_incremental": false,
@@ -419,11 +443,47 @@
         "InvalidFileLink"
       ],
       "type": "Conceptual",
-      "source_relative_path": "../../docs/man/man-AdditionalInformation-Home.md",
+      "source_relative_path": "../../docs/man/manCoreFunctionality.md",
       "output": {
         ".html": {
-          "relative_path": "man/man-AdditionalInformation-Home.html",
-          "hash": "IjmxSRbL47G5mhVZKR+PmBKspJulPOx7EuFJn/vwIPM="
+          "relative_path": "man/manCoreFunctionality.html",
+          "hash": "BbwUfYZFoNNjYkuZMKQVMD+dsjqKQRpN1FJ9tnWnzGc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../../docs/man/manDocFx-HowTo.md",
+      "output": {
+        ".html": {
+          "relative_path": "man/manDocFx-HowTo.html",
+          "hash": "ILR+ZBHzVHrMyz3r8Xtlz07cZ3IKE2dsVwl+zz7FmWM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../../docs/man/manDocFx.md",
+      "output": {
+        ".html": {
+          "relative_path": "man/manDocFx.html",
+          "hash": "vaAh+fa376tpxMILo6ZBchN/O/vDIgRmuqfYpo5UgQw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../../docs/man/manFunctionality-Existing.md",
+      "output": {
+        ".html": {
+          "relative_path": "man/manFunctionality-Existing.html",
+          "hash": "EnlzGixm9mCR/OURGVFNnrbnhVMvozi+elbJVAX+hOM="
         }
       },
       "is_incremental": false,
@@ -434,11 +494,23 @@
         "InvalidFileLink"
       ],
       "type": "Conceptual",
-      "source_relative_path": "../../docs/man/man-Configuration-Home.md",
+      "source_relative_path": "../../docs/man/manFunctionality-Modules.md",
       "output": {
         ".html": {
-          "relative_path": "man/man-Configuration-Home.html",
-          "hash": "N338A0ybotzm1ZFFBRFn9/lfz6/zRL5BpVneApDcn3s="
+          "relative_path": "man/manFunctionality-Modules.html",
+          "hash": "K8FapRBIB4jTG2prAfDPRw6TuqH90H2HLs+maMUxrMg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../../docs/man/manFunctionality-New.md",
+      "output": {
+        ".html": {
+          "relative_path": "man/manFunctionality-New.html",
+          "hash": "1jYxWJLlc+f8HFmtfSPQjxSUyPwYiunwLp9XVHggbmE="
         }
       },
       "is_incremental": false,
@@ -449,11 +521,11 @@
         "InvalidFileLink"
       ],
       "type": "Conceptual",
-      "source_relative_path": "../../docs/man/man-Configuration-LocalSettings.md",
+      "source_relative_path": "../../docs/man/manGettingStarted.md",
       "output": {
         ".html": {
-          "relative_path": "man/man-Configuration-LocalSettings.html",
-          "hash": "5gYzeHoJlhGJbl6VMCCojlmvT5tKLydinLnKMnyIo8U="
+          "relative_path": "man/manGettingStarted.html",
+          "hash": "c7K0b4V1YFqYW0Z+Ba8Utd3bdAHtz4ba7Erpl18G5fU="
         }
       },
       "is_incremental": false,
@@ -464,11 +536,11 @@
         "InvalidFileLink"
       ],
       "type": "Conceptual",
-      "source_relative_path": "../../docs/man/man-DocFx-Home.md",
+      "source_relative_path": "../../docs/man/manGlossary.md",
       "output": {
         ".html": {
-          "relative_path": "man/man-DocFx-Home.html",
-          "hash": "T2uP+gLVPYCjkjw8wVPdK3LPsDVC0Eb72HnwXIGn9+0="
+          "relative_path": "man/manGlossary.html",
+          "hash": "r/LVrBbjmrZIb6bUqeQv1aq+9r6eq2+X09KGV+zf6LQ="
         }
       },
       "is_incremental": false,
@@ -479,11 +551,11 @@
         "InvalidFileLink"
       ],
       "type": "Conceptual",
-      "source_relative_path": "../../docs/man/man-DocFx-HowTo.md",
+      "source_relative_path": "../../docs/man/manHostingAbatab.md",
       "output": {
         ".html": {
-          "relative_path": "man/man-DocFx-HowTo.html",
-          "hash": "d6sRgA5eT2zzfwYJQP4XCzVxz33yeZTEPPtFWn1/5nw="
+          "relative_path": "man/manHostingAbatab.html",
+          "hash": "eoJxVTSMDk1VgXQHsuhvZgkFftxSkmthuCbJxur3R5k="
         }
       },
       "is_incremental": false,
@@ -494,11 +566,83 @@
         "InvalidFileLink"
       ],
       "type": "Conceptual",
-      "source_relative_path": "../../docs/man/man-Functionality-Core.md",
+      "source_relative_path": "../../docs/man/manImportingAbatab.md",
       "output": {
         ".html": {
-          "relative_path": "man/man-Functionality-Core.html",
-          "hash": "t9nNyXK6AOy41FB76tU+QWB08PAxnUdsGuOLw41SXhc="
+          "relative_path": "man/manImportingAbatab.html",
+          "hash": "9VU1fvcmFOJH4/JtL+IUeqnoNNSRQQ1Gx5ro3Q/vwUk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../../docs/man/manLogging.md",
+      "output": {
+        ".html": {
+          "relative_path": "man/manLogging.html",
+          "hash": "7XiplTp92LdcSS6KCx/HjVv6klVKwvZ6icGKjUEoYbM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../../docs/man/manModules.md",
+      "output": {
+        ".html": {
+          "relative_path": "man/manModules.html",
+          "hash": "KkgaxHHd0WiwyC1jki9SBCEBJO4HT836QDqV2g4japI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../../docs/man/manSourceCode.md",
+      "output": {
+        ".html": {
+          "relative_path": "man/manSourceCode.html",
+          "hash": "FrY8MVDJXVlVOLRz+CfsNJwOVcakv9VjGzLaYGpJLL0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../../docs/man/manTesting-ModQuickMedOrder.md",
+      "output": {
+        ".html": {
+          "relative_path": "man/manTesting-ModQuickMedOrder.html",
+          "hash": "v/I6Vj9clbZ5p/7IKlfdca5B0+6TgqQdZSoXMuJuMhM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../../docs/man/manTesting.md",
+      "output": {
+        ".html": {
+          "relative_path": "man/manTesting.html",
+          "hash": "y/Q3TCDZJKUFoVJHJyCNt3HABp8lM/Qi+T8wV+Q8++M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../../docs/man/manUsingAbatab.md",
+      "output": {
+        ".html": {
+          "relative_path": "man/manUsingAbatab.html",
+          "hash": "vifklys9hTAnAOeONDnZeSeS36Yn2PlMwimpsbvaYVg="
         }
       },
       "is_incremental": false,
@@ -508,189 +652,12 @@
       "log_codes": [
         "InvalidFileLink"
       ],
-      "type": "Conceptual",
-      "source_relative_path": "../../docs/man/man-Functionality-Existing.md",
-      "output": {
-        ".html": {
-          "relative_path": "man/man-Functionality-Existing.html",
-          "hash": "DJCPwQOgobB8PpA5XamBlT0+eOOBG1FfZ1w6RI4Bw8w="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "../../docs/man/man-Functionality-Home.md",
-      "output": {
-        ".html": {
-          "relative_path": "man/man-Functionality-Home.html",
-          "hash": "Aw8ASszfrXqZG5oFnXPkTGYW6skNMpPpgE1AoO4eb3o="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "../../docs/man/man-Functionality-Modules.md",
-      "output": {
-        ".html": {
-          "relative_path": "man/man-Functionality-Modules.html",
-          "hash": "uJSF8ZNBzGBNwcT353oMzFafdw6eVZNydh5KCnkZUvQ="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "../../docs/man/man-Functionality-New.md",
-      "output": {
-        ".html": {
-          "relative_path": "man/man-Functionality-New.html",
-          "hash": "kSPRshYHXHKXolKaLQMsLAr81Zt8MZ1icVjqZOG682s="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "../../docs/man/man-GettingStarted-Home.md",
-      "output": {
-        ".html": {
-          "relative_path": "man/man-GettingStarted-Home.html",
-          "hash": "xCPhFM8v6OWmnotfidXBX3/wLTzZkz6xvBehVWyl0kA="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "../../docs/man/man-Hosting-Home.md",
-      "output": {
-        ".html": {
-          "relative_path": "man/man-Hosting-Home.html",
-          "hash": "qh8zlhbfNDxADKgYBwO8dEFatPiTl5H65/sjb4VKwBw="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "../../docs/man/man-Importing-Home.md",
-      "output": {
-        ".html": {
-          "relative_path": "man/man-Importing-Home.html",
-          "hash": "R/fRwph/t9t6beKcHaDlbFGC+DDeqbwYwFdVW4LunDE="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "../../docs/man/man-Logging-Home.md",
-      "output": {
-        ".html": {
-          "relative_path": "man/man-Logging-Home.html",
-          "hash": "CXzLwber4gkZmhUm2hrTWBe2GjzZjjmrXlXTUwBzCNQ="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "../../docs/man/man-SourceCode-Home.md",
-      "output": {
-        ".html": {
-          "relative_path": "man/man-SourceCode-Home.html",
-          "hash": "UaI52bUddj+XeJwtaU5ba3jmh8EoSmc5DhT7/NX0i50="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "../../docs/man/man-Testing-Home.md",
-      "output": {
-        ".html": {
-          "relative_path": "man/man-Testing-Home.html",
-          "hash": "DRTWD/3TCnyhAr1ODqXX02oCTddViwtBt+2YNgsc3Lo="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "../../docs/man/man-Testing-ModQuickMedOrder.md",
-      "output": {
-        ".html": {
-          "relative_path": "man/man-Testing-ModQuickMedOrder.html",
-          "hash": "oboptkhOnJQOX4uQLYtyjbHPT89FrIjihidSA3civtc="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "../../docs/man/man-Using-Home.md",
-      "output": {
-        ".html": {
-          "relative_path": "man/man-Using-Home.html",
-          "hash": "YQ4+xA6UP+dNWfneLvGB/liGh6lLhVxGmNxT+fFBMXA="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
       "type": "Toc",
       "source_relative_path": "../../docs/man/toc.md",
       "output": {
         ".html": {
           "relative_path": "man/toc.html",
-          "hash": "bsiEn4tDFlOWuNELcnUKFc3s5kAt1fGlecJvxs8FzfI="
+          "hash": "/KqlLY4eKKstpp9mAf0V69Ui29dahtqLH5PCHe3UHv8="
         }
       },
       "is_incremental": false,
@@ -705,7 +672,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Abatab.Abatab.html",
-          "hash": "C6rdWJIdHHePb+jap2FwF2NjaIbNZdKJkcrzjSJdRc0="
+          "hash": "6ACjQUuTLAas7P6MSnfgjI986hT+WM5M0oKyjedpSzs="
         }
       },
       "is_incremental": false,
@@ -717,7 +684,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Abatab.Roundhouse.html",
-          "hash": "Zs/926Pg8GrZLR2FXRCKcr+Pk2N30bSAkutZ/WDHeS8="
+          "hash": "aD/IKUScVJ+pAu+botlG9hbI7EQSysL3c8YMBZWSSv4="
         }
       },
       "is_incremental": false,
@@ -732,7 +699,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Abatab.WebConfig.html",
-          "hash": "la1ZXx3sgxUwK3vkicxBHBstMJQyijyhT+FIDoc0e6M="
+          "hash": "/lJyVz7ok1NIZGSqRcfh80+g46QkR9RnyWW7jCf4T4g="
         }
       },
       "is_incremental": false,
@@ -744,7 +711,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Abatab.html",
-          "hash": "b2H0EA3CFuE0I2g8/nVVhvYyuNtUapooeL/hlhoggiY="
+          "hash": "XMasBj2qSRvQYXCF6wlw54G4A92XderPRPAh8TNDteQ="
         }
       },
       "is_incremental": false,
@@ -781,6 +748,42 @@
         ".html": {
           "relative_path": "api/AbatabData.Core.html",
           "hash": "r0kt9UTR28pPzq9WTflK2vDVevB6Cd+nkVN+P1cN8d8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../../docs/obj/api/AbatabData.DocEx.ExampleClass.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AbatabData.DocEx.ExampleClass.html",
+          "hash": "a2NF1fBzgHPRrqobkWA8i+LKFv2VU4SkY4YDQtFr2To="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../../docs/obj/api/AbatabData.DocEx.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AbatabData.DocEx.html",
+          "hash": "GJSs5CbALtvXin1eEe1EC9JQD4aH/g9LVsrGRpoAYeg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../../docs/obj/api/AbatabData.Maths.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AbatabData.Maths.html",
+          "hash": "hlLd7GDAJZKIWjpj5/Z6yH+2JoLmqp7QEcTPOitLhFc="
         }
       },
       "is_incremental": false,
@@ -847,15 +850,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "ManagedReference",
       "source_relative_path": "../../docs/obj/api/AbatabData.Session.yml",
       "output": {
         ".html": {
           "relative_path": "api/AbatabData.Session.html",
-          "hash": "UWrM26h2HP4AvvWfVG7Ev5J4CsDrxpH1fezzcKTSZpM="
+          "hash": "DQi+V73KySxYmv+L3zLpZfoEt20lEqTETPN1AX5aA28="
         }
       },
       "is_incremental": false,
@@ -867,7 +867,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AbatabData.html",
-          "hash": "ETk50dlK6jJd80vzo4gW7iD5/9lJ2Zp8GWQwhPpVXxA="
+          "hash": "+5WuoYus1klZvd+PZ9YOudRl3uH1vY5XEQinRw+jG1g="
         }
       },
       "is_incremental": false,
@@ -1335,7 +1335,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "RdKscHnm8+zKv6txGo74gnAP0sKo0JtxOmhp5wgNnWU="
+          "hash": "i6c2jLrKe6GxBqn6LQNxj1TuF5/N5GH9UvSfvYcwdNc="
         }
       },
       "is_incremental": false,
@@ -1374,7 +1374,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 52,
+          "total_file_count": 55,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

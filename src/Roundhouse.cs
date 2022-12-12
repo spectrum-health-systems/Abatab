@@ -28,12 +28,14 @@ namespace Abatab
         /// <remarks>
         /// * The only component of the Script Parameter sent from Avatar that matters at this point is the AbatabMethod component.
         /// * Whenever a new Abatab Module is added, logic will need to be added to the switch statement using the following template:
+        /// <example>
         /// <code>
         /// case "%newmodule-name%":
         ///     LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
         ///     ModNewModule.Roundhouse.ParseRequest(abatabSession);
         ///     break;
         /// </code>
+        /// </example>
         /// </remarks>
         public static void ParseRequest(Session abatabSession)
         {

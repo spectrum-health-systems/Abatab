@@ -1,35 +1,52 @@
 # [The Abatab Manual](index.md)
+<!--Overview
+    Features
+    Requirements
+    About this manual-->
 
-# [Getting started](man-GettingStarted-Home.md)
+# [Getting started](manGettingStarted.md)
+<!--Overview-->
 
-# [Hosting Abatab](man-Hosting-Home.md)
+# [Hosting Abatab](manHostingAbatab.md)
+<!--Overview
+    Hosting with Nestmart
+    Self-hosting step by step-->
 
-# [Importing Abatab](man-Importing-Home.md)
+# [Configuring Abatab](manConfiguringAbatab.md)
+<!--Overview
+    List of local settings-->
 
-# [Configuring Abatab](man-Configuration-Home.md)
+# [Importing Abatab](manImportingAbatab.md)
+<!--Overview-->
 
-## [Local settings](man-Configuration-LocalSettings.md)
+# [Using Abatab](manUsingAbatab.md)
+<!--Overview
+    ScriptLink-->
 
-# [Using Abatab](man-Using-Home.md)
+## [Core functionality](manCoreFunctionality.md)
+<!--Overview
+    Logging-->
 
-# [Abatab functionality](man-Functionality-Home.md)
+# [Modules](manModule.md)
+<!--Overview
+    Common
+    Progress Note
+    Prototype
+    Quick Medication Order
+    Testing
+    Modifying existing modules
+    Creating new modules-->
 
-## [Core functionality](man-Functionality-Core.md)
+# [Additional Information](manAdditionalInformation.md)
 
-## [Abatab Modules](man-Functionality-Modules.md)
+## [Source code](manSourceCode.md)
+<!--Overview-->
 
-## [Modifying existing modules](man-Functionality-Existing.md)
+## [DocFX](manDocFx.md)
+<!--Overview-->
 
-## [Adding new modules](man-Functionality-New.md)
-
-# [Testing](man-Testing-Home.md)
-
-## [Quick Med Order Module](man-Testing-ModQuickMedOrder.md)
-
-# [Logging](man-Logging-Home.md)
-
-# [Source code](man-SourceCode-Home.md)
-
-# [DocFX Integration](man-DocFx-Home.md)
-
-# [Additional reading](man-AdditionalInformation-Home.md)
+## [Glossary](manGlossary.md)
+<!--Overview
+    OptionObject
+    Script Parameter
+    ScriptLink-->

@@ -85,6 +85,394 @@
             
              </summary>
         </member>
+        <member name="T:AbatabData.DocEx.ExampleClass">
+             <summary>
+             Every class and member should have a one sentence
+             summary describing its purpose.
+             </summary>
+             <remarks>
+             You can expand on that one sentence summary to
+             provide more information for readers. In this case, 
+             the <c>ExampleClass</c> provides different C#
+             elements to show how you would add documentation
+            comments for most elements in a typical class.
+             <para>
+             The remarks can add multiple paragraphs, so you can
+             write detailed information for developers that use
+             your work. You should add everything needed for
+             readers to be successful. This class contains
+             examples for the following:
+             </para>
+             <list type="table">
+             <item>
+             <term>Summary</term>
+             <description>
+             This should provide a one sentence summary of the class or member.
+             </description>
+             </item>
+             <item>
+             <term>Remarks</term>
+             <description>
+             This is typically a more detailed description of the class or member
+             </description>
+             </item>
+             <item>
+             <term>para</term>
+             <description>
+             The para tag separates a section into multiple paragraphs
+             </description>
+             </item>
+             <item>
+             <term>list</term>
+             <description>
+             Provides a list of terms or elements
+             </description>
+             </item>
+             <item>
+             <term>returns, param</term>
+             <description>
+             Used to describe parameters and return values
+             </description>
+             </item>
+             <item>
+             <term>value</term>
+             <description>Used to describe properties</description>
+             </item>
+             <item>
+             <term>exception</term>
+             <description>
+             Used to describe exceptions that may be thrown
+             </description>
+             </item>
+             <item>
+             <term>c, cref, see, seealso</term>
+             <description>
+             These provide code style and links to other
+             documentation elements
+             </description>
+             </item>
+             <item>
+             <term>example, code</term>
+             <description>
+             These are used for code examples
+             </description>
+             </item>
+             </list>
+             <para>
+             The list above uses the "table" style. You could
+             also use the "bullet" or "number" style. Neither
+             would typically use the "term" element.
+             <br/>
+             Note: paragraphs are double spaced. Use the *br* 
+             tag for single spaced lines.
+             </para>
+             </remarks>
+        </member>
+        <member name="P:AbatabData.DocEx.ExampleClass.Label">
+            <value>
+            The <c>Label</c> property represents a label
+            for this instance.
+            </value>
+            <remarks>
+            The <see cref="P:AbatabData.DocEx.ExampleClass.Label"/> is a <see langword="string"/>
+            that you use for a label.
+            <para>
+            Note that there isn't a way to provide a "cref" to
+            each accessor, only to the property itself.
+            </para>
+            </remarks>
+        </member>
+        <member name="M:AbatabData.DocEx.ExampleClass.Add(System.Int32,System.Int32)">
+            <summary>
+            Adds two integers and returns the result.
+            </summary>
+            <returns>
+            The sum of two integers.
+            </returns>
+            <param name="left">
+            The left operand of the addition.
+            </param>
+            <param name="right">
+            The right operand of the addition.
+            </param>
+            <example>
+            <code>
+            int c = Math.Add(4, 5);
+            if (c > 10)
+            {
+                Console.WriteLine(c);
+            }
+            </code>
+            </example>
+            <exception cref="T:System.OverflowException">
+            Thrown when one parameter is 
+            <see cref="F:System.Int32.MaxValue">MaxValue</see> and the other is
+            greater than 0.
+            Note that here you can also use 
+            <see href="https://docs.microsoft.com/dotnet/api/system.int32.maxvalue"/>
+             to point a web page instead.
+            </exception>
+            <see cref="T:AbatabData.DocEx.ExampleClass"/> for a list of all
+            the tags in these examples.
+            <seealso cref="P:AbatabData.DocEx.ExampleClass.Label"/>
+        </member>
+        <member name="M:AbatabData.DocEx.test(System.String,System.String)">
+            <summary>
+            This is an example of a positional record.
+            </summary>
+            <remarks>
+            There isn't a way to add XML comments for properties
+            created for positional records, yet. The language
+            design team is still considering what tags should
+            be supported, and where. Currently, you can use
+            the "param" tag to describe the parameters to the
+            primary constructor.
+            </remarks>
+            <param name="FirstName">
+            This tag will apply to the primary constructor parameter.
+            </param>
+            <param name="LastName">
+            This tag will apply to the primary constructor parameter.
+            </param>
+        </member>
+        <member name="T:AbatabData.Maths">
+            <summary>
+            The main <c>Math</c> class.
+            Contains all methods for performing basic math functions.
+            <list type="bullet">
+            <item>
+            <term>Add</term>
+            <description>Addition Operation</description>
+            </item>
+            <item>
+            <term>Subtract</term>
+            <description>Subtraction Operation</description>
+            </item>
+            <item>
+            <term>Multiply</term>
+            <description>Multiplication Operation</description>
+            </item>
+            <item>
+            <term>Divide</term>
+            <description>Division Operation</description>
+            </item>
+            </list>
+            </summary>
+            <remarks>
+            <para>
+            This class can add, subtract, multiply and divide.
+            </para>
+            <para>
+            These operations can be performed on both
+            integers and doubles.
+            </para>
+            </remarks>
+        </member>
+        <member name="M:AbatabData.Maths.Add(System.Int32,System.Int32)">
+            <summary>
+            Adds two integers <paramref name="a"/> and <paramref name="b"/>
+             and returns the result.
+            </summary>
+            <returns>
+            The sum of two integers.
+            </returns>
+            <example>
+            <code>
+            int c = Math.Add(4, 5);
+            if (c > 10)
+            {
+                Console.WriteLine(c);
+            }
+            </code>
+            </example>
+            <exception cref="T:System.OverflowException">
+            Thrown when one parameter is <see cref="F:System.Int32.MaxValue"/> and the other
+            is greater than 0.
+            </exception>
+            See <see cref="M:AbatabData.Maths.Add(System.Double,System.Double)"/> to add doubles.
+            <seealso cref="M:AbatabData.Maths.Subtract(System.Int32,System.Int32)"/>
+            <seealso cref="M:AbatabData.Maths.Multiply(System.Int32,System.Int32)"/>
+            <seealso cref="M:AbatabData.Maths.Divide(System.Int32,System.Int32)"/>
+            <param name="a">An integer.</param>
+            <param name="b">An integer.</param>
+        </member>
+        <member name="M:AbatabData.Maths.Add(System.Double,System.Double)">
+            <summary>
+            Adds two doubles <paramref name="a"/> and <paramref name="b"/>
+            and returns the result.
+            </summary>
+            <returns>
+            The sum of two doubles.
+            </returns>
+            <example>
+            <code>
+            double c = Math.Add(4.5, 5.4);
+            if (c > 10)
+            {
+                Console.WriteLine(c);
+            }
+            </code>
+            </example>
+            <exception cref="T:System.OverflowException">
+            Thrown when one parameter is max and the other
+            is greater than 0.</exception>
+            See <see cref="M:AbatabData.Maths.Add(System.Int32,System.Int32)"/> to add integers.
+            <seealso cref="M:AbatabData.Maths.Subtract(System.Double,System.Double)"/>
+            <seealso cref="M:AbatabData.Maths.Multiply(System.Double,System.Double)"/>
+            <seealso cref="M:AbatabData.Maths.Divide(System.Double,System.Double)"/>
+            <param name="a">A double precision number.</param>
+            <param name="b">A double precision number.</param>
+        </member>
+        <member name="M:AbatabData.Maths.Subtract(System.Int32,System.Int32)">
+            <summary>
+            Subtracts <paramref name="b"/> from <paramref name="a"/>
+            and returns the result.
+            </summary>
+            <returns>
+            The difference between two integers.
+            </returns>
+            <example>
+            <code>
+            int c = Math.Subtract(4, 5);
+            if (c > 1)
+            {
+                Console.WriteLine(c);
+            }
+            </code>
+            </example>
+            See <see cref="M:AbatabData.Maths.Subtract(System.Double,System.Double)"/> to subtract doubles.
+            <seealso cref="M:AbatabData.Maths.Add(System.Int32,System.Int32)"/>
+            <seealso cref="M:AbatabData.Maths.Multiply(System.Int32,System.Int32)"/>
+            <seealso cref="M:AbatabData.Maths.Divide(System.Int32,System.Int32)"/>
+            <param name="a">An integer.</param>
+            <param name="b">An integer.</param>
+        </member>
+        <member name="M:AbatabData.Maths.Subtract(System.Double,System.Double)">
+            <summary>
+            Subtracts a double <paramref name="b"/> from another 
+            double <paramref name="a"/> and returns the result.
+            </summary>
+            <returns>
+            The difference between two doubles.
+            </returns>
+            <example>
+            <code>
+            double c = Math.Subtract(4.5, 5.4);
+            if (c > 1)
+            {
+                Console.WriteLine(c);
+            }
+            </code>
+            </example>
+            See <see cref="M:AbatabData.Maths.Subtract(System.Int32,System.Int32)"/> to subtract integers.
+            <seealso cref="M:AbatabData.Maths.Add(System.Double,System.Double)"/>
+            <seealso cref="M:AbatabData.Maths.Multiply(System.Double,System.Double)"/>
+            <seealso cref="M:AbatabData.Maths.Divide(System.Double,System.Double)"/>
+            <param name="a">A double precision number.</param>
+            <param name="b">A double precision number.</param>
+        </member>
+        <member name="M:AbatabData.Maths.Multiply(System.Int32,System.Int32)">
+            <summary>
+            Multiplies two integers <paramref name="a"/> 
+            and <paramref name="b"/> and returns the result.
+            </summary>
+            <returns>
+            The product of two integers.
+            </returns>
+            <example>
+            <code>
+            int c = Math.Multiply(4, 5);
+            if (c > 100)
+            {
+                Console.WriteLine(c);
+            }
+            </code>
+            </example>
+            See <see cref="M:AbatabData.Maths.Multiply(System.Double,System.Double)"/> to multiply doubles.
+            <seealso cref="M:AbatabData.Maths.Add(System.Int32,System.Int32)"/>
+            <seealso cref="M:AbatabData.Maths.Subtract(System.Int32,System.Int32)"/>
+            <seealso cref="M:AbatabData.Maths.Divide(System.Int32,System.Int32)"/>
+            <param name="a">An integer.</param>
+            <param name="b">An integer.</param>
+        </member>
+        <member name="M:AbatabData.Maths.Multiply(System.Double,System.Double)">
+            <summary>
+            Multiplies two doubles <paramref name="a"/> and
+            <paramref name="b"/> and returns the result.
+            </summary>
+            <returns>
+            The product of two doubles.
+            </returns>
+            <example>
+            <code>
+            double c = Math.Multiply(4.5, 5.4);
+            if (c > 100.0)
+            {
+                Console.WriteLine(c);
+            }
+            </code>
+            </example>
+            See <see cref="M:AbatabData.Maths.Multiply(System.Int32,System.Int32)"/> to multiply integers.
+            <seealso cref="M:AbatabData.Maths.Add(System.Double,System.Double)"/>
+            <seealso cref="M:AbatabData.Maths.Subtract(System.Double,System.Double)"/>
+            <seealso cref="M:AbatabData.Maths.Divide(System.Double,System.Double)"/>
+            <param name="a">A double precision number.</param>
+            <param name="b">A double precision number.</param>
+        </member>
+        <member name="M:AbatabData.Maths.Divide(System.Int32,System.Int32)">
+            <summary>
+            Divides an integer <paramref name="a"/> by another
+            integer <paramref name="b"/> and returns the result.
+            </summary>
+            <returns>
+            The quotient of two integers.
+            </returns>
+            <example>
+            <code>
+            int c = Math.Divide(4, 5);
+            if (c > 1)
+            {
+                Console.WriteLine(c);
+            }
+            </code>
+            </example>
+            <exception cref="T:System.DivideByZeroException">
+            Thrown when <paramref name="b"/> is equal to 0.
+            </exception>
+            See <see cref="M:AbatabData.Maths.Divide(System.Double,System.Double)"/> to divide doubles.
+            <seealso cref="M:AbatabData.Maths.Add(System.Int32,System.Int32)"/>
+            <seealso cref="M:AbatabData.Maths.Subtract(System.Int32,System.Int32)"/>
+            <seealso cref="M:AbatabData.Maths.Multiply(System.Int32,System.Int32)"/>
+            <param name="a">An integer dividend.</param>
+            <param name="b">An integer divisor.</param>
+        </member>
+        <member name="M:AbatabData.Maths.Divide(System.Double,System.Double)">
+            <summary>
+            Divides a double <paramref name="a"/> by another double
+            <paramref name="b"/> and returns the result.
+            </summary>
+            <returns>
+            The quotient of two doubles.
+            </returns>
+            <example>
+            <code>
+            double c = Math.Divide(4.5, 5.4);
+            if (c > 1.0)
+            {
+                Console.WriteLine(c);
+            }
+            </code>
+            </example>
+            <exception cref="T:System.DivideByZeroException">
+            Thrown when <paramref name="b"/> is equal to 0.
+            </exception>
+            See <see cref="M:AbatabData.Maths.Divide(System.Int32,System.Int32)"/> to divide integers.
+            <seealso cref="M:AbatabData.Maths.Add(System.Double,System.Double)"/>
+            <seealso cref="M:AbatabData.Maths.Subtract(System.Double,System.Double)"/>
+            <seealso cref="M:AbatabData.Maths.Multiply(System.Double,System.Double)"/>
+            <param name="a">A double precision dividend.</param>
+            <param name="b">A double precision divisor.</param>
+        </member>
         <member name="T:AbatabData.Module.Common">
              <summary>
             
@@ -227,88 +615,147 @@
         </member>
         <member name="T:AbatabData.Session">
             <summary>
-            <para>
             This class defines the properties for the Abatab session, built from the local Web.config file, and at runtime.
-            </para>
             </summary>
         </member>
         <member name="P:AbatabData.Session.AbatabMode">
             <summary>
-            The default behavior of Abatab. <see href="../man/man-Configuration-LocalSettings.index.html#abatabmode"> [more info]</see>
+            The current Abatab mode.
             </summary>
-            <value>Default value is <c>enabled</c>.</value>
+            <remarks>
+            <list type="table">
+            <listheader>
+            <term>Setting</term>
+            <description>Description</description>
+            </listheader>
+            <item>
+            <term><b><i>enabled</i></b></term>
+            <description>All Abatab functionality is (potentially) available.</description>
+            </item>
+            <item>
+            <term>disabled</term>
+            <description>Abatab functionality is not available.</description>
+            </item>
+            <item>
+            <term>passthrough</term>
+            <description>All functionality is available, but no changes are made to Avatar.</description>
+            </item>
+            </list>
+            * If Abatab is <c>enabled</c>, you are still able to disable specific functionality.
+            * The <c>passthrough</c> mode is intended for development, not production.
+            </remarks>
+            <value>Default value is <c>enabled</c></value>
         </member>
         <member name="P:AbatabData.Session.AbatabRoot">
             <summary>
-            The Abatab root directory. <see href="https://spectrum-health-systems.github.io/Abatab/man/man-configuration-local-settings.html#abatabroot">. [more info]</see>
+            The root directory where the Abatab web service has been deployed.
             </summary>
-            <value>Default value is <c>C:\Abatab_</c>.</value>
+            <remarks>
+            * At runtime The `AvatarEnvironment` value is added to the end of `AbatabRoot` to form the complete path.
+            </remarks>
+            <example>
+            If <c>AbatabRoot</c> is <i>"C:\Abatab_"</i>, and <c>AvatarEnvironment</c> is <i>"LIVE"</i>, the root directory at runtime would be <c>C:\Abatab_LIVE</c>.
+            </example>
+            <value>Default value is <c>C:\Abatab_</c></value>
         </member>
         <member name="P:AbatabData.Session.AbatabDataRoot">
             <summary>
-            The Abatab data root directory. <see href="https://spectrum-health-systems.github.io/Abatab/man/man-configuration-local-settings.html#abatabroot">. [more info]</see>
+            The root directory where the Abatab data is stored.
             </summary>
-            <value>Default value is <c>C:\AbatabData</c>.</value>
+            <remarks>
+            * At runtime The `AvatarEnvironment` value is created as a sub-directory of the `AbatabDataRoot`.
+            * This is the directory where exported data/logs should be stored.
+            </remarks>
+            <example>
+            If <c>AbatabDataRoot</c> is <i>"C:\Abatab"</i>, and <c>AvatarEnvironment</c> is <i>"LIVE"</i>, the root directory at runtime would be <c>C:\Abatab\LIVE</c>.
+            </example>
+            <value>Default value is <c>C:\Abatab</c></value>
         </member>
         <member name="P:AbatabData.Session.AvatarEnvironment">
             <summary>
-            The current Avatar environment. <see href="https://spectrum-health-systems.github.io/Abatab/man/man-configuration-local-settings.html#avatarenvironment">. [more info]</see>
+            The Avatar environment that will use Abatab.
             </summary>
             <value>Default value is <c>LIVE</c>.</value>
         </member>
         <member name="P:AbatabData.Session.AbatabFallbackUserName">
             <summary>
-            The current Avatar environment. <see href="https://spectrum-health-systems.github.io/Abatab/man/man-configuration-local-settings.html#abatabfallbackusername">. [more info]</see>
+            The current Avatar environment. 
             </summary>
-            <value>Default value is <c>_Abatab</c>.</value>
+            <remarks>
+            <list type="table">
+            <listheader>
+            <term>Environment name</term>
+            <description>Description</description>
+            </listheader>
+            <item>
+            <term><b><i>LIVE</i></b></term>
+            <description>The Avatar production environment.</description>
+            </item>
+            <item>
+            <term>UAT</term>
+            <description>The Avatar testing environment.</description>
+            </item>
+            <item>
+            <term>SBOX</term>
+            <description>The Avatar sandbox environment.</description>
+            </item>
+            </list>
+            </remarks>
+            <value>Default value is <c>LIVE</c></value>
         </member>
         <member name="P:AbatabData.Session.DebugglerConfig">
-             <summary>
-            
-             </summary>
-             <value></value>
+            <summary>
+            Properties for the debugging functionality.
+            </summary>
+            <value>&lt;-- Click for more info</value>
         </member>
         <member name="P:AbatabData.Session.LoggingConfig">
-             <summary>
-            
-             </summary>
-             <value></value>
+            <summary>
+            Properties for the logging functionality.
+            </summary>
+            <value>&lt;-- Click for more info</value>
         </member>
         <member name="P:AbatabData.Session.ModCommonConfig">
-             <summary>
-            
-             </summary>
-             <value></value>
+            <summary>
+            Properties for the Common module.
+            </summary>
+            <value>&lt;-- Click for more info</value>
         </member>
         <member name="P:AbatabData.Session.ModPrototypeConfig">
-             <summary>
-            
-             </summary>
-             <value></value>
+            <summary>
+            Properties for the Prototype module.
+            </summary>
+            <value>&lt;-- Click for more info</value>
         </member>
         <member name="P:AbatabData.Session.ModQuickMedOrderConfig">
-             <summary>
-            
-             </summary>
-             <value></value>
+            <summary>
+            Properties for the QuickMedOrder module.
+            </summary>
+            <value>&lt;-- Click for more info</value>
         </member>
         <member name="P:AbatabData.Session.ModTestingConfig">
             <summary>
-            Properties for the <see href="https://spectrum-health-systems.github.io/Abatab/api/AbatabData.Module.Testing.html"> Abatab Testing Module.</see>
+            Properties for the Testing module.
             </summary>
-            <value>See documentation for the <see href="https://spectrum-health-systems.github.io/Abatab/api/AbatabData.Module.Testing.html"> Abatab Testing Module.</see></value>
+            <value>&lt;-- Click for more info</value>
         </member>
         <member name="P:AbatabData.Session.SessionDateStamp">
-             <summary>
-            
-             </summary>
-             <value></value>
+            <summary>
+            The session date.
+            </summary>
+            <remarks>
+            * Uses the following syntax: <c>yyMMdd</c>
+            </remarks>
+            <value>Set at runtime</value>
         </member>
         <member name="P:AbatabData.Session.SessionTimeStamp">
-             <summary>
-            
-             </summary>
-             <value></value>
+            <summary>
+            The session time.
+            </summary>
+            <remarks>
+            * Uses the following syntax: <c>HHmmss</c>
+            </remarks>
+            <value>Set at runtime</value>
         </member>
         <member name="P:AbatabData.Session.AbatabUserName">
              <summary>

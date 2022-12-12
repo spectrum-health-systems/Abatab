@@ -8,94 +8,154 @@ using NTST.ScriptLinkService.Objects;
 namespace AbatabData
 {
     /// <summary>
-    /// <para>
     /// This class defines the properties for the Abatab session, built from the local Web.config file, and at runtime.
-    /// </para>
     /// </summary>
     public class Session
     {
         /// <summary>
-        /// The default behavior of Abatab. <see href="../man/man-Configuration-LocalSettings.index.html#abatabmode"> [more info]</see>
+        /// The current Abatab mode.
         /// </summary>
-        /// <value>Default value is <c>enabled</c>.</value>
+        /// <remarks>
+        /// <list type="table">
+        /// <listheader>
+        /// <term>Setting</term>
+        /// <description>Description</description>
+        /// </listheader>
+        /// <item>
+        /// <term><b><i>enabled</i></b></term>
+        /// <description>All Abatab functionality is (potentially) available.</description>
+        /// </item>
+        /// <item>
+        /// <term>disabled</term>
+        /// <description>Abatab functionality is not available.</description>
+        /// </item>
+        /// <item>
+        /// <term>passthrough</term>
+        /// <description>All functionality is available, but no changes are made to Avatar.</description>
+        /// </item>
+        /// </list>
+        /// * If Abatab is <c>enabled</c>, you are still able to disable specific functionality.
+        /// * The <c>passthrough</c> mode is intended for development, not production.
+        /// </remarks>
+        /// <value>Default value is <c>enabled</c></value>
         public string AbatabMode { get; set; }
 
         /// <summary>
-        /// The Abatab root directory. <see href="https://spectrum-health-systems.github.io/Abatab/man/man-configuration-local-settings.html#abatabroot">. [more info]</see>
+        /// The root directory where the Abatab web service has been deployed.
         /// </summary>
-        /// <value>Default value is <c>C:\Abatab_</c>.</value>
+        /// <remarks>
+        /// * At runtime The `AvatarEnvironment` value is added to the end of `AbatabRoot` to form the complete path.
+        /// </remarks>
+        /// <example>
+        /// If <c>AbatabRoot</c> is <i>"C:\Abatab_"</i>, and <c>AvatarEnvironment</c> is <i>"LIVE"</i>, the root directory at runtime would be <c>C:\Abatab_LIVE</c>.
+        /// </example>
+        /// <value>Default value is <c>C:\Abatab_</c></value>
         public string AbatabRoot { get; set; }
 
         /// <summary>
-        /// The Abatab data root directory. <see href="https://spectrum-health-systems.github.io/Abatab/man/man-configuration-local-settings.html#abatabroot">. [more info]</see>
+        /// The root directory where the Abatab data is stored.
         /// </summary>
-        /// <value>Default value is <c>C:\AbatabData</c>.</value>
+        /// <remarks>
+        /// * At runtime The `AvatarEnvironment` value is created as a sub-directory of the `AbatabDataRoot`.
+        /// * This is the directory where exported data/logs should be stored.
+        /// </remarks>
+        /// <example>
+        /// If <c>AbatabDataRoot</c> is <i>"C:\Abatab"</i>, and <c>AvatarEnvironment</c> is <i>"LIVE"</i>, the root directory at runtime would be <c>C:\Abatab\LIVE</c>.
+        /// </example>
+        /// <value>Default value is <c>C:\Abatab</c></value>
         public string AbatabDataRoot { get; set; }
 
         /// <summary>
-        /// The current Avatar environment. <see href="https://spectrum-health-systems.github.io/Abatab/man/man-configuration-local-settings.html#avatarenvironment">. [more info]</see>
+        /// The Avatar environment that will use Abatab.
         /// </summary>
         /// <value>Default value is <c>LIVE</c>.</value>
         public string AvatarEnvironment { get; set; }
 
         /// <summary>
-        /// The current Avatar environment. <see href="https://spectrum-health-systems.github.io/Abatab/man/man-configuration-local-settings.html#abatabfallbackusername">. [more info]</see>
+        /// The current Avatar environment.
         /// </summary>
-        /// <value>Default value is <c>_Abatab</c>.</value>
+        /// <remarks>
+        /// <list type="table">
+        /// <listheader>
+        /// <term>Environment name</term>
+        /// <description>Description</description>
+        /// </listheader>
+        /// <item>
+        /// <term><b><i>LIVE</i></b></term>
+        /// <description>The Avatar production environment.</description>
+        /// </item>
+        /// <item>
+        /// <term>UAT</term>
+        /// <description>The Avatar testing environment.</description>
+        /// </item>
+        /// <item>
+        /// <term>SBOX</term>
+        /// <description>The Avatar sandbox environment.</description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <value>Default value is <c>LIVE</c></value>
         public string AbatabFallbackUserName { get; set; }
 
         /// <summary>
-        ///
+        /// Properties for the debugging functionality.
         /// </summary>
-        /// <value></value>
+        /// <value>&lt;-- Click for more info</value>
         public Core.Debuggler DebugglerConfig { get; set; }
 
         /// <summary>
-        ///
+        /// Properties for the logging functionality.
         /// </summary>
-        /// <value></value>
+        /// <value>&lt;-- Click for more info</value>
         public Core.Logging LoggingConfig { get; set; }
 
         /// <summary>
-        ///
+        /// Properties for the Common module.
         /// </summary>
-        /// <value></value>
+        /// <value>&lt;-- Click for more info</value>
         public Module.Common ModCommonConfig { get; set; }
 
+
         /// <summary>
-        ///
+        /// Properties for the Prototype module.
         /// </summary>
-        /// <value></value>
+        /// <value>&lt;-- Click for more info</value>
         public Module.Prototype ModPrototypeConfig { get; set; }
 
         /// <summary>
-        ///
+        /// Properties for the QuickMedOrder module.
         /// </summary>
-        /// <value></value>
+        /// <value>&lt;-- Click for more info</value>
         public Module.QuickMedOrder ModQuickMedOrderConfig { get; set; }
 
         /// <summary>
-        /// Properties for the <see href="https://spectrum-health-systems.github.io/Abatab/api/AbatabData.Module.Testing.html"> Abatab Testing Module.</see>
+        /// Properties for the Testing module.
         /// </summary>
-        /// <value>See documentation for the <see href="https://spectrum-health-systems.github.io/Abatab/api/AbatabData.Module.Testing.html"> Abatab Testing Module.</see></value>
+        /// <value>&lt;-- Click for more info</value>
         public Module.Testing ModTestingConfig { get; set; }
 
         /// <summary>
-        ///
+        /// The session date.
         /// </summary>
-        /// <value></value>
+        /// <remarks>
+        /// * Uses the following syntax: <c>yyMMdd</c>
+        /// </remarks>
+        /// <value>Set at runtime</value>
         public string SessionDateStamp { get; set; }
 
         /// <summary>
-        ///
+        /// The session time.
         /// </summary>
-        /// <value></value>
+        /// <remarks>
+        /// * Uses the following syntax: <c>HHmmss</c>
+        /// </remarks>
+        /// <value>Set at runtime</value>
         public string SessionTimeStamp { get; set; }
 
         /// <summary>
-        ///
+        /// The Abatab user name
         /// </summary>
-        /// <value></value>
+        /// <value>Set at runtime</value>
         public string AbatabUserName { get; set; }
 
         /// <summary>
