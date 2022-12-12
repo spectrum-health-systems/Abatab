@@ -432,7 +432,7 @@
       "output": {
         ".html": {
           "relative_path": "man/manConfiguringAbatab.html",
-          "hash": "dmObrRgjkCsp+Qa83GR/eoS97QAHmkh7SAjMtirklEg="
+          "hash": "K4U2SOafWBdYskMnHfISyCA3+BbIbz9NYur6NzKUzIE="
         }
       },
       "is_incremental": false,
@@ -540,7 +540,7 @@
       "output": {
         ".html": {
           "relative_path": "man/manGlossary.html",
-          "hash": "r/LVrBbjmrZIb6bUqeQv1aq+9r6eq2+X09KGV+zf6LQ="
+          "hash": "gRa56iUpS4J7JJbQS7vNyjInkdzYOMPHE1Eyg5ZUYk8="
         }
       },
       "is_incremental": false,
@@ -723,7 +723,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AbatabData.Core.Debuggler.html",
-          "hash": "ZhZKTgBWiPEidN+cFIkt5Zb0Idiufo0rgfkQQfghBoc="
+          "hash": "BMF2d/2u6GwuFWhm0t5MLbjjoS95Nt2jt5oSuDqYULs="
         }
       },
       "is_incremental": false,
@@ -735,7 +735,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AbatabData.Core.Logging.html",
-          "hash": "Z+ejpFAfPQmEYybTgxWtJewjK225WcDh+w5EATTJBPE="
+          "hash": "WnJ9WBIy31H5lw+MM52eimB16hRPLR77qFYN3yQ0YwU="
         }
       },
       "is_incremental": false,
@@ -747,7 +747,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AbatabData.Core.html",
-          "hash": "r0kt9UTR28pPzq9WTflK2vDVevB6Cd+nkVN+P1cN8d8="
+          "hash": "etAuR+Hg/+YVt/8ycuH2E7GTgItBB9B7JQYmZxrUIMk="
         }
       },
       "is_incremental": false,
@@ -850,12 +850,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "ManagedReference",
       "source_relative_path": "../../docs/obj/api/AbatabData.Session.yml",
       "output": {
         ".html": {
           "relative_path": "api/AbatabData.Session.html",
-          "hash": "DQi+V73KySxYmv+L3zLpZfoEt20lEqTETPN1AX5aA28="
+          "hash": "7OVf/mZkOeBpbjiYUMOqAbIIfSTCdQL/TPuZ3mdhwcE="
         }
       },
       "is_incremental": false,
@@ -867,7 +870,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AbatabData.html",
-          "hash": "+5WuoYus1klZvd+PZ9YOudRl3uH1vY5XEQinRw+jG1g="
+          "hash": "STslxbudLExe9HvkBg8HzrhCe8Ev7E5atYaMgcuvjgQ="
         }
       },
       "is_incremental": false,

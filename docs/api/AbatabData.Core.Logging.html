@@ -73,7 +73,8 @@
   
   <h1 id="AbatabData_Core_Logging" data-uid="AbatabData.Core.Logging" class="text-break">Class Logging
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Properties for the logging functionality.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -116,7 +117,8 @@
   
   <a id="AbatabData_Core_Logging_Detail_" data-uid="AbatabData.Core.Logging.Detail*"></a>
   <h4 id="AbatabData_Core_Logging_Detail" data-uid="AbatabData.Core.Logging.Detail">Detail</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The detail level of log files (currently not used).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -133,7 +135,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>Currenly not used.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -141,7 +144,8 @@
   
   <a id="AbatabData_Core_Logging_EventErrorRoot_" data-uid="AbatabData.Core.Logging.EventErrorRoot*"></a>
   <h4 id="AbatabData_Core_Logging_EventErrorRoot" data-uid="AbatabData.Core.Logging.EventErrorRoot">EventErrorRoot</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The root directory where the Abatab error logs are stored.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -158,10 +162,21 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>Default value is <code>logs\debug</code></p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="AbatabData_Core_Logging_EventErrorRoot_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><ul>
+<li>At runtime the <code>EventErrorRoot</code> value is created as a sub-directory of the <code>AbatabDataRoot</code>.</li>
+</ul>
+</div>
+  <h5 id="AbatabData_Core_Logging_EventErrorRoot_examples">Examples</h5>
+  <ul>
+<li>If <code>AbatabDataRoot=C:\Abatab\LIVE</code>, and <code>DebugEventRoot=logs\debug</code>, then <code>DebugEventRoot</code> would be set to <code>C:\Abatab\LIVE\logs\debug</code> at runtime.</li>
+</ul>
+
   
   
   <a id="AbatabData_Core_Logging_EventLostRoot_" data-uid="AbatabData.Core.Logging.EventLostRoot*"></a>
@@ -239,13 +254,14 @@
   </table>
   
   
-  <a id="AbatabData_Core_Logging_Mode_" data-uid="AbatabData.Core.Logging.Mode*"></a>
-  <h4 id="AbatabData_Core_Logging_Mode" data-uid="AbatabData.Core.Logging.Mode">Mode</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="AbatabData_Core_Logging_LoggingMode_" data-uid="AbatabData.Core.Logging.LoggingMode*"></a>
+  <h4 id="AbatabData_Core_Logging_LoggingMode" data-uid="AbatabData.Core.Logging.LoggingMode">LoggingMode</h4>
+  <div class="markdown level1 summary"><p>The logging mode that Abatab will use when executed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Mode { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string LoggingMode { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -258,10 +274,17 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>Default value is <code>session</code></p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="AbatabData_Core_Logging_LoggingMode_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p><table><thead><tr><th>Setting</th><th>Description</th></tr></thead><tbody><tr><td><strong><em>session</em></strong></td><td>Only session logs are created.</td></tr><tr><td>trace</td><td>Only trace logs are created.</td></tr><tr><td>error</td><td>Only error logs are created.</td></tr><tr><td>warning</td><td>Only warning logs are created.</td></tr><tr><td>all</td><td>All logs types are created.</td></tr><tr><td>warning</td><td>Do not create any log files.</td></tr></tbody></table></p>
+<ul>
+<li>To create multiple types of logs, separate each type with a hypen (<code>&quot;-&quot;</code>).</li>
+</ul>
+</div>
   
   
   <a id="AbatabData_Core_Logging_Root_" data-uid="AbatabData.Core.Logging.Root*"></a>

@@ -22,7 +22,7 @@ namespace ModQuickMedOrder
         /// <param name="abatabSession">Information/data for this session of Abatab.</param>
         public static void VerifyAmount(Session abatabSession)
         {
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.DebugMode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
             InitializeDoseData(abatabSession);
@@ -43,7 +43,7 @@ namespace ModQuickMedOrder
         /// </remarks>
         private static void InitializeDoseData(Session abatabSession)
         {
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.DebugMode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
             abatabSession.ModQuickMedOrderConfig.PrevDosePrefix                = "Recurring Dosage:";
@@ -68,7 +68,7 @@ namespace ModQuickMedOrder
         /// <param name="abatabSession"></param>
         private static void CheckPercentage(Session abatabSession)
         {
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.DebugMode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
             // TODO This should probably be moved to ModCommon so other functionality can use it.
@@ -86,7 +86,7 @@ namespace ModQuickMedOrder
                     /* Creating a trace log here would significantly impact performance, since hundreds of files would be created, so instead we will use a
                     * debug log. This way trace log functionality won't be impacted elsewhere.
                     */
-                    LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
+                    LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.DebugMode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
 
                     if (fieldObject.FieldNumber == abatabSession.ModQuickMedOrderConfig.DosageOneFieldId)
                     {

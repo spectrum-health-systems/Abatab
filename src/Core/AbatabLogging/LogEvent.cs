@@ -34,10 +34,10 @@ namespace AbatabLogging
         /// <param name="accessMsg">The access log message.</param>
         public static void Access(Session abatabSession, string accessMsg)
         {
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.DebugMode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
-            if (abatabSession.LoggingConfig.Mode == "all" || abatabSession.LoggingConfig.Mode.Contains("access"))
+            if (abatabSession.LoggingConfig.LoggingMode == "all" || abatabSession.LoggingConfig.LoggingMode.Contains("access"))
             {
                 LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
@@ -90,10 +90,10 @@ namespace AbatabLogging
         /// <param name="logMsg">The log message.</param>
         public static void ModQuickMedOrder(Session abatabSession, string logMsg = "QuickMedOrder detail log.")
         {
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.DebugMode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
-            if (abatabSession.LoggingConfig.Mode == "all" || abatabSession.LoggingConfig.Mode.Contains("quickmedorder"))
+            if (abatabSession.LoggingConfig.LoggingMode == "all" || abatabSession.LoggingConfig.LoggingMode.Contains("quickmedorder"))
             {
                 LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
@@ -135,10 +135,10 @@ namespace AbatabLogging
         /// <param name="logMsg">The log message.</param>
         public static void Session(Session abatabSession, string logMsg = "Session detail log.")
         {
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.DebugMode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
-            if (abatabSession.LoggingConfig.Mode == "all" || abatabSession.LoggingConfig.Mode.Contains("session"))
+            if (abatabSession.LoggingConfig.LoggingMode == "all" || abatabSession.LoggingConfig.LoggingMode.Contains("session"))
             {
                 LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
@@ -162,10 +162,10 @@ namespace AbatabLogging
         /// <param name="callLine">The file line of where the log is coming from.</param>
         public static void Trace(Session abatabSession, string exeAssembly, string logMsg = "Trace log start...", [CallerFilePath] string callPath = "", [CallerMemberName] string callMember = "", [CallerLineNumber] int callLine = 0)
         {
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.DebugMode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
             // Can't really put a trace log here!
 
-            if (abatabSession.LoggingConfig.Mode == "all" || abatabSession.LoggingConfig.Mode.Contains("trace"))
+            if (abatabSession.LoggingConfig.LoggingMode == "all" || abatabSession.LoggingConfig.LoggingMode.Contains("trace"))
             {
                 // Can't really put a trace log here!
                 var logPath    = BuildPath.WithCaller("trace", abatabSession.LoggingConfig.SessionRoot, exeAssembly, callPath, callMember, callLine);

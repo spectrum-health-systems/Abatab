@@ -40,19 +40,19 @@ namespace AbatabLogging
         /// <returns>The completed content for a log file.</returns>
         public static string LogComponents(string eventType, Session abatabSession, string logMsg, string exeAssembly = "", string callPath = "", string callMember = "", int callLine = 0)
         {
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.DebugMode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
 
             var logHead = ComponentHead(logMsg);
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.DebugMode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
 
             var logDetail = ComponentDetail(eventType, exeAssembly, callPath, callMember, callLine);
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.DebugMode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
 
             var logBody = ComponentBody(eventType, abatabSession);
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.DebugMode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
 
             var logFoot = ComponentFoot();
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.DebugMode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
 
             return $"{logHead}" +
                    $"{logDetail}" +
@@ -139,7 +139,7 @@ namespace AbatabLogging
         /// <returns>The completed log body component.</returns>
         private static string ComponentBody(string eventType, Session abatabSession)
         {
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.DebugMode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
 
             switch (eventType)
             {
@@ -163,7 +163,7 @@ namespace AbatabLogging
         /// <returns>The completed log body component for session details.</returns>
         private static string BodySessionDetail(Session abatabSession)
         {
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.DebugMode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
 
             var sessionHead = $"{Environment.NewLine}" +
                               $"==============={Environment.NewLine}" +
@@ -173,9 +173,9 @@ namespace AbatabLogging
             var sessionDetail = $"{Environment.NewLine}" +
                                 $"Abatab Mode:         {abatabSession.AbatabMode}{Environment.NewLine}" +
                                 $"Abatab Root:         {abatabSession.AbatabRoot}{Environment.NewLine}" +
-                                $"Debugging Mode:      {abatabSession.DebugglerConfig.Mode}{Environment.NewLine}" +
+                                $"Debugging Mode:      {abatabSession.DebugglerConfig.DebugMode}{Environment.NewLine}" +
                                 $"Debugging Log root:  {abatabSession.DebugglerConfig.DebugEventRoot}{Environment.NewLine}" +
-                                $"Logging Mode:        {abatabSession.LoggingConfig.Mode}{Environment.NewLine}" +
+                                $"Logging Mode:        {abatabSession.LoggingConfig.LoggingMode}{Environment.NewLine}" +
                                 $"Logging Detail:      {abatabSession.LoggingConfig.Detail}{Environment.NewLine}" +
                                 $"Logging Delay:       {abatabSession.LoggingConfig.WriteDelay}{Environment.NewLine}" +
                                 $"Session DateStamp:   {abatabSession.SessionDateStamp}{Environment.NewLine}" +
@@ -183,7 +183,7 @@ namespace AbatabLogging
                                 $"Session Log root:    {abatabSession.LoggingConfig.SessionRoot}{Environment.NewLine}" +
                                 $"Avatar username:     {abatabSession.AbatabUserName}{Environment.NewLine}" +
                                 $"Fallback username:   {abatabSession.AbatabFallbackUserName}{Environment.NewLine}" +
-                                $"Abatab request:      {abatabSession.AbatabRequest}{Environment.NewLine}" +
+                                $"Abatab request:      {abatabSession.ScriptParameter}{Environment.NewLine}" +
                                 $"    Module:          {abatabSession.AbatabModule}{Environment.NewLine}" +
                                 $"    Command:         {abatabSession.AbatabCommand}{Environment.NewLine}" +
                                 $"    Action:          {abatabSession.AbatabAction}{Environment.NewLine}" +
@@ -216,43 +216,43 @@ namespace AbatabLogging
         /// <returns>The completed log body component for module details.</returns>
         private static string BodyModuleDetail(Session abatabSession, string modName)
         {
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.DebugMode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
 
             var moduleHead = $"{Environment.NewLine}" +
                              $"-------------{Environment.NewLine}" +
                              $"{modName}{Environment.NewLine}" +
                              $"-------------{Environment.NewLine}";
 
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot);
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.DebugMode, abatabSession.DebugglerConfig.DebugEventRoot);
 
             string moduleDetail;
 
             switch (modName.ToLower())
             {
                 case "quickmedorder":
-                    LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot);
+                    LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.DebugMode, abatabSession.DebugglerConfig.DebugEventRoot);
                     moduleDetail = $"Mode:                 {abatabSession.ModQuickMedOrderConfig.Mode}{Environment.NewLine}" +
                                    $"Valid users:          {abatabSession.ModQuickMedOrderConfig.AuthorizedUsers}{Environment.NewLine}" +
                                    $"Max percent increase: {abatabSession.ModQuickMedOrderConfig.DosePercentBoundary}";
                     break;
 
                 case "prototype":
-                    LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, $"Mode: {abatabSession.ModPrototypeConfig.Mode}");
+                    LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.DebugMode, abatabSession.DebugglerConfig.DebugEventRoot, $"Mode: {abatabSession.ModPrototypeConfig.Mode}");
                     moduleDetail = $"Mode: {abatabSession.ModPrototypeConfig.Mode}";
                     break;
 
                 case "testing":
-                    LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot);
+                    LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.DebugMode, abatabSession.DebugglerConfig.DebugEventRoot);
                     moduleDetail = $"Mode: {abatabSession.ModTestingConfig.Mode}";
                     break;
 
                 default:
-                    LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot);
+                    LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.DebugMode, abatabSession.DebugglerConfig.DebugEventRoot);
                     moduleDetail = "Undefined.";
                     break;
             }
 
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot);
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.DebugMode, abatabSession.DebugglerConfig.DebugEventRoot);
 
             return $"{moduleHead}" +
                    $"{moduleDetail}";
@@ -265,7 +265,7 @@ namespace AbatabLogging
         /// <returns>The completed log body component for QuickMedOrder details.</returns>
         private static string BodyModQuickMedOrderDetail(Session abatabSession)
         {
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.DebugMode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
 
             var modQuickMedOrderHead = $"{Environment.NewLine}" +
                                        $"====================={Environment.NewLine}" +

@@ -87,39 +87,6 @@
 <p>The Web.config file contains the local settings for Abatab. These settings are also in Settings.settings.</p>
 <h1 id="webconfig-settings">Web.config settings</h1>
 <p>Blurb here</p>
-<h1 id="debugmode">DebugMode</h1>
-<p><strong>DESCRIPTION</strong><br>Indicates if Abatab is in debugging mode.</p>
-<p><strong>OPTIONS</strong> </p>
-<table>
-<thead>
-<tr>
-<th>Value</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong><code>disabled</code></strong></td>
-<td>Debugging mode is disabled.</td>
-</tr>
-<tr>
-<td><code>enabled</code></td>
-<td>Debugging mode is enabled.</td>
-</tr>
-</tbody>
-</table>
-<p><strong>NOTES</strong> </p>
-<ul>
-<li>Debug mode can have a significant impact on performance, and should not be enabled in production environments.</li>
-</ul>
-<hr>
-<h1 id="debuglogroot">DebugLogRoot</h1>
-<p><strong>DESCRIPTION</strong><br>The debugging root directory.</p>
-<p><strong>NOTES</strong> </p>
-<ul>
-<li>This should be left at <code>logs\debug</code></li>
-</ul>
-<hr>
 <h1 id="logmode">LogMode</h1>
 <p><strong>DESCRIPTION</strong><br>Defines the Avatar environment where Abatab will be used.</p>
 <p><strong>OPTIONS</strong> </p>
@@ -192,14 +159,6 @@
 <li>This should be left at <code>10</code></li>
 </ul>
 <hr>
-<h1 id="abatabfallbackusername">AbatabFallbackUserName</h1>
-<p><strong>DESCRIPTION</strong><br>Ensures there is valid Abatab user.</p>
-<p><strong>NOTES</strong> </p>
-<ul>
-<li>The AbatabUserName is the same as the Avatar Username stored in <code>sentOptObj.OptionUserId</code>, and is used to create session information/folders.</li>
-<li>If for some reason the <code>sentOptObj.OptionUserId</code> is empty, the AbatabUserName will be set to this fallback value.</li>
-<li>This should be left at <code>_Abatab</code></li>
-</ul>
 <hr>
 <h1 id="modtestingmode">ModTestingMode</h1>
 <p><strong>DESCRIPTION</strong><br>Indicates if the Abatab Testing Module functionality is enabled.</p>

@@ -73,8 +73,7 @@
   
   <h1 id="AbatabData_Session" data-uid="AbatabData.Session" class="text-break">Class Session
   </h1>
-  <div class="markdown level0 summary"><p>This class defines the properties for the Abatab session, built from the local Web.config file, and at runtime.</p>
-</div>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -117,7 +116,8 @@
   
   <a id="AbatabData_Session_AbatabAction_" data-uid="AbatabData.Session.AbatabAction*"></a>
   <h4 id="AbatabData_Session_AbatabAction" data-uid="AbatabData.Session.AbatabAction">AbatabAction</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The Action component of the Script Parameter.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -134,15 +134,27 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>Set at runtime</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="AbatabData_Session_AbatabAction_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><ul>
+<li>This is the third component of the <a href="AbatabData.Session.html#AbatabData_Session_ScriptParameter">Script Parameter</a>.</li>
+</ul>
+</div>
+  <h5 id="AbatabData_Session_AbatabAction_examples">Examples</h5>
+  <ul>
+<li>The Script Parameter <code>QuickMedOrder-Dose-VerifyAmount</code> contains the <code>VerifyAmount</code> action.</li>
+</ul>
+
   
   
   <a id="AbatabData_Session_AbatabCommand_" data-uid="AbatabData.Session.AbatabCommand*"></a>
   <h4 id="AbatabData_Session_AbatabCommand" data-uid="AbatabData.Session.AbatabCommand">AbatabCommand</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The Command component of the Script Parameter.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -159,10 +171,21 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>Set at runtime</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="AbatabData_Session_AbatabCommand_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><ul>
+<li>This is the second component of the <a href="AbatabData.Session.html#AbatabData_Session_ScriptParameter">Script Parameter</a>.</li>
+</ul>
+</div>
+  <h5 id="AbatabData_Session_AbatabCommand_examples">Examples</h5>
+  <ul>
+<li>The Script Parameter <code>QuickMedOrder-Dose-VerifyAmount</code> contains the <code>Dose</code> command.</li>
+</ul>
+
   
   
   <a id="AbatabData_Session_AbatabDataRoot_" data-uid="AbatabData.Session.AbatabDataRoot*"></a>
@@ -192,18 +215,20 @@
   </table>
   <h5 id="AbatabData_Session_AbatabDataRoot_remarks">Remarks</h5>
   <div class="markdown level1 remarks"><ul>
-<li>At runtime The <code>AvatarEnvironment</code> value is created as a sub-directory of the <code>AbatabDataRoot</code>.</li>
+<li>At runtime the <code>AvatarEnvironment</code> value is created as a sub-directory of the <code>AbatabDataRoot</code>.</li>
 <li>This is the directory where exported data/logs should be stored.</li>
 </ul>
 </div>
   <h5 id="AbatabData_Session_AbatabDataRoot_examples">Examples</h5>
-  <p>If <code>AbatabDataRoot</code> is <em>&quot;C:\Abatab&quot;</em>, and <code>AvatarEnvironment</code> is <em>&quot;LIVE&quot;</em>, the root directory at runtime would be <code>C:\Abatab\LIVE</code>.</p>
+  <ul>
+<li>If <code>AbatabDataRoot=C:\Abatab</code>, and <code>AvatarEnvironment=LIVE</code>, then <code>AbatabDataRoot</code> would be set to <code>C:\Abatab\LIVE</code> at runtime.</li>
+</ul>
 
   
   
   <a id="AbatabData_Session_AbatabFallbackUserName_" data-uid="AbatabData.Session.AbatabFallbackUserName*"></a>
   <h4 id="AbatabData_Session_AbatabFallbackUserName" data-uid="AbatabData.Session.AbatabFallbackUserName">AbatabFallbackUserName</h4>
-  <div class="markdown level1 summary"><p>The current Avatar environment. </p>
+  <div class="markdown level1 summary"><p>The fallback username for Abatab.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -221,19 +246,21 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td><p>Default value is <code>LIVE</code></p>
+        <td><p>Default value is <code>_Abatab</code></p>
 </td>
       </tr>
     </tbody>
   </table>
   <h5 id="AbatabData_Session_AbatabFallbackUserName_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><table><thead><tr><th>Environment name</th><th>Description</th></tr></thead><tbody><tr><td><strong><em>LIVE</em></strong></td><td>The Avatar production environment.</td></tr><tr><td>UAT</td><td>The Avatar testing environment.</td></tr><tr><td>SBOX</td><td>The Avatar sandbox environment.</td></tr></tbody></table>
+  <div class="markdown level1 remarks"><ul>
+<li>If <code>sentOptObj.OptionUserId</code> does not contain a valid username, <code>AbatabFallbackUserName</code> will be used.</li>
+</ul>
 </div>
   
   
   <a id="AbatabData_Session_AbatabMode_" data-uid="AbatabData.Session.AbatabMode*"></a>
   <h4 id="AbatabData_Session_AbatabMode" data-uid="AbatabData.Session.AbatabMode">AbatabMode</h4>
-  <div class="markdown level1 summary"><p>The current Abatab mode.</p>
+  <div class="markdown level1 summary"><p>The mode that Abatab will use when executed.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -259,15 +286,16 @@
   <h5 id="AbatabData_Session_AbatabMode_remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p><table><thead><tr><th>Setting</th><th>Description</th></tr></thead><tbody><tr><td><strong><em>enabled</em></strong></td><td>All Abatab functionality is (potentially) available.</td></tr><tr><td>disabled</td><td>Abatab functionality is not available.</td></tr><tr><td>passthrough</td><td>All functionality is available, but no changes are made to Avatar.</td></tr></tbody></table></p>
 <ul>
-<li>If Abatab is <code>enabled</code>, you are still able to disable specific functionality.</li>
-<li>The <code>passthrough</code> mode is intended for development, not production.</li>
+<li>If this is set to <code>AbatabMode=enabled</code>, you are still able to disable specific modules via their corresponding mode setting.</li>
+<li>The <code>AbatabMode=passthrough</code> mode is intended for development, not production.</li>
 </ul>
 </div>
   
   
   <a id="AbatabData_Session_AbatabModule_" data-uid="AbatabData.Session.AbatabModule*"></a>
   <h4 id="AbatabData_Session_AbatabModule" data-uid="AbatabData.Session.AbatabModule">AbatabModule</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The Module component of the Script Parameter.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -284,15 +312,27 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>Set at runtime</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="AbatabData_Session_AbatabModule_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><ul>
+<li>This is the first component of the <a href="AbatabData.Session.html#AbatabData_Session_ScriptParameter">Script Parameter</a>.</li>
+</ul>
+</div>
+  <h5 id="AbatabData_Session_AbatabModule_examples">Examples</h5>
+  <ul>
+<li>The Script Parameter <code>QuickMedOrder-Dose-VerifyAmount</code> uses the <code>QuickMedOrder</code> module.</li>
+</ul>
+
   
   
   <a id="AbatabData_Session_AbatabOption_" data-uid="AbatabData.Session.AbatabOption*"></a>
   <h4 id="AbatabData_Session_AbatabOption" data-uid="AbatabData.Session.AbatabOption">AbatabOption</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The (optional) Option component of the Script Parameter.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -309,35 +349,22 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>Set at runtime</p>
+</td>
       </tr>
     </tbody>
   </table>
-  
-  
-  <a id="AbatabData_Session_AbatabRequest_" data-uid="AbatabData.Session.AbatabRequest*"></a>
-  <h4 id="AbatabData_Session_AbatabRequest" data-uid="AbatabData.Session.AbatabRequest">AbatabRequest</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string AbatabRequest { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
+  <h5 id="AbatabData_Session_AbatabOption_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><ul>
+<li>This is the fourth component of the <a href="AbatabData.Session.html#AbatabData_Session_ScriptParameter">Script Parameter</a>.</li>
+<li>This is an optional component.</li>
+</ul>
+</div>
+  <h5 id="AbatabData_Session_AbatabOption_examples">Examples</h5>
+  <ul>
+<li>The Script Parameter <code>QuickMedOrder-Dose-VerifyAmount-PrintToScreen</code> contains the <code>PrintToScreen</code> action.</li>
+</ul>
+
   
   
   <a id="AbatabData_Session_AbatabRoot_" data-uid="AbatabData.Session.AbatabRoot*"></a>
@@ -367,17 +394,20 @@
   </table>
   <h5 id="AbatabData_Session_AbatabRoot_remarks">Remarks</h5>
   <div class="markdown level1 remarks"><ul>
-<li>At runtime The <code>AvatarEnvironment</code> value is added to the end of <code>AbatabRoot</code> to form the complete path.</li>
+<li>At runtime the <code>AvatarEnvironment</code> value is added to the end of <code>AbatabRoot</code> to form the complete path.</li>
 </ul>
 </div>
   <h5 id="AbatabData_Session_AbatabRoot_examples">Examples</h5>
-  <p>If <code>AbatabRoot</code> is <em>&quot;C:\Abatab_&quot;</em>, and <code>AvatarEnvironment</code> is <em>&quot;LIVE&quot;</em>, the root directory at runtime would be <code>C:\Abatab_LIVE</code>.</p>
+  <ul>
+<li>If <code>AbatabRoot=C:\Abatab_</code>, and <code>AvatarEnvironment=LIVE</code>, then <code>AbatabRoot</code> would be set to <code>C:\Abatab_LIVE</code> at runtime.</li>
+</ul>
 
   
   
   <a id="AbatabData_Session_AbatabUserName_" data-uid="AbatabData.Session.AbatabUserName*"></a>
   <h4 id="AbatabData_Session_AbatabUserName" data-uid="AbatabData.Session.AbatabUserName">AbatabUserName</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The Abatab username.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -394,15 +424,22 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>Set at runtime</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="AbatabData_Session_AbatabUserName_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><ul>
+<li>This should be set to the value in <code>sentOptObj.OptionUserId</code></li>
+<li>If the value in <code>sentOptObj.OptionUserId</code> is not valid, this will be set to <a href="AbatabData.Session.html#AbatabData_Session_AbatabFallbackUserName">AbatabFallbackUserName</a>.</li>
+</ul>
+</div>
   
   
   <a id="AbatabData_Session_AvatarEnvironment_" data-uid="AbatabData.Session.AvatarEnvironment*"></a>
   <h4 id="AbatabData_Session_AvatarEnvironment" data-uid="AbatabData.Session.AvatarEnvironment">AvatarEnvironment</h4>
-  <div class="markdown level1 summary"><p>The Avatar environment that will use Abatab.</p>
+  <div class="markdown level1 summary"><p>The Avatar environment that Abatab will reference when executed.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -420,11 +457,14 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td><p>Default value is <code>LIVE</code>.</p>
+        <td><p>Default value is <code>LIVE</code></p>
 </td>
       </tr>
     </tbody>
   </table>
+  <h5 id="AbatabData_Session_AvatarEnvironment_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><table><thead><tr><th>Environment name</th><th>Description</th></tr></thead><tbody><tr><td><strong><em>LIVE</em></strong></td><td>The Avatar production environment.</td></tr><tr><td>UAT</td><td>The Avatar testing environment.</td></tr><tr><td>SBOX</td><td>The Avatar sandbox environment.</td></tr></tbody></table>
+</div>
   
   
   <a id="AbatabData_Session_DebugglerConfig_" data-uid="AbatabData.Session.DebugglerConfig*"></a>
@@ -456,7 +496,8 @@
   
   <a id="AbatabData_Session_FinalOptObj_" data-uid="AbatabData.Session.FinalOptObj*"></a>
   <h4 id="AbatabData_Session_FinalOptObj" data-uid="AbatabData.Session.FinalOptObj">FinalOptObj</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The OptionObject that Abatab sends back to Avatar.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -473,10 +514,17 @@
     <tbody>
       <tr>
         <td><a class="xref" href="NTST.ScriptLinkService.Objects.OptionObject2015.html">OptionObject2015</a></td>
-        <td></td>
+        <td><p>Set at runtime</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="AbatabData_Session_FinalOptObj_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><ul>
+<li>This OptionObject is a copy of <code>WorkOptObj</code>.</li>
+<li>More information about the OptionObjects can be found <a href="../man/manGlossary.html#optionobject">here.</a></li>
+</ul>
+</div>
   
   
   <a id="AbatabData_Session_LoggingConfig_" data-uid="AbatabData.Session.LoggingConfig*"></a>
@@ -614,9 +662,46 @@
   </table>
   
   
+  <a id="AbatabData_Session_ScriptParameter_" data-uid="AbatabData.Session.ScriptParameter*"></a>
+  <h4 id="AbatabData_Session_ScriptParameter" data-uid="AbatabData.Session.ScriptParameter">ScriptParameter</h4>
+  <div class="markdown level1 summary"><p>The Script Parameter that Avatar sends to Abatab.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ScriptParameter { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>Set at runtime</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AbatabData_Session_ScriptParameter_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><ul>
+<li>Script Parameter syntax is <code>MODULE-COMMAND-ACTION[-OPTION]</code></li>
+<li>More information about the Script Parameter can be found <a href="../man/manGlossary.html#script-parameter">here.</a></li>
+</ul>
+</div>
+  <h5 id="AbatabData_Session_ScriptParameter_examples">Examples</h5>
+  <pre><code>QuickMedOrder-Dose-VerifyAmount</code></pre>
+
+  
+  
   <a id="AbatabData_Session_SentOptObj_" data-uid="AbatabData.Session.SentOptObj*"></a>
   <h4 id="AbatabData_Session_SentOptObj" data-uid="AbatabData.Session.SentOptObj">SentOptObj</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The OptionObject that Avatar sends to Abatab.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -633,10 +718,17 @@
     <tbody>
       <tr>
         <td><a class="xref" href="NTST.ScriptLinkService.Objects.OptionObject2015.html">OptionObject2015</a></td>
-        <td></td>
+        <td><p>Set at runtime</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="AbatabData_Session_SentOptObj_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><ul>
+<li>This OptionObject is not modified by Abatab.</li>
+<li>More information about the OptionObjects can be found <a href="../man/manGlossary.html#optionobject">here.</a></li>
+</ul>
+</div>
   
   
   <a id="AbatabData_Session_SessionDateStamp_" data-uid="AbatabData.Session.SessionDateStamp*"></a>
@@ -705,7 +797,8 @@
   
   <a id="AbatabData_Session_WorkOptObj_" data-uid="AbatabData.Session.WorkOptObj*"></a>
   <h4 id="AbatabData_Session_WorkOptObj" data-uid="AbatabData.Session.WorkOptObj">WorkOptObj</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The OptionObject that Abatab (potentially) modifies during a session.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -722,10 +815,18 @@
     <tbody>
       <tr>
         <td><a class="xref" href="NTST.ScriptLinkService.Objects.OptionObject2015.html">OptionObject2015</a></td>
-        <td></td>
+        <td><p>Set at runtime</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="AbatabData_Session_WorkOptObj_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><ul>
+<li>This OptionObject starts out as a copy of <code>SentOptObj</code>.</li>
+<li>This OptionObject is potentially modified by Abatab.</li>
+<li>More information about the OptionObjects can be found <a href="../man/manGlossary.html#optionobject">here.</a></li>
+</ul>
+</div>
 </article>
           </div>
           

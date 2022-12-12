@@ -19,31 +19,8 @@ Blurb here
 
 
 
-# DebugMode
 
-**DESCRIPTION**  
-Indicates if Abatab is in debugging mode.
 
-**OPTIONS** 
-| Value              | Description                                                                                        |
-|--------------------|----------------------------------------------------------------------------------------------------|
-| **`disabled`**          | Debugging mode is disabled.                                                                   |
-| `enabled`               | Debugging mode is enabled.                                                                    |
-
-**NOTES** 
-* Debug mode can have a significant impact on performance, and should not be enabled in production environments.
-
-***
-
-# DebugLogRoot
-
-**DESCRIPTION**  
-The debugging root directory.
-
-**NOTES** 
-* This should be left at `logs\debug`
-
-***
 
 # LogMode
 
@@ -90,16 +67,6 @@ Sets a delay (in milliseconds) before writing a log file.
 * This should be left at `10`
 
 ***
-
-# AbatabFallbackUserName
-
-**DESCRIPTION**  
-Ensures there is valid Abatab user.
-
-**NOTES** 
-* The AbatabUserName is the same as the Avatar Username stored in `sentOptObj.OptionUserId`, and is used to create session information/folders.
-* If for some reason the `sentOptObj.OptionUserId` is empty, the AbatabUserName will be set to this fallback value.
-* This should be left at `_Abatab`
 
 ***
 

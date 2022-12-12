@@ -44,7 +44,7 @@ namespace AbatabSession
                 AbatabFallbackUserName = webConfig["AbatabFallbackUserName"],
                 SessionDateStamp       = $"{DateTime.Now:yyMMdd}",
                 SessionTimeStamp       = $"{DateTime.Now:HHmmss}",
-                AbatabRequest          = scriptParameter.ToLower(),
+                ScriptParameter        = scriptParameter.ToLower(),
                 AbatabModule           = "undefined",
                 AbatabCommand          = "undefined",
                 AbatabAction           = "undefined",
@@ -147,7 +147,7 @@ namespace AbatabSession
         {
             abatabSession.DebugglerConfig = new AbatabData.Core.Debuggler
             {
-                Mode           = abatabSettings["DebugMode"],
+                DebugMode           = abatabSettings["DebugMode"],
                 DebugEventRoot = $@"{abatabSession.AbatabRoot}\{abatabSettings["DebugLogRoot"]}",
             };
         }
@@ -171,7 +171,7 @@ namespace AbatabSession
 
             abatabSession.LoggingConfig  = new Logging
             {
-                Mode             = $"{abatabSettings["LogMode"]}",
+                LoggingMode             = $"{abatabSettings["LogMode"]}",
                 Detail           = $"{abatabSettings["LogDetail"]}",
                 WriteDelay       = $"{abatabSettings["LogWriteDelay"]}",
                 SessionRoot      = $@"{abatabSession.AbatabDataRoot}\logs\{abatabSession.SessionDateStamp}\{abatabSession.AbatabUserName}\{abatabSession.SessionTimeStamp}",
@@ -190,7 +190,7 @@ namespace AbatabSession
         /// <param name="abatabSession">Information/data for this session of Abatab.</param>
         private static void VerifyAbatabUserName(Session abatabSession)
         {
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.DebugMode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
             if (string.IsNullOrWhiteSpace(abatabSession.AbatabUserName))
@@ -208,10 +208,10 @@ namespace AbatabSession
         /// <param name="abatabSession">Information/data for this session of Abatab.</param>
         private static void ParseAbatabRequest(Session abatabSession)
         {
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.Mode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.DebugMode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
-            string[] req = abatabSession.AbatabRequest.Split('-');
+            string[] req = abatabSession.ScriptParameter.Split('-');
 
             abatabSession.AbatabModule  = req[0].ToLower();
             abatabSession.AbatabCommand = req[1].ToLower();

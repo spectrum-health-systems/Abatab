@@ -73,7 +73,8 @@
   
   <h1 id="AbatabData_Core_Debuggler" data-uid="AbatabData.Core.Debuggler" class="text-break">Class Debuggler
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Properties for the logging functionality.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -116,7 +117,8 @@
   
   <a id="AbatabData_Core_Debuggler_DebugEventRoot_" data-uid="AbatabData.Core.Debuggler.DebugEventRoot*"></a>
   <h4 id="AbatabData_Core_Debuggler_DebugEventRoot" data-uid="AbatabData.Core.Debuggler.DebugEventRoot">DebugEventRoot</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The root directory where the Abatab debug logs are stored.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -133,19 +135,31 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>Default value is <code>logs\debug</code></p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="AbatabData_Core_Debuggler_DebugEventRoot_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><ul>
+<li>At runtime the <code>DebugEventRoot</code> value is created as a sub-directory of the <code>AbatabDataRoot</code>.</li>
+</ul>
+</div>
+  <h5 id="AbatabData_Core_Debuggler_DebugEventRoot_examples">Examples</h5>
+  <ul>
+<li>If <code>AbatabDataRoot=C:\Abatab\LIVE</code>, and <code>DebugEventRoot=logs\debug</code>, then <code>DebugEventRoot</code> would be set to <code>C:\Abatab\LIVE\logs\debug</code> at runtime.</li>
+</ul>
+
   
   
-  <a id="AbatabData_Core_Debuggler_Mode_" data-uid="AbatabData.Core.Debuggler.Mode*"></a>
-  <h4 id="AbatabData_Core_Debuggler_Mode" data-uid="AbatabData.Core.Debuggler.Mode">Mode</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="AbatabData_Core_Debuggler_DebugMode_" data-uid="AbatabData.Core.Debuggler.DebugMode*"></a>
+  <h4 id="AbatabData_Core_Debuggler_DebugMode" data-uid="AbatabData.Core.Debuggler.DebugMode">DebugMode</h4>
+  <div class="markdown level1 summary"><p>The debug mode that Abatab will use when executed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Mode { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string DebugMode { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -158,10 +172,17 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>Default value is <code>disabled</code></p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="AbatabData_Core_Debuggler_DebugMode_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p><table><thead><tr><th>Setting</th><th>Description</th></tr></thead><tbody><tr><td><strong><em>disabled</em></strong></td><td>Debugging functionality is disabled.</td></tr><tr><td>enabled</td><td>Debugging functionality is enabled.</td></tr></tbody></table></p>
+<ul>
+<li>Debug mode can have a significant impact on performance, and should not be enabled in production environments.</li>
+</ul>
+</div>
 </article>
           </div>
           

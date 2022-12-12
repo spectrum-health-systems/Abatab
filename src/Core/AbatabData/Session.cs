@@ -8,12 +8,13 @@ using NTST.ScriptLinkService.Objects;
 namespace AbatabData
 {
     /// <summary>
-    /// This class defines the properties for the Abatab session, built from the local Web.config file, and at runtime.
+    /// <para>
+    /// Defines properties for an Abatab session.
     /// </summary>
     public class Session
     {
         /// <summary>
-        /// The current Abatab mode.
+        /// The mode that Abatab will use when executed.
         /// </summary>
         /// <remarks>
         /// <list type="table">
@@ -34,8 +35,8 @@ namespace AbatabData
         /// <description>All functionality is available, but no changes are made to Avatar.</description>
         /// </item>
         /// </list>
-        /// * If Abatab is <c>enabled</c>, you are still able to disable specific functionality.
-        /// * The <c>passthrough</c> mode is intended for development, not production.
+        /// * If this is set to <c>AbatabMode=enabled</c>, you are still able to disable specific modules via their corresponding mode setting.
+        /// * The <c>AbatabMode=passthrough</c> mode is intended for development, not production.
         /// </remarks>
         /// <value>Default value is <c>enabled</c></value>
         public string AbatabMode { get; set; }
@@ -44,10 +45,10 @@ namespace AbatabData
         /// The root directory where the Abatab web service has been deployed.
         /// </summary>
         /// <remarks>
-        /// * At runtime The `AvatarEnvironment` value is added to the end of `AbatabRoot` to form the complete path.
+        /// * At runtime the <c>AvatarEnvironment</c> value is added to the end of <c>AbatabRoot</c> to form the complete path.
         /// </remarks>
         /// <example>
-        /// If <c>AbatabRoot</c> is <i>"C:\Abatab_"</i>, and <c>AvatarEnvironment</c> is <i>"LIVE"</i>, the root directory at runtime would be <c>C:\Abatab_LIVE</c>.
+        /// * If <c>AbatabRoot=C:\Abatab_</c>, and <c>AvatarEnvironment=LIVE</c>, then <c>AbatabRoot</c> would be set to <c>C:\Abatab_LIVE</c> at runtime.
         /// </example>
         /// <value>Default value is <c>C:\Abatab_</c></value>
         public string AbatabRoot { get; set; }
@@ -56,23 +57,17 @@ namespace AbatabData
         /// The root directory where the Abatab data is stored.
         /// </summary>
         /// <remarks>
-        /// * At runtime The `AvatarEnvironment` value is created as a sub-directory of the `AbatabDataRoot`.
+        /// * At runtime the <c>AvatarEnvironment</c> value is created as a sub-directory of the <c>AbatabDataRoot</c>.
         /// * This is the directory where exported data/logs should be stored.
         /// </remarks>
         /// <example>
-        /// If <c>AbatabDataRoot</c> is <i>"C:\Abatab"</i>, and <c>AvatarEnvironment</c> is <i>"LIVE"</i>, the root directory at runtime would be <c>C:\Abatab\LIVE</c>.
+        /// * If <c>AbatabDataRoot=C:\Abatab</c>, and <c>AvatarEnvironment=LIVE</c>, then <c>AbatabDataRoot</c> would be set to <c>C:\Abatab\LIVE</c> at runtime.
         /// </example>
         /// <value>Default value is <c>C:\Abatab</c></value>
         public string AbatabDataRoot { get; set; }
 
         /// <summary>
-        /// The Avatar environment that will use Abatab.
-        /// </summary>
-        /// <value>Default value is <c>LIVE</c>.</value>
-        public string AvatarEnvironment { get; set; }
-
-        /// <summary>
-        /// The current Avatar environment.
+        /// The Avatar environment that Abatab will reference when executed.
         /// </summary>
         /// <remarks>
         /// <list type="table">
@@ -95,6 +90,15 @@ namespace AbatabData
         /// </list>
         /// </remarks>
         /// <value>Default value is <c>LIVE</c></value>
+        public string AvatarEnvironment { get; set; }
+
+        /// <summary>
+        /// The fallback username for Abatab.
+        /// </summary>
+        /// <remarks>
+        /// * If <c>sentOptObj.OptionUserId</c> does not contain a valid username, <c>AbatabFallbackUserName</c> will be used.
+        /// </remarks>
+        /// <value>Default value is <c>_Abatab</c></value>
         public string AbatabFallbackUserName { get; set; }
 
         /// <summary>
@@ -153,58 +157,109 @@ namespace AbatabData
         public string SessionTimeStamp { get; set; }
 
         /// <summary>
-        /// The Abatab user name
+        /// The Abatab username.
         /// </summary>
+        /// <remarks>
+        /// * This should be set to the value in <c>sentOptObj.OptionUserId</c>
+        /// * If the value in <c>sentOptObj.OptionUserId</c> is not valid, this will be set to <see href="AbatabData.Session.html#AbatabData_Session_AbatabFallbackUserName">AbatabFallbackUserName</see>.
+        /// </remarks>
         /// <value>Set at runtime</value>
         public string AbatabUserName { get; set; }
 
         /// <summary>
-        ///
+        /// The Script Parameter that Avatar sends to Abatab.
         /// </summary>
-        /// <value></value>
-        public string AbatabRequest { get; set; }
+        /// <remarks>
+        /// * Script Parameter syntax is <c>MODULE-COMMAND-ACTION[-OPTION]</c>
+        /// * More information about the Script Parameter can be found <see href="../man/manGlossary.html#script-parameter">here.</see>
+        /// </remarks>
+        /// <example>
+        /// <code>
+        /// QuickMedOrder-Dose-VerifyAmount
+        /// </code>
+        /// </example>
+        /// <value>Set at runtime</value>
+        public string ScriptParameter { get; set; }
 
         /// <summary>
-        ///
+        /// The Module component of the Script Parameter.
         /// </summary>
-        /// <value></value>
+        /// <remarks>
+        /// * This is the first component of the <see href="AbatabData.Session.html#AbatabData_Session_ScriptParameter">Script Parameter</see>.
+        /// </remarks>
+        /// <example>
+        /// * The Script Parameter <c>QuickMedOrder-Dose-VerifyAmount</c> uses the <c>QuickMedOrder</c> module.
+        /// </example>
+        /// <value>Set at runtime</value>
         public string AbatabModule { get; set; }
 
         /// <summary>
-        ///
+        /// The Command component of the Script Parameter.
         /// </summary>
-        /// <value></value>
+        /// <remarks>
+        /// * This is the second component of the <see href="AbatabData.Session.html#AbatabData_Session_ScriptParameter">Script Parameter</see>.
+        /// </remarks>
+        /// <example>
+        /// * The Script Parameter <c>QuickMedOrder-Dose-VerifyAmount</c> contains the <c>Dose</c> command.
+        /// </example>
+        /// <value>Set at runtime</value>
         public string AbatabCommand { get; set; }
 
         /// <summary>
-        ///
+        /// The Action component of the Script Parameter.
         /// </summary>
-        /// <value></value>
+        /// <remarks>
+        /// * This is the third component of the <see href="AbatabData.Session.html#AbatabData_Session_ScriptParameter">Script Parameter</see>.
+        /// </remarks>
+        /// <example>
+        /// * The Script Parameter <c>QuickMedOrder-Dose-VerifyAmount</c> contains the <c>VerifyAmount</c> action.
+        /// </example>
+        /// <value>Set at runtime</value>
         public string AbatabAction { get; set; }
 
         /// <summary>
-        ///
+        /// The (optional) Option component of the Script Parameter.
         /// </summary>
-        /// <value></value>
+        /// <remarks>
+        /// * This is the fourth component of the <see href="AbatabData.Session.html#AbatabData_Session_ScriptParameter">Script Parameter</see>.
+        /// * This is an optional component.
+        /// </remarks>
+        /// <example>
+        /// * The Script Parameter <c>QuickMedOrder-Dose-VerifyAmount-PrintToScreen</c> contains the <c>PrintToScreen</c> action.
+        /// </example>
+        /// <value>Set at runtime</value>
         public string AbatabOption { get; set; }
 
         /// <summary>
-        ///
+        /// The OptionObject that Avatar sends to Abatab.
         /// </summary>
-        /// <value></value>
+        /// <remarks>
+        /// * This OptionObject is not modified by Abatab.
+        /// * More information about the OptionObjects can be found <see href="../man/manGlossary.html#optionobject">here.</see>
+        /// </remarks>
+        /// <value>Set at runtime</value>
         public OptionObject2015 SentOptObj { get; set; }
 
         /// <summary>
-        ///
+        /// The OptionObject that Abatab (potentially) modifies during a session.
         /// </summary>
-        /// <value></value>
+        /// <remarks>
+        /// * This OptionObject starts out as a copy of <c>SentOptObj</c>.
+        /// * This OptionObject is potentially modified by Abatab.
+        /// * More information about the OptionObjects can be found <see href="../man/manGlossary.html#optionobject">here.</see>
+        /// </remarks>
+        /// <value>Set at runtime</value>
 
         public OptionObject2015 WorkOptObj { get; set; }
 
         /// <summary>
-        ///
+        /// The OptionObject that Abatab sends back to Avatar.
         /// </summary>
-        /// <value></value>
+        /// <remarks>
+        /// * This OptionObject is a copy of <c>WorkOptObj</c>.
+        /// * More information about the OptionObjects can be found <see href="../man/manGlossary.html#optionobject">here.</see>
+        /// </remarks>
+        /// <value>Set at runtime</value>
         public OptionObject2015 FinalOptObj { get; set; }
     }
 }

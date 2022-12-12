@@ -108,19 +108,19 @@ references:
   isSpec: "True"
   fullName: AbatabData.Core.Debuggler.DebugEventRoot
   nameWithType: Debuggler.DebugEventRoot
-- uid: AbatabData.Core.Debuggler.Mode
-  name: Mode
-  href: api/AbatabData.Core.Debuggler.html#AbatabData_Core_Debuggler_Mode
-  commentId: P:AbatabData.Core.Debuggler.Mode
-  fullName: AbatabData.Core.Debuggler.Mode
-  nameWithType: Debuggler.Mode
-- uid: AbatabData.Core.Debuggler.Mode*
-  name: Mode
-  href: api/AbatabData.Core.Debuggler.html#AbatabData_Core_Debuggler_Mode_
-  commentId: Overload:AbatabData.Core.Debuggler.Mode
+- uid: AbatabData.Core.Debuggler.DebugMode
+  name: DebugMode
+  href: api/AbatabData.Core.Debuggler.html#AbatabData_Core_Debuggler_DebugMode
+  commentId: P:AbatabData.Core.Debuggler.DebugMode
+  fullName: AbatabData.Core.Debuggler.DebugMode
+  nameWithType: Debuggler.DebugMode
+- uid: AbatabData.Core.Debuggler.DebugMode*
+  name: DebugMode
+  href: api/AbatabData.Core.Debuggler.html#AbatabData_Core_Debuggler_DebugMode_
+  commentId: Overload:AbatabData.Core.Debuggler.DebugMode
   isSpec: "True"
-  fullName: AbatabData.Core.Debuggler.Mode
-  nameWithType: Debuggler.Mode
+  fullName: AbatabData.Core.Debuggler.DebugMode
+  nameWithType: Debuggler.DebugMode
 - uid: AbatabData.Core.Logging
   name: Logging
   href: api/AbatabData.Core.Logging.html
@@ -192,19 +192,19 @@ references:
   isSpec: "True"
   fullName: AbatabData.Core.Logging.EventWarningRoot
   nameWithType: Logging.EventWarningRoot
-- uid: AbatabData.Core.Logging.Mode
-  name: Mode
-  href: api/AbatabData.Core.Logging.html#AbatabData_Core_Logging_Mode
-  commentId: P:AbatabData.Core.Logging.Mode
-  fullName: AbatabData.Core.Logging.Mode
-  nameWithType: Logging.Mode
-- uid: AbatabData.Core.Logging.Mode*
-  name: Mode
-  href: api/AbatabData.Core.Logging.html#AbatabData_Core_Logging_Mode_
-  commentId: Overload:AbatabData.Core.Logging.Mode
+- uid: AbatabData.Core.Logging.LoggingMode
+  name: LoggingMode
+  href: api/AbatabData.Core.Logging.html#AbatabData_Core_Logging_LoggingMode
+  commentId: P:AbatabData.Core.Logging.LoggingMode
+  fullName: AbatabData.Core.Logging.LoggingMode
+  nameWithType: Logging.LoggingMode
+- uid: AbatabData.Core.Logging.LoggingMode*
+  name: LoggingMode
+  href: api/AbatabData.Core.Logging.html#AbatabData_Core_Logging_LoggingMode_
+  commentId: Overload:AbatabData.Core.Logging.LoggingMode
   isSpec: "True"
-  fullName: AbatabData.Core.Logging.Mode
-  nameWithType: Logging.Mode
+  fullName: AbatabData.Core.Logging.LoggingMode
+  nameWithType: Logging.LoggingMode
 - uid: AbatabData.Core.Logging.Root
   name: Root
   href: api/AbatabData.Core.Logging.html#AbatabData_Core_Logging_Root
@@ -764,19 +764,6 @@ references:
   isSpec: "True"
   fullName: AbatabData.Session.AbatabOption
   nameWithType: Session.AbatabOption
-- uid: AbatabData.Session.AbatabRequest
-  name: AbatabRequest
-  href: api/AbatabData.Session.html#AbatabData_Session_AbatabRequest
-  commentId: P:AbatabData.Session.AbatabRequest
-  fullName: AbatabData.Session.AbatabRequest
-  nameWithType: Session.AbatabRequest
-- uid: AbatabData.Session.AbatabRequest*
-  name: AbatabRequest
-  href: api/AbatabData.Session.html#AbatabData_Session_AbatabRequest_
-  commentId: Overload:AbatabData.Session.AbatabRequest
-  isSpec: "True"
-  fullName: AbatabData.Session.AbatabRequest
-  nameWithType: Session.AbatabRequest
 - uid: AbatabData.Session.AbatabRoot
   name: AbatabRoot
   href: api/AbatabData.Session.html#AbatabData_Session_AbatabRoot
@@ -907,6 +894,19 @@ references:
   isSpec: "True"
   fullName: AbatabData.Session.ModTestingConfig
   nameWithType: Session.ModTestingConfig
+- uid: AbatabData.Session.ScriptParameter
+  name: ScriptParameter
+  href: api/AbatabData.Session.html#AbatabData_Session_ScriptParameter
+  commentId: P:AbatabData.Session.ScriptParameter
+  fullName: AbatabData.Session.ScriptParameter
+  nameWithType: Session.ScriptParameter
+- uid: AbatabData.Session.ScriptParameter*
+  name: ScriptParameter
+  href: api/AbatabData.Session.html#AbatabData_Session_ScriptParameter_
+  commentId: Overload:AbatabData.Session.ScriptParameter
+  isSpec: "True"
+  fullName: AbatabData.Session.ScriptParameter
+  nameWithType: Session.ScriptParameter
 - uid: AbatabData.Session.SentOptObj
   name: SentOptObj
   href: api/AbatabData.Session.html#AbatabData_Session_SentOptObj
