@@ -21,7 +21,6 @@
 * **[-]** Experiment with <10ms log file delay
 * **[-]** Better method names so user knows what/where things point from other projects. ex. AbatabOptionObject.FinalObj.Finalize(abatabSession) should be something like "FinalOptObj.Finalize", so we can declare the project in the usings section
 
-
 #### Abatab.Abatab.asmx.cs
 
 * No changes

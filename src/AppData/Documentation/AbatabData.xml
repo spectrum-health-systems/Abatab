@@ -227,17 +227,14 @@
         </member>
         <member name="T:AbatabData.Session">
             <summary>
-              <para>
-                This class defines the properties for the Abatab session, built from the local Web.config file, and at runtime.
-              </para>
-              <para>
-                
-              </para>
+            <para>
+            This class defines the properties for the Abatab session, built from the local Web.config file, and at runtime.
+            </para>
             </summary>
         </member>
         <member name="P:AbatabData.Session.AbatabMode">
             <summary>
-            The default behavior of Abatab. <see href="https://spectrum-health-systems.github.io/Abatab/man/man-configuration-local-settings.html#abatabmode"> [more info]</see>
+            The default behavior of Abatab. <see href="../man/man-Configuration-LocalSettings.index.html#abatabmode"> [more info]</see>
             </summary>
             <value>Default value is <c>enabled</c>.</value>
         </member>
@@ -266,34 +263,34 @@
             <value>Default value is <c>_Abatab</c>.</value>
         </member>
         <member name="P:AbatabData.Session.DebugglerConfig">
-            <summary>
+             <summary>
             
-            </summary>
-            <value></value>
+             </summary>
+             <value></value>
         </member>
         <member name="P:AbatabData.Session.LoggingConfig">
-            <summary>
+             <summary>
             
-            </summary>
-            <value></value>
+             </summary>
+             <value></value>
         </member>
         <member name="P:AbatabData.Session.ModCommonConfig">
-            <summary>
+             <summary>
             
-            </summary>
-            <value></value>
+             </summary>
+             <value></value>
         </member>
         <member name="P:AbatabData.Session.ModPrototypeConfig">
-            <summary>
+             <summary>
             
-            </summary>
-            <value></value>
+             </summary>
+             <value></value>
         </member>
         <member name="P:AbatabData.Session.ModQuickMedOrderConfig">
-            <summary>
+             <summary>
             
-            </summary>
-            <value></value>
+             </summary>
+             <value></value>
         </member>
         <member name="P:AbatabData.Session.ModTestingConfig">
             <summary>
@@ -302,70 +299,70 @@
             <value>See documentation for the <see href="https://spectrum-health-systems.github.io/Abatab/api/AbatabData.Module.Testing.html"> Abatab Testing Module.</see></value>
         </member>
         <member name="P:AbatabData.Session.SessionDateStamp">
-            <summary>
+             <summary>
             
-            </summary>
-            <value></value>
+             </summary>
+             <value></value>
         </member>
         <member name="P:AbatabData.Session.SessionTimeStamp">
-            <summary>
+             <summary>
             
-            </summary>
-            <value></value>
+             </summary>
+             <value></value>
         </member>
         <member name="P:AbatabData.Session.AbatabUserName">
-            <summary>
+             <summary>
             
-            </summary>
-            <value></value>
+             </summary>
+             <value></value>
         </member>
         <member name="P:AbatabData.Session.AbatabRequest">
-            <summary>
+             <summary>
             
-            </summary>
-            <value></value>
+             </summary>
+             <value></value>
         </member>
         <member name="P:AbatabData.Session.AbatabModule">
-            <summary>
+             <summary>
             
-            </summary>
-            <value></value>
+             </summary>
+             <value></value>
         </member>
         <member name="P:AbatabData.Session.AbatabCommand">
-            <summary>
+             <summary>
             
-            </summary>
-            <value></value>
+             </summary>
+             <value></value>
         </member>
         <member name="P:AbatabData.Session.AbatabAction">
-            <summary>
+             <summary>
             
-            </summary>
-            <value></value>
+             </summary>
+             <value></value>
         </member>
         <member name="P:AbatabData.Session.AbatabOption">
-            <summary>
+             <summary>
             
-            </summary>
-            <value></value>
+             </summary>
+             <value></value>
         </member>
         <member name="P:AbatabData.Session.SentOptObj">
-            <summary>
+             <summary>
             
-            </summary>
-            <value></value>
+             </summary>
+             <value></value>
         </member>
         <member name="P:AbatabData.Session.WorkOptObj">
-            <summary>
+             <summary>
             
-            </summary>
-            <value></value>
+             </summary>
+             <value></value>
         </member>
         <member name="P:AbatabData.Session.FinalOptObj">
-            <summary>
+             <summary>
             
-            </summary>
-            <value></value>
+             </summary>
+             <value></value>
         </member>
     </members>
 </doc>

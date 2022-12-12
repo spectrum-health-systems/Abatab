@@ -17,6 +17,6 @@
 * `NEW` Module functionality
 * `NEW` Documentation
 
-Please see the [release notes](./release-notes/22-11-0.html) for more information.
+Please see the [release notes](./ReleaseNotes/23.0.0.html) for more information.
 
 [Logo]: /.github/res/img/logo/RepositoryLogo.png

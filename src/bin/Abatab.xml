@@ -6,17 +6,17 @@
     <members>
         <member name="T:Abatab.Abatab">
             <summary>
-              <para>
-                The main Abatab project, and where the magic starts.
-              </para>
-              <para>
-                Abatab receives two things from Avatar:<br/>
-                1. An <c>OptionObject</c>, which contains all of the information that Abatab needs to do it's ting, and<br/>
-                2. A <c>Script Parameter</c> that tells Abatab what it needs to do with the OptionObject.
-              </para>
-              <para>
-                For more information about OptionObjects and Script Parameters, please see the <see href="../man/index.html">Abatab Manual.</see>
-              </para>
+            <para>
+            The main Abatab project, and where the magic starts.
+            </para>
+            <para>
+            Abatab receives two things from Avatar:<br/>
+            1. An <c>OptionObject</c>, which contains all of the information that Abatab needs to do it's thing, and<br/>
+            2. A <c>Script Parameter</c> that tells Abatab what it needs to do with the OptionObject.
+            </para>
+            <para>
+            For more information about OptionObjects and Script Parameters, please see the <see href="../man/index.html">Abatab Manual.</see>
+            </para>
             </summary>
         </member>
         <member name="M:Abatab.Abatab.GetVersion">
@@ -32,15 +32,14 @@
         </member>
         <member name="M:Abatab.Abatab.RunScript(NTST.ScriptLinkService.Objects.OptionObject2015,System.String)">
             <summary>
-            Executes script parameter request from Avatar, then returns a potentially modified OptionObject to
-            Avatar.
+            Executes script parameter request from Avatar, then returns a potentially modified OptionObject to Avatar.
             </summary>
             <param name="sentOptionObject">The original OptionObject sent from Avatar.</param>
             <param name="scriptParameter">The original Script Parameter request from Avatar.</param>
             <returns>A finalized OptionObject that will be returned to Avatar.</returns>
             <remarks>
             * This method is required by Avatar.
-            * This is the only time a <see href="../man/Logging/man-Logging-Home.html#primeval-debug-log">Primeval debug log</see> is written.
+            * This is the only time a <see href="../man/man-Logging-Home.html#primeval-debug-log">Primeval debug log</see> is written.
             * This method should remain fairly static, since most of the logic is taken care of by external
             projects.
             </remarks>
@@ -75,9 +74,7 @@
         </member>
         <member name="T:Abatab.WebConfig">
             <summary>
-              <para>
-                Abatab stores configuration settings in the local Web.config file. This class loads those settings.
-              </para>
+            Abatab stores configuration settings in the local Web.config file. This class loads those settings.
             </summary>
         </member>
         <member name="M:Abatab.WebConfig.Load">
@@ -87,8 +84,8 @@
             <returns>A dictionary containing the settings from Web.config.</returns>
             <remarks>
             * Whenever a new value is added/removed to Properties/Settings.settings, it needs to be added/removed here as well.
-            * Configuration settings details can be found <see href="../man/Configuration/man-Configuration-LocalSettings.html">here.</see>
-            * Settings are trimmed and converted to lowercase. <see href="../man/SourceCode/man-SourceCode-Home.html#casing-and-trimming">[more info]</see>
+            * Configuration settings details can be found <see href="../man/man-Configuration-LocalSettings.html">here.</see>
+            * Settings are trimmed and converted to lowercase. <see href="../man/man-SourceCode-Home.html#casing-and-trimming">[more info]</see>
             </remarks>
         </member>
     </members>

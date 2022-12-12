@@ -32,9 +32,6 @@
     <Setting Name="AbatabFallbackUserName" Type="System.String" Scope="Application">
       <Value Profile="(Default)">_Abatab</Value>
     </Setting>
-    <Setting Name="ModTestingMode" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">enabled</Value>
-    </Setting>
     <Setting Name="ModQuickMedOrderMode" Type="System.String" Scope="Application">
       <Value Profile="(Default)">enabled</Value>
     </Setting>
@@ -51,6 +48,9 @@
       <Value Profile="(Default)">20</Value>
     </Setting>
     <Setting Name="ModPrototypeMode" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">enabled</Value>
+    </Setting>
+    <Setting Name="ModTestingMode" Type="System.String" Scope="Application">
       <Value Profile="(Default)">enabled</Value>
     </Setting>
   </Settings>
