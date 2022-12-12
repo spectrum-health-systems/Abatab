@@ -8,7 +8,12 @@ using NTST.ScriptLinkService.Objects;
 namespace AbatabData
 {
     /// <summary>
-    /// Defines the properties for the AbatabData.Session object, containing the information/data that Abatab needs to do its job.
+    ///   <para>
+    ///     This class defines the properties for the Abatab session, built from the local Web.config file, and at runtime.
+    ///   </para>
+    ///   <para>
+    ///     
+    ///   </para>
     /// </summary>
     public class Session
     {
