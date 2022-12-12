@@ -1,6 +1,16 @@
-# Abatab Changelog
+<div align="center">
 
-## 23.0.0 (November XX 2022)
+![Logo][Logo]
+
+# CHANGELOG
+
+</div>
+
+# 23.0.X
+
+## 23.0.0 (December 30, 2022)
+
+### Core functionality
 
 * `NEW` Core functionality
 * `NEW` Modules
@@ -8,3 +18,5 @@
 * `NEW` Documentation
 
 Please see the [release notes](./release-notes/22-11-0.html) for more information.
+
+[Logo]: /.github/res/img/logo/RepositoryLogo.png

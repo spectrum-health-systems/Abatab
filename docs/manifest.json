@@ -36,7 +36,7 @@
       "output": {
         ".html": {
           "relative_path": "doc/CHANGELOG.html",
-          "hash": "9lO6biKtV7I4UNZ2tIhr9TiOji3LyHkVTWqIRnWfdDM="
+          "hash": "ipHyD0Ko+l3zDcIA1WGeKCA70KLkzzoRhpIDNZatDxI="
         }
       },
       "is_incremental": false,
@@ -48,7 +48,46 @@
       "output": {
         ".html": {
           "relative_path": "doc/ROADMAP.html",
-          "hash": "VjmjopetS0vHGEgbrZz2noKiw37FvjAQJDT4uwuxEkc="
+          "hash": "QcicD9ZMvrgpBp01ZBMRZNZGn7kH4y/HUl36HupmE5k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../../docs/doc/ReleaseNotes/22-11-0.md",
+      "output": {
+        ".html": {
+          "relative_path": "doc/ReleaseNotes/22-11-0.html",
+          "hash": "ILYa4syBfXzArRj14I57degUQrlIVSFxRagU3Wto21E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../../docs/doc/ReleaseNotes/22-11-1.md",
+      "output": {
+        ".html": {
+          "relative_path": "doc/ReleaseNotes/22-11-1.html",
+          "hash": "02j6mD3ZMXcuFo2ZOW1mx6obWeuMQ+l4sUbUQHk83Q4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "../../docs/doc/ReleaseNotes/22.0.0.md",
+      "output": {
+        ".html": {
+          "relative_path": "doc/ReleaseNotes/22.0.0.html",
+          "hash": "EEJN6dCX5e10yYRHn3dtidnwcuXH24GxvCHkbVQeYM0="
         }
       },
       "is_incremental": false,
@@ -60,31 +99,7 @@
       "output": {
         ".html": {
           "relative_path": "doc/index.html",
-          "hash": "5E/YSIglRMhnz1dZKWvi3X788TYz+uy6v/up0PL0y60="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "../../docs/doc/release-notes/22-11-0.md",
-      "output": {
-        ".html": {
-          "relative_path": "doc/release-notes/22-11-0.html",
-          "hash": "hE7YleKabaqxagaEx+m/d7pYZce5kT6SjGkTpdDI2w0="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "../../docs/doc/release-notes/22-11-1.md",
-      "output": {
-        ".html": {
-          "relative_path": "doc/release-notes/22-11-1.html",
-          "hash": "gNtnN/0J72jFbwp5JFeXghb5PM420qDDXNbx6xaGR0Q="
+          "hash": "ITusBz4lfSFdLKBMdwrT74lKXHRxujAPCB+pmQwaEWY="
         }
       },
       "is_incremental": false,
@@ -96,7 +111,7 @@
       "output": {
         ".html": {
           "relative_path": "doc/toc.html",
-          "hash": "L6GBQmxcSQBK2y5kpe3DlWtC8Ksd3QP7CKHQ0RluA9s="
+          "hash": "+0N7xZImhorqnofeW8+eOjtejexEm/9frrLsNCorL0k="
         }
       },
       "is_incremental": false,
@@ -675,7 +690,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Abatab.Abatab.html",
-          "hash": "eAh5k7RTgC66XwggT/BTrLviqef+QUp4/3Tv5uuCAtE="
+          "hash": "dyMOlqspPF6hazPx/EEnHVKpaWM86XWVyc/cMk11EMs="
         }
       },
       "is_incremental": false,
@@ -687,7 +702,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Abatab.Roundhouse.html",
-          "hash": "fs6SB63dX8YFgr+sCZXQv+pqZ1PiJtWlDkrGc0BHBaY="
+          "hash": "Zs/926Pg8GrZLR2FXRCKcr+Pk2N30bSAkutZ/WDHeS8="
         }
       },
       "is_incremental": false,
@@ -714,7 +729,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Abatab.html",
-          "hash": "KzLhMMv81/36XepicSz+8Tetrl+xlk+llZsYFPh9jHc="
+          "hash": "SJOZafuU7iC4mBq7W95lK1M3+TXOP5TPC+lSelPkO1I="
         }
       },
       "is_incremental": false,
@@ -1335,7 +1350,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 27,
+          "total_file_count": 28,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {

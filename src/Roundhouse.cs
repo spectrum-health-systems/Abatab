@@ -1,7 +1,7 @@
 ﻿// Abatab 23.0.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221209.0649
+// b221212.0810
 
 using AbatabData;
 using AbatabLogging;
@@ -10,12 +10,19 @@ using System.Reflection;
 namespace Abatab
 {
     /// <summary>
-    /// Determines what should be done with the Module component of the Script Parameter sent from Avatar.
+    ///   <para>
+    ///     Roundhouse classes determine what should be done with the Script Parameter sent from Avatar. This
+    ///     particular Roundhouse class determines what should be done with the Module component.
+    ///   </para>
+    ///   <para>
+    ///     For example, <c>QuickMedOrder-Dose-VerifyAmount</c> would be sent to the Roundhouse class of the
+    ///     ModQuickMedOrder module, where it would be processed further.
+    ///   </para>
     /// </summary>
     public static class Roundhouse
     {
         /// <summary>
-        /// Determines which Abatab Module should get the Command/Action/Option components of the Script Parameter sent from Avatar.
+        /// Determines which Abatab Module should get the Command-Action-Option components of the Script Parameter sent from Avatar.
         /// </summary>
         /// <param name="abatabSession">Settings and data for this session of Abatab.</param>
         /// <remarks>

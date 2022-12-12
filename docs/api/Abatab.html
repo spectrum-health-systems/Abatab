@@ -78,10 +78,29 @@
     <h3 id="classes">Classes
   </h3>
       <h4><a class="xref" href="Abatab.Abatab.html">Abatab</a></h4>
-      <section><p>The main Abatab project, and where the magic starts.</p>
+      <section><p>
+  The main Abatab project, and where the magic starts.
+</p>
+<p>
+  Abatab receives two things from Avatar:
+<br>
+1. An <code>OptionObject</code>, which contains all of the information that Abatab needs to do it&apos;s thing, and
+<br>
+2. A <code>Script Parameter</code> that tells Abatab what it needs to do with the OptionObject.
+</p>
+<p>
+  For more information on sending the OptionObject and Script Parameter to Abatab, please see the <a href="../man/index.html">Abatab Manual.</a>
+</p>
 </section>
       <h4><a class="xref" href="Abatab.Roundhouse.html">Roundhouse</a></h4>
-      <section><p>Determines what should be done with the Module component of the Script Parameter sent from Avatar.</p>
+      <section><p>
+  Roundhouse classes determine what should be done with the Script Parameter sent from Avatar. This
+  particular Roundhouse class determines what should be done with the Module component.
+</p>
+<p>
+  For example, <code>QuickMedOrder-Dose-VerifyAmount</code> would be sent to the Roundhouse class of the
+  ModQuickMedOrder module, where it would be processed further.
+</p>
 </section>
       <h4><a class="xref" href="Abatab.WebConfig.html">WebConfig</a></h4>
       <section><p>Logic for working with the local Web.config file, which contains local settings for an Abatab session.</p>

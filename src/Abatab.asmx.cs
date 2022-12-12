@@ -15,7 +15,19 @@ using System.Web.Services;
 namespace Abatab
 {
     /// <summary>
-    /// The main Abatab project, and where the magic starts.
+    ///   <para>
+    ///     The main Abatab project, and where the magic starts.
+    ///   </para>
+    ///   <para>
+    ///     Abatab receives two things from Avatar:
+    ///     <br/>
+    ///     1. An <c>OptionObject</c>, which contains all of the information that Abatab needs to do it's thing, and
+    ///     <br/>
+    ///     2. A <c>Script Parameter</c> that tells Abatab what it needs to do with the OptionObject.
+    ///   </para>
+    ///   <para>
+    ///     For more information on sending the OptionObject and Script Parameter to Abatab, please see the <see href="../man/index.html">Abatab Manual.</see>
+    ///   </para>
     /// </summary>
     [WebService(Namespace = "http://tempuri.org/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]

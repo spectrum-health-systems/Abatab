@@ -6,7 +6,19 @@
     <members>
         <member name="T:Abatab.Abatab">
             <summary>
-            The main Abatab project, and where the magic starts.
+              <para>
+                The main Abatab project, and where the magic starts.
+              </para>
+              <para>
+                Abatab receives two things from Avatar:
+                <br/>
+                1. An <c>OptionObject</c>, which contains all of the information that Abatab needs to do it's thing, and
+                <br/>
+                2. A <c>Script Parameter</c> that tells Abatab what it needs to do with the OptionObject.
+              </para>
+              <para>
+                For more information on sending the OptionObject and Script Parameter to Abatab, please see the <see href="../man/index.html">Abatab Manual.</see>
+              </para>
             </summary>
         </member>
         <member name="M:Abatab.Abatab.GetVersion">
@@ -34,12 +46,19 @@
         </member>
         <member name="T:Abatab.Roundhouse">
             <summary>
-            Determines what should be done with the Module component of the Script Parameter sent from Avatar.
+              <para>
+                Roundhouse classes determine what should be done with the Script Parameter sent from Avatar. This
+                particular Roundhouse class determines what should be done with the Module component.
+              </para>
+              <para>
+                For example, <c>QuickMedOrder-Dose-VerifyAmount</c> would be sent to the Roundhouse class of the
+                ModQuickMedOrder module, where it would be processed further.
+              </para>
             </summary>
         </member>
         <member name="M:Abatab.Roundhouse.ParseRequest(AbatabData.Session)">
             <summary>
-            Determines which Abatab Module should get the Command/Action/Option components of the Script Parameter sent from Avatar.
+            Determines which Abatab Module should get the Command-Action-Option components of the Script Parameter sent from Avatar.
             </summary>
             <param name="abatabSession">Settings and data for this session of Abatab.</param>
             <remarks>
@@ -55,7 +74,9 @@
         </member>
         <member name="T:Abatab.WebConfig">
             <summary>
-            Logic for working with the local Web.config file, which contains local settings for an Abatab session.
+              <para>
+                Abatab stores configuration settings in the local Web.config file. This class loads those settings.
+              </para>
             </summary>
         </member>
         <member name="M:Abatab.WebConfig.Load">
