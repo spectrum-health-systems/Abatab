@@ -22,12 +22,13 @@ namespace Abatab
     ///     Abatab receives two things from Avatar:
     ///     <br/>
     ///     1. An <c>OptionObject</c>, which contains all of the information that Abatab needs to do it's
-    ///        thing, aind
+    ///        thing, and
     ///     <br/>
     ///     2. A <c>Script Parameter</c> that tells Abatab what it needs to do with the OptionObject.
     ///   </para>
     ///   <para>
-    ///     For more information on sending the OptionObject and Script Parameter to Abatab, please see the <see href="../man/index.html">Abatab Manual.</see>
+    ///     For more information on sending the OptionObject and Script Parameter to Abatab, please see the
+    ///     <see href="../man/index.html">Abatab Manual.</see>
     ///   </para>
     /// </summary>
     [WebService(Namespace = "http://tempuri.org/")]
@@ -41,7 +42,8 @@ namespace Abatab
         /// <returns>The current version of Abatab.</returns>
         /// <remarks>
         /// * This method is required by Avatar.
-        /// * The version number is always the version that is in development. For example, while developing v1.0, this will return <c>1.0</c>.
+        /// * The version number is always the version that is in development. For example, while developing
+        ///   v1.0, this will return <c>1.0</c>.
         /// </remarks>
         [WebMethod]
         public string GetVersion()
@@ -50,7 +52,8 @@ namespace Abatab
         }
 
         /// <summary>
-        /// Executes script parameter request from Avatar, then returns a potentially modified OptionObject to Avatar.
+        /// Executes script parameter request from Avatar, then returns a potentially modified OptionObject to
+        /// Avatar.
         /// </summary>
         /// <param name="sentOptionObject">The original OptionObject sent from Avatar.</param>
         /// <param name="scriptParameter">The original Script Parameter request from Avatar.</param>
@@ -58,7 +61,8 @@ namespace Abatab
         /// <remarks>
         /// * This method is required by Avatar.
         /// * This is the only time a <see href="../man/Logging/man-Logging-Home.html#primeval-debug-log">Primeval debug log</see> is written.
-        /// * This method should remain fairly static, since most of the logic is taken care of by external projects.
+        /// * This method should remain fairly static, since most of the logic is taken care of by external
+        /// projects.
         /// </remarks>
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string scriptParameter)
