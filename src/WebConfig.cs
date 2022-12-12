@@ -11,7 +11,9 @@ using System.Reflection;
 namespace Abatab
 {
     /// <summary>
-    /// Logic for working with the local Web.config file, which contains local settings for an Abatab session.
+    ///   <para>
+    ///     Abatab stores configuration settings in the local Web.config file. This class loads those settings.
+    ///   </para>
     /// </summary>
     public static class WebConfig
     {
