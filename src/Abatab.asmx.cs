@@ -19,10 +19,8 @@ namespace Abatab
     ///     The main Abatab project, and where the magic starts.
     ///   </para>
     ///   <para>
-    ///     Abatab receives two things from Avatar:
-    ///     <br/>
-    ///     1. An <c>OptionObject</c>, which contains all of the information that Abatab needs to do it's thing, and
-    ///     <br/>
+    ///     Abatab receives two things from Avatar:<br/>
+    ///     1. An <c>OptionObject</c>, which contains all of the information that Abatab needs to do it's ting, and<br/>
     ///     2. A <c>Script Parameter</c> that tells Abatab what it needs to do with the OptionObject.
     ///   </para>
     ///   <para>
