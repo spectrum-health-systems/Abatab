@@ -1,16 +1,27 @@
 ﻿// AbatabData 23.0.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221212.0810
+// b221214.0804
 
 using NTST.ScriptLinkService.Objects;
 
 namespace AbatabData
 {
     /// <summary>
-    /// <para>
-    /// Defines properties for an Abatab session.
+    /// Contains Abatab session properties.
     /// </summary>
+    /// <remarks>
+    /// <para>
+    /// Contains properties for the following:
+    /// <list type="bullet">
+    /// <item><term>Standard session properties</term></item>
+    /// <item><term>Debugging functionality</term></item>
+    /// <item><term>Logging functionality</term></item>
+    /// <item><term>OptionObjects</term></item>
+    /// <item><term>Modules</term></item>
+    /// </list>
+    /// /para>
+    /// </remarks>
     public class Session
     {
         /// <summary>

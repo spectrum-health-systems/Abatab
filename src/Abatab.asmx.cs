@@ -1,7 +1,7 @@
 ﻿// Abatab 23.0.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221212.0810
+// b221214.0804
 
 using Abatab.Properties;
 using AbatabData;
@@ -18,15 +18,11 @@ namespace Abatab
     /// The entry point for Abatab.
     /// </summary>
     /// <remarks>
-    /// <para>
     /// Abatab receives two things from Avatar:
-    /// <br/>
-    /// 1. An <c>OptionObject</c>, which contains all of the information that Abatab needs to do it's thing<br/>
-    /// 2. A <c>Script Parameter</c> that tells Abatab what it needs to do with the OptionObject.
-    /// </para>
-    /// <para>
-    /// For more information about <see href="../man/manGlossary.html#optionobject">OptionObjects</see> and <see href="../man/manGlossary.html#script-paramater">Script Parameters</see>, please see the <see href="../man/index.html">Abatab Manual.</see>
-    /// </para>
+    /// <list type="number">
+    /// <item>An <see href="../man/manGlossary.html#optionobject">OptionObject</see>, which contains all of the information that Abatab needs to do it's thing</item>
+    /// <item>A <see href="../man/manGlossary.html#script-paramater">Script Parameter</see> that tells Abatab what it needs to do with the OptionObject.</item>
+    /// </list>
     /// </remarks>
     [WebService(Namespace = "http://tempuri.org/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
@@ -38,9 +34,10 @@ namespace Abatab
         /// </summary>
         /// <returns>The current version of Abatab.</returns>
         /// <remarks>
-        /// * This method is required by Avatar.
-        /// * The version number is always the version that is in development. For example, while developing
-        ///   v1.0, this will return <c>1.0</c>.
+        /// <list type="bullet">
+        /// <item>This method is required by Avatar.</item>
+        /// <item>The version number is always the version that is in development.</item>
+        /// </list>
         /// </remarks>
         [WebMethod]
         public string GetVersion()
@@ -55,8 +52,10 @@ namespace Abatab
         /// <param name="scriptParameter">The original Script Parameter request from Avatar.</param>
         /// <returns>A finalized OptionObject that will be returned to Avatar.</returns>
         /// <remarks>
-        /// * This method is required by Avatar.
-        /// * This is the only time a <see href="../man/manGlossary.html#primeval-debug-log">Primeval debug log</see> is written.
+        /// <list type="bullet">
+        /// <item>This method is required by Avatar.</item>
+        /// <item>This is the only time a <see href="../man/manGlossary.html#logging">Primeval debug log</see> is written.</item>
+        /// </list>
         /// </remarks>
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string scriptParameter)

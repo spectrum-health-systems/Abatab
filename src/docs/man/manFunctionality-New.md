@@ -35,6 +35,13 @@ Rename "Class1.cs" to "Roundhouse.cs"
 
 ## Adding logic to Abatab.Roundhouse.cs
 
+```csharp
+case "%newmodule-name%":
+    LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+    ModNewModule.Roundhouse.ParseRequest(abatabSession);
+    break;
+```
+
 <!-- Reference Links -->
 
 [AbatabUrl]: https://github.com/spectrum-health-systems/Abatab

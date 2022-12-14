@@ -1,4 +1,8 @@
-﻿using System;
+﻿/* This is a temporary class that I'm using to test/experiment with XML
+ * comments, and how they interact with DocFX.
+ */
+
+using System;
 
 namespace AbatabData
 {

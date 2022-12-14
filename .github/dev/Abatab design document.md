@@ -41,5 +41,3 @@ Abatab is designed with the following in mind:
 The Abatab Manual is updated with each Abatab release.
 
 You can find the manual framework in src/docs/main/toc.md
-
-[Logo]: /.github/res/img/logo/RepositoryLogo.png

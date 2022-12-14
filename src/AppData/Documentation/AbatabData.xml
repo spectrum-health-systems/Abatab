@@ -159,7 +159,7 @@
              </summary>
              <remarks>
              You can expand on that one sentence summary to
-             provide more information for readers. In this case, 
+             provide more information for readers. In this case,
              the <c>ExampleClass</c> provides different C#
              elements to show how you would add documentation
             comments for most elements in a typical class.
@@ -230,24 +230,20 @@
              also use the "bullet" or "number" style. Neither
              would typically use the "term" element.
              <br/>
-             Note: paragraphs are double spaced. Use the *br* 
+             Note: paragraphs are double spaced. Use the *br*
              tag for single spaced lines.
              </para>
              </remarks>
         </member>
         <member name="P:AbatabData.DocEx.ExampleClass.Label">
-            <value>
-            The <c>Label</c> property represents a label
-            for this instance.
-            </value>
-            <remarks>
-            The <see cref="P:AbatabData.DocEx.ExampleClass.Label"/> is a <see langword="string"/>
-            that you use for a label.
-            <para>
-            Note that there isn't a way to provide a "cref" to
-            each accessor, only to the property itself.
-            </para>
-            </remarks>
+            <summary>ser</summary>
+             <see cref="!:label"/>
+            <!-- or -->
+            <see cref="!:member">Link text</see>
+            <!-- or -->
+            <see href="link">Link Text</see>
+            <!-- or -->
+            <see langword="keyword"/>
         </member>
         <member name="M:AbatabData.DocEx.ExampleClass.Add(System.Int32,System.Int32)">
             <summary>

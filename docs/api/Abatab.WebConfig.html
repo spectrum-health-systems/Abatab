@@ -73,7 +73,7 @@
   
   <h1 id="Abatab_WebConfig" data-uid="Abatab.WebConfig" class="text-break">Class WebConfig
   </h1>
-  <div class="markdown level0 summary"><p>Abatab stores configuration settings in the local Web.config file. This class loads those settings.</p>
+  <div class="markdown level0 summary"><p>Loads settings from the <a href="../man/manGlossary.html#configuration">Web.config.</a> file.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -117,7 +117,7 @@
   
   <a id="Abatab_WebConfig_Load_" data-uid="Abatab.WebConfig.Load*"></a>
   <h4 id="Abatab_WebConfig_Load" data-uid="Abatab.WebConfig.Load">Load()</h4>
-  <div class="markdown level1 summary"><p>Load the settings from the local Web.config file.</p>
+  <div class="markdown level1 summary"><p>Load the settings from the Web.config file.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -141,11 +141,7 @@
     </tbody>
   </table>
   <h5 id="Abatab_WebConfig_Load_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><ul>
-<li>These <a href="../man/manGlossary.html#configuration-settings">configuration setting.</a> are setup in <code>src/Properties/Settings.settings</code>, and modified in the <a href="../man/manGlossary.html#webconfig">Web.config.</a> file.</li>
-<li>Whenever a new value is added/removed to <code>src/Properties/Settings.settings</code>, it needs to be added/removed here as well.</li>
-<li>Settings are trimmed and converted to lowercase. <a href="../man/manSourceCode.html#casing-and-trimming">[more info]</a></li>
-</ul>
+  <div class="markdown level1 remarks"><ul><li>These <a href="../man/manGlossary.html#configuration">configuration setting.</a> are setup in <code>src/Properties/Settings.settings</code>, and modified in the <a href="../man/manGlossary.html#webconfig">Web.config.</a> file.</li><li>Whenever a new value is added/removed to <code>src/Properties/Settings.settings</code>, it needs to be added/removed here as well.</li><li>Settings are <a href="../man/manSourceCode.html#casing-and-trimming">trimmed and converted to lowercase</a>.</li></ul>
 </div>
 </article>
           </div>

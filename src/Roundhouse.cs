@@ -1,7 +1,7 @@
 ﻿// Abatab 23.0.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221212.0810
+// b221214.0804
 
 using AbatabData;
 using AbatabLogging;
@@ -10,32 +10,19 @@ using System.Reflection;
 namespace Abatab
 {
     /// <summary>
-    ///   <para>
-    ///     Roundhouse classes determine what should be done with the Script Parameter sent from Avatar. This
-    ///     particular Roundhouse class determines what should be done with the Module component.
-    ///   </para>
-    ///   <para>
-    ///     For example, <c>QuickMedOrder-Dose-VerifyAmount</c> would be sent to the Roundhouse class of the
-    ///     ModQuickMedOrder module, where it would be processed further.
-    ///   </para>
+    /// Determines what should be done with the <b>module</b> component of the <see href="../man/manGlossary.html#script-parameter">Script Parameter</see>.
     /// </summary>
     public static class Roundhouse
     {
         /// <summary>
-        /// Determines which Abatab Module should get the Command-Action-Option components of the Script Parameter sent from Avatar.
+        /// Parses the Script Parameter and sends valid requests to the proper destination.
         /// </summary>
         /// <param name="abatabSession">Settings and data for this session of Abatab.</param>
         /// <remarks>
-        /// * The only component of the Script Parameter sent from Avatar that matters at this point is the AbatabMethod component.
-        /// * Whenever a new Abatab Module is added, logic will need to be added to the switch statement using the following template:
-        /// <example>
-        /// <code>
-        /// case "%newmodule-name%":
-        ///     LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
-        ///     ModNewModule.Roundhouse.ParseRequest(abatabSession);
-        ///     break;
-        /// </code>
-        /// </example>
+        /// <list type="bullet">
+        /// <item>Only parses the <b>module</b> component of the <see href="../man/manGlossary.html#script-parameter">Script Parameter</see>.</item>
+        /// <item>Whenever a new Abatab Module is added, <see href="../man/manGlossary.html#script-parameter">the necessary logic</see> will need to be added here.</item>
+        /// </list>
         /// </remarks>
         public static void ParseRequest(Session abatabSession)
         {
@@ -44,11 +31,6 @@ namespace Abatab
 
             switch (abatabSession.AbatabModule)
             {
-                //case "progressnote":
-                //    LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
-                //    ModProgressNote.Roundhouse.ParseRequest(abatabSession);
-                //    break;
-
                 case "prototype":
                     LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
                     ModPrototype.Roundhouse.ParseRequest(abatabSession);

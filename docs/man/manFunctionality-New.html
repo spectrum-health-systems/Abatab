@@ -102,7 +102,11 @@ You may want to create a new module<p>
 <h2 id="create-roundhousecs">Create Roundhouse.cs</h2>
 <p>Rename &quot;Class1.cs&quot; to &quot;Roundhouse.cs&quot;</p>
 <h2 id="adding-logic-to-abatabroundhousecs">Adding logic to Abatab.Roundhouse.cs</h2>
-<!-- Reference Links -->
+<pre><code class="lang-csharp">case &quot;%newmodule-name%&quot;:
+    LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, &quot;[TRACE]&quot;);
+    ModNewModule.Roundhouse.ParseRequest(abatabSession);
+    break;
+</code></pre><!-- Reference Links -->
 </article>
           </div>
           

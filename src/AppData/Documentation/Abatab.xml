@@ -9,15 +9,11 @@
             The entry point for Abatab.
             </summary>
             <remarks>
-            <para>
             Abatab receives two things from Avatar:
-            <br/>
-            1. An <c>OptionObject</c>, which contains all of the information that Abatab needs to do it's thing<br/>
-            2. A <c>Script Parameter</c> that tells Abatab what it needs to do with the OptionObject.
-            </para>
-            <para>
-            For more information about <see href="../man/manGlossary.html#optionobject">OptionObjects</see> and <see href="../man/manGlossary.html#script-paramater">Script Parameters</see>, please see the <see href="../man/index.html">Abatab Manual.</see>
-            </para>
+            <list type="number">
+            <item>An <see href="../man/manGlossary.html#optionobject">OptionObject</see>, which contains all of the information that Abatab needs to do it's thing</item>
+            <item>A <see href="../man/manGlossary.html#script-paramater">Script Parameter</see> that tells Abatab what it needs to do with the OptionObject.</item>
+            </list>
             </remarks>
         </member>
         <member name="M:Abatab.Abatab.GetVersion">
@@ -26,9 +22,10 @@
             </summary>
             <returns>The current version of Abatab.</returns>
             <remarks>
-            * This method is required by Avatar.
-            * The version number is always the version that is in development. For example, while developing
-              v1.0, this will return <c>1.0</c>.
+            <list type="bullet">
+            <item>This method is required by Avatar.</item>
+            <item>The version number is always the version that is in development.</item>
+            </list>
             </remarks>
         </member>
         <member name="M:Abatab.Abatab.RunScript(NTST.ScriptLinkService.Objects.OptionObject2015,System.String)">
@@ -39,54 +36,45 @@
             <param name="scriptParameter">The original Script Parameter request from Avatar.</param>
             <returns>A finalized OptionObject that will be returned to Avatar.</returns>
             <remarks>
-            * This method is required by Avatar.
-            * This is the only time a <see href="../man/manGlossary.html#primeval-debug-log">Primeval debug log</see> is written.
+            <list type="bullet">
+            <item>This method is required by Avatar.</item>
+            <item>This is the only time a <see href="../man/manGlossary.html#logging">Primeval debug log</see> is written.</item>
+            </list>
             </remarks>
         </member>
         <member name="T:Abatab.Roundhouse">
             <summary>
-              <para>
-                Roundhouse classes determine what should be done with the Script Parameter sent from Avatar. This
-                particular Roundhouse class determines what should be done with the Module component.
-              </para>
-              <para>
-                For example, <c>QuickMedOrder-Dose-VerifyAmount</c> would be sent to the Roundhouse class of the
-                ModQuickMedOrder module, where it would be processed further.
-              </para>
+            Determines what should be done with the <b>module</b> component of the <see href="../man/manGlossary.html#script-parameter">Script Parameter</see>.
             </summary>
         </member>
         <member name="M:Abatab.Roundhouse.ParseRequest(AbatabData.Session)">
             <summary>
-            Determines which Abatab Module should get the Command-Action-Option components of the Script Parameter sent from Avatar.
+            Parses the Script Parameter and sends valid requests to the proper destination.
             </summary>
             <param name="abatabSession">Settings and data for this session of Abatab.</param>
             <remarks>
-            * The only component of the Script Parameter sent from Avatar that matters at this point is the AbatabMethod component.
-            * Whenever a new Abatab Module is added, logic will need to be added to the switch statement using the following template:
-            <example>
-            <code>
-            case "%newmodule-name%":
-                LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
-                ModNewModule.Roundhouse.ParseRequest(abatabSession);
-                break;
-            </code>
-            </example>
+            <list type="bullet">
+            <item>Only parses the <b>module</b> component of the <see href="../man/manGlossary.html#script-parameter">Script Parameter</see>.</item>
+            <item>Whenever a new Abatab Module is added, <see href="../man/manGlossary.html#script-parameter">the necessary logic</see> will need to be added here.</item>
+            </list>
             </remarks>
         </member>
         <member name="T:Abatab.WebConfig">
             <summary>
-            Abatab stores configuration settings in the local Web.config file. This class loads those settings.
+            Loads settings from the <see href="../man/manGlossary.html#configuration">Web.config.</see> file.
             </summary>
         </member>
         <member name="M:Abatab.WebConfig.Load">
             <summary>
-            Load the settings from the local Web.config file.
+            Load the settings from the Web.config file.
             </summary>
             <returns>A dictionary containing the settings from Web.config.</returns>
             <remarks>
-            * These <see href="../man/manGlossary.html#configuration-settings">configuration setting.</see> are setup in <c>src/Properties/Settings.settings</c>, and modified in the <see href="../man/manGlossary.html#webconfig">Web.config.</see> file.
-            * Whenever a new value is added/removed to <c>src/Properties/Settings.settings</c>, it needs to be added/removed here as well.
-            * Settings are trimmed and converted to lowercase. <see href="../man/manSourceCode.html#casing-and-trimming">[more info]</see>
+            <list type="bullet">
+            <item>These <see href="../man/manGlossary.html#configuration">configuration setting.</see> are setup in <c>src/Properties/Settings.settings</c>, and modified in the <see href="../man/manGlossary.html#webconfig">Web.config.</see> file.</item>
+            <item>Whenever a new value is added/removed to <c>src/Properties/Settings.settings</c>, it needs to be added/removed here as well.</item>
+            <item>Settings are <see href="../man/manSourceCode.html#casing-and-trimming">trimmed and converted to lowercase</see>.</item>
+            </list>
             </remarks>
         </member>
     </members>

@@ -1,4 +1,8 @@
-﻿using System;
+﻿/* This is a temporary class that I'm using to test/experiment with XML
+ * comments, and how they interact with DocFX.
+ */
+
+using System;
 
 namespace AbatabData
 {
@@ -11,7 +15,7 @@ namespace AbatabData
         /// </summary>
         /// <remarks>
         /// You can expand on that one sentence summary to
-        /// provide more information for readers. In this case, 
+        /// provide more information for readers. In this case,
         /// the <c>ExampleClass</c> provides different C#
         /// elements to show how you would add documentation
         ///comments for most elements in a typical class.
@@ -82,24 +86,21 @@ namespace AbatabData
         /// also use the "bullet" or "number" style. Neither
         /// would typically use the "term" element.
         /// <br/>
-        /// Note: paragraphs are double spaced. Use the *br* 
+        /// Note: paragraphs are double spaced. Use the *br*
         /// tag for single spaced lines.
         /// </para>
         /// </remarks>
         public class ExampleClass
         {
-            /// <value>
-            /// The <c>Label</c> property represents a label
-            /// for this instance.
-            /// </value>
-            /// <remarks>
-            /// The <see cref="Label"/> is a <see langword="string"/>
-            /// that you use for a label.
-            /// <para>
-            /// Note that there isn't a way to provide a "cref" to
-            /// each accessor, only to the property itself.
-            /// </para>
-            /// </remarks>
+            ///<summary>ser</summary>
+            /// <see cref="label"/>
+            ///<!-- or -->
+            ///<see cref="member">Link text</see>
+            ///<!-- or -->
+            ///<see href="link">Link Text</see>
+            ///<!-- or -->
+            ///<see langword="keyword"/>
+
             public string Label
             {
                 get;

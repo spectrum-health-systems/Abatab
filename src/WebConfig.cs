@@ -1,7 +1,7 @@
 ﻿// Abatab 23.0.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221212.0810
+// b221214.0804
 
 using Abatab.Properties;
 using AbatabLogging;
@@ -11,18 +11,20 @@ using System.Reflection;
 namespace Abatab
 {
     /// <summary>
-    /// Abatab stores configuration settings in the local Web.config file. This class loads those settings.
+    /// Loads settings from the <see href="../man/manGlossary.html#configuration">Web.config.</see> file.
     /// </summary>
     public static class WebConfig
     {
         /// <summary>
-        /// Load the settings from the local Web.config file.
+        /// Load the settings from the Web.config file.
         /// </summary>
         /// <returns>A dictionary containing the settings from Web.config.</returns>
         /// <remarks>
-        /// * These <see href="../man/manGlossary.html#configuration-settings">configuration setting.</see> are setup in <c>src/Properties/Settings.settings</c>, and modified in the <see href="../man/manGlossary.html#webconfig">Web.config.</see> file.
-        /// * Whenever a new value is added/removed to <c>src/Properties/Settings.settings</c>, it needs to be added/removed here as well.
-        /// * Settings are trimmed and converted to lowercase. <see href="../man/manSourceCode.html#casing-and-trimming">[more info]</see>
+        /// <list type="bullet">
+        /// <item>These <see href="../man/manGlossary.html#configuration">configuration setting.</see> are setup in <c>src/Properties/Settings.settings</c>, and modified in the <see href="../man/manGlossary.html#webconfig">Web.config.</see> file.</item>
+        /// <item>Whenever a new value is added/removed to <c>src/Properties/Settings.settings</c>, it needs to be added/removed here as well.</item>
+        /// <item>Settings are <see href="../man/manSourceCode.html#casing-and-trimming">trimmed and converted to lowercase</see>.</item>
+        /// </list>
         /// </remarks>
         public static Dictionary<string, string> Load()
         {

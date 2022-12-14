@@ -73,14 +73,7 @@
   
   <h1 id="Abatab_Roundhouse" data-uid="Abatab.Roundhouse" class="text-break">Class Roundhouse
   </h1>
-  <div class="markdown level0 summary"><p>
-  Roundhouse classes determine what should be done with the Script Parameter sent from Avatar. This
-  particular Roundhouse class determines what should be done with the Module component.
-</p>
-<p>
-  For example, <code>QuickMedOrder-Dose-VerifyAmount</code> would be sent to the Roundhouse class of the
-  ModQuickMedOrder module, where it would be processed further.
-</p>
+  <div class="markdown level0 summary"><p>Determines what should be done with the <strong>module</strong> component of the <a href="../man/manGlossary.html#script-parameter">Script Parameter</a>.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -124,7 +117,7 @@
   
   <a id="Abatab_Roundhouse_ParseRequest_" data-uid="Abatab.Roundhouse.ParseRequest*"></a>
   <h4 id="Abatab_Roundhouse_ParseRequest_AbatabData_Session_" data-uid="Abatab.Roundhouse.ParseRequest(AbatabData.Session)">ParseRequest(Session)</h4>
-  <div class="markdown level1 summary"><p>Determines which Abatab Module should get the Command-Action-Option components of the Script Parameter sent from Avatar.</p>
+  <div class="markdown level1 summary"><p>Parses the Script Parameter and sends valid requests to the proper destination.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -150,16 +143,7 @@
     </tbody>
   </table>
   <h5 id="Abatab_Roundhouse_ParseRequest_AbatabData_Session__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><ul>
-<li>The only component of the Script Parameter sent from Avatar that matters at this point is the AbatabMethod component.</li>
-<li>Whenever a new Abatab Module is added, logic will need to be added to the switch statement using the following template:
-<example>
-<pre><code>case &quot;%newmodule-name%&quot;:
-  LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, &quot;[TRACE]&quot;);
-  ModNewModule.Roundhouse.ParseRequest(abatabSession);
-  break;</code></pre>
-</example></li>
-</ul>
+  <div class="markdown level1 remarks"><ul><li>Only parses the <strong>module</strong> component of the <a href="../man/manGlossary.html#script-parameter">Script Parameter</a>.</li><li>Whenever a new Abatab Module is added, <a href="../man/manGlossary.html#script-parameter">the necessary logic</a> will need to be added here.</li></ul>
 </div>
 </article>
           </div>
