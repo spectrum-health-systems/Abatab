@@ -10,7 +10,7 @@ using System.Reflection;
 namespace Abatab
 {
     /// <summary>
-    /// Determines what should be done with the <b>module</b> component of the <see href="../man/manGlossary.html#script-parameter">Script Parameter</see>.
+    /// Determines what should be done with the <b>module</b> component of the <see href="../man/manAppendix.html#script-parameter">Script Parameter</see>.
     /// </summary>
     public static class Roundhouse
     {
@@ -20,8 +20,8 @@ namespace Abatab
         /// <param name="abatabSession">Settings and data for this session of Abatab.</param>
         /// <remarks>
         /// <list type="bullet">
-        /// <item>Only parses the <b>module</b> component of the <see href="../man/manGlossary.html#script-parameter">Script Parameter</see>.</item>
-        /// <item>Whenever a new Abatab Module is added, <see href="../man/manGlossary.html#script-parameter">the necessary logic</see> will need to be added here.</item>
+        /// <item>Only parses the <b>module</b> component of the <see href="../man/manAppendix.html#script-parameter">Script Parameter</see>.</item>
+        /// <item>Whenever a new Abatab Module is added, <see href="../man/manAppendix.html#script-parameter">the necessary logic</see> will need to be added here.</item>
         /// </list>
         /// </remarks>
         public static void ParseRequest(Session abatabSession)

@@ -182,7 +182,7 @@ namespace AbatabData
         /// </summary>
         /// <remarks>
         /// * Script Parameter syntax is <c>MODULE-COMMAND-ACTION[-OPTION]</c>
-        /// * More information about the Script Parameter can be found <see href="../man/manGlossary.html#script-parameter">here.</see>
+        /// * More information about the Script Parameter can be found <see href="../man/manAppendix.html#script-parameter">here.</see>
         /// </remarks>
         /// <example>
         /// <code>
@@ -246,7 +246,7 @@ namespace AbatabData
         /// </summary>
         /// <remarks>
         /// * This OptionObject is not modified by Abatab.
-        /// * More information about the OptionObjects can be found <see href="../man/manGlossary.html#optionobject">here.</see>
+        /// * More information about the OptionObjects can be found <see href="../man/manAppendix.html#optionobject">here.</see>
         /// </remarks>
         /// <value>Set at runtime</value>
         public OptionObject2015 SentOptObj { get; set; }
@@ -257,7 +257,7 @@ namespace AbatabData
         /// <remarks>
         /// * This OptionObject starts out as a copy of <c>SentOptObj</c>.
         /// * This OptionObject is potentially modified by Abatab.
-        /// * More information about the OptionObjects can be found <see href="../man/manGlossary.html#optionobject">here.</see>
+        /// * More information about the OptionObjects can be found <see href="../man/manAppendix.html#optionobject">here.</see>
         /// </remarks>
         /// <value>Set at runtime</value>
 
@@ -268,7 +268,7 @@ namespace AbatabData
         /// </summary>
         /// <remarks>
         /// * This OptionObject is a copy of <c>WorkOptObj</c>.
-        /// * More information about the OptionObjects can be found <see href="../man/manGlossary.html#optionobject">here.</see>
+        /// * More information about the OptionObjects can be found <see href="../man/manAppendix.html#optionobject">here.</see>
         /// </remarks>
         /// <value>Set at runtime</value>
         public OptionObject2015 FinalOptObj { get; set; }

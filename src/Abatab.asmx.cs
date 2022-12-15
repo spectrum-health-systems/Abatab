@@ -20,8 +20,8 @@ namespace Abatab
     /// <remarks>
     /// Abatab receives two things from Avatar:
     /// <list type="number">
-    /// <item>An <see href="../man/manGlossary.html#optionobject">OptionObject</see>, which contains all of the information that Abatab needs to do it's thing</item>
-    /// <item>A <see href="../man/manGlossary.html#script-paramater">Script Parameter</see> that tells Abatab what it needs to do with the OptionObject.</item>
+    /// <item>An <see href="../man/manAppendix.html#optionobject">OptionObject</see>, which contains all of the information that Abatab needs to do it's thing</item>
+    /// <item>A <see href="../man/manAppendix.html#script-paramater">Script Parameter</see> that tells Abatab what it needs to do with the OptionObject.</item>
     /// </list>
     /// </remarks>
     [WebService(Namespace = "http://tempuri.org/")]
@@ -54,7 +54,7 @@ namespace Abatab
         /// <remarks>
         /// <list type="bullet">
         /// <item>This method is required by Avatar.</item>
-        /// <item>This is the only time a <see href="../man/manGlossary.html#logging">Primeval debug log</see> is written.</item>
+        /// <item>This is the only time a <see href="../man/manAppendix.html#logging">Primeval debug log</see> is written.</item>
         /// </list>
         /// </remarks>
         [WebMethod]

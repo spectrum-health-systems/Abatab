@@ -408,7 +408,7 @@
       "output": {
         ".html": {
           "relative_path": "man/index.html",
-          "hash": "Y+I7ujXGmshxp5xCGFjePteTMsT2BqVkSyxuqUO2OAc="
+          "hash": "Y2P/JG4ngONfLW0Ge2no5yLPh+GmncTYDMk2Hc8huXI="
         }
       },
       "is_incremental": false,
@@ -416,11 +416,38 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "../../docs/man/manAdditionalInformation.md",
+      "source_relative_path": "../../docs/man/manAboutAbatab.md",
       "output": {
         ".html": {
-          "relative_path": "man/manAdditionalInformation.html",
-          "hash": "iqY9uGG6t1aMDeBpTbdBUsrFTPZeofSleJxQsYDEDEE="
+          "relative_path": "man/manAboutAbatab.html",
+          "hash": "k/g5s6vEDu1s7Rvi4HdyvcNHke+LDj5UKjC0alUBUCM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../../docs/man/manAdditionalInformation_.md",
+      "output": {
+        ".html": {
+          "relative_path": "man/manAdditionalInformation_.html",
+          "hash": "dv6hcy5KSY8zx0BLkKupZ9fsYY33hB6h01brM3ouAew="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "../../docs/man/manAppendix.md",
+      "output": {
+        ".html": {
+          "relative_path": "man/manAppendix.html",
+          "hash": "WqSH57AZvRfClZRz7c0LTYXmy/pfttIpFTb4ePiIYz4="
         }
       },
       "is_incremental": false,
@@ -548,21 +575,6 @@
         "InvalidFileLink"
       ],
       "type": "Conceptual",
-      "source_relative_path": "../../docs/man/manGlossary.md",
-      "output": {
-        ".html": {
-          "relative_path": "man/manGlossary.html",
-          "hash": "eYu0CTLwCOCSsek11CUwDDsGhmctJFV3O6muZLE/LJI="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
-      "type": "Conceptual",
       "source_relative_path": "../../docs/man/manHostingAbatab.md",
       "output": {
         ".html": {
@@ -614,11 +626,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "../../docs/man/manSourceCode.md",
+      "source_relative_path": "../../docs/man/manSourceCode_.md",
       "output": {
         ".html": {
-          "relative_path": "man/manSourceCode.html",
-          "hash": "FrY8MVDJXVlVOLRz+CfsNJwOVcakv9VjGzLaYGpJLL0="
+          "relative_path": "man/manSourceCode_.html",
+          "hash": "Sln1KTQSjtIrbTlxsyWO6MAB1q3zB2xjKnXJkzByMkY="
         }
       },
       "is_incremental": false,
@@ -669,7 +681,7 @@
       "output": {
         ".html": {
           "relative_path": "man/toc.html",
-          "hash": "/KqlLY4eKKstpp9mAf0V69Ui29dahtqLH5PCHe3UHv8="
+          "hash": "eyl6SXYctCJsxtLtEfC0QFTBE7UNAXEk4wcE2DKIJHI="
         }
       },
       "is_incremental": false,
@@ -684,7 +696,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Abatab.Abatab.html",
-          "hash": "tKWfH7mSyKSjp9ewUilNpRizyT5SNnScyPjdSsDRK4I="
+          "hash": "AXI/h8WhUXF0NW2fYzoJCu/Z+0yMWZ85Bm8G0ZE639M="
         }
       },
       "is_incremental": false,
@@ -699,7 +711,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Abatab.Roundhouse.html",
-          "hash": "45xErq3oI5KrVduDA1ha+xRHmz9ILDtw5NxTYTYyRJg="
+          "hash": "pWcGcfMse6jule+9FkQsH/nnQknxiwUg/vBxkBh84oM="
         }
       },
       "is_incremental": false,
@@ -714,7 +726,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Abatab.WebConfig.html",
-          "hash": "NJot4ANbCkCURbSpN5Mn/HbtMHYObi3Hnp7rARXEVP4="
+          "hash": "GIVQfRQZ3kti2hFahNOm2kIxDhAMR26RN0QMRYZBdIw="
         }
       },
       "is_incremental": false,
@@ -726,7 +738,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Abatab.html",
-          "hash": "eo/0v/MCiAnFydSZ4kirtvNfoJVqrJXFkHSIrq6DKvE="
+          "hash": "rcdvGnMxM8zkBs16tEh6GEbKiQIhjDJenf9AcsSkJwg="
         }
       },
       "is_incremental": false,
@@ -873,7 +885,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AbatabData.Session.html",
-          "hash": "7OVf/mZkOeBpbjiYUMOqAbIIfSTCdQL/TPuZ3mdhwcE="
+          "hash": "sB8/Uau7J5kHUOdIKvO97l13j9SakybbNUGVU6r2w20="
         }
       },
       "is_incremental": false,
@@ -1386,7 +1398,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 27,
+          "total_file_count": 28,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {

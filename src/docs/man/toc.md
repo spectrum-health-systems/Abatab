@@ -45,7 +45,7 @@
 ## [DocFX](manDocFx.md)
 <!--Overview-->
 
-## [Glossary](manGlossary.md)
+## [Appendix](manAppendix.md)
 <!--Overview
     OptionObject
     Script Parameter
