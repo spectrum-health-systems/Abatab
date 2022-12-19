@@ -73,7 +73,8 @@
   
   <h1 id="AbatabData_Session" data-uid="AbatabData.Session" class="text-break">Class Session
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Contains Abatab session properties.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -214,15 +215,10 @@
     </tbody>
   </table>
   <h5 id="AbatabData_Session_AbatabDataRoot_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><ul>
-<li>At runtime the <code>AvatarEnvironment</code> value is created as a sub-directory of the <code>AbatabDataRoot</code>.</li>
-<li>This is the directory where exported data/logs should be stored.</li>
-</ul>
+  <div class="markdown level1 remarks"><ul><li>At runtime the <code>AvatarEnvironment</code> value is created as a sub-directory of the <code>AbatabDataRoot</code>.</li><li>This is the directory where exported data/logs should be stored.</li></ul>
 </div>
   <h5 id="AbatabData_Session_AbatabDataRoot_examples">Examples</h5>
-  <ul>
-<li>If <code>AbatabDataRoot=C:\Abatab</code>, and <code>AvatarEnvironment=LIVE</code>, then <code>AbatabDataRoot</code> would be set to <code>C:\Abatab\LIVE</code> at runtime.</li>
-</ul>
+  <p>If <code>AbatabDataRoot=C:\Abatab</code>, and <code>AvatarEnvironment=LIVE</code>, then <code>AbatabDataRoot</code> would be set to <code>C:\Abatab\LIVE</code> at runtime.</p>
 
   
   
@@ -284,11 +280,8 @@
     </tbody>
   </table>
   <h5 id="AbatabData_Session_AbatabMode_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p><table><thead><tr><th>Setting</th><th>Description</th></tr></thead><tbody><tr><td><strong><em>enabled</em></strong></td><td>All Abatab functionality is (potentially) available.</td></tr><tr><td>disabled</td><td>Abatab functionality is not available.</td></tr><tr><td>passthrough</td><td>All functionality is available, but no changes are made to Avatar.</td></tr></tbody></table></p>
-<ul>
-<li>If this is set to <code>AbatabMode=enabled</code>, you are still able to disable specific modules via their corresponding mode setting.</li>
-<li>The <code>AbatabMode=passthrough</code> mode is intended for development, not production.</li>
-</ul>
+  <div class="markdown level1 remarks"><p><table><thead><tr><th>Setting</th><th>Description</th></tr></thead><tbody><tr><td><strong><em>enabled</em></strong></td><td>All Abatab functionality is (potentially) available.</td></tr><tr><td>disabled</td><td>Abatab functionality is not available.</td></tr><tr><td>passthrough</td><td>All functionality is available, but no changes are made to Avatar.</td></tr></tbody></table>
+<ul><li>If this is set to <code>AbatabMode=enabled</code>, you are still able to disable specific modules via their corresponding mode setting.</li><li>The <code>AbatabMode=passthrough</code> mode is intended for development, not production.</li></ul></p>
 </div>
   
   
@@ -369,8 +362,7 @@
   
   <a id="AbatabData_Session_AbatabRoot_" data-uid="AbatabData.Session.AbatabRoot*"></a>
   <h4 id="AbatabData_Session_AbatabRoot" data-uid="AbatabData.Session.AbatabRoot">AbatabRoot</h4>
-  <div class="markdown level1 summary"><p>The root directory where the Abatab web service has been deployed.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -387,21 +379,10 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td><p>Default value is <code>C:\Abatab_</code></p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="AbatabData_Session_AbatabRoot_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><ul>
-<li>At runtime the <code>AvatarEnvironment</code> value is added to the end of <code>AbatabRoot</code> to form the complete path.</li>
-</ul>
-</div>
-  <h5 id="AbatabData_Session_AbatabRoot_examples">Examples</h5>
-  <ul>
-<li>If <code>AbatabRoot=C:\Abatab_</code>, and <code>AvatarEnvironment=LIVE</code>, then <code>AbatabRoot</code> would be set to <code>C:\Abatab_LIVE</code> at runtime.</li>
-</ul>
-
   
   
   <a id="AbatabData_Session_AbatabUserName_" data-uid="AbatabData.Session.AbatabUserName*"></a>

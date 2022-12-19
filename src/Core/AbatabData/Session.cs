@@ -10,18 +10,6 @@ namespace AbatabData
     /// <summary>
     /// Contains Abatab session properties.
     /// </summary>
-    /// <remarks>
-    /// <para>
-    /// Contains properties for the following:
-    /// <list type="bullet">
-    /// <item><term>Standard session properties</term></item>
-    /// <item><term>Debugging functionality</term></item>
-    /// <item><term>Logging functionality</term></item>
-    /// <item><term>OptionObjects</term></item>
-    /// <item><term>Modules</term></item>
-    /// </list>
-    /// /para>
-    /// </remarks>
     public class Session
     {
         /// <summary>
@@ -46,8 +34,10 @@ namespace AbatabData
         /// <description>All functionality is available, but no changes are made to Avatar.</description>
         /// </item>
         /// </list>
-        /// * If this is set to <c>AbatabMode=enabled</c>, you are still able to disable specific modules via their corresponding mode setting.
-        /// * The <c>AbatabMode=passthrough</c> mode is intended for development, not production.
+        /// <list type="bullet">
+        /// <item>If this is set to <c>AbatabMode=enabled</c>, you are still able to disable specific modules via their corresponding mode setting.</item>
+        /// <item>The <c>AbatabMode=passthrough</c> mode is intended for development, not production.</item>
+        /// </list>
         /// </remarks>
         /// <value>Default value is <c>enabled</c></value>
         public string AbatabMode { get; set; }
@@ -56,10 +46,12 @@ namespace AbatabData
         /// The root directory where the Abatab web service has been deployed.
         /// </summary>
         /// <remarks>
-        /// * At runtime the <c>AvatarEnvironment</c> value is added to the end of <c>AbatabRoot</c> to form the complete path.
+        /// <list type="bullet">
+        /// <item>At runtime the <c>AvatarEnvironment</c> value is added to the end of <c>AbatabRoot</c> to form the complete path.</item>
+        /// </list>
         /// </remarks>
         /// <example>
-        /// * If <c>AbatabRoot=C:\Abatab_</c>, and <c>AvatarEnvironment=LIVE</c>, then <c>AbatabRoot</c> would be set to <c>C:\Abatab_LIVE</c> at runtime.
+        /// If <c>AbatabRoot=C:\Abatab_</c>, and <c>AvatarEnvironment=LIVE</c>, then <c>AbatabRoot</c> would be set to <c>C:\Abatab_LIVE</c> at runtime.
         /// </example>
         /// <value>Default value is <c>C:\Abatab_</c></value>
         public string AbatabRoot { get; set; }
@@ -68,11 +60,13 @@ namespace AbatabData
         /// The root directory where the Abatab data is stored.
         /// </summary>
         /// <remarks>
-        /// * At runtime the <c>AvatarEnvironment</c> value is created as a sub-directory of the <c>AbatabDataRoot</c>.
-        /// * This is the directory where exported data/logs should be stored.
+        /// <list type="bullet">
+        /// <item>At runtime the <c>AvatarEnvironment</c> value is created as a sub-directory of the <c>AbatabDataRoot</c>.</item>
+        /// <item>This is the directory where exported data/logs should be stored.</item>
+        /// </list>
         /// </remarks>
         /// <example>
-        /// * If <c>AbatabDataRoot=C:\Abatab</c>, and <c>AvatarEnvironment=LIVE</c>, then <c>AbatabDataRoot</c> would be set to <c>C:\Abatab\LIVE</c> at runtime.
+        /// If <c>AbatabDataRoot=C:\Abatab</c>, and <c>AvatarEnvironment=LIVE</c>, then <c>AbatabDataRoot</c> would be set to <c>C:\Abatab\LIVE</c> at runtime.
         /// </example>
         /// <value>Default value is <c>C:\Abatab</c></value>
         public string AbatabDataRoot { get; set; }
@@ -217,15 +211,17 @@ namespace AbatabData
         public string AbatabCommand { get; set; }
 
         /// <summary>
-        /// The Action component of the Script Parameter.
+        /// The **Action component** of the Script Parameter.
         /// </summary>
         /// <remarks>
-        /// * This is the third component of the <see href="AbatabData.Session.html#AbatabData_Session_ScriptParameter">Script Parameter</see>.
+        /// <list type="bullet">
+        /// <item>This is the third component of the <see href="AbatabData.Session.html#AbatabData_Session_ScriptParameter">Script Parameter</see>.</item>
+        /// </list>
         /// </remarks>
         /// <example>
-        /// * The Script Parameter <c>QuickMedOrder-Dose-VerifyAmount</c> contains the <c>VerifyAmount</c> action.
+        /// The Script Parameter <c>QuickMedOrder-Dose-VerifyAmount</c> contains the <c>VerifyAmount</c> action.
         /// </example>
-        /// <value>Set at runtime</value>
+        /// <value>Set at runtime.</value>
         public string AbatabAction { get; set; }
 
         /// <summary>

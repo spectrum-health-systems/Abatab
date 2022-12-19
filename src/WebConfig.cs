@@ -21,7 +21,7 @@ namespace Abatab
         /// <returns>A dictionary containing the settings from Web.config.</returns>
         /// <remarks>
         /// <list type="bullet">
-        /// <item>These <see href="../man/manAppendix.html#configuration">configuration setting.</see> are setup in <c>src/Properties/Settings.settings</c>, and modified in the <see href="../man/manAppendix.html#webconfig">Web.config.</see> file.</item>
+        /// <item>These <see href="../man/manAppendix.html#configuration">configuration settings</see> are setup in <c>src/Properties/Settings.settings</c>, and modified in the <see href="../man/manAppendix.html#webconfig">Web.config</see> file.</item>
         /// <item>Whenever a new value is added/removed to <c>src/Properties/Settings.settings</c>, it needs to be added/removed here as well.</item>
         /// <item>Settings are <see href="../man/manSourceCode.html#casing-and-trimming">trimmed and converted to lowercase</see>.</item>
         /// </list>
