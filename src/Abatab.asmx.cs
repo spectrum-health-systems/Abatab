@@ -14,13 +14,11 @@ using System.Web.Services;
 
 namespace Abatab
 {
-    /// <summary>
-    /// The entry point for Abatab.
-    /// </summary>
+    /// <summary>The entry point for Abatab.</summary>
     /// <remarks>
     /// Abatab receives two things from Avatar:
     /// <list type="number">
-    /// <item>An <see href="../man/manAppendix.html#optionobject">OptionObject</see>, which contains all of the information that Abatab needs to do it's thing</item>
+    /// <item>An <see href="../man/manAppendix.html#optionobject">OptionObject</see>, which contains all of the information that Abatab needs to do it's thing.</item>
     /// <item>A <see href="../man/manAppendix.html#script-paramater">Script Parameter</see> that tells Abatab what it needs to do with the OptionObject.</item>
     /// </list>
     /// </remarks>
@@ -29,9 +27,7 @@ namespace Abatab
     [System.ComponentModel.ToolboxItem(false)]
     public class Abatab : WebService
     {
-        /// <summary>
-        /// Returns the current version of Abatab.
-        /// </summary>
+        /// <summary>Returns the current version of Abatab.</summary>
         /// <returns>The current version of Abatab.</returns>
         /// <remarks>
         /// <list type="bullet">
@@ -45,9 +41,7 @@ namespace Abatab
             return "VERSION 23.0";
         }
 
-        /// <summary>
-        /// Executes script parameter request from Avatar, then returns a potentially modified OptionObject to Avatar.
-        /// </summary>
+        /// <summary>Executes script parameter request from Avatar, then returns a potentially modified OptionObject to Avatar.</summary>
         /// <param name="sentOptionObject">The original OptionObject sent from Avatar.</param>
         /// <param name="scriptParameter">The original Script Parameter request from Avatar.</param>
         /// <returns>A finalized OptionObject that will be returned to Avatar.</returns>

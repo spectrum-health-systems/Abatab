@@ -111,13 +111,17 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class Session</code></pre>
   </div>
+  <h5 id="AbatabData_Session_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>Contains properties for the following:
+<ul><li>Standard session properties</li><li>Debugging functionality</li><li>Logging functionality</li><li>OptionObjects</li><li>Modules</li></ul></p>
+</div>
   <h3 id="properties">Properties
   </h3>
   
   
   <a id="AbatabData_Session_AbatabAction_" data-uid="AbatabData.Session.AbatabAction*"></a>
   <h4 id="AbatabData_Session_AbatabAction" data-uid="AbatabData.Session.AbatabAction">AbatabAction</h4>
-  <div class="markdown level1 summary"><p>The Action component of the Script Parameter.</p>
+  <div class="markdown level1 summary"><p>The <strong>Action</strong> component of the Script Parameter.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -135,20 +139,16 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td><p>Set at runtime</p>
+        <td><p>Set at runtime.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <h5 id="AbatabData_Session_AbatabAction_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><ul>
-<li>This is the third component of the <a href="AbatabData.Session.html#AbatabData_Session_ScriptParameter">Script Parameter</a>.</li>
-</ul>
+  <div class="markdown level1 remarks"><ul><li>This is the third component of the <a href="AbatabData.Session.html#AbatabData_Session_ScriptParameter">Script Parameter</a>.</li></ul>
 </div>
   <h5 id="AbatabData_Session_AbatabAction_examples">Examples</h5>
-  <ul>
-<li>The Script Parameter <code>QuickMedOrder-Dose-VerifyAmount</code> contains the <code>VerifyAmount</code> action.</li>
-</ul>
+  <p>The Script Parameter <code>QuickMedOrder-Dose-VerifyAmount</code> contains the <code>VerifyAmount</code> action.</p>
 
   
   
@@ -362,7 +362,8 @@
   
   <a id="AbatabData_Session_AbatabRoot_" data-uid="AbatabData.Session.AbatabRoot*"></a>
   <h4 id="AbatabData_Session_AbatabRoot" data-uid="AbatabData.Session.AbatabRoot">AbatabRoot</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The root directory where the Abatab web service has been deployed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -379,10 +380,17 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>Default value is <code>C:\Abatab_</code></p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="AbatabData_Session_AbatabRoot_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><ul><li>At runtime the <code>AvatarEnvironment</code> value is added to the end of <code>AbatabRoot</code> to form the complete path.</li></ul>
+</div>
+  <h5 id="AbatabData_Session_AbatabRoot_examples">Examples</h5>
+  <p>If <code>AbatabRoot=C:\Abatab_</code>, and <code>AvatarEnvironment=LIVE</code>, then <code>AbatabRoot</code> would be set to <code>C:\Abatab_LIVE</code> at runtime.</p>
+
   
   
   <a id="AbatabData_Session_AbatabUserName_" data-uid="AbatabData.Session.AbatabUserName*"></a>

@@ -9,14 +9,10 @@ using System.Reflection;
 
 namespace Abatab
 {
-    /// <summary>
-    /// Determines what should be done with the <b>module</b> component of the <see href="../man/manAppendix.html#script-parameter">Script Parameter</see>.
-    /// </summary>
+    /// <summary>Determines what should be done with the <b>module</b> component of the <see href="../man/manAppendix.html#script-parameter">Script Parameter</see>.</summary>
     public static class Roundhouse
     {
-        /// <summary>
-        /// Parses the Script Parameter and sends valid requests to the proper destination.
-        /// </summary>
+        /// <summary>Parses the Script Parameter and sends valid requests to the proper destination.</summary>
         /// <param name="abatabSession">Settings and data for this session of Abatab.</param>
         /// <remarks>
         /// <list type="bullet">

@@ -7,14 +7,20 @@ using NTST.ScriptLinkService.Objects;
 
 namespace AbatabData
 {
-    /// <summary>
-    /// Contains Abatab session properties.
-    /// </summary>
+    /// <summary>Contains Abatab session properties.</summary>
+    /// <remarks>
+    /// Contains properties for the following:
+    /// <list type="bullet">
+    /// <item><term>Standard session properties</term></item>
+    /// <item><term>Debugging functionality</term></item>
+    /// <item><term>Logging functionality</term></item>
+    /// <item><term>OptionObjects</term></item>
+    /// <item><term>Modules</term></item>
+    /// </list>
+    /// </remarks>
     public class Session
     {
-        /// <summary>
-        /// The mode that Abatab will use when executed.
-        /// </summary>
+        /// <summary>The mode that Abatab will use when executed.</summary>
         /// <remarks>
         /// <list type="table">
         /// <listheader>
@@ -210,9 +216,7 @@ namespace AbatabData
         /// <value>Set at runtime</value>
         public string AbatabCommand { get; set; }
 
-        /// <summary>
-        /// The **Action component** of the Script Parameter.
-        /// </summary>
+        /// <summary>The <b>Action</b> component of the Script Parameter.</summary>
         /// <remarks>
         /// <list type="bullet">
         /// <item>This is the third component of the <see href="AbatabData.Session.html#AbatabData_Session_ScriptParameter">Script Parameter</see>.</item>
@@ -225,8 +229,7 @@ namespace AbatabData
         public string AbatabAction { get; set; }
 
         /// <summary>
-        /// The (optional) Option component of the Script Parameter.
-        /// </summary>
+        /// The (optional) Option component of the Script Parameter.</summary>
         /// <remarks>
         /// * This is the fourth component of the <see href="AbatabData.Session.html#AbatabData_Session_ScriptParameter">Script Parameter</see>.
         /// * This is an optional component.

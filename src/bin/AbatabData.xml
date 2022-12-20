@@ -677,14 +677,20 @@
              <value></value>
         </member>
         <member name="T:AbatabData.Session">
-            <summary>
-            Contains Abatab session properties.
-            </summary>
+            <summary>Contains Abatab session properties.</summary>
+            <remarks>
+            Contains properties for the following:
+            <list type="bullet">
+            <item><term>Standard session properties</term></item>
+            <item><term>Debugging functionality</term></item>
+            <item><term>Logging functionality</term></item>
+            <item><term>OptionObjects</term></item>
+            <item><term>Modules</term></item>
+            </list>
+            </remarks>
         </member>
         <member name="P:AbatabData.Session.AbatabMode">
-            <summary>
-            The mode that Abatab will use when executed.
-            </summary>
+            <summary>The mode that Abatab will use when executed.</summary>
             <remarks>
             <list type="table">
             <listheader>
@@ -711,7 +717,20 @@
             </remarks>
             <value>Default value is <c>enabled</c></value>
         </member>
-        <!-- Badly formed XML comment ignored for member "P:AbatabData.Session.AbatabRoot" -->
+        <member name="P:AbatabData.Session.AbatabRoot">
+            <summary>
+            The root directory where the Abatab web service has been deployed.
+            </summary>
+            <remarks>
+            <list type="bullet">
+            <item>At runtime the <c>AvatarEnvironment</c> value is added to the end of <c>AbatabRoot</c> to form the complete path.</item>
+            </list>
+            </remarks>
+            <example>
+            If <c>AbatabRoot=C:\Abatab_</c>, and <c>AvatarEnvironment=LIVE</c>, then <c>AbatabRoot</c> would be set to <c>C:\Abatab_LIVE</c> at runtime.
+            </example>
+            <value>Default value is <c>C:\Abatab_</c></value>
+        </member>
         <member name="P:AbatabData.Session.AbatabDataRoot">
             <summary>
             The root directory where the Abatab data is stored.
@@ -866,21 +885,20 @@
             <value>Set at runtime</value>
         </member>
         <member name="P:AbatabData.Session.AbatabAction">
-            <summary>
-            The Action component of the Script Parameter.
-            </summary>
+            <summary>The <b>Action</b> component of the Script Parameter.</summary>
             <remarks>
-            * This is the third component of the <see href="AbatabData.Session.html#AbatabData_Session_ScriptParameter">Script Parameter</see>.
+            <list type="bullet">
+            <item>This is the third component of the <see href="AbatabData.Session.html#AbatabData_Session_ScriptParameter">Script Parameter</see>.</item>
+            </list>
             </remarks>
             <example>
-            * The Script Parameter <c>QuickMedOrder-Dose-VerifyAmount</c> contains the <c>VerifyAmount</c> action.
+            The Script Parameter <c>QuickMedOrder-Dose-VerifyAmount</c> contains the <c>VerifyAmount</c> action.
             </example>
-            <value>Set at runtime</value>
+            <value>Set at runtime.</value>
         </member>
         <member name="P:AbatabData.Session.AbatabOption">
             <summary>
-            The (optional) Option component of the Script Parameter.
-            </summary>
+            The (optional) Option component of the Script Parameter.</summary>
             <remarks>
             * This is the fourth component of the <see href="AbatabData.Session.html#AbatabData_Session_ScriptParameter">Script Parameter</see>.
             * This is an optional component.

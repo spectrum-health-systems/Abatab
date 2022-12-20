@@ -28,7 +28,7 @@ https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/xmldoc/exampl
 * The `<summary>` tag isused by IntelliSense inside Visual Studio to display additional information about a type or member.
 * All types must have a `<summary>` tag.
 
-```csharp
+```xml
 /// <summary>A short summary of what the class does/is responsible for.</summary>
 ```
 
@@ -38,7 +38,7 @@ https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/xmldoc/exampl
 * Lengthy `<remark>` tags should be separated into `<para>` components.
 * This tag may include `<list>` components.
 
-```csharp
+```xml
 /// <remarks>
 /// <para>
 /// The remarks section can...
@@ -53,7 +53,7 @@ https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/xmldoc/exampl
 
 * The `<return>` tag describes a return value.
 
-```csharp
+```xml
 /// <return>Details what is returned.</return>
 ```
 
@@ -61,7 +61,7 @@ https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/xmldoc/exampl
 
 * The `<param>` tag describes a method parameter.
 
-```csharp
+```xml
 <param name="name">description</param>
 ```
 
@@ -69,7 +69,7 @@ https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/xmldoc/exampl
 
 * The `<value>` tag describes the value that a property represents.
 
-```csharp
+```xml
 <value>TheValue</value>
 ```
 
@@ -77,7 +77,7 @@ https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/xmldoc/exampl
 
 * The `<c>` tag indicates that text within a description should be marked as code.
 
-```csharp
+```xml
 <c>Some code</c>
 ```
 
@@ -85,7 +85,7 @@ https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/xmldoc/exampl
 
 * The `<code>` tag indicates multiple lines of code. Use `<c>` to indicate that single-line text within a description should be marked as code.
 
-```csharp
+```xml
 <code>
     var index = 5;
     index++;
@@ -96,7 +96,7 @@ https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/xmldoc/exampl
 
 * The `<example>` tag specifies an example of how to use a method or other library member, and uses the `<code>` tag.
 
-```csharp
+```xml
 <example>
 This shows how to increment an integer.
 <code>
@@ -117,7 +117,7 @@ This shows how to increment an integer.
 
 * The `<br/>` tag creates a single-spaced paragraph.
 
-```csharp
+```xml
 <remarks>
 This is an introductory paragraph.
 <br/>
@@ -129,7 +129,7 @@ This paragraph contains more details.
 
 * The `<para>` tag creates a double-spaced paragraph.
 
-```csharp
+```xml
 <remarks>
 <para>
 This is an introductory paragraph.
@@ -145,7 +145,7 @@ This paragraph contains more details.
 * The `<list="bullet">` tag creates a bulleted list.
 * The `<item">` components should be on a single line.
 
-```csharp
+```xml
 /// <list type="bullet">
 /// <item>The first item</item>
 /// <item>The second item</item>
@@ -157,7 +157,7 @@ This paragraph contains more details.
 * The `<list="number">` tag creates a numbered list.
 * The `<item">` components should be on a single line.
 
-```csharp
+```xml
 /// <list type="number">
 /// <item>The first item</item>
 /// <item>The second item</item>
@@ -168,7 +168,7 @@ This paragraph contains more details.
 
 * The `<list="table">` tag creates a table.
 
-```csharp
+```xml
 /// <list type="table">
 /// <listheader>
 /// <term>Setting</term>
@@ -189,6 +189,42 @@ This paragraph contains more details.
 /// </list>
 ```
 
+## \<b>
+
+* The `<b>` tag bolds text.
+* Used for:
+  * Call outs
+
+```xml
+<remarks>
+This text is <b>bold</b>.
+</remarks>
+```
+
+## \<i>
+
+* The `<i>` tag itaicizes text.
+* Used for:
+  * Filenames
+
+```xml
+<remarks>
+This text is <i>italized</i>.
+</remarks>
+```
+
+## \<b><i>
+
+* The `<b><i>` tags bolds and italicize text.
+* Used for:
+  * Default values
+
+```xml
+<remarks>
+This text is <b><i>bold and italic</b></i>.
+</remarks>
+```
+
 ***
 
 <br>
@@ -200,7 +236,7 @@ This paragraph contains more details.
 
 * The `<see href="member">` tag specifies a reference to a member or field that is available to be called from the current compilation environment.
 
-```csharp
+```xml
 <see cref="member"/>
 ```
 
@@ -208,7 +244,7 @@ This paragraph contains more details.
 
 * The `<see href="link">` tag specifies a link to a URL from within text.
 
-```csharp
+```xml
 You can <see href="url">link</see> to things.</item>
 ```
 
@@ -216,7 +252,7 @@ You can <see href="url">link</see> to things.</item>
 
 * The `<see href="link">` tag specifies a language keyword.
 
-```csharp
+```xml
 <see langword="keyword"/>
 ```
 
@@ -224,7 +260,7 @@ You can <see href="url">link</see> to things.</item>
 
 * The `<see href="link">` tag specifies a reference to a member or field that is available to be called from the current compilation environment.
 
-```csharp
+```xml
 <seealso cref="member"/>
 ```
 
@@ -232,7 +268,7 @@ You can <see href="url">link</see> to things.</item>
 
 * The `<see href="link">` tag specifies a link to a URL.
 
-```csharp
+```xml
 You can <seealso href="url">link</seealso> to things.</item>
 ```
 
@@ -243,7 +279,40 @@ You can <seealso href="url">link</seealso> to things.</item>
 
 # **EXAMPLES**
 
+> A class summary w/remarks
 
+* The `<summary>` tag is the only component displayed on the TOC.
+* The `<remarks>` tag is the only displayed in the class-specific documentation
+
+```xml
+/// <summary>
+/// The entry point for Abatab.
+/// </summary>
+/// <remarks>
+/// Abatab receives two things from Avatar:
+/// <list type="number">
+/// <item>An <see href="../man/manAppendix.html#optionobject">OptionObject</see>, which contains all of the information that Abatab needs to do it's thing</item>
+/// <item>A <see href="../man/manAppendix.html#script-paramater">Script Parameter</see> that tells Abatab what it needs to do with the OptionObject.</item>
+/// </list>
+/// </remarks>
+```
+
+> A method with parameters and a bullet list with links.
+
+```xml
+/// <summary>
+/// Executes script parameter request from Avatar, then returns a potentially modified OptionObject to Avatar.
+/// </summary>
+/// <param name="sentOptionObject">The original OptionObject sent from Avatar.</param>
+/// <param name="scriptParameter">The original Script Parameter request from Avatar.</param>
+/// <returns>A finalized OptionObject that will be returned to Avatar.</returns>
+/// <remarks>
+/// <list type="bullet">
+/// <item>This method is required by Avatar.</item>
+/// <item>This is the only time a <see href="../man/manAppendix.html#logging">Primeval debug log</see> is written.</item>
+/// </list>
+/// </remarks>
+```
 
 <!-- -->
 

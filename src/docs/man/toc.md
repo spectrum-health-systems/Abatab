@@ -1,52 +1,90 @@
-# [The Abatab Manual](index.md)
+# [The Abatab Manual][manAbatabManual]
 <!--Overview
     Features
     Requirements
     About this manual-->
 
-# [Getting started](manGettingStarted.md)
+# [About Abatab][manAboutAbatab]
 <!--Overview-->
 
-# [Hosting Abatab](manHostingAbatab.md)
+# [Getting started with Abatab][manGettingStartedWithAbatab]
+<!--Overview
+    Technical things
+        OptionObject
+        Config settings-->
+
+# [Hosting Abatab][manHostingAbatab]
 <!--Overview
     Hosting with Nestmart
     Self-hosting step by step-->
 
-# [Configuring Abatab](manConfiguringAbatab.md)
+# [Importing Abatab][manImportingAbatab]
+<!--Overview-->
+
+# [Configuring Abatab][manConfiguringAbatab]
 <!--Overview
     List of local settings-->
 
-# [Importing Abatab](manImportingAbatab.md)
-<!--Overview-->
-
-# [Using Abatab](manUsingAbatab.md)
+# [Using Abatab][manUsingAbatab]
 <!--Overview
     ScriptLink-->
 
-## [Core functionality](manCoreFunctionality.md)
+## Abatab functionality
 <!--Overview
-    Logging-->
+    Core functionality
+    Modules
+        Common
+        Progress Note
+        Prototype
+        Quick Medication Order
+        Testing
+        Modifying existing modules
+        Creating new modules-->
 
-# [Modules](manModule.md)
+# [Abatab logging][manAbatabLogging]
 <!--Overview
-    Common
-    Progress Note
-    Prototype
-    Quick Medication Order
-    Testing
-    Modifying existing modules
-    Creating new modules-->
+    Types-->
 
-# [Additional Information](manAdditionalInformation.md)
+# [Testing Abatab][manTestingAbatab]
+<!--Overview
+    How-->
 
-## [Source code](manSourceCode.md)
+## [Abatab source code][manAbatabSourceCode]
 <!--Overview-->
 
-## [DocFX](manDocFx.md)
+## [Abatab and DocFX][manAbatabAndDocFx]
 <!--Overview-->
 
 ## [Appendix](manAppendix.md)
 <!--Overview
-    OptionObject
-    Script Parameter
-    ScriptLink-->
+    *-->
+
+# [Additional Information](manAdditionalInformation.md)
+
+<!-- Reference Links -->
+<!-- Manual-->
+[manAbatabManual]: index.md
+[manAboutAbatab]: manAboutAbatab.html
+[manGettingStartedWithAbatab]: manGettingStartedWithAbatab.html
+[manHostingAbatab]: manHostingAbatab.html
+[manImportingAbatab]: manImportingAbatab.html
+[manConfiguringAbatab]: manConfiguringAbatab.html
+[manUsingAbatab]: manUsingAbatab.html
+[manAbatabLogging]: manAbatabLogging.html
+[manTestingAbatab]: manTestingAbatab.html
+[manAbatabSourceCode]: manAbatabSourceCode.html
+[manAbatabAndDocFx]: manAbatabAndDocFx.html
+<!-- Hosting Abatab documentation  -->
+<!-- Importing Abatab documentation -->
+<!-- Configuring Abatab documentation -->
+[docWebConfig]: URL-NEEDED.html
+[docSessionSettings]: URL-NEEDED.html
+<!-- Using Abatab documentation -->
+[docOptionObject]: URL-NEEDED.html
+[urlScriptLinkStandard]: https://github.com/rcskids/ScriptLinkStandard
+[docScriptParameter]: URL-NEEDED.html
+<!-- Abatab logging documentation -->
+<!-- Testing Abatab documentation -->
+<!-- Abatab source code documentation -->
+<!-- Abatab and DocFX documentation -->
+<!-- Appendix documentation -->
