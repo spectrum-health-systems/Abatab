@@ -71,7 +71,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Abatab.asmx" />
-    <None Include="AppData\version.json" />
+    <Content Include="Resources\AppIcon\README.md" />
+    <Content Include="Resources\Documents\README.md" />
+    <Content Include="Resources\Fonts\README.md" />
+    <Content Include="Resources\Images\README.md" />
+    <Content Include="Resources\Raw\README.md" />
+    <Content Include="Resources\Splash\README.md" />
+    <Content Include="Resources\Styles\README.md" />
+    <Content Include="Resources\Images\Logos\README.md" />
+    <Content Include="Resources\Images\Controls\README.md" />
+    <Content Include="Resources\Data\README.md" />
+    <None Include="Resources\Data\version.json" />
     <Content Include="docs\favicon.ico" />
     <Content Include="docs\images\hosting-using-iis\iis-add-website-362x414.png" />
     <Content Include="docs\images\hosting-using-iis\iis-application-pool-633x187.png" />
@@ -253,9 +263,7 @@
       <Name>NTST.ScriptLinkService.Objects</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="AppData\Documentation\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
