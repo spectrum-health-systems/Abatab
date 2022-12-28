@@ -1,7 +1,7 @@
 ﻿// AbatabLogging 23.0.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221228.0852
+// b221228.1009
 
 /* ========================================================================================================
  * PLEASE READ #1
@@ -40,9 +40,7 @@
 
 namespace AbatabLogging
 {
-    /// <summary>
-    /// Logic for debugging functionality.
-    /// </summary>
+    /// <summary>Logic for debugging functionality.</summary>
     public static class Debuggler
     {
         /// <summary>Debugs the debugger.</summary>

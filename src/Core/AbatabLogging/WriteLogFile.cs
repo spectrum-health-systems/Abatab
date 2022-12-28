@@ -1,7 +1,7 @@
 ﻿// AbatabLogging 23.0.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221228.0852
+// b221228.1009
 
 /* ========================================================================================================
  * PLEASE READ
@@ -19,9 +19,7 @@ using System.Threading;
 
 namespace AbatabLogging
 {
-    /// <summary>
-    /// Logic for writing log files.
-    /// </summary>
+    /// <summary>Logic for writing log files.</summary>
     public static class WriteLogFile
     {
         /// <summary>Writes a log file.</summary>

@@ -1,18 +1,14 @@
 ﻿// Abatab ModCommon 23.0.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221228.0852
+// b221228.1009
 
 namespace ModCommon
 {
-    /// <summary>
-    /// Confirms various things.
-    /// </summary>
+    /// <summary>Confirms various things.</summary>
     public static class Verify
     {
-        /// <summary>
-        /// Confirm that a userName exists in the list of valid userNames.
-        /// </summary>
+        /// <summary>Confirm that a userName exists in the list of valid userNames.</summary>
         /// <param name="userName"></param>
         /// <param name="validUsers"></param>
         /// <returns></returns>

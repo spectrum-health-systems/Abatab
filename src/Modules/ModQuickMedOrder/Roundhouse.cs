@@ -1,7 +1,7 @@
 ﻿// Abatab ModQuickMedOrder 23.0.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221228.0852
+// b221228.1009
 
 using AbatabData;
 using AbatabLogging;
@@ -9,9 +9,7 @@ using System.Reflection;
 
 namespace ModQuickMedOrder
 {
-    /// <summary>
-    /// Roundhouse logic for the Quick Medication Order module.
-    /// </summary>
+    /// <summary>Roundhouse logic for the Quick Medication Order module.</summary>
     public static class Roundhouse
     {
         /// <summary>Parse the Abatab request command.</summary>
@@ -37,9 +35,7 @@ namespace ModQuickMedOrder
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
         }
 
-        /// <summary>
-        /// Parses the Dose command.
-        /// </summary>
+        /// <summary>Parses the Dose command.</summary>
         /// <param name="abatabSession">Information/data for this session of Abatab.</param>
         private static void ParseCommandDose(Session abatabSession)
         {

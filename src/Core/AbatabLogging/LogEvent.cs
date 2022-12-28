@@ -1,7 +1,7 @@
 ﻿// AbatabLogging 23.0.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221228.0852
+// b221228.1009
 
 /* ========================================================================================================
  * PLEASE READ
@@ -22,14 +22,10 @@ using System.Runtime.CompilerServices;
 
 namespace AbatabLogging
 {
-    /// <summary>
-    /// Logic for building log files for various events.
-    /// </summary>
+    /// <summary>Logic for building log files for various events.</summary>
     public static class LogEvent
     {
-        /// <summary>
-        /// Log a user access event.
-        /// </summary>
+        /// <summary>Log a user access event.</summary>
         /// <param name="abatabSession">Information/data for this session of Abatab.</param>
         /// <param name="accessMsg">The access log message.</param>
         public static void Access(Session abatabSession, string accessMsg)
@@ -50,9 +46,7 @@ namespace AbatabLogging
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
         }
 
-        /// <summary>
-        /// Builds a debug log file.
-        /// </summary>
+        /// <summary>Builds a debug log file.</summary>
         /// <param name="exeAssembly">The name of executing assembly.</param>
         /// <param name="debugMode">The Abatab debug mode.</param>
         /// <param name="debugLogRoot">The debug log root directory.</param>
@@ -83,9 +77,7 @@ namespace AbatabLogging
             Debuggler.DebugTheDebugger(debugDebugger, debugLogRoot, "[BuildDebugLog-005]");
         }
 
-        /// <summary>
-        /// Builds detailed information for the QuickMedOrder module.
-        /// </summary>
+        /// <summary>Builds detailed information for the QuickMedOrder module.</summary>
         /// <param name="abatabSession">Information/data for this session of Abatab.</param>
         /// <param name="logMsg">The log message.</param>
         public static void ModQuickMedOrder(Session abatabSession, string logMsg = "QuickMedOrder detail log.")
@@ -106,9 +98,7 @@ namespace AbatabLogging
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
         }
 
-        /// <summary>
-        /// Builds a debug log file.
-        /// </summary>
+        /// <summary>Builds a debug log file.</summary>
         /// <param name="debugMode">The Abatab debug mode.</param>
         /// <param name="exeAssembly">The name of executing assembly.</param>
         /// <param name="callPath">The filename of where the log is coming from.</param>
@@ -128,9 +118,7 @@ namespace AbatabLogging
             }
         }
 
-        /// <summary>
-        /// Builds a session detail log.
-        /// </summary>
+        /// <summary>Builds a session detail log.</summary>
         /// <param name="abatabSession">Information/data for this session of Abatab.</param>
         /// <param name="logMsg">The log message.</param>
         public static void Session(Session abatabSession, string logMsg = "Session detail log.")
@@ -151,9 +139,7 @@ namespace AbatabLogging
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
         }
 
-        /// <summary>
-        /// Build a trace log.
-        /// </summary>
+        /// <summary>Build a trace log.</summary>
         /// <param name="abatabSession">Information/data for this session of Abatab.</param>
         /// <param name="exeAssembly">The name of executing assembly.</param
         /// <param name="logMsg">The log message.</param>
@@ -175,9 +161,7 @@ namespace AbatabLogging
             }
         }
 
-        /// <summary>
-        /// Build a webConfig debug log.
-        /// </summary>
+        /// <summary>Build a webConfig debug log.</summary>
         /// <param name="webConfig">The contents of Web.config.</param>
         public static void WebConfigDebug(Dictionary<string, string> webConfig)
         {

@@ -1,7 +1,7 @@
 ﻿// Abatab ModQuickMedOrder 23.0.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221228.0852
+// b221228.1009
 
 using AbatabData;
 using AbatabLogging;
@@ -11,14 +11,10 @@ using System.Reflection;
 
 namespace ModQuickMedOrder
 {
-    /// <summary>
-    /// Dose logic for the QuickMedOrder module.
-    /// </summary>
+    /// <summary>Dose logic for the QuickMedOrder module.</summary>
     public static class Dose
     {
-        /// <summary>
-        /// Verifies that the dose increase percentage is within bounds.
-        /// </summary>
+        /// <summary>Verifies that the dose increase percentage is within bounds.</summary>
         /// <param name="abatabSession">Information/data for this session of Abatab.</param>
         public static void VerifyAmount(Session abatabSession)
         {
@@ -34,9 +30,7 @@ namespace ModQuickMedOrder
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
         }
 
-        /// <summary>
-        /// Initializes dosing information.
-        /// </summary>
+        /// <summary>Initializes dosing information.</summary>
         /// <param name="abatabSession">Information/data for this session of Abatab.</param>
         /// <remarks>
         /// This information is hardcoded, but should be the same for all Avatar clients.
@@ -64,7 +58,7 @@ namespace ModQuickMedOrder
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
         }
 
-        /// <summary></summary>
+        /// <summary>TBD</summary>
         /// <param name="abatabSession"></param>
         private static void CheckPercentage(Session abatabSession)
         {
@@ -211,17 +205,11 @@ namespace ModQuickMedOrder
 
                             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
-                            //var debugMsg2_ = $"[{prevDoseAsNumber}] [{currDoseAsNumber}] [{milligramDifference}] [{basePercentage}] [{percentDifference}]";
-                            //LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, debugMsg2_);
-
                             // TODO Should be converted when setup.
                             var percentBoundary    = Convert.ToDouble(abatabSession.ModQuickMedOrderConfig.DosePercentBoundary);
                             var milligramsBoundary = Convert.ToDouble(abatabSession.ModQuickMedOrderConfig.DoseMilligramsBoundary);
 
                             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, percentBoundary.ToString());
-
-                            //var currentMinusPrevious = Math.Abs(currDoseAsNumber - prevDoseAsNumber);
-                            //var previousMinusCurrent = Math.Abs(prevDoseAsNumber - currDoseAsNumber);
 
                             var overage  = Math.Abs(currDoseAsNumber - prevDoseAsNumber);
                             var underage = Math.Abs(prevDoseAsNumber - currDoseAsNumber);
@@ -232,19 +220,8 @@ namespace ModQuickMedOrder
 
                             // REINSTATE LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, $"[TRACE_02] {percentBoundary} | {milligramsBoundary} | {currentMinusPrevious} | {previousMinusCurrent} | {outsideBoundary} |   ");
 
-                            //var warningId = $"[ Warning ID: {abatabSession.SessionDateStamp}.{abatabSession.SessionTimeStamp}-{percentBoundary}.{percentDifference}-{milligramsBoundary}.{currentMinusPrevious}.{previousMinusCurrent} ]";
-
-                            //var warningId = $"[ Warning ID: {abatabSession.SessionDateStamp}.{abatabSession.SessionTimeStamp}-{percentBoundary}.{percentDifference}-{milligramsBoundary}.{overage}.{underage} ]";
                             var warningId = $"[ Warning ID: {abatabSession.SessionDateStamp}.{abatabSession.SessionTimeStamp}-{percentBoundary}.{percentDifference}-{milligramsBoundary}.{differ} ]";
 
-
-                            //if (currentMinusPrevious >= milligramsBoundary || previousMinusCurrent <= milligramsBoundary)
-                            //{
-                            //    LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
-
-                            //    outsideBoundary = true;
-                            //}
-                            //if (overage >= milligramsBoundary || underage <= milligramsBoundary)
                             if (differ >= milligramsBoundary)
                             {
                                 LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
@@ -259,19 +236,10 @@ namespace ModQuickMedOrder
                                 outsideBoundary = true;
                             }
 
-                            //if (currDoseAsNumber >= maxPercentChange || currDoseAsNumber <= maxPercentChange)
                             if (outsideBoundary)
                             {
                                 LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
-                                //var percentDifference = ((currDoseAsNumber - prevDoseAsNumber) / prevDoseAsNumber) * 100;
-
-                                //var niceString = string.Format("{0:0.#}", percentDifference);
-                                //var niceString = string.Format("{0:0.#}", percentDifference);
-
-                                // REINSTATE LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, $"[TRACE_02] {percentBoundary} | {milligramsBoundary} | {currentMinusPrevious} | {previousMinusCurrent} | {outsideBoundary} |   ");
-
-                                //var debugMsg3_ = $"[{prevDoseAsNumber}] [{currDoseAsNumber}] [{percentDifference}] [{maxPercentChange}] [{niceString}]";
                                 LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
                                 abatabSession.WorkOptObj.ErrorCode = 4;
@@ -311,9 +279,7 @@ namespace ModQuickMedOrder
             }
         }
 
-        /// <summary>
-        ///
-        /// </summary>
+        /// <summary>TBD</summary>
         /// <param name="abatabSession"></param>
         /// <param name="fieldObject"></param>
         private static void ProcessDosageOneField(Session abatabSession, FieldObject fieldObject)
@@ -340,16 +306,11 @@ namespace ModQuickMedOrder
             /* TODO This is the shorter version of the code above. More compact, less opportunity to troubleshoot due to fewer logs. Leaving this
              * here for the time being to remind myself we may want to use this instead.
              */
-            ////abatabSession.ModQuickMedOrderConfig.CurrentDose =fieldObject.FieldValue?.Length == 0
-            ////    ? ""
-            ////    : fieldObject.FieldValue;
 
             abatabSession.ModQuickMedOrderConfig.FoundDosageOneFieldId = true;
         }
 
-        /// <summary>
-        ///
-        /// </summary>
+        /// <summary>TBD</summary>
         /// <param name="abatabSession"></param>
         /// <param name="fieldObject"></param>
         private static void ProcessOrderTypeField(Session abatabSession, FieldObject fieldObject)
@@ -365,9 +326,7 @@ namespace ModQuickMedOrder
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, $"[TRACE_02]: OrderType = {fieldObject.FieldValue}/{abatabSession.ModQuickMedOrderConfig.OrderType} | FoundOrderTypeFieldId = {abatabSession.ModQuickMedOrderConfig.FoundOrderTypeFieldId}");
         }
 
-        /// <summary>
-        ///
-        /// </summary>
+        /// <summary>TBD</summary>
         /// <param name="abatabSession"></param>
         /// <param name="fieldObject"></param>
         private static void ProcessLastScheduledOrderField(Session abatabSession, FieldObject fieldObject)
@@ -381,9 +340,7 @@ namespace ModQuickMedOrder
             abatabSession.ModQuickMedOrderConfig.FoundLastOrderScheduleFieldId = true;
         }
 
-        /// <summary>
-        ///
-        /// </summary>
+        /// <summary>TBD</summary>
         /// <param name="abatabSession"></param>
         private static void WarningMissingPreviousDoseValue(Session abatabSession)
         {
@@ -396,10 +353,7 @@ namespace ModQuickMedOrder
                                                  $"{Environment.NewLine}" +
                                                  $"Are you sure you want to submit?";
         }
-
-        /// <summary>
-        ///
-        /// </summary>
+        /// <summary>TBD</summary>
         /// <param name="abatabSession"></param>
         private static void WarningMissingCurrentDoseValue(Session abatabSession)
         {

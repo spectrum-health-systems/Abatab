@@ -1,7 +1,7 @@
 ﻿// AbatabOptionObject 23.0.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221228.0852
+// b221228.1009
 
 using AbatabData;
 using AbatabLogging;
@@ -10,14 +10,10 @@ using System.Reflection;
 
 namespace AbatabOptionObject
 {
-    /// <summary>
-    /// Logic for working with the WorkOptObj.
-    /// </summary>
+    /// <summary>Logic for working with the WorkOptObj.</summary>
     public static class WorkObj
     {
-        /// <summary>
-        /// Builds the WorkOptObj.
-        /// </summary>
+        /// <summary>Builds the WorkOptObj. </summary>
         /// <param name="sentOptObj">The original OptionObject sent from Avatar.</param>
         public static OptionObject2015 Build(OptionObject2015 sentOptObj)
         {
@@ -29,9 +25,7 @@ namespace AbatabOptionObject
             return sentOptObj;
         }
 
-        /// <summary>
-        /// Clears the error information in the WorkOptObj.
-        /// </summary>
+        /// <summary>Clears the error information in the WorkOptObj.</summary>
         /// <param name="abatabSession">Information/data for this session of Abatab.</param>
         /// <param name="errCode">The error code.</param>
         /// <param name="errMsg">The error message.</param>

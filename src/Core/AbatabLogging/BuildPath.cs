@@ -1,7 +1,7 @@
 ﻿// AbatabLogging 23.0.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221228.0852
+// b221228.1009
 
 /* ========================================================================================================
  * PLEASE READ
@@ -20,14 +20,10 @@ using System.IO;
 
 namespace AbatabLogging
 {
-    /// <summary>
-    /// Logic for building log file paths.
-    /// </summary>
+    /// <summary>Logic for building log file paths.</summary>
     public static class BuildPath
     {
-        /// <summary>
-        /// Builds a log file path with caller information.
-        /// </summary>
+        /// <summary>Builds a log file path with caller information.</summary>
         /// <param name="eventType">The type of log to create.</param>
         /// <param name="logRoot">The session root directory.</param>
         /// <param name="exeAssembly">The name of executing assembly.</param>
@@ -57,9 +53,7 @@ namespace AbatabLogging
             }
         }
 
-        /// <summary>
-        /// Builds a timestamped log file path.
-        /// </summary>
+        /// <summary>Builds a timestamped log file path.</summary>
         /// <param name="eventType">The type of log to create.</param>
         /// <param name="logRoot">The session root directory.</param>
         /// <returns>A completed log file path with a timestamp.</returns>
@@ -90,9 +84,7 @@ namespace AbatabLogging
             }
         }
 
-        /// <summary>
-        /// Builds a log file path with the log message in the name.
-        /// </summary>
+        /// <summary>Builds a log file path with the log message in the name.</summary>
         /// <param name="eventType">The type of log to create.</param>
         /// <param name="logRoot">The session root directory.</param>
         /// <param name="logMsg">The log message.</param>
@@ -113,9 +105,7 @@ namespace AbatabLogging
                     return $@"{logDir}\{DateTime.Now:HHmmss_fffffff}.{eventType}";
             }
         }
-        /// <summary>
-        /// Build the path to a debug log.
-        /// </summary>
+        /// <summary>Build the path to a debug log.</summary>
         /// <param name="logRoot">The log root.</param>
         /// <returns>The path to the log root.</returns>
         private static string BuildDebugLogDir(string logRoot)
@@ -126,9 +116,7 @@ namespace AbatabLogging
             return debugLogDir;
         }
 
-        /// <summary>
-        /// Build the path to a lost log.
-        /// </summary>
+        /// <summary>Build the path to a lost log.</summary>
         /// <param name="logRoot">The log root.</param>
         /// <returns>The path to the log root.</returns>
         private static string BuildLostLogDir(string logRoot)
@@ -139,9 +127,7 @@ namespace AbatabLogging
             return lostLogDir;
         }
 
-        /// <summary>
-        /// Build the path to a primeval debug log.
-        /// </summary>
+        /// <summary>Build the path to a primeval debug log.</summary>
         /// <param name="logRoot">The log root.</param>
         /// <returns>The path to the log root.</returns>
         private static string BuildPrimevalDebugLogDir(string logRoot)
@@ -152,9 +138,7 @@ namespace AbatabLogging
             return debugLogDir;
         }
 
-        /// <summary>
-        /// Build the path to a trace log.
-        /// </summary>
+        /// <summary>Build the path to a trace log.</summary>
         /// <param name="logRoot">The log root.</param>
         /// <returns>The path to the log root.</returns>
         private static string BuildTraceLogDir(string traceLogRoot)

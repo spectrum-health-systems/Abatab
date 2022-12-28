@@ -1,7 +1,7 @@
 ﻿// AbatabOptionObject 23.0.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221228.0852
+// b221228.1009
 
 // NOT USED.
 
@@ -9,9 +9,7 @@ using NTST.ScriptLinkService.Objects;
 
 namespace AbatabOptionObject
 {
-    /// <summary>
-    /// Verification for OptionObjects
-    /// </summary>
+    /// <summary>Verification for OptionObjects.</summary>
     public static class Verify
     {
         /// <summary>Verify that the sentOptObj has not been modified.</summary>

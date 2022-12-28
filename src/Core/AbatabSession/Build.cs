@@ -1,7 +1,7 @@
 ﻿// AbatabSession 23.0.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221228.0852
+// b221228.1009
 
 using AbatabData;
 using AbatabData.Core;
@@ -14,14 +14,10 @@ using System.Reflection;
 
 namespace AbatabSession
 {
-    /// <summary>
-    /// Logic for session instances.
-    /// </summary>
+    /// <summary>Logic for session instances.</summary>
     public static class Build
     {
-        /// <summary>
-        /// Builds configuration settings for an Abatab session.
-        /// </summary>
+        /// <summary>Builds configuration settings for an Abatab session.</summary>
         /// <param name="sentOptObj">The original OptionObject sent from Avatar.</param>
         /// <param name="scriptParameter">The script parameter request from Avatar.</param>
         /// <returns>Session configuration settings.</returns>
@@ -85,9 +81,7 @@ namespace AbatabSession
             return abatabSession;
         }
 
-        /// <summary>
-        ///
-        /// </summary>
+        /// <summary>TBD</summary>
         /// <param name="abatabSettings"></param>
         /// <param name="abatabSession"></param>
         private static void BuildModTestingConfig(Dictionary<string, string> abatabSettings, Session abatabSession)
@@ -97,9 +91,8 @@ namespace AbatabSession
                 Mode = abatabSettings["ModTestingMode"],
             };
         }
-        /// <summary>
-        ///
-        /// </summary>
+
+        /// <summary>TBD</summary>
         /// <param name="abatabSettings"></param>
         /// <param name="abatabSession"></param>
         private static void BuildModPrototypeConfig(Dictionary<string, string> abatabSettings, Session abatabSession)
@@ -109,9 +102,8 @@ namespace AbatabSession
                 Mode = abatabSettings["ModPrototypeMode"],
             };
         }
-        /// <summary>
-        ///
-        /// </summary>
+
+        /// <summary>TBD</summary>
         /// <param name="abatabSettings"></param>
         /// <param name="abatabSession"></param>
         private static void BuildModQuickMedOrderConfig(Dictionary<string, string> abatabSettings, Session abatabSession)
@@ -138,9 +130,7 @@ namespace AbatabSession
             };
         }
 
-        /// <summary>
-        ///
-        /// </summary>
+        /// <summary>TBD</summary>
         /// <param name="abatabSettings"></param>
         /// <param name="abatabSession"></param>
         private static void BuildDebugglerConfig(Dictionary<string, string> abatabSettings, Session abatabSession)
@@ -152,9 +142,7 @@ namespace AbatabSession
             };
         }
 
-        /// <summary>
-        ///
-        /// </summary>
+        /// <summary>TBD</summary>
         /// <param name="abatabSettings"></param>
         /// <param name="abatabSession"></param>
         private static void BuildLoggingConfig(Dictionary<string, string> abatabSettings, Session abatabSession)
@@ -184,9 +172,7 @@ namespace AbatabSession
             abatabSession.LoggingConfig.EventTraceRoot = $@"{abatabSession.LoggingConfig.SessionRoot}\trace";
         }
 
-        /// <summary>
-        /// Verifies the session AbatabUserName is valid.
-        /// </summary>
+        /// <summary>Verifies the session AbatabUserName is valid.</summary>
         /// <param name="abatabSession">Information/data for this session of Abatab.</param>
         private static void VerifyAbatabUserName(Session abatabSession)
         {
@@ -202,9 +188,7 @@ namespace AbatabSession
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
         }
 
-        /// <summary>
-        /// Parses the abatabRequest into separate components.
-        /// </summary>
+        /// <summary>Parses the abatabRequest into separate components.</summary>
         /// <param name="abatabSession">Information/data for this session of Abatab.</param>
         private static void ParseAbatabRequest(Session abatabSession)
         {
