@@ -96,3 +96,16 @@ No changes
 **[-]** Complete all XML documentation
 
 [Logo]: /.github/res/img/logo/RepositoryLogo.png
+
+
+
+
+
+
+
+
+
+
+
+
+Automatic testing of stuff.
