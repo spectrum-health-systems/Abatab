@@ -1,7 +1,7 @@
 ﻿// AbatabData 23.0.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221228.1009
+// b221228.1025
 
 namespace AbatabData.Module
 {
@@ -24,9 +24,7 @@ namespace AbatabData.Module
         /// <value></value>
         public string DosePercentBoundary { get; set; }
 
-        /// <summary>
-        ///
-        /// </summary>
+        /// <summary>TBD</summary>
         /// <value></value>
         public string DoseMilligramsBoundary { get; set; }
 

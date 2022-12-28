@@ -1,7 +1,7 @@
 ﻿// Abatab ModCommon 23.0.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221228.1009
+// b221228.1025
 
 namespace ModCommon
 {
@@ -16,6 +16,7 @@ namespace ModCommon
         {
             // TODO Add logging functionality.
 
+            // TODO - use string comparisons
             return validUsers.Trim().ToLower() == "all" || validUsers.ToLower().Contains(userName.ToLower()); // TODO More efficient way?
         }
     }

@@ -1,7 +1,7 @@
 ﻿// AbatabData 23.0.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221228.1009
+// b221228.1025
 
 namespace AbatabData.Core
 {
@@ -51,7 +51,7 @@ namespace AbatabData.Core
         public string LoggingMode { get; set; }
 
         /// <summary>The detail level of log files (currently not used).</summary>
-        /// <value>Currenly not used.</value>
+        /// <value>Currently not used.</value>
         public string Detail { get; set; }
 
 

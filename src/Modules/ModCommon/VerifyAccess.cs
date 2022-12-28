@@ -1,7 +1,7 @@
 ﻿// Abatab ModCommon 23.0.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221228.1009
+// b221228.1025
 
 using AbatabData;
 using AbatabLogging;
@@ -17,6 +17,8 @@ namespace ModCommon
         /// <returns></returns>
         public static bool CheckIfValidUser(string abatabUser, string validUsers)
         {
+
+            // TODO - use string comparison
             return validUsers.Trim().ToLower() == "all" || validUsers.ToLower().Contains(abatabUser.ToLower());
 
         }

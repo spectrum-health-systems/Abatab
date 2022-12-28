@@ -109,3 +109,6 @@ No changes
 
 
 Automatic testing of stuff.
+Consolidate all dev documentation (roadmap, notes, changelog, etc.)
+Verify all settings/etc. exist and match
+Add TODOs everywhere

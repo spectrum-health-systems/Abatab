@@ -1,12 +1,10 @@
 ﻿// AbatabLogging 23.0.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221228.1009
+// b221228.1025
 
 /* ========================================================================================================
- * PLEASE READ
- * -----------
- * Logging is done a little differently in AbatabLogging.csproj, since trying to create logs using the same
+ * Logging is done a little differently in AbatabLogging classes, since trying to create logs using the same
  * code that creates logs results in strange behavior.
  *
  * For the most part, LogEvent.Trace() is replaced with Debugger.BuildDebugLog(), although in some cases
@@ -57,7 +55,7 @@ namespace AbatabLogging
         public static void Debug(string exeAssembly, string debugMode, string debugLogRoot = "", string debugMsg = "", [CallerFilePath] string callPath = "", [CallerMemberName] string callMember = "", [CallerLineNumber] int callLine = 0)
         {
             /* Change this to "true" to write additional log files. This will significantly affect performance.
-             */
+            */
             const bool debugDebugger = false;
 
             Debuggler.DebugTheDebugger(debugDebugger, debugLogRoot, "[BuildDebugLog-001]");
@@ -112,8 +110,8 @@ namespace AbatabLogging
                 var debugLogPath = BuildPath.Timestamped("primevaldebug", primevalPath);
 
                 /* Delay creating a debug log by 10ms, just to make sure we don't overwrite an
-                 * existing log. This will have a significant negative affect on performance.
-                 */
+                * existing log. This will have a significant negative affect on performance.
+                */
                 WriteLogFile.LocalFile(debugLogPath, debugContent, 10);
             }
         }
@@ -167,6 +165,7 @@ namespace AbatabLogging
         {
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, webConfig["DebugMode"], webConfig["DebugLogRoot"], "[DEBUG]");
 
+            // TODO - why is this here?
             var webConfigContents = $"------------------{Environment.NewLine}" +
                                     $"webConfig contents{Environment.NewLine}" +
                                     $"------------------{Environment.NewLine}" +

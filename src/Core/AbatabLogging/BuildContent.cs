@@ -1,12 +1,10 @@
 ﻿// AbatabLogging 23.0.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221228.1009
+// b221228.1025
 
 /* ========================================================================================================
- * PLEASE READ
- * -----------
- * Logging is done a little differently in AbatabLogging.csproj, since trying to create logs using the same
+ * Logging is done a little differently in AbatabLogging classes, since trying to create logs using the same
  * code that creates logs results in strange behavior.
  *
  * For the most part, LogEvent.Trace() is replaced with Debugger.BuildDebugLog(), although in some cases
@@ -84,7 +82,7 @@ namespace AbatabLogging
         /// <returns>The completed log header component.</returns>
         private static string ComponentHead(string logMsg)
         {
-            // No log statement here.
+            // No log statement here (see comments at top of file)
 
             return $"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-={Environment.NewLine}" +
                    $"{logMsg}{Environment.NewLine}" +

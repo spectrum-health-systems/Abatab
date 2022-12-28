@@ -124,3 +124,8 @@ Abatab is developed by [A Pretty Cool Program][a-pretty-cool-program-url]
 [man-using]: ./man-using.md
 [man-additional-information]: ./man-additional-information.md
 [a-pretty-cool-program-url]: https://github.com/APrettyCoolProgram
+
+
+
+
+$ strings are used even when they aren't needed, for readability

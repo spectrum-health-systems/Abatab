@@ -1,7 +1,7 @@
 ﻿// AbatabSession 23.0.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221228.1009
+// b221228.1025
 
 using AbatabData;
 using AbatabData.Core;
@@ -23,10 +23,10 @@ namespace AbatabSession
         /// <returns>Session configuration settings.</returns>
         public static Session NewSession(OptionObject2015 sentOptObj, string scriptParameter, Dictionary<string, string> webConfig)
         {
-            //?LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"], "[DEBUG]");
+            // TODO - put the following line back?
+            // LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"], "[DEBUG]");
             // Can't really put a trace log here.
 
-            //var debug_ = $"TEST:{abatabSettings["LogMode"]} - {abatabSettings["LogDetail"]} - {abatabSettings["LogWriteDelay"]}";
             var debug_ = $"TEST-- {webConfig["LogMode"]}";
 
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, webConfig["DebugMode"], $@"{webConfig["AbatabRoot"]}\{webConfig["DebugLogRoot"]}", debug_);
@@ -147,12 +147,11 @@ namespace AbatabSession
         /// <param name="abatabSession"></param>
         private static void BuildLoggingConfig(Dictionary<string, string> abatabSettings, Session abatabSession)
         {
+            // TODO - is the following still the case?
             /* For some reason, if the log settings are called "Log*" (e.g., "LogMode"), Abatab crashes. For now I am leaving the log settings as "Logging*".
              */
-
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"]);
 
-            //var debug_ = $"TEST:{abatabSettings["LogMode"]} - {abatabSettings["LogDetail"]} - {abatabSettings["LogWriteDelay"]}";
             var debug_ = $"TEST:{abatabSettings["LogMode"]} - {abatabSettings["DebugLogRoot"]} - {abatabSettings["ModTestingMode"]}";
 
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"], debug_);
