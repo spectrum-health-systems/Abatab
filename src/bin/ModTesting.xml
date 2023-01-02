@@ -5,31 +5,21 @@
     </assembly>
     <members>
         <member name="T:ModTesting.DataDump">
-            <summary>
-            Logic for the Testing module.
-            </summary>
+            <summary>Logic for the Testing module.</summary>
         </member>
         <member name="M:ModTesting.DataDump.SessionData(AbatabData.Session)">
-            <summary>
-            Create a data dump for this session.
-            </summary>
+            <summary>Create a data dump for this session.</summary>
             <param name="abatabSession">Information/data for this session of Abatab.</param>
         </member>
         <member name="T:ModTesting.Roundhouse">
-            <summary>
-            Roundhouse logic for the Testing module.
-            </summary>
+            <summary>Roundhouse logic for the Testing module.</summary>
         </member>
         <member name="M:ModTesting.Roundhouse.ParseRequest(AbatabData.Session)">
-            <summary>
-            Parse the Abatab request command.
-            </summary>
+            <summary>Parse the Abatab request command.</summary>
             <param name="abatabSession">Information/data for this session of Abatab.</param>
         </member>
         <member name="M:ModTesting.Roundhouse.ParseCommandDataDump(AbatabData.Session)">
-            <summary>
-            Do a data dump.
-            </summary>
+            <summary>Do a data dump.</summary>
             <param name="abatabSession">Information/data for this session of Abatab.</param>
         </member>
     </members>
