@@ -48,7 +48,6 @@
   <ItemGroup>
     <None Include="docfx_default.json" />
     <None Include="docfx.json" />
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

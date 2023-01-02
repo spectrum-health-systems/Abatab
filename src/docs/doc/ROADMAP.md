@@ -8,7 +8,7 @@
 
 # 23.0.X
 
-## 24.0.0 (December 1, 2022)
+## 23.0.0 (December 1, 2022)
 
 ### Abatab
 
@@ -31,7 +31,7 @@
 
 ### Core functionality
 
-* **[X]** Test to make sure that replacing DLL files works as expected. (24.0.0.0-testbuild+221115.0903)
+* **[X]** Test to make sure that replacing DLL files works as expected. (23.0.0.0-testbuild+221115.0903)
 * **[-]** Confirm that we don't need other .DLLs (e.g., Roslyn stuff)
 
 #### AbatabData
