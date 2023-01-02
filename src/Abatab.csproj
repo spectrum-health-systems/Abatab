@@ -1,0 +1,305 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BE9DE07E-2670-46EE-AA14-F24B9BD0E8E1}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Abatab</RootNamespace>
+    <AssemblyName>Abatab</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44314</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>AppData\Documentation\Abatab.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Abatab.asmx" />
+    <Content Include="Resources\AppIcon\README.md" />
+    <Content Include="Resources\Documents\README.md" />
+    <Content Include="Resources\Fonts\README.md" />
+    <Content Include="Resources\Images\README.md" />
+    <Content Include="Resources\Raw\README.md" />
+    <Content Include="Resources\Splash\README.md" />
+    <Content Include="Resources\Styles\README.md" />
+    <Content Include="Resources\Images\Logos\README.md" />
+    <Content Include="Resources\Images\Controls\README.md" />
+    <Content Include="Resources\Data\README.md" />
+    <None Include="Resources\Data\version.json" />
+    <Content Include="docs\favicon.ico" />
+    <Content Include="docs\images\hosting-using-iis\iis-add-website-362x414.png" />
+    <Content Include="docs\images\hosting-using-iis\iis-application-pool-633x187.png" />
+    <Content Include="docs\images\hosting-using-iis\iis-directory-browsing-633x204.png" />
+    <Content Include="docs\images\hosting-using-iis\iis-roles-295x650.png" />
+    <Content Include="docs\images\hosting-using-iis\iis-site-home-633x206.png" />
+    <Content Include="docs\images\importing-abatab\scriptlink-form-designer-settings-button-364x335.png" />
+    <Content Include="docs\images\importing-abatab\scriptlink-options-import-wsdl-847x375.png" />
+    <Content Include="docs\images\importing-abatab\wsdl-xml-example-799x393.png" />
+    <Content Include="docs\images\man-logo.png" />
+    <Content Include="docs\images\other\ntst-portal-app-exchange-01-490x550.png" />
+    <Content Include="docs\images\other\ntst-portal-app-exchange-02-710x554.png" />
+    <Content Include="docs\images\other\scriptlink-event-example-839x369.png" />
+    <Content Include="docs\images\other\vs2019-add-ntst-scriptlink-service-01-800x655.png" />
+    <Content Include="docs\images\other\vs2019-add-ntst-scriptlink-service-02-800x676.png" />
+    <Content Include="docs\images\other\vs2019-add-ntst-scriptlink-service-03-310x313.png" />
+    <Content Include="docs\images\other\vs2019-add-ntst-scriptlink-service-04-800x655.png" />
+    <Content Include="docs\images\other\vs2019-add-ntst-scriptlink-service-05-800x555.png" />
+    <Content Include="docs\images\other\vs2019-add-web-service-01-710x742.png" />
+    <Content Include="docs\images\other\vs2019-add-web-service-02-710x496.png" />
+    <Content Include="docs\images\other\vs2019-add-web-service-03-710x947.png" />
+    <Content Include="docs\images\other\vs2019-configure-new-project-800x535.png" />
+    <Content Include="docs\images\other\vs2019-create-new-asp-app-800x540.png" />
+    <Content Include="docs\images\other\vs2019-create-new-project-800x535.png" />
+    <Content Include="docs\images\other\vs2019-empty-app-800x655.png" />
+    <Content Include="docs\images\other\vs2019-new-project-template-800x535.png" />
+    <Content Include="docs\logo.svg" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abatab.asmx.cs">
+      <DependentUpon>Abatab.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Roundhouse.cs" />
+    <Compile Include="WebConfig.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="docs\api\index.md" />
+    <Content Include="docs\doc\CHANGELOG.md" />
+    <Content Include="docs\doc\index.md" />
+    <Content Include="docs\doc\release-notes\22-11-0.md" />
+    <Content Include="docs\doc\release-notes\22-11-1.md" />
+    <Content Include="docs\doc\ROADMAP.md" />
+    <Content Include="docs\doc\toc.md" />
+    <Content Include="docs\index.md" />
+    <Content Include="docs\man\additional-reading\man_additional-reading_home.md" />
+    <Content Include="docs\man\configuration\man_configuration_local-settings.md" />
+    <Content Include="docs\man\configuration\man_configuration_home.md" />
+    <Content Include="docs\man\index.md" />
+    <Content Include="docs\man\functionality\man_functionality_core.md" />
+    <Content Include="docs\man\functionality\man_functionality_existing.md" />
+    <Content Include="docs\man\functionality\man_functionality_home.md" />
+    <Content Include="docs\man\functionality\man_functionality_modules.md" />
+    <Content Include="docs\man\functionality\man_functionality_new.md" />
+    <Content Include="docs\man\getting-started\man_getting-started_home.md" />
+    <Content Include="docs\man\hosting\man_hosting_home.md" />
+    <Content Include="docs\man\importing\man_importing_home.md" />
+    <Content Include="docs\man\logging\man_logging_home.md" />
+    <Content Include="docs\man\source-code\man_source-code_home.md" />
+    <Content Include="docs\man\toc.md" />
+    <Content Include="docs\obj\api\.manifest" />
+    <Content Include="docs\obj\api\Abatab.Abatab.yml" />
+    <Content Include="docs\obj\api\Abatab.Roundhouse.yml" />
+    <Content Include="docs\obj\api\Abatab.WebConfig.yml" />
+    <Content Include="docs\obj\api\Abatab.yml" />
+    <Content Include="docs\obj\api\AbatabData.Core.Debuggler.yml" />
+    <Content Include="docs\obj\api\AbatabData.Core.Logging.yml" />
+    <Content Include="docs\obj\api\AbatabData.Core.yml" />
+    <Content Include="docs\obj\api\AbatabData.Module.Common.yml" />
+    <Content Include="docs\obj\api\AbatabData.Module.Prototype.yml" />
+    <Content Include="docs\obj\api\AbatabData.Module.QuickMedOrder.yml" />
+    <Content Include="docs\obj\api\AbatabData.Module.Testing.yml" />
+    <Content Include="docs\obj\api\AbatabData.Module.yml" />
+    <Content Include="docs\obj\api\AbatabData.Session.yml" />
+    <Content Include="docs\obj\api\AbatabData.yml" />
+    <Content Include="docs\obj\api\AbatabLogging.BuildContent.yml" />
+    <Content Include="docs\obj\api\AbatabLogging.BuildPath.yml" />
+    <Content Include="docs\obj\api\AbatabLogging.CommentExamples.ExampleClass.yml" />
+    <Content Include="docs\obj\api\AbatabLogging.CommentExamples.yml" />
+    <Content Include="docs\obj\api\AbatabLogging.Debuggler.yml" />
+    <Content Include="docs\obj\api\AbatabLogging.LogEvent.yml" />
+    <Content Include="docs\obj\api\AbatabLogging.WriteLogFile.yml" />
+    <Content Include="docs\obj\api\AbatabLogging.yml" />
+    <Content Include="docs\obj\api\AbatabOptionObject.FinalObj.yml" />
+    <Content Include="docs\obj\api\AbatabOptionObject.Verify.yml" />
+    <Content Include="docs\obj\api\AbatabOptionObject.WorkObj.yml" />
+    <Content Include="docs\obj\api\AbatabOptionObject.yml" />
+    <Content Include="docs\obj\api\AbatabSession.Build.yml" />
+    <Content Include="docs\obj\api\AbatabSession.yml" />
+    <Content Include="docs\obj\api\AbatabSystem.Maintenance.yml" />
+    <Content Include="docs\obj\api\AbatabSystem.yml" />
+    <Content Include="docs\obj\api\Du.WithDictionary.yml" />
+    <Content Include="docs\obj\api\Du.WithDirectory.yml" />
+    <Content Include="docs\obj\api\Du.yml" />
+    <Content Include="docs\obj\api\ModCommon.Roundhouse.yml" />
+    <Content Include="docs\obj\api\ModCommon.Verify.yml" />
+    <Content Include="docs\obj\api\ModCommon.VerifyAccess.yml" />
+    <Content Include="docs\obj\api\ModCommon.yml" />
+    <Content Include="docs\obj\api\ModProgressNote.Roundhouse.yml" />
+    <Content Include="docs\obj\api\ModProgressNote.yml" />
+    <Content Include="docs\obj\api\ModPrototype.Roundhouse.yml" />
+    <Content Include="docs\obj\api\ModPrototype.yml" />
+    <Content Include="docs\obj\api\ModQuickMedOrder.Dose.yml" />
+    <Content Include="docs\obj\api\ModQuickMedOrder.Roundhouse.yml" />
+    <Content Include="docs\obj\api\ModQuickMedOrder.yml" />
+    <Content Include="docs\obj\api\ModTesting.DataDump.yml" />
+    <Content Include="docs\obj\api\ModTesting.Roundhouse.yml" />
+    <Content Include="docs\obj\api\ModTesting.yml" />
+    <Content Include="docs\obj\api\NTST.ScriptLinkService.Objects.FieldObject.yml" />
+    <Content Include="docs\obj\api\NTST.ScriptLinkService.Objects.FormObject.yml" />
+    <Content Include="docs\obj\api\NTST.ScriptLinkService.Objects.OptionObject2015.yml" />
+    <Content Include="docs\obj\api\NTST.ScriptLinkService.Objects.RowObject.yml" />
+    <Content Include="docs\obj\api\NTST.ScriptLinkService.Objects.yml" />
+    <Content Include="docs\obj\api\toc.yml" />
+    <Content Include="docs\toc.yml" />
+    <Content Include="docs\man\using\man_using_home.md" />
+    <Content Include="docs\man\docfx\man_docfx_home.md" />
+    <Content Include="docs\man\docfx\man_docfx_how-to.md" />
+    <Content Include="docs\man\testing\man_testing_home.md" />
+    <Content Include="docs\man\testing\man_testing_modquickmedorder.md" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Core\AbatabData\AbatabData.csproj">
+      <Project>{E3028CFD-5965-4555-9A96-3EBBDFD4D550}</Project>
+      <Name>AbatabData</Name>
+    </ProjectReference>
+    <ProjectReference Include="Core\AbatabLogging\AbatabLogging.csproj">
+      <Project>{A4467424-56E0-4260-BB21-D98263D7AEFD}</Project>
+      <Name>AbatabLogging</Name>
+    </ProjectReference>
+    <ProjectReference Include="Core\AbatabOptionObject\AbatabOptionObject.csproj">
+      <Project>{2741df45-7db8-4bea-89b4-4a70c7114192}</Project>
+      <Name>AbatabOptionObject</Name>
+    </ProjectReference>
+    <ProjectReference Include="Core\AbatabSession\AbatabSession.csproj">
+      <Project>{5FCAD3F6-0AA9-4BEE-B390-097A6832568E}</Project>
+      <Name>AbatabSession</Name>
+    </ProjectReference>
+    <ProjectReference Include="Modules\ModCommon\ModCommon.csproj">
+      <Project>{cbd27c27-b3cd-455e-af5d-4749ca219d53}</Project>
+      <Name>ModCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="Modules\ModProgressNote\ModProgressNote.csproj">
+      <Project>{b129ebaf-4a98-47de-9c9e-4abe80883c52}</Project>
+      <Name>ModProgressNote</Name>
+    </ProjectReference>
+    <ProjectReference Include="Modules\ModPrototype\ModPrototype.csproj">
+      <Project>{312ec2a5-27d6-4abf-8697-022db3123933}</Project>
+      <Name>ModPrototype</Name>
+    </ProjectReference>
+    <ProjectReference Include="Modules\ModQuickMedOrder\ModQuickMedOrder.csproj">
+      <Project>{2b511742-bd1e-4600-a041-7229942f4672}</Project>
+      <Name>ModQuickMedOrder</Name>
+    </ProjectReference>
+    <ProjectReference Include="Modules\ModTesting\ModTesting.csproj">
+      <Project>{62d98fc0-0a8d-4278-a96b-c9acefb79ef3}</Project>
+      <Name>ModTesting</Name>
+    </ProjectReference>
+    <ProjectReference Include="ThirdParty\NTST.ScriptLinkService.Objects\NTST.ScriptLinkService.Objects.vbproj">
+      <Project>{8A8A6089-3286-42E6-9F76-B61784709654}</Project>
+      <Name>NTST.ScriptLinkService.Objects</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55909</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44314/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
