@@ -1,13 +1,18 @@
-﻿// Abatab 23.0.0
+﻿// Abatab 24.0.0
 // Copyright (c) A Pretty Cool Program
 // See the LICENSE file for more information.
-// b221228.1025
+// b230102.1026
 
 using Abatab.Properties;
+
 using AbatabData;
+
 using AbatabLogging;
+
 using AbatabSession;
+
 using NTST.ScriptLinkService.Objects;
+
 using System.Collections.Generic;
 using System.Reflection;
 using System.Web.Services;
