@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Abatab</name>
+    </assembly>
+    <members>
+        <member name="T:Abatab.Abatab">
+            <summary>The entry point for Abatab.</summary>
+            <remarks>
+            Abatab receives two things from Avatar:
+            <list type="number">
+            <item>An <see href="../man/manAppendix.html#optionobject">OptionObject</see>, which contains all of the information that Abatab needs to do it's thing.</item>
+            <item>A <see href="../man/manAppendix.html#script-paramater">Script Parameter</see> that tells Abatab what it needs to do with the OptionObject.</item>
+            </list>
+            </remarks>
+        </member>
+        <member name="M:Abatab.Abatab.GetVersion">
+            <summary>Returns the current version of Abatab.</summary>
+            <returns>The current version of Abatab.</returns>
+            <remarks>
+            <list type="bullet">
+            <item>This method is required by Avatar.</item>
+            <item>The version number is always the version that is in development.</item>
+            </list>
+            </remarks>
+        </member>
+        <member name="M:Abatab.Abatab.RunScript(NTST.ScriptLinkService.Objects.OptionObject2015,System.String)">
+            <summary>Executes script parameter request from Avatar, then returns a potentially modified OptionObject to Avatar.</summary>
+            <param name="sentOptionObject">The original OptionObject sent from Avatar.</param>
+            <param name="scriptParameter">The original Script Parameter request from Avatar.</param>
+            <returns>A finalized OptionObject that will be returned to Avatar.</returns>
+            <remarks>
+            <list type="bullet">
+            <item>This method is required by Avatar.</item>
+            <item>This is the only time a <see href="../man/manAppendix.html#logging">Primeval debug log</see> is written.</item>
+            </list>
+            </remarks>
+        </member>
+        <member name="T:Abatab.Roundhouse">
+            <summary>Determines what should be done with the <b>module</b> component of the <see href="../man/manAppendix.html#script-parameter">Script Parameter</see>.</summary>
+        </member>
+        <member name="M:Abatab.Roundhouse.ParseRequest(AbatabData.Session)">
+            <summary>Parses the Script Parameter and sends valid requests to the proper destination.</summary>
+            <param name="abatabSession">Settings and data for this session of Abatab.</param>
+            <remarks>
+            <list type="bullet">
+            <item>Only parses the <b>module</b> component of the <see href="../man/manAppendix.html#script-parameter">Script Parameter</see>.</item>
+            <item>Whenever a new Abatab Module is added, <see href="../man/manAppendix.html#script-parameter">the necessary logic</see> will need to be added here.</item>
+            </list>
+            </remarks>
+        </member>
+        <member name="T:Abatab.WebConfig">
+            <summary>Loads settings from the <see href="../man/manAppendix.html#configuration">Web.config</see> file.</summary>
+        </member>
+        <member name="M:Abatab.WebConfig.Load">
+            <summary>Load the settings from the Web.config file.</summary>
+            <returns>A dictionary containing the settings from Web.config.</returns>
+            <remarks>
+            <list type="bullet">
+            <item>These <see href="../man/manAppendix.html#configuration">configuration settings</see> are setup in <i>src/Properties/Settings.settings</i>, and modified in the <see href="../man/manAppendix.html#webconfig">Web.config</see> file.</item>
+            <item>Whenever a new value is added/removed to <i>src/Properties/Settings.settings</i>, it needs to be added/removed here as well.</item>
+            <item>Settings are <see href="../man/manSourceCode.html#casing-and-trimming">trimmed and converted to lowercase</see>.</item>
+            </list>
+            </remarks>
+        </member>
+    </members>
+</doc>

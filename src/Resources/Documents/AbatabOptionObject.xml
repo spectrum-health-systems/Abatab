@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AbatabOptionObject</name>
+    </assembly>
+    <members>
+        <member name="T:AbatabOptionObject.WorkObj">
+            <summary>
+            Logic for working with the WorkOptObj.
+            </summary>
+        </member>
+        <member name="M:AbatabOptionObject.WorkObj.Build(NTST.ScriptLinkService.Objects.OptionObject2015)">
+            <summary>
+            Builds the WorkOptObj.
+            </summary>
+            <param name="sentOptObj">The original OptionObject sent from Avatar.</param>
+        </member>
+        <member name="M:AbatabOptionObject.WorkObj.ClearErrorData(AbatabData.Session,System.Int32,System.String)">
+            <summary>
+            Clears the error information in the WorkOptObj.
+            </summary>
+            <param name="abatabSession">Information/data for this session of Abatab.</param>
+            <param name="errCode">The error code.</param>
+            <param name="errMsg">The error message.</param>
+        </member>
+        <member name="T:AbatabOptionObject.FinalObj">
+            <summary>
+            Logic for working with the FinalOptObj.
+            </summary>
+        </member>
+        <member name="M:AbatabOptionObject.FinalObj.Finalize(AbatabData.Session)">
+            <summary>
+            Finalizes an OptionObject.
+            </summary>
+            <param name="abatabSession">Information/data for this session of Abatab.</param>
+        </member>
+        <member name="M:AbatabOptionObject.FinalObj.ForUpdate(AbatabData.Session)">
+            <summary>
+            Builds the FinalOptObj stuff when the Abatab mode is set to passthrough.
+            </summary>
+            <param name="abatabSession">Information/data for this session of Abatab.</param>
+        </member>
+        <member name="M:AbatabOptionObject.FinalObj.ForPassthrough(AbatabData.Session)">
+            <summary>
+            Builds the FinalOptObj stuff when the Abatab mode is set to passthrough.
+            </summary>
+            <param name="abatabSession">Information/data for this session of Abatab.</param>
+        </member>
+        <member name="T:AbatabOptionObject.Verify">
+            <summary>
+            Verification for OptionObjects
+            </summary>
+        </member>
+        <member name="M:AbatabOptionObject.Verify.NotModified(NTST.ScriptLinkService.Objects.OptionObject2015,NTST.ScriptLinkService.Objects.OptionObject2015)">
+            <summary>Verify that the sentOptObj has not been modified.</summary>
+            <param name="sentOptObj"></param>
+            <param name="altOptObj"></param>
+        </member>
+    </members>
+</doc>
