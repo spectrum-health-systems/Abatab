@@ -1,7 +1,5 @@
-﻿// Du 23.0.0
+﻿// Du.WithDirectory.cs b230104.1221
 // Copyright (c) A Pretty Cool Program
-// See the LICENSE file for more information.
-// b221214.0804
 
 using System.IO;
 

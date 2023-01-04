@@ -1,22 +1,18 @@
-﻿// AbatabOptionObject 23.0.0
+﻿// Abatab.AbatabOptionObject.FinalObj.cs b230104.1221
 // Copyright (c) A Pretty Cool Program
-// See the LICENSE file for more information.
-// b221214.0804
 
 using AbatabData;
+
 using AbatabLogging;
+
 using System.Reflection;
 
 namespace AbatabOptionObject
 {
-    /// <summary>
-    /// Logic for working with the FinalOptObj.
-    /// </summary>
+    /// <summary>Logic for working with the FinalOptObj.</summary>
     public static class FinalObj
     {
-        /// <summary>
-        /// Finalizes an OptionObject.
-        /// </summary>
+        /// <summary>Finalizes an OptionObject.</summary>
         /// <param name="abatabSession">Information/data for this session of Abatab.</param>
         public static void Finalize(Session abatabSession)
         {
@@ -42,9 +38,7 @@ namespace AbatabOptionObject
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
         }
 
-        /// <summary>
-        /// Builds the FinalOptObj stuff when the Abatab mode is set to passthrough.
-        /// </summary>
+        /// <summary>Builds the FinalOptObj stuff when the Abatab mode is set to passthrough.</summary>
         /// <param name="abatabSession">Information/data for this session of Abatab.</param>
         public static void ForUpdate(Session abatabSession)
         {
@@ -68,9 +62,7 @@ namespace AbatabOptionObject
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
         }
 
-        /// <summary>
-        /// Builds the FinalOptObj stuff when the Abatab mode is set to passthrough.
-        /// </summary>
+        /// <summary>Builds the FinalOptObj stuff when the Abatab mode is set to passthrough.</summary>
         /// <param name="abatabSession">Information/data for this session of Abatab.</param>
         public static void ForPassthrough(Session abatabSession)
         {

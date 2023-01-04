@@ -5,14 +5,10 @@
     </assembly>
     <members>
         <member name="T:AbatabData.Core.Debuggler">
-             <summary>
-            Properties for the logging functionality.
-             </summary>
+            <summary>/Properties for the debugging functionality.</summary>
         </member>
         <member name="P:AbatabData.Core.Debuggler.DebugMode">
-            <summary>
-            The debug mode that Abatab will use when executed.
-            </summary>
+            <summary>The debug mode that Abatab will use when executed.</summary>
             <remarks>
             <list type="table">
             <listheader>
@@ -33,9 +29,7 @@
             <value>Default value is <c>disabled</c></value>
         </member>
         <member name="P:AbatabData.Core.Debuggler.DebugEventRoot">
-            <summary>
-            The root directory where the Abatab debug logs are stored.
-            </summary>
+            <summary>The root directory where the Abatab debug logs are stored.</summary>
             <remarks>
             * At runtime the <c>DebugEventRoot</c> value is created as a sub-directory of the <c>AbatabDataRoot</c>.
             </remarks>
@@ -45,14 +39,10 @@
             <value>Default value is <c>logs\debug</c></value>
         </member>
         <member name="T:AbatabData.Core.Logging">
-            <summary>
-            Properties for the logging functionality.
-            </summary>
+            <summary>Properties for the logging functionality.</summary>
         </member>
         <member name="P:AbatabData.Core.Logging.LoggingMode">
-            <summary>
-            The logging mode that Abatab will use when executed.
-            </summary>
+            <summary>The logging mode that Abatab will use when executed.</summary>
             <remarks>
             <list type="table">
             <listheader>
@@ -94,15 +84,11 @@
             <value>Default value is <c>session</c></value>
         </member>
         <member name="P:AbatabData.Core.Logging.Detail">
-            <summary>
-            The detail level of log files (currently not used).
-            </summary>
-            <value>Currenly not used.</value>
+            <summary>The detail level of log files (currently not used).</summary>
+            <value>Currently not used.</value>
         </member>
         <member name="P:AbatabData.Core.Logging.EventErrorRoot">
-            <summary>
-            The root directory where the Abatab error logs are stored.
-            </summary>
+            <summary>The root directory where the Abatab error logs are stored.</summary>
             <remarks>
             * At runtime the <c>EventErrorRoot</c> value is created as a sub-directory of the <c>AbatabDataRoot</c>.
             </remarks>
@@ -112,575 +98,139 @@
             <value>Default value is <c>logs\debug</c></value>
         </member>
         <member name="P:AbatabData.Core.Logging.EventLostRoot">
-            <summary>
-            
-            </summary>
+            <summary>TBD</summary>
             <value></value>
         </member>
         <member name="P:AbatabData.Core.Logging.EventTraceRoot">
-            <summary>
-            
-            </summary>
+            <summary>TBD</summary>
             <value></value>
         </member>
         <member name="P:AbatabData.Core.Logging.EventWarningRoot">
-            <summary>
-            
-            </summary>
+            <summary>TBD</summary>
             <value></value>
         </member>
         <member name="P:AbatabData.Core.Logging.Root">
-            <summary>
-            
-            </summary>
+            <summary>TBD</summary>
             <value></value>
         </member>
         <member name="P:AbatabData.Core.Logging.SessionRoot">
-            <summary>
-            
-            </summary>
+            <summary>TBD</summary>
             <value></value>
         </member>
         <member name="P:AbatabData.Core.Logging.WriteDelay">
-            <summary>
-            
-            </summary>
+            <summary>TBD</summary>
             <value></value>
         </member>
         <member name="T:AbatabData.Core.OptionObject">
-             <summary>
-            
-             </summary>
-        </member>
-        <member name="T:AbatabData.DocEx.ExampleClass">
-             <summary>
-             Every class and member should have a one sentence
-             summary describing its purpose.
-             </summary>
-             <remarks>
-             You can expand on that one sentence summary to
-             provide more information for readers. In this case,
-             the <c>ExampleClass</c> provides different C#
-             elements to show how you would add documentation
-            comments for most elements in a typical class.
-             <para>
-             The remarks can add multiple paragraphs, so you can
-             write detailed information for developers that use
-             your work. You should add everything needed for
-             readers to be successful. This class contains
-             examples for the following:
-             </para>
-             <list type="table">
-             <item>
-             <term>Summary</term>
-             <description>
-             This should provide a one sentence summary of the class or member.
-             </description>
-             </item>
-             <item>
-             <term>Remarks</term>
-             <description>
-             This is typically a more detailed description of the class or member
-             </description>
-             </item>
-             <item>
-             <term>para</term>
-             <description>
-             The para tag separates a section into multiple paragraphs
-             </description>
-             </item>
-             <item>
-             <term>list</term>
-             <description>
-             Provides a list of terms or elements
-             </description>
-             </item>
-             <item>
-             <term>returns, param</term>
-             <description>
-             Used to describe parameters and return values
-             </description>
-             </item>
-             <item>
-             <term>value</term>
-             <description>Used to describe properties</description>
-             </item>
-             <item>
-             <term>exception</term>
-             <description>
-             Used to describe exceptions that may be thrown
-             </description>
-             </item>
-             <item>
-             <term>c, cref, see, seealso</term>
-             <description>
-             These provide code style and links to other
-             documentation elements
-             </description>
-             </item>
-             <item>
-             <term>example, code</term>
-             <description>
-             These are used for code examples
-             </description>
-             </item>
-             </list>
-             <para>
-             The list above uses the "table" style. You could
-             also use the "bullet" or "number" style. Neither
-             would typically use the "term" element.
-             <br/>
-             Note: paragraphs are double spaced. Use the *br*
-             tag for single spaced lines.
-             </para>
-             </remarks>
-        </member>
-        <member name="P:AbatabData.DocEx.ExampleClass.Label">
-            <summary>ser</summary>
-             <see cref="!:label"/>
-            <!-- or -->
-            <see cref="!:member">Link text</see>
-            <!-- or -->
-            <see href="link">Link Text</see>
-            <!-- or -->
-            <see langword="keyword"/>
-        </member>
-        <member name="M:AbatabData.DocEx.ExampleClass.Add(System.Int32,System.Int32)">
-            <summary>
-            Adds two integers and returns the result.
-            </summary>
-            <returns>
-            The sum of two integers.
-            </returns>
-            <param name="left">
-            The left operand of the addition.
-            </param>
-            <param name="right">
-            The right operand of the addition.
-            </param>
-            <example>
-            <code>
-            int c = Math.Add(4, 5);
-            if (c > 10)
-            {
-                Console.WriteLine(c);
-            }
-            </code>
-            </example>
-            <exception cref="T:System.OverflowException">
-            Thrown when one parameter is 
-            <see cref="F:System.Int32.MaxValue">MaxValue</see> and the other is
-            greater than 0.
-            Note that here you can also use 
-            <see href="https://docs.microsoft.com/dotnet/api/system.int32.maxvalue"/>
-             to point a web page instead.
-            </exception>
-            <see cref="T:AbatabData.DocEx.ExampleClass"/> for a list of all
-            the tags in these examples.
-            <seealso cref="P:AbatabData.DocEx.ExampleClass.Label"/>
-        </member>
-        <member name="M:AbatabData.DocEx.test(System.String,System.String)">
-            <summary>
-            This is an example of a positional record.
-            </summary>
-            <remarks>
-            There isn't a way to add XML comments for properties
-            created for positional records, yet. The language
-            design team is still considering what tags should
-            be supported, and where. Currently, you can use
-            the "param" tag to describe the parameters to the
-            primary constructor.
-            </remarks>
-            <param name="FirstName">
-            This tag will apply to the primary constructor parameter.
-            </param>
-            <param name="LastName">
-            This tag will apply to the primary constructor parameter.
-            </param>
-        </member>
-        <member name="T:AbatabData.Maths">
-            <summary>
-            The main <c>Math</c> class.
-            Contains all methods for performing basic math functions.
-            <list type="bullet">
-            <item>
-            <term>Add</term>
-            <description>Addition Operation</description>
-            </item>
-            <item>
-            <term>Subtract</term>
-            <description>Subtraction Operation</description>
-            </item>
-            <item>
-            <term>Multiply</term>
-            <description>Multiplication Operation</description>
-            </item>
-            <item>
-            <term>Divide</term>
-            <description>Division Operation</description>
-            </item>
-            </list>
-            </summary>
-            <remarks>
-            <para>
-            This class can add, subtract, multiply and divide.
-            </para>
-            <para>
-            These operations can be performed on both
-            integers and doubles.
-            </para>
-            </remarks>
-        </member>
-        <member name="M:AbatabData.Maths.Add(System.Int32,System.Int32)">
-            <summary>
-            Adds two integers <paramref name="a"/> and <paramref name="b"/>
-             and returns the result.
-            </summary>
-            <returns>
-            The sum of two integers.
-            </returns>
-            <example>
-            <code>
-            int c = Math.Add(4, 5);
-            if (c > 10)
-            {
-                Console.WriteLine(c);
-            }
-            </code>
-            </example>
-            <exception cref="T:System.OverflowException">
-            Thrown when one parameter is <see cref="F:System.Int32.MaxValue"/> and the other
-            is greater than 0.
-            </exception>
-            See <see cref="M:AbatabData.Maths.Add(System.Double,System.Double)"/> to add doubles.
-            <seealso cref="M:AbatabData.Maths.Subtract(System.Int32,System.Int32)"/>
-            <seealso cref="M:AbatabData.Maths.Multiply(System.Int32,System.Int32)"/>
-            <seealso cref="M:AbatabData.Maths.Divide(System.Int32,System.Int32)"/>
-            <param name="a">An integer.</param>
-            <param name="b">An integer.</param>
-        </member>
-        <member name="M:AbatabData.Maths.Add(System.Double,System.Double)">
-            <summary>
-            Adds two doubles <paramref name="a"/> and <paramref name="b"/>
-            and returns the result.
-            </summary>
-            <returns>
-            The sum of two doubles.
-            </returns>
-            <example>
-            <code>
-            double c = Math.Add(4.5, 5.4);
-            if (c > 10)
-            {
-                Console.WriteLine(c);
-            }
-            </code>
-            </example>
-            <exception cref="T:System.OverflowException">
-            Thrown when one parameter is max and the other
-            is greater than 0.</exception>
-            See <see cref="M:AbatabData.Maths.Add(System.Int32,System.Int32)"/> to add integers.
-            <seealso cref="M:AbatabData.Maths.Subtract(System.Double,System.Double)"/>
-            <seealso cref="M:AbatabData.Maths.Multiply(System.Double,System.Double)"/>
-            <seealso cref="M:AbatabData.Maths.Divide(System.Double,System.Double)"/>
-            <param name="a">A double precision number.</param>
-            <param name="b">A double precision number.</param>
-        </member>
-        <member name="M:AbatabData.Maths.Subtract(System.Int32,System.Int32)">
-            <summary>
-            Subtracts <paramref name="b"/> from <paramref name="a"/>
-            and returns the result.
-            </summary>
-            <returns>
-            The difference between two integers.
-            </returns>
-            <example>
-            <code>
-            int c = Math.Subtract(4, 5);
-            if (c > 1)
-            {
-                Console.WriteLine(c);
-            }
-            </code>
-            </example>
-            See <see cref="M:AbatabData.Maths.Subtract(System.Double,System.Double)"/> to subtract doubles.
-            <seealso cref="M:AbatabData.Maths.Add(System.Int32,System.Int32)"/>
-            <seealso cref="M:AbatabData.Maths.Multiply(System.Int32,System.Int32)"/>
-            <seealso cref="M:AbatabData.Maths.Divide(System.Int32,System.Int32)"/>
-            <param name="a">An integer.</param>
-            <param name="b">An integer.</param>
-        </member>
-        <member name="M:AbatabData.Maths.Subtract(System.Double,System.Double)">
-            <summary>
-            Subtracts a double <paramref name="b"/> from another 
-            double <paramref name="a"/> and returns the result.
-            </summary>
-            <returns>
-            The difference between two doubles.
-            </returns>
-            <example>
-            <code>
-            double c = Math.Subtract(4.5, 5.4);
-            if (c > 1)
-            {
-                Console.WriteLine(c);
-            }
-            </code>
-            </example>
-            See <see cref="M:AbatabData.Maths.Subtract(System.Int32,System.Int32)"/> to subtract integers.
-            <seealso cref="M:AbatabData.Maths.Add(System.Double,System.Double)"/>
-            <seealso cref="M:AbatabData.Maths.Multiply(System.Double,System.Double)"/>
-            <seealso cref="M:AbatabData.Maths.Divide(System.Double,System.Double)"/>
-            <param name="a">A double precision number.</param>
-            <param name="b">A double precision number.</param>
-        </member>
-        <member name="M:AbatabData.Maths.Multiply(System.Int32,System.Int32)">
-            <summary>
-            Multiplies two integers <paramref name="a"/> 
-            and <paramref name="b"/> and returns the result.
-            </summary>
-            <returns>
-            The product of two integers.
-            </returns>
-            <example>
-            <code>
-            int c = Math.Multiply(4, 5);
-            if (c > 100)
-            {
-                Console.WriteLine(c);
-            }
-            </code>
-            </example>
-            See <see cref="M:AbatabData.Maths.Multiply(System.Double,System.Double)"/> to multiply doubles.
-            <seealso cref="M:AbatabData.Maths.Add(System.Int32,System.Int32)"/>
-            <seealso cref="M:AbatabData.Maths.Subtract(System.Int32,System.Int32)"/>
-            <seealso cref="M:AbatabData.Maths.Divide(System.Int32,System.Int32)"/>
-            <param name="a">An integer.</param>
-            <param name="b">An integer.</param>
-        </member>
-        <member name="M:AbatabData.Maths.Multiply(System.Double,System.Double)">
-            <summary>
-            Multiplies two doubles <paramref name="a"/> and
-            <paramref name="b"/> and returns the result.
-            </summary>
-            <returns>
-            The product of two doubles.
-            </returns>
-            <example>
-            <code>
-            double c = Math.Multiply(4.5, 5.4);
-            if (c > 100.0)
-            {
-                Console.WriteLine(c);
-            }
-            </code>
-            </example>
-            See <see cref="M:AbatabData.Maths.Multiply(System.Int32,System.Int32)"/> to multiply integers.
-            <seealso cref="M:AbatabData.Maths.Add(System.Double,System.Double)"/>
-            <seealso cref="M:AbatabData.Maths.Subtract(System.Double,System.Double)"/>
-            <seealso cref="M:AbatabData.Maths.Divide(System.Double,System.Double)"/>
-            <param name="a">A double precision number.</param>
-            <param name="b">A double precision number.</param>
-        </member>
-        <member name="M:AbatabData.Maths.Divide(System.Int32,System.Int32)">
-            <summary>
-            Divides an integer <paramref name="a"/> by another
-            integer <paramref name="b"/> and returns the result.
-            </summary>
-            <returns>
-            The quotient of two integers.
-            </returns>
-            <example>
-            <code>
-            int c = Math.Divide(4, 5);
-            if (c > 1)
-            {
-                Console.WriteLine(c);
-            }
-            </code>
-            </example>
-            <exception cref="T:System.DivideByZeroException">
-            Thrown when <paramref name="b"/> is equal to 0.
-            </exception>
-            See <see cref="M:AbatabData.Maths.Divide(System.Double,System.Double)"/> to divide doubles.
-            <seealso cref="M:AbatabData.Maths.Add(System.Int32,System.Int32)"/>
-            <seealso cref="M:AbatabData.Maths.Subtract(System.Int32,System.Int32)"/>
-            <seealso cref="M:AbatabData.Maths.Multiply(System.Int32,System.Int32)"/>
-            <param name="a">An integer dividend.</param>
-            <param name="b">An integer divisor.</param>
-        </member>
-        <member name="M:AbatabData.Maths.Divide(System.Double,System.Double)">
-            <summary>
-            Divides a double <paramref name="a"/> by another double
-            <paramref name="b"/> and returns the result.
-            </summary>
-            <returns>
-            The quotient of two doubles.
-            </returns>
-            <example>
-            <code>
-            double c = Math.Divide(4.5, 5.4);
-            if (c > 1.0)
-            {
-                Console.WriteLine(c);
-            }
-            </code>
-            </example>
-            <exception cref="T:System.DivideByZeroException">
-            Thrown when <paramref name="b"/> is equal to 0.
-            </exception>
-            See <see cref="M:AbatabData.Maths.Divide(System.Int32,System.Int32)"/> to divide integers.
-            <seealso cref="M:AbatabData.Maths.Add(System.Double,System.Double)"/>
-            <seealso cref="M:AbatabData.Maths.Subtract(System.Double,System.Double)"/>
-            <seealso cref="M:AbatabData.Maths.Multiply(System.Double,System.Double)"/>
-            <param name="a">A double precision dividend.</param>
-            <param name="b">A double precision divisor.</param>
+            <summary>TBD</summary>
         </member>
         <member name="T:AbatabData.Module.Common">
-             <summary>
-            
-             </summary>
+            <summary>TBD</summary>
         </member>
         <member name="T:AbatabData.Module.Prototype">
-             <summary>
-            
-             </summary>
+            <summary>TBD</summary>
         </member>
         <member name="P:AbatabData.Module.Prototype.Mode">
-            <summary>
-            
-            </summary>
+            <summary>TBD</summary>
             <value></value>
         </member>
         <member name="T:AbatabData.Module.Testing">
-            <summary>
-            Defines the properties for the AbatabData.Module.Testing object, containing the information/data that Abatab needs to do its job.
-            </summary>
+            <summary>Defines the properties for the AbatabData.Module.Testing object, containing the information/data that Abatab needs to do its job.</summary>
         </member>
         <member name="P:AbatabData.Module.Testing.Mode">
-            <summary>
-            The default behavior of the Abatab Testing Module. <see href="https://spectrum-health-systems.github.io/Abatab/man/man-configuration-local-settings.html#modtestingmode"> [more info]</see>
-            </summary>
+            <summary>The default behavior of the Abatab Testing Module. <see href="https://spectrum-health-systems.github.io/Abatab/man/man-configuration-local-settings.html#modtestingmode"> [more info]</see></summary>
             <value>Default value is <c>enabled</c>.</value>
         </member>
         <member name="T:AbatabData.Module.QuickMedOrder">
-            <summary>
-            Defines the properties for the AbatabData.QuickMedOrderData object, containing the information needed for ModQuickMedOrder functionality.
-            </summary>
+            <summary>Defines the properties for the AbatabData.QuickMedOrderData object, containing the information needed for ModQuickMedOrder functionality.</summary>
         </member>
         <member name="P:AbatabData.Module.QuickMedOrder.Mode">
-             <summary>
-            
-             </summary>
-             <value></value>
+            <summary>TBD</summary>
+            <value></value>
         </member>
         <member name="P:AbatabData.Module.QuickMedOrder.AuthorizedUsers">
-             <summary>
-            
-             </summary>
-             <value></value>
+            <summary>TBD</summary>
+            <value></value>
         </member>
         <member name="P:AbatabData.Module.QuickMedOrder.ValidOrderTypes">
-             <summary>
-            
-             </summary>
-             <value></value>
+            <summary>TBD</summary>
+            <value></value>
         </member>
         <member name="P:AbatabData.Module.QuickMedOrder.DosePercentBoundary">
-             <summary>
-            
-             </summary>
-             <value></value>
+            <summary>TBD</summary>
+            <value></value>
         </member>
         <member name="P:AbatabData.Module.QuickMedOrder.DoseMilligramsBoundary">
-             <summary>
-            
-             </summary>
-             <value></value>
+            <summary>TBD</summary>
+            <value></value>
         </member>
         <member name="P:AbatabData.Module.QuickMedOrder.PrevDosePrefix">
-             <summary>
-            
-             </summary>
-             <value></value>
+            <summary>TBD</summary>
+            <value></value>
         </member>
         <member name="P:AbatabData.Module.QuickMedOrder.PrevDoseSuffix">
-             <summary>
-            
-             </summary>
-             <value></value>
+            <summary>TBD</summary>
+            <value></value>
         </member>
         <member name="P:AbatabData.Module.QuickMedOrder.DosageOneFieldId">
-             <summary>
-            
-             </summary>
-             <value></value>
+            <summary>TBD</summary>
+            <value></value>
         </member>
         <member name="P:AbatabData.Module.QuickMedOrder.FoundDosageOneFieldId">
-             <summary>
-            
-             </summary>
-             <value></value>
+            <summary>TBD</summary>
+            <value></value>
         </member>
         <member name="P:AbatabData.Module.QuickMedOrder.CurrentDose">
-             <summary>
-            
-             </summary>
-             <value></value>
+            <summary>TBD</summary>
+            <value></value>
         </member>
         <member name="P:AbatabData.Module.QuickMedOrder.OrderTypeFieldId">
-             <summary>
-            
-             </summary>
-             <value></value>
+            <summary>TBD</summary>
+            <value></value>
         </member>
         <member name="P:AbatabData.Module.QuickMedOrder.FoundOrderTypeFieldId">
-             <summary>
-            
-             </summary>
-             <value></value>
+            <summary>TBD</summary>
+            <value></value>
         </member>
         <member name="P:AbatabData.Module.QuickMedOrder.OrderType">
-             <summary>
-            
-             </summary>
-             <value></value>
+            <summary>TBD</summary>
+            <value></value>
         </member>
         <member name="P:AbatabData.Module.QuickMedOrder.LastOrderScheduleFieldId">
-             <summary>
-            
-             </summary>
-             <value></value>
+            <summary>TBD</summary>
+            <value></value>
         </member>
         <member name="P:AbatabData.Module.QuickMedOrder.FoundLastOrderScheduleFieldId">
-             <summary>
-            
-             </summary>
-             <value></value>
+            <summary>TBD</summary>
+            <value></value>
         </member>
         <member name="P:AbatabData.Module.QuickMedOrder.LastOrderScheduleText">
-             <summary>
-            
-             </summary>
-             <value></value>
+            <summary>TBD</summary>
+            <value></value>
         </member>
         <member name="P:AbatabData.Module.QuickMedOrder.LastScheduledDosage">
-             <summary>
-            
-             </summary>
-             <value></value>
+            <summary>TBD</summary>
+            <value></value>
         </member>
         <member name="P:AbatabData.Module.QuickMedOrder.FoundAllRequiredFieldIds">
-             <summary>
-            
-             </summary>
-             <value></value>
+            <summary>TBD</summary>
+            <value></value>
         </member>
-        <!-- Badly formed XML comment ignored for member "T:AbatabData.Session" -->
+        <member name="T:AbatabData.Session">
+            <summary>Contains Abatab session properties.</summary>
+            <remarks>
+            Contains properties for the following:
+            <list type="bullet">
+            <item><term>Standard session properties</term></item>
+            <item><term>Debugging functionality</term></item>
+            <item><term>Logging functionality</term></item>
+            <item><term>OptionObjects</term></item>
+            <item><term>Modules</term></item>
+            </list>
+            </remarks>
+        </member>
         <member name="P:AbatabData.Session.AbatabMode">
-            <summary>
-            The mode that Abatab will use when executed.
-            </summary>
+            <summary>The mode that Abatab will use when executed.</summary>
             <remarks>
             <list type="table">
             <listheader>
@@ -700,40 +250,40 @@
             <description>All functionality is available, but no changes are made to Avatar.</description>
             </item>
             </list>
-            * If this is set to <c>AbatabMode=enabled</c>, you are still able to disable specific modules via their corresponding mode setting.
-            * The <c>AbatabMode=passthrough</c> mode is intended for development, not production.
+            <list type="bullet">
+            <item>If this is set to <c>AbatabMode=enabled</c>, you are still able to disable specific modules via their corresponding mode setting.</item>
+            <item>The <c>AbatabMode=passthrough</c> mode is intended for development, not production.</item>
+            </list>
             </remarks>
             <value>Default value is <c>enabled</c></value>
         </member>
         <member name="P:AbatabData.Session.AbatabRoot">
-            <summary>
-            The root directory where the Abatab web service has been deployed.
-            </summary>
+            <summary>The root directory where the Abatab web service has been deployed.</summary>
             <remarks>
-            * At runtime the <c>AvatarEnvironment</c> value is added to the end of <c>AbatabRoot</c> to form the complete path.
+            <list type="bullet">
+            <item>At runtime the <c>AvatarEnvironment</c> value is added to the end of <c>AbatabRoot</c> to form the complete path.</item>
+            </list>
             </remarks>
             <example>
-            * If <c>AbatabRoot=C:\Abatab_</c>, and <c>AvatarEnvironment=LIVE</c>, then <c>AbatabRoot</c> would be set to <c>C:\Abatab_LIVE</c> at runtime.
+            If <c>AbatabRoot=C:\Abatab_</c>, and <c>AvatarEnvironment=LIVE</c>, then <c>AbatabRoot</c> would be set to <c>C:\Abatab_LIVE</c> at runtime.
             </example>
             <value>Default value is <c>C:\Abatab_</c></value>
         </member>
         <member name="P:AbatabData.Session.AbatabDataRoot">
-            <summary>
-            The root directory where the Abatab data is stored.
-            </summary>
+            <summary>The root directory where the Abatab data is stored.</summary>
             <remarks>
-            * At runtime the <c>AvatarEnvironment</c> value is created as a sub-directory of the <c>AbatabDataRoot</c>.
-            * This is the directory where exported data/logs should be stored.
+            <list type="bullet">
+            <item>At runtime the <c>AvatarEnvironment</c> value is created as a sub-directory of the <c>AbatabDataRoot</c>.</item>
+            <item>This is the directory where exported data/logs should be stored.</item>
+            </list>
             </remarks>
             <example>
-            * If <c>AbatabDataRoot=C:\Abatab</c>, and <c>AvatarEnvironment=LIVE</c>, then <c>AbatabDataRoot</c> would be set to <c>C:\Abatab\LIVE</c> at runtime.
+            If <c>AbatabDataRoot=C:\Abatab</c>, and <c>AvatarEnvironment=LIVE</c>, then <c>AbatabDataRoot</c> would be set to <c>C:\Abatab\LIVE</c> at runtime.
             </example>
             <value>Default value is <c>C:\Abatab</c></value>
         </member>
         <member name="P:AbatabData.Session.AvatarEnvironment">
-            <summary>
-            The Avatar environment that Abatab will reference when executed.
-            </summary>
+            <summary>The Avatar environment that Abatab will reference when executed.</summary>
             <remarks>
             <list type="table">
             <listheader>
@@ -757,72 +307,52 @@
             <value>Default value is <c>LIVE</c></value>
         </member>
         <member name="P:AbatabData.Session.AbatabFallbackUserName">
-            <summary>
-            The fallback username for Abatab.
-            </summary>
+            <summary>The fallback username for Abatab.</summary>
             <remarks>
             * If <c>sentOptObj.OptionUserId</c> does not contain a valid username, <c>AbatabFallbackUserName</c> will be used.
             </remarks>
             <value>Default value is <c>_Abatab</c></value>
         </member>
         <member name="P:AbatabData.Session.DebugglerConfig">
-            <summary>
-            Properties for the debugging functionality.
-            </summary>
+            <summary>Properties for the debugging functionality. </summary>
             <value>&lt;-- Click for more info</value>
         </member>
         <member name="P:AbatabData.Session.LoggingConfig">
-            <summary>
-            Properties for the logging functionality.
-            </summary>
+            <summary>Properties for the logging functionality.</summary>
             <value>&lt;-- Click for more info</value>
         </member>
         <member name="P:AbatabData.Session.ModCommonConfig">
-            <summary>
-            Properties for the Common module.
-            </summary>
+            <summary>Properties for the Common module.</summary>
             <value>&lt;-- Click for more info</value>
         </member>
         <member name="P:AbatabData.Session.ModPrototypeConfig">
-            <summary>
-            Properties for the Prototype module.
-            </summary>
+            <summary>Properties for the Prototype module.</summary>
             <value>&lt;-- Click for more info</value>
         </member>
         <member name="P:AbatabData.Session.ModQuickMedOrderConfig">
-            <summary>
-            Properties for the QuickMedOrder module.
-            </summary>
+            <summary>Properties for the QuickMedOrder module.</summary>
             <value>&lt;-- Click for more info</value>
         </member>
         <member name="P:AbatabData.Session.ModTestingConfig">
-            <summary>
-            Properties for the Testing module.
-            </summary>
+            <summary>Properties for the Testing module.</summary>
             <value>&lt;-- Click for more info</value>
         </member>
         <member name="P:AbatabData.Session.SessionDateStamp">
-            <summary>
-            The session date.
-            </summary>
+            <summary>The session date.</summary>
             <remarks>
             * Uses the following syntax: <c>yyMMdd</c>
             </remarks>
             <value>Set at runtime</value>
         </member>
         <member name="P:AbatabData.Session.SessionTimeStamp">
-            <summary>
-            The session time.
-            </summary>
+            <summary>The session time.</summary>
             <remarks>
             * Uses the following syntax: <c>HHmmss</c>
             </remarks>
             <value>Set at runtime</value>
         </member>
         <member name="P:AbatabData.Session.AbatabUserName">
-            <summary>
-            The Abatab username.
-            </summary>
+            <summary>The Abatab username.</summary>
             <remarks>
             * This should be set to the value in <c>sentOptObj.OptionUserId</c>
             * If the value in <c>sentOptObj.OptionUserId</c> is not valid, this will be set to <see href="AbatabData.Session.html#AbatabData_Session_AbatabFallbackUserName">AbatabFallbackUserName</see>.
@@ -830,9 +360,7 @@
             <value>Set at runtime</value>
         </member>
         <member name="P:AbatabData.Session.ScriptParameter">
-            <summary>
-            The Script Parameter that Avatar sends to Abatab.
-            </summary>
+            <summary>The Script Parameter that Avatar sends to Abatab.</summary>
             <remarks>
             * Script Parameter syntax is <c>MODULE-COMMAND-ACTION[-OPTION]</c>
             * More information about the Script Parameter can be found <see href="../man/manAppendix.html#script-parameter">here.</see>
@@ -845,9 +373,7 @@
             <value>Set at runtime</value>
         </member>
         <member name="P:AbatabData.Session.AbatabModule">
-            <summary>
-            The Module component of the Script Parameter.
-            </summary>
+            <summary>The Module component of the Script Parameter.</summary>
             <remarks>
             * This is the first component of the <see href="AbatabData.Session.html#AbatabData_Session_ScriptParameter">Script Parameter</see>.
             </remarks>
@@ -857,9 +383,7 @@
             <value>Set at runtime</value>
         </member>
         <member name="P:AbatabData.Session.AbatabCommand">
-            <summary>
-            The Command component of the Script Parameter.
-            </summary>
+            <summary>The Command component of the Script Parameter.</summary>
             <remarks>
             * This is the second component of the <see href="AbatabData.Session.html#AbatabData_Session_ScriptParameter">Script Parameter</see>.
             </remarks>
@@ -869,9 +393,7 @@
             <value>Set at runtime</value>
         </member>
         <member name="P:AbatabData.Session.AbatabAction">
-            <summary>
-            The Action component of the Script Parameter.
-            </summary>
+            <summary>The Action component of the Script Parameter.</summary>
             <remarks>
             * This is the third component of the <see href="AbatabData.Session.html#AbatabData_Session_ScriptParameter">Script Parameter</see>.
             </remarks>
@@ -881,9 +403,7 @@
             <value>Set at runtime</value>
         </member>
         <member name="P:AbatabData.Session.AbatabOption">
-            <summary>
-            The (optional) Option component of the Script Parameter.
-            </summary>
+            <summary>The (optional) Option component of the Script Parameter.</summary>
             <remarks>
             * This is the fourth component of the <see href="AbatabData.Session.html#AbatabData_Session_ScriptParameter">Script Parameter</see>.
             * This is an optional component.
@@ -894,9 +414,7 @@
             <value>Set at runtime</value>
         </member>
         <member name="P:AbatabData.Session.SentOptObj">
-            <summary>
-            The OptionObject that Avatar sends to Abatab.
-            </summary>
+            <summary>The OptionObject that Avatar sends to Abatab.</summary>
             <remarks>
             * This OptionObject is not modified by Abatab.
             * More information about the OptionObjects can be found <see href="../man/manAppendix.html#optionobject">here.</see>
@@ -904,9 +422,7 @@
             <value>Set at runtime</value>
         </member>
         <member name="P:AbatabData.Session.WorkOptObj">
-            <summary>
-            The OptionObject that Abatab (potentially) modifies during a session.
-            </summary>
+            <summary>The OptionObject that Abatab (potentially) modifies during a session.</summary>
             <remarks>
             * This OptionObject starts out as a copy of <c>SentOptObj</c>.
             * This OptionObject is potentially modified by Abatab.
@@ -915,9 +431,7 @@
             <value>Set at runtime</value>
         </member>
         <member name="P:AbatabData.Session.FinalOptObj">
-            <summary>
-            The OptionObject that Abatab sends back to Avatar.
-            </summary>
+            <summary>The OptionObject that Abatab sends back to Avatar.</summary>
             <remarks>
             * This OptionObject is a copy of <c>WorkOptObj</c>.
             * More information about the OptionObjects can be found <see href="../man/manAppendix.html#optionobject">here.</see>

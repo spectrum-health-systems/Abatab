@@ -1,13 +1,9 @@
-﻿// Abatab ModCommon 23.0.0
+﻿// Abatab.ModCommon.Roundhouse.cs b230104.1221
 // Copyright (c) A Pretty Cool Program
-// See the LICENSE file for more information.
-// b221214.0804
 
 namespace ModCommon
 {
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary>TBD</summary>
     public class Roundhouse
     {
     }

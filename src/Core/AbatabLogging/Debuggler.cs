@@ -1,12 +1,8 @@
-﻿// AbatabLogging 23.0.0
+﻿// Abatab.AbatabLogging.Debuggler.cs b230104.1221
 // Copyright (c) A Pretty Cool Program
-// See the LICENSE file for more information.
-// b221214.0804
 
 /* ========================================================================================================
- * PLEASE READ #1
- * --------------
- * Logging is done a little differently in AbatabLogging.csproj, since trying to create logs using the same
+ * Logging is done a little differently in AbatabLogging classes, since trying to create logs using the same
  * code that creates logs results in strange behavior.
  *
  * For the most part, LogEvent.Trace() is replaced with Debugger.BuildDebugLog(), although in some cases
@@ -15,8 +11,6 @@
  ========================================================================================================*/
 
 /* ========================================================================================================
- * PLEASE READ #2
- * --------------
  * Abatab debugging functionality should only be used for development/debugging. There is a hardcoded 100ms
  * delay when writing a debug log file, and there for should not be used production environments due to
  * the performance penalties it creates.
@@ -40,9 +34,7 @@
 
 namespace AbatabLogging
 {
-    /// <summary>
-    /// Logic for debugging functionality.
-    /// </summary>
+    /// <summary>Logic for debugging functionality.</summary>
     public static class Debuggler
     {
         /// <summary>Debugs the debugger.</summary>
@@ -55,8 +47,7 @@ namespace AbatabLogging
             {
                 var debugLogPath = BuildPath.Timestamped("debuggler", debugLogRoot);
 
-                /* It is recommended that you keep this at 0.
-                 */
+                // It is recommended that you keep this at 0.
                 WriteLogFile.LocalFile(debugLogPath, debugMsg, 0);
             }
         }

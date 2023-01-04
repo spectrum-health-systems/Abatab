@@ -1,12 +1,8 @@
-﻿// AbatabLogging 23.0.0
+﻿// Abatab.AbatabLogging.WriteLogFile.cs b230104.1221
 // Copyright (c) A Pretty Cool Program
-// See the LICENSE file for more information.
-// b221214.0804
 
 /* ========================================================================================================
- * PLEASE READ
- * -----------
- * Logging is done a little differently in AbatabLogging.csproj, since trying to create logs using the same
+ * Logging is done a little differently in AbatabLogging classes, since trying to create logs using the same
  * code that creates logs results in strange behavior.
  *
  * For the most part, LogEvent.Trace() is replaced with Debugger.BuildDebugLog(), although in some cases
@@ -19,9 +15,7 @@ using System.Threading;
 
 namespace AbatabLogging
 {
-    /// <summary>
-    /// Logic for writing log files.
-    /// </summary>
+    /// <summary>Logic for writing log files.</summary>
     public static class WriteLogFile
     {
         /// <summary>Writes a log file.</summary>
