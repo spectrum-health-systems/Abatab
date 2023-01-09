@@ -1,4 +1,4 @@
-﻿// Abatab.AbatabLogging.Debuggler.cs b230109.0859
+﻿// Abatab.AbatabLogging.Debuggler.cs b230109.1159
 // Copyright (c) A Pretty Cool Program
 
 /* ========================================================================================================

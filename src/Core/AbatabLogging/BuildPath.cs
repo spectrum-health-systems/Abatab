@@ -1,4 +1,4 @@
-﻿// Abatab.AbatabLogging.BuildPath.cs b230109.0859
+﻿// Abatab.AbatabLogging.BuildPath.cs b230109.1159
 // Copyright (c) A Pretty Cool Program
 
 /* ========================================================================================================
