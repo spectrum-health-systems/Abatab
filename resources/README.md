@@ -1,6 +1,6 @@
-# res/
+# resources/
 
 Repository resources.
 
-* res/img/  
-Repository images (logoes, screenshots, etc.)
+* resources/images/  
+Repository images (logos, screenshots, etc.)
