@@ -36,4 +36,4 @@
 |                             Du |  NoRef |    NoRef   |     NoRef     |        NoRef       |       _Dep_      |     NoRef     |      _Dep_     |     NoRef    |   NoRef   |     NoRef    |       NoRef      |    NoRef   |   X   |              NoRef             |
 | NTST.ScriptLinkService.Objects |  NoRef |    NoRef   |     NoRef     |        NoRef       |       _Dep_      |     NoRef     |      _Dep_     |     NoRef    |   NoRef   |     NoRef    |       NoRef      |    NoRef   |       |                X               |
 
-[Logo]: /.github/res/img/logo/RepositoryLogo.png
+[Logo]: /.github/resources/img/logo/AbatabLogo-current.png

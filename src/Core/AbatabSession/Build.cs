@@ -1,4 +1,4 @@
-﻿// Abatab.AbatabSession.Build.cs b230104.1221
+﻿// Abatab.AbatabSession.Build.cs b230109.0859
 // Copyright (c) A Pretty Cool Program
 
 using AbatabData;

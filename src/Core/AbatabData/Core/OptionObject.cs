@@ -1,4 +1,4 @@
-﻿// Abatab.AbatabData.Core.OptionObject.cs b230104.1221
+﻿// Abatab.AbatabData.Core.OptionObject.cs b230109.0859
 // Copyright (c) A Pretty Cool Program
 
 namespace AbatabData.Core

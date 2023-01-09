@@ -343,4 +343,4 @@ Potential email when this happens
 
 
 
-[Logo]: /.github/res/img/logo/RepositoryLogo.png
+[Logo]: /.github/resources/img/logo/AbatabLogo-current.png

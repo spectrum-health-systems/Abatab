@@ -316,4 +316,4 @@ You can <seealso href="url">link</seealso> to things.</item>
 
 <!-- -->
 
-[Logo]: /.github/res/img/logo/RepositoryLogo.png
+[Logo]: /.github/resources/img/logo/AbatabLogo-current.png
