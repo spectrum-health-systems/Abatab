@@ -8,7 +8,7 @@
 
 # 23.0.X
 
-## 23.0.0 (December 1, 2022)
+## 23.0.0 (January 15, 2023)
 
 ### Abatab
 
@@ -95,4 +95,4 @@ No changes
 **[-]** Cleanup DocFX folders
 **[-]** Complete all XML documentation
 
-[Logo]: /.github/res/img/logo/RepositoryLogo.png
+[Logo]: /.github/resources/img/logo/AbatabLogo-current.png

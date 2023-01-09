@@ -1,18 +1,17 @@
-﻿// AbatabOptionObject 23.0.0
+﻿// Abatab.AbatabOptionObject.WorkObj.cs b230109.0859
 // Copyright (c) A Pretty Cool Program
-// See the LICENSE file for more information.
-// b221214.0804
 
 using AbatabData;
+
 using AbatabLogging;
+
 using NTST.ScriptLinkService.Objects;
+
 using System.Reflection;
 
 namespace AbatabOptionObject
 {
-    /// <summary>
-    /// Logic for working with the WorkOptObj.
-    /// </summary>
+    /// <summary>Logic for working with the WorkOptObj.</summary>
     public static class WorkObj
     {
         /// <summary>
@@ -29,9 +28,7 @@ namespace AbatabOptionObject
             return sentOptObj;
         }
 
-        /// <summary>
-        /// Clears the error information in the WorkOptObj.
-        /// </summary>
+        /// <summary>Clears the error information in the WorkOptObj.</summary>
         /// <param name="abatabSession">Information/data for this session of Abatab.</param>
         /// <param name="errCode">The error code.</param>
         /// <param name="errMsg">The error message.</param>

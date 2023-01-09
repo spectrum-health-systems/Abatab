@@ -1,18 +1,12 @@
-﻿// AbatabData 23.0.0
+﻿// Abatab.AbatabData.Core.Logging.cs b230109.0859
 // Copyright (c) A Pretty Cool Program
-// See the LICENSE file for more information.
-// b221214.0804
 
 namespace AbatabData.Core
 {
-    /// <summary>
-    /// Properties for the logging functionality.
-    /// </summary>
+    /// <summary>Properties for the logging functionality.</summary>
     public class Logging
     {
-        /// <summary>
-        /// The logging mode that Abatab will use when executed.
-        /// </summary>
+        /// <summary>The logging mode that Abatab will use when executed.</summary>
         /// <remarks>
         /// <list type="table">
         /// <listheader>
@@ -53,20 +47,12 @@ namespace AbatabData.Core
         /// </examples>
         /// <value>Default value is <c>session</c></value>
         public string LoggingMode { get; set; }
-        /// <summary>
-        /// The detail level of log files (currently not used).
-        /// </summary>
-        /// <value>Currenly not used.</value>
+
+        /// <summary>The detail level of log files (currently not used).</summary>
+        /// <value>Currently not used.</value>
         public string Detail { get; set; }
 
-
-
-        /* STOPPED HERE
-        */
-
-        /// <summary>
-        /// The root directory where the Abatab error logs are stored.
-        /// </summary>
+        /// <summary>The root directory where the Abatab error logs are stored.</summary>
         /// <remarks>
         /// * At runtime the <c>EventErrorRoot</c> value is created as a sub-directory of the <c>AbatabDataRoot</c>.
         /// </remarks>
@@ -76,39 +62,27 @@ namespace AbatabData.Core
         /// <value>Default value is <c>logs\debug</c></value>
         public string EventErrorRoot { get; set; }
 
-        /// <summary>
-        /// 
-        /// </summary>
+        /// <summary>TBD</summary>
         /// <value></value>
         public string EventLostRoot { get; set; }
 
-        /// <summary>
-        /// 
-        /// </summary>
+        /// <summary>TBD</summary>
         /// <value></value>
         public string EventTraceRoot { get; set; }
 
-        /// <summary>
-        /// 
-        /// </summary>
+        /// <summary>TBD</summary>
         /// <value></value>
         public string EventWarningRoot { get; set; }
 
-        /// <summary>
-        /// 
-        /// </summary>
+        /// <summary>TBD</summary>
         /// <value></value>
         public string Root { get; set; }
 
-        /// <summary>
-        /// 
-        /// </summary>
+        /// <summary>TBD</summary>
         /// <value></value>
         public string SessionRoot { get; set; }
 
-        /// <summary>
-        /// 
-        /// </summary>
+        /// <summary>TBD</summary>
         /// <value></value>
         public string WriteDelay { get; set; }
     }

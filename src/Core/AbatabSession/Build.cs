@@ -1,39 +1,34 @@
-﻿// AbatabSession 23.0.0
+﻿// Abatab.AbatabSession.Build.cs b230109.0859
 // Copyright (c) A Pretty Cool Program
-// See the LICENSE file for more information.
-// b221214.0804
 
 using AbatabData;
 using AbatabData.Core;
 using AbatabData.Module;
+
 using AbatabLogging;
+
 using NTST.ScriptLinkService.Objects;
+
 using System;
 using System.Collections.Generic;
 using System.Reflection;
 
 namespace AbatabSession
 {
-    /// <summary>
-    /// Logic for session instances.
-    /// </summary>
+    /// <summary>Logic for session instances.</summary>
     public static class Build
     {
-        /// <summary>
-        /// Builds configuration settings for an Abatab session.
-        /// </summary>
+        /// <summary>Builds configuration settings for an Abatab session.</summary>
         /// <param name="sentOptObj">The original OptionObject sent from Avatar.</param>
         /// <param name="scriptParameter">The script parameter request from Avatar.</param>
         /// <returns>Session configuration settings.</returns>
         public static Session NewSession(OptionObject2015 sentOptObj, string scriptParameter, Dictionary<string, string> webConfig)
         {
-            //?LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"], "[DEBUG]");
+            // TODO - put the following line back?
+            //LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"], "[DEBUG]");
             // Can't really put a trace log here.
 
-            //var debug_ = $"TEST:{abatabSettings["LogMode"]} - {abatabSettings["LogDetail"]} - {abatabSettings["LogWriteDelay"]}";
-            var debug_ = $"TEST-- {webConfig["LogMode"]}";
-
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, webConfig["DebugMode"], $@"{webConfig["AbatabRoot"]}\{webConfig["DebugLogRoot"]}", debug_);
+            // TODO - Verify this order matches other orders
 
             var abatabSession = new Session
             {
@@ -54,6 +49,8 @@ namespace AbatabSession
                 WorkOptObj             = AbatabOptionObject.WorkObj.Build(sentOptObj),
                 FinalOptObj            = new OptionObject2015()
             };
+
+            // TODO - Are all these debug logs necessary?
 
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, webConfig["DebugMode"], webConfig["DebugLogRoot"]);
             BuildDebugglerConfig(webConfig, abatabSession);
@@ -85,9 +82,7 @@ namespace AbatabSession
             return abatabSession;
         }
 
-        /// <summary>
-        ///
-        /// </summary>
+        /// <summary>TBD</summary>
         /// <param name="abatabSettings"></param>
         /// <param name="abatabSession"></param>
         private static void BuildModTestingConfig(Dictionary<string, string> abatabSettings, Session abatabSession)
@@ -97,9 +92,8 @@ namespace AbatabSession
                 Mode = abatabSettings["ModTestingMode"],
             };
         }
-        /// <summary>
-        ///
-        /// </summary>
+
+        /// <summary>TBD</summary>
         /// <param name="abatabSettings"></param>
         /// <param name="abatabSession"></param>
         private static void BuildModPrototypeConfig(Dictionary<string, string> abatabSettings, Session abatabSession)
@@ -109,9 +103,8 @@ namespace AbatabSession
                 Mode = abatabSettings["ModPrototypeMode"],
             };
         }
-        /// <summary>
-        ///
-        /// </summary>
+
+        /// <summary>TBD</summary>
         /// <param name="abatabSettings"></param>
         /// <param name="abatabSession"></param>
         private static void BuildModQuickMedOrderConfig(Dictionary<string, string> abatabSettings, Session abatabSession)
@@ -138,9 +131,7 @@ namespace AbatabSession
             };
         }
 
-        /// <summary>
-        ///
-        /// </summary>
+        /// <summary>TBD</summary>
         /// <param name="abatabSettings"></param>
         /// <param name="abatabSession"></param>
         private static void BuildDebugglerConfig(Dictionary<string, string> abatabSettings, Session abatabSession)
@@ -152,22 +143,16 @@ namespace AbatabSession
             };
         }
 
-        /// <summary>
-        ///
-        /// </summary>
+        /// <summary>TBD</summary>
         /// <param name="abatabSettings"></param>
         /// <param name="abatabSession"></param>
         private static void BuildLoggingConfig(Dictionary<string, string> abatabSettings, Session abatabSession)
         {
+            // TODO - is the following still the case?
             /* For some reason, if the log settings are called "Log*" (e.g., "LogMode"), Abatab crashes. For now I am leaving the log settings as "Logging*".
              */
 
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"]);
-
-            //var debug_ = $"TEST:{abatabSettings["LogMode"]} - {abatabSettings["LogDetail"]} - {abatabSettings["LogWriteDelay"]}";
-            var debug_ = $"TEST:{abatabSettings["LogMode"]} - {abatabSettings["DebugLogRoot"]} - {abatabSettings["ModTestingMode"]}";
-
-            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"], debug_);
 
             abatabSession.LoggingConfig  = new Logging
             {
@@ -184,9 +169,7 @@ namespace AbatabSession
             abatabSession.LoggingConfig.EventTraceRoot = $@"{abatabSession.LoggingConfig.SessionRoot}\trace";
         }
 
-        /// <summary>
-        /// Verifies the session AbatabUserName is valid.
-        /// </summary>
+        /// <summary>Verifies the session AbatabUserName is valid.</summary>
         /// <param name="abatabSession">Information/data for this session of Abatab.</param>
         private static void VerifyAbatabUserName(Session abatabSession)
         {
@@ -202,9 +185,7 @@ namespace AbatabSession
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
         }
 
-        /// <summary>
-        /// Parses the abatabRequest into separate components.
-        /// </summary>
+        /// <summary>Parses the abatabRequest into separate components.</summary>
         /// <param name="abatabSession">Information/data for this session of Abatab.</param>
         private static void ParseAbatabRequest(Session abatabSession)
         {

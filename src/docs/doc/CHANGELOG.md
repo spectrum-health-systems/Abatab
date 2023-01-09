@@ -8,7 +8,7 @@
 
 # 23.0.X
 
-## 23.0.0 (December 30, 2022)
+## 23.0.0 (January 15, 2023)
 
 ### Core functionality
 
@@ -19,4 +19,4 @@
 
 Please see the [release notes](./ReleaseNotes/23.0.0.html) for more information.
 
-[Logo]: /.github/res/img/logo/RepositoryLogo.png
+[Logo]: /.github/resources/img/logo/AbatabLogo-current.png

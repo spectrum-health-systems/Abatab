@@ -1,24 +1,22 @@
-﻿// Abatab ModQuickMedOrder 23.0.0
+﻿// Abatab.ModQuickMedOrder.Dose.cs b230109.0859
 // Copyright (c) A Pretty Cool Program
-// See the LICENSE file for more information.
-// b221214.0804
 
 using AbatabData;
+
 using AbatabLogging;
+
 using NTST.ScriptLinkService.Objects;
+
 using System;
 using System.Reflection;
 
 namespace ModQuickMedOrder
 {
-    /// <summary>
-    /// Dose logic for the QuickMedOrder module.
-    /// </summary>
+    /// <summary>Dose logic for the QuickMedOrder module.</summary>
+
     public static class Dose
     {
-        /// <summary>
-        /// Verifies that the dose increase percentage is within bounds.
-        /// </summary>
+        /// <summary>Verifies that the dose increase percentage is within bounds.</summary>
         /// <param name="abatabSession">Information/data for this session of Abatab.</param>
         public static void VerifyAmount(Session abatabSession)
         {
@@ -34,9 +32,7 @@ namespace ModQuickMedOrder
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
         }
 
-        /// <summary>
-        /// Initializes dosing information.
-        /// </summary>
+        /// <summary>Initializes dosing information.</summary>
         /// <param name="abatabSession">Information/data for this session of Abatab.</param>
         /// <remarks>
         /// This information is hardcoded, but should be the same for all Avatar clients.
@@ -64,7 +60,7 @@ namespace ModQuickMedOrder
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
         }
 
-        /// <summary></summary>
+        /// <summary>TBD</summary>
         /// <param name="abatabSession"></param>
         private static void CheckPercentage(Session abatabSession)
         {
@@ -311,9 +307,7 @@ namespace ModQuickMedOrder
             }
         }
 
-        /// <summary>
-        ///
-        /// </summary>
+        /// <summary>TBD</summary>
         /// <param name="abatabSession"></param>
         /// <param name="fieldObject"></param>
         private static void ProcessDosageOneField(Session abatabSession, FieldObject fieldObject)
@@ -347,9 +341,7 @@ namespace ModQuickMedOrder
             abatabSession.ModQuickMedOrderConfig.FoundDosageOneFieldId = true;
         }
 
-        /// <summary>
-        ///
-        /// </summary>
+        /// <summary>TBD</summary>
         /// <param name="abatabSession"></param>
         /// <param name="fieldObject"></param>
         private static void ProcessOrderTypeField(Session abatabSession, FieldObject fieldObject)
@@ -365,9 +357,7 @@ namespace ModQuickMedOrder
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, $"[TRACE_02]: OrderType = {fieldObject.FieldValue}/{abatabSession.ModQuickMedOrderConfig.OrderType} | FoundOrderTypeFieldId = {abatabSession.ModQuickMedOrderConfig.FoundOrderTypeFieldId}");
         }
 
-        /// <summary>
-        ///
-        /// </summary>
+        /// <summary>TBD</summary>
         /// <param name="abatabSession"></param>
         /// <param name="fieldObject"></param>
         private static void ProcessLastScheduledOrderField(Session abatabSession, FieldObject fieldObject)
@@ -381,9 +371,7 @@ namespace ModQuickMedOrder
             abatabSession.ModQuickMedOrderConfig.FoundLastOrderScheduleFieldId = true;
         }
 
-        /// <summary>
-        ///
-        /// </summary>
+        /// <summary>TBD</summary>
         /// <param name="abatabSession"></param>
         private static void WarningMissingPreviousDoseValue(Session abatabSession)
         {
@@ -397,9 +385,7 @@ namespace ModQuickMedOrder
                                                  $"Are you sure you want to submit?";
         }
 
-        /// <summary>
-        ///
-        /// </summary>
+        /// <summary>TBD</summary>
         /// <param name="abatabSession"></param>
         private static void WarningMissingCurrentDoseValue(Session abatabSession)
         {

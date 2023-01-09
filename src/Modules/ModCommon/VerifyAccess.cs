@@ -1,9 +1,8 @@
-﻿// Abatab ModCommon 23.0.0
+﻿// Abatab.ModCommon.VerifyAccess.cs b230109.0859
 // Copyright (c) A Pretty Cool Program
-// See the LICENSE file for more information.
-// b221214.0804
 
 using AbatabData;
+
 using AbatabLogging;
 
 namespace ModCommon
@@ -13,21 +12,19 @@ namespace ModCommon
     /// </summary>
     public class VerifyAccess
     {
-        /// <summary>
-        ///
-        /// </summary>
+        /// <summary>TBD</summary>
         /// <param name="abatabUser"></param>
         /// <param name="validUsers"></param>
         /// <returns></returns>
         public static bool CheckIfValidUser(string abatabUser, string validUsers)
         {
+            // TODO - use string comparison
+
             return validUsers.Trim().ToLower() == "all" || validUsers.ToLower().Contains(abatabUser.ToLower());
 
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
+        /// <summary>TBD</summary>
         /// <param name="abatabSession"></param>
         public static void InvalidUser(Session abatabSession)
         {

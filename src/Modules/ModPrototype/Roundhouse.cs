@@ -1,22 +1,18 @@
-﻿// Abatab ModPrototype 23.0.0
+﻿// Abatab.ModPrototype.Roundhouse.cs b230109.0859
 // Copyright (c) A Pretty Cool Program
-// See the LICENSE file for more information.
-// b221214.0804
 
 using AbatabData;
+
 using AbatabLogging;
+
 using System.Reflection;
 
 namespace ModPrototype
 {
-    /// <summary>
-    /// Roundhouse logic for the Prototyping module.
-    /// </summary>
+    /// <summary>Roundhouse logic for the Prototyping module.</summary>
     public class Roundhouse
     {
-        /// <summary>
-        /// Parse the Abatab request command.
-        /// </summary>
+        /// <summary>Parse the Abatab request command.</summary>
         /// <param name="abatabSession">Information/data for this session of Abatab.</param>
         public static void ParseRequest(Session abatabSession)
         {

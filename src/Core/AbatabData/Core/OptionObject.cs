@@ -1,13 +1,9 @@
-﻿// AbatabData 23.0.0
+﻿// Abatab.AbatabData.Core.OptionObject.cs b230109.0859
 // Copyright (c) A Pretty Cool Program
-// See the LICENSE file for more information.
-// b221214.0804
 
 namespace AbatabData.Core
 {
-    /// <summary>
-    ///
-    /// </summary>
+    /// <summary>TBD</summary>
     internal class OptionObject
     {
     }

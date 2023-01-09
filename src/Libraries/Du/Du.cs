@@ -1,7 +1,6 @@
-﻿// Du 23.0.0
-// Copyright (c) A Pretty Cool Program
-// See the LICENSE file for more information.
-// b221214.0804
+﻿// Du v0.0.0
+// Du.cs b230109.0859
+// (c) A Pretty Cool Program
 
 namespace Du
 {
