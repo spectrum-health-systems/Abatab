@@ -12,8 +12,6 @@
 
 </div>
 
-<br>
-
 # About
 
 [Netsmart's myAvatar™][MyAvatarUrl] is a behavioral health EHR that offers a recovery-focused suite of solutions that leverage real-time analytics and clinical decision support to drive value-based care.
@@ -30,7 +28,7 @@ For more information, please see the [Abatab documentation][AbatabDocumentation]
 
 ***
 
-Developed by [A Pretty Cool Program][APrettyCoolProgramUrl]
+Abatab is developed by [A Pretty Cool Program][APrettyCoolProgramUrl]
 
 </div>
 
