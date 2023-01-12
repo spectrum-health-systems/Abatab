@@ -1,4 +1,4 @@
-﻿// Abatab.AbatabData.Core.Logging.cs b230109.1159
+﻿// Abatab.AbatabData.Core.Logging.cs b230112.1247
 // Copyright (c) A Pretty Cool Program
 
 namespace AbatabData.Core

@@ -1,4 +1,4 @@
-﻿// Du.WithDirectory.cs b230109.1159
+﻿// Du.WithDirectory.cs b230112.1247
 // Copyright (c) A Pretty Cool Program
 
 using System.IO;

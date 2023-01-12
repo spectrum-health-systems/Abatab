@@ -20,7 +20,23 @@ While myAvatar™ is a robust platform, it isn't perfect. The good news is that 
 
 **Abatab** is one such custom web service which includes various tools and utilities for myAvatar™ that aren't included in the official release, and provides a solid foundation for building additional functionality quickly and efficiently.
 
-For more information, please see the [Abatab documentation][AbatabDocumentation].
+## Features
+
+* Several built-in tools and utilities for use with myAvatar™
+* Does not require Java to be installed
+* A solid foundation to build additional myAvatar™ custom tools and utilities
+
+## Requirements
+
+* A location to host the Abatab which meets the following requirements:
+* .NET Framework 4.8+ installed
+* Access to yourmyAvatar™ environments via HTTPS
+
+<br>
+
+# The Abatab Manual
+
+For everything else, please see the [Abatab documentation][AbatabDocumentation].
 
 <br>
 
