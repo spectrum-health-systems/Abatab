@@ -4,12 +4,12 @@
 
 <div align="center">
 
-  <img src="../images/Logo/logo-man.png" alt="Abatab Manual" width="512">
+  <img src="../images/Logo/AbatabManualLogo.png" alt="Abatab Manual" width="512">
   <br>
   <br>
   <h1>
     
-  </h1>
+  </h1>AbatabManualLogo.png
 
 </div>
 
