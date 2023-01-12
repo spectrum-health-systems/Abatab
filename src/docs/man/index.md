@@ -4,7 +4,7 @@
 
 <div align="center">
 
-  <img src="../images/Logo/AbatabManualLogo.png" alt="Abatab Manual" width="512">
+  <img src="../images/Logos/AbatabManualLogo.png" alt="Abatab Manual" width="512">
   <br>
   <br>
   <h1>
@@ -17,15 +17,15 @@ Welcome to the Abatab Manual!
 
 This documentation is updated with each Abatab release.
 
-### Contents
+## Contents
 
-[About Abatab][AboutAbatab]
-[Getting Started][GettingStarted]
-[Hosting Abatab][HostingAbatab]
-[Configuring Abatab][ConfiguringAbatab]
-[Importing Abatab][ImportingAbatab]
-[Using Abatab][UsingAbatab]
-[Appendix][Appendix]
+[About Abatab][AboutAbatab]  
+[Getting Started][GettingStarted]  
+[Hosting Abatab][HostingAbatab]  
+[Configuring Abatab][ConfiguringAbatab]  
+[Importing Abatab][ImportingAbatab]  
+[Using Abatab][UsingAbatab]  
+[Appendix][Appendix]  
 
 <!-- Reference Links -->
 [AbatabUrl]: https://github.com/spectrum-health-systems/Abatab
@@ -41,27 +41,27 @@ This documentation is updated with each Abatab release.
 [Using Abatab]:
 [Appendix]:
 
-# [Hosting Abatab](manHostingAbatab.md)
+## [Hosting Abatab](manHostingAbatab.md)
 <!--Overview
     Hosting with Nestmart
     Self-hosting step by step-->
 
-# [Configuring Abatab](manConfiguringAbatab.md)
+## [Configuring Abatab](manConfiguringAbatab.md)
 <!--Overview
     List of local settings-->
 
-# [Importing Abatab](manImportingAbatab.md)
+## [Importing Abatab](manImportingAbatab.md)
 <!--Overview-->
 
-# [Using Abatab](manUsingAbatab.md)
+## [Using Abatab](manUsingAbatab.md)
 <!--Overview
     ScriptLink-->
 
-## [Core functionality](manCoreFunctionality.md)
+### [Core functionality](manCoreFunctionality.md)
 <!--Overview
     Logging-->
 
-# [Modules](manModule.md)
+## [Modules](manModule.md)
 <!--Overview
     Common
     Progress Note
@@ -71,15 +71,15 @@ This documentation is updated with each Abatab release.
     Modifying existing modules
     Creating new modules-->
 
-# [Additional Information](manAdditionalInformation.md)
+## [Additional Information](manAdditionalInformation.md)
 
-## [Source code](manSourceCode.md)
+### [Source code](manSourceCode.md)
 <!--Overview-->
 
-## [DocFX](manDocFx.md)
+### [DocFX](manDocFx.md)
 <!--Overview-->
 
-## [Appendix](manAppendix.md)
+### [Appendix](manAppendix.md)
 <!--Overview
     OptionObject
     Script Parameter

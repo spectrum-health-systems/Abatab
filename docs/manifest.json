@@ -488,7 +488,7 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "../../docs/images/Logo/AbatabManualLogo.png",
+      "source_relative_path": "../../docs/images/Logos/AbatabManualLogo.png",
       "output": {
         "resource": {
           "relative_path": "images/Logo/logo-man.png"
