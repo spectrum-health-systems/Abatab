@@ -31,8 +31,6 @@ Examples:
 
 # Headers
 
-{Temp test}
-
 Every class has a standard header:
 
 ```#bash
