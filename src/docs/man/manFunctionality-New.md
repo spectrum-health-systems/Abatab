@@ -1,11 +1,6 @@
 <div align="center">
 
-  <img src="../images/Logo/AbatabManualLogo.png" alt="Abatab Manual" width="512">
-  <br>
-  <br>
-  <h1>
-    Version 23.0
-  </h1>
+  <img src="../images/Logos/AbatabManualLogo.png" alt="Abatab Manual" width="512">
 
 </div>
 You may want to create a new module

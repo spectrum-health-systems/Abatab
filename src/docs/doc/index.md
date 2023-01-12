@@ -1,6 +1,6 @@
 <div align="center">
 
-  <img src="../images/Logo/AbatabManualLogo.png" alt="Abatab Manual" width="512">
+  <img src="../images/Logos/AbatabManualLogo.png" alt="Abatab Manual" width="512">
 
   <h4>
     Abatab v23.0
