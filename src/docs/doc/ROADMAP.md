@@ -18,19 +18,80 @@
 * [ ] Complete ROADMAP.md
     - [ ] Create a new logo for the roadmap
 
+## General
+
+* [ ] Cleanup project references  
+Verify that projects only reference required projects.
+
+* [ ] Cleanup public/private/internal keywords  
+Verify that classes/methods have the proper scope.
+
+* [ ] Verify Settings.settings order matches objects  
+There are various locations in the source code where the settings/configuration values are listed. We should make sure that each of those locations match.
+
+* [ ] Verify that the AbatabOption is benign  
+Verify that even though there is space for an AbatabOption in the Script Paramater, it doens't affect anything if it's missing.
+
+* [ ] Better method names  
+Indicate what/where things point from other projects. ex. AbatabOptionObject.FinalObj.Finalize(abatabSession) should be something like "FinalOptObj.Finalize", so we can declare the project in the usings section.
+
 ## Abatab
 
+No current changes.
+
+## AbatabData
+
+## AbatabData.Core
+
+## AbatabData.Module
+
+## AbatabLogging
+
+## AbatabOptionObject
+
+## AbatabSession
+
+## AbatabSystem
+
+## ModCommon
+
+## ModProgressNote
+
+## ModPrototype
+
+## ModQuickMedOrder
+
+## ModTesting
+
+
+
+
+
+
+
+
 * [ ] `ModQuickMedOrderDosePercentBoundary` should be `25`, not `.25`  
-Easier to read and modify, less prone to mistakes.
+Easier to read and modify, less prone to mistakes. Will need to be changed in Web.config, as well as source code.
 
 
-* [ ] Cleanup project references
-* [ ] Verify Settings.settings order matches objects (including WebConfig.cs)
-* [ ] Cleanup public/private/internal
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 * [ ] Add the Abatab version to related log files
-* [ ] Verify that the AbatabOption doesn't get in the way of anything
+
 * [ ] Experiment with <10ms log file delay
-* [ ] Better method names so user knows what/where things point from other projects. ex. AbatabOptionObject.FinalObj.Finalize(abatabSession) should be something like "FinalOptObj.Finalize", so we can declare the project in the usings section
+
 
 
 
