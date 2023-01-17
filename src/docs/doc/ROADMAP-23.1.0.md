@@ -10,12 +10,16 @@
 # Documentation
 
 * [ ] Complete README.md
+
 * [ ] Complete CHANGELOG.md
   * [ ] Create a new logo for the changelog
+
 * [ ] Implement RELEASE-NOTES.md
   * [ ] Create a new logo for the release notes
+
 * [ ] Complete ROADMAP.md
   * [ ] Create a new logo for the roadmap
+  
 * [ ] Cleanup DocFX folders
 * [ ] Complete all XML documentation
 
