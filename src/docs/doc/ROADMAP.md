@@ -10,14 +10,13 @@
 
 # 23.1.0
 
-## General
-
-* [ ] Create a new logo for the changelog
-* [ ] Create a new logo for the roadmap
-
 ## Documentation
 
-* [ ] Complete documentation
+* [ ] Complete README.md
+* [ ] Complete CHANGELOG.md
+    - [ ] Create a new logo for the changelog
+* [ ] Complete ROADMAP.md
+    - [ ] Create a new logo for the roadmap
 
 ## Abatab
 
