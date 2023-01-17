@@ -1,4 +1,4 @@
-﻿// Abatab.ModCommon.Verify.cs b230112.1247
+﻿// Abatab.ModCommon.Verify.cs b230117.0859
 // Copyright (c) A Pretty Cool Program
 
 namespace ModCommon
