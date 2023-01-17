@@ -2,13 +2,55 @@
 
 <img src="../images/Logos/AbatabLogo.png" alt="Abatab Changelog" width="512">
 
+<br>
+
 # ROADMAP
 
 </div>
 
-# 23.0.X
+# 23.1.0
 
-## 23.1.0 (January xx, 2023)
+## General
+
+* [ ] Create a new logo for the changelog
+* [ ] Create a new logo for the roadmap
+
+## Documentation
+
+* [ ] Complete documentation
+
+## Abatab
+
+* [ ] `ModQuickMedOrderDosePercentBoundary` should be `25`, not `.25`  
+Easier to read and modify, less prone to mistakes.
+
+
+* [ ] Cleanup project references
+* [ ] Verify Settings.settings order matches objects (including WebConfig.cs)
+* [ ] Cleanup public/private/internal
+* [ ] Add the Abatab version to related log files
+* [ ] Verify that the AbatabOption doesn't get in the way of anything
+* [ ] Experiment with <10ms log file delay
+* [ ] Better method names so user knows what/where things point from other projects. ex. AbatabOptionObject.FinalObj.Finalize(abatabSession) should be something like "FinalOptObj.Finalize", so we can declare the project in the usings section
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### Abatab
 

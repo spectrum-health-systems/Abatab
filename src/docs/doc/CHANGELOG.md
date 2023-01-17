@@ -2,6 +2,8 @@
 
 <img src="../images/Logos/AbatabLogo.png" alt="Abatab Changelog" width="512">
 
+<br>
+
 # CHANGELOG
 
 </div>
