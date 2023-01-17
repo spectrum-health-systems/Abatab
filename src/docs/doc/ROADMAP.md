@@ -1,6 +1,6 @@
 <div align="center">
 
-![Logo][Logo]
+<img src="../images/Logos/AbatabLogo.png" alt="Abatab Changelog" width="512">
 
 # ROADMAP
 
@@ -8,7 +8,7 @@
 
 # 23.0.X
 
-## 23.0.0 (January 15, 2023)
+## 23.1.0 (January xx, 2023)
 
 ### Abatab
 
