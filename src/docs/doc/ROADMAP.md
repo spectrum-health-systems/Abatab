@@ -16,6 +16,8 @@
 
 # Completed development
 
+[v23.0.0](ROADMAP-23.0.0.md)
+
 </h2>
 
 </div>
