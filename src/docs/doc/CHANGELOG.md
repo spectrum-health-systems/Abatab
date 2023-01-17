@@ -1,6 +1,6 @@
 <div align="center">
 
-![Logo][Logo]
+<img src="../images/Logos/AbatabLogo.png" alt="Abatab Changelog" width="512">
 
 # CHANGELOG
 
@@ -8,7 +8,7 @@
 
 # 23.0.X
 
-## 23.0.0 (January 15, 2023)
+## 23.0.0 (January 17, 2023)
 
 ### Core functionality
 
@@ -16,7 +16,3 @@
 * `NEW` Modules
 * `NEW` Module functionality
 * `NEW` Documentation
-
-Please see the [release notes](./ReleaseNotes/23.0.0.html) for more information.
-
-[Logo]: /.github/resources/img/logo/AbatabLogo-current.png

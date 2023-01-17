@@ -1,4 +1,4 @@
-﻿// Abatab.ModTesting.DataDump.cs b230112.1247
+﻿// Abatab.ModTesting.DataDump.cs b230117.0910
 // Copyright (c) A Pretty Cool Program
 
 using AbatabData;
