@@ -3,21 +3,21 @@
   <img src="../images/Logos/AbatabLogo.png" alt="Abatab Changelog" width="512">
   <br>
 
-  <h1?>
-    v23.2.0
-  </h1?>
+  <h1>
+    v23.2.0 (release 2/1/23)
+  </h1>
 
 </div>
 
 # Overview
 
 Focus on:
+
 * Documentation
-* Warning logs
-* Progress Note check
 
 # Documentation
-* [ ] Complete all XML documentation
+
+* [ ] XML documentation
 
 # General
 
@@ -45,9 +45,15 @@ No current changes.
 
 ## AbatabData
 
+No current changes.
+
 ## AbatabData.Core
 
+No current changes.
+
 ## AbatabData.Module
+
+No current changes.
 
 ## AbatabLogging
 
@@ -83,15 +89,27 @@ Any log that doesn't fit existing types.
 
 ## AbatabOptionObject
 
+No current changes.
+
 ## AbatabSession
+
+No current changes.
 
 ## AbatabSystem
 
+No current changes.
+
 ## ModCommon
+
+No current changes.
 
 ## ModProgressNote
 
+No current changes.
+
 ## ModPrototype
+
+No current changes.
 
 ## ModQuickMedOrder
 
@@ -101,3 +119,5 @@ Any log that doesn't fit existing types.
 Easier to read and modify, less prone to mistakes. Will need to be changed in Web.config, as well as source code.
 
 ## ModTesting
+
+No current changes.

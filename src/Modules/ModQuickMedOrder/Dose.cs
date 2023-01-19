@@ -1,4 +1,4 @@
-﻿// Abatab.ModQuickMedOrder.Dose.cs b230117.0910
+﻿// Abatab.ModQuickMedOrder.Dose.cs b230119.0941
 // Copyright (c) A Pretty Cool Program
 
 using AbatabData;

@@ -1,4 +1,4 @@
-﻿// Abatab.WebConfig.cs b230117.0910
+﻿// Abatab.WebConfig.cs b230119.0941
 // Copyright (c) A Pretty Cool Program
 
 using Abatab.Properties;

@@ -1,4 +1,4 @@
-﻿// Abatab.AbatabData.Core.Logging.cs b230117.0910
+﻿// Abatab.AbatabData.Core.Logging.cs b230119.1030
 // Copyright (c) A Pretty Cool Program
 
 namespace AbatabData.Core
@@ -38,7 +38,7 @@ namespace AbatabData.Core
         /// <description>Do not create any log files.</description>
         /// </item>
         /// </list>
-        /// * To create multiple types of logs, separate each type with a hypen (<c>"-"</c>).
+        /// * To create multiple types of logs, separate each type with a hyphen (<c>"-"</c>).
         /// </remarks>
         /// <examples>
         /// * To only create session logs: <c>LoggingMode=session</c>

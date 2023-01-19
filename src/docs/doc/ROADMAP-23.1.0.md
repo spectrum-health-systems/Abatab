@@ -3,15 +3,16 @@
   <img src="../images/Logos/AbatabLogo.png" alt="Abatab Changelog" width="512">
   <br>
 
-  <h1?>
-    v23.1.0
-  </h1?>
+  <h1>
+    v23.1.0 (release 1/31/23)
+  </h1>
 
 </div>
 
 # Overview
 
 Focus on:
+
 * Documentation
 * Warning logs
 * Progress Note check
@@ -45,9 +46,15 @@ No current changes.
 
 ## AbatabData
 
+No current changes.
+
 ## AbatabData.Core
 
+No current changes.
+
 ## AbatabData.Module
+
+No current changes.
 
 ## AbatabLogging
 
@@ -65,11 +72,19 @@ We need to make sure this is working properly.
 
 ## AbatabOptionObject
 
+No current changes.
+
 ## AbatabSession
+
+No current changes.
 
 ## AbatabSystem
 
+No current changes.
+
 ## ModCommon
+
+No current changes.
 
 ## ModProgressNote
 
@@ -79,7 +94,11 @@ We need to make sure this is working properly.
 
 ## ModPrototype
 
+No current changes.
+
 ## ModQuickMedOrder
+
+No current changes.
 
 ### Dose.cs
 
@@ -92,3 +111,5 @@ We need to make sure this is working properly.
 * [ ] Verify authorized user settings
 
 ## ModTesting
+
+No current changes.
