@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="../images/Logos/AbatabLogo.png" alt="Abatab Changelog" width="512">
+<img src="../images/Logos/AbatabRoadmapLogo.png" alt="Abatab Roadmap" width="512">
 
 <br>
 
