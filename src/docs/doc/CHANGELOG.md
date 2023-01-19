@@ -1,12 +1,10 @@
 <div align="center">
 
-<img src="../images/Logos/AbatabLogo.png" alt="Abatab Changelog" width="512">
-
-<br>
-
-# CHANGELOG
+<img src="../images/Logos/AbatabChangelogLogo.png" alt="Abatab Changelog" width="512">
 
 </div>
+
+<br>
 
 # 23.0.X
 

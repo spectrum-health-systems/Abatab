@@ -1,10 +1,10 @@
 <div align="center">
 
-  <img src="../images/Logos/AbatabLogo.png" alt="Abatab Changelog" width="512">
+  <img src="../../images/Logos/AbatabRoadmapLogo.png" alt="Abatab Changelog" width="512">
   <br>
 
   <h1>
-    v23.1.0 (release 1/31/23)
+    v23.1.0
   </h1>
 
 </div>
