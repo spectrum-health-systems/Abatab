@@ -10,7 +10,7 @@
 
 ## 23.1.0 (January 31, 2023)
 
-### [Release notes](./ReleaseNotes/23.1.0.md)
+#### [Release notes](./ReleaseNotes/23.1.0.md)
 
 > MODIFIED
 
@@ -20,7 +20,7 @@
 
 ## 23.0.0 (January 17, 2023)
 
-### [Release notes](./ReleaseNotes/23.0.0.md)
+##### [Release notes](./ReleaseNotes/23.0.0.md)
 
 > NEW
 
