@@ -1,98 +1,27 @@
 <div align="center">
 
-<img src="../images/Logos/AbatabLogo.png" alt="Abatab Changelog" width="512">
+<img src="../images/Logos/AbatabRoadmapLogo.png" alt="Abatab Roadmap" width="512">
 
-# ROADMAP
+<br>
 
 </div>
 
-# 23.0.X
+# Spring23 Community Release (4/1/23)
 
-## 23.1.0 (January xx, 2023)
+* [v23.1.0](./v23/Roadmap-23.1.0.md) <!-- 1/31: Features -->
+* [v23.2.0](./v23/Roadmap-23.2.0.md) <!-- 2/28: Features -->
+* [v23.3.0](./v23/Roadmap-23.3.0.md) <!-- 3/31: Documentation and testing -->
 
-### Abatab
+# Summer23 Community Release (7/1/23)
 
-* **[-]** `ModQuickMedOrderDosePercentBoundary` should be `25`, not `.25`
-* **[-]** Cleanup project references
-* **[-]** Verify Settings.settings order matches objects (including WebConfig.cs)
-* **[-]** Cleanup public/private/internal
-* **[-]** Add the Abatab version to related log files
-* **[-]** Verify that the AbatabOption doesn't get in the way of anything
-* **[-]** Experiment with <10ms log file delay
-* **[-]** Better method names so user knows what/where things point from other projects. ex. AbatabOptionObject.FinalObj.Finalize(abatabSession) should be something like "FinalOptObj.Finalize", so we can declare the project in the usings section
+TBD
 
-#### Abatab.Abatab.asmx.cs
+# Autumn23 Community Release (10/1/23)
 
-* No changes
+TBD
 
-#### Abatab.Roundhouse.cs
+# Winter23 Community Release (1/1/23)
 
-#### Abatab.WebConfig.cs
+TBD
 
-### Core functionality
-
-* **[X]** Test to make sure that replacing DLL files works as expected. (23.0.0.0-testbuild+221115.0903)
-* **[-]** Confirm that we don't need other .DLLs (e.g., Roslyn stuff)
-
-#### AbatabData
-
-* No changes
-
-#### AbatabLogging
-
-* **[-]** Test all log types to make sure they are written to the correct folder
-* **[-]** Test debugMode to make sure that "on" -> "enabled" is working correctly
-* **[-]** Warning logs
-* **[-]** Log all QMO data in session log (e.g., LastOrderScheduledText)
-* **[-]** Fix access log filename/contents
-* **[-]** Warning logs
-* **[-]** Verify "none" works
-* **[-]** Veriry all combinations of log events work
-* **[-]** Logging detail level (e.g., "TRACE_01", "TRACE_02", etc.)
-* **[-]** Error logs
-* **[-]** Lost logs
-
-#### AbatabOptionObject
-
-No changes
-
-#### AbatabSession
-
-No changes
-
-#### AbatabSystem
-
-No changes
-
-### Abatab Modules
-
-#### ModCommon
-
-No changes
-
-#### ModProgressNote
-
-* **[-]** Test ProgressNote.??
-* **[-]** Verify valid user settings
-
-#### ModPrototype
-
-No changes
-
-#### ModQuickMedOrder
-
-* **[-]** Test Dose.VerifyUnderMaxPercentIncrease
-* **[-]** Test Dose.VerifyUnderMaxMilligramIncrease
-* **[-]** Test Dose.VerifyUnderMaxPercentIncrease
-* **[-]** Verify authorized user settings
-
-#### ModTesting
-
-No changes
-
-### Documentation
-
-**[-]** Cleanup DocFX folders
-**[-]** Complete all XML documentation
-
-[Logo]: /.github/resources/img/logo/AbatabLogo-current.png
+<!-- Also see: The Roadmap Queue : .development/Roadmap-queue.md -->

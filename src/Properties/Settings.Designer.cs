@@ -116,9 +116,9 @@ namespace Abatab.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("enabled")]
-        public string ModTestingMode {
+        public string ModPrototypeMode {
             get {
-                return ((string)(this["ModTestingMode"]));
+                return ((string)(this["ModPrototypeMode"]));
             }
         }
         
@@ -170,9 +170,18 @@ namespace Abatab.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("enabled")]
-        public string ModPrototypeMode {
+        public string ModTestingMode {
             get {
-                return ((string)(this["ModPrototypeMode"]));
+                return ((string)(this["ModTestingMode"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Abatab")]
+        public string LogPublicAccess {
+            get {
+                return ((string)(this["LogPublicAccess"]));
             }
         }
     }

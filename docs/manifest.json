@@ -28,15 +28,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "../../docs/doc/CHANGELOG.md",
       "output": {
         ".html": {
           "relative_path": "doc/CHANGELOG.html",
-          "hash": "sl6yHTxubifTSmNfprfyBGBGPuTkhq3CMmDOOQzVSRU="
+          "hash": "Hz27Y8a4YUErzU6zp4g3y6K8eDh+kVi89O2S29y+rrw="
         }
       },
       "is_incremental": false,
@@ -48,7 +45,7 @@
       "output": {
         ".html": {
           "relative_path": "doc/ROADMAP.html",
-          "hash": "yLiUxLkX2woVblT6PxkK9XkFhWeQ/+KzwA9Fq2BkLsU="
+          "hash": "8AeYlAzm1Nohv9sIcTCl0VBZHPKLIfD/gcKqXxlvIOo="
         }
       },
       "is_incremental": false,
@@ -72,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "doc/index.html",
-          "hash": "WZ/o0oY8oPuYE/DlXW80c+3/N8k3Xd0KtCrG7qveBHw="
+          "hash": "HpDV00yleiEZXgfmqSje8YhcpFdim9kDzqy2J3VBv1A="
         }
       },
       "is_incremental": false,
@@ -191,296 +188,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "../../docs/images/Logo/AbatabManLogo-v24..1.png",
+      "source_relative_path": "../../docs/images/Logos/AbatabLogo.png",
       "output": {
         "resource": {
-          "relative_path": "images/Logo/AbatabManLogo-v24..1.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "../../docs/images/Logo/AbatabManLogo-v24..2.png",
-      "output": {
-        "resource": {
-          "relative_path": "images/Logo/AbatabManLogo-v24..2.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "../../docs/images/Logo/AbatabManLogo-v24.0.png",
-      "output": {
-        "resource": {
-          "relative_path": "images/Logo/AbatabManLogo-v24.0.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "../../docs/images/Logo/AbatabManLogo-v24.10.png",
-      "output": {
-        "resource": {
-          "relative_path": "images/Logo/AbatabManLogo-v24.10.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "../../docs/images/Logo/AbatabManLogo-v24.11.png",
-      "output": {
-        "resource": {
-          "relative_path": "images/Logo/AbatabManLogo-v24.11.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "../../docs/images/Logo/AbatabManLogo-v24.12.png",
-      "output": {
-        "resource": {
-          "relative_path": "images/Logo/AbatabManLogo-v24.12.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "../../docs/images/Logo/AbatabManLogo-v24.3.png",
-      "output": {
-        "resource": {
-          "relative_path": "images/Logo/AbatabManLogo-v24.3.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "../../docs/images/Logo/AbatabManLogo-v24.4.png",
-      "output": {
-        "resource": {
-          "relative_path": "images/Logo/AbatabManLogo-v24.4.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "../../docs/images/Logo/AbatabManLogo-v24.5.png",
-      "output": {
-        "resource": {
-          "relative_path": "images/Logo/AbatabManLogo-v24.5.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "../../docs/images/Logo/AbatabManLogo-v24.6.png",
-      "output": {
-        "resource": {
-          "relative_path": "images/Logo/AbatabManLogo-v24.6.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "../../docs/images/Logo/AbatabManLogo-v24.7.png",
-      "output": {
-        "resource": {
-          "relative_path": "images/Logo/AbatabManLogo-v24.7.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "../../docs/images/Logo/AbatabManLogo-v24.8.png",
-      "output": {
-        "resource": {
-          "relative_path": "images/Logo/AbatabManLogo-v24.8.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "../../docs/images/Logo/AbatabManLogo-v24.9.png",
-      "output": {
-        "resource": {
-          "relative_path": "images/Logo/AbatabManLogo-v24.9.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "../../docs/images/Logo/logo-man-original.png",
-      "output": {
-        "resource": {
-          "relative_path": "images/Logo/logo-man-original.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "../../docs/images/Logo/logo-man-v23.0.png",
-      "output": {
-        "resource": {
-          "relative_path": "images/Logo/logo-man-v23.0.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "../../docs/images/Logo/logo-man-v23.1.png",
-      "output": {
-        "resource": {
-          "relative_path": "images/Logo/logo-man-v23.1.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "../../docs/images/Logo/logo-man-v23.10.png",
-      "output": {
-        "resource": {
-          "relative_path": "images/Logo/logo-man-v23.10.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "../../docs/images/Logo/logo-man-v23.11.png",
-      "output": {
-        "resource": {
-          "relative_path": "images/Logo/logo-man-v23.11.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "../../docs/images/Logo/logo-man-v23.12.png",
-      "output": {
-        "resource": {
-          "relative_path": "images/Logo/logo-man-v23.12.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "../../docs/images/Logo/logo-man-v23.2.png",
-      "output": {
-        "resource": {
-          "relative_path": "images/Logo/logo-man-v23.2.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "../../docs/images/Logo/logo-man-v23.3.png",
-      "output": {
-        "resource": {
-          "relative_path": "images/Logo/logo-man-v23.3.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "../../docs/images/Logo/logo-man-v23.4.png",
-      "output": {
-        "resource": {
-          "relative_path": "images/Logo/logo-man-v23.4.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "../../docs/images/Logo/logo-man-v23.5.png",
-      "output": {
-        "resource": {
-          "relative_path": "images/Logo/logo-man-v23.5.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "../../docs/images/Logo/logo-man-v23.6.png",
-      "output": {
-        "resource": {
-          "relative_path": "images/Logo/logo-man-v23.6.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "../../docs/images/Logo/logo-man-v23.7.png",
-      "output": {
-        "resource": {
-          "relative_path": "images/Logo/logo-man-v23.7.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "../../docs/images/Logo/logo-man-v23.8.png",
-      "output": {
-        "resource": {
-          "relative_path": "images/Logo/logo-man-v23.8.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "../../docs/images/Logo/logo-man-v23.9.png",
-      "output": {
-        "resource": {
-          "relative_path": "images/Logo/logo-man-v23.9.png"
+          "relative_path": "images/Logos/AbatabLogo.png"
         }
       },
       "is_incremental": false,
@@ -491,7 +202,7 @@
       "source_relative_path": "../../docs/images/Logos/AbatabManualLogo.png",
       "output": {
         "resource": {
-          "relative_path": "images/Logo/logo-man.png"
+          "relative_path": "images/Logos/AbatabManualLogo.png"
         }
       },
       "is_incremental": false,
@@ -708,7 +419,7 @@
       "output": {
         ".html": {
           "relative_path": "man/index.html",
-          "hash": "StNxcTexhNHVvj5Z97NFdEVcOHpDZdJkyLvTE6ViOEg="
+          "hash": "4R++tjkymrQREGNURV5sfVkNYRz4Dm+qO3nBiY24e5Q="
         }
       },
       "is_incremental": false,
@@ -720,7 +431,7 @@
       "output": {
         ".html": {
           "relative_path": "man/manAboutAbatab.html",
-          "hash": "C154tKlgObqFb2xGLXtSK0X26HaTYBZEmtVAfF32QQE="
+          "hash": "DhicSte3BOwy3TWkdUPan4iROfxROi+JIKZ7CTIgheo="
         }
       },
       "is_incremental": false,
@@ -732,7 +443,7 @@
       "output": {
         ".html": {
           "relative_path": "man/manAdditionalInformation_.html",
-          "hash": "bjITSn4weeImU6ey4RMPBjlbzdg325dD04ajgYo22Fw="
+          "hash": "2RN5Bmjfi+AO6lU0IUZY/bGL8vqQBul96DcIzO0fHmc="
         }
       },
       "is_incremental": false,
@@ -747,7 +458,7 @@
       "output": {
         ".html": {
           "relative_path": "man/manAppendix.html",
-          "hash": "53kj/WoXvEK24Af/1vtYRM4I8cVJQtSau1sfOaajJ5M="
+          "hash": "FsqiB2bmILcphbZzJ908oZZwX+HkruEqEebk63qLjTM="
         }
       },
       "is_incremental": false,
@@ -759,7 +470,7 @@
       "output": {
         ".html": {
           "relative_path": "man/manConfiguringAbatab.html",
-          "hash": "wQW6qVdImBowfrlD8qhfeQByh9CpOW1NC8ZBmbNbEhA="
+          "hash": "AgVpZWi5r5HmZ9fdPhpE43Nns25jmP1C5Aywzsmd8mY="
         }
       },
       "is_incremental": false,
@@ -774,7 +485,7 @@
       "output": {
         ".html": {
           "relative_path": "man/manCoreFunctionality.html",
-          "hash": "Tcq4sR3wG0ENGX76ve9yqCYkHiR7dekN1ztrAMphma4="
+          "hash": "tydiLmFgmRRUub01xHNEATrbMu1e3G1C1mhFxp+foRA="
         }
       },
       "is_incremental": false,
@@ -786,7 +497,7 @@
       "output": {
         ".html": {
           "relative_path": "man/manDocFx-HowTo.html",
-          "hash": "/NlstJxnfADLRc1eA/NccM6V3H/K+3DMfnJSl4tiWWI="
+          "hash": "Lg9arw6AckLHhZBdoKvCBGLQGyEhdMOjscwL3Yx0quY="
         }
       },
       "is_incremental": false,
@@ -798,7 +509,7 @@
       "output": {
         ".html": {
           "relative_path": "man/manDocFx.html",
-          "hash": "yW6R9Hi4F4dXzlZO0VtLRRviNJc9+o8r8kKbEf0O63g="
+          "hash": "G1g4eZlhlgM5l11770+OOij2nyLcDFIoVR57ilv1dRc="
         }
       },
       "is_incremental": false,
@@ -810,7 +521,7 @@
       "output": {
         ".html": {
           "relative_path": "man/manFunctionality-Existing.html",
-          "hash": "6/tNLFBq6Gl6rpOCBjPDjc9xHmKQZOO4DfbiC+03rIs="
+          "hash": "gHjOBr95WsEZLT3zPaT2P7kXNHE6e8jPSxaOFq4x6PQ="
         }
       },
       "is_incremental": false,
@@ -825,7 +536,7 @@
       "output": {
         ".html": {
           "relative_path": "man/manFunctionality-Modules.html",
-          "hash": "7un50QFzbd6FJ3wQhkTuRQGIvnCDm9RecXw4E1zlqms="
+          "hash": "dBrqrBqW6vQQqg6IL669nsrzFAPqT8CERsb1jlku+hA="
         }
       },
       "is_incremental": false,
@@ -837,7 +548,7 @@
       "output": {
         ".html": {
           "relative_path": "man/manFunctionality-New.html",
-          "hash": "b/YVx7l62S8Zwxg1xAxXqm5+2No9t6KbYdyQjdFfdnk="
+          "hash": "j2uh/VLxdt3GkU0bRCZZbvLm+Y+sZln69O2ehOGRDa8="
         }
       },
       "is_incremental": false,
@@ -849,7 +560,7 @@
       "output": {
         ".html": {
           "relative_path": "man/manFunctionality.html",
-          "hash": "zXVzgTZDq1h6/UCBu8mAG1G52ZS1Ze5J08jq3qVzWZ0="
+          "hash": "Z/7vNBS3NIKROY2xt0K5RtwxOXpDOtw+qRu4AFLh5UU="
         }
       },
       "is_incremental": false,
@@ -864,7 +575,7 @@
       "output": {
         ".html": {
           "relative_path": "man/manGettingStarted.html",
-          "hash": "cKM3yctoLOwZEy9kLd4aU0h3v0LYFNQF0s+j7aytsdI="
+          "hash": "mxHQsuqUba9gxcknFnVma0zBzj5XXAKtCBA7xx55nYo="
         }
       },
       "is_incremental": false,
@@ -879,7 +590,7 @@
       "output": {
         ".html": {
           "relative_path": "man/manHostingAbatab.html",
-          "hash": "hdWknjboMpf9ds/PH7ziT2N3ZRZwgM5ICH8n2VYuFXc="
+          "hash": "mZ5lsp69pPwsbuB7TLeMwqoKzHZjhd/3s2q34cGth+A="
         }
       },
       "is_incremental": false,
@@ -894,7 +605,7 @@
       "output": {
         ".html": {
           "relative_path": "man/manImportingAbatab.html",
-          "hash": "oG8Ym6eixNeLIEStKd3h9hAEsLOu41NScbYrFhZaRFg="
+          "hash": "YI/Y7OLiuoVeTf2fTUT4ZNTHzwkhLiRR3sTj2rpFaRo="
         }
       },
       "is_incremental": false,
@@ -906,7 +617,7 @@
       "output": {
         ".html": {
           "relative_path": "man/manLogging.html",
-          "hash": "A9FNTOEb0gU4Gqv1bfC48/+UZ/lYYLTIQ9bxVNclR4k="
+          "hash": "oPZFCcetoC7oPQX9aCQF14IE2ycjso9rsW0/csUCKq4="
         }
       },
       "is_incremental": false,
@@ -918,7 +629,7 @@
       "output": {
         ".html": {
           "relative_path": "man/manModules.html",
-          "hash": "l38/nmbZkIhjk/q5S1JUKRNl4LI4fTQaCo9Pc9g+MI0="
+          "hash": "yRigQLgKofW8ahZLd1F9YggLOfUykxSuAr/FVmHnZDk="
         }
       },
       "is_incremental": false,
@@ -930,7 +641,7 @@
       "output": {
         ".html": {
           "relative_path": "man/manSourceCode_.html",
-          "hash": "19e0djxsWgDMVacgBdl9EBTBshxZl6NvuFQGDIkS6Xo="
+          "hash": "zcZeEKcN3OjXpi0abTVTD3RTxJ8AZgGgOKdcK6RCHww="
         }
       },
       "is_incremental": false,
@@ -942,7 +653,7 @@
       "output": {
         ".html": {
           "relative_path": "man/manTesting-ModQuickMedOrder.html",
-          "hash": "G0RgWUOfAT9mmurAlvoKJDUUcI0RRHhRa//QHvRT9aA="
+          "hash": "wia2BTZvXdh5EHJhl+hu4wbCK38/LD5x8gnJGjG69rA="
         }
       },
       "is_incremental": false,
@@ -954,7 +665,7 @@
       "output": {
         ".html": {
           "relative_path": "man/manTesting.html",
-          "hash": "vh13BWKWxSaompC6dsPDjZj8SQYt/O2RLEOZ9yIzd5w="
+          "hash": "NEfCiRlKtT8gB6P8eaQBZIpUBjg0PfoUxfqAv+MYuJk="
         }
       },
       "is_incremental": false,
@@ -966,7 +677,7 @@
       "output": {
         ".html": {
           "relative_path": "man/manUsingAbatab.html",
-          "hash": "wiFgZg1hsPANlgui1lBq3dR9xyFiV5oLp/zaUWmfTLE="
+          "hash": "EvXqAtqSlFZWYfRBV8DaIRT/vOTeVASUt1Lm8UYNxMw="
         }
       },
       "is_incremental": false,

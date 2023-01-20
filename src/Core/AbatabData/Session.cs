@@ -1,4 +1,4 @@
-﻿// Abatab.AbatabData.Session.cs b230117.0910
+﻿// Abatab.AbatabData.Session.cs b230119.0941
 // Copyright (c) A Pretty Cool Program
 
 using NTST.ScriptLinkService.Objects;

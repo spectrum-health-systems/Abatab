@@ -1,18 +1,38 @@
 <div align="center">
 
-<img src="../images/Logos/AbatabLogo.png" alt="Abatab Changelog" width="512">
+  <img src="../images/Logos/AbatabChangelogLogo.png" alt="Abatab Changelog" width="512">
 
-# CHANGELOG
+  The development changelog can be found [here](./v23/Changelog-development.md).
 
 </div>
 
-# 23.0.X
+<br>
 
-## 23.0.0 (January 17, 2023)
+<!-- Leave this commented out until release
+## 23.1.0 (2023-01-31)
 
-### Core functionality
+### [Release notes](./ReleaseNotes/23.1.0.md)
 
-* `NEW` Core functionality
-* `NEW` Modules
-* `NEW` Module functionality
-* `NEW` Documentation
+***
+ -->
+
+# v23.0.0 (2023-01-17)
+
+#### [Release notes](./ReleaseNotes/23.0.0.md)
+
+<br>
+
+> NEW
+
+* Core functionality : Logging
+* Module: ModCommon
+* Module: ModQuickMedOrder
+* Module functionality: ModQuickMedOrder-Dose-VerifyAmount
+
+> UPDATED
+
+* Documentation
+
+***
+
+The development changelog can be found [here]().
