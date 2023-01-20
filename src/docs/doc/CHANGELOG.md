@@ -1,26 +1,26 @@
 <div align="center">
 
-<img src="../images/Logos/AbatabChangelogLogo.png" alt="Abatab Changelog" width="512">
+  <img src="../images/Logos/AbatabChangelogLogo.png" alt="Abatab Changelog" width="512">
+
+  The development changelog can be found [here](./v23/Changelog-development.md).
 
 </div>
 
 <br>
 
-# 23.0.X
+<!-- Leave this commented out until release
+## 23.1.0 (2023-01-31)
 
-## 23.1.0 (January 31, 2023)
-
-#### [Release notes](./ReleaseNotes/23.1.0.md)
-
-> MODIFIED
-
-* Renamed `Core.AbatabLogging.BuildPath.cs` to `Core.AbatabLogging.BuildPaths.cs`
+### [Release notes](./ReleaseNotes/23.1.0.md)
 
 ***
+ -->
 
-## 23.0.0 (January 17, 2023)
+# v23.0.0 (2023-01-17)
 
-##### [Release notes](./ReleaseNotes/23.0.0.md)
+#### [Release notes](./ReleaseNotes/23.0.0.md)
+
+<br>
 
 > NEW
 
@@ -29,6 +29,10 @@
 * Module: ModQuickMedOrder
 * Module functionality: ModQuickMedOrder-Dose-VerifyAmount
 
-> UPDATES
+> UPDATED
 
-* `NEW` Documentation
+* Documentation
+
+***
+
+The development changelog can be found [here]().
