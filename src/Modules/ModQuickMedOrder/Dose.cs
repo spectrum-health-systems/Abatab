@@ -1,4 +1,4 @@
-﻿// Abatab.ModQuickMedOrder.Dose.cs b230119.0941
+﻿// Abatab.ModQuickMedOrder.Dose.cs b230123.1258
 // Copyright (c) A Pretty Cool Program
 
 using AbatabData;
@@ -231,8 +231,8 @@ namespace ModQuickMedOrder
                             //var warningId = $"[ Warning ID: {abatabSession.SessionDateStamp}.{abatabSession.SessionTimeStamp}-{percentBoundary}.{percentDifference}-{milligramsBoundary}.{currentMinusPrevious}.{previousMinusCurrent} ]";
 
                             //var warningId = $"[ Warning ID: {abatabSession.SessionDateStamp}.{abatabSession.SessionTimeStamp}-{percentBoundary}.{percentDifference}-{milligramsBoundary}.{overage}.{underage} ]";
-                            var warningId = $"[ Warning ID: {abatabSession.SessionDateStamp}.{abatabSession.SessionTimeStamp}-{percentBoundary}.{percentDifference}-{milligramsBoundary}.{differ} ]";
-
+                            var warningId = $"[ Warning ID: {abatabSession.SessionDateStamp}.{abatabSession.SessionTimeStamp}-{percentBoundary}.{percentDifference}-{milligramsBoundary}.{differ} ]{Environment.NewLine}" +
+                                            $"[ {abatabSession.LoggingConfig.SessionRoot} ]";
 
                             //if (currentMinusPrevious >= milligramsBoundary || previousMinusCurrent <= milligramsBoundary)
                             //{
