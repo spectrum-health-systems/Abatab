@@ -10,6 +10,43 @@
 
 </div>
 
+# Upcoming deployments
+
+## v23.1 deployment
+
+1. Backup all branches
+2. Remove all branches except main
+3. Refresh main with v23.1
+4. Create v23.1 branch from main branch
+5. Create v23.2 branch from v23.1 branch
+6. Update v23.1 branch with a message about not being current, and pointing to development branch
+7. Create README.md on development branch pointing to v23.2
+
+Going forward, development take place on v23.2 branch.
+
+## v23.2 deployment
+
+1. Merge v23.2 branch with main branch
+2. Create v23.3 branch with v23.2 branch
+3. Update v23.2 branch with a message about not being current, and pointing to development branch
+4. Update README.md on development branch pointing to v23.3
+
+## v23.3 deployment
+
+> v23.3 is deployed at the same time as the Abatab Spring23 Community Release
+
+1. Merge v23.3 branch with main branch
+2. Create v23.4 branch with v23.3 branch
+3. Update v23.3 branch with a message about not being current, and pointing to development branch
+4. Update README.md on development branch pointing to v23.4
+
+## Abatab Spring23 Community Release
+
+> The Abatab Spring23 Community Release is deployed at the same time as v23.3
+
+1. Create a Abtab Community Release branch from the v23.3 branch
+2. Update main branch README to let users know about the Community Release
+
 ***
 
 # Adding new local settings
@@ -20,8 +57,32 @@
 
 
 
+Development versions of Abatab use [Symanic Versioning](https://semver.org/) with the format of X.Y.Z where:
+
+* **`X`** is a the major version, and is based on the release year
+* **`Y`** is a the minor version, and is based on the release month
+* **`Z`** is a the patch version
+
+For example, an Abatab release in May of 2023 would have a version of `23.5`
 
 
+
+# The Abatab Community Release
+
+The stable version of Abatab that is intended for production environments is called the "**Community Release**".
+
+The Abatab Community Release is available on a quarterly basis on the following schedule:
+
+* Spring: April 1st
+* Summer: July 1st
+* Autumn: October 1st
+* Winter: January 1st
+
+For example, the Abatab Community Release during the Autumn of 2023 is named `Abatab Community Release Summer23`
+
+## Development versions of Abatab
+
+Abatab is being actively developed outside of the Community release (see the development branch [here](https://github.com/spectrum-health-systems/Abatab/tree/development)), but it is not recommended to use development versions of Abatab in production environments.
 
 
 

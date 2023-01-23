@@ -120,6 +120,12 @@
             <param name="logRoot">The log root.</param>
             <returns>The path to the log root.</returns>
         </member>
+        <member name="M:AbatabLogging.BuildPaths.BuildWarningLogPaths(System.String,System.Collections.Generic.List{System.String})">
+            <summary>TBD</summary>
+            <param name="abatabUserName"></param>
+            <param name="logDirs"></param>
+            <returns></returns>
+        </member>
         <member name="T:AbatabLogging.Debuggler">
             <summary>Logic for debugging functionality.</summary>
         </member>

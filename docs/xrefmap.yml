@@ -909,6 +909,28 @@ references:
   isSpec: "True"
   fullName: AbatabLogging.BuildPath.WithCaller
   nameWithType: BuildPath.WithCaller
+- uid: AbatabLogging.BuildPaths
+  name: BuildPaths
+  href: api/AbatabLogging.BuildPaths.html
+  commentId: T:AbatabLogging.BuildPaths
+  fullName: AbatabLogging.BuildPaths
+  nameWithType: BuildPaths
+- uid: AbatabLogging.BuildPaths.BuildWarningLogPaths(System.String,System.Collections.Generic.List{System.String})
+  name: BuildWarningLogPaths(String, List<String>)
+  href: api/AbatabLogging.BuildPaths.html#AbatabLogging_BuildPaths_BuildWarningLogPaths_System_String_System_Collections_Generic_List_System_String__
+  commentId: M:AbatabLogging.BuildPaths.BuildWarningLogPaths(System.String,System.Collections.Generic.List{System.String})
+  name.vb: BuildWarningLogPaths(String, List(Of String))
+  fullName: AbatabLogging.BuildPaths.BuildWarningLogPaths(System.String, System.Collections.Generic.List<System.String>)
+  fullName.vb: AbatabLogging.BuildPaths.BuildWarningLogPaths(System.String, System.Collections.Generic.List(Of System.String))
+  nameWithType: BuildPaths.BuildWarningLogPaths(String, List<String>)
+  nameWithType.vb: BuildPaths.BuildWarningLogPaths(String, List(Of String))
+- uid: AbatabLogging.BuildPaths.BuildWarningLogPaths*
+  name: BuildWarningLogPaths
+  href: api/AbatabLogging.BuildPaths.html#AbatabLogging_BuildPaths_BuildWarningLogPaths_
+  commentId: Overload:AbatabLogging.BuildPaths.BuildWarningLogPaths
+  isSpec: "True"
+  fullName: AbatabLogging.BuildPaths.BuildWarningLogPaths
+  nameWithType: BuildPaths.BuildWarningLogPaths
 - uid: AbatabLogging.Debuggler
   name: Debuggler
   href: api/AbatabLogging.Debuggler.html
@@ -1012,6 +1034,19 @@ references:
   isSpec: "True"
   fullName: AbatabLogging.LogEvent.Trace
   nameWithType: LogEvent.Trace
+- uid: AbatabLogging.LogEvent.Warning(AbatabData.Session,System.String)
+  name: Warning(Session, String)
+  href: api/AbatabLogging.LogEvent.html#AbatabLogging_LogEvent_Warning_AbatabData_Session_System_String_
+  commentId: M:AbatabLogging.LogEvent.Warning(AbatabData.Session,System.String)
+  fullName: AbatabLogging.LogEvent.Warning(AbatabData.Session, System.String)
+  nameWithType: LogEvent.Warning(Session, String)
+- uid: AbatabLogging.LogEvent.Warning*
+  name: Warning
+  href: api/AbatabLogging.LogEvent.html#AbatabLogging_LogEvent_Warning_
+  commentId: Overload:AbatabLogging.LogEvent.Warning
+  isSpec: "True"
+  fullName: AbatabLogging.LogEvent.Warning
+  nameWithType: LogEvent.Warning
 - uid: AbatabLogging.LogEvent.WebConfigDebug(System.Collections.Generic.Dictionary{System.String,System.String})
   name: WebConfigDebug(Dictionary<String, String>)
   href: api/AbatabLogging.LogEvent.html#AbatabLogging_LogEvent_WebConfigDebug_System_Collections_Generic_Dictionary_System_String_System_String__

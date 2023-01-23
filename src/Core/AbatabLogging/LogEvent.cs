@@ -1,4 +1,4 @@
-﻿// Abatab.AbatabLogging.LogEvent.cs b230119.0941
+﻿// Abatab.AbatabLogging.LogEvent.cs b230123.1210
 // Copyright (c) A Pretty Cool Program
 
 /* ========================================================================================================
@@ -158,17 +158,37 @@ namespace AbatabLogging
             }
         }
 
-
-
-        public static void Warning(Session abatabSession)
+        public static void Warning(Session abatabSession, string logMsg = "Generic warning!")
         {
             if (abatabSession.LoggingConfig.LoggingMode == "all" || abatabSession.LoggingConfig.LoggingMode.Contains("warning"))
             {
-                // Can't really put a trace log here!
-                var logPath    = BuildPath.WithCaller("trace", abatabSession.LoggingConfig.SessionRoot, exeAssembly, callPath, callMember, callLine);
-                var logContent = BuildContent.LogComponents("trace", abatabSession, logMsg, exeAssembly, callPath, callMember, callLine);
+                // Can't really put a trace log here?
 
-                WriteLogFile.LocalFile(logPath, logContent, Convert.ToInt32(abatabSession.LoggingConfig.WriteDelay));
+                var logPaths = new List<string>
+                {
+                    $@"{abatabSession.LoggingConfig.SessionRoot}\warning\{logMsg}.warning",
+                    $@"{abatabSession.LoggingConfig.EventWarningRoot}\{logMsg}-{abatabSession.AbatabUserName}-{abatabSession.SessionDateStamp}_{abatabSession.SessionTimeStamp}.warning"
+
+                };
+
+                var logContent = BuildContent.LogComponents("warning", abatabSession, logMsg);
+
+                // $@"{abatabSession.AbatabDataRoot}\logs\{abatabSession.SessionDateStamp}\{abatabSession.AbatabUserName}\{abatabSession.SessionTimeStamp}"
+                // var logPaths = BuildPaths.BuildWarningLogPaths(abatabSession.LoggingConfig.SessionRoot, );
+
+
+
+
+                //var logPath    = BuildPaths.Timestamped("quickmedorder",abatabSession.LoggingConfig.SessionRoot);
+                //var logContent = BuildContent.LogComponents("quickmedorder", abatabSession, logMsg);
+
+                //WriteLogFile.LocalFile(logPath, logContent, Convert.ToInt32(abatabSession.LoggingConfig.WriteDelay));
+
+                //var logPath    = BuildPath.WithCaller("warning", abatabSession.LoggingConfig.EventWarningRoot);
+                //// OLD var logContent = BuildContent.LogComponents("warning", abatabSession, logMsg, exeAssembly, callPath, callMember, callLine);
+                //var logContent = BuildContent.LogComponents("warning", abatabSession, logMsg);
+
+                //WriteLogFile.LocalFile(logPath, logContent, Convert.ToInt32(abatabSession.LoggingConfig.WriteDelay));
             }
         }
 

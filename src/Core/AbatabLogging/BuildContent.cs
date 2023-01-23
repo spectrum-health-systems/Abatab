@@ -1,4 +1,4 @@
-﻿// Abatab.AbatabLogging.BuildContent.cs b230119.0941
+﻿// Abatab.AbatabLogging.BuildContent.cs b230123.1210
 // Copyright (c) A Pretty Cool Program
 
 /* ========================================================================================================
@@ -134,6 +134,9 @@ namespace AbatabLogging
 
                 case "quickmedorder":
                     return BodyModQuickMedOrderDetail(abatabSession);
+
+                case "warning":
+                    return BodyWarningDetail(abatabSession);
 
                 case "trace":
                 default:
@@ -296,6 +299,21 @@ namespace AbatabLogging
                                $"OptionUserId:    {optObj.OptionUserId}{Environment.NewLine}" +
                                $"ErrorCode:       {optObj.ErrorCode}{Environment.NewLine}" +
                                $"ErrorMesg:       {optObj.ErrorMesg}";
+
+            return $"{optObjHead}" +
+                   $"{optObjDetail}";
+        }
+
+        private static string BodyWarningDetail(Session abatabSession)
+        {
+            // No log statement here (see comments at top of file)
+
+            var optObjHead = $"{Environment.NewLine}" +
+                             $"------------{Environment.NewLine}" +
+                             $"WARNING DETAILS {Environment.NewLine}" +
+                             $"------------{Environment.NewLine}";
+
+            var optObjDetail = $"ErrorMesg:       {abatabSession.WorkOptObj.ErrorMesg}";
 
             return $"{optObjHead}" +
                    $"{optObjDetail}";
