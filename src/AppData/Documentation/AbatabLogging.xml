@@ -75,7 +75,7 @@
             <returns>The completed log footer.</returns>
         </member>
         <member name="T:AbatabLogging.BuildPath">
-            <summary>Logic for building log file paths.</summary>
+            <summary>Logic for building a single log file path.</summary>
         </member>
         <member name="M:AbatabLogging.BuildPath.WithCaller(System.String,System.String,System.String,System.String,System.String,System.Int32)">
             <summary>Builds a log file path with caller information.</summary>
@@ -119,6 +119,9 @@
             <summary>Build the path to a trace log.</summary>
             <param name="logRoot">The log root.</param>
             <returns>The path to the log root.</returns>
+        </member>
+        <member name="T:AbatabLogging.BuildPaths">
+            <summary>Logic for building multiople log file paths.</summary>
         </member>
         <member name="M:AbatabLogging.BuildPaths.BuildWarningLogPaths(System.String,System.Collections.Generic.List{System.String})">
             <summary>TBD</summary>
@@ -172,6 +175,11 @@
             <param name="logMsg">The log message.</param>
         </member>
         <!-- Badly formed XML comment ignored for member "M:AbatabLogging.LogEvent.Trace(AbatabData.Session,System.String,System.String,System.String,System.String,System.Int32)" -->
+        <member name="M:AbatabLogging.LogEvent.Warning(AbatabData.Session,System.String)">
+            <summary>TBD</summary>
+            <param name="abatabSession"></param>
+            <param name="logMsg"></param>
+        </member>
         <member name="M:AbatabLogging.LogEvent.WebConfigDebug(System.Collections.Generic.Dictionary{System.String,System.String})">
             <summary>Build a webConfig debug log.</summary>
             <param name="webConfig">The contents of Web.config.</param>

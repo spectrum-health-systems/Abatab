@@ -74,7 +74,7 @@ namespace AbatabData.Core
         /// <value></value>
         public string EventWarningRoot { get; set; }
 
-        /// <summary>TBD</summary>
+        /// <summary>The default location for publicly available warning logs.</summary>
         /// <value></value>
         public string Root { get; set; }
 

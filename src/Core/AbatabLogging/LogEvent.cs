@@ -1,4 +1,4 @@
-﻿// Abatab.AbatabLogging.LogEvent.cs b230123.1210
+﻿// Abatab.AbatabLogging.LogEvent.cs b230130.0930
 // Copyright (c) A Pretty Cool Program
 
 /* ========================================================================================================
@@ -158,17 +158,20 @@ namespace AbatabLogging
             }
         }
 
+        /// <summary>TBD</summary>
+        /// <param name="abatabSession"></param>
+        /// <param name="logMsg"></param>
         public static void Warning(Session abatabSession, string logMsg = "Generic warning!")
         {
             if (abatabSession.LoggingConfig.LoggingMode == "all" || abatabSession.LoggingConfig.LoggingMode.Contains("warning"))
             {
                 // Can't really put a trace log here?
 
+                // TODO - This should be moved to BuildPaths.cs
                 var logPaths = new List<string>
                 {
                     $@"{abatabSession.LoggingConfig.SessionRoot}\warning\{logMsg}.warning",
                     $@"{abatabSession.LoggingConfig.EventWarningRoot}\{logMsg}-{abatabSession.AbatabUserName}-{abatabSession.SessionDateStamp}_{abatabSession.SessionTimeStamp}.warning"
-
                 };
 
                 var logContent = BuildContent.LogComponents("warning", abatabSession, logMsg);

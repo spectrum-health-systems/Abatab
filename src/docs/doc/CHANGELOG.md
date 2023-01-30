@@ -6,32 +6,30 @@
 
 <br>
 
-<!-- Leave this commented out until release
+<!-- This section can be updated, but should not be uncommented until release
 # v23.1.0 (2023-01-31)
-
-[ [Full changelog](https://github.com/orgs/spectrum-health-systems/projects/5/views/7) ]
 
 ## Release notes
 
-This release of Abatab focuses on:
+This is the January release of Abatab, which focuses on:
 
-* New functionality
-* Enhanced logging functionality
+* New core functionality
+* New module functionality
 * Documentation updates
-
-This is the initial release of Abatab, and is the foundation for further development.
 
 ## Changes
 
 ### Added
 
-* Core functionality : Warning logs
-* Module: ModProgressNote
-* Module functionality: ModProgressNote-PlaceOfService-Verify
+* Core functionality 
+  * [Warning logs](https://github.com/spectrum-health-systems/Abatab/issues/90)
+* Module functionality
+  * [Check for incorrect Place of Service on bills]()
+  * [Warning logs for ModQuickMedOrder-Dose-VerifyAmount]()
 
 ### Changed
 
-* Documentation
+* [Documentation]()
 
 ### Depreciated
 
@@ -47,9 +45,10 @@ None.
 
 ### Security
 
-None.
+<br>
 
 ***
+
 -->
 
 <br>
@@ -65,7 +64,6 @@ This release focuses on:
 * New functionality
 * Detailed logging
 * Creating a robust, modular framework for future development
-* Detailed logging
 * Local settings that are configurable on the fly
 
 ## Changes

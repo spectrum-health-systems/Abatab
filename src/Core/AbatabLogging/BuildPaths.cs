@@ -15,6 +15,7 @@ using System.Collections.Generic;
 
 namespace AbatabLogging
 {
+    /// <summary>Logic for building multiople log file paths.</summary>
     public static class BuildPaths
     {
         /// <summary>TBD</summary>
