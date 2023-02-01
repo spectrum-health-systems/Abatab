@@ -282,10 +282,13 @@ namespace ModQuickMedOrder
                                                                      $"{Environment.NewLine}" +
                                                                      $"{Environment.NewLine}" +
                                                                      $"{warningId}";
+
+                                LogEvent.Warning(abatabSession, "The current dose is significantly different than the previous dose.");
                             }
                             else
                             {
                                 LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+
 
                                 // Percentage isn't greater
                                 // TODO Maybe make this == or something.

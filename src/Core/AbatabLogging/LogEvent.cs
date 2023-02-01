@@ -168,19 +168,24 @@ namespace AbatabLogging
                 // Can't really put a trace log here?
 
                 // TODO - This should be moved to BuildPaths.cs
-                var logPaths = new List<string>
-                {
-                    $@"{abatabSession.LoggingConfig.SessionRoot}\warning\{logMsg}.warning",
-                    $@"{abatabSession.LoggingConfig.EventWarningRoot}\{logMsg}-{abatabSession.AbatabUserName}-{abatabSession.SessionDateStamp}_{abatabSession.SessionTimeStamp}.warning"
-                };
+
+                var logPath1 = $@"{abatabSession.LoggingConfig.SessionRoot}\warning\{logMsg}.warning";
+                var logPath2 = $@"{abatabSession.LoggingConfig.EventWarningRoot}\{logMsg}-{abatabSession.AbatabUserName}-{abatabSession.SessionDateStamp}_{abatabSession.SessionTimeStamp}.warning";
+                //var logPath3 = $@"{abatabSession.LoggingConfig.SessionRoot}\warning\{logMsg}.warning";
+
+                //var logPaths = new List<string>
+                //{
+                //    $@"{abatabSession.LoggingConfig.SessionRoot}\warning\{logMsg}.warning",
+                //    $@"{abatabSession.LoggingConfig.EventWarningRoot}\{logMsg}-{abatabSession.AbatabUserName}-{abatabSession.SessionDateStamp}_{abatabSession.SessionTimeStamp}.warning"
+                //};
 
                 var logContent = BuildContent.LogComponents("warning", abatabSession, logMsg);
 
+                WriteLogFile.LocalFile(logPath1, logContent, Convert.ToInt32(abatabSession.LoggingConfig.WriteDelay));
+                WriteLogFile.LocalFile(logPath2, logContent, Convert.ToInt32(abatabSession.LoggingConfig.WriteDelay));
+
                 // $@"{abatabSession.AbatabDataRoot}\logs\{abatabSession.SessionDateStamp}\{abatabSession.AbatabUserName}\{abatabSession.SessionTimeStamp}"
                 // var logPaths = BuildPaths.BuildWarningLogPaths(abatabSession.LoggingConfig.SessionRoot, );
-
-
-
 
                 //var logPath    = BuildPaths.Timestamped("quickmedorder",abatabSession.LoggingConfig.SessionRoot);
                 //var logContent = BuildContent.LogComponents("quickmedorder", abatabSession, logMsg);

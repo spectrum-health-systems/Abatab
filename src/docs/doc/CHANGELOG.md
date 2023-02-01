@@ -29,7 +29,7 @@ This is the January release of Abatab, which focuses on:
 
 ### Changed
 
-* [Documentation]()
+* [Documentation](https://github.com/spectrum-health-systems/Abatab/issues/94)
 
 ### Depreciated
 
@@ -37,7 +37,7 @@ None.
 
 ### Removed
 
-None.
+* [Du class library](https://github.com/spectrum-health-systems/Abatab/issues/95)
 
 ### Fixed
 

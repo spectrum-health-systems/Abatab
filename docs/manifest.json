@@ -33,7 +33,7 @@
       "output": {
         ".html": {
           "relative_path": "doc/CHANGELOG.html",
-          "hash": "nUHSFXy7p4MJ8MXOrs5xkve+0FpZnbXkGGuR60dQ/JY="
+          "hash": "Yd4NKL6Viz9aVdQ5lblioMOOZKdONw0/EHcfATPefuI="
         }
       },
       "is_incremental": false,
@@ -881,7 +881,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AbatabData.Session.html",
-          "hash": "qrc2FkXQ2UsXSQKtOlJSu8XZYUrExJXM5pAx+KY5YFI="
+          "hash": "AzbdM59hLssJ0gvy0AUgnEAmE6n40tp6gbn3cfPwdXw="
         }
       },
       "is_incremental": false,
@@ -1074,42 +1074,6 @@
         ".html": {
           "relative_path": "api/AbatabSystem.html",
           "hash": "PRDg3bMHGgmw92QxTBbaN7jWvULZgor3V7XnpFFmRQI="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "../../docs/obj/api/Du.WithDictionary.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Du.WithDictionary.html",
-          "hash": "L/gYhwjA2wtNfEOxQxZ2QihExbD68d8QG1qM8OEsdN8="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "../../docs/obj/api/Du.WithDirectory.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Du.WithDirectory.html",
-          "hash": "YukE/eirkCQ9gtODzlKva25sDOcSrAcKKOfclg9d4fQ="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "../../docs/obj/api/Du.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Du.html",
-          "hash": "oUaX4uZQsQfcl4pzwx/XoOB65hjXEsKTa4M2B3nzzXU="
         }
       },
       "is_incremental": false,
@@ -1349,7 +1313,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "ynASTyB9ZeE1u7tXJa4s4ATMmJJCh2eN2B9w7lIUl/s="
+          "hash": "8T57yDtI+bFngWt+jAumELmIKOkNpCyKrlUGcW+z+0A="
         }
       },
       "is_incremental": false,
@@ -1388,7 +1352,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 51,
+          "total_file_count": 48,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

@@ -126,6 +126,12 @@ namespace AbatabData
         /// <value>&lt;-- Click for more info</value>
         public Module.Testing ModTestingConfig { get; set; }
 
+        // TODO - Where does this belong, since it may not only be for logging?
+        public string PublicAccessRoot { get; set; }
+
+
+        // TODO - WTF is the stuff below?
+
         /// <summary>The session date.</summary>
         /// <remarks>
         /// * Uses the following syntax: <c>yyMMdd</c>
