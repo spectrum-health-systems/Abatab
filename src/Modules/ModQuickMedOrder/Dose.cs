@@ -283,7 +283,7 @@ namespace ModQuickMedOrder
                                                                      $"{Environment.NewLine}" +
                                                                      $"{warningId}";
 
-                                LogEvent.Warning(abatabSession, "The current dose is significantly different than the previous dose.");
+                                LogEvent.Warning(abatabSession, "Dosing issue.");
                             }
                             else
                             {
