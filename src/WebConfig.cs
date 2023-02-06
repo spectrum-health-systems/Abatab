@@ -1,4 +1,4 @@
-﻿// Abatab.WebConfig.cs b230119.0941
+﻿// Abatab.WebConfig.cs b230201.1124
 // Copyright (c) A Pretty Cool Program
 
 using Abatab.Properties;
@@ -32,6 +32,7 @@ namespace Abatab
                 { "AbatabMode",                             Settings.Default.AbatabMode.ToLower() },
                 { "AbatabRoot",                             Settings.Default.AbatabRoot.ToLower() },
                 { "AbatabDataRoot",                         Settings.Default.AbatabDataRoot.ToLower() },
+                { "PublicAccessRoot",                       Settings.Default.PublicAccessRoot.ToLower() },
                 { "AvatarEnvironment",                      Settings.Default.AvatarEnvironment.ToLower() },
                 { "DebugMode",                              Settings.Default.DebugMode.ToLower() },
                 { "DebugLogRoot",                           Settings.Default.DebugLogRoot.ToLower() },

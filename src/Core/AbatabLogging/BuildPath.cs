@@ -1,4 +1,4 @@
-﻿// Abatab.AbatabLogging.BuildPath.cs b230119.0941
+﻿// Abatab.AbatabLogging.BuildPath.cs b230123.1210
 // Copyright (c) A Pretty Cool Program
 
 /* ========================================================================================================
@@ -17,7 +17,7 @@ using System.IO;
 
 namespace AbatabLogging
 {
-    /// <summary>Logic for building log file paths.</summary>
+    /// <summary>Logic for building a single log file path.</summary>
     public static class BuildPath
     {
         /// <summary>Builds a log file path with caller information.</summary>

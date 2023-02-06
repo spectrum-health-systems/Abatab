@@ -74,7 +74,7 @@
             <description>Do not create any log files.</description>
             </item>
             </list>
-            * To create multiple types of logs, separate each type with a hypen (<c>"-"</c>).
+            * To create multiple types of logs, separate each type with a hyphen (<c>"-"</c>).
             </remarks>
             <examples>
             * To only create session logs: <c>LoggingMode=session</c>
@@ -110,7 +110,7 @@
             <value></value>
         </member>
         <member name="P:AbatabData.Core.Logging.Root">
-            <summary>TBD</summary>
+            <summary>The default location for publicly available warning logs.</summary>
             <value></value>
         </member>
         <member name="P:AbatabData.Core.Logging.SessionRoot">
@@ -270,7 +270,7 @@
             <value>Default value is <c>C:\Abatab_</c></value>
         </member>
         <member name="P:AbatabData.Session.AbatabDataRoot">
-            <summary>The root directory where the Abatab data is stored.</summary>
+            <summary>The root directory where non-web service data code is located.</summary>
             <remarks>
             <list type="bullet">
             <item>At runtime the <c>AvatarEnvironment</c> value is created as a sub-directory of the <c>AbatabDataRoot</c>.</item>

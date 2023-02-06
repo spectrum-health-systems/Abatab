@@ -36,6 +36,7 @@ namespace AbatabSession
                 AvatarEnvironment      = webConfig["AvatarEnvironment"],
                 AbatabRoot             = $@"{webConfig["AbatabRoot"]}{webConfig["AvatarEnvironment"]}",
                 AbatabDataRoot         = $@"{webConfig["AbatabDataRoot"]}\{webConfig["AvatarEnvironment"]}",
+                PublicAccessRoot       = webConfig["PublicAccessRoot"],
                 AbatabFallbackUserName = webConfig["AbatabFallbackUserName"],
                 SessionDateStamp       = $"{DateTime.Now:yyMMdd}",
                 SessionTimeStamp       = $"{DateTime.Now:HHmmss}",
@@ -154,15 +155,17 @@ namespace AbatabSession
 
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"]);
 
+
+            // TODO - verify all of this
             abatabSession.LoggingConfig  = new Logging
             {
-                LoggingMode             = $"{abatabSettings["LogMode"]}",
+                LoggingMode      = $"{abatabSettings["LogMode"]}",
                 Detail           = $"{abatabSettings["LogDetail"]}",
                 WriteDelay       = $"{abatabSettings["LogWriteDelay"]}",
                 SessionRoot      = $@"{abatabSession.AbatabDataRoot}\logs\{abatabSession.SessionDateStamp}\{abatabSession.AbatabUserName}\{abatabSession.SessionTimeStamp}",
                 EventErrorRoot   = $@"{abatabSession.AbatabRoot}\logs\error",
                 EventLostRoot    = $@"{abatabSession.AbatabRoot}\logs\lost",
-                EventWarningRoot = $@"{abatabSession.AbatabRoot}\logs\warning",
+                EventWarningRoot = $@"{abatabSession.PublicAccessRoot}\warnings",
             };
 
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"]);

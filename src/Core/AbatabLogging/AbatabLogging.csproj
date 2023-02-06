@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="BuildContent.cs" />
     <Compile Include="BuildPath.cs" />
+    <Compile Include="BuildPaths.cs" />
     <Compile Include="Debuggler.cs" />
     <Compile Include="LogEvent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

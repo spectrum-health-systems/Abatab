@@ -761,6 +761,19 @@ references:
   isSpec: "True"
   fullName: AbatabData.Session.ModTestingConfig
   nameWithType: Session.ModTestingConfig
+- uid: AbatabData.Session.PublicAccessRoot
+  name: PublicAccessRoot
+  href: api/AbatabData.Session.html#AbatabData_Session_PublicAccessRoot
+  commentId: P:AbatabData.Session.PublicAccessRoot
+  fullName: AbatabData.Session.PublicAccessRoot
+  nameWithType: Session.PublicAccessRoot
+- uid: AbatabData.Session.PublicAccessRoot*
+  name: PublicAccessRoot
+  href: api/AbatabData.Session.html#AbatabData_Session_PublicAccessRoot_
+  commentId: Overload:AbatabData.Session.PublicAccessRoot
+  isSpec: "True"
+  fullName: AbatabData.Session.PublicAccessRoot
+  nameWithType: Session.PublicAccessRoot
 - uid: AbatabData.Session.ScriptParameter
   name: ScriptParameter
   href: api/AbatabData.Session.html#AbatabData_Session_ScriptParameter
@@ -909,6 +922,28 @@ references:
   isSpec: "True"
   fullName: AbatabLogging.BuildPath.WithCaller
   nameWithType: BuildPath.WithCaller
+- uid: AbatabLogging.BuildPaths
+  name: BuildPaths
+  href: api/AbatabLogging.BuildPaths.html
+  commentId: T:AbatabLogging.BuildPaths
+  fullName: AbatabLogging.BuildPaths
+  nameWithType: BuildPaths
+- uid: AbatabLogging.BuildPaths.BuildWarningLogPaths(System.String,System.Collections.Generic.List{System.String})
+  name: BuildWarningLogPaths(String, List<String>)
+  href: api/AbatabLogging.BuildPaths.html#AbatabLogging_BuildPaths_BuildWarningLogPaths_System_String_System_Collections_Generic_List_System_String__
+  commentId: M:AbatabLogging.BuildPaths.BuildWarningLogPaths(System.String,System.Collections.Generic.List{System.String})
+  name.vb: BuildWarningLogPaths(String, List(Of String))
+  fullName: AbatabLogging.BuildPaths.BuildWarningLogPaths(System.String, System.Collections.Generic.List<System.String>)
+  fullName.vb: AbatabLogging.BuildPaths.BuildWarningLogPaths(System.String, System.Collections.Generic.List(Of System.String))
+  nameWithType: BuildPaths.BuildWarningLogPaths(String, List<String>)
+  nameWithType.vb: BuildPaths.BuildWarningLogPaths(String, List(Of String))
+- uid: AbatabLogging.BuildPaths.BuildWarningLogPaths*
+  name: BuildWarningLogPaths
+  href: api/AbatabLogging.BuildPaths.html#AbatabLogging_BuildPaths_BuildWarningLogPaths_
+  commentId: Overload:AbatabLogging.BuildPaths.BuildWarningLogPaths
+  isSpec: "True"
+  fullName: AbatabLogging.BuildPaths.BuildWarningLogPaths
+  nameWithType: BuildPaths.BuildWarningLogPaths
 - uid: AbatabLogging.Debuggler
   name: Debuggler
   href: api/AbatabLogging.Debuggler.html
@@ -1012,6 +1047,19 @@ references:
   isSpec: "True"
   fullName: AbatabLogging.LogEvent.Trace
   nameWithType: LogEvent.Trace
+- uid: AbatabLogging.LogEvent.Warning(AbatabData.Session,System.String)
+  name: Warning(Session, String)
+  href: api/AbatabLogging.LogEvent.html#AbatabLogging_LogEvent_Warning_AbatabData_Session_System_String_
+  commentId: M:AbatabLogging.LogEvent.Warning(AbatabData.Session,System.String)
+  fullName: AbatabLogging.LogEvent.Warning(AbatabData.Session, System.String)
+  nameWithType: LogEvent.Warning(Session, String)
+- uid: AbatabLogging.LogEvent.Warning*
+  name: Warning
+  href: api/AbatabLogging.LogEvent.html#AbatabLogging_LogEvent_Warning_
+  commentId: Overload:AbatabLogging.LogEvent.Warning
+  isSpec: "True"
+  fullName: AbatabLogging.LogEvent.Warning
+  nameWithType: LogEvent.Warning
 - uid: AbatabLogging.LogEvent.WebConfigDebug(System.Collections.Generic.Dictionary{System.String,System.String})
   name: WebConfigDebug(Dictionary<String, String>)
   href: api/AbatabLogging.LogEvent.html#AbatabLogging_LogEvent_WebConfigDebug_System_Collections_Generic_Dictionary_System_String_System_String__
@@ -1202,53 +1250,6 @@ references:
   isSpec: "True"
   fullName: AbatabSystem.Maintenance.VerifyDir
   nameWithType: Maintenance.VerifyDir
-- uid: Du
-  name: Du
-  href: api/Du.html
-  commentId: N:Du
-  fullName: Du
-  nameWithType: Du
-- uid: Du.WithDictionary
-  name: WithDictionary
-  href: api/Du.WithDictionary.html
-  commentId: T:Du.WithDictionary
-  fullName: Du.WithDictionary
-  nameWithType: WithDictionary
-- uid: Du.WithDictionary.JoinListOf(System.Collections.Generic.List{System.Collections.Generic.Dictionary{System.String,System.String}})
-  name: JoinListOf(List<Dictionary<String, String>>)
-  href: api/Du.WithDictionary.html#Du_WithDictionary_JoinListOf_System_Collections_Generic_List_System_Collections_Generic_Dictionary_System_String_System_String___
-  commentId: M:Du.WithDictionary.JoinListOf(System.Collections.Generic.List{System.Collections.Generic.Dictionary{System.String,System.String}})
-  name.vb: JoinListOf(List(Of Dictionary(Of String, String)))
-  fullName: Du.WithDictionary.JoinListOf(System.Collections.Generic.List<System.Collections.Generic.Dictionary<System.String, System.String>>)
-  fullName.vb: Du.WithDictionary.JoinListOf(System.Collections.Generic.List(Of System.Collections.Generic.Dictionary(Of System.String, System.String)))
-  nameWithType: WithDictionary.JoinListOf(List<Dictionary<String, String>>)
-  nameWithType.vb: WithDictionary.JoinListOf(List(Of Dictionary(Of String, String)))
-- uid: Du.WithDictionary.JoinListOf*
-  name: JoinListOf
-  href: api/Du.WithDictionary.html#Du_WithDictionary_JoinListOf_
-  commentId: Overload:Du.WithDictionary.JoinListOf
-  isSpec: "True"
-  fullName: Du.WithDictionary.JoinListOf
-  nameWithType: WithDictionary.JoinListOf
-- uid: Du.WithDirectory
-  name: WithDirectory
-  href: api/Du.WithDirectory.html
-  commentId: T:Du.WithDirectory
-  fullName: Du.WithDirectory
-  nameWithType: WithDirectory
-- uid: Du.WithDirectory.VerifyDir(System.String)
-  name: VerifyDir(String)
-  href: api/Du.WithDirectory.html#Du_WithDirectory_VerifyDir_System_String_
-  commentId: M:Du.WithDirectory.VerifyDir(System.String)
-  fullName: Du.WithDirectory.VerifyDir(System.String)
-  nameWithType: WithDirectory.VerifyDir(String)
-- uid: Du.WithDirectory.VerifyDir*
-  name: VerifyDir
-  href: api/Du.WithDirectory.html#Du_WithDirectory_VerifyDir_
-  commentId: Overload:Du.WithDirectory.VerifyDir
-  isSpec: "True"
-  fullName: Du.WithDirectory.VerifyDir
-  nameWithType: WithDirectory.VerifyDir
 - uid: ModCommon
   name: ModCommon
   href: api/ModCommon.html

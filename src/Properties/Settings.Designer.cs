@@ -178,10 +178,10 @@ namespace Abatab.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Abatab")]
-        public string LogPublicAccess {
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\AbatabData\\Public")]
+        public string PublicAccessRoot {
             get {
-                return ((string)(this["LogPublicAccess"]));
+                return ((string)(this["PublicAccessRoot"]));
             }
         }
     }
