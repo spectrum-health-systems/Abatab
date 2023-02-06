@@ -178,7 +178,7 @@ namespace Abatab.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Abatab")]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\AbatabData\\Public")]
         public string PublicAccessRoot {
             get {
                 return ((string)(this["PublicAccessRoot"]));

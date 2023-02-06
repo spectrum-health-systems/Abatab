@@ -54,7 +54,7 @@
       <Value Profile="(Default)">enabled</Value>
     </Setting>
     <Setting Name="PublicAccessRoot" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">C:\Abatab</Value>
+      <Value Profile="(Default)">C:\AbatabData\Public</Value>
     </Setting>
   </Settings>
 </SettingsFile>

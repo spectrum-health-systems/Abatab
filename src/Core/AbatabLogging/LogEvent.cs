@@ -1,4 +1,4 @@
-﻿// Abatab.AbatabLogging.LogEvent.cs b230206.0957
+﻿// Abatab.AbatabLogging.LogEvent.cs b230206.1007
 // Copyright (c) A Pretty Cool Program
 
 /* ========================================================================================================
@@ -178,6 +178,11 @@ namespace AbatabLogging
                 if (!Directory.Exists($@"{abatabSession.LoggingConfig.EventWarningRoot}\"))
                 {
                     Directory.CreateDirectory($@"{abatabSession.LoggingConfig.EventWarningRoot}\");
+                }
+
+                if (!Directory.Exists($@"{abatabSession.AbatabDataRoot}\warning\"))
+                {
+                    Directory.CreateDirectory($@"{abatabSession.AbatabDataRoot}\warning\");
                 }
 
                 var logPath1 = $@"{abatabSession.LoggingConfig.SessionRoot}\warning\{logMsg}_{abatabSession.SessionTimeStamp}.warning";
