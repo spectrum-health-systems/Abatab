@@ -4,7 +4,7 @@
   
   **This is the development branch of Abatab, and is not intended for use in production environments!**
 
-  Please use the current Abatab Community Release (coming soon) instead.
+  Please use the current [Abatab Community Release](https://github.com/spectrum-health-systems/Abatab-Community-Release) instead.
 
   ***
 
