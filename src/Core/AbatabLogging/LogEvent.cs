@@ -1,4 +1,4 @@
-﻿// Abatab.AbatabLogging.LogEvent.cs b230206.1007
+﻿// Abatab.AbatabLogging.LogEvent.cs b230206.1015
 // Copyright (c) A Pretty Cool Program
 
 /* ========================================================================================================
@@ -170,9 +170,9 @@ namespace AbatabLogging
 
                 // TODO - This should be moved to BuildPaths.cs
 
-                if (!Directory.Exists($@"{abatabSession.LoggingConfig.SessionRoot}\warning\"))
+                if (!Directory.Exists($@"{abatabSession.LoggingConfig.SessionRoot}\warnings\"))
                 {
-                    Directory.CreateDirectory($@"{abatabSession.LoggingConfig.SessionRoot}\warning\");
+                    Directory.CreateDirectory($@"{abatabSession.LoggingConfig.SessionRoot}\warnings\");
                 }
 
                 if (!Directory.Exists($@"{abatabSession.LoggingConfig.EventWarningRoot}\"))
@@ -180,14 +180,14 @@ namespace AbatabLogging
                     Directory.CreateDirectory($@"{abatabSession.LoggingConfig.EventWarningRoot}\");
                 }
 
-                if (!Directory.Exists($@"{abatabSession.AbatabDataRoot}\warning\"))
+                if (!Directory.Exists($@"{abatabSession.AbatabDataRoot}\warnings\"))
                 {
-                    Directory.CreateDirectory($@"{abatabSession.AbatabDataRoot}\warning\");
+                    Directory.CreateDirectory($@"{abatabSession.AbatabDataRoot}\warnings\");
                 }
 
-                var logPath1 = $@"{abatabSession.LoggingConfig.SessionRoot}\warning\{logMsg}_{abatabSession.SessionTimeStamp}.warning";
+                var logPath1 = $@"{abatabSession.LoggingConfig.SessionRoot}\warnings\{logMsg}_{abatabSession.SessionTimeStamp}.warning";
                 var logPath2 = $@"{abatabSession.LoggingConfig.EventWarningRoot}\{logMsg}-{abatabSession.AbatabUserName}-{abatabSession.SessionDateStamp}_{abatabSession.SessionTimeStamp}.warning";
-                var logPath3 = $@"{abatabSession.AbatabDataRoot}\warning\{logMsg}-{abatabSession.AbatabUserName}-{abatabSession.SessionDateStamp}_{abatabSession.SessionTimeStamp}.warning";
+                var logPath3 = $@"{abatabSession.AbatabDataRoot}\warnings\{logMsg}-{abatabSession.AbatabUserName}-{abatabSession.SessionDateStamp}_{abatabSession.SessionTimeStamp}.warning";
 
                 //var logPaths = new List<string>
                 //{

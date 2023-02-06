@@ -5,6 +5,8 @@
 * Public name needs to be formatted better
 * Public log data should be different
 * Private name should include a timestamp
+* Move session warning logs to root of the session (like the .session log is)
+
 
 ## ModQuickMedOrder
 
