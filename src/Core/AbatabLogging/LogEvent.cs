@@ -1,4 +1,4 @@
-﻿// Abatab.AbatabLogging.LogEvent.cs b230130.0930
+﻿// Abatab.AbatabLogging.LogEvent.cs b230206.0910
 // Copyright (c) A Pretty Cool Program
 
 /* ========================================================================================================
@@ -14,6 +14,7 @@ using AbatabData;
 
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 
@@ -168,6 +169,16 @@ namespace AbatabLogging
                 // Can't really put a trace log here?
 
                 // TODO - This should be moved to BuildPaths.cs
+
+                if (!Directory.Exists($@"{abatabSession.LoggingConfig.SessionRoot}\warning\"))
+                {
+                    Directory.CreateDirectory($@"{abatabSession.LoggingConfig.SessionRoot}\warning\");
+                }
+
+                if (!Directory.Exists($@"{abatabSession.LoggingConfig.EventWarningRoot}\"))
+                {
+                    Directory.CreateDirectory($@"{abatabSession.LoggingConfig.EventWarningRoot}\");
+                }
 
                 var logPath1 = $@"{abatabSession.LoggingConfig.SessionRoot}\warning\{logMsg}.warning";
                 var logPath2 = $@"{abatabSession.LoggingConfig.EventWarningRoot}\{logMsg}-{abatabSession.AbatabUserName}-{abatabSession.SessionDateStamp}_{abatabSession.SessionTimeStamp}.warning";

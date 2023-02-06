@@ -187,17 +187,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "../../docs/images/Logos/AbatabLogo.png",
-      "output": {
-        "resource": {
-          "relative_path": "images/Logos/AbatabLogo.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "../../docs/images/Logos/AbatabManualLogo.png",
       "output": {
         "resource": {

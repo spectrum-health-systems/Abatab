@@ -1,5 +1,14 @@
 # Abatab Roadmap Queue
 
+## ModQuickMedOrder
+
+### Dose
+
+#### VerifyAmount
+
+We should be writing a bunch of this stuff to logs, even when successful.
+
+
 ## Web Server directories
 There should be three directories on the web server:
 
@@ -34,3 +43,11 @@ We may need:
 * Blank
 * Flowchart
 * Development notes
+
+# Hmmm...
+
+* We are currently lowercasing lots of stuff (e.g., stuff in the Web.config)...should we?
+
+# Verifications
+
+* Verify that the avatar fallback username works
