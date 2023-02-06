@@ -6,7 +6,7 @@
 
 <br>
 
-<!-- This section can be updated, but should not be uncommented until release
+<!-->
 # v23.1.0 (2023-01-31)
 
 ## Release notes
@@ -48,8 +48,48 @@ None.
 <br>
 
 ***
-
 -->
+
+# v23.1.0 (2023-02-06)
+
+## Release notes
+
+This is the January release of Abatab, which focuses on:
+
+* New core functionality
+* New module functionality
+* Documentation updates
+
+## Changes
+
+### Added
+
+* Core functionality 
+  * [Warning logs](https://github.com/spectrum-health-systems/Abatab/issues/90)
+* Module functionality
+  * [Warning logs for ModQuickMedOrder-Dose-VerifyAmount](https://github.com/spectrum-health-systems/Abatab/issues/104)
+
+### Changed
+
+* [Documentation](https://github.com/spectrum-health-systems/Abatab/issues/94)
+
+### Depreciated
+
+None.
+
+### Removed
+
+* [Du class library](https://github.com/spectrum-health-systems/Abatab/issues/95)
+
+### Fixed
+
+None.
+
+### Security
+
+<br>
+
+***
 
 <br>
 
