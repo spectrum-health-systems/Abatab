@@ -29,7 +29,9 @@ This is the January release of Abatab, which focuses on:
 
 ### Changed
 
+* [Updated build/versions](https://github.com/spectrum-health-systems/Abatab/issues/105)
 * [Documentation](https://github.com/spectrum-health-systems/Abatab/issues/94)
+
 
 ### Depreciated
 
@@ -59,6 +61,8 @@ This is the January release of Abatab, which focuses on:
 * New core functionality
 * New module functionality
 * Documentation updates
+
+Changelog details can be found [here](https://github.com/orgs/spectrum-health-systems/projects/5/views/7).
 
 ## Changes
 
