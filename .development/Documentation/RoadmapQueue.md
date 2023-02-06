@@ -1,5 +1,254 @@
 # Abatab Roadmap Queue
 
+# CORE FUNCTIONALITY
+
+Items realted to the core functionality of Abatab.
+
+## [ - ] Combine "Core.AbatabLogging.BuidlPath.cs" and Core.AbatabLogging.BuildPaths.cs
+
+Maybe these two should be combined? Or maybe leave them separate?
+
+***
+
+## [ - ] Rename "Core.AbatabLogging.BuidlPaths.BuildDir()" methods to "BuildPath()"
+
+"Path" makes more sense than "Dir"
+
+***
+
+## [ - ] Update all BuildPaths.cs methods to return List
+
+When [Warning logs were implemented](https://github.com/spectrum-health-systems/Abatab/issues/90), changes were made to Core.AbatabLogging.BuildPaths.cs specific to the Warning logs.
+
+We should modify the remaining methods in BuildPaths.cs to return `List<string>`
+
+***
+
+## [ - ] Log file delay
+
+As functionality is added, more staff use Abatab, and more logfiles are written, we should probably look at the write delay and determine:
+
+* What is the best global delay?
+* Are there certain logs that should not have a delay?
+* Are there certain logs that should always have a specific delay?
+
+
+<br>
+<br>
+<br>
+
+# MODULE FUNCTIONALITY
+
+Items realted to Abatab madule functionality.
+
+<br>
+<br>
+<br>
+
+# DOCUMENTATION
+
+Items related to Abatab documentation.
+
+<br>
+<br>
+<br>
+
+# REGRESSION TESTS
+
+These items should be part of every release.
+
+
+
+
+
+
+
+
+***
+
+## Create common method for looping through OptionObjects
+
+Hopefully the looping through forms, etc. is the same across the board, so we should be able to have a common method that does this.
+
+We will test this when building out the check for incorrect Place of Service functionality.
+
+***
+
+## Add Abatab version to log files
+
+Not sure if this should be every logfile, or what format it should take (maybe like the error code on popups?), but this would give us another datapoint in troubleshooting.
+
+***
+
+## Access log details
+
+The access log should have a better, more descriptive filename and contents.
+
+***
+
+## Logging detail levels
+
+Logging detail levels
+
+***
+
+## Error log functionality
+
+When Abatab encounters an error, that error should be written to a separate error file.
+
+The warning log should be written:
+
+- [ ] To an external `Errors/` folder that is not accessible to the public
+
+This functionality will require:
+
+* TBD
+
+***
+
+## Lost logs
+
+Catch any logs that aren't one of the official types.
+
+***
+
+## Change ModQuickMedOrderDosePercentBoundary to "25"
+
+Easier to read and modify, less prone to mistakes. Will need to be changed in Web.config, as well as source code.
+
+***
+
+## Log all ModQuickMedOrder details
+
+Log all QMO data in session log (e.g., LastOrderScheduledText)  
+
+Additional datapoints for troubleshooting
+
+***
+
+## Source code cleanup/refactor
+
+- [ ] Verify that projects only reference required projects.
+
+***
+
+## Complete Documentation
+
+All documentation through v23.3 should be complete, including:
+
+- [ ] XML documentation
+- [ ] The Abatab Manual
+- [ ] Abatab APIs
+
+***
+
+## Refactor OptionObject looping
+
+TBD
+
+***
+
+## Verify Settings.settings order is consistant
+
+There are various locations in the source code where the settings/configuration values are listed. We should make sure that each of those locations match.
+
+This includes Web.config and Settings.settings.
+
+***
+
+## Cleanup DocFX folders
+
+Verify that DocFX has what it needs, and doesn't have unnecessary data.
+
+***
+
+## [VERIFY] QuickMedOrder-Dose-VerifyAmount
+
+Test the following:
+
+- [ ] Dose.VerifyUnderMaxPercentIncrease
+- [ ] Dose.VerifyUnderMaxMilligramIncrease
+- [ ] Dose.VerifyUnderMaxPercentIncrease
+
+Also make sure that the testing documentation is up to date.
+
+Eventually we should make this a built-in test.
+
+***
+
+## [VERIFY] AbatabOption
+
+Verify that even though there is space for an AbatabOption in the Script Parameter, it doesn't affect anything if it's missing.
+
+***
+
+## [VERIFY] All combinations of log file types work
+
+For example: error-trace-warning, trace-warning-other, none.
+
+***
+
+## [VERIFY] Authorized Users
+
+Verify that the list of authorized users works for functionality.
+
+***
+
+## [VERIFY] Replacing DLLs when updating Abatab
+
+The Abatab framework is modular. Each core component and module are separate C# projects. This allows changes to be made to a specific component of Abatab, without affecting the other components.
+
+This is mainly done via replacing project DLLs when updating Abatab. This has been tested, but I would like to do a few more in-depth tests to verify everything is working as expected.
+
+These tests should be done using the testing branch.
+
+- [ ] Test to make sure that replacing DLL files works as expected.
+
+- [ ] Confirm that we need/don't need other .DLLs (e.g., Roslyn stuff)
+
+***
+
+## [VERIFY] All log types are written to the correct folder
+
+TBD
+
+***
+
+## [VERIFY] debugMode
+
+Test the following debugMode functionality:
+
+- [ ] Verify "on" / "enabled" is working correctly
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Dose warnings
 
 * Public name needs to be formatted better

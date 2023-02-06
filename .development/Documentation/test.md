@@ -1,0 +1,3 @@
+| ITEM                                                                               | DESCRIPTION                                                       |
+|------------------------------------------------------------------------------------|-------------------------------------------------------------------|
+| Combine "Core.AbatabLogging.BuidlPath.cs" and<br/>Core.AbatabLogging.BuildPaths.cs | Maybe these two should be combined? Or maybe leave them separate? |
