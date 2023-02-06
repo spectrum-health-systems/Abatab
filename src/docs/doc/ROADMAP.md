@@ -34,8 +34,8 @@
 
 # Spring23 Community Release (4/1/23)
 
-> [v23.1.0](https://github.com/orgs/spectrum-health-systems/projects/5/views/6) - Current development
+> [v23.1.0](https://github.com/orgs/spectrum-health-systems/projects/5/views/7) - January 2023 release
 
-> v23.2.0 - Development to start in February 2023
+> [v23.2.0](https://github.com/orgs/spectrum-health-systems/projects/15/views/4) - February 2023 release - **Current development**
 
-> v23.3.0 - Development to start in March 2023
+> v23.3.0 - March 2023 release
