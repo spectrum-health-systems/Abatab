@@ -1,4 +1,4 @@
-﻿// Abatab.AbatabLogging.LogEvent.cs b230206.0910
+﻿// Abatab.AbatabLogging.LogEvent.cs b230206.0957
 // Copyright (c) A Pretty Cool Program
 
 /* ========================================================================================================
@@ -180,9 +180,9 @@ namespace AbatabLogging
                     Directory.CreateDirectory($@"{abatabSession.LoggingConfig.EventWarningRoot}\");
                 }
 
-                var logPath1 = $@"{abatabSession.LoggingConfig.SessionRoot}\warning\{logMsg}.warning";
+                var logPath1 = $@"{abatabSession.LoggingConfig.SessionRoot}\warning\{logMsg}_{abatabSession.SessionTimeStamp}.warning";
                 var logPath2 = $@"{abatabSession.LoggingConfig.EventWarningRoot}\{logMsg}-{abatabSession.AbatabUserName}-{abatabSession.SessionDateStamp}_{abatabSession.SessionTimeStamp}.warning";
-                //var logPath3 = $@"{abatabSession.LoggingConfig.SessionRoot}\warning\{logMsg}.warning";
+                var logPath3 = $@"{abatabSession.AbatabDataRoot}\warning\{logMsg}-{abatabSession.AbatabUserName}-{abatabSession.SessionDateStamp}_{abatabSession.SessionTimeStamp}.warning";
 
                 //var logPaths = new List<string>
                 //{
@@ -194,6 +194,7 @@ namespace AbatabLogging
 
                 WriteLogFile.LocalFile(logPath1, logContent, Convert.ToInt32(abatabSession.LoggingConfig.WriteDelay));
                 WriteLogFile.LocalFile(logPath2, logContent, Convert.ToInt32(abatabSession.LoggingConfig.WriteDelay));
+                WriteLogFile.LocalFile(logPath3, logContent, Convert.ToInt32(abatabSession.LoggingConfig.WriteDelay));
 
                 // $@"{abatabSession.AbatabDataRoot}\logs\{abatabSession.SessionDateStamp}\{abatabSession.AbatabUserName}\{abatabSession.SessionTimeStamp}"
                 // var logPaths = BuildPaths.BuildWarningLogPaths(abatabSession.LoggingConfig.SessionRoot, );

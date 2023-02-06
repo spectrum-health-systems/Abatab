@@ -1,5 +1,11 @@
 # Abatab Roadmap Queue
 
+# Dose warnings
+
+* Public name needs to be formatted better
+* Public log data should be different
+* Private name should include a timestamp
+
 ## ModQuickMedOrder
 
 ### Dose
