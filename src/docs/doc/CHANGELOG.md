@@ -6,7 +6,7 @@
 
 <br>
 
-<!-->
+<!--
 # v23.1.0 (2023-01-31)
 
 ## Release notes
@@ -31,7 +31,6 @@ This is the January release of Abatab, which focuses on:
 
 * [Updated build/versions](https://github.com/spectrum-health-systems/Abatab/issues/105)
 * [Documentation](https://github.com/spectrum-health-systems/Abatab/issues/94)
-
 
 ### Depreciated
 
