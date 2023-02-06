@@ -10,6 +10,31 @@
 
 </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ***
 
 # Abatab project reference detail
@@ -36,4 +61,4 @@
 |                             Du |  NoRef |    NoRef   |     NoRef     |        NoRef       |       _Dep_      |     NoRef     |      _Dep_     |     NoRef    |   NoRef   |     NoRef    |       NoRef      |    NoRef   |   X   |              NoRef             |
 | NTST.ScriptLinkService.Objects |  NoRef |    NoRef   |     NoRef     |        NoRef       |       _Dep_      |     NoRef     |      _Dep_     |     NoRef    |   NoRef   |     NoRef    |       NoRef      |    NoRef   |       |                X               |
 
-[Logo]: /.github/resources/img/logo/AbatabLogo-current.png
+[Logo]: ../../resources/images/logos/AbatabLogo.png
