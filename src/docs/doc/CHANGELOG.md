@@ -46,22 +46,25 @@ None.
 
 ### Security
 
+None.
+
 <br>
 
 ***
 -->
 
-# v23.1.0 (2023-02-06)
+# v23.1.0 (2023-2-6)
 
 ## Release notes
 
-This is the January release of Abatab, which focuses on:
+### **This is the January development release of Abatab, which is not intended to be used in production environments.**
 
-* New core functionality
-* New module functionality
-* Documentation updates
-
-Changelog details can be found [here](https://github.com/orgs/spectrum-health-systems/projects/5/views/7).
+* v23.1.0+230206.1023
+* This release focuses on:
+  * New core functionality
+  * New module functionality
+  * Documentation updates
+* Full changelog [here](https://github.com/orgs/spectrum-health-systems/projects/5/views/7).
 
 ## Changes
 
@@ -90,11 +93,11 @@ None.
 
 ### Security
 
+None.
+
 <br>
 
 ***
-
-<br>
 
 # v23.0.0 (2023-01-17)
 
