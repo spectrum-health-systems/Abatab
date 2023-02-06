@@ -1,4 +1,4 @@
-﻿// Abatab v23.1.0+230206.1023
+﻿// Abatab v23.2.0+230206.1122
 // Abatab.asmx.cs b230123.0832
 // (c) A Pretty Cool Program
 
@@ -42,7 +42,7 @@ namespace Abatab
         [WebMethod]
         public string GetVersion()
         {
-            return "VERSION 23.1";
+            return "VERSION 23.2";
         }
 
         /// <summary>Executes script parameter request from Avatar, then returns a potentially modified OptionObject to Avatar.</summary>
