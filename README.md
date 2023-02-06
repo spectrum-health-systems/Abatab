@@ -2,6 +2,10 @@
 
   ![BranchWarning][BranchWarning]
   
+  **This is the development branch of Abatab, and is not intended for use in production environments!**
+
+  Please use the current Abatab Community Release (coming soon) instead.
+
   ***
 
   [![AbatabLogo][AbatabLogo]][AbatabRepoUrl]
@@ -38,7 +42,7 @@ While myAvatar™ is a robust platform, it isn't perfect. The good news is that 
 
 For everything else, please see the [Abatab documentation][AbatabDocumentation].
 
-> PLEASE NOTE: As of version 23.0, Abatab documentation is in active development, and may be incomplete and/or innacurate. The plan is to have the documentation complete as of version 23.2 (or so).
+> PLEASE NOTE: As of version 23.1, Abatab documentation is in active development, and may be incomplete and/or innacurate. The plan is to have the documentation complete for the Spring23 Community Release.
 
 <br>
 
