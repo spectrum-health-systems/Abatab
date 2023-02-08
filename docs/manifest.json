@@ -45,7 +45,7 @@
       "output": {
         ".html": {
           "relative_path": "doc/ROADMAP.html",
-          "hash": "ftsAr+/udAmQj6pdSheCyCpXKwvLxLEs1DR6uXfXkqM="
+          "hash": "op1vIPL3GWD57z5VAo0QqgB5J6Zu4FS4oLqfaA6CvgA="
         }
       },
       "is_incremental": false,
@@ -1070,6 +1070,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "../../docs/obj/api/ModCommon.ParseOptionObject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ModCommon.ParseOptionObject.html",
+          "hash": "L26kGz2YWmJCephlUX/KS2G8XKHcoej92/ZmisYsR7A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "../../docs/obj/api/ModCommon.Roundhouse.yml",
       "output": {
         ".html": {
@@ -1110,7 +1122,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ModCommon.html",
-          "hash": "70QW7IUX/SWUAcAw8JVMjQ/4Sj1ljSUtHu+PO7gNa2k="
+          "hash": "KCUPUVwViV3Agjb0q3+umIyMNTU9r7C5vqdfhP9GYxs="
         }
       },
       "is_incremental": false,
@@ -1302,7 +1314,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "8T57yDtI+bFngWt+jAumELmIKOkNpCyKrlUGcW+z+0A="
+          "hash": "lqbm7GnCF7eMayeVi/cgXQdX2vSESFfzACQgUC4A654="
         }
       },
       "is_incremental": false,
@@ -1341,7 +1353,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 48,
+          "total_file_count": 49,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

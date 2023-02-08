@@ -1256,6 +1256,12 @@ references:
   commentId: N:ModCommon
   fullName: ModCommon
   nameWithType: ModCommon
+- uid: ModCommon.ParseOptionObject
+  name: ParseOptionObject
+  href: api/ModCommon.ParseOptionObject.html
+  commentId: T:ModCommon.ParseOptionObject
+  fullName: ModCommon.ParseOptionObject
+  nameWithType: ParseOptionObject
 - uid: ModCommon.Roundhouse
   name: Roundhouse
   href: api/ModCommon.Roundhouse.html
