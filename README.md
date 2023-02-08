@@ -36,6 +36,10 @@ While myAvatar™ is a robust platform, it isn't perfect. The good news is that 
 * .NET Framework 4.8+ installed
 * Access to yourmyAvatar™ environments via HTTPS
 
+### Development requirements
+
+* The [OptionObject2015](https://github.com/spectrum-health-systems/.github/blob/profile/Third-party%20components/Netsmart/OptionObject2015/136_4354_20.7z)
+
 <br>
 
 # The Abatab Manual
