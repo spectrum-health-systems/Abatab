@@ -10,7 +10,7 @@
 ##  log/  These are currently not committed to the repository because there are
 ##  logs/ source code files with similar names, and I want to avoid issues.
 
-#[Bb]in/  <- Disabled for Abatab, since we need stuff here
+#[Bb]in/
 #[Ll]og/
 #[Ll]ogs/
 
