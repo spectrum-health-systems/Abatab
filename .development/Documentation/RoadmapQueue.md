@@ -16,6 +16,10 @@ When [Warning logs were implemented](https://github.com/spectrum-health-systems/
 
 We should modify the remaining methods in BuildPaths.cs to return `List<string>`
 
+### **Move FieldId data to config file**
+
+Easier to change.
+
 ### **Log file delay**
 
 As functionality is added, more staff use Abatab, and more logfiles are written, we should probably look at the write delay and determine:
@@ -31,6 +35,12 @@ As functionality is added, more staff use Abatab, and more logfiles are written,
 * What is the best global delay?
 * Are there certain logs that should not have a delay?
 * Are there certain logs that should always have a specific delay?
+
+### **Log efficiency**
+
+Make sure we aren't going through the logging motions, and not creating log files (e.g., debug logs).
+
+This will probably involve logging detail levels.
 
 ### **Access log details**
 
@@ -76,11 +86,9 @@ Verify that DocFX has what it needs, and doesn't have unnecessary data.
 
 ## Module functionality
 
-### **ModCommon: Create common method for looping through OptionObjects**
+### **ModCommon: Maybe remove?**
 
-Hopefully the looping through forms, etc. is the same across the board, so we should be able to have a common method that does this.
-
-We will test this when building out the check for incorrect Place of Service functionality.
+Not sure if we need this, since most common functionality should go in Core.
 
 ### **ModQuickMedOrder: Change ModQuickMedOrderDosePercentBoundary to "25"**
 

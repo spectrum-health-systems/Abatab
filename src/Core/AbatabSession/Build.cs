@@ -1,4 +1,4 @@
-﻿// Abatab.AbatabSession.Build.cs b230119.0941
+﻿// Abatab.AbatabSession.Build.cs b230215.1012
 // Copyright (c) A Pretty Cool Program
 
 using AbatabData;
@@ -112,7 +112,6 @@ namespace AbatabSession
         {
             abatabSession.ModQuickMedOrderConfig = new QuickMedOrder
             {
-
                 Mode                           = abatabSettings["ModQuickMedOrderMode"],
                 AuthorizedUsers                = abatabSettings["ModQuickMedOrderAuthorizedUsers"],
                 DosePercentBoundary            = abatabSettings["ModQuickMedOrderDosePercentBoundary"],
@@ -129,6 +128,19 @@ namespace AbatabSession
                 FoundLastOrderScheduleFieldId  = false,
                 LastOrderScheduleText          = "",
                 FoundAllRequiredFieldIds       = false
+            };
+        }
+
+        /// <summary>TBD</summary>
+        /// <param name="abatabSettings"></param>
+        /// <param name="abatabSession"></param>
+        private static void BuildModProgressNoteConfig(Dictionary<string, string> abatabSettings, Session abatabSession)
+        {
+            abatabSession.ModProgressNoteConfig = new ProgressNote
+            {
+                Mode             = abatabSettings["ModProgressNoteMode"],
+                AuthorizedUsers  = abatabSettings["ModProgressNoteAuthorizedUsers"],
+                TelehealthConfig = new Telehealth()
             };
         }
 

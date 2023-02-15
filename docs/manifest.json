@@ -5,18 +5,6 @@
   "files": [
     {
       "type": "Conceptual",
-      "source_relative_path": "../../docs/README.md",
-      "output": {
-        ".html": {
-          "relative_path": "README.html",
-          "hash": "DgXMbwTGUtbnje5xaEQI97ghJ8Duut5HjXk5WkjPUmM="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "../../docs/api/index.md",
       "output": {
         ".html": {
@@ -815,6 +803,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "../../docs/obj/api/AbatabData.Module.ProgressNote.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AbatabData.Module.ProgressNote.html",
+          "hash": "6oh9VQbm3MMezUuSCrm46CkaTLQc0/VhSYsEzXCLAG0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "../../docs/obj/api/AbatabData.Module.Prototype.yml",
       "output": {
         ".html": {
@@ -839,6 +839,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "../../docs/obj/api/AbatabData.Module.Telehealth.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AbatabData.Module.Telehealth.html",
+          "hash": "jQHAQz/yaP15vGtahe3FshKMBa+78icWyzwaAX0F1UQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "../../docs/obj/api/AbatabData.Module.Testing.yml",
       "output": {
         ".html": {
@@ -855,7 +867,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AbatabData.Module.html",
-          "hash": "dxml4jeQO949Hnmew5hEU6ffJ6ormufun9FdOLKr/SQ="
+          "hash": "fJwzAzkKmBroRaD2USdCQwVRf6rYWQyfwBBQO3qSZHc="
         }
       },
       "is_incremental": false,
@@ -870,7 +882,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AbatabData.Session.html",
-          "hash": "AzbdM59hLssJ0gvy0AUgnEAmE6n40tp6gbn3cfPwdXw="
+          "hash": "kHhnFDVXp+kUs6GRVYAuK7JgmO/WlQHwfZND1BQzhQs="
         }
       },
       "is_incremental": false,
@@ -1134,7 +1146,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ModProgressNote.Roundhouse.html",
-          "hash": "2b+oY/z2gt7SwzBXWFrGMTuiiPgdixhL9GCwkZgNGAI="
+          "hash": "NEY/BBKeuuw/sL4xUfHns84CEXQbv5QuXsN0Xaag9UM="
         }
       },
       "is_incremental": false,
@@ -1314,7 +1326,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "lqbm7GnCF7eMayeVi/cgXQdX2vSESFfzACQgUC4A654="
+          "hash": "2NVrMEGWXSg5YF41Hi+V0g/HzZJQzUTEVD+iGcMCOXo="
         }
       },
       "is_incremental": false,
@@ -1347,13 +1359,13 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 27,
+          "total_file_count": 26,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 49,
+          "total_file_count": 51,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

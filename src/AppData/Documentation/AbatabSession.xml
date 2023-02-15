@@ -28,6 +28,11 @@
             <param name="abatabSettings"></param>
             <param name="abatabSession"></param>
         </member>
+        <member name="M:AbatabSession.Build.BuildModProgressNoteConfig(System.Collections.Generic.Dictionary{System.String,System.String},AbatabData.Session)">
+            <summary>TBD</summary>
+            <param name="abatabSettings"></param>
+            <param name="abatabSession"></param>
+        </member>
         <member name="M:AbatabSession.Build.BuildDebugglerConfig(System.Collections.Generic.Dictionary{System.String,System.String},AbatabData.Session)">
             <summary>TBD</summary>
             <param name="abatabSettings"></param>

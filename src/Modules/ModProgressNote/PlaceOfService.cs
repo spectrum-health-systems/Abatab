@@ -1,0 +1,187 @@
+﻿// ModProgressNote.PlaceOfService.cs b230215.0952
+// Copyright (c) A Pretty Cool Program
+
+using AbatabData;
+
+using AbatabLogging;
+
+using NTST.ScriptLinkService.Objects;
+
+using System;
+using System.Collections.Generic;
+using System.Reflection;
+
+namespace ModProgressNote
+{
+    internal class PlaceOfService
+    {
+        public static void VerifyTelehealth(Session abatabSession)
+        {
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.DebugMode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+
+            InitializeTelehealthPlaceOfServiceData(abatabSession);
+
+            AbatabOptionObject.WorkObj.ClearErrorData(abatabSession);
+
+            ParseObject(abatabSession);
+
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+        }
+
+        /// <summary>Initializes dosing information.</summary>
+        /// <param name="abatabSession">Information/data for this session of Abatab.</param>
+        /// <remarks>
+        /// This information is hardcoded, but should be the same for all Avatar clients.
+        /// </remarks>
+        private static void InitializeTelehealthPlaceOfServiceData(Session abatabSession)
+        {
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.DebugMode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+
+            abatabSession.ModProgressNoteConfig.TelehealthConfig.ValidServiceChargeCodes = new List<string>
+            {
+                "TMH90853",
+                "AOTMH90853"
+            };
+
+            abatabSession.ModProgressNoteConfig.TelehealthConfig.ServiceChargeCodeFieldId ="51001";
+
+            abatabSession.ModProgressNoteConfig.TelehealthConfig.ValidLocations = new List<string>
+            {
+                "Telehealth Patient Home",
+                "Telehealth Patient Loc Not Home"
+            };
+
+            abatabSession.ModProgressNoteConfig.TelehealthConfig.ServiceChargeCodeFieldId ="51004";
+
+            LogEvent.ModQuickMedOrder(abatabSession);
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+        }
+
+        /// <summary>TBD</summary>
+        /// <param name="abatabSession"></param>
+        private static void ParseObject(Session abatabSession)
+        {
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.DebugMode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
+            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+
+            /* Loop through each FormObject in the OptionObject.
+            */
+            foreach (FormObject formObject in abatabSession.SentOptObj.Forms)
+            {
+                LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+
+                /* Loop through each field of the current FormObject.
+                */
+                foreach (FieldObject fieldObject in formObject.CurrentRow.Fields)
+                {
+                    if (fieldObject.FieldNumber == abatabSession.ModProgressNoteConfig.TelehealthConfig.ServiceChargeCodeFieldId)
+                    {
+                        LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+
+                        ProcessServiceCodeField(abatabSession, fieldObject);
+                    }
+                    else if (fieldObject.FieldNumber == abatabSession.ModProgressNoteConfig.TelehealthConfig.LocationFieldId)
+                    {
+                        LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+
+                        ProcessLocationField(abatabSession, fieldObject);
+                    }
+                    else
+                    {
+                        LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+
+                        // We aren't looking for whatever field we are currently on.
+                    }
+
+                    if (abatabSession.ModProgressNoteConfig.TelehealthConfig.FoundServiceChargeCodeFieldId && abatabSession.ModProgressNoteConfig.TelehealthConfig.FoundLocationFieldId && abatabSession.ModQuickMedOrderConfig.FoundLastOrderScheduleFieldId)
+                    {
+                        LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+
+                        abatabSession.ModProgressNoteConfig.TelehealthConfig.FoundAllRequiredFieldIds = true; // TODO Maybe go straight there? Maybe continue?
+
+                        break;
+                    }
+
+                }
+
+                if (abatabSession.ModProgressNoteConfig.TelehealthConfig.FoundAllRequiredFieldIds)
+                {
+                    // TODO Might want to make put this in the original check.
+
+                    LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+
+                    break;
+                }
+            }
+
+            if (abatabSession.ModProgressNoteConfig.TelehealthConfig.ValidServiceChargeCodes.Contains(abatabSession.ModProgressNoteConfig.TelehealthConfig.ServiceChargeCodeValue))
+            {
+                if (abatabSession.ModProgressNoteConfig.TelehealthConfig.ValidLocations.Contains(abatabSession.ModProgressNoteConfig.TelehealthConfig.LocationValue))
+                {
+                    LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+
+                    abatabSession.WorkOptObj.ErrorCode = 4;
+                    abatabSession.WorkOptObj.ErrorMesg = $"WARNING!{Environment.NewLine}" +
+                                                         $"{Environment.NewLine}" +
+                                                         $"ERROR!";
+
+                    //LogEvent.Warning(abatabSession, "Dosing issue.");
+                }
+                else
+                {
+                    LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+
+
+                    // Percentage isn't greater
+                    // TODO Maybe make this == or something.
+                }
+            }
+        }
+
+        private static void ProcessServiceCodeField(Session abatabSession, FieldObject fieldObject)
+        {
+            // TODO Should make sure that an empty string is enough here, or if we need to consider null/whitespace...or using string.Length.
+            if (fieldObject.FieldValue?.Length == 0)
+            {
+                // TODO This trace file should stay, and we might want to add a description to the msg.
+                LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+
+                abatabSession.ModProgressNoteConfig.TelehealthConfig.ServiceChargeCodeValue = "";
+            }
+            else
+            {
+                // TODO This trace file should stay, and we might want to add a description to the msg.
+                LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+
+                abatabSession.ModProgressNoteConfig.TelehealthConfig.ServiceChargeCodeValue = fieldObject.FieldValue;
+            }
+
+            abatabSession.ModProgressNoteConfig.TelehealthConfig.FoundServiceChargeCodeFieldId = true;
+        }
+
+        private static void ProcessLocationField(Session abatabSession, FieldObject fieldObject)
+        {
+            // TODO Should make sure that an empty string is enough here, or if we need to consider null/whitespace...or using string.Length.
+            if (fieldObject.FieldValue?.Length == 0)
+            {
+                // TODO This trace file should stay, and we might want to add a description to the msg.
+                LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+
+                abatabSession.ModProgressNoteConfig.TelehealthConfig.LocationValue = "";
+            }
+            else
+            {
+                // TODO This trace file should stay, and we might want to add a description to the msg.
+                LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+
+                abatabSession.ModProgressNoteConfig.TelehealthConfig.LocationValue = fieldObject.FieldValue;
+            }
+
+            abatabSession.ModProgressNoteConfig.TelehealthConfig.FoundLocationFieldId = true;
+        }
+
+
+    }
+}

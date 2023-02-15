@@ -5,7 +5,7 @@ namespace ModCommon
 {
     public class ParseOptionObject
     {
-
+        // Mignt not be needed.
 
     }
 }
