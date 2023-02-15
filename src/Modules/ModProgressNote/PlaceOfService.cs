@@ -54,7 +54,8 @@ namespace ModProgressNote
 
             //abatabSession.ModProgressNoteConfig.TelehealthConfig.ServiceChargeCodeFieldId ="51004";
 
-            LogEvent.ModQuickMedOrder(abatabSession);
+            // TODO - MAke specific to ProgressNotes
+            //LogEvent.ModQuickMedOrder(abatabSession);
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
         }
 
