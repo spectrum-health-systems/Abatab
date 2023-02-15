@@ -1,4 +1,4 @@
-﻿// Abatab.AbatabSession.Build.cs b230215.1221
+﻿// Abatab.AbatabSession.Build.cs b230215.1227
 // Copyright (c) A Pretty Cool Program
 
 using AbatabData;
@@ -144,6 +144,21 @@ namespace AbatabSession
                 Mode             = abatabSettings["ModProgressNoteMode"],
                 AuthorizedUsers  = abatabSettings["ModProgressNoteAuthorizedUsers"],
                 TelehealthConfig = new Telehealth()
+                {
+                    ValidServiceChargeCodes = new List<string>
+                    {
+                        "TELE PG Group (TMH90853)",
+                        "AUDIO ONLY PG Group (AOTMH90853)"
+                    },
+                    ServiceChargeCodeFieldId ="51001",
+                    ValidLocations = new List<string>
+                    {
+                         "Telehealth Patient Home",
+                         "Telehealth Patient Loc Not Home"
+                    },
+                    LocationFieldId ="51001",
+
+                }
             };
         }
 

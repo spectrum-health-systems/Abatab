@@ -8,7 +8,6 @@ using AbatabLogging;
 using NTST.ScriptLinkService.Objects;
 
 using System;
-using System.Collections.Generic;
 using System.Reflection;
 
 namespace ModProgressNote
@@ -39,21 +38,21 @@ namespace ModProgressNote
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.DebugMode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
-            abatabSession.ModProgressNoteConfig.TelehealthConfig.ValidServiceChargeCodes = new List<string>
-            {
-                "TMH90853",
-                "AOTMH90853"
-            };
+            //abatabSession.ModProgressNoteConfig.TelehealthConfig.ValidServiceChargeCodes = new List<string>
+            //{
+            //    "TMH90853",
+            //    "AOTMH90853"
+            //};
 
-            abatabSession.ModProgressNoteConfig.TelehealthConfig.ServiceChargeCodeFieldId ="51001";
+            //abatabSession.ModProgressNoteConfig.TelehealthConfig.ServiceChargeCodeFieldId ="51001";
 
-            abatabSession.ModProgressNoteConfig.TelehealthConfig.ValidLocations = new List<string>
-            {
-                "Telehealth Patient Home",
-                "Telehealth Patient Loc Not Home"
-            };
+            //abatabSession.ModProgressNoteConfig.TelehealthConfig.ValidLocations = new List<string>
+            //{
+            //    "Telehealth Patient Home",
+            //    "Telehealth Patient Loc Not Home"
+            //};
 
-            abatabSession.ModProgressNoteConfig.TelehealthConfig.ServiceChargeCodeFieldId ="51004";
+            //abatabSession.ModProgressNoteConfig.TelehealthConfig.ServiceChargeCodeFieldId ="51004";
 
             LogEvent.ModQuickMedOrder(abatabSession);
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
