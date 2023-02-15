@@ -1,4 +1,4 @@
-﻿// Abatab.AbatabSession.Build.cs b230n215.1239
+﻿// Abatab.AbatabSession.Build.cs b230215.1301
 // Copyright (c) A Pretty Cool Program
 
 using AbatabData;
@@ -156,7 +156,7 @@ namespace AbatabSession
                          "Telehealth Patient Home",
                          "Telehealth Patient Loc Not Home"
                     },
-                    LocationFieldId ="51004",
+                    LocationFieldId ="50004",
 
                 }
             };
