@@ -1,4 +1,4 @@
-﻿// Abatab.AbatabData.Session.cs b230119.0941
+﻿// Abatab.AbatabData.Session.cs b230215.0958
 // Copyright (c) A Pretty Cool Program
 
 using NTST.ScriptLinkService.Objects;
@@ -58,7 +58,7 @@ namespace AbatabData
         /// <value>Default value is <c>C:\Abatab_</c></value>
         public string AbatabRoot { get; set; }
 
-        /// <summary>The root directory where the Abatab data is stored.</summary>
+        /// <summary>The root directory where non-web service data code is located.</summary>
         /// <remarks>
         /// <list type="bullet">
         /// <item>At runtime the <c>AvatarEnvironment</c> value is created as a sub-directory of the <c>AbatabDataRoot</c>.</item>
@@ -114,6 +114,10 @@ namespace AbatabData
         /// <value>&lt;-- Click for more info</value>
         public Module.Common ModCommonConfig { get; set; }
 
+        /// <summary>Properties for the ProgressNote module.</summary>
+        /// <value>&lt;-- Click for more info</value>
+        public Module.ProgressNote ModProgressNoteConfig { get; set; }
+
         /// <summary>Properties for the Prototype module.</summary>
         /// <value>&lt;-- Click for more info</value>
         public Module.Prototype ModPrototypeConfig { get; set; }
@@ -125,6 +129,12 @@ namespace AbatabData
         /// <summary>Properties for the Testing module.</summary>
         /// <value>&lt;-- Click for more info</value>
         public Module.Testing ModTestingConfig { get; set; }
+
+        // TODO - Where does this belong, since it may not only be for logging?
+        public string PublicAccessRoot { get; set; }
+
+
+        // TODO - WTF is the stuff below?
 
         /// <summary>The session date.</summary>
         /// <remarks>

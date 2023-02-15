@@ -44,6 +44,25 @@
   <ItemGroup>
     <Compile Include="Roundhouse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PlaceOfService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\AbatabData\AbatabData.csproj">
+      <Project>{E3028CFD-5965-4555-9A96-3EBBDFD4D550}</Project>
+      <Name>AbatabData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\AbatabLogging\AbatabLogging.csproj">
+      <Project>{A4467424-56E0-4260-BB21-D98263D7AEFD}</Project>
+      <Name>AbatabLogging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\AbatabOptionObject\AbatabOptionObject.csproj">
+      <Project>{2741df45-7db8-4bea-89b4-4a70c7114192}</Project>
+      <Name>AbatabOptionObject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ThirdParty\NTST.ScriptLinkService.Objects\NTST.ScriptLinkService.Objects.vbproj">
+      <Project>{8a8a6089-3286-42e6-9f76-b61784709654}</Project>
+      <Name>NTST.ScriptLinkService.Objects</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

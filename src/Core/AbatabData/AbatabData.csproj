@@ -46,6 +46,7 @@
     <Compile Include="Core\Logging.cs" />
     <Compile Include="Core\OptionObject.cs" />
     <Compile Include="Module\Common.cs" />
+    <Compile Include="Module\ProgressNote.cs" />
     <Compile Include="Module\Prototype.cs" />
     <Compile Include="Module\Testing.cs" />
     <Compile Include="Properties\Settings.Designer.cs">

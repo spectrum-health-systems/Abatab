@@ -1,4 +1,4 @@
-﻿// Abatab.WebConfig.cs b230119.0941
+﻿// Abatab.WebConfig.cs b230215.1009
 // Copyright (c) A Pretty Cool Program
 
 using Abatab.Properties;
@@ -32,6 +32,7 @@ namespace Abatab
                 { "AbatabMode",                             Settings.Default.AbatabMode.ToLower() },
                 { "AbatabRoot",                             Settings.Default.AbatabRoot.ToLower() },
                 { "AbatabDataRoot",                         Settings.Default.AbatabDataRoot.ToLower() },
+                { "PublicAccessRoot",                       Settings.Default.PublicAccessRoot.ToLower() },
                 { "AvatarEnvironment",                      Settings.Default.AvatarEnvironment.ToLower() },
                 { "DebugMode",                              Settings.Default.DebugMode.ToLower() },
                 { "DebugLogRoot",                           Settings.Default.DebugLogRoot.ToLower() },
@@ -39,6 +40,8 @@ namespace Abatab
                 { "LogDetail",                              Settings.Default.LogDetail.ToLower() },
                 { "LogWriteDelay",                          Settings.Default.LogWriteDelay.ToLower() },
                 { "AbatabFallbackUserName",                 Settings.Default.AbatabFallbackUserName.ToLower() },
+                { "ModProgressNoteMode",                    Settings.Default.ModProgressNoteMode.ToLower() },
+                { "ModProgressNoteAuthorizedUsers",         Settings.Default.ModProgressNoteAuthorizedUsers.ToLower() },
                 { "ModPrototypeMode",                       Settings.Default.ModPrototypeMode.ToLower() },
                 { "ModQuickMedOrderMode",                   Settings.Default.ModQuickMedOrderMode.ToLower() },
                 { "ModQuickMedOrderAuthorizedUsers",        Settings.Default.ModQuickMedOrderAuthorizedUsers.ToLower() },

@@ -256,6 +256,51 @@ references:
   commentId: T:AbatabData.Module.Common
   fullName: AbatabData.Module.Common
   nameWithType: Common
+- uid: AbatabData.Module.ProgressNote
+  name: ProgressNote
+  href: api/AbatabData.Module.ProgressNote.html
+  commentId: T:AbatabData.Module.ProgressNote
+  fullName: AbatabData.Module.ProgressNote
+  nameWithType: ProgressNote
+- uid: AbatabData.Module.ProgressNote.AuthorizedUsers
+  name: AuthorizedUsers
+  href: api/AbatabData.Module.ProgressNote.html#AbatabData_Module_ProgressNote_AuthorizedUsers
+  commentId: P:AbatabData.Module.ProgressNote.AuthorizedUsers
+  fullName: AbatabData.Module.ProgressNote.AuthorizedUsers
+  nameWithType: ProgressNote.AuthorizedUsers
+- uid: AbatabData.Module.ProgressNote.AuthorizedUsers*
+  name: AuthorizedUsers
+  href: api/AbatabData.Module.ProgressNote.html#AbatabData_Module_ProgressNote_AuthorizedUsers_
+  commentId: Overload:AbatabData.Module.ProgressNote.AuthorizedUsers
+  isSpec: "True"
+  fullName: AbatabData.Module.ProgressNote.AuthorizedUsers
+  nameWithType: ProgressNote.AuthorizedUsers
+- uid: AbatabData.Module.ProgressNote.Mode
+  name: Mode
+  href: api/AbatabData.Module.ProgressNote.html#AbatabData_Module_ProgressNote_Mode
+  commentId: P:AbatabData.Module.ProgressNote.Mode
+  fullName: AbatabData.Module.ProgressNote.Mode
+  nameWithType: ProgressNote.Mode
+- uid: AbatabData.Module.ProgressNote.Mode*
+  name: Mode
+  href: api/AbatabData.Module.ProgressNote.html#AbatabData_Module_ProgressNote_Mode_
+  commentId: Overload:AbatabData.Module.ProgressNote.Mode
+  isSpec: "True"
+  fullName: AbatabData.Module.ProgressNote.Mode
+  nameWithType: ProgressNote.Mode
+- uid: AbatabData.Module.ProgressNote.TelehealthConfig
+  name: TelehealthConfig
+  href: api/AbatabData.Module.ProgressNote.html#AbatabData_Module_ProgressNote_TelehealthConfig
+  commentId: P:AbatabData.Module.ProgressNote.TelehealthConfig
+  fullName: AbatabData.Module.ProgressNote.TelehealthConfig
+  nameWithType: ProgressNote.TelehealthConfig
+- uid: AbatabData.Module.ProgressNote.TelehealthConfig*
+  name: TelehealthConfig
+  href: api/AbatabData.Module.ProgressNote.html#AbatabData_Module_ProgressNote_TelehealthConfig_
+  commentId: Overload:AbatabData.Module.ProgressNote.TelehealthConfig
+  isSpec: "True"
+  fullName: AbatabData.Module.ProgressNote.TelehealthConfig
+  nameWithType: ProgressNote.TelehealthConfig
 - uid: AbatabData.Module.Prototype
   name: Prototype
   href: api/AbatabData.Module.Prototype.html
@@ -515,6 +560,129 @@ references:
   isSpec: "True"
   fullName: AbatabData.Module.QuickMedOrder.ValidOrderTypes
   nameWithType: QuickMedOrder.ValidOrderTypes
+- uid: AbatabData.Module.Telehealth
+  name: Telehealth
+  href: api/AbatabData.Module.Telehealth.html
+  commentId: T:AbatabData.Module.Telehealth
+  fullName: AbatabData.Module.Telehealth
+  nameWithType: Telehealth
+- uid: AbatabData.Module.Telehealth.FoundAllRequiredFieldIds
+  name: FoundAllRequiredFieldIds
+  href: api/AbatabData.Module.Telehealth.html#AbatabData_Module_Telehealth_FoundAllRequiredFieldIds
+  commentId: P:AbatabData.Module.Telehealth.FoundAllRequiredFieldIds
+  fullName: AbatabData.Module.Telehealth.FoundAllRequiredFieldIds
+  nameWithType: Telehealth.FoundAllRequiredFieldIds
+- uid: AbatabData.Module.Telehealth.FoundAllRequiredFieldIds*
+  name: FoundAllRequiredFieldIds
+  href: api/AbatabData.Module.Telehealth.html#AbatabData_Module_Telehealth_FoundAllRequiredFieldIds_
+  commentId: Overload:AbatabData.Module.Telehealth.FoundAllRequiredFieldIds
+  isSpec: "True"
+  fullName: AbatabData.Module.Telehealth.FoundAllRequiredFieldIds
+  nameWithType: Telehealth.FoundAllRequiredFieldIds
+- uid: AbatabData.Module.Telehealth.FoundLocationFieldId
+  name: FoundLocationFieldId
+  href: api/AbatabData.Module.Telehealth.html#AbatabData_Module_Telehealth_FoundLocationFieldId
+  commentId: P:AbatabData.Module.Telehealth.FoundLocationFieldId
+  fullName: AbatabData.Module.Telehealth.FoundLocationFieldId
+  nameWithType: Telehealth.FoundLocationFieldId
+- uid: AbatabData.Module.Telehealth.FoundLocationFieldId*
+  name: FoundLocationFieldId
+  href: api/AbatabData.Module.Telehealth.html#AbatabData_Module_Telehealth_FoundLocationFieldId_
+  commentId: Overload:AbatabData.Module.Telehealth.FoundLocationFieldId
+  isSpec: "True"
+  fullName: AbatabData.Module.Telehealth.FoundLocationFieldId
+  nameWithType: Telehealth.FoundLocationFieldId
+- uid: AbatabData.Module.Telehealth.FoundServiceChargeCodeFieldId
+  name: FoundServiceChargeCodeFieldId
+  href: api/AbatabData.Module.Telehealth.html#AbatabData_Module_Telehealth_FoundServiceChargeCodeFieldId
+  commentId: P:AbatabData.Module.Telehealth.FoundServiceChargeCodeFieldId
+  fullName: AbatabData.Module.Telehealth.FoundServiceChargeCodeFieldId
+  nameWithType: Telehealth.FoundServiceChargeCodeFieldId
+- uid: AbatabData.Module.Telehealth.FoundServiceChargeCodeFieldId*
+  name: FoundServiceChargeCodeFieldId
+  href: api/AbatabData.Module.Telehealth.html#AbatabData_Module_Telehealth_FoundServiceChargeCodeFieldId_
+  commentId: Overload:AbatabData.Module.Telehealth.FoundServiceChargeCodeFieldId
+  isSpec: "True"
+  fullName: AbatabData.Module.Telehealth.FoundServiceChargeCodeFieldId
+  nameWithType: Telehealth.FoundServiceChargeCodeFieldId
+- uid: AbatabData.Module.Telehealth.LocationFieldId
+  name: LocationFieldId
+  href: api/AbatabData.Module.Telehealth.html#AbatabData_Module_Telehealth_LocationFieldId
+  commentId: P:AbatabData.Module.Telehealth.LocationFieldId
+  fullName: AbatabData.Module.Telehealth.LocationFieldId
+  nameWithType: Telehealth.LocationFieldId
+- uid: AbatabData.Module.Telehealth.LocationFieldId*
+  name: LocationFieldId
+  href: api/AbatabData.Module.Telehealth.html#AbatabData_Module_Telehealth_LocationFieldId_
+  commentId: Overload:AbatabData.Module.Telehealth.LocationFieldId
+  isSpec: "True"
+  fullName: AbatabData.Module.Telehealth.LocationFieldId
+  nameWithType: Telehealth.LocationFieldId
+- uid: AbatabData.Module.Telehealth.LocationValue
+  name: LocationValue
+  href: api/AbatabData.Module.Telehealth.html#AbatabData_Module_Telehealth_LocationValue
+  commentId: P:AbatabData.Module.Telehealth.LocationValue
+  fullName: AbatabData.Module.Telehealth.LocationValue
+  nameWithType: Telehealth.LocationValue
+- uid: AbatabData.Module.Telehealth.LocationValue*
+  name: LocationValue
+  href: api/AbatabData.Module.Telehealth.html#AbatabData_Module_Telehealth_LocationValue_
+  commentId: Overload:AbatabData.Module.Telehealth.LocationValue
+  isSpec: "True"
+  fullName: AbatabData.Module.Telehealth.LocationValue
+  nameWithType: Telehealth.LocationValue
+- uid: AbatabData.Module.Telehealth.ServiceChargeCodeFieldId
+  name: ServiceChargeCodeFieldId
+  href: api/AbatabData.Module.Telehealth.html#AbatabData_Module_Telehealth_ServiceChargeCodeFieldId
+  commentId: P:AbatabData.Module.Telehealth.ServiceChargeCodeFieldId
+  fullName: AbatabData.Module.Telehealth.ServiceChargeCodeFieldId
+  nameWithType: Telehealth.ServiceChargeCodeFieldId
+- uid: AbatabData.Module.Telehealth.ServiceChargeCodeFieldId*
+  name: ServiceChargeCodeFieldId
+  href: api/AbatabData.Module.Telehealth.html#AbatabData_Module_Telehealth_ServiceChargeCodeFieldId_
+  commentId: Overload:AbatabData.Module.Telehealth.ServiceChargeCodeFieldId
+  isSpec: "True"
+  fullName: AbatabData.Module.Telehealth.ServiceChargeCodeFieldId
+  nameWithType: Telehealth.ServiceChargeCodeFieldId
+- uid: AbatabData.Module.Telehealth.ServiceChargeCodeValue
+  name: ServiceChargeCodeValue
+  href: api/AbatabData.Module.Telehealth.html#AbatabData_Module_Telehealth_ServiceChargeCodeValue
+  commentId: P:AbatabData.Module.Telehealth.ServiceChargeCodeValue
+  fullName: AbatabData.Module.Telehealth.ServiceChargeCodeValue
+  nameWithType: Telehealth.ServiceChargeCodeValue
+- uid: AbatabData.Module.Telehealth.ServiceChargeCodeValue*
+  name: ServiceChargeCodeValue
+  href: api/AbatabData.Module.Telehealth.html#AbatabData_Module_Telehealth_ServiceChargeCodeValue_
+  commentId: Overload:AbatabData.Module.Telehealth.ServiceChargeCodeValue
+  isSpec: "True"
+  fullName: AbatabData.Module.Telehealth.ServiceChargeCodeValue
+  nameWithType: Telehealth.ServiceChargeCodeValue
+- uid: AbatabData.Module.Telehealth.ValidLocations
+  name: ValidLocations
+  href: api/AbatabData.Module.Telehealth.html#AbatabData_Module_Telehealth_ValidLocations
+  commentId: P:AbatabData.Module.Telehealth.ValidLocations
+  fullName: AbatabData.Module.Telehealth.ValidLocations
+  nameWithType: Telehealth.ValidLocations
+- uid: AbatabData.Module.Telehealth.ValidLocations*
+  name: ValidLocations
+  href: api/AbatabData.Module.Telehealth.html#AbatabData_Module_Telehealth_ValidLocations_
+  commentId: Overload:AbatabData.Module.Telehealth.ValidLocations
+  isSpec: "True"
+  fullName: AbatabData.Module.Telehealth.ValidLocations
+  nameWithType: Telehealth.ValidLocations
+- uid: AbatabData.Module.Telehealth.ValidServiceChargeCodes
+  name: ValidServiceChargeCodes
+  href: api/AbatabData.Module.Telehealth.html#AbatabData_Module_Telehealth_ValidServiceChargeCodes
+  commentId: P:AbatabData.Module.Telehealth.ValidServiceChargeCodes
+  fullName: AbatabData.Module.Telehealth.ValidServiceChargeCodes
+  nameWithType: Telehealth.ValidServiceChargeCodes
+- uid: AbatabData.Module.Telehealth.ValidServiceChargeCodes*
+  name: ValidServiceChargeCodes
+  href: api/AbatabData.Module.Telehealth.html#AbatabData_Module_Telehealth_ValidServiceChargeCodes_
+  commentId: Overload:AbatabData.Module.Telehealth.ValidServiceChargeCodes
+  isSpec: "True"
+  fullName: AbatabData.Module.Telehealth.ValidServiceChargeCodes
+  nameWithType: Telehealth.ValidServiceChargeCodes
 - uid: AbatabData.Module.Testing
   name: Testing
   href: api/AbatabData.Module.Testing.html
@@ -722,6 +890,19 @@ references:
   isSpec: "True"
   fullName: AbatabData.Session.ModCommonConfig
   nameWithType: Session.ModCommonConfig
+- uid: AbatabData.Session.ModProgressNoteConfig
+  name: ModProgressNoteConfig
+  href: api/AbatabData.Session.html#AbatabData_Session_ModProgressNoteConfig
+  commentId: P:AbatabData.Session.ModProgressNoteConfig
+  fullName: AbatabData.Session.ModProgressNoteConfig
+  nameWithType: Session.ModProgressNoteConfig
+- uid: AbatabData.Session.ModProgressNoteConfig*
+  name: ModProgressNoteConfig
+  href: api/AbatabData.Session.html#AbatabData_Session_ModProgressNoteConfig_
+  commentId: Overload:AbatabData.Session.ModProgressNoteConfig
+  isSpec: "True"
+  fullName: AbatabData.Session.ModProgressNoteConfig
+  nameWithType: Session.ModProgressNoteConfig
 - uid: AbatabData.Session.ModPrototypeConfig
   name: ModPrototypeConfig
   href: api/AbatabData.Session.html#AbatabData_Session_ModPrototypeConfig
@@ -761,6 +942,19 @@ references:
   isSpec: "True"
   fullName: AbatabData.Session.ModTestingConfig
   nameWithType: Session.ModTestingConfig
+- uid: AbatabData.Session.PublicAccessRoot
+  name: PublicAccessRoot
+  href: api/AbatabData.Session.html#AbatabData_Session_PublicAccessRoot
+  commentId: P:AbatabData.Session.PublicAccessRoot
+  fullName: AbatabData.Session.PublicAccessRoot
+  nameWithType: Session.PublicAccessRoot
+- uid: AbatabData.Session.PublicAccessRoot*
+  name: PublicAccessRoot
+  href: api/AbatabData.Session.html#AbatabData_Session_PublicAccessRoot_
+  commentId: Overload:AbatabData.Session.PublicAccessRoot
+  isSpec: "True"
+  fullName: AbatabData.Session.PublicAccessRoot
+  nameWithType: Session.PublicAccessRoot
 - uid: AbatabData.Session.ScriptParameter
   name: ScriptParameter
   href: api/AbatabData.Session.html#AbatabData_Session_ScriptParameter
@@ -909,6 +1103,28 @@ references:
   isSpec: "True"
   fullName: AbatabLogging.BuildPath.WithCaller
   nameWithType: BuildPath.WithCaller
+- uid: AbatabLogging.BuildPaths
+  name: BuildPaths
+  href: api/AbatabLogging.BuildPaths.html
+  commentId: T:AbatabLogging.BuildPaths
+  fullName: AbatabLogging.BuildPaths
+  nameWithType: BuildPaths
+- uid: AbatabLogging.BuildPaths.BuildWarningLogPaths(System.String,System.Collections.Generic.List{System.String})
+  name: BuildWarningLogPaths(String, List<String>)
+  href: api/AbatabLogging.BuildPaths.html#AbatabLogging_BuildPaths_BuildWarningLogPaths_System_String_System_Collections_Generic_List_System_String__
+  commentId: M:AbatabLogging.BuildPaths.BuildWarningLogPaths(System.String,System.Collections.Generic.List{System.String})
+  name.vb: BuildWarningLogPaths(String, List(Of String))
+  fullName: AbatabLogging.BuildPaths.BuildWarningLogPaths(System.String, System.Collections.Generic.List<System.String>)
+  fullName.vb: AbatabLogging.BuildPaths.BuildWarningLogPaths(System.String, System.Collections.Generic.List(Of System.String))
+  nameWithType: BuildPaths.BuildWarningLogPaths(String, List<String>)
+  nameWithType.vb: BuildPaths.BuildWarningLogPaths(String, List(Of String))
+- uid: AbatabLogging.BuildPaths.BuildWarningLogPaths*
+  name: BuildWarningLogPaths
+  href: api/AbatabLogging.BuildPaths.html#AbatabLogging_BuildPaths_BuildWarningLogPaths_
+  commentId: Overload:AbatabLogging.BuildPaths.BuildWarningLogPaths
+  isSpec: "True"
+  fullName: AbatabLogging.BuildPaths.BuildWarningLogPaths
+  nameWithType: BuildPaths.BuildWarningLogPaths
 - uid: AbatabLogging.Debuggler
   name: Debuggler
   href: api/AbatabLogging.Debuggler.html
@@ -1012,6 +1228,19 @@ references:
   isSpec: "True"
   fullName: AbatabLogging.LogEvent.Trace
   nameWithType: LogEvent.Trace
+- uid: AbatabLogging.LogEvent.Warning(AbatabData.Session,System.String)
+  name: Warning(Session, String)
+  href: api/AbatabLogging.LogEvent.html#AbatabLogging_LogEvent_Warning_AbatabData_Session_System_String_
+  commentId: M:AbatabLogging.LogEvent.Warning(AbatabData.Session,System.String)
+  fullName: AbatabLogging.LogEvent.Warning(AbatabData.Session, System.String)
+  nameWithType: LogEvent.Warning(Session, String)
+- uid: AbatabLogging.LogEvent.Warning*
+  name: Warning
+  href: api/AbatabLogging.LogEvent.html#AbatabLogging_LogEvent_Warning_
+  commentId: Overload:AbatabLogging.LogEvent.Warning
+  isSpec: "True"
+  fullName: AbatabLogging.LogEvent.Warning
+  nameWithType: LogEvent.Warning
 - uid: AbatabLogging.LogEvent.WebConfigDebug(System.Collections.Generic.Dictionary{System.String,System.String})
   name: WebConfigDebug(Dictionary<String, String>)
   href: api/AbatabLogging.LogEvent.html#AbatabLogging_LogEvent_WebConfigDebug_System_Collections_Generic_Dictionary_System_String_System_String__
@@ -1202,59 +1431,18 @@ references:
   isSpec: "True"
   fullName: AbatabSystem.Maintenance.VerifyDir
   nameWithType: Maintenance.VerifyDir
-- uid: Du
-  name: Du
-  href: api/Du.html
-  commentId: N:Du
-  fullName: Du
-  nameWithType: Du
-- uid: Du.WithDictionary
-  name: WithDictionary
-  href: api/Du.WithDictionary.html
-  commentId: T:Du.WithDictionary
-  fullName: Du.WithDictionary
-  nameWithType: WithDictionary
-- uid: Du.WithDictionary.JoinListOf(System.Collections.Generic.List{System.Collections.Generic.Dictionary{System.String,System.String}})
-  name: JoinListOf(List<Dictionary<String, String>>)
-  href: api/Du.WithDictionary.html#Du_WithDictionary_JoinListOf_System_Collections_Generic_List_System_Collections_Generic_Dictionary_System_String_System_String___
-  commentId: M:Du.WithDictionary.JoinListOf(System.Collections.Generic.List{System.Collections.Generic.Dictionary{System.String,System.String}})
-  name.vb: JoinListOf(List(Of Dictionary(Of String, String)))
-  fullName: Du.WithDictionary.JoinListOf(System.Collections.Generic.List<System.Collections.Generic.Dictionary<System.String, System.String>>)
-  fullName.vb: Du.WithDictionary.JoinListOf(System.Collections.Generic.List(Of System.Collections.Generic.Dictionary(Of System.String, System.String)))
-  nameWithType: WithDictionary.JoinListOf(List<Dictionary<String, String>>)
-  nameWithType.vb: WithDictionary.JoinListOf(List(Of Dictionary(Of String, String)))
-- uid: Du.WithDictionary.JoinListOf*
-  name: JoinListOf
-  href: api/Du.WithDictionary.html#Du_WithDictionary_JoinListOf_
-  commentId: Overload:Du.WithDictionary.JoinListOf
-  isSpec: "True"
-  fullName: Du.WithDictionary.JoinListOf
-  nameWithType: WithDictionary.JoinListOf
-- uid: Du.WithDirectory
-  name: WithDirectory
-  href: api/Du.WithDirectory.html
-  commentId: T:Du.WithDirectory
-  fullName: Du.WithDirectory
-  nameWithType: WithDirectory
-- uid: Du.WithDirectory.VerifyDir(System.String)
-  name: VerifyDir(String)
-  href: api/Du.WithDirectory.html#Du_WithDirectory_VerifyDir_System_String_
-  commentId: M:Du.WithDirectory.VerifyDir(System.String)
-  fullName: Du.WithDirectory.VerifyDir(System.String)
-  nameWithType: WithDirectory.VerifyDir(String)
-- uid: Du.WithDirectory.VerifyDir*
-  name: VerifyDir
-  href: api/Du.WithDirectory.html#Du_WithDirectory_VerifyDir_
-  commentId: Overload:Du.WithDirectory.VerifyDir
-  isSpec: "True"
-  fullName: Du.WithDirectory.VerifyDir
-  nameWithType: WithDirectory.VerifyDir
 - uid: ModCommon
   name: ModCommon
   href: api/ModCommon.html
   commentId: N:ModCommon
   fullName: ModCommon
   nameWithType: ModCommon
+- uid: ModCommon.ParseOptionObject
+  name: ParseOptionObject
+  href: api/ModCommon.ParseOptionObject.html
+  commentId: T:ModCommon.ParseOptionObject
+  fullName: ModCommon.ParseOptionObject
+  nameWithType: ParseOptionObject
 - uid: ModCommon.Roundhouse
   name: Roundhouse
   href: api/ModCommon.Roundhouse.html
@@ -1324,6 +1512,19 @@ references:
   commentId: T:ModProgressNote.Roundhouse
   fullName: ModProgressNote.Roundhouse
   nameWithType: Roundhouse
+- uid: ModProgressNote.Roundhouse.ParseRequest(AbatabData.Session)
+  name: ParseRequest(Session)
+  href: api/ModProgressNote.Roundhouse.html#ModProgressNote_Roundhouse_ParseRequest_AbatabData_Session_
+  commentId: M:ModProgressNote.Roundhouse.ParseRequest(AbatabData.Session)
+  fullName: ModProgressNote.Roundhouse.ParseRequest(AbatabData.Session)
+  nameWithType: Roundhouse.ParseRequest(Session)
+- uid: ModProgressNote.Roundhouse.ParseRequest*
+  name: ParseRequest
+  href: api/ModProgressNote.Roundhouse.html#ModProgressNote_Roundhouse_ParseRequest_
+  commentId: Overload:ModProgressNote.Roundhouse.ParseRequest
+  isSpec: "True"
+  fullName: ModProgressNote.Roundhouse.ParseRequest
+  nameWithType: Roundhouse.ParseRequest
 - uid: ModPrototype
   name: ModPrototype
   href: api/ModPrototype.html

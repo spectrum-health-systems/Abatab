@@ -74,7 +74,7 @@
             <description>Do not create any log files.</description>
             </item>
             </list>
-            * To create multiple types of logs, separate each type with a hypen (<c>"-"</c>).
+            * To create multiple types of logs, separate each type with a hyphen (<c>"-"</c>).
             </remarks>
             <examples>
             * To only create session logs: <c>LoggingMode=session</c>
@@ -110,7 +110,7 @@
             <value></value>
         </member>
         <member name="P:AbatabData.Core.Logging.Root">
-            <summary>TBD</summary>
+            <summary>The default location for publicly available warning logs.</summary>
             <value></value>
         </member>
         <member name="P:AbatabData.Core.Logging.SessionRoot">
@@ -126,6 +126,50 @@
         </member>
         <member name="T:AbatabData.Module.Common">
             <summary>TBD</summary>
+        </member>
+        <member name="P:AbatabData.Module.ProgressNote.Mode">
+            <summary>TBD</summary>
+            <value></value>
+        </member>
+        <member name="P:AbatabData.Module.ProgressNote.AuthorizedUsers">
+            <summary>TBD</summary>
+            <value></value>
+        </member>
+        <member name="P:AbatabData.Module.Telehealth.ValidServiceChargeCodes">
+            <summary>TBD</summary>
+            <value></value>
+        </member>
+        <member name="P:AbatabData.Module.Telehealth.ServiceChargeCodeFieldId">
+            <summary>TBD</summary>
+            <value></value>
+        </member>
+        <member name="P:AbatabData.Module.Telehealth.FoundServiceChargeCodeFieldId">
+            <summary>TBD</summary>
+            <value></value>
+        </member>
+        <member name="P:AbatabData.Module.Telehealth.ServiceChargeCodeValue">
+            <summary>TBD</summary>
+            <value></value>
+        </member>
+        <member name="P:AbatabData.Module.Telehealth.ValidLocations">
+            <summary>TBD</summary>
+            <value></value>
+        </member>
+        <member name="P:AbatabData.Module.Telehealth.LocationFieldId">
+            <summary>TBD</summary>
+            <value></value>
+        </member>
+        <member name="P:AbatabData.Module.Telehealth.FoundLocationFieldId">
+            <summary>TBD</summary>
+            <value></value>
+        </member>
+        <member name="P:AbatabData.Module.Telehealth.LocationValue">
+            <summary>TBD</summary>
+            <value></value>
+        </member>
+        <member name="P:AbatabData.Module.Telehealth.FoundAllRequiredFieldIds">
+            <summary>TBD</summary>
+            <value></value>
         </member>
         <member name="T:AbatabData.Module.Prototype">
             <summary>TBD</summary>
@@ -270,7 +314,7 @@
             <value>Default value is <c>C:\Abatab_</c></value>
         </member>
         <member name="P:AbatabData.Session.AbatabDataRoot">
-            <summary>The root directory where the Abatab data is stored.</summary>
+            <summary>The root directory where non-web service data code is located.</summary>
             <remarks>
             <list type="bullet">
             <item>At runtime the <c>AvatarEnvironment</c> value is created as a sub-directory of the <c>AbatabDataRoot</c>.</item>
@@ -323,6 +367,10 @@
         </member>
         <member name="P:AbatabData.Session.ModCommonConfig">
             <summary>Properties for the Common module.</summary>
+            <value>&lt;-- Click for more info</value>
+        </member>
+        <member name="P:AbatabData.Session.ModProgressNoteConfig">
+            <summary>Properties for the ProgressNote module.</summary>
             <value>&lt;-- Click for more info</value>
         </member>
         <member name="P:AbatabData.Session.ModPrototypeConfig">

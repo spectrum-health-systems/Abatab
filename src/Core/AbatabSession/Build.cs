@@ -1,4 +1,4 @@
-﻿// Abatab.AbatabSession.Build.cs b230119.0941
+﻿// Abatab.AbatabSession.Build.cs b230215.1301
 // Copyright (c) A Pretty Cool Program
 
 using AbatabData;
@@ -36,6 +36,7 @@ namespace AbatabSession
                 AvatarEnvironment      = webConfig["AvatarEnvironment"],
                 AbatabRoot             = $@"{webConfig["AbatabRoot"]}{webConfig["AvatarEnvironment"]}",
                 AbatabDataRoot         = $@"{webConfig["AbatabDataRoot"]}\{webConfig["AvatarEnvironment"]}",
+                PublicAccessRoot       = webConfig["PublicAccessRoot"],
                 AbatabFallbackUserName = webConfig["AbatabFallbackUserName"],
                 SessionDateStamp       = $"{DateTime.Now:yyMMdd}",
                 SessionTimeStamp       = $"{DateTime.Now:HHmmss}",
@@ -66,6 +67,9 @@ namespace AbatabSession
 
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, webConfig["DebugMode"], webConfig["DebugLogRoot"]);
             BuildModPrototypeConfig(webConfig, abatabSession);
+
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, webConfig["DebugMode"], webConfig["DebugLogRoot"]);
+            BuildModProgressNoteConfig(webConfig, abatabSession);
 
             abatabSession.LoggingConfig.SessionRoot = $@"{abatabSession.AbatabDataRoot}\logs\{abatabSession.SessionDateStamp}\{abatabSession.AbatabUserName}\{abatabSession.SessionTimeStamp}";
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
@@ -111,7 +115,6 @@ namespace AbatabSession
         {
             abatabSession.ModQuickMedOrderConfig = new QuickMedOrder
             {
-
                 Mode                           = abatabSettings["ModQuickMedOrderMode"],
                 AuthorizedUsers                = abatabSettings["ModQuickMedOrderAuthorizedUsers"],
                 DosePercentBoundary            = abatabSettings["ModQuickMedOrderDosePercentBoundary"],
@@ -128,6 +131,34 @@ namespace AbatabSession
                 FoundLastOrderScheduleFieldId  = false,
                 LastOrderScheduleText          = "",
                 FoundAllRequiredFieldIds       = false
+            };
+        }
+
+        /// <summary>TBD</summary>
+        /// <param name="abatabSettings"></param>
+        /// <param name="abatabSession"></param>
+        private static void BuildModProgressNoteConfig(Dictionary<string, string> abatabSettings, Session abatabSession)
+        {
+            abatabSession.ModProgressNoteConfig = new ProgressNote
+            {
+                Mode             = abatabSettings["ModProgressNoteMode"],
+                AuthorizedUsers  = abatabSettings["ModProgressNoteAuthorizedUsers"],
+                TelehealthConfig = new Telehealth()
+                {
+                    ValidServiceChargeCodes = new List<string>
+                    {
+                        "TMH90853",
+                        "AOTMH90853"
+                    },
+                    ServiceChargeCodeFieldId ="51001",
+                    ValidLocations = new List<string>
+                    {
+                         "T110",
+                         "T102"
+                    },
+                    LocationFieldId ="50004",
+
+                }
             };
         }
 
@@ -154,15 +185,17 @@ namespace AbatabSession
 
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"]);
 
+
+            // TODO - verify all of this
             abatabSession.LoggingConfig  = new Logging
             {
-                LoggingMode             = $"{abatabSettings["LogMode"]}",
+                LoggingMode      = $"{abatabSettings["LogMode"]}",
                 Detail           = $"{abatabSettings["LogDetail"]}",
                 WriteDelay       = $"{abatabSettings["LogWriteDelay"]}",
                 SessionRoot      = $@"{abatabSession.AbatabDataRoot}\logs\{abatabSession.SessionDateStamp}\{abatabSession.AbatabUserName}\{abatabSession.SessionTimeStamp}",
                 EventErrorRoot   = $@"{abatabSession.AbatabRoot}\logs\error",
                 EventLostRoot    = $@"{abatabSession.AbatabRoot}\logs\lost",
-                EventWarningRoot = $@"{abatabSession.AbatabRoot}\logs\warning",
+                EventWarningRoot = $@"{abatabSession.PublicAccessRoot}\warnings",
             };
 
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSettings["DebugMode"], abatabSettings["DebugLogRoot"]);
