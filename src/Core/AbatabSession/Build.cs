@@ -153,8 +153,8 @@ namespace AbatabSession
                     ServiceChargeCodeFieldId ="51001",
                     ValidLocations = new List<string>
                     {
-                         "Telehealth Patient Home",
-                         "Telehealth Patient Loc Not Home"
+                         "T110",
+                         "T102"
                     },
                     LocationFieldId ="50004",
 
