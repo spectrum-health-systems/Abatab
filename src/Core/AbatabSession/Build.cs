@@ -147,8 +147,8 @@ namespace AbatabSession
                 {
                     ValidServiceChargeCodes = new List<string>
                     {
-                        "TELE PG Group (TMH90853)",
-                        "AUDIO ONLY PG Group (AOTMH90853)"
+                        "TMH90853",
+                        "AOTMH90853"
                     },
                     ServiceChargeCodeFieldId ="51001",
                     ValidLocations = new List<string>
