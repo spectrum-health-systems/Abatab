@@ -1,4 +1,4 @@
-﻿// ModProgressNote.PlaceOfService.cs b230215.0952
+﻿// ModProgressNote.PlaceOfService.cs b230215.1244
 // Copyright (c) A Pretty Cool Program
 
 using AbatabData;
@@ -95,7 +95,7 @@ namespace ModProgressNote
                         // We aren't looking for whatever field we are currently on.
                     }
 
-                    if (abatabSession.ModProgressNoteConfig.TelehealthConfig.FoundServiceChargeCodeFieldId && abatabSession.ModProgressNoteConfig.TelehealthConfig.FoundLocationFieldId && abatabSession.ModQuickMedOrderConfig.FoundLastOrderScheduleFieldId)
+                    if (abatabSession.ModProgressNoteConfig.TelehealthConfig.FoundServiceChargeCodeFieldId && abatabSession.ModProgressNoteConfig.TelehealthConfig.FoundLocationFieldId)
                     {
                         LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
