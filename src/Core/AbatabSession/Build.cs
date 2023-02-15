@@ -1,4 +1,4 @@
-﻿// Abatab.AbatabSession.Build.cs b230215.1012
+﻿// Abatab.AbatabSession.Build.cs b230215.1221
 // Copyright (c) A Pretty Cool Program
 
 using AbatabData;
@@ -67,6 +67,9 @@ namespace AbatabSession
 
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, webConfig["DebugMode"], webConfig["DebugLogRoot"]);
             BuildModPrototypeConfig(webConfig, abatabSession);
+
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, webConfig["DebugMode"], webConfig["DebugLogRoot"]);
+            BuildModProgressNoteConfig(webConfig, abatabSession);
 
             abatabSession.LoggingConfig.SessionRoot = $@"{abatabSession.AbatabDataRoot}\logs\{abatabSession.SessionDateStamp}\{abatabSession.AbatabUserName}\{abatabSession.SessionTimeStamp}";
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");

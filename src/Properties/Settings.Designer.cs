@@ -196,7 +196,7 @@ namespace Abatab.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("all")]
         public string ModProgressNoteAuthorizedUsers {
             get {
                 return ((string)(this["ModProgressNoteAuthorizedUsers"]));
