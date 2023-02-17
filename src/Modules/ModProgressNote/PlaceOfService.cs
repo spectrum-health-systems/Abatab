@@ -153,7 +153,7 @@ namespace ModProgressNote
                                 //abatabSession.WorkOptObj.SetFieldValue(abatabSession.ModProgressNoteConfig.TelehealthConfig.LocationFieldId, "T110"); //T102
 
                                 abatabSession.WorkOptObj.SetFieldValue(fieldObject.FieldNumber, "T102");
-                                //abatabSession.WorkOptObj.ToOptionObject();
+
 
 
                                 LogEvent.TraceMsg(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, abatabSession.WorkOptObj.GetFieldValue(fieldObject.FieldNumber));
@@ -184,10 +184,20 @@ namespace ModProgressNote
 
                     LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
-                    abatabSession.WorkOptObj.ErrorCode = 3;
-                    abatabSession.WorkOptObj.ErrorMesg = $"WARNING!{Environment.NewLine}" +
-                                                         $"{Environment.NewLine}" +
-                                                         $"Service Charge Code {abatabSession.ModProgressNoteConfig.TelehealthConfig.ServiceChargeCodeValue} must have a location of \"Telehealth Patient Home\" or \"Telehealth Patient Loc Not Home\"";
+                    var errorCode = 3;
+                    var errorMesg = $"WARNING!{Environment.NewLine}" +
+                                    $"{Environment.NewLine}" +
+                                    $"Service Charge Code {abatabSession.ModProgressNoteConfig.TelehealthConfig.ServiceChargeCodeValue} must have a location of \"Telehealth Patient Home\" or \"Telehealth Patient Loc Not Home\"";
+
+                    abatabSession.FinalOptObj = abatabSession.WorkOptObj.ToReturnOptionObject(errorCode, errorMesg);
+
+
+                    //abatabSession.WorkOptObj.ErrorCode = 3;
+                    //abatabSession.WorkOptObj.ErrorMesg = $"WARNING!{Environment.NewLine}" +
+                    //                                     $"{Environment.NewLine}" +
+                    //                                     $"Service Charge Code {abatabSession.ModProgressNoteConfig.TelehealthConfig.ServiceChargeCodeValue} must have a location of \"Telehealth Patient Home\" or \"Telehealth Patient Loc Not Home\"";
+
+
 
                     // TODO - Implement this
                     //LogEvent.Warning(abatabSession, "Dosing issue.");
