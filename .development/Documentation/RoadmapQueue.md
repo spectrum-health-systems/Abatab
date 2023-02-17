@@ -71,6 +71,8 @@ Logging detail levels
 
 This was implmented in v23.2 via a quick fix, but we need to go through an properly make this work.
 
+Maybe create a new trace log named TRACEMSG that can have content.
+
 ### **Logging detail levels**
 
 Logging detail levels

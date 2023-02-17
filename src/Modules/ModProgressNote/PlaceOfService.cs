@@ -1,4 +1,4 @@
-﻿// ModProgressNote.PlaceOfService.cs b230217.0837
+﻿// ModProgressNote.PlaceOfService.cs b230217.0907
 // Copyright (c) A Pretty Cool Program
 
 using AbatabData;
@@ -14,6 +14,12 @@ namespace ModProgressNote
 {
     internal class PlaceOfService
     {
+        public FormObject FormPlaceholder { get; set; }
+        public FieldObject FieldPlaceholder { get; set; }
+        public string FieldNumberPlaceholder { get; set; }
+
+
+
         public static void VerifyTelehealth(Session abatabSession)
         {
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.DebugMode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
@@ -70,6 +76,10 @@ namespace ModProgressNote
                     {
                         LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
+                        var FormPlaceholder = formObject;
+                        var FieldPlaceholder = fieldObject;
+                        var FieldNumberPlaceholder = fieldObject.FieldNumber ;
+
                         ProcessLocationField(abatabSession, fieldObject);
                     }
                     else
@@ -116,7 +126,33 @@ namespace ModProgressNote
                     LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
                     // This is the fix for the location sticking around
-                    abatabSession.ModProgressNoteConfig.TelehealthConfig.LocationValue = "T110";
+                    //abatabSession.ModProgressNoteConfig.TelehealthConfig.LocationValue = "T110";
+
+                    foreach (FormObject formObject in abatabSession.WorkOptObj.Forms)
+                    {
+                        LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+
+                        /* Loop through each field of the current FormObject.
+                        */
+                        foreach (FieldObject fieldObject in formObject.CurrentRow.Fields)
+                        {
+                            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+
+                            if (fieldObject.FieldNumber == abatabSession.ModProgressNoteConfig.TelehealthConfig.LocationFieldId)
+                            {
+                                LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+
+                                fieldObject.FieldValue = "T110";
+                            }
+                            else
+                            {
+                                LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+
+                                // We aren't looking for whatever field we are currently on.
+                            }
+                        }
+                    }
+
                     LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
                     abatabSession.WorkOptObj.ErrorCode = 3;
