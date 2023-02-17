@@ -69,7 +69,7 @@ Logging detail levels
 
 ### **Trace logs just the filename**
 
-Just the filename.
+This was implmented in v23.2 via a quick fix, but we need to go through an properly make this work.
 
 ### **Logging detail levels**
 

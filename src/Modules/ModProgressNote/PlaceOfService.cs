@@ -1,4 +1,4 @@
-﻿// ModProgressNote.PlaceOfService.cs b230215.1244
+﻿// ModProgressNote.PlaceOfService.cs b230217.0830
 // Copyright (c) A Pretty Cool Program
 
 using AbatabData;
@@ -114,6 +114,9 @@ namespace ModProgressNote
                     LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, abatabSession.ModProgressNoteConfig.TelehealthConfig.LocationValue); // REMOVE
 
                     LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+
+                    // This is the fix for the location sticking around
+                    abatabSession.ModProgressNoteConfig.TelehealthConfig.LocationValue = "";
 
                     abatabSession.WorkOptObj.ErrorCode = 3;
                     abatabSession.WorkOptObj.ErrorMesg = $"WARNING!{Environment.NewLine}" +
