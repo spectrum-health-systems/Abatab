@@ -184,18 +184,18 @@ namespace ModProgressNote
 
                     LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
-                    var errorCode = 3;
-                    var errorMesg = $"WARNING!{Environment.NewLine}" +
-                                    $"{Environment.NewLine}" +
-                                    $"Service Charge Code {abatabSession.ModProgressNoteConfig.TelehealthConfig.ServiceChargeCodeValue} must have a location of \"Telehealth Patient Home\" or \"Telehealth Patient Loc Not Home\"";
+                    //var errorCode = 3;
+                    //var errorMesg = $"WARNING!{Environment.NewLine}" +
+                    //                $"{Environment.NewLine}" +
+                    //                $"Service Charge Code {abatabSession.ModProgressNoteConfig.TelehealthConfig.ServiceChargeCodeValue} must have a location of \"Telehealth Patient Home\" or \"Telehealth Patient Loc Not Home\"";
 
-                    abatabSession.FinalOptObj = abatabSession.WorkOptObj.ToReturnOptionObject(errorCode, errorMesg);
+                    //abatabSession.FinalOptObj = abatabSession.WorkOptObj.ToReturnOptionObject(errorCode, errorMesg);
 
 
-                    //abatabSession.WorkOptObj.ErrorCode = 3;
-                    //abatabSession.WorkOptObj.ErrorMesg = $"WARNING!{Environment.NewLine}" +
-                    //                                     $"{Environment.NewLine}" +
-                    //                                     $"Service Charge Code {abatabSession.ModProgressNoteConfig.TelehealthConfig.ServiceChargeCodeValue} must have a location of \"Telehealth Patient Home\" or \"Telehealth Patient Loc Not Home\"";
+                    abatabSession.WorkOptObj.ErrorCode = 3;
+                    abatabSession.WorkOptObj.ErrorMesg = $"WARNING!{Environment.NewLine}" +
+                                                         $"{Environment.NewLine}" +
+                                                         $"Service Charge Code {abatabSession.ModProgressNoteConfig.TelehealthConfig.ServiceChargeCodeValue} must have a location of \"Telehealth Patient Home\" or \"Telehealth Patient Loc Not Home\"";
 
 
 

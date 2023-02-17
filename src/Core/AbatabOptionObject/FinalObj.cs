@@ -46,19 +46,21 @@ namespace AbatabOptionObject
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.DebugMode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
-            abatabSession.FinalOptObj.ErrorCode       = abatabSession.WorkOptObj.ErrorCode;
-            abatabSession.FinalOptObj.ErrorMesg       = abatabSession.WorkOptObj.ErrorMesg;
-            abatabSession.FinalOptObj.EntityID        = abatabSession.SentOptObj.EntityID;
-            abatabSession.FinalOptObj.EpisodeNumber   = abatabSession.SentOptObj.EpisodeNumber;
-            abatabSession.FinalOptObj.Facility        = abatabSession.SentOptObj.Facility;
-            abatabSession.FinalOptObj.Forms           = abatabSession.SentOptObj.Forms;
-            abatabSession.FinalOptObj.OptionId        = abatabSession.SentOptObj.OptionId;
-            abatabSession.FinalOptObj.OptionStaffId   = abatabSession.SentOptObj.OptionStaffId;
-            abatabSession.FinalOptObj.OptionUserId    = abatabSession.SentOptObj.OptionUserId;
-            abatabSession.FinalOptObj.SystemCode      = abatabSession.SentOptObj.SystemCode;
-            abatabSession.FinalOptObj.ServerName      = abatabSession.SentOptObj.ServerName;
-            abatabSession.FinalOptObj.NamespaceName   = abatabSession.SentOptObj.NamespaceName;
-            abatabSession.FinalOptObj.ParentNamespace = abatabSession.SentOptObj.ParentNamespace;
+            abatabSession.FinalOptObj = abatabSession.WorkOptObj.ToReturnOptionObject();
+
+            //abatabSession.FinalOptObj.ErrorCode       = abatabSession.WorkOptObj.ErrorCode;
+            //abatabSession.FinalOptObj.ErrorMesg       = abatabSession.WorkOptObj.ErrorMesg;
+            //abatabSession.FinalOptObj.EntityID        = abatabSession.SentOptObj.EntityID;
+            //abatabSession.FinalOptObj.EpisodeNumber   = abatabSession.SentOptObj.EpisodeNumber;
+            //abatabSession.FinalOptObj.Facility        = abatabSession.SentOptObj.Facility;
+            //abatabSession.FinalOptObj.Forms           = abatabSession.SentOptObj.Forms;
+            //abatabSession.FinalOptObj.OptionId        = abatabSession.SentOptObj.OptionId;
+            //abatabSession.FinalOptObj.OptionStaffId   = abatabSession.SentOptObj.OptionStaffId;
+            //abatabSession.FinalOptObj.OptionUserId    = abatabSession.SentOptObj.OptionUserId;
+            //abatabSession.FinalOptObj.SystemCode      = abatabSession.SentOptObj.SystemCode;
+            //abatabSession.FinalOptObj.ServerName      = abatabSession.SentOptObj.ServerName;
+            //abatabSession.FinalOptObj.NamespaceName   = abatabSession.SentOptObj.NamespaceName;
+            //abatabSession.FinalOptObj.ParentNamespace = abatabSession.SentOptObj.ParentNamespace;
 
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
         }
