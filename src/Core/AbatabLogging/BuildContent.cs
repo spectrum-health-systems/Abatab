@@ -1,4 +1,4 @@
-﻿// Abatab.AbatabLogging.BuildContent.cs b230217.1002
+﻿// Abatab.AbatabLogging.BuildContent.cs b230217.1020
 // Copyright (c) A Pretty Cool Program
 
 /* ========================================================================================================
@@ -189,7 +189,8 @@ namespace AbatabLogging
                                 $"====================" +
                                 $"{BodyOptObjDetail(abatabSession.SentOptObj, "sentOptObj")}{Environment.NewLine}" +
                                 $"{BodyOptObjDetail(abatabSession.WorkOptObj, "workerOptObj")}{Environment.NewLine}" +
-                                $"{BodyOptObjDetail(abatabSession.FinalOptObj, "finalOptObj")}{Environment.NewLine}";
+                                $"{BodyOptObjDetail(abatabSession.FinalOptObj, "finalOptObj")}{Environment.NewLine}" +
+                                $"{abatabSession.FinalOptObj.ToJson()}{Environment.NewLine}";
 
             return $"{sessionHead}" +
                    $"{sessionDetail}";
