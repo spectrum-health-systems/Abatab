@@ -112,8 +112,8 @@ namespace ModProgressNote
                 }
             }
 
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, abatabSession.ModProgressNoteConfig.TelehealthConfig.ServiceChargeCodeValue); // REMOVE
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, abatabSession.ModProgressNoteConfig.TelehealthConfig.LocationValue); // REMOVE
+            LogEvent.TraceMsg(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, abatabSession.ModProgressNoteConfig.TelehealthConfig.ServiceChargeCodeValue); // REMOVE
+            LogEvent.TraceMsg(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, abatabSession.ModProgressNoteConfig.TelehealthConfig.LocationValue); // REMOVE
 
             if (abatabSession.ModProgressNoteConfig.TelehealthConfig.ValidServiceChargeCodes.Contains(abatabSession.ModProgressNoteConfig.TelehealthConfig.ServiceChargeCodeValue))
             {
