@@ -1,11 +1,11 @@
-﻿// ModProgressNote.PlaceOfService.cs b230217.0907
+﻿// ModProgressNote.PlaceOfService.cs b230217.1002
 // Copyright (c) A Pretty Cool Program
 
 using AbatabData;
 
 using AbatabLogging;
 
-using NTST.ScriptLinkService.Objects;
+using ScriptLinkStandard.Objects;
 
 using System;
 using System.Reflection;
@@ -56,6 +56,9 @@ namespace ModProgressNote
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.DebugMode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
+
+
+
             /* Loop through each FormObject in the OptionObject.
             */
             foreach (FormObject formObject in abatabSession.SentOptObj.Forms)
@@ -97,7 +100,6 @@ namespace ModProgressNote
 
                         break;
                     }
-
                 }
 
                 if (abatabSession.ModProgressNoteConfig.TelehealthConfig.FoundAllRequiredFieldIds)
@@ -142,7 +144,11 @@ namespace ModProgressNote
                             {
                                 LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
-                                fieldObject.FieldValue = "T110";
+                                OptionObject2015 ObjThing = new OptionObject2015();
+
+                                //ObjThing.ToJson();
+
+                                //fieldObject.FieldValue = "T110";
                             }
                             else
                             {

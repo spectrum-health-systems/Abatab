@@ -56,13 +56,13 @@
     <Compile Include="WriteLogFile.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\ThirdParty\ScriptLinkStandard\ScriptLinkStandard.csproj">
+      <Project>{f45d25a2-cccd-4e34-b3d0-749d5c2468ae}</Project>
+      <Name>ScriptLinkStandard</Name>
+    </ProjectReference>
     <ProjectReference Include="..\AbatabData\AbatabData.csproj">
       <Project>{e3028cfd-5965-4555-9a96-3ebbdfd4d550}</Project>
       <Name>AbatabData</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\ThirdParty\NTST.ScriptLinkService.Objects\NTST.ScriptLinkService.Objects.vbproj">
-      <Project>{8a8a6089-3286-42e6-9f76-b61784709654}</Project>
-      <Name>NTST.ScriptLinkService.Objects</Name>
     </ProjectReference>
     <ProjectReference Include="..\AbatabSystem\AbatabSystem.csproj">
       <Project>{212a533f-4074-4e6e-a994-9d5db850bf8e}</Project>

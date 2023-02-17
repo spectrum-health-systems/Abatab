@@ -59,6 +59,10 @@
       <Project>{A4467424-56E0-4260-BB21-D98263D7AEFD}</Project>
       <Name>AbatabLogging</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\ThirdParty\ScriptLinkStandard\ScriptLinkStandard.csproj">
+      <Project>{f45d25a2-cccd-4e34-b3d0-749d5c2468ae}</Project>
+      <Name>ScriptLinkStandard</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\Settings.settings">

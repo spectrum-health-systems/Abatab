@@ -35,6 +35,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocFX", "ThirdParty\DocFX\D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModProgressNote", "Modules\ModProgressNote\ModProgressNote.csproj", "{B129EBAF-4A98-47DE-9C9E-4ABE80883C52}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScriptLinkStandard", "ThirdParty\ScriptLinkStandard\ScriptLinkStandard.csproj", "{F45D25A2-CCCD-4E34-B3D0-749D5C2468AE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{B129EBAF-4A98-47DE-9C9E-4ABE80883C52}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B129EBAF-4A98-47DE-9C9E-4ABE80883C52}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B129EBAF-4A98-47DE-9C9E-4ABE80883C52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F45D25A2-CCCD-4E34-B3D0-749D5C2468AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F45D25A2-CCCD-4E34-B3D0-749D5C2468AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F45D25A2-CCCD-4E34-B3D0-749D5C2468AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F45D25A2-CCCD-4E34-B3D0-749D5C2468AE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -110,6 +116,7 @@ Global
 		{5FCAD3F6-0AA9-4BEE-B390-097A6832568E} = {879AB063-ECE4-4AFB-AECA-C055AA168BBA}
 		{F13365BE-B3C8-4D2E-B35D-A169CD6850D3} = {DDB4075A-E54C-4849-A2BC-80CB8865EF20}
 		{B129EBAF-4A98-47DE-9C9E-4ABE80883C52} = {02BF6478-CF2B-4E5C-B7C0-2C1BAE3A83BE}
+		{F45D25A2-CCCD-4E34-B3D0-749D5C2468AE} = {DDB4075A-E54C-4849-A2BC-80CB8865EF20}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1DB591AE-5191-4FBB-97BC-CD7AE711CF4F}

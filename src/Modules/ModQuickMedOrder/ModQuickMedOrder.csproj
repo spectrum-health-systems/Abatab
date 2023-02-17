@@ -64,9 +64,9 @@
       <Project>{2741df45-7db8-4bea-89b4-4a70c7114192}</Project>
       <Name>AbatabOptionObject</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\ThirdParty\NTST.ScriptLinkService.Objects\NTST.ScriptLinkService.Objects.vbproj">
-      <Project>{8a8a6089-3286-42e6-9f76-b61784709654}</Project>
-      <Name>NTST.ScriptLinkService.Objects</Name>
+    <ProjectReference Include="..\..\ThirdParty\ScriptLinkStandard\ScriptLinkStandard.csproj">
+      <Project>{f45d25a2-cccd-4e34-b3d0-749d5c2468ae}</Project>
+      <Name>ScriptLinkStandard</Name>
     </ProjectReference>
     <ProjectReference Include="..\ModCommon\ModCommon.csproj">
       <Project>{cbd27c27-b3cd-455e-af5d-4749ca219d53}</Project>

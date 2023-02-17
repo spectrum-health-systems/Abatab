@@ -2,6 +2,14 @@
 
 ## Core functionality
 
+### **Integrate ScriptLinkStandard**
+
+TBD
+
+### **Depreciate NTST.ScriptLink**
+
+TBD
+
 ### **Object parser**
 
 Create a class:

@@ -1,4 +1,4 @@
-﻿// Abatab.AbatabLogging.BuildContent.cs b230123.1210
+﻿// Abatab.AbatabLogging.BuildContent.cs b230217.1002
 // Copyright (c) A Pretty Cool Program
 
 /* ========================================================================================================
@@ -12,7 +12,7 @@
 
 using AbatabData;
 
-using NTST.ScriptLinkService.Objects;
+using ScriptLinkStandard.Objects;
 
 using System;
 using System.IO;
