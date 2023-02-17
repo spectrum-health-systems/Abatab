@@ -64,7 +64,7 @@
             <param name="abatabSession">Information/data for this session of Abatab.</param>
             <returns>The completed log body component for QuickMedOrder details.</returns>
         </member>
-        <member name="M:AbatabLogging.BuildContent.BodyOptObjDetail(NTST.ScriptLinkService.Objects.OptionObject2015,System.String)">
+        <member name="M:AbatabLogging.BuildContent.BodyOptObjDetail(ScriptLinkStandard.Objects.OptionObject2015,System.String)">
             <summary>Builds the log body component for the OptionObject details.</summary>
             <param name="optObj">The OptionObject to build from.</param>
             <param name="optObjType">The type of OptionObject.</param>

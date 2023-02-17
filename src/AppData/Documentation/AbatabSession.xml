@@ -7,7 +7,7 @@
         <member name="T:AbatabSession.Build">
             <summary>Logic for session instances.</summary>
         </member>
-        <member name="M:AbatabSession.Build.NewSession(NTST.ScriptLinkService.Objects.OptionObject2015,System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+        <member name="M:AbatabSession.Build.NewSession(ScriptLinkStandard.Objects.OptionObject2015,System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
             <summary>Builds configuration settings for an Abatab session.</summary>
             <param name="sentOptObj">The original OptionObject sent from Avatar.</param>
             <param name="scriptParameter">The script parameter request from Avatar.</param>
