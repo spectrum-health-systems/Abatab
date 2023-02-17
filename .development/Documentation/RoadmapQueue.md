@@ -2,6 +2,25 @@
 
 ## Core functionality
 
+### **Object parser**
+
+Create a class:
+* FieldIdNumber = <hardcode>
+* FieldIdValue = ""
+* FieldIdFound = false
+
+Create a List<ThatClass> for all FieldIds
+
+Pass that to a parse method that returns a List<ThatClass>:
+
+* FieldIdNumber = <hardcode>
+* FieldIdValue = "value"
+* FieldIdFound = true
+
+### **Roundhouse move**
+
+Maybe move Roundhouse out of the main stuff.
+
 ### **Combine "Core.AbatabLogging.BuidlPath.cs" and Core.AbatabLogging.BuildPaths.cs**
 
 Combine "Core.AbatabLogging.BuidlPath.cs" and Core.AbatabLogging.BuildPaths.cs
@@ -47,6 +66,10 @@ This will probably involve logging detail levels.
 The access log should have a better, more descriptive filename and contents.
 
 Logging detail levels
+
+### **Trace logs just the filename**
+
+Just the filename.
 
 ### **Logging detail levels**
 

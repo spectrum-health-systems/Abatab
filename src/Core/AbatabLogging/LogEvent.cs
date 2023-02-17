@@ -1,4 +1,4 @@
-﻿// Abatab.AbatabLogging.LogEvent.cs b230206.1015
+﻿// Abatab.AbatabLogging.LogEvent.cs b230217.0817
 // Copyright (c) A Pretty Cool Program
 
 /* ========================================================================================================
@@ -153,7 +153,10 @@ namespace AbatabLogging
             {
                 // Can't really put a trace log here!
                 var logPath    = BuildPath.WithCaller("trace", abatabSession.LoggingConfig.SessionRoot, exeAssembly, callPath, callMember, callLine);
-                var logContent = BuildContent.LogComponents("trace", abatabSession, logMsg, exeAssembly, callPath, callMember, callLine);
+
+                // TODO - Remove this once we are comfortable with trace logs without content.
+                //var logContent = BuildContent.LogComponents("trace", abatabSession, logMsg, exeAssembly, callPath, callMember, callLine);
+                var logContent = "";
 
                 WriteLogFile.LocalFile(logPath, logContent, Convert.ToInt32(abatabSession.LoggingConfig.WriteDelay));
             }
