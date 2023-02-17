@@ -72,12 +72,15 @@ namespace ModProgressNote
                     if (fieldObject.FieldNumber == abatabSession.ModProgressNoteConfig.TelehealthConfig.ServiceChargeCodeFieldId)
                     {
                         LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+                        LogEvent.TraceMsg(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, fieldObject.FieldValue);
 
                         ProcessServiceCodeField(abatabSession, fieldObject);
                     }
                     else if (fieldObject.FieldNumber == abatabSession.ModProgressNoteConfig.TelehealthConfig.LocationFieldId)
                     {
                         LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+
+                        LogEvent.TraceMsg(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, fieldObject.FieldValue); // REMOVE
 
                         //var FormPlaceholder = formObject;
                         //var FieldPlaceholder = fieldObject;
