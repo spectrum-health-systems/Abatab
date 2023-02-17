@@ -155,7 +155,7 @@ namespace ModProgressNote
                                 LogEvent.TraceMsg(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, abatabSession.WorkOptObj.GetFieldValue(fieldObject.FieldNumber));
                                 //ObjThing.ToJson();
                                 LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
-
+                                break;
                                 //fieldObject.FieldValue = "T110";
                             }
                             else
