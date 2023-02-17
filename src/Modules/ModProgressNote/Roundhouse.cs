@@ -47,7 +47,7 @@ namespace ModProgressNote
                 case "verifytelehealth":
                     LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
                     ModProgressNote.PlaceOfService.VerifyTelehealth(abatabSession);
-                    //AbatabOptionObject.FinalObj.Finalize(abatabSession);
+                    AbatabOptionObject.FinalObj.Finalize(abatabSession);
                     break;
 
                 default:

@@ -130,57 +130,57 @@ namespace ModProgressNote
                     // This is the fix for the location sticking around
                     //abatabSession.ModProgressNoteConfig.TelehealthConfig.LocationValue = "T110";
 
-                    var breaker = false;
+                    //var breaker = false;
 
-                    foreach (FormObject formObject in abatabSession.WorkOptObj.Forms)
-                    {
-                        LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+                    //foreach (FormObject formObject in abatabSession.WorkOptObj.Forms)
+                    //{
+                    //    LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
-                        /* Loop through each field of the current FormObject.
-                        */
-                        foreach (FieldObject fieldObject in formObject.CurrentRow.Fields)
-                        {
-                            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+                    //    /* Loop through each field of the current FormObject.
+                    //    */
+                    //    foreach (FieldObject fieldObject in formObject.CurrentRow.Fields)
+                    //    {
+                    //        LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
-                            LogEvent.TraceMsg(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, abatabSession.WorkOptObj.GetFieldValue(fieldObject.FieldNumber));
+                    //        LogEvent.TraceMsg(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, abatabSession.WorkOptObj.GetFieldValue(fieldObject.FieldNumber));
 
-                            if (fieldObject.FieldNumber == abatabSession.ModProgressNoteConfig.TelehealthConfig.LocationFieldId)
-                            {
-                                LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+                    //        if (fieldObject.FieldNumber == abatabSession.ModProgressNoteConfig.TelehealthConfig.LocationFieldId)
+                    //        {
+                    //            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
-                                //abatabSession.WorkOptObj.SetFieldValue(fieldObject.FieldNumber, "");
-                                //abatabSession.WorkOptObj.SetFieldValue(formObject.CurrentRow.Fields.fieldObject.FieldNumber, "T102");
-                                //abatabSession.WorkOptObj.SetFieldValue(abatabSession.ModProgressNoteConfig.TelehealthConfig.LocationFieldId, "T110"); //T102
+                    //            //abatabSession.WorkOptObj.SetFieldValue(fieldObject.FieldNumber, "");
+                    //            //abatabSession.WorkOptObj.SetFieldValue(formObject.CurrentRow.Fields.fieldObject.FieldNumber, "T102");
+                    //            //abatabSession.WorkOptObj.SetFieldValue(abatabSession.ModProgressNoteConfig.TelehealthConfig.LocationFieldId, "T110"); //T102
 
-                                abatabSession.WorkOptObj.SetFieldValue(fieldObject.FieldNumber, "T110");
+                    //            abatabSession.WorkOptObj.SetFieldValue(fieldObject.FieldNumber, "T110");
 
 
 
-                                LogEvent.TraceMsg(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, abatabSession.WorkOptObj.GetFieldValue(fieldObject.FieldNumber));
+                    //            LogEvent.TraceMsg(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, abatabSession.WorkOptObj.GetFieldValue(fieldObject.FieldNumber));
 
-                                //abatabSession.FinalOptObj = abatabSession.WorkOptObj.ToReturnOptionObject();
+                    //            //abatabSession.FinalOptObj = abatabSession.WorkOptObj.ToReturnOptionObject();
 
-                                //ObjThing.ToJson();
-                                LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
-                                breaker = true;
-                                break;
-                                //fieldObject.FieldValue = "T110";
-                            }
-                            else
-                            {
-                                LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+                    //            //ObjThing.ToJson();
+                    //            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+                    //            breaker = true;
+                    //            break;
+                    //            //fieldObject.FieldValue = "T110";
+                    //        }
+                    //        else
+                    //        {
+                    //            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
-                                // We aren't looking for whatever field we are currently on.
-                            }
-                        }
+                    //            // We aren't looking for whatever field we are currently on.
+                    //        }
+                    //    }
 
-                        LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+                    //    LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
-                        if (breaker)
-                        {
-                            break;
-                        }
-                    }
+                    //    if (breaker)
+                    //    {
+                    //        break;
+                    //    }
+                    //}
 
 
 
@@ -194,7 +194,7 @@ namespace ModProgressNote
                     //abatabSession.FinalOptObj = abatabSession.WorkOptObj.ToReturnOptionObject(errorCode, errorMesg);
 
 
-                    abatabSession.WorkOptObj.ErrorCode = 3;
+                    abatabSession.WorkOptObj.ErrorCode = 4;
                     abatabSession.WorkOptObj.ErrorMesg = $"WARNING!{Environment.NewLine}" +
                                                          $"{Environment.NewLine}" +
                                                          $"Service Charge Code {abatabSession.ModProgressNoteConfig.TelehealthConfig.ServiceChargeCodeValue} must have a location of \"Telehealth Patient Home\" or \"Telehealth Patient Loc Not Home\"";

@@ -70,8 +70,8 @@ namespace Abatab
 
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
-            //return abatabSession.FinalOptObj;
-            return abatabSession.WorkOptObj.ToReturnOptionObject();
+            return abatabSession.FinalOptObj;
+            //return abatabSession.WorkOptObj.ToReturnOptionObject();
         }
     }
 }
