@@ -189,8 +189,7 @@ namespace AbatabLogging
                                 $"====================" +
                                 $"{BodyOptObjDetail(abatabSession.SentOptObj, "sentOptObj")}{Environment.NewLine}" +
                                 $"{BodyOptObjDetail(abatabSession.WorkOptObj, "workerOptObj")}{Environment.NewLine}" +
-                                $"{BodyOptObjDetail(abatabSession.FinalOptObj, "finalOptObj")}{Environment.NewLine}" +
-                                $"{abatabSession.FinalOptObj.ToJson()}{Environment.NewLine}";
+                                $"{BodyOptObjDetail(abatabSession.FinalOptObj, "finalOptObj")}{Environment.NewLine}";
 
             return $"{sessionHead}" +
                    $"{sessionDetail}";

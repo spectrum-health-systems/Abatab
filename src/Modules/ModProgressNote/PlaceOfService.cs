@@ -79,9 +79,9 @@ namespace ModProgressNote
                     {
                         LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
-                        var FormPlaceholder = formObject;
-                        var FieldPlaceholder = fieldObject;
-                        var FieldNumberPlaceholder = fieldObject.FieldNumber ;
+                        //var FormPlaceholder = formObject;
+                        //var FieldPlaceholder = fieldObject;
+                        //var FieldNumberPlaceholder = fieldObject.FieldNumber ;
 
                         ProcessLocationField(abatabSession, fieldObject);
                     }
@@ -144,7 +144,7 @@ namespace ModProgressNote
                             {
                                 LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
-                                OptionObject2015 ObjThing = new OptionObject2015();
+                                abatabSession.WorkOptObj.SetFieldValue(abatabSession.ModProgressNoteConfig.TelehealthConfig.LocationFieldId, "T110");
 
                                 //ObjThing.ToJson();
 
