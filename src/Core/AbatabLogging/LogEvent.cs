@@ -162,6 +162,30 @@ namespace AbatabLogging
             }
         }
 
+        /// <summary>Build a trace log.</summary>
+        /// <param name="abatabSession">Information/data for this session of Abatab.</param>
+        /// <param name="exeAssembly">The name of executing assembly.</param
+        /// <param name="logMsg">The log message.</param>
+        /// <param name="callPath">The filename of where the log is coming from.</param>
+        /// <param name="callMember">The method name of where the log is coming from.</param>
+        /// <param name="callLine">The file line of where the log is coming from.</param>
+        public static void TraceMsg(Session abatabSession, string exeAssembly, string logMsg = "Trace log start...", [CallerFilePath] string callPath = "", [CallerMemberName] string callMember = "", [CallerLineNumber] int callLine = 0)
+        {
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.DebugMode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
+            // Can't really put a trace log here!
+
+            if (abatabSession.LoggingConfig.LoggingMode == "all" || abatabSession.LoggingConfig.LoggingMode.Contains("trace"))
+            {
+                // Can't really put a trace log here!
+                var logPath    = BuildPath.WithCaller("trace", abatabSession.LoggingConfig.SessionRoot, exeAssembly, callPath, callMember, callLine);
+
+                // TODO - Remove this once we are comfortable with trace logs without content.
+                var logContent = BuildContent.LogComponents("trace", abatabSession, logMsg, exeAssembly, callPath, callMember, callLine);
+
+                WriteLogFile.LocalFile(logPath, logContent, Convert.ToInt32(abatabSession.LoggingConfig.WriteDelay));
+            }
+        }
+
         /// <summary>TBD</summary>
         /// <param name="abatabSession"></param>
         /// <param name="logMsg"></param>

@@ -175,6 +175,7 @@
             <param name="logMsg">The log message.</param>
         </member>
         <!-- Badly formed XML comment ignored for member "M:AbatabLogging.LogEvent.Trace(AbatabData.Session,System.String,System.String,System.String,System.String,System.Int32)" -->
+        <!-- Badly formed XML comment ignored for member "M:AbatabLogging.LogEvent.TraceMsg(AbatabData.Session,System.String,System.String,System.String,System.String,System.Int32)" -->
         <member name="M:AbatabLogging.LogEvent.Warning(AbatabData.Session,System.String)">
             <summary>TBD</summary>
             <param name="abatabSession"></param>

@@ -146,14 +146,14 @@ namespace ModProgressNote
 
                                 abatabSession.WorkOptObj.SetFieldValue(fieldObject.FieldNumber, "T102");
                                 //abatabSession.WorkOptObj.SetFieldValue(abatabSession.ModProgressNoteConfig.TelehealthConfig.LocationFieldId, "T110"); //T102
-                                LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+                                LogEvent.TraceMsg(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
                                 //ObjThing.ToJson();
 
                                 //fieldObject.FieldValue = "T110";
                             }
                             else
                             {
-                                LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+                                LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, fieldObject.FieldNumber);
 
                                 // We aren't looking for whatever field we are currently on.
                             }
