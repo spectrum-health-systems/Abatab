@@ -51,6 +51,7 @@ namespace AbatabOptionObject
             abatabSession.FinalOptObj.EntityID        = abatabSession.SentOptObj.EntityID;
             abatabSession.FinalOptObj.EpisodeNumber   = abatabSession.SentOptObj.EpisodeNumber;
             abatabSession.FinalOptObj.Facility        = abatabSession.SentOptObj.Facility;
+            abatabSession.FinalOptObj.Forms           = abatabSession.SentOptObj.Forms;
             abatabSession.FinalOptObj.OptionId        = abatabSession.SentOptObj.OptionId;
             abatabSession.FinalOptObj.OptionStaffId   = abatabSession.SentOptObj.OptionStaffId;
             abatabSession.FinalOptObj.OptionUserId    = abatabSession.SentOptObj.OptionUserId;
