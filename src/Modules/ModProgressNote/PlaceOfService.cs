@@ -130,6 +130,8 @@ namespace ModProgressNote
                     // This is the fix for the location sticking around
                     //abatabSession.ModProgressNoteConfig.TelehealthConfig.LocationValue = "T110";
 
+                    var breaker = false;
+
                     foreach (FormObject formObject in abatabSession.WorkOptObj.Forms)
                     {
                         LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
@@ -155,6 +157,7 @@ namespace ModProgressNote
                                 LogEvent.TraceMsg(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, abatabSession.WorkOptObj.GetFieldValue(fieldObject.FieldNumber));
                                 //ObjThing.ToJson();
                                 LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+                                breaker = true;
                                 break;
                                 //fieldObject.FieldValue = "T110";
                             }
@@ -167,6 +170,11 @@ namespace ModProgressNote
                         }
 
                         LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+
+                        if (breaker)
+                        {
+                            break;
+                        }
                     }
 
 
