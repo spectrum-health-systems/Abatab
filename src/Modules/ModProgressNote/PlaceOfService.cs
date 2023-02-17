@@ -158,6 +158,8 @@ namespace ModProgressNote
 
                                 LogEvent.TraceMsg(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, abatabSession.WorkOptObj.GetFieldValue(fieldObject.FieldNumber));
 
+                                //abatabSession.FinalOptObj = abatabSession.WorkOptObj.ToReturnOptionObject();
+
                                 //ObjThing.ToJson();
                                 LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
                                 breaker = true;
