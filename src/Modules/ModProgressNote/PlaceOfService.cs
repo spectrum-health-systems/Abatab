@@ -107,7 +107,7 @@ namespace ModProgressNote
                                                                      $"{Environment.NewLine}" +
                                                                      $"Service Charge Code {abatabSession.ModProgressNoteConfig.TelehealthConfig.ServiceChargeCodeValue} must match one of these locations:{Environment.NewLine}" +
                                                                      $"  - first{Environment.NewLine}" +
-                                                                     $"  - second" +
+                                                                     $"  - second!" +
                                                                      $"{Environment.NewLine}" +
                                                                      $"Please verify you have the correct location.";
 
@@ -115,7 +115,9 @@ namespace ModProgressNote
 
                                 abatabSession.WorkOptObj.SetFieldValue(formObject.ToString(), formObject.CurrentRow.ToString(), "50004", "T110");
 
-                                LogEvent.TraceMsg(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, abatabSession.ModProgressNoteConfig.TelehealthConfig.LocationFieldId);
+                                var test = abatabSession.WorkOptObj.GetFieldValue(abatabSession.ModProgressNoteConfig.TelehealthConfig.LocationFieldId);
+
+                                LogEvent.TraceMsg(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, test);
                                 //LogEvent.Warning(abatabSession, "Dosing issue.");
                             }
                             else
