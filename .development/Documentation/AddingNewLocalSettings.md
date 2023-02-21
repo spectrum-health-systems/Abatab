@@ -1,6 +1,56 @@
-# DEVELOPMENT NOTES - Adding new local settings
+<div align="center">
 
-> Last updated 1-27-23
+![Logo][Logo]
+
+# ADDING A NEW LOCAL SETTING
+
+<h5>
+  Last updated Feburary 21, 2023
+</h5>
+
+</div>
+
+# Overview
+
+<div align="center">
+
+```mermaid
+graph TD
+
+  AddSettingToSettings("Add arguments to Properties/Settings.settings") --> AddSettingToWebConfigLoad("Add the setting to Abatab.WebConfig.Load()")
+  AddSettingToWebConfigLoad("Add the setting to Abatab.WebConfig.Load()") --> AddSettingToAbatabDataSession("Add the setting to Abatab.AbatabData.Session.cs")
+
+  click AddSettingToWebConfigLoad href "#add-setting-to-webconfig" "linkl"
+```
+
+</div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+## Add setting to WebConfig
+
+For example, to add the `AbatabDataRoot` setting, you would take the webConfig Dictionary in Abatab.WebConfig.Load():
+
+```
+{ "AbatabMode",                             Settings.Default.AbatabMode.ToLower() },
+{ "AbatabRoot",                             Settings.Default.AbatabRoot.ToLower() },
+```
+
+And add a line for `AbatabDataRoot`:
+
+```
+{ "AbatabMode",                             Settings.Default.AbatabMode.ToLower() },
+{ "AbatabRoot",                             Settings.Default.AbatabRoot.ToLower() },
+{ "AbatabDataRoot",                         Settings.Default.AbatabDataRoot.ToLower() },
+```
 
 # Adding new local settings
 

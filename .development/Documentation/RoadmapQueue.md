@@ -4,17 +4,31 @@
 
 ### **Integrate ScriptLinkStandard**
 
-TBD
+> COMPLETE: v23.2
+
+Integrate ScriptLinkStandard into Abatab.
+
+> TBD
 
 ### **Depreciate NTST.ScriptLink**
 
-TBD
+Remove NTST.ScriptLink from Abatab.
+
+### Self-test
+
+> TBD
+
+Export some example OptionObjects as JSON, then use them to test?
 
 ### **Implment ScriptLinkStandard methods**
+
+> TBD
 
 Some cool stuff there.
 
 ### **Object parser**
+
+> TBD
 
 Create a class:
 * FieldIdNumber = <hardcode>
@@ -31,17 +45,25 @@ Pass that to a parse method that returns a List<ThatClass>:
 
 ### **Roundhouse move**
 
+> TBD
+
 Maybe move Roundhouse out of the main stuff.
 
 ### **Combine "Core.AbatabLogging.BuidlPath.cs" and Core.AbatabLogging.BuildPaths.cs**
+
+> TBD
 
 Combine "Core.AbatabLogging.BuidlPath.cs" and Core.AbatabLogging.BuildPaths.cs
 
 ### **Rename "Core.AbatabLogging.BuidlPaths.BuildDir()" methods to "BuildPath()"**
 
+> TBD
+
 "Path" makes more sense than "Dir"
 
 ### **Update all BuildPaths.cs methods to return List**
+
+> TBD
 
 When [Warning logs were implemented](https://github.com/spectrum-health-systems/Abatab/issues/90), changes were made to Core.AbatabLogging.BuildPaths.cs specific to the Warning logs.
 
@@ -49,9 +71,13 @@ We should modify the remaining methods in BuildPaths.cs to return `List<string>`
 
 ### **Move FieldId data to config file**
 
+> TBD
+
 Easier to change.
 
 ### **Log file delay**
+
+> TBD
 
 As functionality is added, more staff use Abatab, and more logfiles are written, we should probably look at the write delay and determine:
 
@@ -61,6 +87,8 @@ As functionality is added, more staff use Abatab, and more logfiles are written,
 
 ### **Add Abatab version to log files**
 
+> TBD
+
 As functionality is added, more staff use Abatab, and more logfiles are written, we should probably look at the write delay and determine:
 
 * What is the best global delay?
@@ -69,11 +97,15 @@ As functionality is added, more staff use Abatab, and more logfiles are written,
 
 ### **Log efficiency**
 
+> TBD
+
 Make sure we aren't going through the logging motions, and not creating log files (e.g., debug logs).
 
 This will probably involve logging detail levels.
 
 ### **Access log details**
+
+> TBD
 
 The access log should have a better, more descriptive filename and contents.
 
@@ -81,15 +113,21 @@ Logging detail levels
 
 ### **Trace logs just the filename**
 
+> TBD
+
 This was implmented in v23.2 via a quick fix, but we need to go through an properly make this work.
 
 Maybe create a new trace log named TRACEMSG that can have content.
 
 ### **Logging detail levels**
 
+> TBD
+
 Logging detail levels
 
 ### **Error log functionality**
+
+> TBD
 
 When Abatab encounters an error, that error should be written to a separate error file.
 
@@ -103,13 +141,19 @@ This functionality will require:
 
 ### **Lost logs**
 
+> TBD
+
 Catch any logs that aren't one of the official types.
 
 ### **Source code cleanup/refactor**
 
+> TBD
+
 Cleanup
 
 ### **Verify Settings.settings order is consistant**
+
+> TBD
 
 There are various locations in the source code where the settings/configuration values are listed. We should make sure that each of those locations match.
 
@@ -117,27 +161,41 @@ This includes Web.config and Settings.settings.
 
 ### **Cleanup DocFX folders**
 
+> TBD
+
 Verify that DocFX has what it needs, and doesn't have unnecessary data.
 
+<!-- -->
 ***
+<!-- -->
 
 ## Module functionality
 
 ### **ModCommon: Maybe remove?**
 
+> TBD
+
 Not sure if we need this, since most common functionality should go in Core.
 
+> TBD
+
 ### **ModQuickMedOrder: Change ModQuickMedOrderDosePercentBoundary to "25"**
+
+> TBD
 
 Easier to read and modify, less prone to mistakes. Will need to be changed in Web.config, as well as source code.
 
 ### **ModQuickMedOrder: Log all ModQuickMedOrder details**
+
+> TBD
 
 Log all QMO data in session log (e.g., LastOrderScheduledText)  
 
 Additional datapoints for troubleshooting
 
 ### **ModQuickMedOrder: Dose warnings**
+
+> TBD
 
 * Public name needs to be formatted better
 * Public log data should be different
@@ -146,13 +204,19 @@ Additional datapoints for troubleshooting
 
 ### **ModQuickMedOrder: Dose information to log**
 
+> TBD
+
 We should be writing a bunch of this stuff to logs, even when successful.
 
+<!-- -->
 ***
+<!-- -->
 
 ## Documentation
 
 ### **Complete Documentation**
+
+> TBD
 
 All documentation through v23.3 should be complete, including:
 
@@ -160,11 +224,15 @@ All documentation through v23.3 should be complete, including:
 - [ ] The Abatab Manual
 - [ ] Abatab APIs
 
+<!-- -->
 ***
+<!-- -->
 
 ## Regression
 
 ### **[VERIFY] QuickMedOrder-Dose-VerifyAmount**
+
+> TBD
 
 Test the following:
 
@@ -178,17 +246,25 @@ Eventually we should make this a built-in test.
 
 ### **[VERIFY] AbatabOption**
 
+> TBD
+
 Verify that even though there is space for an AbatabOption in the Script Parameter, it doesn't affect anything if it's missing.
 
 ### **[VERIFY] All combinations of log file types work**
+
+> TBD
 
 For example: error-trace-warning, trace-warning-other, none.
 
 ### **[VERIFY] Authorized Users**
 
+> TBD
+
 Verify that the list of authorized users works for functionality.
 
 ### **[VERIFY] Replacing DLLs when updating Abatab**
+
+> TBD
 
 The Abatab framework is modular. Each core component and module are separate C# projects. This allows changes to be made to a specific component of Abatab, without affecting the other components.
 
@@ -202,9 +278,13 @@ These tests should be done using the testing branch.
 
 ### **[VERIFY] All log types are written to the correct folder**
 
+> TBD
+
 TBD
 
 ### **[VERIFY] debugMode**
+
+> TBD
 
 Test the following debugMode functionality:
 
@@ -212,13 +292,19 @@ Test the following debugMode functionality:
 
 ### **[VERIFY] Fallback name**
 
+> TBD
+
 Verify that the avatar fallback username works
 
+<!-- -->
 ***
+<!-- -->
 
 ## Misc functionality
 
 ### **Web Server directories** ([GitHub issue](none))
+
+> TBD
 
 There should be three directories on the web server:
 
@@ -234,11 +320,15 @@ There should be three directories on the web server:
 
 ### **Issue when an environment is refreshed**
 
+> TBD
+
 When an environment is refreshed, the WSDLs come down from LIVE, and need to be recreated in the refreshed environment.
 
 Is there a better way to do this?
 
 ### **New images**
+
+> TBD
 
 We have:
 
@@ -256,8 +346,12 @@ We may need:
 
 ### **Lowercasing**
 
+> TBD
+
 We are currently lowercasing lots of stuff (e.g., stuff in the Web.config)...should we?
 
 ### **Class/method scopes**
+
+> TBD
 
 Make sure all scopes are correct
