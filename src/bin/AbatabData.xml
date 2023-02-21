@@ -1,0 +1,490 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AbatabData</name>
+    </assembly>
+    <members>
+        <member name="T:AbatabData.Core.Debuggler">
+            <summary>/Properties for the debugging functionality.</summary>
+        </member>
+        <member name="P:AbatabData.Core.Debuggler.DebugMode">
+            <summary>The debug mode that Abatab will use when executed.</summary>
+            <remarks>
+            <list type="table">
+            <listheader>
+            <term>Setting</term>
+            <description>Description</description>
+            </listheader>
+            <item>
+            <term><b><i>disabled</i></b></term>
+            <description>Debugging functionality is disabled.</description>
+            </item>
+            <item>
+            <term>enabled</term>
+            <description>Debugging functionality is enabled.</description>
+            </item>
+            </list>
+            * Debug mode can have a significant impact on performance, and should not be enabled in production environments.
+            </remarks>
+            <value>Default value is <c>disabled</c></value>
+        </member>
+        <member name="P:AbatabData.Core.Debuggler.DebugEventRoot">
+            <summary>The root directory where the Abatab debug logs are stored.</summary>
+            <remarks>
+            * At runtime the <c>DebugEventRoot</c> value is created as a sub-directory of the <c>AbatabDataRoot</c>.
+            </remarks>
+            <example>
+            * If <c>AbatabDataRoot=C:\Abatab\LIVE</c>, and <c>DebugEventRoot=logs\debug</c>, then <c>DebugEventRoot</c> would be set to <c>C:\Abatab\LIVE\logs\debug</c> at runtime.
+            </example>
+            <value>Default value is <c>logs\debug</c></value>
+        </member>
+        <member name="T:AbatabData.Core.Logging">
+            <summary>Properties for the logging functionality.</summary>
+        </member>
+        <member name="P:AbatabData.Core.Logging.LoggingMode">
+            <summary>The logging mode that Abatab will use when executed.</summary>
+            <remarks>
+            <list type="table">
+            <listheader>
+            <term>Setting</term>
+            <description>Description</description>
+            </listheader>
+            <item>
+            <term><b><i>session</i></b></term>
+            <description>Only session logs are created.</description>
+            </item>
+            <item>
+            <term>trace</term>
+            <description>Only trace logs are created.</description>
+            </item>
+            <item>
+            <term>error</term>
+            <description>Only error logs are created.</description>
+            </item>
+            <item>
+            <term>warning</term>
+            <description>Only warning logs are created.</description>
+            </item>
+            <item>
+            <term>all</term>
+            <description>All logs types are created.</description>
+            </item>
+            <item>
+            <term>warning</term>
+            <description>Do not create any log files.</description>
+            </item>
+            </list>
+            * To create multiple types of logs, separate each type with a hyphen (<c>"-"</c>).
+            </remarks>
+            <examples>
+            * To only create session logs: <c>LoggingMode=session</c>
+            * To create session and trace logs: <c>LoggingMode=session-trace</c>
+            * To create session, trace, and warning logs: <c>LoggingMode=session-trace-warning</c>
+            </examples>
+            <value>Default value is <c>session</c></value>
+        </member>
+        <member name="P:AbatabData.Core.Logging.Detail">
+            <summary>The detail level of log files (currently not used).</summary>
+            <value>Currently not used.</value>
+        </member>
+        <member name="P:AbatabData.Core.Logging.EventErrorRoot">
+            <summary>The root directory where the Abatab error logs are stored.</summary>
+            <remarks>
+            * At runtime the <c>EventErrorRoot</c> value is created as a sub-directory of the <c>AbatabDataRoot</c>.
+            </remarks>
+            <example>
+            * If <c>AbatabDataRoot=C:\Abatab\LIVE</c>, and <c>DebugEventRoot=logs\debug</c>, then <c>DebugEventRoot</c> would be set to <c>C:\Abatab\LIVE\logs\debug</c> at runtime.
+            </example>
+            <value>Default value is <c>logs\debug</c></value>
+        </member>
+        <member name="P:AbatabData.Core.Logging.EventLostRoot">
+            <summary>TBD</summary>
+            <value></value>
+        </member>
+        <member name="P:AbatabData.Core.Logging.EventTraceRoot">
+            <summary>TBD</summary>
+            <value></value>
+        </member>
+        <member name="P:AbatabData.Core.Logging.EventWarningRoot">
+            <summary>TBD</summary>
+            <value></value>
+        </member>
+        <member name="P:AbatabData.Core.Logging.Root">
+            <summary>The default location for publicly available warning logs.</summary>
+            <value></value>
+        </member>
+        <member name="P:AbatabData.Core.Logging.SessionRoot">
+            <summary>TBD</summary>
+            <value></value>
+        </member>
+        <member name="P:AbatabData.Core.Logging.WriteDelay">
+            <summary>TBD</summary>
+            <value></value>
+        </member>
+        <member name="T:AbatabData.Core.OptionObject">
+            <summary>TBD</summary>
+        </member>
+        <member name="T:AbatabData.Module.Common">
+            <summary>TBD</summary>
+        </member>
+        <member name="P:AbatabData.Module.ProgressNote.Mode">
+            <summary>TBD</summary>
+            <value></value>
+        </member>
+        <member name="P:AbatabData.Module.ProgressNote.AuthorizedUsers">
+            <summary>TBD</summary>
+            <value></value>
+        </member>
+        <member name="P:AbatabData.Module.Telehealth.ValidServiceChargeCodes">
+            <summary>TBD</summary>
+            <value></value>
+        </member>
+        <member name="P:AbatabData.Module.Telehealth.ServiceChargeCodeFieldId">
+            <summary>TBD</summary>
+            <value></value>
+        </member>
+        <member name="P:AbatabData.Module.Telehealth.FoundServiceChargeCodeFieldId">
+            <summary>TBD</summary>
+            <value></value>
+        </member>
+        <member name="P:AbatabData.Module.Telehealth.ServiceChargeCodeValue">
+            <summary>TBD</summary>
+            <value></value>
+        </member>
+        <member name="P:AbatabData.Module.Telehealth.ValidLocations">
+            <summary>TBD</summary>
+            <value></value>
+        </member>
+        <member name="P:AbatabData.Module.Telehealth.LocationFieldId">
+            <summary>TBD</summary>
+            <value></value>
+        </member>
+        <member name="P:AbatabData.Module.Telehealth.FoundLocationFieldId">
+            <summary>TBD</summary>
+            <value></value>
+        </member>
+        <member name="P:AbatabData.Module.Telehealth.LocationValue">
+            <summary>TBD</summary>
+            <value></value>
+        </member>
+        <member name="P:AbatabData.Module.Telehealth.FoundAllRequiredFieldIds">
+            <summary>TBD</summary>
+            <value></value>
+        </member>
+        <member name="T:AbatabData.Module.Prototype">
+            <summary>TBD</summary>
+        </member>
+        <member name="P:AbatabData.Module.Prototype.Mode">
+            <summary>TBD</summary>
+            <value></value>
+        </member>
+        <member name="T:AbatabData.Module.Testing">
+            <summary>Defines the properties for the AbatabData.Module.Testing object, containing the information/data that Abatab needs to do its job.</summary>
+        </member>
+        <member name="P:AbatabData.Module.Testing.Mode">
+            <summary>The default behavior of the Abatab Testing Module. <see href="https://spectrum-health-systems.github.io/Abatab/man/man-configuration-local-settings.html#modtestingmode"> [more info]</see></summary>
+            <value>Default value is <c>enabled</c>.</value>
+        </member>
+        <member name="T:AbatabData.Module.QuickMedOrder">
+            <summary>Defines the properties for the AbatabData.QuickMedOrderData object, containing the information needed for ModQuickMedOrder functionality.</summary>
+        </member>
+        <member name="P:AbatabData.Module.QuickMedOrder.Mode">
+            <summary>TBD</summary>
+            <value></value>
+        </member>
+        <member name="P:AbatabData.Module.QuickMedOrder.AuthorizedUsers">
+            <summary>TBD</summary>
+            <value></value>
+        </member>
+        <member name="P:AbatabData.Module.QuickMedOrder.ValidOrderTypes">
+            <summary>TBD</summary>
+            <value></value>
+        </member>
+        <member name="P:AbatabData.Module.QuickMedOrder.DosePercentBoundary">
+            <summary>TBD</summary>
+            <value></value>
+        </member>
+        <member name="P:AbatabData.Module.QuickMedOrder.DoseMilligramsBoundary">
+            <summary>TBD</summary>
+            <value></value>
+        </member>
+        <member name="P:AbatabData.Module.QuickMedOrder.PrevDosePrefix">
+            <summary>TBD</summary>
+            <value></value>
+        </member>
+        <member name="P:AbatabData.Module.QuickMedOrder.PrevDoseSuffix">
+            <summary>TBD</summary>
+            <value></value>
+        </member>
+        <member name="P:AbatabData.Module.QuickMedOrder.DosageOneFieldId">
+            <summary>TBD</summary>
+            <value></value>
+        </member>
+        <member name="P:AbatabData.Module.QuickMedOrder.FoundDosageOneFieldId">
+            <summary>TBD</summary>
+            <value></value>
+        </member>
+        <member name="P:AbatabData.Module.QuickMedOrder.CurrentDose">
+            <summary>TBD</summary>
+            <value></value>
+        </member>
+        <member name="P:AbatabData.Module.QuickMedOrder.OrderTypeFieldId">
+            <summary>TBD</summary>
+            <value></value>
+        </member>
+        <member name="P:AbatabData.Module.QuickMedOrder.FoundOrderTypeFieldId">
+            <summary>TBD</summary>
+            <value></value>
+        </member>
+        <member name="P:AbatabData.Module.QuickMedOrder.OrderType">
+            <summary>TBD</summary>
+            <value></value>
+        </member>
+        <member name="P:AbatabData.Module.QuickMedOrder.LastOrderScheduleFieldId">
+            <summary>TBD</summary>
+            <value></value>
+        </member>
+        <member name="P:AbatabData.Module.QuickMedOrder.FoundLastOrderScheduleFieldId">
+            <summary>TBD</summary>
+            <value></value>
+        </member>
+        <member name="P:AbatabData.Module.QuickMedOrder.LastOrderScheduleText">
+            <summary>TBD</summary>
+            <value></value>
+        </member>
+        <member name="P:AbatabData.Module.QuickMedOrder.LastScheduledDosage">
+            <summary>TBD</summary>
+            <value></value>
+        </member>
+        <member name="P:AbatabData.Module.QuickMedOrder.FoundAllRequiredFieldIds">
+            <summary>TBD</summary>
+            <value></value>
+        </member>
+        <member name="T:AbatabData.Session">
+            <summary>Contains Abatab session properties.</summary>
+            <remarks>
+            Contains properties for the following:
+            <list type="bullet">
+            <item><term>Standard session properties</term></item>
+            <item><term>Debugging functionality</term></item>
+            <item><term>Logging functionality</term></item>
+            <item><term>OptionObjects</term></item>
+            <item><term>Modules</term></item>
+            </list>
+            </remarks>
+        </member>
+        <member name="P:AbatabData.Session.AbatabMode">
+            <summary>The mode that Abatab will use when executed.</summary>
+            <remarks>
+            <list type="table">
+            <listheader>
+            <term>Setting</term>
+            <description>Description</description>
+            </listheader>
+            <item>
+            <term><b><i>enabled</i></b></term>
+            <description>All Abatab functionality is (potentially) available.</description>
+            </item>
+            <item>
+            <term>disabled</term>
+            <description>Abatab functionality is not available.</description>
+            </item>
+            <item>
+            <term>passthrough</term>
+            <description>All functionality is available, but no changes are made to Avatar.</description>
+            </item>
+            </list>
+            <list type="bullet">
+            <item>If this is set to <c>AbatabMode=enabled</c>, you are still able to disable specific modules via their corresponding mode setting.</item>
+            <item>The <c>AbatabMode=passthrough</c> mode is intended for development, not production.</item>
+            </list>
+            </remarks>
+            <value>Default value is <c>enabled</c></value>
+        </member>
+        <member name="P:AbatabData.Session.AbatabRoot">
+            <summary>The root directory where the Abatab web service has been deployed.</summary>
+            <remarks>
+            <list type="bullet">
+            <item>At runtime the <c>AvatarEnvironment</c> value is added to the end of <c>AbatabRoot</c> to form the complete path.</item>
+            </list>
+            </remarks>
+            <example>
+            If <c>AbatabRoot=C:\Abatab_</c>, and <c>AvatarEnvironment=LIVE</c>, then <c>AbatabRoot</c> would be set to <c>C:\Abatab_LIVE</c> at runtime.
+            </example>
+            <value>Default value is <c>C:\Abatab_</c></value>
+        </member>
+        <member name="P:AbatabData.Session.AbatabDataRoot">
+            <summary>The root directory where non-web service data code is located.</summary>
+            <remarks>
+            <list type="bullet">
+            <item>At runtime the <c>AvatarEnvironment</c> value is created as a sub-directory of the <c>AbatabDataRoot</c>.</item>
+            <item>This is the directory where exported data/logs should be stored.</item>
+            </list>
+            </remarks>
+            <example>
+            If <c>AbatabDataRoot=C:\Abatab</c>, and <c>AvatarEnvironment=LIVE</c>, then <c>AbatabDataRoot</c> would be set to <c>C:\Abatab\LIVE</c> at runtime.
+            </example>
+            <value>Default value is <c>C:\Abatab</c></value>
+        </member>
+        <member name="P:AbatabData.Session.AvatarEnvironment">
+            <summary>The Avatar environment that Abatab will reference when executed.</summary>
+            <remarks>
+            <list type="table">
+            <listheader>
+            <term>Environment name</term>
+            <description>Description</description>
+            </listheader>
+            <item>
+            <term><b><i>LIVE</i></b></term>
+            <description>The Avatar production environment.</description>
+            </item>
+            <item>
+            <term>UAT</term>
+            <description>The Avatar testing environment.</description>
+            </item>
+            <item>
+            <term>SBOX</term>
+            <description>The Avatar sandbox environment.</description>
+            </item>
+            </list>
+            </remarks>
+            <value>Default value is <c>LIVE</c></value>
+        </member>
+        <member name="P:AbatabData.Session.AbatabFallbackUserName">
+            <summary>The fallback username for Abatab.</summary>
+            <remarks>
+            * If <c>sentOptObj.OptionUserId</c> does not contain a valid username, <c>AbatabFallbackUserName</c> will be used.
+            </remarks>
+            <value>Default value is <c>_Abatab</c></value>
+        </member>
+        <member name="P:AbatabData.Session.DebugglerConfig">
+            <summary>Properties for the debugging functionality. </summary>
+            <value>&lt;-- Click for more info</value>
+        </member>
+        <member name="P:AbatabData.Session.LoggingConfig">
+            <summary>Properties for the logging functionality.</summary>
+            <value>&lt;-- Click for more info</value>
+        </member>
+        <member name="P:AbatabData.Session.ModCommonConfig">
+            <summary>Properties for the Common module.</summary>
+            <value>&lt;-- Click for more info</value>
+        </member>
+        <member name="P:AbatabData.Session.ModProgressNoteConfig">
+            <summary>Properties for the ProgressNote module.</summary>
+            <value>&lt;-- Click for more info</value>
+        </member>
+        <member name="P:AbatabData.Session.ModPrototypeConfig">
+            <summary>Properties for the Prototype module.</summary>
+            <value>&lt;-- Click for more info</value>
+        </member>
+        <member name="P:AbatabData.Session.ModQuickMedOrderConfig">
+            <summary>Properties for the QuickMedOrder module.</summary>
+            <value>&lt;-- Click for more info</value>
+        </member>
+        <member name="P:AbatabData.Session.ModTestingConfig">
+            <summary>Properties for the Testing module.</summary>
+            <value>&lt;-- Click for more info</value>
+        </member>
+        <member name="P:AbatabData.Session.SessionDateStamp">
+            <summary>The session date.</summary>
+            <remarks>
+            * Uses the following syntax: <c>yyMMdd</c>
+            </remarks>
+            <value>Set at runtime</value>
+        </member>
+        <member name="P:AbatabData.Session.SessionTimeStamp">
+            <summary>The session time.</summary>
+            <remarks>
+            * Uses the following syntax: <c>HHmmss</c>
+            </remarks>
+            <value>Set at runtime</value>
+        </member>
+        <member name="P:AbatabData.Session.AbatabUserName">
+            <summary>The Abatab username.</summary>
+            <remarks>
+            * This should be set to the value in <c>sentOptObj.OptionUserId</c>
+            * If the value in <c>sentOptObj.OptionUserId</c> is not valid, this will be set to <see href="AbatabData.Session.html#AbatabData_Session_AbatabFallbackUserName">AbatabFallbackUserName</see>.
+            </remarks>
+            <value>Set at runtime</value>
+        </member>
+        <member name="P:AbatabData.Session.ScriptParameter">
+            <summary>The Script Parameter that Avatar sends to Abatab.</summary>
+            <remarks>
+            * Script Parameter syntax is <c>MODULE-COMMAND-ACTION[-OPTION]</c>
+            * More information about the Script Parameter can be found <see href="../man/manAppendix.html#script-parameter">here.</see>
+            </remarks>
+            <example>
+            <code>
+            QuickMedOrder-Dose-VerifyAmount
+            </code>
+            </example>
+            <value>Set at runtime</value>
+        </member>
+        <member name="P:AbatabData.Session.AbatabModule">
+            <summary>The Module component of the Script Parameter.</summary>
+            <remarks>
+            * This is the first component of the <see href="AbatabData.Session.html#AbatabData_Session_ScriptParameter">Script Parameter</see>.
+            </remarks>
+            <example>
+            * The Script Parameter <c>QuickMedOrder-Dose-VerifyAmount</c> uses the <c>QuickMedOrder</c> module.
+            </example>
+            <value>Set at runtime</value>
+        </member>
+        <member name="P:AbatabData.Session.AbatabCommand">
+            <summary>The Command component of the Script Parameter.</summary>
+            <remarks>
+            * This is the second component of the <see href="AbatabData.Session.html#AbatabData_Session_ScriptParameter">Script Parameter</see>.
+            </remarks>
+            <example>
+            * The Script Parameter <c>QuickMedOrder-Dose-VerifyAmount</c> contains the <c>Dose</c> command.
+            </example>
+            <value>Set at runtime</value>
+        </member>
+        <member name="P:AbatabData.Session.AbatabAction">
+            <summary>The Action component of the Script Parameter.</summary>
+            <remarks>
+            * This is the third component of the <see href="AbatabData.Session.html#AbatabData_Session_ScriptParameter">Script Parameter</see>.
+            </remarks>
+            <example>
+            * The Script Parameter <c>QuickMedOrder-Dose-VerifyAmount</c> contains the <c>VerifyAmount</c> action.
+            </example>
+            <value>Set at runtime</value>
+        </member>
+        <member name="P:AbatabData.Session.AbatabOption">
+            <summary>The (optional) Option component of the Script Parameter.</summary>
+            <remarks>
+            * This is the fourth component of the <see href="AbatabData.Session.html#AbatabData_Session_ScriptParameter">Script Parameter</see>.
+            * This is an optional component.
+            </remarks>
+            <example>
+            * The Script Parameter <c>QuickMedOrder-Dose-VerifyAmount-PrintToScreen</c> contains the <c>PrintToScreen</c> action.
+            </example>
+            <value>Set at runtime</value>
+        </member>
+        <member name="P:AbatabData.Session.SentOptObj">
+            <summary>The OptionObject that Avatar sends to Abatab.</summary>
+            <remarks>
+            * This OptionObject is not modified by Abatab.
+            * More information about the OptionObjects can be found <see href="../man/manAppendix.html#optionobject">here.</see>
+            </remarks>
+            <value>Set at runtime</value>
+        </member>
+        <member name="P:AbatabData.Session.WorkOptObj">
+            <summary>The OptionObject that Abatab (potentially) modifies during a session.</summary>
+            <remarks>
+            * This OptionObject starts out as a copy of <c>SentOptObj</c>.
+            * This OptionObject is potentially modified by Abatab.
+            * More information about the OptionObjects can be found <see href="../man/manAppendix.html#optionobject">here.</see>
+            </remarks>
+            <value>Set at runtime</value>
+        </member>
+        <member name="P:AbatabData.Session.FinalOptObj">
+            <summary>The OptionObject that Abatab sends back to Avatar.</summary>
+            <remarks>
+            * This OptionObject is a copy of <c>WorkOptObj</c>.
+            * More information about the OptionObjects can be found <see href="../man/manAppendix.html#optionobject">here.</see>
+            </remarks>
+            <value>Set at runtime</value>
+        </member>
+    </members>
+</doc>
