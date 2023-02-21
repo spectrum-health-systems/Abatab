@@ -146,9 +146,17 @@ namespace ModProgressNote
                         }
                     }
 
+                    if (bb)
+                    {
+                        break;
+                    }
                     LogEvent.TraceMsg(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "two");
                 }
 
+                if (bb)
+                {
+                    break;
+                }
                 LogEvent.TraceMsg(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "three");
             }
 
