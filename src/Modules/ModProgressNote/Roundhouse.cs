@@ -1,11 +1,9 @@
 ﻿// Abatab.ModProgressNote.Roundhouse.cs b230215.0907
 // Copyright (c) A Pretty Cool Program
 
-using AbatabData;
-
-using AbatabLogging;
-
 using System.Reflection;
+using AbatabData;
+using AbatabLogging;
 
 namespace ModProgressNote
 {
@@ -47,7 +45,7 @@ namespace ModProgressNote
                 case "verifytelehealth":
                     LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
                     ModProgressNote.PlaceOfService.VerifyTelehealth(abatabSession);
-                    AbatabOptionObject.FinalObj.Finalize(abatabSession);
+                    //AbatabOptionObject.FinalObj.Finalize(abatabSession);
                     break;
 
                 default:
