@@ -99,6 +99,12 @@ As functionality is added, more staff use Abatab, and more logfiles are written,
 
 Right now this is hardcoded.
 
+### **Why are all OptObjects getting set to the finalOptObj?**
+
+> TBD
+
+Unknown.
+
 ### **Log efficiency**
 
 > TBD

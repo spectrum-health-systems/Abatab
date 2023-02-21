@@ -134,8 +134,10 @@ namespace ModProgressNote
                     abatabSession.WorkOptObj.ErrorMesg = $"WARNING!{Environment.NewLine}" +
                                                          $"{Environment.NewLine}" +
                                                          $"Service Charge Code {abatabSession.ModProgressNoteConfig.TelehealthConfig.ServiceChargeCodeValue} must match one of these locations:{Environment.NewLine}" +
-                                                         $"  - first" +
-                                                         $"  - second";
+                                                         $"  - first{Environment.NewLine}" +
+                                                         $"  - second" +
+                                                         $"{Environment.NewLine}" +
+                                                         $"Please verify you have the correct location.";
 
                     // abatabSession.WorkOptObj.SetFieldValue(abatabSession.ModProgressNoteConfig.TelehealthConfig.LocationFieldId, "11");
 

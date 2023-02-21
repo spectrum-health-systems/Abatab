@@ -156,7 +156,7 @@ namespace AbatabLogging
                               "===============";
 
             var sessionDetail = $"{Environment.NewLine}" +
-                                $"Abatab Version:      23.2.0-development{Environment.NewLine}" +
+                                $"Abatab Version:      v23.2.0-development+230221.1438{Environment.NewLine}" +
                                 $"Abatab Mode:         {abatabSession.AbatabMode}{Environment.NewLine}" +
                                 $"Abatab Root:         {abatabSession.AbatabRoot}{Environment.NewLine}" +
                                 $"Debugging Mode:      {abatabSession.DebugglerConfig.DebugMode}{Environment.NewLine}" +
