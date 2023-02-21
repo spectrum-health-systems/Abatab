@@ -12,7 +12,15 @@ Integrate ScriptLinkStandard into Abatab.
 
 ### **Depreciate NTST.ScriptLink**
 
+> TBD
+
 Remove NTST.ScriptLink from Abatab.
+
+### **Better session log name**
+
+> TBD
+
+Right now it's the date, should be time or date/time.
 
 ### Self-test
 
@@ -150,6 +158,12 @@ Catch any logs that aren't one of the official types.
 > TBD
 
 Cleanup
+
+### **More permenant empty trace log content**
+
+> TBD
+
+See development notes [here](https://github.com/spectrum-health-systems/Abatab/issues/110)
 
 ### **Verify Settings.settings order is consistant**
 

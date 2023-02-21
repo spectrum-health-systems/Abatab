@@ -1,14 +1,11 @@
-﻿// ModProgressNote.PlaceOfService.cs b230217.1002
+﻿// ModProgressNote.PlaceOfService.cs b230221.1047
 // Copyright (c) A Pretty Cool Program
-
-using AbatabData;
-
-using AbatabLogging;
-
-using ScriptLinkStandard.Objects;
 
 using System;
 using System.Reflection;
+using AbatabData;
+using AbatabLogging;
+using ScriptLinkStandard.Objects;
 
 namespace ModProgressNote
 {
@@ -218,6 +215,8 @@ namespace ModProgressNote
 
         private static void ProcessServiceCodeField(Session abatabSession, FieldObject fieldObject)
         {
+            LogEvent.TraceMsg(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, fieldObject.FieldValue);
+
             // TODO Should make sure that an empty string is enough here, or if we need to consider null/whitespace...or using string.Length.
             if (fieldObject.FieldValue?.Length == 0)
             {
@@ -239,6 +238,8 @@ namespace ModProgressNote
 
         private static void ProcessLocationField(Session abatabSession, FieldObject fieldObject)
         {
+            LogEvent.TraceMsg(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, fieldObject.FieldValue);
+
             // TODO Should make sure that an empty string is enough here, or if we need to consider null/whitespace...or using string.Length.
             if (fieldObject.FieldValue?.Length == 0)
             {

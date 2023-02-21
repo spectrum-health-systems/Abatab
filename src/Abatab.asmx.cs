@@ -1,20 +1,15 @@
-﻿// Abatab v23.2.0-development+230217.1102
-// Abatab.asmx.cs b230123.0832
+﻿// Abatab v23.2.0-development+230221.1047
+// Abatab.asmx.cs b230221.0926
 // (c) A Pretty Cool Program
-
-using Abatab.Properties;
-
-using AbatabData;
-
-using AbatabLogging;
-
-using AbatabSession;
-
-using ScriptLinkStandard.Objects;
 
 using System.Collections.Generic;
 using System.Reflection;
 using System.Web.Services;
+using Abatab.Properties;
+using AbatabData;
+using AbatabLogging;
+using AbatabSession;
+using ScriptLinkStandard.Objects;
 
 namespace Abatab
 {
@@ -71,6 +66,8 @@ namespace Abatab
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
             return abatabSession.FinalOptObj;
+
+            // TODO - Look into the built-in ScriptLinkStandard method of returning OptionObjects.
             //return abatabSession.WorkOptObj.ToReturnOptionObject();
         }
     }
