@@ -65,7 +65,7 @@ namespace ModProgressNote
 
             /* Loop through each FormObject in the OptionObject.
             */
-            foreach (FormObject formObject in abatabSession.SentOptObj.Forms)
+            foreach (FormObject formObject in abatabSession.WorkOptObj.Forms)
             {
                 LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
