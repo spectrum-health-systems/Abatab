@@ -44,8 +44,8 @@ namespace AbatabSession
                 AbatabOption           = "undefined",
                 AbatabUserName         = sentOptObj.OptionUserId,
                 SentOptObj             = sentOptObj,
-                WorkOptObj             = AbatabOptionObject.WorkObj.Build(sentOptObj),
-                FinalOptObj            = new OptionObject2015()
+                WorkOptObj             = AbatabOptionObject.WorkObj.Build(sentOptObj)//,
+                //FinalOptObj            = new OptionObject2015()
             };
 
             // TODO - Are all these debug logs necessary?
