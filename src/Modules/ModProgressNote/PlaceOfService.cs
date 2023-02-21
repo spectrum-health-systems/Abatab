@@ -117,14 +117,9 @@ namespace ModProgressNote
                                 abatabSession.WorkOptObj.ErrorMesg = $"WARNING!{Environment.NewLine}" +
                                                                      $"{Environment.NewLine}" +
                                                                      $"ERROR!";
-                                var formId = formObject.ToString();
-                                var rowId = formObject.CurrentRow.ToString();
-                                var fieldId = abatabSession.ModProgressNoteConfig.TelehealthConfig.LocationFieldId.ToString();
-                                var fieldValue = "11";
 
-                                abatabSession.WorkOptObj.SetFieldValue(formId, rowId, fieldId, fieldValue);
+                                abatabSession.WorkOptObj.SetFieldValue(fieldObject.FieldNumber, "11");
 
-                                LogEvent.TraceMsg(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, $"{formId}-{rowId}-{fieldId}-{fieldValue}");
                                 //LogEvent.Warning(abatabSession, "Dosing issue.");
                             }
                             else
