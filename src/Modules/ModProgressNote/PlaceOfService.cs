@@ -63,8 +63,6 @@ namespace ModProgressNote
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.DebugMode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
-
-
             /* Loop through each FormObject in the OptionObject.
             */
             foreach (FormObject formObject in abatabSession.SentOptObj.Forms)
@@ -139,7 +137,7 @@ namespace ModProgressNote
                                                          $"{Environment.NewLine}" +
                                                          $"Please verify you have the correct location.";
 
-                    // abatabSession.WorkOptObj.SetFieldValue(abatabSession.ModProgressNoteConfig.TelehealthConfig.LocationFieldId, "11");
+                    abatabSession.WorkOptObj.SetFieldValue(abatabSession.ModProgressNoteConfig.TelehealthConfig.LocationFieldId, "11");
 
                     LogEvent.TraceMsg(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, abatabSession.ModProgressNoteConfig.TelehealthConfig.LocationFieldId);
                     //LogEvent.Warning(abatabSession, "Dosing issue.");
