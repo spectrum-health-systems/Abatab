@@ -1,14 +1,11 @@
 ﻿// Abatab.ModQuickMedOrder.Dose.cs b230217.1002
 // Copyright (c) A Pretty Cool Program
 
-using AbatabData;
-
-using AbatabLogging;
-
-using ScriptLinkStandard.Objects;
-
 using System;
 using System.Reflection;
+using AbatabData;
+using AbatabLogging;
+using ScriptLinkStandard.Objects;
 
 namespace ModQuickMedOrder
 {
@@ -315,8 +312,7 @@ namespace ModQuickMedOrder
         /// <param name="fieldObject"></param>
         private static void ProcessDosageOneField(Session abatabSession, FieldObject fieldObject)
         {
-            // TODO This trace file should stay, and we might want to add a description to the msg.
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+            LogEvent.TraceMsg(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, $"DosageOne Field Value: {fieldObject.FieldValue}");
 
             // TODO Should make sure that an empty string is enough here, or if we need to consider null/whitespace...or using string.Length.
             if (fieldObject.FieldValue?.Length == 0)
@@ -349,8 +345,7 @@ namespace ModQuickMedOrder
         /// <param name="fieldObject"></param>
         private static void ProcessOrderTypeField(Session abatabSession, FieldObject fieldObject)
         {
-            // TODO This trace file should stay, and we might want to add a description to the msg.
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+            LogEvent.TraceMsg(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, $"OrderType Field Value: {fieldObject.FieldValue}");
 
             // TODO What if there is nothing in the field?
             abatabSession.ModQuickMedOrderConfig.OrderType = fieldObject.FieldValue;
@@ -365,8 +360,7 @@ namespace ModQuickMedOrder
         /// <param name="fieldObject"></param>
         private static void ProcessLastScheduledOrderField(Session abatabSession, FieldObject fieldObject)
         {
-            // TODO This trace file should stay, and we might want to add a description to the msg.
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+            LogEvent.TraceMsg(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, $"LastScheduledOrder Field Value: {fieldObject.FieldValue}");
 
             // TODO What if there is nothing in the field?
             abatabSession.ModQuickMedOrderConfig.LastOrderScheduleText = fieldObject.FieldValue;
