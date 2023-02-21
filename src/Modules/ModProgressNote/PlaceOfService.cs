@@ -124,7 +124,7 @@ namespace ModProgressNote
                                 var test2 = abatabSession.WorkOptObj.GetFieldValue(abatabSession.ModProgressNoteConfig.TelehealthConfig.LocationFieldId);
 
                                 LogEvent.TraceMsg(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, test);
-                                LogEvent.TraceMsg(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, test);
+                                LogEvent.TraceMsg(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, test2);
                                 //LogEvent.Warning(abatabSession, "Dosing issue.");
                             }
                             else
@@ -134,63 +134,14 @@ namespace ModProgressNote
                         }
 
                         LogEvent.TraceMsg(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "here1");
-
-                        //abatabSession.ModProgressNoteConfig.TelehealthConfig.FoundAllRequiredFieldIds = true; // TODO Maybe go straight there? Maybe continue
-
-                        //break;
                     }
 
                     LogEvent.TraceMsg(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "here2");
-
                 }
-
-                //////if (abatabSession.ModProgressNoteConfig.TelehealthConfig.FoundAllRequiredFieldIds)
-                //////{
-                //////    // TODO Might want to make put this in the original check.
-
-                //////    LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
-
-                //////    break;
-                //////}
             }
 
             LogEvent.TraceMsg(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "here");
-
-            //if (abatabSession.ModProgressNoteConfig.TelehealthConfig.ValidServiceChargeCodes.Contains(abatabSession.ModProgressNoteConfig.TelehealthConfig.ServiceChargeCodeValue))
-            //{
-            //    LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, abatabSession.ModProgressNoteConfig.TelehealthConfig.ServiceChargeCodeValue);
-            //    LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, abatabSession.ModProgressNoteConfig.TelehealthConfig.LocationValue);
-
-            //    if (!abatabSession.ModProgressNoteConfig.TelehealthConfig.ValidLocations.Contains(abatabSession.ModProgressNoteConfig.TelehealthConfig.LocationValue))
-            //    {
-            //        LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, abatabSession.ModProgressNoteConfig.TelehealthConfig.ServiceChargeCodeValue);
-            //        LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, abatabSession.ModProgressNoteConfig.TelehealthConfig.LocationValue);
-
-            //        LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
-
-            //        abatabSession.WorkOptObj.ErrorCode = 1;
-            //        abatabSession.WorkOptObj.ErrorMesg = $"WARNING!{Environment.NewLine}" +
-            //                                             $"{Environment.NewLine}" +
-            //                                             $"Service Charge Code {abatabSession.ModProgressNoteConfig.TelehealthConfig.ServiceChargeCodeValue} must match one of these locations:{Environment.NewLine}" +
-            //                                             $"  - first{Environment.NewLine}" +
-            //                                             $"  - second" +
-            //                                             $"{Environment.NewLine}" +
-            //                                             $"Please verify you have the correct location.";
-
-            //        abatabSession.WorkOptObj.SetFieldValue(abatabSession.ModProgressNoteConfig.TelehealthConfig.LocationFieldId, "11");
-
-            //        LogEvent.TraceMsg(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, abatabSession.ModProgressNoteConfig.TelehealthConfig.LocationFieldId);
-            //        //LogEvent.Warning(abatabSession, "Dosing issue.");
-            //    }
-            //    else
-            //    {
-            //        LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, abatabSession.ModProgressNoteConfig.TelehealthConfig.ServiceChargeCodeValue);
-            //        LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, abatabSession.ModProgressNoteConfig.TelehealthConfig.LocationValue);
-            //        LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
-            //    }
-            //}
         }
-
 
         private static void ProcessServiceCodeField(Session abatabSession, FieldObject fieldObject)
         {
