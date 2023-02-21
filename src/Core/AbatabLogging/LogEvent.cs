@@ -1,4 +1,4 @@
-﻿// Abatab.AbatabLogging.LogEvent.cs b230221.1208
+﻿// Abatab.AbatabLogging.LogEvent.cs b230221.1219
 // Copyright (c) A Pretty Cool Program
 
 /* ========================================================================================================
@@ -136,7 +136,7 @@ namespace AbatabLogging
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
         }
 
-        /// <summary>Build a trace log.</summary>
+        /// <summary>Build a trace log without content.</summary>
         /// <param name="abatabSession">Information/data for this session of Abatab.</param>
         /// <param name="exeAssembly">The name of executing assembly.</param
         /// <param name="logMsg">The log message.</param>
@@ -144,6 +144,28 @@ namespace AbatabLogging
         /// <param name="callMember">The method name of where the log is coming from.</param>
         /// <param name="callLine">The file line of where the log is coming from.</param>
         public static void Trace(Session abatabSession, string exeAssembly, string logMsg = "Trace log start...", [CallerFilePath] string callPath = "", [CallerMemberName] string callMember = "", [CallerLineNumber] int callLine = 0)
+        {
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.DebugMode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
+            // Can't really put a trace log here!
+
+            if (abatabSession.LoggingConfig.LoggingMode == "all" || abatabSession.LoggingConfig.LoggingMode.Contains("trace"))
+            {
+                // Can't really put a trace log here!
+                var logPath    = BuildPath.WithCaller("trace", abatabSession.LoggingConfig.SessionRoot, exeAssembly, callPath, callMember, callLine);
+                var logContent = "";
+
+                WriteLogFile.LocalFile(logPath, logContent, Convert.ToInt32(abatabSession.LoggingConfig.WriteDelay));
+            }
+        }
+
+        /// <summary>Build a trace log with content.</summary>
+        /// <param name="abatabSession">Information/data for this session of Abatab.</param>
+        /// <param name="exeAssembly">The name of executing assembly.</param
+        /// <param name="logMsg">The log message.</param>
+        /// <param name="callPath">The filename of where the log is coming from.</param>
+        /// <param name="callMember">The method name of where the log is coming from.</param>
+        /// <param name="callLine">The file line of where the log is coming from.</param>
+        public static void TraceMsg(Session abatabSession, string exeAssembly, string logMsg = "Trace log start...", [CallerFilePath] string callPath = "", [CallerMemberName] string callMember = "", [CallerLineNumber] int callLine = 0)
         {
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.DebugMode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
             // Can't really put a trace log here!

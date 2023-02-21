@@ -133,6 +133,8 @@ namespace ModProgressNote
                                                          $"{Environment.NewLine}" +
                                                          $"ERROR!";
 
+                    abatabSession.WorkOptObj.SetFieldValue(abatabSession.ModProgressNoteConfig.TelehealthConfig.LocationFieldId, "");
+
                     //LogEvent.Warning(abatabSession, "Dosing issue.");
                 }
                 else
@@ -140,10 +142,6 @@ namespace ModProgressNote
                     LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, abatabSession.ModProgressNoteConfig.TelehealthConfig.ServiceChargeCodeValue);
                     LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, abatabSession.ModProgressNoteConfig.TelehealthConfig.LocationValue);
                     LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
-
-
-                    // Percentage isn't greater
-                    // TODO Maybe make this == or something.
                 }
             }
         }

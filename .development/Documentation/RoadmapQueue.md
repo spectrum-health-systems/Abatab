@@ -97,11 +97,7 @@ As functionality is added, more staff use Abatab, and more logfiles are written,
 
 > TBD
 
-As functionality is added, more staff use Abatab, and more logfiles are written, we should probably look at the write delay and determine:
-
-* What is the best global delay?
-* Are there certain logs that should not have a delay?
-* Are there certain logs that should always have a specific delay?
+Right now this is hardcoded.
 
 ### **Log efficiency**
 
