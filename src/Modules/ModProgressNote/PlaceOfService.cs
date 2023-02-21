@@ -128,7 +128,7 @@ namespace ModProgressNote
 
                     LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
-                    abatabSession.WorkOptObj.ErrorCode = 4;
+                    abatabSession.WorkOptObj.ErrorCode = 1;
                     abatabSession.WorkOptObj.ErrorMesg = $"WARNING!{Environment.NewLine}" +
                                                          $"{Environment.NewLine}" +
                                                          $"ERROR!";
