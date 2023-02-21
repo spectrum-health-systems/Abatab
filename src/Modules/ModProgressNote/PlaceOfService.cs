@@ -176,7 +176,7 @@ namespace ModProgressNote
                 LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
                 LogEvent.TraceMsg(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, fieldObject.FieldValue);
 
-                abatabSession.ModProgressNoteConfig.TelehealthConfig.LocationValue = "";
+                abatabSession.ModProgressNoteConfig.TelehealthConfig.LocationValue = null;
             }
             else
             {
