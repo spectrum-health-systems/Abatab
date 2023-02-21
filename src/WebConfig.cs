@@ -1,12 +1,10 @@
 ﻿// Abatab.WebConfig.cs b230215.1009
 // Copyright (c) A Pretty Cool Program
 
-using Abatab.Properties;
-
-using AbatabLogging;
-
 using System.Collections.Generic;
 using System.Reflection;
+using Abatab.Properties;
+using AbatabLogging;
 
 namespace Abatab
 {
