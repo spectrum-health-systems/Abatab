@@ -1,4 +1,4 @@
-﻿// Abatab.AbatabLogging.BuildContent.cs b230123.1210
+﻿// Abatab.AbatabLogging.BuildContent.cs b230221.1208
 // Copyright (c) A Pretty Cool Program
 
 /* ========================================================================================================
@@ -10,13 +10,11 @@
  * it's a good idea to test the logging functionality extensively prior to deploying to production.
  ========================================================================================================*/
 
-using AbatabData;
-
-using ScriptLinkStandard.Objects;
-
 using System;
 using System.IO;
 using System.Reflection;
+using AbatabData;
+using ScriptLinkStandard.Objects;
 
 namespace AbatabLogging
 {
@@ -158,6 +156,7 @@ namespace AbatabLogging
                               "===============";
 
             var sessionDetail = $"{Environment.NewLine}" +
+                                $"Abatab Version:      23.2.0-development{Environment.NewLine}" +
                                 $"Abatab Mode:         {abatabSession.AbatabMode}{Environment.NewLine}" +
                                 $"Abatab Root:         {abatabSession.AbatabRoot}{Environment.NewLine}" +
                                 $"Debugging Mode:      {abatabSession.DebugglerConfig.DebugMode}{Environment.NewLine}" +

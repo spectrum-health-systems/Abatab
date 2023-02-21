@@ -1,14 +1,11 @@
-﻿// Abatab.ModQuickMedOrder.Dose.cs b230123.1258
+﻿// Abatab.ModQuickMedOrder.Dose.cs b230221.1208
 // Copyright (c) A Pretty Cool Program
-
-using AbatabData;
-
-using AbatabLogging;
-
-using ScriptLinkStandard.Objects;
 
 using System;
 using System.Reflection;
+using AbatabData;
+using AbatabLogging;
+using ScriptLinkStandard.Objects;
 
 namespace ModQuickMedOrder
 {

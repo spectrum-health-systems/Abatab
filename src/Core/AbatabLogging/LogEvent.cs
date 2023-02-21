@@ -1,4 +1,4 @@
-﻿// Abatab.AbatabLogging.LogEvent.cs b230206.1015
+﻿// Abatab.AbatabLogging.LogEvent.cs b230221.1208
 // Copyright (c) A Pretty Cool Program
 
 /* ========================================================================================================
@@ -10,13 +10,12 @@
  * it's a good idea to test the logging functionality extensively prior to deploying to production.
  ========================================================================================================*/
 
-using AbatabData;
-
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 using System.Runtime.CompilerServices;
+using AbatabData;
 
 namespace AbatabLogging
 {

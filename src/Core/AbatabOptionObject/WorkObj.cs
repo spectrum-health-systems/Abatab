@@ -1,13 +1,10 @@
-﻿// Abatab.AbatabOptionObject.WorkObj.cs b230119.0941
+﻿// Abatab.AbatabOptionObject.WorkObj.cs b230221.1208
 // Copyright (c) A Pretty Cool Program
 
-using AbatabData;
-
-using AbatabLogging;
-
-using ScriptLinkStandard.Objects;
-
 using System.Reflection;
+using AbatabData;
+using AbatabLogging;
+using ScriptLinkStandard.Objects;
 
 namespace AbatabOptionObject
 {

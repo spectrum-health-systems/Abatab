@@ -1,4 +1,4 @@
-﻿// Abatab.AbatabOptionObject.Verify.cs b230119.0941
+﻿// Abatab.AbatabOptionObject.Verify.cs b230221.1208
 // Copyright (c) A Pretty Cool Program
 
 // NOT USED.
