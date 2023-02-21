@@ -185,6 +185,12 @@ Verify that DocFX has what it needs, and doesn't have unnecessary data.
 
 ## Module functionality
 
+### **ModProgressNote: PlaceOfService-VerifyTelehealth tied to File Note**
+
+> TBD
+
+Currently tied to two other fields, can probably simplify/speed up things by tying to the File Note button.
+
 ### **ModCommon: Maybe remove?**
 
 > TBD

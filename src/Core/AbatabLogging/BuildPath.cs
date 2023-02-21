@@ -1,4 +1,4 @@
-﻿// Abatab.AbatabLogging.BuildPath.cs b230123.1210
+﻿// Abatab.AbatabLogging.BuildPath.cs b230221.1109
 // Copyright (c) A Pretty Cool Program
 
 /* ========================================================================================================
@@ -10,10 +10,9 @@
  * it's a good idea to test the logging functionality extensively prior to deploying to production.
  ========================================================================================================*/
 
-using AbatabSystem;
-
 using System;
 using System.IO;
+using AbatabSystem;
 
 namespace AbatabLogging
 {
@@ -41,8 +40,9 @@ namespace AbatabLogging
                     return $@"{logDir}\{DateTime.Now:HHmmss_fffffff}-{exeAssembly}-{Path.GetFileName(callPath)}-{callMember}-{callLine}.{eventType}";
 
                 case "trace":
+                case "tracemsg":
                     logDir = BuildTraceLogDir(logRoot);
-                    return $@"{logDir}\{DateTime.Now:HHmmss_fffffff}-{exeAssembly}-{Path.GetFileName(callPath)}-{callMember}-{callLine}.trace";
+                    return $@"{logDir}\{DateTime.Now:HHmmss_fffffff}-{exeAssembly}-{Path.GetFileName(callPath)}-{callMember}-{callLine}.{eventType}";
 
                 default:
                     logDir = BuildLostLogDir(logRoot);
