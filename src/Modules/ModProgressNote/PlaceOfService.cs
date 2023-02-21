@@ -11,7 +11,7 @@ namespace ModProgressNote
 {
     internal class PlaceOfService
     {
-        public static void VerifyTelehealth(Session abatabSession)
+        public static OptionObject2015 VerifyTelehealth(Session abatabSession)
         {
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.DebugMode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
@@ -20,9 +20,9 @@ namespace ModProgressNote
 
             AbatabOptionObject.WorkObj.ClearErrorData(abatabSession);
 
-            ParseObject(abatabSession);
-
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+
+            return ParseObject(abatabSession);
         }
 
         /// <summary>Initializes dosing information.</summary>
@@ -58,14 +58,14 @@ namespace ModProgressNote
 
         /// <summary>TBD</summary>
         /// <param name="abatabSession"></param>
-        private static void ParseObject(Session abatabSession)
+        private static OptionObject2015 ParseObject(Session abatabSession)
         {
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, abatabSession.DebugglerConfig.DebugMode, abatabSession.DebugglerConfig.DebugEventRoot, "[DEBUG]");
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
             var bb = false;
 
-
+            OptionObject2015 newThing = new OptionObject2015();
             /* Loop through each FormObject in the OptionObject.
             */
             foreach (FormObject formObject in abatabSession.WorkOptObj.Forms)
@@ -126,7 +126,10 @@ namespace ModProgressNote
 
                                 var test2 = abatabSession.WorkOptObj.GetFieldValue(abatabSession.ModProgressNoteConfig.TelehealthConfig.LocationFieldId);
 
+                                newThing = abatabSession.WorkOptObj.ToReturnOptionObject();
+
                                 bb = true;
+
 
                                 LogEvent.TraceMsg(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, test);
                                 LogEvent.TraceMsg(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, test2);
@@ -161,6 +164,7 @@ namespace ModProgressNote
             }
 
             LogEvent.TraceMsg(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "four");
+            return newThing;
         }
 
         private static void ProcessServiceCodeField(Session abatabSession, FieldObject fieldObject)
