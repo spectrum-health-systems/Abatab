@@ -1,7 +1,6 @@
 ﻿// ModProgressNote.PlaceOfService.cs b230221.1208
 // Copyright (c) A Pretty Cool Program
 
-using System;
 using System.Reflection;
 using AbatabData;
 using AbatabLogging;
@@ -128,12 +127,12 @@ namespace ModProgressNote
 
                     LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
-                    abatabSession.WorkOptObj.ErrorCode = 3;
-                    abatabSession.WorkOptObj.ErrorMesg = $"WARNING!{Environment.NewLine}" +
-                                                         $"{Environment.NewLine}" +
-                                                         $"ERROR!";
+                    //abatabSession.WorkOptObj.ErrorCode = 3;
+                    //abatabSession.WorkOptObj.ErrorMesg = $"WARNING!{Environment.NewLine}" +
+                    //                                     $"{Environment.NewLine}" +
+                    //                                     $"ERROR!";
 
-                    abatabSession.WorkOptObj.SetFieldValue(abatabSession.ModProgressNoteConfig.TelehealthConfig.LocationFieldId, "");
+                    //abatabSession.WorkOptObj.SetFieldValue(abatabSession.ModProgressNoteConfig.TelehealthConfig.LocationFieldId, "");
 
                     LogEvent.TraceMsg(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, abatabSession.ModProgressNoteConfig.TelehealthConfig.LocationFieldId);
                     //LogEvent.Warning(abatabSession, "Dosing issue.");
