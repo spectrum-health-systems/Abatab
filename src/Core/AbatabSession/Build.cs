@@ -1,17 +1,14 @@
-﻿// Abatab.AbatabSession.Build.cs b230215.1301
+﻿// Abatab.AbatabSession.Build.cs b230221.1208
 // Copyright (c) A Pretty Cool Program
-
-using AbatabData;
-using AbatabData.Core;
-using AbatabData.Module;
-
-using AbatabLogging;
-
-using NTST.ScriptLinkService.Objects;
 
 using System;
 using System.Collections.Generic;
 using System.Reflection;
+using AbatabData;
+using AbatabData.Core;
+using AbatabData.Module;
+using AbatabLogging;
+using ScriptLinkStandard.Objects;
 
 namespace AbatabSession
 {

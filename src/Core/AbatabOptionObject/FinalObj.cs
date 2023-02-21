@@ -1,11 +1,9 @@
-﻿// Abatab.AbatabOptionObject.FinalObj.cs b230119.0941
+﻿// Abatab.AbatabOptionObject.FinalObj.cs b230221.1208
 // Copyright (c) A Pretty Cool Program
 
-using AbatabData;
-
-using AbatabLogging;
-
 using System.Reflection;
+using AbatabData;
+using AbatabLogging;
 
 namespace AbatabOptionObject
 {

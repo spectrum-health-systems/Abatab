@@ -248,9 +248,9 @@
       <Project>{62d98fc0-0a8d-4278-a96b-c9acefb79ef3}</Project>
       <Name>ModTesting</Name>
     </ProjectReference>
-    <ProjectReference Include="ThirdParty\NTST.ScriptLinkService.Objects\NTST.ScriptLinkService.Objects.vbproj">
-      <Project>{8A8A6089-3286-42E6-9F76-B61784709654}</Project>
-      <Name>NTST.ScriptLinkService.Objects</Name>
+    <ProjectReference Include="ThirdParty\ScriptLinkStandard\ScriptLinkStandard.csproj">
+      <Project>{24AE23B0-9523-40F4-853B-737DE3190C56}</Project>
+      <Name>ScriptLinkStandard</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

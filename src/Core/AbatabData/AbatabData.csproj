@@ -59,18 +59,17 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\ThirdParty\NTST.ScriptLinkService.Objects\NTST.ScriptLinkService.Objects.vbproj">
-      <Project>{8a8a6089-3286-42e6-9f76-b61784709654}</Project>
-      <Name>NTST.ScriptLinkService.Objects</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\ThirdParty\ScriptLinkStandard\ScriptLinkStandard.csproj">
+      <Project>{24ae23b0-9523-40f4-853b-737de3190c56}</Project>
+      <Name>ScriptLinkStandard</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
