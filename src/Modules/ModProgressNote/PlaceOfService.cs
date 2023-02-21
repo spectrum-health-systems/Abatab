@@ -133,9 +133,11 @@ namespace ModProgressNote
                     abatabSession.WorkOptObj.ErrorCode = 1;
                     abatabSession.WorkOptObj.ErrorMesg = $"WARNING!{Environment.NewLine}" +
                                                          $"{Environment.NewLine}" +
-                                                         $"ERROR!";
+                                                         $"Service Charge Code {abatabSession.ModProgressNoteConfig.TelehealthConfig.ServiceChargeCodeValue} must match one of these locations:{Environment.NewLine}" +
+                                                         $"  - first" +
+                                                         $"  - second";
 
-                    abatabSession.WorkOptObj.SetFieldValue(abatabSession.ModProgressNoteConfig.TelehealthConfig.LocationFieldId, "11");
+                    // abatabSession.WorkOptObj.SetFieldValue(abatabSession.ModProgressNoteConfig.TelehealthConfig.LocationFieldId, "11");
 
                     LogEvent.TraceMsg(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, abatabSession.ModProgressNoteConfig.TelehealthConfig.LocationFieldId);
                     //LogEvent.Warning(abatabSession, "Dosing issue.");
@@ -148,6 +150,7 @@ namespace ModProgressNote
                 }
             }
         }
+
 
         private static void ProcessServiceCodeField(Session abatabSession, FieldObject fieldObject)
         {
@@ -195,4 +198,5 @@ namespace ModProgressNote
 
 
     }
+
 }
