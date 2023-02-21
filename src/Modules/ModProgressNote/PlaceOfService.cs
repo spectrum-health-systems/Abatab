@@ -174,6 +174,7 @@ namespace ModProgressNote
             {
                 // TODO This trace file should stay, and we might want to add a description to the msg.
                 LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+                LogEvent.TraceMsg(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, fieldObject.FieldValue);
 
                 abatabSession.ModProgressNoteConfig.TelehealthConfig.LocationValue = "";
             }
