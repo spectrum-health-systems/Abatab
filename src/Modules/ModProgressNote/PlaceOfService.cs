@@ -124,7 +124,7 @@ namespace ModProgressNote
                                 var test2 = abatabSession.WorkOptObj.GetFieldValue(abatabSession.ModProgressNoteConfig.TelehealthConfig.LocationFieldId);
 
                                 LogEvent.TraceMsg(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, test);
-
+                                LogEvent.TraceMsg(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, test);
                                 //LogEvent.Warning(abatabSession, "Dosing issue.");
                             }
                             else
@@ -133,7 +133,7 @@ namespace ModProgressNote
                             }
                         }
 
-
+                        LogEvent.TraceMsg(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "here1");
 
                         //abatabSession.ModProgressNoteConfig.TelehealthConfig.FoundAllRequiredFieldIds = true; // TODO Maybe go straight there? Maybe continue
 
@@ -152,8 +152,7 @@ namespace ModProgressNote
                 //////}
             }
 
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, abatabSession.ModProgressNoteConfig.TelehealthConfig.ServiceChargeCodeValue);
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, abatabSession.ModProgressNoteConfig.TelehealthConfig.LocationValue);
+            LogEvent.TraceMsg(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "here");
 
             //if (abatabSession.ModProgressNoteConfig.TelehealthConfig.ValidServiceChargeCodes.Contains(abatabSession.ModProgressNoteConfig.TelehealthConfig.ServiceChargeCodeValue))
             //{
