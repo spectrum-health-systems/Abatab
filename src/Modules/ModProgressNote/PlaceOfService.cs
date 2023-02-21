@@ -133,7 +133,7 @@ namespace ModProgressNote
                                                          $"{Environment.NewLine}" +
                                                          $"ERROR!";
 
-                    abatabSession.WorkOptObj.SetFieldValue(abatabSession.ModProgressNoteConfig.TelehealthConfig.LocationFieldId, null);
+                    abatabSession.WorkOptObj.SetFieldValue(abatabSession.ModProgressNoteConfig.TelehealthConfig.LocationFieldId, "\\r\\n");
 
                     LogEvent.TraceMsg(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, abatabSession.ModProgressNoteConfig.TelehealthConfig.LocationFieldId);
                     //LogEvent.Warning(abatabSession, "Dosing issue.");
