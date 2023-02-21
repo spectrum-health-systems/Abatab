@@ -24,7 +24,7 @@
             </list>
             </remarks>
         </member>
-        <member name="M:Abatab.Abatab.RunScript(NTST.ScriptLinkService.Objects.OptionObject2015,System.String)">
+        <member name="M:Abatab.Abatab.RunScript(ScriptLinkStandard.Objects.OptionObject2015,System.String)">
             <summary>Executes script parameter request from Avatar, then returns a potentially modified OptionObject to Avatar.</summary>
             <param name="sentOptionObject">The original OptionObject sent from Avatar.</param>
             <param name="scriptParameter">The original Script Parameter request from Avatar.</param>

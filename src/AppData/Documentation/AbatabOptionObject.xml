@@ -7,7 +7,7 @@
         <member name="T:AbatabOptionObject.WorkObj">
             <summary>Logic for working with the WorkOptObj.</summary>
         </member>
-        <member name="M:AbatabOptionObject.WorkObj.Build(NTST.ScriptLinkService.Objects.OptionObject2015)">
+        <member name="M:AbatabOptionObject.WorkObj.Build(ScriptLinkStandard.Objects.OptionObject2015)">
             <summary>
             Builds the WorkOptObj.
             </summary>
@@ -39,7 +39,7 @@
             Verification for OptionObjects
             </summary>
         </member>
-        <member name="M:AbatabOptionObject.Verify.NotModified(NTST.ScriptLinkService.Objects.OptionObject2015,NTST.ScriptLinkService.Objects.OptionObject2015)">
+        <member name="M:AbatabOptionObject.Verify.NotModified(ScriptLinkStandard.Objects.OptionObject2015,ScriptLinkStandard.Objects.OptionObject2015)">
             <summary>Verify that the sentOptObj has not been modified.</summary>
             <param name="sentOptObj"></param>
             <param name="altOptObj"></param>
