@@ -133,14 +133,16 @@ namespace ModProgressNote
                             }
                         }
 
-                        LogEvent.TraceMsg(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "here1");
+                        LogEvent.TraceMsg(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "one");
                     }
 
-                    LogEvent.TraceMsg(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "here2");
+                    LogEvent.TraceMsg(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "two");
                 }
+
+                LogEvent.TraceMsg(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "three");
             }
 
-            LogEvent.TraceMsg(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "here");
+            LogEvent.TraceMsg(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "four");
         }
 
         private static void ProcessServiceCodeField(Session abatabSession, FieldObject fieldObject)
