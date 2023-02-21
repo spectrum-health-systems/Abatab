@@ -215,7 +215,9 @@ namespace ModProgressNote
 
         private static void ProcessServiceCodeField(Session abatabSession, FieldObject fieldObject)
         {
-            LogEvent.TraceMsg(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, fieldObject.FieldValue);
+            var traceMsg = $"Field #{abatabSession.ModProgressNoteConfig.TelehealthConfig.ServiceChargeCodeFieldId} - value: {fieldObject.FieldValue}";
+
+            LogEvent.TraceMsg(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, traceMsg);
 
             // TODO Should make sure that an empty string is enough here, or if we need to consider null/whitespace...or using string.Length.
             if (fieldObject.FieldValue?.Length == 0)
