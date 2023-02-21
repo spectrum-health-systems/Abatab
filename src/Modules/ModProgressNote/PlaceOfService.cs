@@ -119,7 +119,7 @@ namespace ModProgressNote
 
                                 LogEvent.TraceMsg(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, test);
 
-                                abatabSession.WorkOptObj.SetFieldValue(abatabSession.ModProgressNoteConfig.TelehealthConfig.LocationFieldId, "11");
+                                abatabSession.WorkOptObj.SetFieldValue(abatabSession.ModProgressNoteConfig.TelehealthConfig.LocationFieldId, "T110");
 
                                 var test2 = abatabSession.WorkOptObj.GetFieldValue(abatabSession.ModProgressNoteConfig.TelehealthConfig.LocationFieldId);
 
