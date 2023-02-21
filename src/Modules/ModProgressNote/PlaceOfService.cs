@@ -140,6 +140,8 @@ namespace ModProgressNote
                         //break;
                     }
 
+                    LogEvent.TraceMsg(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "here2");
+
                 }
 
                 //////if (abatabSession.ModProgressNoteConfig.TelehealthConfig.FoundAllRequiredFieldIds)
