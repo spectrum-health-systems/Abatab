@@ -1,4 +1,4 @@
-﻿// Abatab.ModQuickMedOrder.Dose.cs b230217.1002
+﻿// Abatab.ModQuickMedOrder.Dose.cs b230221.1141
 // Copyright (c) A Pretty Cool Program
 
 using System;
