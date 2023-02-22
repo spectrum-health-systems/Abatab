@@ -309,13 +309,13 @@
   
   
   <a id="AbatabLogging_LogEvent_Session_" data-uid="AbatabLogging.LogEvent.Session*"></a>
-  <h4 id="AbatabLogging_LogEvent_Session_AbatabData_Session_System_String_" data-uid="AbatabLogging.LogEvent.Session(AbatabData.Session,System.String)">Session(Session, String)</h4>
+  <h4 id="AbatabLogging_LogEvent_Session_AbatabData_Session_" data-uid="AbatabLogging.LogEvent.Session(AbatabData.Session)">Session(Session)</h4>
   <div class="markdown level1 summary"><p>Builds a session detail log.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void Session(Session abatabSession, string logMsg = &quot;Session detail log.&quot;)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void Session(Session abatabSession)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -333,23 +333,17 @@
         <td><p>Information/data for this session of Abatab.</p>
 </td>
       </tr>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">logMsg</span></td>
-        <td><p>The log message.</p>
-</td>
-      </tr>
     </tbody>
   </table>
   
   
   <a id="AbatabLogging_LogEvent_Trace_" data-uid="AbatabLogging.LogEvent.Trace*"></a>
-  <h4 id="AbatabLogging_LogEvent_Trace_AbatabData_Session_System_String_System_String_System_String_System_String_System_Int32_" data-uid="AbatabLogging.LogEvent.Trace(AbatabData.Session,System.String,System.String,System.String,System.String,System.Int32)">Trace(Session, String, String, String, String, Int32)</h4>
+  <h4 id="AbatabLogging_LogEvent_Trace_AbatabData_Session_System_String_System_String_System_String_System_Int32_" data-uid="AbatabLogging.LogEvent.Trace(AbatabData.Session,System.String,System.String,System.String,System.Int32)">Trace(Session, String, String, String, Int32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void Trace(Session abatabSession, string exeAssembly, string logMsg = &quot;Trace log start...&quot;, string callPath = &quot;&quot;, string callMember = &quot;&quot;, int callLine = 0)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void Trace(Session abatabSession, string exeAssembly, string callPath = &quot;&quot;, string callMember = &quot;&quot;, int callLine = 0)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -369,11 +363,6 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">exeAssembly</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">logMsg</span></td>
         <td></td>
       </tr>
       <tr>

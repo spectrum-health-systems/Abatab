@@ -1,30 +1,14 @@
-﻿// Abatab v23.2.0-development+230222.0949
-// Abatab.asmx.cs b230221.1208
+﻿// Abatab v23.2.0-development+230222.1149
+// Abatab.asmx.cs bxxxxxx.xxxx
 // (c) A Pretty Cool Program
 
-
-/* This is the working development version of Abatab v23.2.
- */
-
 using System.Collections.Generic;
-using System.Reflection;
 using System.Web.Services;
-using Abatab.Properties;
-using AbatabData;
-using AbatabLogging;
-using AbatabSession;
 using ScriptLinkStandard.Objects;
 
 namespace Abatab
 {
-    /// <summary>The entry point for Abatab.</summary>
-    /// <remarks>
-    /// Abatab receives two things from Avatar:
-    /// <list type="number">
-    /// <item>An <see href="../man/manAppendix.html#optionobject">OptionObject</see>, which contains all of the information that Abatab needs to do it's thing.</item>
-    /// <item>A <see href="../man/manAppendix.html#script-paramater">Script Parameter</see> that tells Abatab what it needs to do with the OptionObject.</item>
-    /// </list>
-    /// </remarks>
+    /// <summary>Abatab: A custom web service for myAvatar.</summary>
     [WebService(Namespace = "http://tempuri.org/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
@@ -33,10 +17,10 @@ namespace Abatab
         /// <summary>Returns the current version of Abatab.</summary>
         /// <returns>The current version of Abatab.</returns>
         /// <remarks>
-        /// <list type="bullet">
-        /// <item>This method is required by Avatar.</item>
-        /// <item>The version number is always the version that is in development.</item>
-        /// </list>
+        ///     <list type="bullet">
+        ///         <item>This method is required by Avatar.</item>
+        ///         <item>The version number is always the version that is in development.</item>
+        ///     </list>
         /// </remarks>
         [WebMethod]
         public string GetVersion()
@@ -45,31 +29,30 @@ namespace Abatab
         }
 
         /// <summary>Executes script parameter request from Avatar, then returns a potentially modified OptionObject to Avatar.</summary>
-        /// <param name="sentOptionObject">The original OptionObject sent from Avatar.</param>
-        /// <param name="scriptParameter">The original Script Parameter request from Avatar.</param>
+        /// <param name="sentOptObj">The original OptionObject sent from Avatar.</param>
+        /// <param name="scriptParam">The original Script Parameter request from Avatar.</param>
         /// <returns>A finalized OptionObject that will be returned to Avatar.</returns>
         /// <remarks>
-        /// <list type="bullet">
-        /// <item>This method is required by Avatar.</item>
-        /// <item>This is the only time a <see href="../man/manAppendix.html#logging">Primeval debug log</see> is written.</item>
-        /// </list>
+        ///     <list type="bullet">
+        ///         <item>This method is required by Avatar.</item>
+        ///     </list>
         /// </remarks>
         [WebMethod]
-        public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string scriptParameter)
+        public OptionObject2015 RunScript(OptionObject2015 sentOptObj, string scriptParam)
         {
-            LogEvent.PrimevalDebug(Settings.Default.DebugMode, Assembly.GetExecutingAssembly().GetName().Name, $@"{Settings.Default.AbatabDataRoot}\{Settings.Default.AvatarEnvironment}\logs");
-
             Dictionary<string, string> webConfig = WebConfig.Load();
 
-            Session abatabSession = Build.NewSession(sentOptionObject, scriptParameter, webConfig);
+            if (webConfig["AbatabMode"] == "enabled")
+            {
+                Flightpath.Starter(sentOptObj, scriptParam, webConfig);
+                return sentOptObj.ToReturnOptionObject();
+            }
+            else
+            {
+                // Do something.
+            }
 
-            Roundhouse.ParseRequest(abatabSession);
-
-            LogEvent.Session(abatabSession, "Session complete.");
-
-            LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
-
-            return abatabSession.FinalOptObj;
+            return sentOptObj;
         }
     }
 }

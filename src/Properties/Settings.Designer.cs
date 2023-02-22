@@ -25,7 +25,7 @@ namespace Abatab.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("normal")]
+        [global::System.Configuration.DefaultSettingValueAttribute("enabled")]
         public string AbatabMode {
             get {
                 return ((string)(this["AbatabMode"]));
@@ -35,9 +35,9 @@ namespace Abatab.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("C:\\AvatoolWebService\\Abatab_")]
-        public string AbatabRoot {
+        public string AbatabServiceRoot {
             get {
-                return ((string)(this["AbatabRoot"]));
+                return ((string)(this["AbatabServiceRoot"]));
             }
         }
         
@@ -70,52 +70,16 @@ namespace Abatab.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("disabled")]
-        public string DebugMode {
-            get {
-                return ((string)(this["DebugMode"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("logs\\debug")]
-        public string DebugLogRoot {
-            get {
-                return ((string)(this["DebugLogRoot"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("all")]
-        public string LogMode {
+        public string LoggerMode {
             get {
-                return ((string)(this["LogMode"]));
+                return ((string)(this["LoggerMode"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("normal")]
-        public string LogDetail {
-            get {
-                return ((string)(this["LogDetail"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("10")]
-        public string LogWriteDelay {
-            get {
-                return ((string)(this["LogWriteDelay"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("_Abatab")]
+        [global::System.Configuration.DefaultSettingValueAttribute("_abatab_")]
         public string AbatabFallbackUserName {
             get {
                 return ((string)(this["AbatabFallbackUserName"]));
@@ -200,6 +164,15 @@ namespace Abatab.Properties {
         public string ModProgressNoteAuthorizedUsers {
             get {
                 return ((string)(this["ModProgressNoteAuthorizedUsers"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("10")]
+        public string LoggerDelay {
+            get {
+                return ((string)(this["LoggerDelay"]));
             }
         }
     }
