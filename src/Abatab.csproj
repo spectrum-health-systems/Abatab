@@ -82,6 +82,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Roundhouse.cs" />
     <Compile Include="WebConfig.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -98,17 +99,25 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\AbatabThirdParty\ScriptLinkStandard\ScriptLinkStandard.csproj">
+      <Project>{05F6E7BA-9FF2-4DEF-98A4-9A96640514CC}</Project>
+      <Name>ScriptLinkStandard</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Core\AbatabCatalog\src\AbatabCatalog.csproj">
       <Project>{29b7250b-4dca-4d0b-8e3d-ba03a05936ce}</Project>
       <Name>AbatabCatalog</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\AbatabLogger\src\AbatabLogger.csproj">
+      <Project>{7CD635C2-B2F4-40A8-891C-5D1A8D9BE311}</Project>
+      <Name>AbatabLogger</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Core\AbatabSession\src\AbatabSession.csproj">
       <Project>{49e180b2-690c-4237-bcf0-6702b226bba3}</Project>
       <Name>AbatabSession</Name>
     </ProjectReference>
-    <ProjectReference Include="ThirdParty\ScriptLinkStandard\ScriptLinkStandard.csproj">
-      <Project>{9e8f14ea-f243-4c10-b976-6c8941b43df8}</Project>
-      <Name>ScriptLinkStandard</Name>
+    <ProjectReference Include="..\..\Module\AbatabTesting\src\AbatabTesting.csproj">
+      <Project>{f0c43d85-18bd-44a3-b573-cda0072df910}</Project>
+      <Name>AbatabTesting</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
