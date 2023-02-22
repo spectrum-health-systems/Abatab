@@ -43,7 +43,7 @@ namespace Abatab
         {
             /* Uncomment this line to write a simple log file that verifies Abatab is executing.
             */
-            File.WriteAllText(@"C:\AbatabData\primeval.log", scriptParam);
+            File.WriteAllText(@"C:\AbatabData\primeval.log", $"Script Parameter: {scriptParam}");
 
             Dictionary<string, string> webConfig = WebConfig.Load();
 
