@@ -25,23 +25,23 @@ namespace Abatab
 
             var test = new Dictionary<string, string>()
             {
-                { "AbatabMode",                             Settings.Default.AbatabMode.Trim() },
-                { "AbatabServiceRoot",                      Settings.Default.AbatabServiceRoot.Trim() },
-                { "AbatabDataRoot",                         Settings.Default.AbatabDataRoot.Trim() },
-                { "PublicAccessRoot",                       Settings.Default.PublicAccessRoot.Trim() },
-                { "LoggerMode",                             Settings.Default.LoggerMode.Trim() },
-                { "LoggerDelay",                            Settings.Default.LoggerDelay.Trim() },
-                { "AvatarEnvironment",                      Settings.Default.AvatarEnvironment.Trim() },
-                { "AbatabFallbackUserName",                 Settings.Default.AbatabFallbackUserName.Trim() },
-                { "ModProgressNoteMode",                    Settings.Default.ModProgressNoteMode.Trim() },
-                { "ModProgressNoteAuthorizedUsers",         Settings.Default.ModProgressNoteAuthorizedUsers.Trim() },
-                { "ModPrototypeMode",                       Settings.Default.ModPrototypeMode.Trim() },
-                { "ModQuickMedOrderMode",                   Settings.Default.ModQuickMedOrderMode.Trim() },
-                { "ModQuickMedOrderAuthorizedUsers",        Settings.Default.ModQuickMedOrderAuthorizedUsers.Trim()  },
-                { "ModQuickMedOrderValidOrderTypes",        Settings.Default.ModQuickMedOrderValidOrderTypes.Trim() },
-                { "ModQuickMedOrderDosePercentBoundary",    Settings.Default.ModQuickMedOrderDosePercentBoundary.Trim() },
-                { "ModQuickMedOrderDoseMilligramsBoundary", Settings.Default.ModQuickMedOrderDoseMilligramsBoundary.Trim() },
-                { "ModTestingMode",                         Settings.Default.ModTestingMode.Trim() }
+                { "AbatabMode",                             Settings.Default.AbatabMode },
+                { "AbatabServiceRoot",                      Settings.Default.AbatabServiceRoot },
+                { "AbatabDataRoot",                         Settings.Default.AbatabDataRoot },
+                { "PublicAccessRoot",                       Settings.Default.PublicAccessRoot },
+                { "LoggerMode",                             Settings.Default.LoggerMode },
+                { "LoggerDelay",                            Settings.Default.LoggerDelay },
+                { "AvatarEnvironment",                      Settings.Default.AvatarEnvironment },
+                { "AbatabFallbackUserName",                 Settings.Default.AbatabFallbackUserName },
+                { "ModProgressNoteMode",                    Settings.Default.ModProgressNoteMode },
+                { "ModProgressNoteAuthorizedUsers",         Settings.Default.ModProgressNoteAuthorizedUsers },
+                { "ModPrototypeMode",                       Settings.Default.ModPrototypeMode },
+                { "ModQuickMedOrderMode",                   Settings.Default.ModQuickMedOrderMode },
+                { "ModQuickMedOrderAuthorizedUsers",        Settings.Default.ModQuickMedOrderAuthorizedUsers  },
+                { "ModQuickMedOrderValidOrderTypes",        Settings.Default.ModQuickMedOrderValidOrderTypes },
+                { "ModQuickMedOrderDosePercentBoundary",    Settings.Default.ModQuickMedOrderDosePercentBoundary },
+                { "ModQuickMedOrderDoseMilligramsBoundary", Settings.Default.ModQuickMedOrderDoseMilligramsBoundary },
+                { "ModTestingMode",                         Settings.Default.ModTestingMode }
             };
 
             LogEvent.Primeval(@"C:\AbatabData\primeval.log7", $"Hi");
