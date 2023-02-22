@@ -42,7 +42,7 @@ namespace Abatab
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string scriptParameter)
         {
 
-            File.WriteAllText(@"C:\AbatabData\primeval.log", $"[0]Script Parameter: {scriptParameter}");
+            File.WriteAllText(@"C:\AbatabData\primeval.log0", $"Script Parameter: {scriptParameter}");
 
             Dictionary<string, string> webConfig = WebConfig.Load();
 
@@ -56,7 +56,7 @@ namespace Abatab
             //    // Do something.
             //}
 
-            File.WriteAllText(@"C:\AbatabData\primeval.log", $"[1]Script Parameter: {scriptParameter}");
+            File.WriteAllText(@"C:\AbatabData\primeval.log1", $"[1]Script Parameter: {scriptParameter}");
 
             return sentOptionObject.ToReturnOptionObject(); ;
         }
