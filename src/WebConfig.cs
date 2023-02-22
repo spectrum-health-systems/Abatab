@@ -25,13 +25,13 @@ namespace Abatab
 
             var test = new Dictionary<string, string>()
             {
-                //{ "AbatabMode",                             Settings.Default.AbatabMode.Trim() },
-                //{ "AbatabServiceRoot",                      Settings.Default.AbatabServiceRoot.Trim() },
-                //{ "AbatabDataRoot",                         Settings.Default.AbatabDataRoot.Trim() },
-                //{ "PublicAccessRoot",                       Settings.Default.PublicAccessRoot.Trim() },
-                //{ "LoggerMode",                             Settings.Default.LoggerMode.Trim() },
-                //{ "LoggerDelay",                            Settings.Default.LoggerDelay.Trim() },
-                //{ "AvatarEnvironment",                      Settings.Default.AvatarEnvironment.Trim() },
+                { "AbatabMode",                             Settings.Default.AbatabMode.Trim() },
+                { "AbatabServiceRoot",                      Settings.Default.AbatabServiceRoot.Trim() },
+                { "AbatabDataRoot",                         Settings.Default.AbatabDataRoot.Trim() },
+                { "PublicAccessRoot",                       Settings.Default.PublicAccessRoot.Trim() },
+                { "LoggerMode",                             Settings.Default.LoggerMode.Trim() },
+                { "LoggerDelay",                            Settings.Default.LoggerDelay.Trim() },
+                { "AvatarEnvironment",                      Settings.Default.AvatarEnvironment.Trim() },
                 { "AbatabFallbackUserName",                 Settings.Default.AbatabFallbackUserName.Trim() },
                 { "ModProgressNoteMode",                    Settings.Default.ModProgressNoteMode.Trim() },
                 { "ModProgressNoteAuthorizedUsers",         Settings.Default.ModProgressNoteAuthorizedUsers.Trim() },
@@ -43,6 +43,8 @@ namespace Abatab
                 { "ModQuickMedOrderDoseMilligramsBoundary", Settings.Default.ModQuickMedOrderDoseMilligramsBoundary.Trim() },
                 { "ModTestingMode",                         Settings.Default.ModTestingMode.Trim() }
             };
+
+            LogEvent.Primeval(@"C:\AbatabData\primeval.log7", $"Hi");
 
             return test;
         }
