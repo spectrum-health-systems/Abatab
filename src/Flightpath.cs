@@ -2,6 +2,7 @@
 // Copyright (c) A Pretty Cool Program
 
 using System.Collections.Generic;
+using System.Reflection;
 using AbatabCatalog.Dossier;
 using AbatabSession;
 using ScriptLinkStandard.Objects;
@@ -18,6 +19,7 @@ namespace Abatab
         public static void Starter(OptionObject2015 sentOptObj, string scriptParam, Dictionary<string, string> webConfig)
         {
             SessionDetail session = Build.NewSession(sentOptObj, scriptParam, webConfig);
+            AbatabLogger.LogEvent.Trace(session, Assembly.GetExecutingAssembly().GetName().Name);
         }
     }
 }

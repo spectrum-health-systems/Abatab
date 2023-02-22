@@ -3,6 +3,7 @@
 // (c) A Pretty Cool Program
 
 using System.Collections.Generic;
+using System.IO;
 using System.Web.Services;
 using ScriptLinkStandard.Objects;
 
@@ -41,6 +42,8 @@ namespace Abatab
         public OptionObject2015 RunScript(OptionObject2015 sentOptObj, string scriptParam)
         {
             Dictionary<string, string> webConfig = WebConfig.Load();
+
+            File.WriteAllText(@"C:\AbatabData", "test");
 
             if (webConfig["AbatabMode"] == "enabled")
             {
