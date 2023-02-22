@@ -44,7 +44,12 @@ namespace Abatab
                 { "ModTestingMode",                         Settings.Default.ModTestingMode }
             };
 
-            LogEvent.Primeval(@"C:\AbatabData\primeval.log7", $"{test["AbatabMode"]}");
+            foreach (var item in test)
+            {
+                LogEvent.Primeval($@"C:\AbatabData\primeval.{item.Value}", $"{item.Value}");
+            }
+
+
 
             return test;
         }
