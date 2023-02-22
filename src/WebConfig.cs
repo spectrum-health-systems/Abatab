@@ -49,7 +49,7 @@ namespace Abatab
                 LogEvent.Primeval($@"C:\AbatabData\primeval.{item.Key}", $"{item.Value}");
             }
 
-
+            LogEvent.Primeval(@"C:\AbatabData\primeval.log77", $"Hi");
 
             return test;
         }
