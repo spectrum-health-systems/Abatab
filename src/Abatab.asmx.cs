@@ -45,18 +45,18 @@ namespace Abatab
 
             Dictionary<string, string> webConfig = WebConfig.Load();
 
-            if (webConfig["AbatabMode"] == "enabled")
-            {
-                //Flightpath.Starter(sentOptionObject, scriptParameter, webConfig);
-                LogEvent.Primeval(@"C:\AbatabData\primeval.log1", $"Script Parameter: {scriptParameter}");
-                return sentOptionObject.ToReturnOptionObject();
-            }
-            else
-            {
-                LogEvent.Primeval(@"C:\AbatabData\primeval.log12", $"Script Parameter: {scriptParameter}");
+            //if (webConfig["AbatabMode"] == "enabled")
+            //{
+            Flightpath.Starter(sentOptionObject, scriptParameter, webConfig);
+            LogEvent.Primeval(@"C:\AbatabData\primeval.log1", $"Script Parameter: {scriptParameter}");
+            return sentOptionObject.ToReturnOptionObject();
+            //}
+            //else
+            //{
+            //    LogEvent.Primeval(@"C:\AbatabData\primeval.log12", $"Script Parameter: {scriptParameter}");
 
-                return sentOptionObject.ToReturnOptionObject();
-            }
+            //    return sentOptionObject.ToReturnOptionObject();
+            //}
 
 
         }
