@@ -31,7 +31,7 @@ namespace Abatab
 
         /// <summary>Executes script parameter request from Avatar, then returns a potentially modified OptionObject to Avatar.</summary>
         /// <param name="sentOptObj">The original OptionObject sent from Avatar.</param>
-        /// <param name="scriptParamete">The original Script Parameter request from Avatar.</param>
+        /// <param name="scriptParameter">The original Script Parameter request from Avatar.</param>
         /// <returns>A finalized OptionObject that will be returned to Avatar.</returns>
         /// <remarks>
         ///     <list type="bullet">
@@ -39,11 +39,11 @@ namespace Abatab
         ///     </list>
         /// </remarks>
         [WebMethod]
-        public OptionObject2015 RunScript(OptionObject2015 sentOptObj, string scriptParamete)
+        public OptionObject2015 RunScript(OptionObject2015 sentOptObj, string scriptParameter)
         {
             /* Uncomment this line to write a simple log file that verifies Abatab is executing.
             */
-            File.WriteAllText(@"C:\AbatabData\primeval.log", $"Script Parameter: {scriptParamete}");
+            File.WriteAllText(@"C:\AbatabData\primeval.log", $"Script Parameter: {scriptParameter}");
 
             Dictionary<string, string> webConfig = WebConfig.Load();
 
@@ -51,7 +51,7 @@ namespace Abatab
 
             if (webConfig["AbatabMode"] == "enabled")
             {
-                Flightpath.Starter(sentOptObj, scriptParamete, webConfig);
+                Flightpath.Starter(sentOptObj, scriptParameter, webConfig);
                 return sentOptObj.ToReturnOptionObject();
             }
             else
