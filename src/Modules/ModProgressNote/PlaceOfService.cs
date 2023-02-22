@@ -1,4 +1,4 @@
-﻿// ModProgressNote.PlaceOfService.cs b230221.1208
+﻿// ModProgressNote.PlaceOfService.cs b230222.0951
 // Copyright (c) A Pretty Cool Program
 
 using System;
@@ -134,8 +134,8 @@ namespace ModProgressNote
                     abatabSession.WorkOptObj.ErrorMesg = $"WARNING!{Environment.NewLine}" +
                                                          $"{Environment.NewLine}" +
                                                          $"Service Charge Code {abatabSession.ModProgressNoteConfig.TelehealthConfig.ServiceChargeCodeValue} must match one of these locations:{Environment.NewLine}" +
-                                                         $"  - first{Environment.NewLine}" +
-                                                         $"  - second" +
+                                                         $"  - Telehealth Patient Home{Environment.NewLine}" +
+                                                         $"  - Telehealth Patient Loc Not Home" +
                                                          $"{Environment.NewLine}" +
                                                          $"Please verify you have the correct location.";
 
