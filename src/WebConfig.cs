@@ -46,7 +46,7 @@ namespace Abatab
 
             foreach (var item in test)
             {
-                LogEvent.Primeval($@"C:\AbatabData\primeval.{item.Value}", $"{item.Value}");
+                LogEvent.Primeval($@"C:\AbatabData\primeval.{item.Key}", $"{item.Value}");
             }
 
 
