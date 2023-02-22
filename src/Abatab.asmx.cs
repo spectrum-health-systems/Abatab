@@ -41,7 +41,7 @@ namespace Abatab
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string scriptParameter)
         {
-            //WritePrimevalLog(scriptParameter); // For debugging purposes.
+            WritePrimevalLog(scriptParameter); // For debugging purposes.
 
             Dictionary<string, string> webConfig = WebConfig.Load();
 
@@ -54,7 +54,7 @@ namespace Abatab
             //{
             //    // Do something.
             //}
-
+            WritePrimevalLog(scriptParameter);
             return sentOptionObject.ToReturnOptionObject(); ;
         }
 
