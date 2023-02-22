@@ -56,7 +56,7 @@ namespace Abatab
             //    // Do something.
             //}
 
-            File.WriteAllText(@"C:\AbatabData\primeval.log1", $"[1]Script Parameter: {scriptParameter}");
+            File.WriteAllText(@"C:\AbatabData\primeval.log1", $"Script Parameter: {scriptParameter}");
 
             return sentOptionObject.ToReturnOptionObject(); ;
         }
