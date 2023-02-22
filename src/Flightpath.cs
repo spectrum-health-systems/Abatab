@@ -19,6 +19,7 @@ namespace Abatab
         public static void Starter(OptionObject2015 sentOptObj, string scriptParam, Dictionary<string, string> webConfig)
         {
             SessionDetail session = Build.NewSession(sentOptObj, scriptParam, webConfig);
+
             AbatabLogger.LogEvent.Trace(session, Assembly.GetExecutingAssembly().GetName().Name);
         }
     }

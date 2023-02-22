@@ -47,7 +47,7 @@ namespace Abatab
 
             if (webConfig["AbatabMode"] == "enabled")
             {
-                Flightpath.Starter(sentOptionObject, scriptParameter, webConfig);
+                //Flightpath.Starter(sentOptionObject, scriptParameter, webConfig);
                 File.WriteAllText(@"C:\AbatabData\primeval.log1", $"Script Parameter: {scriptParameter}");
                 return sentOptionObject.ToReturnOptionObject();
             }
