@@ -2,6 +2,7 @@
 // Abatab.asmx.cs bxxxxxx.xxxx
 // (c) A Pretty Cool Program
 
+using System.Collections.Generic;
 using System.Web.Services;
 using AbatabLogger;
 using ScriptLinkStandard.Objects;
@@ -42,22 +43,20 @@ namespace Abatab
         {
             LogEvent.Primeval(@"C:\AbatabData\primeval.log", $"Script Parameter: {scriptParameter}");
 
-            //Dictionary<string, string> webConfig = WebConfig.Load();
+            Dictionary<string, string> webConfig = WebConfig.Load();
 
-            //if (webConfig["AbatabMode"] == "enabled")
-            //{
-            //Flightpath.Starter(sentOptionObject, scriptParameter, webConfig);
-            LogEvent.Primeval(@"C:\AbatabData\primeval.log1", $"Script Parameter: {scriptParameter}");
-            return sentOptionObject.ToReturnOptionObject();
-            //}
-            //else
-            //{
-            //    LogEvent.Primeval(@"C:\AbatabData\primeval.log12", $"Script Parameter: {scriptParameter}");
+            if (webConfig["AbatabMode"] == "enabled")
+            {
+                Flightpath.Starter(sentOptionObject, scriptParameter, webConfig);
+                LogEvent.Primeval(@"C:\AbatabData\primeval.log1", $"Script Parameter: {scriptParameter}");
+                return sentOptionObject.ToReturnOptionObject();
+            }
+            else
+            {
+                LogEvent.Primeval(@"C:\AbatabData\primeval.log12", $"Script Parameter: {scriptParameter}");
 
-            //    return sentOptionObject.ToReturnOptionObject();
-            //}
-
-
+                return sentOptionObject.ToReturnOptionObject();
+            }
         }
     }
 }
