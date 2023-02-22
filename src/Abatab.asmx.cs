@@ -41,25 +41,28 @@ namespace Abatab
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string scriptParameter)
         {
-            /* Uncomment this line to write a simple log file that verifies Abatab is executing.
-            */
-            File.WriteAllText(@"C:\AbatabData\primeval.log", $"Script Parameter: {scriptParameter}");
+            //WritePrimevalLog(scriptParameter); // For debugging purposes.
 
             Dictionary<string, string> webConfig = WebConfig.Load();
 
-
-
-            if (webConfig["AbatabMode"] == "enabled")
-            {
-                Flightpath.Starter(sentOptionObject, scriptParameter, webConfig);
-                return sentOptionObject.ToReturnOptionObject();
-            }
-            else
-            {
-                // Do something.
-            }
+            //if (webConfig["AbatabMode"] == "enabled")
+            //{
+            //    Flightpath.Starter(sentOptionObject, scriptParameter, webConfig);
+            //    return sentOptionObject.ToReturnOptionObject();
+            //}
+            //else
+            //{
+            //    // Do something.
+            //}
 
             return sentOptionObject;
+        }
+
+        /// <summary>TBD</summary>
+        /// <param name="scriptParameter"></param>
+        public static void WritePrimevalLog(string scriptParameter)
+        {
+            File.WriteAllText(@"C:\AbatabData\primeval.log", $"Script Parameter: {scriptParameter}");
         }
     }
 }
