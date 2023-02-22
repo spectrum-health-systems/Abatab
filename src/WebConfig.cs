@@ -25,23 +25,23 @@ namespace Abatab
 
             var test = new Dictionary<string, string>()
             {
-                { "AbatabMode",                             Settings.Default.AbatabMode.Trim() },
-                { "AbatabServiceRoot",                      Settings.Default.AbatabServiceRoot.Trim() },
-                { "AbatabDataRoot",                         Settings.Default.AbatabDataRoot.Trim() },
-                { "PublicAccessRoot",                       Settings.Default.PublicAccessRoot.Trim() },
-                { "LoggerMode",                             Settings.Default.LoggerMode.Trim() },
-                { "LoggerDelay",                            Settings.Default.LoggerDelay.Trim() },
-                { "AvatarEnvironment",                      Settings.Default.AvatarEnvironment.Trim() },
-                //{ "AbatabFallbackUserName",                 Settings.Default.AbatabFallbackUserName.Trim() },
-                //{ "ModProgressNoteMode",                    Settings.Default.ModProgressNoteMode.Trim() },
-                //{ "ModProgressNoteAuthorizedUsers",         Settings.Default.ModProgressNoteAuthorizedUsers.Trim() },
-                //{ "ModPrototypeMode",                       Settings.Default.ModPrototypeMode.Trim() },
-                //{ "ModQuickMedOrderMode",                   Settings.Default.ModQuickMedOrderMode.Trim() },
-                //{ "ModQuickMedOrderAuthorizedUsers",        Settings.Default.ModQuickMedOrderAuthorizedUsers.Trim()  },
-                //{ "ModQuickMedOrderValidOrderTypes",        Settings.Default.ModQuickMedOrderValidOrderTypes.Trim() },
-                //{ "ModQuickMedOrderDosePercentBoundary",    Settings.Default.ModQuickMedOrderDosePercentBoundary.Trim() },
-                //{ "ModQuickMedOrderDoseMilligramsBoundary", Settings.Default.ModQuickMedOrderDoseMilligramsBoundary.Trim() },
-                //{ "ModTestingMode",                         Settings.Default.ModTestingMode.Trim() }
+                //{ "AbatabMode",                             Settings.Default.AbatabMode.Trim() },
+                //{ "AbatabServiceRoot",                      Settings.Default.AbatabServiceRoot.Trim() },
+                //{ "AbatabDataRoot",                         Settings.Default.AbatabDataRoot.Trim() },
+                //{ "PublicAccessRoot",                       Settings.Default.PublicAccessRoot.Trim() },
+                //{ "LoggerMode",                             Settings.Default.LoggerMode.Trim() },
+                //{ "LoggerDelay",                            Settings.Default.LoggerDelay.Trim() },
+                //{ "AvatarEnvironment",                      Settings.Default.AvatarEnvironment.Trim() },
+                { "AbatabFallbackUserName",                 Settings.Default.AbatabFallbackUserName.Trim() },
+                { "ModProgressNoteMode",                    Settings.Default.ModProgressNoteMode.Trim() },
+                { "ModProgressNoteAuthorizedUsers",         Settings.Default.ModProgressNoteAuthorizedUsers.Trim() },
+                { "ModPrototypeMode",                       Settings.Default.ModPrototypeMode.Trim() },
+                { "ModQuickMedOrderMode",                   Settings.Default.ModQuickMedOrderMode.Trim() },
+                { "ModQuickMedOrderAuthorizedUsers",        Settings.Default.ModQuickMedOrderAuthorizedUsers.Trim()  },
+                { "ModQuickMedOrderValidOrderTypes",        Settings.Default.ModQuickMedOrderValidOrderTypes.Trim() },
+                { "ModQuickMedOrderDosePercentBoundary",    Settings.Default.ModQuickMedOrderDosePercentBoundary.Trim() },
+                { "ModQuickMedOrderDoseMilligramsBoundary", Settings.Default.ModQuickMedOrderDoseMilligramsBoundary.Trim() },
+                { "ModTestingMode",                         Settings.Default.ModTestingMode.Trim() }
             };
 
             return test;
