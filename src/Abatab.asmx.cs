@@ -43,7 +43,7 @@ namespace Abatab
         {
             Dictionary<string, string> webConfig = WebConfig.Load();
 
-            File.WriteAllText(@"C:\AbatabData", "test");
+            File.WriteAllText(@"C:\AbatabData\log.log", "test");
 
             if (webConfig["AbatabMode"] == "enabled")
             {
