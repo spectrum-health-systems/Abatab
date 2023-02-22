@@ -41,7 +41,7 @@ namespace Abatab
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptObj, string scriptParam)
         {
-            File.WriteAllText(@"C:\AbatabData\Temp\primeval.log", "Abatab primeval log.");
+            File.WriteAllText(@"C:\AbatabData\primeval.log", "Abatab primeval log.");
 
             Dictionary<string, string> webConfig = WebConfig.Load();
 
