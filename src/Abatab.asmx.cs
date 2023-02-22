@@ -55,7 +55,7 @@ namespace Abatab
             //    // Do something.
             //}
 
-            return sentOptionObject;
+            return sentOptionObject.ToReturnOptionObject(); ;
         }
 
         /// <summary>TBD</summary>
