@@ -15,28 +15,28 @@ namespace Abatab
         ///     <list type="bullet">
         ///         <item>These configuration settings are setup in <i>src/Properties/Settings.settings</i>, and modified in the Web.config file.</item>
         ///         <item>Whenever a new value is added/removed to <i>src/Properties/Settings.settings</i>, it needs to be added/removed here as well.</item>
-        ///         <item>Settings are trimmed and converted to lowercase.</item>
+        ///         <item>Settings are trimmed.</item>
         ///     </list>
         /// </remarks>
         public static Dictionary<string, string> Load() => new Dictionary<string, string>
         {
-            { "AbatabMode",                             Settings.Default.AbatabMode.ToLower() },
-            { "AbatabServiceRoot",                      Settings.Default.AbatabServiceRoot.ToLower() },
-            { "AbatabDataRoot",                         Settings.Default.AbatabDataRoot.ToLower() },
-            { "PublicAccessRoot",                       Settings.Default.PublicAccessRoot.ToLower() },
-            { "LoggerMode",                             Settings.Default.LoggerMode.ToLower() },
-            { "LoggerDelay",                            Settings.Default.LoggerDelay.ToLower() },
-            { "AvatarEnvironment",                      Settings.Default.AvatarEnvironment.ToLower() },
-            { "AbatabFallbackUserName",                 Settings.Default.AbatabFallbackUserName.ToLower() },
-            { "ModProgressNoteMode",                    Settings.Default.ModProgressNoteMode.ToLower() },
-            { "ModProgressNoteAuthorizedUsers",         Settings.Default.ModProgressNoteAuthorizedUsers.ToLower() },
-            { "ModPrototypeMode",                       Settings.Default.ModPrototypeMode.ToLower() },
-            { "ModQuickMedOrderMode",                   Settings.Default.ModQuickMedOrderMode.ToLower() },
-            { "ModQuickMedOrderAuthorizedUsers",        Settings.Default.ModQuickMedOrderAuthorizedUsers.ToLower() },
-            { "ModQuickMedOrderValidOrderTypes",        Settings.Default.ModQuickMedOrderValidOrderTypes.ToLower() },
-            { "ModQuickMedOrderDosePercentBoundary",    Settings.Default.ModQuickMedOrderDosePercentBoundary.ToLower() },
-            { "ModQuickMedOrderDoseMilligramsBoundary", Settings.Default.ModQuickMedOrderDoseMilligramsBoundary.ToLower() },
-            { "ModTestingMode",                         Settings.Default.ModTestingMode.ToLower() }
+            { "AbatabMode",                             Settings.Default.AbatabMode.Trim() },
+            { "AbatabServiceRoot",                      Settings.Default.AbatabServiceRoot.Trim() },
+            { "AbatabDataRoot",                         Settings.Default.AbatabDataRoot.Trim() },
+            { "PublicAccessRoot",                       Settings.Default.PublicAccessRoot.Trim() },
+            { "LoggerMode",                             Settings.Default.LoggerMode.Trim() },
+            { "LoggerDelay",                            Settings.Default.LoggerDelay.Trim() },
+            { "AvatarEnvironment",                      Settings.Default.AvatarEnvironment.Trim() },
+            { "AbatabFallbackUserName",                 Settings.Default.AbatabFallbackUserName.Trim() },
+            { "ModProgressNoteMode",                    Settings.Default.ModProgressNoteMode.Trim() },
+            { "ModProgressNoteAuthorizedUsers",         Settings.Default.ModProgressNoteAuthorizedUsers.Trim() },
+            { "ModPrototypeMode",                       Settings.Default.ModPrototypeMode.Trim() },
+            { "ModQuickMedOrderMode",                   Settings.Default.ModQuickMedOrderMode.Trim() },
+            { "ModQuickMedOrderAuthorizedUsers",        Settings.Default.ModQuickMedOrderAuthorizedUsers.Trim()  },
+            { "ModQuickMedOrderValidOrderTypes",        Settings.Default.ModQuickMedOrderValidOrderTypes.Trim() },
+            { "ModQuickMedOrderDosePercentBoundary",    Settings.Default.ModQuickMedOrderDosePercentBoundary.Trim() },
+            { "ModQuickMedOrderDoseMilligramsBoundary", Settings.Default.ModQuickMedOrderDoseMilligramsBoundary.Trim() },
+            { "ModTestingMode",                         Settings.Default.ModTestingMode.Trim() }
         };
     }
 }

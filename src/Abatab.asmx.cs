@@ -3,8 +3,8 @@
 // (c) A Pretty Cool Program
 
 using System.Collections.Generic;
-using System.IO;
 using System.Web.Services;
+using AbatabLogger;
 using ScriptLinkStandard.Objects;
 
 namespace Abatab
@@ -41,19 +41,19 @@ namespace Abatab
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string scriptParameter)
         {
-            File.WriteAllText(@"C:\AbatabData\primeval.log0", $"Script Parameter: {scriptParameter}");
+            LogEvent.Primeval(@"C:\AbatabData\primeval.log", $"Script Parameter: {scriptParameter}");
 
             Dictionary<string, string> webConfig = WebConfig.Load();
 
             if (webConfig["AbatabMode"] == "enabled")
             {
-                //Flightpath.Starter(sentOptionObject, scriptParameter, webConfig);
-                File.WriteAllText(@"C:\AbatabData\primeval.log1", $"Script Parameter: {scriptParameter}");
+                Flightpath.Starter(sentOptionObject, scriptParameter, webConfig);
+                LogEvent.Primeval(@"C:\AbatabData\primeval.log1", $"Script Parameter: {scriptParameter}");
                 return sentOptionObject.ToReturnOptionObject();
             }
             else
             {
-                File.WriteAllText(@"C:\AbatabData\primeval.log12", $"Script Parameter: {scriptParameter}");
+                LogEvent.Primeval(@"C:\AbatabData\primeval.log12", $"Script Parameter: {scriptParameter}");
 
                 return sentOptionObject.ToReturnOptionObject();
             }
