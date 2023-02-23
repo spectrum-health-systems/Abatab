@@ -18,26 +18,32 @@ namespace Abatab
         ///         <item>Settings are trimmed.</item>
         ///     </list>
         /// </remarks>
-        public static Dictionary<string, string> Load() => new Dictionary<string, string>()
+        public static Dictionary<string, string> Load()
         {
-            { "AbatabMode",                             Settings.Default.AbatabMode },
-            { "AbatabServiceRoot",                      Settings.Default.AbatabServiceRoot },
-            { "AbatabDataRoot",                         Settings.Default.AbatabDataRoot },
-            { "PublicAccessRoot",                       Settings.Default.PublicAccessRoot },
-            { "LoggerMode",                             Settings.Default.LoggerMode },
-            { "LoggerDelay",                            Settings.Default.LoggerDelay },
-            { "AvatarEnvironment",                      Settings.Default.AvatarEnvironment },
-            { "AbatabFallbackUserName",                 Settings.Default.AbatabFallbackUserName },
-            { "ModProgressNoteMode",                    Settings.Default.ModProgressNoteMode },
-            { "ModProgressNoteAuthorizedUsers",         Settings.Default.ModProgressNoteAuthorizedUsers },
-            { "ModPrototypeMode",                       Settings.Default.ModPrototypeMode },
-            { "ModQuickMedOrderMode",                   Settings.Default.ModQuickMedOrderMode },
-            { "ModQuickMedOrderAuthorizedUsers",        Settings.Default.ModQuickMedOrderAuthorizedUsers  },
-            { "ModQuickMedOrderValidOrderTypes",        Settings.Default.ModQuickMedOrderValidOrderTypes },
-            { "ModQuickMedOrderDosePercentBoundary",    Settings.Default.ModQuickMedOrderDosePercentBoundary },
-            { "ModQuickMedOrderDoseMilligramsBoundary", Settings.Default.ModQuickMedOrderDoseMilligramsBoundary },
-            { "TestingMode",                            Settings.Default.TestingMode },
-            { "DebugMode",                              Settings.Default.DebugMode }
-        };
+            /* For testing/debugging only */
+            //LogEvent.Primeval(@"C:\AbatabData\Testing\", "LoadWebConfig", Assembly.GetExecutingAssembly().GetName().Name, scriptParameter);
+
+            return new Dictionary<string, string>()
+            {
+                { "AbatabMode",                             Settings.Default.AbatabMode },
+                { "AbatabServiceRoot",                      Settings.Default.AbatabServiceRoot },
+                { "AbatabDataRoot",                         Settings.Default.AbatabDataRoot },
+                { "PublicAccessRoot",                       Settings.Default.PublicAccessRoot },
+                { "LoggerMode",                             Settings.Default.LoggerMode },
+                { "LoggerDelay",                            Settings.Default.LoggerDelay },
+                { "AvatarEnvironment",                      Settings.Default.AvatarEnvironment },
+                { "AbatabFallbackUserName",                 Settings.Default.AbatabFallbackUserName },
+                { "ModProgressNoteMode",                    Settings.Default.ModProgressNoteMode },
+                { "ModProgressNoteAuthorizedUsers",         Settings.Default.ModProgressNoteAuthorizedUsers },
+                { "ModPrototypeMode",                       Settings.Default.ModPrototypeMode },
+                { "ModQuickMedOrderMode",                   Settings.Default.ModQuickMedOrderMode },
+                { "ModQuickMedOrderAuthorizedUsers",        Settings.Default.ModQuickMedOrderAuthorizedUsers  },
+                { "ModQuickMedOrderValidOrderTypes",        Settings.Default.ModQuickMedOrderValidOrderTypes },
+                { "ModQuickMedOrderDosePercentBoundary",    Settings.Default.ModQuickMedOrderDosePercentBoundary },
+                { "ModQuickMedOrderDoseMilligramsBoundary", Settings.Default.ModQuickMedOrderDoseMilligramsBoundary },
+                { "TestingMode",                            Settings.Default.TestingMode },
+                { "DebugMode",                              Settings.Default.DebugMode }
+            };
+        }
     }
 }
