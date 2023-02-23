@@ -103,9 +103,9 @@
       <Project>{05F6E7BA-9FF2-4DEF-98A4-9A96640514CC}</Project>
       <Name>ScriptLinkStandard</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Core\AbatabCatalog\src\AbatabCatalog.csproj">
+    <ProjectReference Include="..\..\Core\AbatabCatalog\src\AbatabCatalogs.csproj">
       <Project>{29b7250b-4dca-4d0b-8e3d-ba03a05936ce}</Project>
-      <Name>AbatabCatalog</Name>
+      <Name>AbatabCatalogs</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Core\AbatabLogger\src\AbatabLogger.csproj">
       <Project>{7CD635C2-B2F4-40A8-891C-5D1A8D9BE311}</Project>

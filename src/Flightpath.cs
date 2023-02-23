@@ -3,7 +3,6 @@
 
 using System.Collections.Generic;
 using System.Reflection;
-using AbatabCatalog.Dossier;
 using AbatabLogger;
 using AbatabSession;
 using ScriptLinkStandard.Objects;

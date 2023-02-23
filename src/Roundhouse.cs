@@ -2,7 +2,6 @@
 // Copyright (c) A Pretty Cool Program
 
 using System.Reflection;
-using AbatabCatalog.Dossier;
 using AbatabLogger;
 
 namespace Abatab
@@ -12,11 +11,11 @@ namespace Abatab
     {
         /// <summary>Parses the module component of the ScriptParameter.</summary>
         /// <param name="sessionDetails"></param>
-        public static void ParseModuleComponent(SessionDetail sessionDetails)
+        public static void ParseModuleComponent(Detail sessionDetails)
         {
             LogEvent.Trace(sessionDetails, Assembly.GetExecutingAssembly().GetName().Name);
 
-            switch (sessionDetails.AbatabModule)
+            switch (sessionDetails.AbatabRequest.Module)
             {
                 case "testing":
                     LogEvent.Trace(sessionDetails, Assembly.GetExecutingAssembly().GetName().Name);

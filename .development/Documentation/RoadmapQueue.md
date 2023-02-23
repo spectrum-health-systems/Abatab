@@ -16,6 +16,18 @@ Integrate ScriptLinkStandard into Abatab.
 
 Remove NTST.ScriptLink from Abatab.
 
+### **Review all SessionDetails**
+
+> TBD
+
+We might not need all of them.
+
+### **Catch any missing RequestComponents**
+
+> TBD
+
+Might crash things, might want to set them to "undefined" to be safe.
+
 ### **Better session log name**
 
 > TBD

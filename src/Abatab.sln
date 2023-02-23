@@ -17,7 +17,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbatabSession", "..\..\Core
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbatabSysOp", "..\..\Core\AbatabSysOp\src\AbatabSysOp.csproj", "{B065D0D0-F78F-46A0-BD5D-AFD20594E10C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbatabCatalog", "..\..\Core\AbatabCatalog\src\AbatabCatalog.csproj", "{29B7250B-4DCA-4D0B-8E3D-BA03A05936CE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbatabCatalogs", "..\..\Core\AbatabCatalog\src\AbatabCatalogs.csproj", "{29B7250B-4DCA-4D0B-8E3D-BA03A05936CE}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScriptLinkStandard", "..\..\AbatabThirdParty\ScriptLinkStandard\ScriptLinkStandard.csproj", "{05F6E7BA-9FF2-4DEF-98A4-9A96640514CC}"
 EndProject
