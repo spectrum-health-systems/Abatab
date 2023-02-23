@@ -3,7 +3,6 @@
 
 using System.Collections.Generic;
 using Abatab.Properties;
-using AbatabLogger;
 
 namespace Abatab
 {
@@ -19,37 +18,25 @@ namespace Abatab
         ///         <item>Settings are trimmed.</item>
         ///     </list>
         /// </remarks>
-        public static Dictionary<string, string> Load()
+        public static Dictionary<string, string> Load() => new Dictionary<string, string>()
         {
-            LogEvent.Primeval(@"C:\AbatabData\primeval.log6", $"Hi");
-
-            var test = new Dictionary<string, string>()
-            {
-                { "AbatabMode",                             Settings.Default.AbatabMode },
-                { "AbatabServiceRoot",                      Settings.Default.AbatabServiceRoot },
-                { "AbatabDataRoot",                         Settings.Default.AbatabDataRoot },
-                { "PublicAccessRoot",                       Settings.Default.PublicAccessRoot },
-                { "LoggerMode",                             Settings.Default.LoggerMode },
-                { "LoggerDelay",                            Settings.Default.LoggerDelay },
-                { "AvatarEnvironment",                      Settings.Default.AvatarEnvironment },
-                { "AbatabFallbackUserName",                 Settings.Default.AbatabFallbackUserName },
-                { "ModProgressNoteMode",                    Settings.Default.ModProgressNoteMode },
-                { "ModProgressNoteAuthorizedUsers",         Settings.Default.ModProgressNoteAuthorizedUsers },
-                { "ModPrototypeMode",                       Settings.Default.ModPrototypeMode },
-                { "ModQuickMedOrderMode",                   Settings.Default.ModQuickMedOrderMode },
-                { "ModQuickMedOrderAuthorizedUsers",        Settings.Default.ModQuickMedOrderAuthorizedUsers  },
-                { "ModQuickMedOrderValidOrderTypes",        Settings.Default.ModQuickMedOrderValidOrderTypes },
-                { "ModQuickMedOrderDosePercentBoundary",    Settings.Default.ModQuickMedOrderDosePercentBoundary },
-                { "ModQuickMedOrderDoseMilligramsBoundary", Settings.Default.ModQuickMedOrderDoseMilligramsBoundary },
-                { "TestingMode",                            Settings.Default.TestingMode }
-            };
-
-            foreach (var item in test)
-            {
-                LogEvent.Primeval($@"C:\AbatabData\Testing\primeval.{item.Key}", $"{item.Value}");
-            }
-
-            return test;
-        }
+            { "AbatabMode",                             Settings.Default.AbatabMode },
+            { "AbatabServiceRoot",                      Settings.Default.AbatabServiceRoot },
+            { "AbatabDataRoot",                         Settings.Default.AbatabDataRoot },
+            { "PublicAccessRoot",                       Settings.Default.PublicAccessRoot },
+            { "LoggerMode",                             Settings.Default.LoggerMode },
+            { "LoggerDelay",                            Settings.Default.LoggerDelay },
+            { "AvatarEnvironment",                      Settings.Default.AvatarEnvironment },
+            { "AbatabFallbackUserName",                 Settings.Default.AbatabFallbackUserName },
+            { "ModProgressNoteMode",                    Settings.Default.ModProgressNoteMode },
+            { "ModProgressNoteAuthorizedUsers",         Settings.Default.ModProgressNoteAuthorizedUsers },
+            { "ModPrototypeMode",                       Settings.Default.ModPrototypeMode },
+            { "ModQuickMedOrderMode",                   Settings.Default.ModQuickMedOrderMode },
+            { "ModQuickMedOrderAuthorizedUsers",        Settings.Default.ModQuickMedOrderAuthorizedUsers  },
+            { "ModQuickMedOrderValidOrderTypes",        Settings.Default.ModQuickMedOrderValidOrderTypes },
+            { "ModQuickMedOrderDosePercentBoundary",    Settings.Default.ModQuickMedOrderDosePercentBoundary },
+            { "ModQuickMedOrderDoseMilligramsBoundary", Settings.Default.ModQuickMedOrderDoseMilligramsBoundary },
+            { "TestingMode",                            Settings.Default.TestingMode }
+        };
     }
 }

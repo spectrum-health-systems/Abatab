@@ -19,13 +19,9 @@ namespace Abatab
         /// <param name="webConfig"></param>
         public static void Starter(OptionObject2015 sentOptionObject, string scriptParameter, Dictionary<string, string> webConfig)
         {
-            LogEvent.Primeval(@"C:\AbatabData\Testing\AbatabFlightpathBegin.log", $"Script Parameter: {scriptParameter}");
-
             SessionDetail session = Build.NewSession(sentOptionObject, scriptParameter, webConfig);
 
-            LogEvent.Primeval(@"C:\AbatabData\Testing\AbatabFlightpathEnd.log", $"Script Parameter: {scriptParameter}");
-
-            AbatabLogger.LogEvent.Trace(session, Assembly.GetExecutingAssembly().GetName().Name);
+            LogEvent.Trace(session, Assembly.GetExecutingAssembly().GetName().Name);
         }
     }
 }
