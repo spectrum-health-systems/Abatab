@@ -41,7 +41,7 @@ namespace Abatab
                 { "ModQuickMedOrderValidOrderTypes",        Settings.Default.ModQuickMedOrderValidOrderTypes },
                 { "ModQuickMedOrderDosePercentBoundary",    Settings.Default.ModQuickMedOrderDosePercentBoundary },
                 { "ModQuickMedOrderDoseMilligramsBoundary", Settings.Default.ModQuickMedOrderDoseMilligramsBoundary },
-                { "ModTestingMode",                         Settings.Default.TestingMode }
+                { "TestingMode",                            Settings.Default.TestingMode }
             };
 
             foreach (var item in test)
