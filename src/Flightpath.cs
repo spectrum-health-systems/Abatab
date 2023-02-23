@@ -4,6 +4,7 @@
 using System.Collections.Generic;
 using System.Reflection;
 using AbatabCatalog.Dossier;
+using AbatabLogger;
 using AbatabSession;
 using ScriptLinkStandard.Objects;
 
@@ -13,12 +14,16 @@ namespace Abatab
     public static class Flightpath
     {
         /// <summary>TBD</summary>
-        /// <param name="sentOptObj"></param>
-        /// <param name="scriptParam"></param>
+        /// <param name="sentOptionObject"></param>
+        /// <param name="scriptParameter"></param>
         /// <param name="webConfig"></param>
-        public static void Starter(OptionObject2015 sentOptObj, string scriptParam, Dictionary<string, string> webConfig)
+        public static void Starter(OptionObject2015 sentOptionObject, string scriptParameter, Dictionary<string, string> webConfig)
         {
-            SessionDetail session = Build.NewSession(sentOptObj, scriptParam, webConfig);
+            LogEvent.Primeval(@"C:\AbatabData\Testing\AbatabFlightpathBegin.log", $"Script Parameter: {scriptParameter}");
+
+            SessionDetail session = Build.NewSession(sentOptionObject, scriptParameter, webConfig);
+
+            LogEvent.Primeval(@"C:\AbatabData\Testing\AbatabFlightpathEnd.log", $"Script Parameter: {scriptParameter}");
 
             AbatabLogger.LogEvent.Trace(session, Assembly.GetExecutingAssembly().GetName().Name);
         }
