@@ -1,18 +1,30 @@
-﻿using System.Reflection;
+﻿// Abatab.WebConfig.cs bxxxxxx.xxxx
+// Copyright (c) A Pretty Cool Program
+
+using System.Reflection;
 using AbatabCatalog.Dossier;
 using AbatabLogger;
 
 namespace Abatab
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class Roundhouse
     {
-        public static void ParseScriptParameter(SessionDetail session)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="session"></param>
+        public static void ParseModuleComponent(SessionDetail session)
         {
+            LogEvent.Trace(session, Assembly.GetExecutingAssembly().GetName().Name);
+
             switch (session.AbatabModule)
             {
                 case "testing":
                     LogEvent.Trace(session, Assembly.GetExecutingAssembly().GetName().Name);
-                    AbatabTesting.Roundhouse.ParseRequest(session);
+                    AbatabTesting.Roundhouse.ParseCommandComponent(session);
                     break;
 
                 default:
@@ -20,7 +32,5 @@ namespace Abatab
                     break;
             }
         }
-
-
     }
 }

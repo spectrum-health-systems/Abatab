@@ -1,4 +1,4 @@
-﻿// Abatab v23.2.0-development+230223.1108
+﻿// Abatab v23.2.0-development+230223.1142
 // Abatab.asmx.cs bxxxxxx.xxxx
 // (c) A Pretty Cool Program
 
@@ -42,20 +42,33 @@ namespace Abatab
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string scriptParameter)
         {
-            LogEvent.Primeval(@"C:\AbatabData\Testing\", "start", Assembly.GetExecutingAssembly().GetName().Name, scriptParameter);
+            //LogEvent.Primeval(@"C:\AbatabData\Testing\", "start", Assembly.GetExecutingAssembly().GetName().Name, scriptParameter);
+
             Dictionary<string, string> webConfig = WebConfig.Load();
 
             if (webConfig["AbatabMode"] == "enabled")
             {
-                LogEvent.Primeval(@"C:\AbatabData\Testing\", "enabled", Assembly.GetExecutingAssembly().GetName().Name, scriptParameter);
+                if (webConfig["DebugMode"] == "enabled")
+                {
+                    LogEvent.Primeval(@"C:\AbatabData\Testing\", "enabled", Assembly.GetExecutingAssembly().GetName().Name, scriptParameter);
+                }
+
                 Flightpath.Starter(sentOptionObject, scriptParameter, webConfig);
 
-                LogEvent.Primeval(@"C:\AbatabData\Testing\", "finish", Assembly.GetExecutingAssembly().GetName().Name, scriptParameter);
+                if (webConfig["DebugMode"] == "enabled")
+                {
+                    LogEvent.Primeval(@"C:\AbatabData\Testing\", "finish", Assembly.GetExecutingAssembly().GetName().Name, scriptParameter);
+                }
+
                 return sentOptionObject.ToReturnOptionObject();
             }
             else
             {
-                LogEvent.Primeval(@"C:\AbatabData\Testing\Abatab.Disabled", $"Script Parameter: {scriptParameter}", Assembly.GetExecutingAssembly().GetName().Name);
+                if (webConfig["DebugMode"] == "enabled")
+                {
+                    LogEvent.Primeval(@"C:\AbatabData\Testing\", "disabled", Assembly.GetExecutingAssembly().GetName().Name, scriptParameter);
+                }
+
                 return sentOptionObject.ToReturnOptionObject();
             }
         }

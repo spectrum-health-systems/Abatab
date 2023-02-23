@@ -175,5 +175,14 @@ namespace Abatab.Properties {
                 return ((string)(this["TestingMode"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("disabled")]
+        public string DebugMode {
+            get {
+                return ((string)(this["DebugMode"]));
+            }
+        }
     }
 }

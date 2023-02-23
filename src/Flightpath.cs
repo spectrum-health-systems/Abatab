@@ -19,11 +19,16 @@ namespace Abatab
         /// <param name="webConfig"></param>
         public static void Starter(OptionObject2015 sentOptionObject, string scriptParameter, Dictionary<string, string> webConfig)
         {
-            LogEvent.Primeval(@"C:\AbatabData\Testing\", "FlightpathStart", Assembly.GetExecutingAssembly().GetName().Name, scriptParameter);
+            if (webConfig["DebugMode"] == "enabled")
+            {
+                LogEvent.Primeval(@"C:\AbatabData\Testing\", "FlightpathStart", Assembly.GetExecutingAssembly().GetName().Name, scriptParameter);
+            }
 
-            SessionDetail session = Build.NewSession(sentOptionObject, scriptParameter, webConfig);
+            SessionDetail sessionDetail = Build.NewSession(sentOptionObject, scriptParameter, webConfig);
 
-            LogEvent.Trace(session, Assembly.GetExecutingAssembly().GetName().Name);
+            LogEvent.Trace(sessionDetail, Assembly.GetExecutingAssembly().GetName().Name);
+
+            Roundhouse.ParseModuleComponent(sessionDetail);
         }
     }
 }

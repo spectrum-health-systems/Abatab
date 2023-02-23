@@ -23,8 +23,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScriptLinkStandard", "..\..
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbatabTesting", "..\..\Module\AbatabTesting\src\AbatabTesting.csproj", "{F0C43D85-18BD-44A3-B573-CDA0072DF910}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbatabRoundhouse", "..\..\Core\AbatabRoundhouse\src\AbatabRoundhouse.csproj", "{9DD1054D-7C72-4AA6-912C-F744433D76C7}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,10 +57,6 @@ Global
 		{F0C43D85-18BD-44A3-B573-CDA0072DF910}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F0C43D85-18BD-44A3-B573-CDA0072DF910}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F0C43D85-18BD-44A3-B573-CDA0072DF910}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9DD1054D-7C72-4AA6-912C-F744433D76C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9DD1054D-7C72-4AA6-912C-F744433D76C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9DD1054D-7C72-4AA6-912C-F744433D76C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9DD1054D-7C72-4AA6-912C-F744433D76C7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -74,7 +68,6 @@ Global
 		{29B7250B-4DCA-4D0B-8E3D-BA03A05936CE} = {B1E4825E-DBFE-491B-A57B-5CEDA5989C42}
 		{05F6E7BA-9FF2-4DEF-98A4-9A96640514CC} = {D06A02DE-D9D9-4922-8BD1-1803A746B95B}
 		{F0C43D85-18BD-44A3-B573-CDA0072DF910} = {F87C3269-B196-4546-8555-DAF351796DF7}
-		{9DD1054D-7C72-4AA6-912C-F744433D76C7} = {B1E4825E-DBFE-491B-A57B-5CEDA5989C42}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {191C2E88-490F-494F-85C7-14B7072D33D4}
