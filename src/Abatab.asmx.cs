@@ -42,15 +42,15 @@ namespace Abatab
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string scriptParameter)
         {
-            LogEvent.Primeval(@"C:\AbatabData\Testing\Abatab.Start", $"Script Parameter: {scriptParameter}", Assembly.GetExecutingAssembly().GetName().Name);
+            LogEvent.Primeval(@"C:\AbatabData\Testing\", "start", Assembly.GetExecutingAssembly().GetName().Name, scriptParameter);
             Dictionary<string, string> webConfig = WebConfig.Load();
 
             if (webConfig["AbatabMode"] == "enabled")
             {
-                LogEvent.Primeval(@"C:\AbatabData\Testing\Abatab.Enabled", $"Script Parameter: {scriptParameter}", Assembly.GetExecutingAssembly().GetName().Name);
+                LogEvent.Primeval(@"C:\AbatabData\Testing\", "enabled", Assembly.GetExecutingAssembly().GetName().Name, scriptParameter);
                 Flightpath.Starter(sentOptionObject, scriptParameter, webConfig);
 
-                LogEvent.Primeval(@"C:\AbatabData\Testing\Abatab.EnabledComplete", $"Script Parameter: {scriptParameter}", Assembly.GetExecutingAssembly().GetName().Name);
+                LogEvent.Primeval(@"C:\AbatabData\Testing\", "finish", Assembly.GetExecutingAssembly().GetName().Name, scriptParameter);
                 return sentOptionObject.ToReturnOptionObject();
             }
             else
