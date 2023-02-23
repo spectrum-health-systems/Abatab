@@ -6,22 +6,21 @@ using Abatab.Properties;
 
 namespace Abatab
 {
-    /// <summary>Loads settings from the local Web.config file.</summary>
+    /// <summary>Logic for working with the Web.config file.</summary>
     public static class WebConfig
     {
-        /// <summary>Load the settings from the Web.config file.</summary>
+        /// <summary>Load the settings from the local Web.config file.</summary>
         /// <returns>A dictionary containing the settings from Web.config.</returns>
         /// <remarks>
         ///     <list type="bullet">
         ///         <item>These configuration settings are setup in <i>src/Properties/Settings.settings</i>, and modified in the Web.config file.</item>
         ///         <item>Whenever a new value is added/removed to <i>src/Properties/Settings.settings</i>, it needs to be added/removed here as well.</item>
-        ///         <item>Settings are trimmed.</item>
         ///     </list>
         /// </remarks>
         public static Dictionary<string, string> Load()
         {
             /* For testing/debugging only */
-            //LogEvent.Primeval(@"C:\AbatabData\Testing\", "LoadWebConfig", Assembly.GetExecutingAssembly().GetName().Name, scriptParameter);
+            //LogEvent.Primeval(@"C:\AbatabData\Testing\", Assembly.GetExecutingAssembly().GetName().Name, scriptParameter);
 
             return new Dictionary<string, string>()
             {
