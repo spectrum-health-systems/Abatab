@@ -50,7 +50,7 @@
     <Setting Name="ModQuickMedOrderDoseMilligramsBoundary" Type="System.String" Scope="Application">
       <Value Profile="(Default)">20</Value>
     </Setting>
-    <Setting Name="ModTestingMode" Type="System.String" Scope="Application">
+    <Setting Name="TestingMode" Type="System.String" Scope="Application">
       <Value Profile="(Default)">enabled</Value>
     </Setting>
   </Settings>
