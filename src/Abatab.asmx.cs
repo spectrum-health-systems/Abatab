@@ -1,8 +1,9 @@
-﻿// Abatab v23.2.0-development+230223.0948
+﻿// Abatab v23.2.0-development+230223.1108
 // Abatab.asmx.cs bxxxxxx.xxxx
 // (c) A Pretty Cool Program
 
 using System.Collections.Generic;
+using System.Reflection;
 using System.Web.Services;
 using AbatabLogger;
 using ScriptLinkStandard.Objects;
@@ -41,23 +42,20 @@ namespace Abatab
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string scriptParameter)
         {
-            LogEvent.Primeval(@"C:\AbatabData\Testing\Abatab.Start", $"Script Parameter: {scriptParameter}"); // For development
-
+            LogEvent.Primeval(@"C:\AbatabData\Testing\Abatab.Start", $"Script Parameter: {scriptParameter}", Assembly.GetExecutingAssembly().GetName().Name);
             Dictionary<string, string> webConfig = WebConfig.Load();
 
             if (webConfig["AbatabMode"] == "enabled")
             {
-                LogEvent.Primeval(@"C:\AbatabData\Testing\Abatab.Enabled", $"Script Parameter: {scriptParameter}"); // For development
-
+                LogEvent.Primeval(@"C:\AbatabData\Testing\Abatab.Enabled", $"Script Parameter: {scriptParameter}", Assembly.GetExecutingAssembly().GetName().Name);
                 Flightpath.Starter(sentOptionObject, scriptParameter, webConfig);
 
+                LogEvent.Primeval(@"C:\AbatabData\Testing\Abatab.EnabledComplete", $"Script Parameter: {scriptParameter}", Assembly.GetExecutingAssembly().GetName().Name);
                 return sentOptionObject.ToReturnOptionObject();
-
             }
             else
             {
-                LogEvent.Primeval(@"C:\AbatabData\Testing\Abatab.Disabled", $"Script Parameter: {scriptParameter}"); // For development
-
+                LogEvent.Primeval(@"C:\AbatabData\Testing\Abatab.Disabled", $"Script Parameter: {scriptParameter}", Assembly.GetExecutingAssembly().GetName().Name);
                 return sentOptionObject.ToReturnOptionObject();
             }
         }
