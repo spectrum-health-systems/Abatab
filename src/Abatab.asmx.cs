@@ -21,7 +21,7 @@ namespace Abatab
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string scriptParameter)
         {
             /* For testing/debugging only */
-            //LogEvent.Primeval(@"C:\AbatabData\Debuggler\", Assembly.GetExecutingAssembly().GetName().Name, scriptParameter);
+            //LogEvent.Primeval($@"C:\AbatabData\{webConfigContent["AvatarEnvironment"]}\debuggler\", Assembly.GetExecutingAssembly().GetName().Name, scriptParameter);
 
             Dictionary<string, string> webConfigContent = WebConfig.Load();
 
@@ -29,7 +29,7 @@ namespace Abatab
             {
                 if (webConfigContent["DebugglerMode"] == "enabled") /* For testing/debugging only */
                 {
-                    LogEvent.Debuggler(@"C:\AbatabData\debuggler\", Assembly.GetExecutingAssembly().GetName().Name, scriptParameter);
+                    LogEvent.Debuggler($@"C:\AbatabData\{webConfigContent["AvatarEnvironment"]}\debuggler\", Assembly.GetExecutingAssembly().GetName().Name, scriptParameter);
                 }
 
                 Flightpath.Starter(sentOptionObject, scriptParameter, webConfigContent);
@@ -40,7 +40,7 @@ namespace Abatab
             {
                 if (webConfigContent["DebugglerMode"] == "enabled") /* For testing/debugging only */
                 {
-                    LogEvent.Debuggler(@"C:\AbatabData\debuggler\", Assembly.GetExecutingAssembly().GetName().Name, scriptParameter);
+                    LogEvent.Debuggler($@"C:\AbatabData\{webConfigContent["AvatarEnvironment"]}\debuggler\", Assembly.GetExecutingAssembly().GetName().Name, scriptParameter);
                 }
 
                 return sentOptionObject.ToReturnOptionObject();

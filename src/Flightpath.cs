@@ -9,14 +9,14 @@ namespace Abatab
 {
     public class Flightpath
     {
-        public static void Starter(OptionObject2015 sentOptionObject, string scriptParameter, Dictionary<string, string> webConfigContents)
+        public static void Starter(OptionObject2015 sentOptionObject, string scriptParameter, Dictionary<string, string> webConfigContent)
         {
-            if (webConfigContents["DebugglerMode"] == "enabled") /* For testing/debugging only */
+            if (webConfigContent["DebugglerMode"] == "enabled") /* For testing/debugging only */
             {
-                LogEvent.Debuggler(@"C:\AbatabData\debuggler\", Assembly.GetExecutingAssembly().GetName().Name, scriptParameter);
+                LogEvent.Debuggler($@"C:\AbatabData\{webConfigContent["AvatarEnvironment"]}\debuggler\", Assembly.GetExecutingAssembly().GetName().Name, scriptParameter);
             }
 
-            SessionProperties sessionProperties = Build.NewSession(sentOptionObject, scriptParameter, webConfigContents);
+            SessionProperties sessionProperties = Build.NewSession(sentOptionObject, scriptParameter, webConfigContent);
 
             Roundhouse.ParseModule(sessionProperties);
         }
