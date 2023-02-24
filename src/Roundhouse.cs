@@ -1,4 +1,8 @@
-﻿using System.Reflection;
+﻿// Abatab.Roundhouse.cs
+// b230224.1700
+// Copyright (c) A Pretty Cool Program
+
+using System.Reflection;
 using Abatab.Core.Catalog;
 using Abatab.Core.Logger;
 
@@ -19,7 +23,7 @@ namespace Abatab
 
                 default:
                     LogEvent.Trace(sessionProperties, Assembly.GetExecutingAssembly().GetName().Name);
-                    // TODO - Should probably put something here to help exit gracefully.
+                    // TODO - Exit gracefully.
                     break;
             }
         }

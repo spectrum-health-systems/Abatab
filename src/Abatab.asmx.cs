@@ -1,7 +1,15 @@
-﻿using System.Collections.Generic;
+﻿/* Abatab v23.2.0
+ * Development build b230224.1700
+ */
+
+// Abatab.asmx.cs
+// b230224.1700
+// (c) A Pretty Cool Program
+
+using System.Collections.Generic;
 using System.Reflection;
 using System.Web.Services;
-using Abatab.Core.Logger;
+using Abatab.Core.Utilities;
 using ScriptLinkStandard.Objects;
 
 namespace Abatab
@@ -20,28 +28,21 @@ namespace Abatab
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string scriptParameter)
         {
-            /* For testing/debugging only */
-            LogEvent.Debuggler($@"C:\AbatabData\Debuggler\", Assembly.GetExecutingAssembly().GetName().Name, scriptParameter);
+            /* For debugging only! Leave commented out in production environments!
+             */
+            Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name, scriptParameter);
 
             Dictionary<string, string> webConfigContent = WebConfig.Load();
 
             if (webConfigContent["AbatabMode"] == "enabled")
             {
-                if (webConfigContent["DebugglerMode"] == "enabled") /* For testing/debugging only */
-                {
-                    LogEvent.Debuggler($@"C:\AbatabData\Debuggler\", Assembly.GetExecutingAssembly().GetName().Name, scriptParameter);
-                }
-
                 Flightpath.Starter(sentOptionObject, scriptParameter, webConfigContent);
 
                 return sentOptionObject.ToReturnOptionObject();
             }
             else
             {
-                if (webConfigContent["DebugglerMode"] == "enabled") /* For testing/debugging only */
-                {
-                    LogEvent.Debuggler($@"C:\AbatabData\Debuggler\", Assembly.GetExecutingAssembly().GetName().Name, scriptParameter);
-                }
+                // TODO - Write a session log here.
 
                 return sentOptionObject.ToReturnOptionObject();
             }
