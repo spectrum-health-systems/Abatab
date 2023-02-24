@@ -13,7 +13,7 @@ namespace Abatab
         {
             if (webConfigContent["DebugglerMode"] == "enabled") /* For testing/debugging only */
             {
-                LogEvent.Debuggler($@"C:\AbatabData\{webConfigContent["AvatarEnvironment"]}\debuggler\", Assembly.GetExecutingAssembly().GetName().Name, scriptParameter);
+                LogEvent.Debuggler($@"C:\AbatabData\debuggler\", Assembly.GetExecutingAssembly().GetName().Name, scriptParameter);
             }
 
             SessionProperties sessionProperties = Build.NewSession(sentOptionObject, scriptParameter, webConfigContent);

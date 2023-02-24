@@ -10,7 +10,7 @@ namespace Abatab
         public static Dictionary<string, string> Load()
         {
             /* For testing/debugging only */
-            LogEvent.Debuggler($@"C:\AbatabData\UAT\debuggler\", Assembly.GetExecutingAssembly().GetName().Name);
+            LogEvent.Debuggler($@"C:\AbatabData\debuggler\", Assembly.GetExecutingAssembly().GetName().Name);
 
             return new Dictionary<string, string>()
             {
