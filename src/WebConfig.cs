@@ -19,6 +19,7 @@ namespace Abatab
                 { "AbatabDataRoot",                                Settings.Default.AbatabDataRoot },
                 { "LoggerMode",                                    Settings.Default.LoggerMode },
                 { "LoggerDelay",                                   Settings.Default.LoggerDelay },
+                { "LoggerTypes",                                   Settings.Default.LoggerTypes },
                 { "AvatarEnvironment",                             Settings.Default.AvatarEnvironment },
                 { "AbatabFallbackUserName",                        Settings.Default.AbatabFallbackUserName },
                 { "ModProgressNoteMode",                           Settings.Default.ModProgressNoteMode },
