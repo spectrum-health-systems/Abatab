@@ -1,0 +1,60 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Abatab.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="AbatabMode" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">enabled</Value>
+    </Setting>
+    <Setting Name="AbatabServiceRoot" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\AvatoolWebService\Abatab_</Value>
+    </Setting>
+    <Setting Name="AbatabDataRoot" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\AbatabData</Value>
+    </Setting>
+    <Setting Name="LoggerMode" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">enabled</Value>
+    </Setting>
+    <Setting Name="LoggerDelay" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
+    <Setting Name="AvatarEnvironment" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">UAT</Value>
+    </Setting>
+    <Setting Name="AbatabFallbackUserName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">_abatab_</Value>
+    </Setting>
+    <Setting Name="ModProgressNoteMode" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">enabled</Value>
+    </Setting>
+    <Setting Name="ModProgressNoteAuthorizedUsers" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">all</Value>
+    </Setting>
+    <Setting Name="ModPrototypeMode" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">enabled</Value>
+    </Setting>
+    <Setting Name="ModQuickMedicationOrderMode" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">enabled</Value>
+    </Setting>
+    <Setting Name="ModQuickMedicationOrderAuthorizedUsers" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">all</Value>
+    </Setting>
+    <Setting Name="ModQuickMedicationOrderValidOrderTypes" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">4</Value>
+    </Setting>
+    <Setting Name="ModQuickMedicationOrderDosePercentBoundary" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">25</Value>
+    </Setting>
+    <Setting Name="ModQuickMedicationOrderDoseMilligramsBoundary" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">20</Value>
+    </Setting>
+    <Setting Name="ModTestingMode" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">enabled</Value>
+    </Setting>
+    <Setting Name="DebugglerMode" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">enabled</Value>
+    </Setting>
+    <Setting Name="ModPrototypeAuthorizedUsers" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">all</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

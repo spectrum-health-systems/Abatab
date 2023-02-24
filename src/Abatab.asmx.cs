@@ -1,26 +1,50 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Collections.Generic;
+using System.Reflection;
 using System.Web.Services;
+using Abatab.Core.Logger;
+using ScriptLinkStandard.Objects;
 
 namespace Abatab
 {
-    /// <summary>
-    /// Summary description for Abatab
-    /// </summary>
     [WebService(Namespace = "http://tempuri.org/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
-    // To allow this Web Service to be called from script, using ASP.NET AJAX, uncomment the following line. 
-    // [System.Web.Script.Services.ScriptService]
     public class Abatab : System.Web.Services.WebService
     {
+        [WebMethod]
+        public string GetVersion()
+        {
+            return "VERSION 23.2";
+        }
 
         [WebMethod]
-        public string HelloWorld()
+        public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string scriptParameter)
         {
-            return "Hello World";
+            /* For testing/debugging only */
+            //LogEvent.Primeval(@"C:\AbatabData\Debuggler\", Assembly.GetExecutingAssembly().GetName().Name, scriptParameter);
+
+            Dictionary<string, string> webConfigContent = WebConfig.Load();
+
+            if (webConfigContent["AbatabMode"] == "enabled")
+            {
+                if (webConfigContent["DebugglerMode"] == "enabled") /* For testing/debugging only */
+                {
+                    LogEvent.Debuggler(@"C:\AbatabData\debuggler\", Assembly.GetExecutingAssembly().GetName().Name, scriptParameter);
+                }
+
+                Flightpath.Starter(sentOptionObject, scriptParameter, webConfigContent);
+
+                return sentOptionObject.ToReturnOptionObject();
+            }
+            else
+            {
+                if (webConfigContent["DebugglerMode"] == "enabled") /* For testing/debugging only */
+                {
+                    LogEvent.Debuggler(@"C:\AbatabData\debuggler\", Assembly.GetExecutingAssembly().GetName().Name, scriptParameter);
+                }
+
+                return sentOptionObject.ToReturnOptionObject();
+            }
         }
     }
 }

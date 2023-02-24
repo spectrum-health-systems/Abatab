@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abatab.Module.Testing", "..
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScriptLinkStandard", "..\..\ThirdParty\ScriptLinkStandard\ScriptLinkStandard.csproj", "{8151D74C-D8A4-43F8-99E7-3CAC9DC06B0E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abatab.Core.DataExport", "..\..\Core\Abatab.Core.DataExport\Abatab.Core.DataExport.csproj", "{9DB81D7F-BA9F-4E59-A63F-B00514AC1F40}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{8151D74C-D8A4-43F8-99E7-3CAC9DC06B0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8151D74C-D8A4-43F8-99E7-3CAC9DC06B0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8151D74C-D8A4-43F8-99E7-3CAC9DC06B0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DB81D7F-BA9F-4E59-A63F-B00514AC1F40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DB81D7F-BA9F-4E59-A63F-B00514AC1F40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DB81D7F-BA9F-4E59-A63F-B00514AC1F40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DB81D7F-BA9F-4E59-A63F-B00514AC1F40}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -103,6 +109,7 @@ Global
 		{8732FFAF-C872-4622-8A46-BA629A811E6A} = {97E3CCF8-4873-43BF-836F-16AA911302EB}
 		{74607575-E22F-4D54-A5ED-2064176E1901} = {97E3CCF8-4873-43BF-836F-16AA911302EB}
 		{8151D74C-D8A4-43F8-99E7-3CAC9DC06B0E} = {6E5A1141-2B04-4517-B3EE-C9A47F4F91D6}
+		{9DB81D7F-BA9F-4E59-A63F-B00514AC1F40} = {8896A775-B439-44BA-BBA7-2AA13425EEAA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {80A97D16-70D8-45D3-8E61-4D3A6EC7AE16}
