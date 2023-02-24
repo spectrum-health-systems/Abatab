@@ -2,6 +2,7 @@
 using System.Reflection;
 using System.Web.Services;
 using Abatab.Core.Logger;
+using Abatab.Properties;
 using ScriptLinkStandard.Objects;
 
 namespace Abatab
@@ -21,7 +22,7 @@ namespace Abatab
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string scriptParameter)
         {
             /* For testing/debugging only */
-            //LogEvent.Primeval($@"C:\AbatabData\{webConfigContent["AvatarEnvironment"]}\debuggler\", Assembly.GetExecutingAssembly().GetName().Name, scriptParameter);
+            LogEvent.Debuggler($@"C:\AbatabData\{Settings.Default.AvatarEnvironment}\debuggler\", Assembly.GetExecutingAssembly().GetName().Name, scriptParameter);
 
             Dictionary<string, string> webConfigContent = WebConfig.Load();
 

@@ -184,5 +184,14 @@ namespace Abatab.Properties {
                 return ((string)(this["ModPrototypeAuthorizedUsers"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("all")]
+        public string LoggerTypes {
+            get {
+                return ((string)(this["LoggerTypes"]));
+            }
+        }
     }
 }
