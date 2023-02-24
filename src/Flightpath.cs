@@ -3,8 +3,9 @@
 
 using System.Collections.Generic;
 using System.Reflection;
-using AbatabLogger;
-using AbatabSession;
+using AbCatalog;
+using AbLogger;
+using AbSession;
 using ScriptLinkStandard.Objects;
 
 namespace Abatab
@@ -23,9 +24,9 @@ namespace Abatab
                 LogEvent.Primeval(@"C:\AbatabData\Testing\", Assembly.GetExecutingAssembly().GetName().Name, scriptParameter);
             }
 
-            SessionDetail sessionDetail = Build.NewSession(sentOptionObject, scriptParameter, webConfigContents);
+            SessionProperties session = Build.NewSession(sentOptionObject, scriptParameter, webConfigContents);
 
-            Roundhouse.ParseModuleComponent(sessionDetail);
+            Roundhouse.ParseModuleComponent(session);
         }
     }
 }

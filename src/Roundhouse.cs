@@ -2,7 +2,8 @@
 // Copyright (c) A Pretty Cool Program
 
 using System.Reflection;
-using AbatabLogger;
+using AbCatalog;
+using AbLogger;
 
 namespace Abatab
 {
@@ -10,20 +11,20 @@ namespace Abatab
     public class Roundhouse
     {
         /// <summary>Parses the module component of the ScriptParameter.</summary>
-        /// <param name="sessionDetails"></param>
-        public static void ParseModuleComponent(Detail sessionDetails)
+        /// <param name="session"></param>
+        public static void ParseModuleComponent(SessionProperties session)
         {
-            LogEvent.Trace(sessionDetails, Assembly.GetExecutingAssembly().GetName().Name);
+            LogEvent.Trace(session, Assembly.GetExecutingAssembly().GetName().Name);
 
-            switch (sessionDetails.AbatabRequest.Module)
+            switch (session.AbatabRequest.Module)
             {
                 case "testing":
-                    LogEvent.Trace(sessionDetails, Assembly.GetExecutingAssembly().GetName().Name);
-                    AbatabTesting.Roundhouse.ParseCommandComponent(sessionDetails);
+                    LogEvent.Trace(session, Assembly.GetExecutingAssembly().GetName().Name);
+                    AbatabTesting.Roundhouse.ParseCommandComponent(session);
                     break;
 
                 default:
-                    LogEvent.Trace(sessionDetails, Assembly.GetExecutingAssembly().GetName().Name);
+                    LogEvent.Trace(session, Assembly.GetExecutingAssembly().GetName().Name);
                     // TODO - Should probably put something here to help exit gracefully.
                     break;
             }

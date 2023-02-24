@@ -5,7 +5,7 @@
 using System.Collections.Generic;
 using System.Reflection;
 using System.Web.Services;
-using AbatabLogger;
+using AbLogger;
 using ScriptLinkStandard.Objects;
 
 namespace Abatab
@@ -45,22 +45,22 @@ namespace Abatab
             /* For testing/debugging only */
             //LogEvent.Primeval(@"C:\AbatabData\Testing\", Assembly.GetExecutingAssembly().GetName().Name, scriptParameter);
 
-            Dictionary<string, string> webConfig = WebConfig.Load();
+            Dictionary<string, string> webConfigContents = WebConfig.Load();
 
-            if (webConfig["AbatabMode"] == "enabled")
+            if (webConfigContents["AbatabMode"] == "enabled")
             {
-                if (webConfig["DebugMode"] == "enabled") /* For testing/debugging only */
+                if (webConfigContents["DebugMode"] == "enabled") /* For testing/debugging only */
                 {
                     LogEvent.Primeval(@"C:\AbatabData\Testing\", Assembly.GetExecutingAssembly().GetName().Name, scriptParameter);
                 }
 
-                Flightpath.Starter(sentOptionObject, scriptParameter, webConfig);
+                Flightpath.Starter(sentOptionObject, scriptParameter, webConfigContents);
 
                 return sentOptionObject.ToReturnOptionObject();
             }
             else
             {
-                if (webConfig["DebugMode"] == "enabled") /* For testing/debugging only */
+                if (webConfigContents["DebugMode"] == "enabled") /* For testing/debugging only */
                 {
                     LogEvent.Primeval(@"C:\AbatabData\Testing\", Assembly.GetExecutingAssembly().GetName().Name, scriptParameter);
                 }
