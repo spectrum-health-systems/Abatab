@@ -107,6 +107,10 @@
       <Project>{9db81d7f-ba9f-4e59-a63f-b00514ac1f40}</Project>
       <Name>Abatab.Core.DataExport</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Core\Abatab.Core.Framework\Abatab.Core.Framework.csproj">
+      <Project>{be5dbe90-0987-4b10-a87c-0a4fccc49a5b}</Project>
+      <Name>Abatab.Core.Framework</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Core\Abatab.Core.Logger\Abatab.Core.Logger.csproj">
       <Project>{C94AF429-C995-4E3F-9ACF-E989FC95F7EA}</Project>
       <Name>Abatab.Core.Logger</Name>

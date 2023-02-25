@@ -5,6 +5,7 @@
 using System.Collections.Generic;
 using System.IO;
 using Abatab.Core.Catalog;
+using Abatab.Core.Framework;
 using Abatab.Core.Session;
 using ScriptLinkStandard.Objects;
 
@@ -18,11 +19,15 @@ namespace Abatab
 
             SessionProperties sessionProperties = Build.NewSession(sentOptionObject, scriptParameter, webConfigContent);
 
-
-            if (!File.Exists($@"{sessionProperties.AbatabDataRoot}\{sessionProperties.AvatarEnvironment}\{sessionProperties.Datestamp}\Abatab.settings"))
+            if (!Directory.Exists(sessionProperties.SessionDataRoot))
             {
-                Core.DataExport.SessionInformation.ToDaily(sessionProperties, $@"{sessionProperties.AbatabDataRoot}\{sessionProperties.AvatarEnvironment}\{sessionProperties.Datestamp}\Abatab.settings");
+                Refresh.Daily(sessionProperties);
             }
+
+            //if (!File.Exists($@"{sessionProperties.AbatabDataRoot}\{sessionProperties.AvatarEnvironment}\{sessionProperties.Datestamp}\Abatab.settings"))
+            //{
+            //    Core.DataExport.SessionInformation.ToDaily(sessionProperties, $@"{sessionProperties.AbatabDataRoot}\{sessionProperties.AvatarEnvironment}\{sessionProperties.Datestamp}\Abatab.settings");
+            //}
 
             Roundhouse.ParseModule(sessionProperties);
         }
