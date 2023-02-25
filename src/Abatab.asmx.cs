@@ -28,8 +28,6 @@ namespace Abatab
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string scriptParameter)
         {
-            /* For debugging only! Leave commented out in production environments!
-             */
             Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name, scriptParameter);
 
             Dictionary<string, string> webConfigContent = WebConfig.Load();

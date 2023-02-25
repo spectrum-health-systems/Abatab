@@ -13,8 +13,6 @@ namespace Abatab
     {
         public static Dictionary<string, string> Load()
         {
-            /* For debugging only! Leave commented out in production environments!
-            */
             Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name);
 
             return new Dictionary<string, string>()

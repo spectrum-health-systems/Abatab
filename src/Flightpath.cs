@@ -15,8 +15,6 @@ namespace Abatab
     {
         public static void Starter(OptionObject2015 sentOptionObject, string scriptParameter, Dictionary<string, string> webConfigContent)
         {
-            /* For debugging only! Leave commented out in production environments!
-            */
             Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name);
 
             SessionProperties sessionProperties = Build.NewSession(sentOptionObject, scriptParameter, webConfigContent);
