@@ -1,5 +1,5 @@
 ﻿// Abatab.WebConfig.cs
-// b230225.1224
+// b230225.1723
 // Copyright (c) A Pretty Cool Program
 
 using System.Collections.Generic;
@@ -7,11 +7,14 @@ using Abatab.Properties;
 
 namespace Abatab
 {
-    public class WebConfig
+    public static class WebConfig
     {
         public static Dictionary<string, string> Load()
         {
             //Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name);
+
+            /* All settings in Settings.settings need to be included here.
+            */
 
             return new Dictionary<string, string>()
             {

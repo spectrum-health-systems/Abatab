@@ -1,5 +1,5 @@
 ﻿// Abatab.Roundhouse.cs
-// b230224.1700
+// b230225.1723
 // Copyright (c) A Pretty Cool Program
 
 using System.Reflection;
@@ -8,7 +8,7 @@ using Abatab.Core.Logger;
 
 namespace Abatab
 {
-    public class Roundhouse
+    public static class Roundhouse
     {
         public static void ParseModule(SessionProperties sessionProperties)
         {
