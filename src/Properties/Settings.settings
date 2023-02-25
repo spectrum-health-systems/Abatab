@@ -44,7 +44,7 @@
     <Setting Name="ModQuickMedicationOrderDosePercentBoundary" Type="System.String" Scope="Application">
       <Value Profile="(Default)">25</Value>
     </Setting>
-    <Setting Name="ModQuickMedicationOrderDoseMilligramsBoundary" Type="System.String" Scope="Application">
+    <Setting Name="ModQuickMedicationOrderDoseMilligramBoundary" Type="System.String" Scope="Application">
       <Value Profile="(Default)">20</Value>
     </Setting>
     <Setting Name="ModTestingMode" Type="System.String" Scope="Application">
