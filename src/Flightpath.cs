@@ -26,6 +26,7 @@ namespace Abatab
 
             if (!Directory.Exists(todaysDirectory))
             {
+                Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name, todaysDirectory);
                 Directory.CreateDirectory(todaysDirectory);
                 Core.DataExport.SessionInformation.ToDirectory(sessionProperties, todaysDirectory);
             }
