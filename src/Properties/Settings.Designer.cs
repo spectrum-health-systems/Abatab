@@ -169,7 +169,7 @@ namespace Abatab.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("enabled")]
+        [global::System.Configuration.DefaultSettingValueAttribute("disabled")]
         public string DebugglerMode {
             get {
                 return ((string)(this["DebugglerMode"]));

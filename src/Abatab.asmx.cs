@@ -1,9 +1,9 @@
 ﻿/* Abatab v23.2.0
- * Development build b230225.1711
+ * Development build 230225.1720
  */
 
 // Abatab.asmx.cs
-// b230225.1336
+// b230225.1720
 // (c) A Pretty Cool Program
 
 using System.Collections.Generic;
@@ -16,7 +16,7 @@ namespace Abatab
     [WebService(Namespace = "http://tempuri.org/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
-    public class Abatab : System.Web.Services.WebService
+    public class Abatab : WebService
     {
         [WebMethod]
         public string GetVersion()
@@ -39,7 +39,7 @@ namespace Abatab
             }
             else
             {
-                PrimevalLog.WriteLocal();
+                PrimevalLog.WriteLocal("disabled");
 
                 return sentOptionObject.ToReturnOptionObject();
             }
