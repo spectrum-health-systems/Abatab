@@ -1,10 +1,10 @@
 ﻿// Abatab.WebConfig.cs
-// b230224.1700
+// b230225.1136
 // Copyright (c) A Pretty Cool Program
 
 using System.Collections.Generic;
 using System.Reflection;
-using Abatab.Core.Logger;
+using Abatab.Core.Utilities;
 using Abatab.Properties;
 
 namespace Abatab
@@ -14,7 +14,7 @@ namespace Abatab
         public static Dictionary<string, string> Load()
         {
             /* For testing/debugging only */
-            LogEvent.Debuggler($@"C:\AbatabData\Debuggler\", Assembly.GetExecutingAssembly().GetName().Name);
+            Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name);
 
             return new Dictionary<string, string>()
             {
