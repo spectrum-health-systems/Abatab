@@ -4,9 +4,10 @@
 
 using System.Collections.Generic;
 using System.IO;
+using System.Reflection;
 using Abatab.Core.Catalog;
 using Abatab.Core.Session;
-
+using Abatab.Core.Utilities;
 using ScriptLinkStandard.Objects;
 
 namespace Abatab
@@ -20,6 +21,8 @@ namespace Abatab
             SessionProperties sessionProperties = Build.NewSession(sentOptionObject, scriptParameter, webConfigContent);
 
             var todaysDirectory = $@"{sessionProperties.AbatabDataRoot}\{sessionProperties.AvatarEnvironment}\{sessionProperties.Datestamp}";
+
+            Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name, todaysDirectory);
 
             if (!Directory.Exists(todaysDirectory))
             {
