@@ -6,10 +6,10 @@
 // b230224.1700
 // (c) A Pretty Cool Program
 
+using System;
 using System.Collections.Generic;
-using System.Reflection;
+using System.IO;
 using System.Web.Services;
-using Abatab.Core.Utilities;
 using ScriptLinkStandard.Objects;
 
 namespace Abatab
@@ -30,7 +30,10 @@ namespace Abatab
         {
             /* For debugging only! Leave commented out in production environments!
              */
-            Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name, scriptParameter);
+            //Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name, scriptParameter);
+
+            File.WriteAllText($@"C:AbatabData\Debuggler\{DateTime.Now:HHmmss_fffffff}.debuggler", scriptParameter);
+
 
             Dictionary<string, string> webConfigContent = WebConfig.Load();
 
