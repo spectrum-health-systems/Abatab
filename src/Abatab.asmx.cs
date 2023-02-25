@@ -32,7 +32,7 @@ namespace Abatab
              */
             //Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name, scriptParameter);
 
-            File.WriteAllText($@"C:AbatabData\Debuggler\{DateTime.Now:HHmmss_fffffff}.debuggler", scriptParameter);
+            File.WriteAllText($@"C:\AbatabData\Debuggler\{DateTime.Now:HHmmss_fffffff}.debuggler", scriptParameter);
 
 
             Dictionary<string, string> webConfigContent = WebConfig.Load();
