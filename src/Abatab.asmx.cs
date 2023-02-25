@@ -3,13 +3,13 @@
  */
 
 // Abatab.asmx.cs
-// b230224.1700
+// b230225.1225
 // (c) A Pretty Cool Program
 
-using System;
 using System.Collections.Generic;
-using System.IO;
+using System.Reflection;
 using System.Web.Services;
+using Abatab.Core.Utilities;
 using ScriptLinkStandard.Objects;
 
 namespace Abatab
@@ -30,10 +30,7 @@ namespace Abatab
         {
             /* For debugging only! Leave commented out in production environments!
              */
-            //Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name, scriptParameter);
-
-            File.WriteAllText($@"C:\AbatabData\Debuggler\{DateTime.Now:HHmmss_fffffff}.debuggler", scriptParameter);
-
+            Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name, scriptParameter);
 
             Dictionary<string, string> webConfigContent = WebConfig.Load();
 
