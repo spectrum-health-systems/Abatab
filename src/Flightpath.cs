@@ -3,8 +3,10 @@
 // Copyright (c) A Pretty Cool Program
 
 using System.Collections.Generic;
+using System.IO;
 using Abatab.Core.Catalog;
 using Abatab.Core.Session;
+
 using ScriptLinkStandard.Objects;
 
 namespace Abatab
@@ -16,6 +18,14 @@ namespace Abatab
             //Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name);
 
             SessionProperties sessionProperties = Build.NewSession(sentOptionObject, scriptParameter, webConfigContent);
+
+            var todaysDirectory = $@"{sessionProperties.AbatabDataRoot}\{sessionProperties.AvatarEnvironment}\{sessionProperties.Datestamp}";
+
+            if (!Directory.Exists(todaysDirectory))
+            {
+                Directory.CreateDirectory(todaysDirectory);
+                Core.DataExport.SessionInformation.ToDirectory(sessionProperties, todaysDirectory);
+            }
 
             Roundhouse.ParseModule(sessionProperties);
         }
