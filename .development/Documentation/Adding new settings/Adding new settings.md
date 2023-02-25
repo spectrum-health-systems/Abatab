@@ -17,6 +17,7 @@ graph TD
   AddSettingToSettings("Add arguments to Properties/Settings.settings") --> AddSettingToWebConfigLoad("Add the setting to Abatab.WebConfig.Load()")
   AddSettingToWebConfigLoad("Add the setting to Abatab.WebConfig.Load()") --> AddSettingToAbatabCoreCatalogSessionProperties("Add the setting to Abatab.Core.Catalog.SessionProperties.cs")
   AddSettingToAbatabCoreCatalogSessionProperties("Abatab.Core.Catalog.SessionProperties.cs") --> AddSettingToAbatab.Core.Session.Build("Abatab.Core.Session.Build.cs")
+  AddSettingToAbatab.Core.Session.Build("Abatab.Core.Session.Build.cs") --> AddSettingToAbatabCoreCatalogSession.cs("Abatab.Core.Catalog.Session.cs")
 ```
 
 </div>
@@ -68,3 +69,7 @@ var abatabSession = new Session
     AbatabDataRoot         = $@"{webConfig["AbatabDataRoot"]}\{webConfig["AvatarEnvironment"]}"
 };
 ```
+
+## Add setting to Abatab.Core.Catalog.Session.cs
+
+Add the new setting here so it's exported with logfiles.
