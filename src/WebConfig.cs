@@ -3,8 +3,6 @@
 // Copyright (c) A Pretty Cool Program
 
 using System.Collections.Generic;
-using System.Reflection;
-using Abatab.Core.Utilities;
 using Abatab.Properties;
 
 namespace Abatab
@@ -13,7 +11,7 @@ namespace Abatab
     {
         public static Dictionary<string, string> Load()
         {
-            Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name);
+            //Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name);
 
             return new Dictionary<string, string>()
             {

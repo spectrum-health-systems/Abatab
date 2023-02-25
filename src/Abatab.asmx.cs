@@ -7,9 +7,7 @@
 // (c) A Pretty Cool Program
 
 using System.Collections.Generic;
-using System.Reflection;
 using System.Web.Services;
-using Abatab.Core.Utilities;
 using ScriptLinkStandard.Objects;
 
 namespace Abatab
@@ -28,7 +26,7 @@ namespace Abatab
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string scriptParameter)
         {
-            Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name, scriptParameter);
+            //Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name, scriptParameter);
 
             Dictionary<string, string> webConfigContent = WebConfig.Load();
 
