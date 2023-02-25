@@ -52,7 +52,7 @@ namespace Abatab.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("enabled")]
+        [global::System.Configuration.DefaultSettingValueAttribute("disabled")]
         public string LoggerMode {
             get {
                 return ((string)(this["LoggerMode"]));
@@ -65,6 +65,15 @@ namespace Abatab.Properties {
         public string LoggerDelay {
             get {
                 return ((string)(this["LoggerDelay"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("all")]
+        public string LoggerTypes {
+            get {
+                return ((string)(this["LoggerTypes"]));
             }
         }
         
@@ -110,6 +119,15 @@ namespace Abatab.Properties {
         public string ModPrototypeMode {
             get {
                 return ((string)(this["ModPrototypeMode"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("all")]
+        public string ModPrototypeAuthorizedUsers {
+            get {
+                return ((string)(this["ModPrototypeAuthorizedUsers"]));
             }
         }
         
@@ -173,24 +191,6 @@ namespace Abatab.Properties {
         public string DebugglerMode {
             get {
                 return ((string)(this["DebugglerMode"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("all")]
-        public string ModPrototypeAuthorizedUsers {
-            get {
-                return ((string)(this["ModPrototypeAuthorizedUsers"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("all")]
-        public string LoggerTypes {
-            get {
-                return ((string)(this["LoggerTypes"]));
             }
         }
     }
