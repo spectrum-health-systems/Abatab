@@ -1,5 +1,5 @@
 ﻿/* Abatab v23.2.0
- * Development build b230225.1621
+ * Development build b230225.1711
  */
 
 // Abatab.asmx.cs
@@ -8,6 +8,7 @@
 
 using System.Collections.Generic;
 using System.Web.Services;
+using Abatab.Core.Utilities;
 using ScriptLinkStandard.Objects;
 
 namespace Abatab
@@ -38,7 +39,7 @@ namespace Abatab
             }
             else
             {
-                // TODO - Write a session log here.
+                PrimevalLog.WriteLocal();
 
                 return sentOptionObject.ToReturnOptionObject();
             }
