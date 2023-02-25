@@ -33,7 +33,7 @@ namespace Abatab
                 { "ModQuickMedicationOrderAuthorizedUsers",        Settings.Default.ModQuickMedicationOrderAuthorizedUsers  },
                 { "ModQuickMedicationOrderValidOrderTypes",        Settings.Default.ModQuickMedicationOrderValidOrderTypes },
                 { "ModQuickMedicationOrderDosePercentBoundary",    Settings.Default.ModQuickMedicationOrderDosePercentBoundary },
-                { "ModQuickMedicationOrderDoseMilligramsBoundary", Settings.Default.ModQuickMedicationOrderDoseMilligramBoundary },
+                { "ModQuickMedicationOrderDoseMilligramBoundary",  Settings.Default.ModQuickMedicationOrderDoseMilligramBoundary },
                 { "TestingMode",                                   Settings.Default.ModTestingMode },
                 { "DebugglerMode",                                 Settings.Default.DebugglerMode }
             };
