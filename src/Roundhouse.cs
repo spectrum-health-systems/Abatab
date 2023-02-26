@@ -19,6 +19,7 @@ namespace Abatab
                 case "testing":
                     LogEvent.Trace(abSession, Assembly.GetExecutingAssembly().GetName().Name);
                     Module.Testing.Roundhouse.ParseCommand(abSession);
+                    LogEvent.Trace(abSession, Assembly.GetExecutingAssembly().GetName().Name);
                     break;
 
                 default:
