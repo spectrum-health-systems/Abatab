@@ -12,7 +12,7 @@
       <Value Profile="(Default)">C:\AbatabData</Value>
     </Setting>
     <Setting Name="LoggerMode" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">disabled</Value>
+      <Value Profile="(Default)">enabled</Value>
     </Setting>
     <Setting Name="LoggerDelay" Type="System.String" Scope="Application">
       <Value Profile="(Default)">10</Value>

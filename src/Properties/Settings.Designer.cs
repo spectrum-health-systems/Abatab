@@ -52,7 +52,7 @@ namespace Abatab.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("disabled")]
+        [global::System.Configuration.DefaultSettingValueAttribute("enabled")]
         public string LoggerMode {
             get {
                 return ((string)(this["LoggerMode"]));
