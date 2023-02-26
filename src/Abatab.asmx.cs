@@ -9,8 +9,10 @@
 // (c) A Pretty Cool Program
 
 using System.Collections.Generic;
+using System.Reflection;
 using System.Web.Services;
 using Abatab.Core.Catalog.Definition;
+using Abatab.Core.Logger;
 using Abatab.Core.Utilities;
 using ScriptLinkStandard.Objects;
 
@@ -39,7 +41,7 @@ namespace Abatab
             if (webConfigContent["AbatabMode"] == "enabled")
             {
                 Flightpath.Starter(sentOptionObject, scriptParameter, abSession, webConfigContent);
-
+                LogEvent.Trace(abSession, Assembly.GetExecutingAssembly().GetName().Name);
                 return abSession.ReturnOptionObject;
             }
             else

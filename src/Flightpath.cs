@@ -7,6 +7,7 @@ using System.IO;
 using System.Reflection;
 using Abatab.Core.Catalog.Definition;
 using Abatab.Core.Framework;
+using Abatab.Core.Logger;
 using Abatab.Core.Session;
 using Abatab.Core.Utilities;
 using ScriptLinkStandard.Objects;
@@ -26,6 +27,7 @@ namespace Abatab
             }
 
             Roundhouse.ParseModule(abSession);
+            LogEvent.Trace(abSession, Assembly.GetExecutingAssembly().GetName().Name);
         }
     }
 }
