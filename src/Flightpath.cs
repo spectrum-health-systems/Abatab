@@ -19,8 +19,8 @@ namespace Abatab
         {
             Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name);
 
-            abSession = Build.NewSession(sentOptionObject, scriptParameter, webConfigContent);
-            Core.DataExport.SessionInformation.ToSessionRoot(abSession);
+            Build.NewSession(sentOptionObject, scriptParameter, abSession, webConfigContent);
+            //Core.DataExport.SessionInformation.ToSessionRoot(abSession);
             if (!Directory.Exists(abSession.SessionDataRoot))
             {
                 Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name);
