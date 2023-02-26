@@ -42,7 +42,10 @@ namespace Abatab
             {
                 Flightpath.Starter(sentOptionObject, scriptParameter, abSession, webConfigContent);
                 LogEvent.Trace(abSession, Assembly.GetExecutingAssembly().GetName().Name);
-                return abSession.ReturnOptionObject;
+
+                OptionObject2015 result = abSession.ReturnOptionObject;
+
+                return result;
             }
             else
             {
