@@ -24,6 +24,11 @@ namespace Abatab
                 Refresh.Daily(abSession);
             }
 
+            if (!Directory.Exists(abSession.SessionDataDirectory))
+            {
+                Directory.CreateDirectory(abSession.SessionDataDirectory);
+            }
+
             Roundhouse.ParseModule(abSession);
         }
     }
