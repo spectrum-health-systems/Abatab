@@ -21,11 +21,13 @@ namespace Abatab
 
             if (!Directory.Exists(abSession.SessionDataRoot))
             {
+                //Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name);
                 Refresh.Daily(abSession);
             }
 
             if (!Directory.Exists(abSession.SessionDataDirectory))
             {
+                //Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name);
                 Directory.CreateDirectory(abSession.SessionDataDirectory);
             }
 
