@@ -10,6 +10,7 @@
 
 using System.Collections.Generic;
 using System.Web.Services;
+using Abatab.Core.Catalog.Definition;
 using Abatab.Core.Utilities;
 using ScriptLinkStandard.Objects;
 
@@ -31,13 +32,15 @@ namespace Abatab
         {
             //Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name, scriptParameter);
 
+            AbSession abSession = new AbSession();
+
             Dictionary<string, string> webConfigContent = WebConfig.Load();
 
             if (webConfigContent["AbatabMode"] == "enabled")
             {
-                Flightpath.Starter(sentOptionObject, scriptParameter, webConfigContent);
+                Flightpath.Starter(sentOptionObject, scriptParameter, abSession, webConfigContent);
 
-                return sentOptionObject.ToReturnOptionObject();
+                return abSession.ReturnOptionObject;
             }
             else
             {

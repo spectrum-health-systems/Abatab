@@ -13,11 +13,11 @@ namespace Abatab
 {
     public static class Flightpath
     {
-        public static void Starter(OptionObject2015 sentOptionObject, string scriptParameter, Dictionary<string, string> webConfigContent)
+        public static void Starter(OptionObject2015 sentOptionObject, string scriptParameter, AbSession abSession, Dictionary<string, string> webConfigContent)
         {
             //Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name);
 
-            AbSession abSession = Build.NewSession(sentOptionObject, scriptParameter, webConfigContent);
+            abSession = Build.NewSession(sentOptionObject, scriptParameter, webConfigContent);
 
             if (!Directory.Exists(abSession.SessionDataRoot))
             {
