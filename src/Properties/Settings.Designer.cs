@@ -88,7 +88,7 @@ namespace Abatab.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("_abatab_")]
+        [global::System.Configuration.DefaultSettingValueAttribute("ABATAB")]
         public string AbatabFallbackUserName {
             get {
                 return ((string)(this["AbatabFallbackUserName"]));
