@@ -4,32 +4,27 @@
 
 using System.Collections.Generic;
 using System.IO;
-using Abatab.Core.Catalog;
+using Abatab.Core.Catalog.Definition;
 using Abatab.Core.Framework;
 using Abatab.Core.Session;
 using ScriptLinkStandard.Objects;
 
 namespace Abatab
 {
-    public class Flightpath
+    public static class Flightpath
     {
         public static void Starter(OptionObject2015 sentOptionObject, string scriptParameter, Dictionary<string, string> webConfigContent)
         {
             //Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name);
 
-            SessionProperties sessionProperties = Build.NewSession(sentOptionObject, scriptParameter, webConfigContent);
+            AbSession abSession = Build.NewSession(sentOptionObject, scriptParameter, webConfigContent);
 
-            if (!Directory.Exists(sessionProperties.SessionDataRoot))
+            if (!Directory.Exists(abSession.SessionDataRoot))
             {
-                Refresh.Daily(sessionProperties);
+                Refresh.Daily(abSession);
             }
 
-            //if (!File.Exists($@"{sessionProperties.AbatabDataRoot}\{sessionProperties.AvatarEnvironment}\{sessionProperties.Datestamp}\Abatab.settings"))
-            //{
-            //    Core.DataExport.SessionInformation.ToDaily(sessionProperties, $@"{sessionProperties.AbatabDataRoot}\{sessionProperties.AvatarEnvironment}\{sessionProperties.Datestamp}\Abatab.settings");
-            //}
-
-            Roundhouse.ParseModule(sessionProperties);
+            Roundhouse.ParseModule(abSession);
         }
     }
 }

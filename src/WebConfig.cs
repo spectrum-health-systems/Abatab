@@ -19,6 +19,8 @@ namespace Abatab
             return new Dictionary<string, string>()
             {
                 { "AbatabMode",                                    Settings.Default.AbatabMode },
+                { "AbatabVersion",                                 Settings.Default.AbatabVersion },
+                { "AbatabBuild",                                   Settings.Default.AbatabBuild },
                 { "AbatabServiceRoot",                             Settings.Default.AbatabServiceRoot },
                 { "AbatabDataRoot",                                Settings.Default.AbatabDataRoot },
                 { "LoggerMode",                                    Settings.Default.LoggerMode },

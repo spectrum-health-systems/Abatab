@@ -193,5 +193,23 @@ namespace Abatab.Properties {
                 return ((string)(this["DebugglerMode"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("23.2")]
+        public string AbatabVersion {
+            get {
+                return ((string)(this["AbatabVersion"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("development+230226")]
+        public string AbatabBuild {
+            get {
+                return ((string)(this["AbatabBuild"]));
+            }
+        }
     }
 }

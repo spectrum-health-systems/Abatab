@@ -1,6 +1,8 @@
-﻿/* Abatab v23.2.0
- * Development build 230225.1749
- */
+﻿/*************************************************************************
+ * Abatab v23.2.0-development+230226.1340
+ * A custom web service/framework for Netsmart's myAvatar EHR.
+ * https://github.com/spectrum-health-systems/Abatab
+ ************************************************************************/
 
 // Abatab.asmx.cs
 // b230225.1749

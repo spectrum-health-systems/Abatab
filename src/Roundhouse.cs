@@ -3,26 +3,26 @@
 // Copyright (c) A Pretty Cool Program
 
 using System.Reflection;
-using Abatab.Core.Catalog;
+using Abatab.Core.Catalog.Definition;
 using Abatab.Core.Logger;
 
 namespace Abatab
 {
     public static class Roundhouse
     {
-        public static void ParseModule(SessionProperties sessionProperties)
+        public static void ParseModule(AbSession abSession)
         {
-            LogEvent.Trace(sessionProperties, Assembly.GetExecutingAssembly().GetName().Name);
+            LogEvent.Trace(abSession, Assembly.GetExecutingAssembly().GetName().Name);
 
-            switch (sessionProperties.RequestModule)
+            switch (abSession.RequestModule)
             {
                 case "testing":
-                    LogEvent.Trace(sessionProperties, Assembly.GetExecutingAssembly().GetName().Name);
-                    Module.Testing.Roundhouse.ParseCommand(sessionProperties);
+                    LogEvent.Trace(abSession, Assembly.GetExecutingAssembly().GetName().Name);
+                    Module.Testing.Roundhouse.ParseCommand(abSession);
                     break;
 
                 default:
-                    LogEvent.Trace(sessionProperties, Assembly.GetExecutingAssembly().GetName().Name);
+                    LogEvent.Trace(abSession, Assembly.GetExecutingAssembly().GetName().Name);
                     // TODO - Exit gracefully.
                     break;
             }
