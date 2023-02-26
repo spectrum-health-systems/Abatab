@@ -43,9 +43,11 @@ namespace Abatab
                 Flightpath.Starter(sentOptionObject, scriptParameter, abSession, webConfigContent);
                 LogEvent.Trace(abSession, Assembly.GetExecutingAssembly().GetName().Name);
 
-                OptionObject2015 result = abSession.ReturnOptionObject;
 
-                return sentOptionObject.ToReturnOptionObject();
+                sentOptionObject.SetFieldValue("50004", "T102");
+
+
+                return sentOptionObject;
             }
             else
             {
