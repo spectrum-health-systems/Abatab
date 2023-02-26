@@ -45,7 +45,7 @@ namespace Abatab
 
                 OptionObject2015 result = abSession.ReturnOptionObject;
 
-                return result;
+                return sentOptionObject.ToReturnOptionObject();
             }
             else
             {
