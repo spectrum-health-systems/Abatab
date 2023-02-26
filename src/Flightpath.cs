@@ -18,7 +18,7 @@ namespace Abatab
         public static void Starter(OptionObject2015 sentOptionObject, string scriptParameter, AbSession abSession, Dictionary<string, string> webConfigContent)
         {
             Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name);
-
+            Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name);
             Build.NewSession(sentOptionObject, scriptParameter, abSession, webConfigContent);
             //Core.DataExport.SessionInformation.ToSessionRoot(abSession);
             if (!Directory.Exists(abSession.SessionDataRoot))
