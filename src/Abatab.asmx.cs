@@ -53,7 +53,7 @@ namespace Abatab
                 Core.DataExport.SessionInformation.ToSessionRoot(abSession);
 
                 Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name, scriptParameter);
-                return sentOptionObject.ToReturnOptionObject();
+                return sentOptionObject;
             }
             else
             {
