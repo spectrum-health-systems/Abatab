@@ -43,10 +43,16 @@ namespace Abatab
                 Flightpath.Starter(sentOptionObject, scriptParameter, abSession, webConfigContent);
                 LogEvent.Trace(abSession, Assembly.GetExecutingAssembly().GetName().Name);
 
-                Core.DataExport.SessionInformation.ToSessionRoot(abSession);
-                sentOptionObject.SetFieldValue("50004", "T102");
+                Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name, scriptParameter);
                 Core.DataExport.SessionInformation.ToSessionRoot(abSession);
 
+                Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name, scriptParameter);
+                sentOptionObject.SetFieldValue("50004", "T102");
+
+                Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name, scriptParameter);
+                Core.DataExport.SessionInformation.ToSessionRoot(abSession);
+
+                Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name, scriptParameter);
                 return sentOptionObject;
             }
             else
