@@ -4,9 +4,11 @@
 
 using System.Collections.Generic;
 using System.IO;
+using System.Reflection;
 using Abatab.Core.Catalog.Definition;
 using Abatab.Core.Framework;
 using Abatab.Core.Session;
+using Abatab.Core.Utilities;
 using ScriptLinkStandard.Objects;
 
 namespace Abatab
@@ -15,19 +17,19 @@ namespace Abatab
     {
         public static void Starter(OptionObject2015 sentOptionObject, string scriptParameter, AbSession abSession, Dictionary<string, string> webConfigContent)
         {
-            //Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name);
+            Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name);
 
             abSession = Build.NewSession(sentOptionObject, scriptParameter, webConfigContent);
 
             if (!Directory.Exists(abSession.SessionDataRoot))
             {
-                //Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name);
+                Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name);
                 Refresh.Daily(abSession);
             }
 
             if (!Directory.Exists(abSession.SessionDataDirectory))
             {
-                //Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name);
+                Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name);
                 Directory.CreateDirectory(abSession.SessionDataDirectory);
             }
 
