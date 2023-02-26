@@ -205,7 +205,7 @@ namespace Abatab.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("development+230226")]
+        [global::System.Configuration.DefaultSettingValueAttribute("b230226 (development)")]
         public string AbatabBuild {
             get {
                 return ((string)(this["AbatabBuild"]));
