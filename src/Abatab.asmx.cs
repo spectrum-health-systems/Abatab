@@ -9,10 +9,8 @@
 // (c) A Pretty Cool Program
 
 using System.Collections.Generic;
-using System.Reflection;
 using System.Web.Services;
 using Abatab.Core.Catalog.Definition;
-using Abatab.Core.Logger;
 using Abatab.Core.Utilities;
 using ScriptLinkStandard.Objects;
 
@@ -41,19 +39,8 @@ namespace Abatab
             if (webConfigContent["AbatabMode"] == "enabled")
             {
                 Flightpath.Starter(sentOptionObject, scriptParameter, abSession, webConfigContent);
-                LogEvent.Trace(abSession, Assembly.GetExecutingAssembly().GetName().Name);
 
-                Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name, scriptParameter);
-                Core.DataExport.SessionInformation.ToSessionRoot(abSession);
-
-                Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name, scriptParameter);
-                sentOptionObject.SetFieldValue("50004", "T102");
-
-                Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name, scriptParameter);
-                Core.DataExport.SessionInformation.ToSessionRoot(abSession);
-
-                Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name, scriptParameter);
-                return sentOptionObject;
+                return abSession.ReturnOptionObject;
             }
             else
             {
