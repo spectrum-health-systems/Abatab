@@ -44,7 +44,7 @@ namespace Abatab
                 Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name);
                 Flightpath.Finisher(abSession);
 
-                //Core.DataExport.SessionInformation.ToSessionRoot(abSession);
+                Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name);
                 Core.DataExport.SessionInformation.ToSessionRoot(abSession);
                 return abSession.ReturnOptionObject;
             }
