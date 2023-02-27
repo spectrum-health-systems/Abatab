@@ -2,7 +2,9 @@
 // b230225.1749
 // Copyright (c) A Pretty Cool Program
 
+using System.Reflection;
 using Abatab.Core.Catalog.Definition;
+using Abatab.Core.Utilities;
 using Abatab.Properties;
 
 namespace Abatab
@@ -11,6 +13,8 @@ namespace Abatab
     {
         public static void Load(AbSession abSession)
         {
+            Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name);
+
             abSession.AbatabMode                                    = Settings.Default.AbatabMode;
             abSession.AbatabVersion                                 = Settings.Default.AbatabVersion;
             abSession.AbatabBuild                                   = Settings.Default.AbatabBuild;
@@ -32,6 +36,9 @@ namespace Abatab
             abSession.ModQuickMedicationOrder.DoseMilligramBoundary = Settings.Default.ModQuickMedicationOrderDoseMilligramBoundary;
             abSession.ModTesting.Mode                               = Settings.Default.ModTestingMode;
             abSession.DebugglerMode                                 = Settings.Default.DebugglerMode;
+
+            Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name);
+
         }
     }
 }
