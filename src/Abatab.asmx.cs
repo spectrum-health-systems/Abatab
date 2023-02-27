@@ -31,6 +31,7 @@ namespace Abatab
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string scriptParameter)
         {
+            Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name);
             AbSession abSession = new AbSession();
             Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name);
             //WebConfig.Load(abSession);
