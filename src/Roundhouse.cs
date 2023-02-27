@@ -21,6 +21,11 @@ namespace Abatab
                     Module.Testing.Roundhouse.ParseCommand(abSession);
                     break;
 
+                case "progressnote":
+                    LogEvent.Trace(abSession, Assembly.GetExecutingAssembly().GetName().Name);
+                    Module.ProgressNote.Roundhouse.ParseCommand(abSession);
+                    break;
+
                 default:
                     LogEvent.Trace(abSession, Assembly.GetExecutingAssembly().GetName().Name);
                     // TODO - Exit gracefully.
