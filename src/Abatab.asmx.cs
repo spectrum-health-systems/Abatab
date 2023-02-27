@@ -58,7 +58,9 @@ namespace Abatab
 
             }
 
-            return abSession.ReturnOptionObject.ToReturnOptionObject();
+            var test = abSession.ReturnOptionObject.ToReturnOptionObject();
+
+            return test;
         }
     }
 }
