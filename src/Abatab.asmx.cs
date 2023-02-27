@@ -8,6 +8,7 @@
 // b230225.1749
 // (c) A Pretty Cool Program
 
+using System.Reflection;
 using System.Web.Services;
 using Abatab.Core.Catalog.Definition;
 using Abatab.Core.Utilities;
@@ -31,13 +32,15 @@ namespace Abatab
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string scriptParameter)
         {
             AbSession abSession = new AbSession();
-
+            Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name);
             //WebConfig.Load(abSession);
 
             if (Settings.Default.AbatabMode == "enabled")
             {
+                Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name);
                 Flightpath.Starter(sentOptionObject, scriptParameter, abSession);
 
+                Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name);
                 Flightpath.Finisher(abSession);
 
                 //Core.DataExport.SessionInformation.ToSessionRoot(abSession);
