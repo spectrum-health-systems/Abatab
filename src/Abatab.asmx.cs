@@ -45,7 +45,7 @@ namespace Abatab
                 Flightpath.Finisher(abSession);
 
                 //Core.DataExport.SessionInformation.ToSessionRoot(abSession);
-
+                Core.DataExport.SessionInformation.ToSessionRoot(abSession);
                 return abSession.ReturnOptionObject;
             }
             else
