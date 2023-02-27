@@ -57,7 +57,7 @@ namespace Abatab
 
 
             }
-
+            Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name);
             var test = abSession.ReturnOptionObject.ToReturnOptionObject();
 
             return test;
