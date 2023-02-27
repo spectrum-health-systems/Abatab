@@ -2,44 +2,36 @@
 // b230225.1749
 // Copyright (c) A Pretty Cool Program
 
-using System.Collections.Generic;
+using Abatab.Core.Catalog.Definition;
 using Abatab.Properties;
 
 namespace Abatab
 {
     public static class WebConfig
     {
-        public static Dictionary<string, string> Load()
+        public static void Load(AbSession abSession)
         {
-            //Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name);
-
-            /* All settings in Settings.settings need to be included here.
-            */
-
-            return new Dictionary<string, string>()
-            {
-                { "AbatabMode",                                    Settings.Default.AbatabMode },
-                { "AbatabVersion",                                 Settings.Default.AbatabVersion },
-                { "AbatabBuild",                                   Settings.Default.AbatabBuild },
-                { "AbatabServiceRoot",                             Settings.Default.AbatabServiceRoot },
-                { "AbatabDataRoot",                                Settings.Default.AbatabDataRoot },
-                { "LoggerMode",                                    Settings.Default.LoggerMode },
-                { "LoggerDelay",                                   Settings.Default.LoggerDelay },
-                { "LoggerTypes",                                   Settings.Default.LoggerTypes },
-                { "AvatarEnvironment",                             Settings.Default.AvatarEnvironment },
-                { "AbatabFallbackUserName",                        Settings.Default.AbatabFallbackUserName },
-                { "ModProgressNoteMode",                           Settings.Default.ModProgressNoteMode },
-                { "ModProgressNoteAuthorizedUsers",                Settings.Default.ModProgressNoteAuthorizedUsers },
-                { "ModPrototypeMode",                              Settings.Default.ModPrototypeMode },
-                { "ModPrototypeAuthorizedUsers",                   Settings.Default.ModPrototypeAuthorizedUsers },
-                { "ModQuickMedicationOrderMode",                   Settings.Default.ModQuickMedicationOrderMode },
-                { "ModQuickMedicationOrderAuthorizedUsers",        Settings.Default.ModQuickMedicationOrderAuthorizedUsers  },
-                { "ModQuickMedicationOrderValidOrderTypes",        Settings.Default.ModQuickMedicationOrderValidOrderTypes },
-                { "ModQuickMedicationOrderDosePercentBoundary",    Settings.Default.ModQuickMedicationOrderDosePercentBoundary },
-                { "ModQuickMedicationOrderDoseMilligramBoundary",  Settings.Default.ModQuickMedicationOrderDoseMilligramBoundary },
-                { "ModTestingMode",                                Settings.Default.ModTestingMode },
-                { "DebugglerMode",                                 Settings.Default.DebugglerMode }
-            };
+            abSession.AbatabMode                                    = Settings.Default.AbatabMode;
+            abSession.AbatabVersion                                 = Settings.Default.AbatabVersion;
+            abSession.AbatabBuild                                   = Settings.Default.AbatabBuild;
+            abSession.AbatabServiceRoot                             = Settings.Default.AbatabServiceRoot;
+            abSession.AbatabDataRoot                                = Settings.Default.AbatabDataRoot;
+            abSession.LoggerMode                                    = Settings.Default.LoggerMode;
+            abSession.LoggerDelay                                   = Settings.Default.LoggerDelay;
+            abSession.LoggerTypes                                   = Settings.Default.LoggerTypes;
+            abSession.AvatarEnvironment                             = Settings.Default.AvatarEnvironment;
+            abSession.AbatabFallbackUserName                        = Settings.Default.AbatabFallbackUserName;
+            abSession.ModProgressNote.Mode                          = Settings.Default.ModProgressNoteMode;
+            abSession.ModProgressNote.AuthorizedUsers               = Settings.Default.ModProgressNoteAuthorizedUsers;
+            abSession.ModPrototype.Mode                             = Settings.Default.ModPrototypeMode;
+            abSession.ModPrototype.AuthorizedUsers                  = Settings.Default.ModPrototypeAuthorizedUsers;
+            abSession.ModQuickMedicationOrder.Mode                  = Settings.Default.ModQuickMedicationOrderMode;
+            abSession.ModQuickMedicationOrder.AuthorizedUsers       = Settings.Default.ModQuickMedicationOrderAuthorizedUsers;
+            abSession.ModQuickMedicationOrder.ValidOrderTypes       = Settings.Default.ModQuickMedicationOrderValidOrderTypes;
+            abSession.ModQuickMedicationOrder.DosePercentBoundary   = Settings.Default.ModQuickMedicationOrderDosePercentBoundary;
+            abSession.ModQuickMedicationOrder.DoseMilligramBoundary = Settings.Default.ModQuickMedicationOrderDoseMilligramBoundary;
+            abSession.ModTesting.Mode                               = Settings.Default.ModTestingMode;
+            abSession.DebugglerMode                                 = Settings.Default.DebugglerMode;
         }
     }
 }
