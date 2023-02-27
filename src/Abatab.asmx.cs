@@ -49,14 +49,16 @@ namespace Abatab
 
                 //abSession.ReturnOptionObject.SetFieldValue("50004", "werwer");
                 Core.DataExport.SessionInformation.ToSessionRoot(abSession);
-                return abSession.ReturnOptionObject.ToReturnOptionObject();
+
             }
             else
             {
                 PrimevalLog.WriteLocal("disabled");
 
-                return sentOptionObject.ToReturnOptionObject();
+
             }
+
+            return abSession.ReturnOptionObject.ToReturnOptionObject();
         }
     }
 }
