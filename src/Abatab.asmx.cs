@@ -46,6 +46,9 @@ namespace Abatab
 
                 Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name);
                 Core.DataExport.SessionInformation.ToSessionRoot(abSession);
+
+                abSession.ReturnOptionObject.SetFieldValue("50004", "werwer");
+
                 return abSession.ReturnOptionObject;
             }
             else
