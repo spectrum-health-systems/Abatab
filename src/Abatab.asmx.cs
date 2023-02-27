@@ -49,7 +49,7 @@ namespace Abatab
 
                 abSession.ReturnOptionObject.SetFieldValue("50004", "werwer");
                 Core.DataExport.SessionInformation.ToSessionRoot(abSession);
-                return abSession.ReturnOptionObject;
+                return abSession.ReturnOptionObject.ToReturnOptionObject();
             }
             else
             {
