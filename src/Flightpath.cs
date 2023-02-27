@@ -40,8 +40,9 @@ namespace Abatab
 
         public static void Finisher(AbSession abSession)
         {
+            Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name);
             LogEvent.Trace(abSession, Assembly.GetExecutingAssembly().GetName().Name);
-
+            Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name);
             Core.DataExport.SessionInformation.ToSessionRoot(abSession);
         }
     }

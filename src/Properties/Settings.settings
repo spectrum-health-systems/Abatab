@@ -63,7 +63,7 @@
       <Value Profile="(Default)">23.2</Value>
     </Setting>
     <Setting Name="AbatabBuild" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">b230226 (development)</Value>
+      <Value Profile="(Default)">b230227 (development)</Value>
     </Setting>
   </Settings>
 </SettingsFile>
