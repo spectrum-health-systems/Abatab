@@ -39,7 +39,7 @@ namespace Abatab
             if (webConfigContent["AbatabMode"] == "enabled")
             {
                 Flightpath.Starter(sentOptionObject, scriptParameter, abSession, webConfigContent);
-
+                Core.DataExport.SessionInformation.ToSessionRoot(abSession);
                 return abSession.ReturnOptionObject;
             }
             else
