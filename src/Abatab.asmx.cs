@@ -1,14 +1,13 @@
 ﻿/*************************************************************************
- * Abatab v23.2.0-development+230226.1340
+ * Abatab v23.2.0-development+230228.0832
  * A custom web service/framework for Netsmart's myAvatar EHR.
  * https://github.com/spectrum-health-systems/Abatab
  ************************************************************************/
 
 // Abatab.asmx.cs
-// b230225.1749
+// b---------x
 // (c) A Pretty Cool Program
 
-using System.Reflection;
 using System.Web.Services;
 using Abatab.Core.Catalog.Definition;
 using Abatab.Core.Utilities;
@@ -31,36 +30,20 @@ namespace Abatab
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string scriptParameter)
         {
-            Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name);
             AbSession abSession = new AbSession();
-            Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name);
-            //WebConfig.Load(abSession);
 
             if (Settings.Default.AbatabMode == "enabled")
             {
-                Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name);
                 Flightpath.Starter(sentOptionObject, scriptParameter, abSession);
 
-                Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name);
                 Flightpath.Finisher(abSession);
-
-                Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name);
-                Core.DataExport.SessionInformation.ToSessionRoot(abSession);
-
-                //abSession.ReturnOptionObject.SetFieldValue("50004", "werwer");
-                Core.DataExport.SessionInformation.ToSessionRoot(abSession);
-
             }
             else
             {
                 PrimevalLog.WriteLocal("disabled");
-
-
             }
-            Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name);
-            var test = abSession.ReturnOptionObject.ToReturnOptionObject();
 
-            return test;
+            return abSession.ReturnOptionObject.ToReturnOptionObject();
         }
     }
 }
