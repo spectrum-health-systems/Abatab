@@ -9,7 +9,6 @@
 // (c) A Pretty Cool Program
 
 using System.Web.Services;
-using Abatab.Core.Catalog.Definition;
 using ScriptLinkStandard.Objects;
 
 namespace Abatab
@@ -31,7 +30,7 @@ namespace Abatab
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string scriptParameter)
         {
-            AbSession abSession = new AbSession();
+            //AbSession abSession = new AbSession();
 
             //if (Settings.Default.AbatabMode == "enabled")
             //{
