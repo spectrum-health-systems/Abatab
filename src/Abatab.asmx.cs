@@ -43,9 +43,9 @@ namespace Abatab
             //    PrimevalLog.WriteLocal("disabled");
             //}
 
-            //var newOO = new OptionObject2015();
+            var newOO = new OptionObject2015();
 
-            var newOO = sentOptionObject.Clone();
+            //var newOO = sentOptionObject.Clone();
 
             newOO.SetFieldValue("10750", "Super test.");
 
