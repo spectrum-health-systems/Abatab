@@ -1,5 +1,5 @@
 ﻿/*************************************************************************
- * Abatab v23.2.0-development+230228.0832
+ * Abatab v23.2.0-development+230301.0740
  * A custom web service/framework for Netsmart's myAvatar EHR.
  * https://github.com/spectrum-health-systems/Abatab
  ************************************************************************/
@@ -16,17 +16,20 @@ using ScriptLinkStandard.Objects;
 
 namespace Abatab
 {
+    /// <summary>The entry point for Abatab.</summary>
     [WebService(Namespace = "http://tempuri.org/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
     public class Abatab : WebService
     {
+        /// <include file='Documentation/Abatab.xmldoc' path='XMLDoc/Class[@name="Abatab.asmx.cs"]/GetVersion/*' />
         [WebMethod]
         public string GetVersion()
         {
             return "VERSION 23.2";
         }
 
+        /// <include file='Documentation/Abatab.xmldoc' path='XMLDoc/Class[@name="Abatab.asmx.cs"]/RunScript/*' />
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string scriptParameter)
         {
@@ -34,9 +37,9 @@ namespace Abatab
 
             if (Settings.Default.AbatabMode == "enabled")
             {
-                Flightpath.Starter(sentOptionObject, scriptParameter, abSession);
+                Flightpath.StartAbatab(sentOptionObject, scriptParameter, abSession);
 
-                Flightpath.Finisher(abSession);
+                Flightpath.FinishAbatab(abSession);
             }
             else
             {

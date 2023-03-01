@@ -12,11 +12,12 @@ using ScriptLinkStandard.Objects;
 
 namespace Abatab
 {
+    /// <summary>Handles high-level program flow.</summary>
     public static class Flightpath
     {
-        public static void Starter(OptionObject2015 sentOptionObject, string scriptParameter, AbSession abSession)
+        /// <include file='Documentation/Abatab.xmldoc' path='XMLDoc/Class[@name="Flightpath.cs"]/StartAbatab/*' />
+        public static void StartAbatab(OptionObject2015 sentOptionObject, string scriptParameter, AbSession abSession)
         {
-            ;
             WebConfig.Load(abSession);
 
             Build.NewSession(sentOptionObject, scriptParameter, abSession);
@@ -35,7 +36,8 @@ namespace Abatab
             Roundhouse.ParseModule(abSession);
         }
 
-        public static void Finisher(AbSession abSession)
+        /// <include file='Documentation/Abatab.xmldoc' path='XMLDoc/Class[@name="Flightpath.cs"]/FinishAbatab/*' />
+        public static void FinishAbatab(AbSession abSession)
         {
             LogEvent.Trace(abSession, Assembly.GetExecutingAssembly().GetName().Name);
 

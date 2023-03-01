@@ -8,8 +8,12 @@ using Abatab.Core.Logger;
 
 namespace Abatab
 {
+    /// <summary>
+    /// Determines what should be done with the <b>module</b> component of the Script Parameter.
+    /// </summary>
     public static class Roundhouse
     {
+        /// <include file='Documentation/Abatab.xmldoc' path='XMLDoc/Class[@name="Roundhouse.cs"]/ParseModule/*' />
         public static void ParseModule(AbSession abSession)
         {
             LogEvent.Trace(abSession, Assembly.GetExecutingAssembly().GetName().Name);
