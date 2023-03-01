@@ -9,6 +9,9 @@
 // (c) A Pretty Cool Program
 
 using System.Web.Services;
+using Abatab.Core.Catalog.Definition;
+using Abatab.Core.Utilities;
+using Abatab.Properties;
 using ScriptLinkStandard.Objects;
 
 namespace Abatab
@@ -30,28 +33,20 @@ namespace Abatab
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string scriptParameter)
         {
-            //AbSession abSession = new AbSession();
+            AbSession abSession = new AbSession();
 
-            //if (Settings.Default.AbatabMode == "enabled")
-            //{
-            //    Flightpath.StartAbatab(sentOptionObject, scriptParameter, abSession);
+            if (Settings.Default.AbatabMode == "enabled")
+            {
+                Flightpath.StartAbatab(sentOptionObject, scriptParameter, abSession);
 
-            //    Flightpath.FinishAbatab(abSession);
-            //}
-            //else
-            //{
-            //    PrimevalLog.WriteLocal("disabled");
-            //}
+                Flightpath.FinishAbatab(abSession);
+            }
+            else
+            {
+                PrimevalLog.WriteLocal("disabled");
+            }
 
-            var newOO = new OptionObject2015();
-
-            //var newOO = sentOptionObject.Clone();
-
-            newOO.SetFieldValue("10750", "Super test.");
-
-            return newOO.ToReturnOptionObject(1, "Let's see");
-
-            //return abSession.ReturnOptionObject;
+            return abSession.ReturnOptionObject;
         }
     }
 }
