@@ -10,8 +10,6 @@
 
 using System.Web.Services;
 using Abatab.Core.Catalog.Definition;
-using Abatab.Core.Utilities;
-using Abatab.Properties;
 using ScriptLinkStandard.Objects;
 
 namespace Abatab
@@ -35,20 +33,24 @@ namespace Abatab
         {
             AbSession abSession = new AbSession();
 
-            if (Settings.Default.AbatabMode == "enabled")
-            {
-                Flightpath.StartAbatab(sentOptionObject, scriptParameter, abSession);
+            //if (Settings.Default.AbatabMode == "enabled")
+            //{
+            //    Flightpath.StartAbatab(sentOptionObject, scriptParameter, abSession);
 
-                Flightpath.FinishAbatab(abSession);
-            }
-            else
-            {
-                PrimevalLog.WriteLocal("disabled");
-            }
+            //    Flightpath.FinishAbatab(abSession);
+            //}
+            //else
+            //{
+            //    PrimevalLog.WriteLocal("disabled");
+            //}
 
+            var newOO = new OptionObject2015();
 
+            newOO.SetFieldValue("10750", "Super test.");
 
-            return abSession.ReturnOptionObject;
+            return newOO.ToReturnOptionObject(1, "Let's see");
+
+            //return abSession.ReturnOptionObject;
         }
     }
 }
