@@ -46,7 +46,7 @@ namespace Abatab
                 PrimevalLog.WriteLocal("disabled");
             }
 
-            return abSession.ReturnOptionObject.ToReturnOptionObject(1, "test");
+            return abSession.ReturnOptionObject.ToReturnOptionObject();
         }
     }
 }
