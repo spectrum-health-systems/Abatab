@@ -36,3 +36,20 @@ Other abbreviations
 
 ### QUICKMEDICATIONORDER
 `QMedOrdr-vfyAmount-Dose`
+
+
+# Flowchart colors
+
+
+
+
+`F94144`: Abatab  
+`277DA1`: Core.Catalog, Module.ProgressNote  
+`F3722C`: Core.DataExport, Module.Prototype  
+`577590`: Core.Framework, Module.QuickMedicationOrder  
+`F8961E`: Core.Logger, Module.Testing
+`4D908E`: Core.Session  
+`F9844A`: Core.Utilities  
+`43AA8B`: ScriptLinkStandard  
+`F9C74F`:  
+`90BE6D`:  
