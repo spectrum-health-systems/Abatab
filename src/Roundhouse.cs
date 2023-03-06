@@ -27,7 +27,7 @@ namespace Abatab
 
                     break;
 
-                case "progressnote":
+                case "prognote":
                     LogEvent.Trace(abSession, Assembly.GetExecutingAssembly().GetName().Name);
 
                     Module.ProgressNote.Roundhouse.ParseCommand(abSession);
