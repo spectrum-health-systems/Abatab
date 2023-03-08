@@ -56,5 +56,11 @@
     <Setting Name="ModTestingMode" Type="System.String" Scope="Application">
       <Value Profile="(Default)">enabled</Value>
     </Setting>
+    <Setting Name="ModProgressNoteMode" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">enabled</Value>
+    </Setting>
+    <Setting Name="ModProgressNoteAuthorizedUsers" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">all</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

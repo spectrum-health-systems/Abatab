@@ -52,6 +52,15 @@ namespace Abatab.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\AbatabData\\Public")]
+        public string PublicAccessRoot {
+            get {
+                return ((string)(this["PublicAccessRoot"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("UAT")]
         public string AvatarEnvironment {
             get {
@@ -178,10 +187,19 @@ namespace Abatab.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\AbatabData\\Public")]
-        public string PublicAccessRoot {
+        [global::System.Configuration.DefaultSettingValueAttribute("enabled")]
+        public string ModProgressNoteMode {
             get {
-                return ((string)(this["PublicAccessRoot"]));
+                return ((string)(this["ModProgressNoteMode"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("all")]
+        public string ModProgressNoteAuthorizedUsers {
+            get {
+                return ((string)(this["ModProgressNoteAuthorizedUsers"]));
             }
         }
     }

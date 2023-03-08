@@ -1,4 +1,4 @@
-﻿// Abatab.WebConfig.cs b230201.1124
+﻿// Abatab.WebConfig.cs b230215.1009
 // Copyright (c) A Pretty Cool Program
 
 using Abatab.Properties;
@@ -40,6 +40,8 @@ namespace Abatab
                 { "LogDetail",                              Settings.Default.LogDetail.ToLower() },
                 { "LogWriteDelay",                          Settings.Default.LogWriteDelay.ToLower() },
                 { "AbatabFallbackUserName",                 Settings.Default.AbatabFallbackUserName.ToLower() },
+                { "ModProgressNoteMode",                    Settings.Default.ModProgressNoteMode.ToLower() },
+                { "ModProgressNoteAuthorizedUsers",         Settings.Default.ModProgressNoteAuthorizedUsers.ToLower() },
                 { "ModPrototypeMode",                       Settings.Default.ModPrototypeMode.ToLower() },
                 { "ModQuickMedOrderMode",                   Settings.Default.ModQuickMedOrderMode.ToLower() },
                 { "ModQuickMedOrderAuthorizedUsers",        Settings.Default.ModQuickMedOrderAuthorizedUsers.ToLower() },

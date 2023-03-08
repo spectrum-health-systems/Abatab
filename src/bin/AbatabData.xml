@@ -127,6 +127,50 @@
         <member name="T:AbatabData.Module.Common">
             <summary>TBD</summary>
         </member>
+        <member name="P:AbatabData.Module.ProgressNote.Mode">
+            <summary>TBD</summary>
+            <value></value>
+        </member>
+        <member name="P:AbatabData.Module.ProgressNote.AuthorizedUsers">
+            <summary>TBD</summary>
+            <value></value>
+        </member>
+        <member name="P:AbatabData.Module.Telehealth.ValidServiceChargeCodes">
+            <summary>TBD</summary>
+            <value></value>
+        </member>
+        <member name="P:AbatabData.Module.Telehealth.ServiceChargeCodeFieldId">
+            <summary>TBD</summary>
+            <value></value>
+        </member>
+        <member name="P:AbatabData.Module.Telehealth.FoundServiceChargeCodeFieldId">
+            <summary>TBD</summary>
+            <value></value>
+        </member>
+        <member name="P:AbatabData.Module.Telehealth.ServiceChargeCodeValue">
+            <summary>TBD</summary>
+            <value></value>
+        </member>
+        <member name="P:AbatabData.Module.Telehealth.ValidLocations">
+            <summary>TBD</summary>
+            <value></value>
+        </member>
+        <member name="P:AbatabData.Module.Telehealth.LocationFieldId">
+            <summary>TBD</summary>
+            <value></value>
+        </member>
+        <member name="P:AbatabData.Module.Telehealth.FoundLocationFieldId">
+            <summary>TBD</summary>
+            <value></value>
+        </member>
+        <member name="P:AbatabData.Module.Telehealth.LocationValue">
+            <summary>TBD</summary>
+            <value></value>
+        </member>
+        <member name="P:AbatabData.Module.Telehealth.FoundAllRequiredFieldIds">
+            <summary>TBD</summary>
+            <value></value>
+        </member>
         <member name="T:AbatabData.Module.Prototype">
             <summary>TBD</summary>
         </member>
@@ -323,6 +367,10 @@
         </member>
         <member name="P:AbatabData.Session.ModCommonConfig">
             <summary>Properties for the Common module.</summary>
+            <value>&lt;-- Click for more info</value>
+        </member>
+        <member name="P:AbatabData.Session.ModProgressNoteConfig">
+            <summary>Properties for the ProgressNote module.</summary>
             <value>&lt;-- Click for more info</value>
         </member>
         <member name="P:AbatabData.Session.ModPrototypeConfig">

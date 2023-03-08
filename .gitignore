@@ -1,46 +1,44 @@
-## ======================================================================== [ bb220525.114456 ]
-## .gitignore
-## A generic .gitignore file for GitHub repositories
-## https://github.com/APrettyCoolProgram/my-development-environment
-## Apache v2 (https://apache.org/licenses/LICENSE-2.0)
-## Copyright 2014-2022 A Pretty Cool Program
-## ============================================================================================
+## .gitignore for Abatab
+## b230214.1009
 
-## Also check out:
-##  - https://gitignore.io
-##  - https://github.com/github/gitignore
+## There are a few directories/resources that are generally part of a standard
+## repository .gitignore file that Abatab needs:
+## 
+##  bin/  This directory contains files and data that Abatab needs to function,
+##        so it needs to be committed to the repository.
+##
+##  log/  These are currently not committed to the repository because there are
+##  logs/ source code files with similar names, and I want to avoid issues.
 
-## Data/sourcecode that is used during development, but should not be committed
-## to the repository should go here.
-*.non-committal/
+#[Bb]in/
+#[Ll]og/
+#[Ll]ogs/
 
-## User-specific data
+## User-specific
 *.rsuser
+*.sln.docstates
 *.suo
 *.user
 *.userosscache
-*.sln.docstates
 *.userprefs
+*.vs/
 
-## Build results. Be careful with these, as your sourcecode may have directories with these
-## names, in which case they will not committed to the repository.
+## Build results.
 [Dd]ebug/
 [Dd]ebugPublic/
-#[Rr]elease/
-#[Rr]eleases/
+[Rr]elease/
+[Rr]eleases/
 x64/
 x86/
 [Ww][Ii][Nn]32/
 [Aa][Rr][Mm]/
 [Aa][Rr][Mm]64/
 bld/
-#[Bb]in/  <- Disabled for Abatab, since we need stuff here
 [Oo]bj/
-#[Ll]og/
-#[Ll]ogs/
-
-## Temporary/cached data
-.vs/
 
 ## MacOS specific
 *DS_Store
+
+## Data/sourcecode that is used during development, but should not be committed
+## to the repository should go here.
+*.non-committal/

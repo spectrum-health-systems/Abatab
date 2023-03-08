@@ -22,17 +22,17 @@
             <summary>TBD</summary>
             <param name="abatabSession"></param>
         </member>
-        <member name="M:ModQuickMedOrder.Dose.ProcessDosageOneField(AbatabData.Session,NTST.ScriptLinkService.Objects.FieldObject)">
+        <member name="M:ModQuickMedOrder.Dose.ProcessDosageOneField(AbatabData.Session,ScriptLinkStandard.Objects.FieldObject)">
             <summary>TBD</summary>
             <param name="abatabSession"></param>
             <param name="fieldObject"></param>
         </member>
-        <member name="M:ModQuickMedOrder.Dose.ProcessOrderTypeField(AbatabData.Session,NTST.ScriptLinkService.Objects.FieldObject)">
+        <member name="M:ModQuickMedOrder.Dose.ProcessOrderTypeField(AbatabData.Session,ScriptLinkStandard.Objects.FieldObject)">
             <summary>TBD</summary>
             <param name="abatabSession"></param>
             <param name="fieldObject"></param>
         </member>
-        <member name="M:ModQuickMedOrder.Dose.ProcessLastScheduledOrderField(AbatabData.Session,NTST.ScriptLinkService.Objects.FieldObject)">
+        <member name="M:ModQuickMedOrder.Dose.ProcessLastScheduledOrderField(AbatabData.Session,ScriptLinkStandard.Objects.FieldObject)">
             <summary>TBD</summary>
             <param name="abatabSession"></param>
             <param name="fieldObject"></param>

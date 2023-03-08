@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ParseOptionObject.cs" />
     <Compile Include="VerifyAccess.cs" />
     <Compile Include="Confirm.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
@@ -71,6 +72,10 @@
     <ProjectReference Include="..\..\Core\AbatabOptionObject\AbatabOptionObject.csproj">
       <Project>{2741df45-7db8-4bea-89b4-4a70c7114192}</Project>
       <Name>AbatabOptionObject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ThirdParty\ScriptLinkStandard\ScriptLinkStandard.csproj">
+      <Project>{24ae23b0-9523-40f4-853b-737de3190c56}</Project>
+      <Name>ScriptLinkStandard</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

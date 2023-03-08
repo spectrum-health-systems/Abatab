@@ -1,4 +1,4 @@
-﻿// Abatab.Roundhouse.cs b230119.0941
+﻿// Abatab.Roundhouse.cs b230215.0902
 // Copyright (c) A Pretty Cool Program
 
 using AbatabData;
@@ -27,6 +27,11 @@ namespace Abatab
 
             switch (abatabSession.AbatabModule)
             {
+                case "progressnote":
+                    LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
+                    ModProgressNote.Roundhouse.ParseRequest(abatabSession);
+                    break;
+
                 case "prototype":
                     LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
                     ModPrototype.Roundhouse.ParseRequest(abatabSession);

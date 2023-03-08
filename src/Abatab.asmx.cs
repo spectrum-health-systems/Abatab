@@ -1,20 +1,19 @@
-﻿// Abatab v23.1.0+230206.1023
-// Abatab.asmx.cs b230123.0832
+﻿// Abatab v23.2.0-development+230222.0949
+// Abatab.asmx.cs b230221.1208
 // (c) A Pretty Cool Program
 
-using Abatab.Properties;
 
-using AbatabData;
-
-using AbatabLogging;
-
-using AbatabSession;
-
-using NTST.ScriptLinkService.Objects;
+/* This is the working development version of Abatab v23.2.
+ */
 
 using System.Collections.Generic;
 using System.Reflection;
 using System.Web.Services;
+using Abatab.Properties;
+using AbatabData;
+using AbatabLogging;
+using AbatabSession;
+using ScriptLinkStandard.Objects;
 
 namespace Abatab
 {
@@ -42,7 +41,7 @@ namespace Abatab
         [WebMethod]
         public string GetVersion()
         {
-            return "VERSION 23.1";
+            return "VERSION 23.2";
         }
 
         /// <summary>Executes script parameter request from Avatar, then returns a potentially modified OptionObject to Avatar.</summary>

@@ -1,7 +1,7 @@
-﻿// Abatab.AbatabData.Session.cs b230130.0924
+﻿// Abatab.AbatabData.Session.cs b230221.1208
 // Copyright (c) A Pretty Cool Program
 
-using NTST.ScriptLinkService.Objects;
+using ScriptLinkStandard.Objects;
 
 namespace AbatabData
 {
@@ -113,6 +113,10 @@ namespace AbatabData
         /// <summary>Properties for the Common module.</summary>
         /// <value>&lt;-- Click for more info</value>
         public Module.Common ModCommonConfig { get; set; }
+
+        /// <summary>Properties for the ProgressNote module.</summary>
+        /// <value>&lt;-- Click for more info</value>
+        public Module.ProgressNote ModProgressNoteConfig { get; set; }
 
         /// <summary>Properties for the Prototype module.</summary>
         /// <value>&lt;-- Click for more info</value>

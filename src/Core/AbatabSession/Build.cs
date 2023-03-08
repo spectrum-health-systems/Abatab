@@ -1,17 +1,14 @@
-﻿// Abatab.AbatabSession.Build.cs b230119.0941
+﻿// Abatab.AbatabSession.Build.cs b230221.1208
 // Copyright (c) A Pretty Cool Program
-
-using AbatabData;
-using AbatabData.Core;
-using AbatabData.Module;
-
-using AbatabLogging;
-
-using NTST.ScriptLinkService.Objects;
 
 using System;
 using System.Collections.Generic;
 using System.Reflection;
+using AbatabData;
+using AbatabData.Core;
+using AbatabData.Module;
+using AbatabLogging;
+using ScriptLinkStandard.Objects;
 
 namespace AbatabSession
 {
@@ -68,6 +65,9 @@ namespace AbatabSession
             LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, webConfig["DebugMode"], webConfig["DebugLogRoot"]);
             BuildModPrototypeConfig(webConfig, abatabSession);
 
+            LogEvent.Debug(Assembly.GetExecutingAssembly().GetName().Name, webConfig["DebugMode"], webConfig["DebugLogRoot"]);
+            BuildModProgressNoteConfig(webConfig, abatabSession);
+
             abatabSession.LoggingConfig.SessionRoot = $@"{abatabSession.AbatabDataRoot}\logs\{abatabSession.SessionDateStamp}\{abatabSession.AbatabUserName}\{abatabSession.SessionTimeStamp}";
             LogEvent.Trace(abatabSession, Assembly.GetExecutingAssembly().GetName().Name, "[TRACE]");
 
@@ -112,7 +112,6 @@ namespace AbatabSession
         {
             abatabSession.ModQuickMedOrderConfig = new QuickMedOrder
             {
-
                 Mode                           = abatabSettings["ModQuickMedOrderMode"],
                 AuthorizedUsers                = abatabSettings["ModQuickMedOrderAuthorizedUsers"],
                 DosePercentBoundary            = abatabSettings["ModQuickMedOrderDosePercentBoundary"],
@@ -129,6 +128,34 @@ namespace AbatabSession
                 FoundLastOrderScheduleFieldId  = false,
                 LastOrderScheduleText          = "",
                 FoundAllRequiredFieldIds       = false
+            };
+        }
+
+        /// <summary>TBD</summary>
+        /// <param name="abatabSettings"></param>
+        /// <param name="abatabSession"></param>
+        private static void BuildModProgressNoteConfig(Dictionary<string, string> abatabSettings, Session abatabSession)
+        {
+            abatabSession.ModProgressNoteConfig = new ProgressNote
+            {
+                Mode             = abatabSettings["ModProgressNoteMode"],
+                AuthorizedUsers  = abatabSettings["ModProgressNoteAuthorizedUsers"],
+                TelehealthConfig = new Telehealth()
+                {
+                    ValidServiceChargeCodes = new List<string>
+                    {
+                        "TMH90853",
+                        "AOTMH90853"
+                    },
+                    ServiceChargeCodeFieldId ="51001",
+                    ValidLocations = new List<string>
+                    {
+                         "T110",
+                         "T102"
+                    },
+                    LocationFieldId ="50004",
+
+                }
             };
         }
 
