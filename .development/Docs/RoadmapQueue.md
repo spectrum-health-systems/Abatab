@@ -46,7 +46,25 @@ Export some example OptionObjects as JSON, then use them to test?
 
 Some cool stuff there.
 
-### **Object parser**
+### **Fix error code stuff on warning popups**
+
+> TBD
+
+There are some codes, mostly for troubleshooting, that are at the end of the warning popups.
+
+These need to be modified to actually mean something.
+
+### **Fix name of warning logs**
+
+> TBD
+
+Prob have additional info (e.g., dose diff) in name.
+
+### **[VERIFY] All log types are written to the correct folder**
+
+> TBD
+
+See topic.
 
 > TBD
 
