@@ -8,6 +8,7 @@
 // b---------x
 // (c) A Pretty Cool Program
 
+using System.Reflection;
 using System.Web.Services;
 using Abatab.Core.Catalog.Definition;
 using Abatab.Core.Utilities;
@@ -33,6 +34,8 @@ namespace Abatab
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string scriptParameter)
         {
+            Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name); /* For development/troubleshooting only. */
+
             AbSession abSession = new AbSession();
 
             if (Settings.Default.AbatabMode == "enabled")

@@ -5,6 +5,7 @@
 using System.Reflection;
 using Abatab.Core.Catalog.Definition;
 using Abatab.Core.Logger;
+using Abatab.Core.Utilities;
 
 namespace Abatab
 {
@@ -16,6 +17,8 @@ namespace Abatab
         /// <include file='Documentation/Abatab.xmldoc' path='XMLDoc/Class[@name="Roundhouse.cs"]/ParseModule/*' />
         public static void ParseModule(AbSession abSession)
         {
+            Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name); /* For development/troubleshooting only. */
+
             LogEvent.Trace(abSession, Assembly.GetExecutingAssembly().GetName().Name);
 
             switch (abSession.RequestModule)
