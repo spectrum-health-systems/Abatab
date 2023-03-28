@@ -87,8 +87,6 @@
     <Compile Include="WebConfig.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Documentation\Abatab.xmldoc" />
-    <Content Include="Documentation\SourceCode.md" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
