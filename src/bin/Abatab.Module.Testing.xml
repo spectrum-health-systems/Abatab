@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Abatab.Module.Testing</name>
+    </assembly>
+    <members>
+        <member name="T:Abatab.Module.Testing.Action.ErrorCode">
+            <summary>Summary goes here.</summary>
+        </member>
+        <member name="T:Abatab.Module.Testing.Roundhouse">
+            <summary>Summary goes here.</summary>
+        </member>
+        <member name="M:Abatab.Module.Testing.Roundhouse.ParseCommand(Abatab.Core.Catalog.Definition.AbSession)">
+            <summary>Summary goes here.</summary>
+        </member>
+    </members>
+</doc>

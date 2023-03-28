@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Abatab.Core.Framework</name>
+    </assembly>
+    <members>
+        <member name="T:Abatab.Core.Framework.Refresh">
+            <summary>Summary goes here.</summary>
+        </member>
+        <member name="M:Abatab.Core.Framework.Refresh.Daily(Abatab.Core.Catalog.Definition.AbSession)">
+            <summary>Summary goes here.</summary>
+        </member>
+        <member name="T:Abatab.Core.Framework.Verify">
+            <summary>Summary goes here.</summary>
+        </member>
+        <member name="M:Abatab.Core.Framework.Verify.DirectoriesExist(System.Collections.Generic.List{System.String})">
+            <summary>Summary goes here.</summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Abatab.Core.OptionObject</name>
+    </assembly>
+    <members>
+        <member name="T:Abatab.Core.OptionObject.CreateReturnObject">
+            <summary>Summary goes here.</summary>
+        </member>
+    </members>
+</doc>

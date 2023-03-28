@@ -1,5 +1,5 @@
 ﻿/*************************************************************************
- * Abatab v23.3.0-development+230327.0946
+ * Abatab v23.3.0-development+230328.0922
  * A custom web service/framework for Netsmart's myAvatar EHR.
  * https://github.com/spectrum-health-systems/Abatab
  ************************************************************************/
@@ -22,14 +22,14 @@ namespace Abatab
     [System.ComponentModel.ToolboxItem(false)]
     public class Abatab : WebService
     {
-        /// <include file='Documentation/Abatab.xmldoc' path='XMLDoc/Class[@name="Abatab.asmx.cs"]/GetVersion/*' />
+        /// <include file='docs/doc/xml/inc/Abatab.xmldoc' path='XMLDoc/Class[@name="Abatab.asmx.cs"]/GetVersion/*' />
         [WebMethod]
         public string GetVersion()
         {
             return "VERSION 23.3";
         }
 
-        /// <include file='Documentation/Abatab.xmldoc' path='XMLDoc/Class[@name="Abatab.asmx.cs"]/RunScript/*' />
+        /// <include file='docs/doc/xml/inc/Abatab.xmldoc' path='XMLDoc/Class[@name="Abatab.asmx.cs"]/RunScript/*' />
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string scriptParameter)
         {
