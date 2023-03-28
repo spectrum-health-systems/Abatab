@@ -3,7 +3,7 @@ Comment file for Abatab.Core.Catalog.
 Last updated: 230328
 
 Syntax:
-	/// <include file='docs/doc/xml/inc/Abatab.Core.Catalog.xmldoc' path='XMLDoc/Class[@name="ClassName"]/MethodName/*' />
+	/// <include file='../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Catalog.xmldoc' path='XMLDoc/Class[@name="ClassName"]/MethodName/*' />
 -->
 
 <XMLDoc>

@@ -3,7 +3,7 @@ Comment file for Abatab.Core.Framework.
 Last updated: 230328
 
 Syntax:
-	/// <include file='docs/doc/xml/inc/Abatab.Core.Framework.xmldoc' path='XMLDoc/Class[@name="ClassName"]/MethodName/*' />
+	/// <include file='../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Framework.xmldoc' path='XMLDoc/Class[@name="ClassName"]/MethodName/*' />
 -->
 
 <XMLDoc>
