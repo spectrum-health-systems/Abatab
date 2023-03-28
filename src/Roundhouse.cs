@@ -9,7 +9,7 @@ using Abatab.Core.Logger;
 namespace Abatab
 {
     /// <summary>
-    /// Determines what shoul d be done with the <b>module</b> component of the Script Parameter.
+    /// Determines what should be done with the <b>module</b> component of the Script Parameter.
     /// </summary>
     public static class Roundhouse
     {
@@ -18,27 +18,25 @@ namespace Abatab
         /// <include file='docs/doc/xml/inc/Abatab.xmldoc' path='XMLDoc/Class[@name="Roundhouse.cs"]/ParseModule/*' />
         public static void ParseModule(AbSession abSession)
         {
-            //LogEvent.Trace(abSession, Assembly.GetExecutingAssembly().GetName().Name);
             LogEvent.Trace(abSession, AssemblyName);
 
             switch (abSession.RequestModule)
             {
                 case "testing":
-                    //LogEvent.Trace(abSession, Assembly.GetExecutingAssembly().GetName().Name);
                     LogEvent.Trace(abSession, AssemblyName);
+
                     Module.Testing.Roundhouse.ParseCommand(abSession);
 
                     break;
 
                 case "prognote":
-                    //LogEvent.Trace(abSession, Assembly.GetExecutingAssembly().GetName().Name);
                     LogEvent.Trace(abSession, AssemblyName);
+
                     Module.ProgressNote.Roundhouse.ParseCommand(abSession);
 
                     break;
 
                 default:
-                    //LogEvent.Trace(abSession, Assembly.GetExecutingAssembly().GetName().Name);
                     LogEvent.Trace(abSession, AssemblyName);
                     // TODO - Exit gracefully.
 
