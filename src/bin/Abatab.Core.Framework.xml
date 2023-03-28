@@ -8,13 +8,17 @@
             <summary>Summary goes here.</summary>
         </member>
         <member name="M:Abatab.Core.Framework.Refresh.Daily(Abatab.Core.Catalog.Definition.AbSession)">
-            <summary>Summary goes here.</summary>
+            <summary>Method summary</summary><returns>test</returns><remarks>
+                Method remarks
+            </remarks>
         </member>
         <member name="T:Abatab.Core.Framework.Verify">
-            <summary>Summary goes here.</summary>
+            <summary>Class summary.</summary>
         </member>
         <member name="M:Abatab.Core.Framework.Verify.DirectoriesExist(System.Collections.Generic.List{System.String})">
-            <summary>Summary goes here.</summary>
+            <summary>Method summary</summary><returns>test</returns><remarks>
+                Method remarks
+            </remarks>
         </member>
     </members>
 </doc>

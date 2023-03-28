@@ -16,6 +16,12 @@
         <member name="T:Abatab.Core.Catalog.Component.Information">
             <summary>Class description goes here.</summary>
         </member>
+        <member name="M:Abatab.Core.Catalog.Component.Information.SessionInformationBasic(Abatab.Core.Catalog.Definition.AbSession)">
+            <!-- Failed to insert some or all of included XML --><include file="docs/doc/xml/inc/Abatab.Core.Catalog.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
+        </member>
+        <member name="M:Abatab.Core.Catalog.Component.Information.SessionInformationFull(Abatab.Core.Catalog.Definition.AbSession)">
+            <!-- Failed to insert some or all of included XML --><include file="docs/doc/xml/inc/Abatab.Core.Catalog.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
+        </member>
         <member name="T:Abatab.Core.Catalog.Component.Detail">
             <summary>Summary goes here.</summary>
         </member>
@@ -44,9 +50,6 @@
             <summary>Summary goes here.</summary>
         </member>
         <member name="T:Abatab.Core.Catalog.Definition.AbSession">
-            <summary>Summary goes here.</summary>
-        </member>
-        <member name="P:Abatab.Core.Catalog.Definition.AbSession.AbatabMode">
             <summary>Summary goes here.</summary>
         </member>
         <member name="P:Abatab.Core.Catalog.Definition.AbSession.AbatabVersion">

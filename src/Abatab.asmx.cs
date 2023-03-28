@@ -16,7 +16,7 @@ using ScriptLinkStandard.Objects;
 
 namespace Abatab
 {
-    /// <summary>The entry point for Abatab.</summary>
+    /// <summary>Entry point for Abatab.</summary>
     [WebService(Namespace = "http://tempuri.org/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]

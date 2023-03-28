@@ -1,5 +1,19 @@
+<!--
+Comment file for Abatab.Core.Catalog.
+Last updated: 230328
+
+Syntax:
+	/// <include file='docs/doc/xml/inc/Abatab.Core.Catalog.xmldoc' path='XMLDoc/Class[@name="ClassName"]/MethodName/*' />
+-->
+
 <XMLDoc>
-
-	<!-- XML documentation goes here. -->
-
+	<Class name="ClassName.cs">
+        <MethodName>
+            <summary>Method summary</summary>
+			<returns>test</returns>
+            <remarks>
+                Method remarks
+            </remarks>
+        </MethodName>
+	</Class>
 </XMLDoc>

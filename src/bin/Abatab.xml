@@ -5,7 +5,7 @@
     </assembly>
     <members>
         <member name="T:Abatab.Abatab">
-            <summary>The entry point for Abatab.</summary>
+            <summary>Entry point for Abatab.</summary>
         </member>
         <member name="M:Abatab.Abatab.GetVersion">
             <summary>Returns the current version of Abatab.</summary><returns>The current version of Abatab.</returns><remarks>
