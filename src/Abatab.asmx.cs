@@ -1,5 +1,5 @@
 ﻿/*************************************************************************
- * Abatab v23.3.0-development+230328.0922
+ * Abatab v23.3.0-development+230328.1224
  * A custom web service/framework for Netsmart's myAvatar EHR.
  * https://github.com/spectrum-health-systems/Abatab
  ************************************************************************/
@@ -33,8 +33,6 @@ namespace Abatab
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string scriptParameter)
         {
-            //Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name); /* For development/troubleshooting only. */
-
             AbSession abSession = new AbSession();
 
             if (Settings.Default.AbatabMode == "enabled")

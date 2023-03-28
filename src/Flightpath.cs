@@ -15,7 +15,7 @@ namespace Abatab
     /// <summary>Handles high-level program flow.</summary>
     public static class Flightpath
     {
-        /// <include file='Documentation/Abatab.xmldoc' path='XMLDoc/Class[@name="Flightpath.cs"]/StartAbatab/*' />
+        /// <include file='docs/doc/xml/inc/Abatab.xmldoc' path='XMLDoc/Class[@name="Flightpath.cs"]/StartAbatab/*' />
         public static void StartAbatab(OptionObject2015 sentOptionObject, string scriptParameter, AbSession abSession)
         {
             WebConfig.Load(abSession);
@@ -36,7 +36,7 @@ namespace Abatab
             Roundhouse.ParseModule(abSession);
         }
 
-        /// <include file='Documentation/Abatab.xmldoc' path='XMLDoc/Class[@name="Flightpath.cs"]/FinishAbatab/*' />
+        /// <include file='docs/doc/xml/inc/Abatab.xmldoc' path='XMLDoc/Class[@name="Flightpath.cs"]/FinishAbatab/*' />
         public static void FinishAbatab(AbSession abSession)
         {
             LogEvent.Trace(abSession, Assembly.GetExecutingAssembly().GetName().Name);

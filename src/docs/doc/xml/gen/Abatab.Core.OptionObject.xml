@@ -5,7 +5,7 @@
     </assembly>
     <members>
         <member name="T:Abatab.Core.OptionObject.CreateReturnObject">
-            <summary>Summary goes here.</summary>
+            <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.OptionObject.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
         </member>
     </members>
 </doc>
