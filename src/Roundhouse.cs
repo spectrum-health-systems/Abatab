@@ -9,7 +9,7 @@ using Abatab.Core.Logger;
 namespace Abatab
 {
     /// <summary>
-    /// Determines what should be done with the <b>module</b> component of the Script Parameter.
+    /// Determines what shoul d be done with the <b>module</b> component of the Script Parameter.
     /// </summary>
     public static class Roundhouse
     {
