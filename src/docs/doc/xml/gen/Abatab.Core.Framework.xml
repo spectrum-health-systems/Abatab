@@ -7,7 +7,7 @@
         <member name="T:Abatab.Core.Framework.Refresh">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="M:Abatab.Core.Framework.Refresh.Daily(Abatab.Core.Catalog.Definition.AbSession)">
+        <member name="M:Abatab.Core.Framework.Refresh.Daily(Abatab.Core.Catalog.AbSession)">
             <summary>Method summary</summary><returns>test</returns><remarks>
                 Method remarks
             </remarks>

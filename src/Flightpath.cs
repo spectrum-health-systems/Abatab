@@ -4,7 +4,7 @@
 
 using System.IO;
 using System.Reflection;
-using Abatab.Core.Catalog.Definition;
+using Abatab.Core.Catalog;
 using Abatab.Core.Framework;
 using Abatab.Core.Logger;
 using Abatab.Core.Session;
