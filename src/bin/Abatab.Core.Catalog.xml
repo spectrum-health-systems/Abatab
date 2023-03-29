@@ -52,6 +52,9 @@
         <member name="M:Abatab.Core.Catalog.Component.Detail.ModProgressNoteDetail(Abatab.Core.Catalog.Definition.AbSession)">
             <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Catalog.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
         </member>
+        <member name="M:Abatab.Core.Catalog.Component.Detail.ModProgressNoteVfyLoc(Abatab.Core.Catalog.Definition.AbSession)">
+            <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Catalog.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
+        </member>
         <member name="M:Abatab.Core.Catalog.Component.Detail.ModPrototypeDetail(Abatab.Core.Catalog.Definition.AbSession)">
             <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Catalog.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
         </member>
