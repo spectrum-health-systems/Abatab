@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Abatab.Core.Utilities</name>
+    </assembly>
+    <members>
+        <member name="M:Abatab.Core.Utilities.Common.ListToString(System.Collections.Generic.List{System.String})">
+            <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Utilities.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
+        </member>
+        <member name="M:Abatab.Core.Utilities.Common.ListToNewLineString(System.Collections.Generic.List{System.String})">
+            <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Utilities.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
+        </member>
+        <member name="T:Abatab.Core.Utilities.Debuggler">
+            <summary>Summary goes here.</summary>
+        </member>
+        <member name="M:Abatab.Core.Utilities.Debuggler.WriteLocal(System.String,System.String,System.String,System.String,System.Int32)">
+            <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Utilities.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
+        </member>
+        <member name="T:Abatab.Core.Utilities.PrimevalLog">
+            <summary>Summary goes here.</summary>
+        </member>
+        <member name="M:Abatab.Core.Utilities.PrimevalLog.WriteLocal(System.String)">
+            <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Utilities.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
+        </member>
+    </members>
+</doc>

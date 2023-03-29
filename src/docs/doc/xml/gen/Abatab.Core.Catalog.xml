@@ -170,10 +170,10 @@
         <member name="P:Abatab.Core.Catalog.Definition.ModProgressNote.ServiceChargeCodeFieldId">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Definition.ModProgressNote.ServiceChargeCodePrefixes">
+        <member name="P:Abatab.Core.Catalog.Definition.ModProgressNote.FlaggedServiceChargeCodePrefixes">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Definition.ModProgressNote.ServiceChargeCodesCheck">
+        <member name="P:Abatab.Core.Catalog.Definition.ModProgressNote.FlaggedServiceChargeCodeCodes">
             <summary>Summary goes here.</summary>
         </member>
         <member name="P:Abatab.Core.Catalog.Definition.ModProgressNote.LocationFieldId">
