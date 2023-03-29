@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Abatab.Core.DataExport</name>
+    </assembly>
+    <members>
+        <member name="T:Abatab.Core.DataExport.DataWriter">
+            <summary>Summary goes here.</summary>
+        </member>
+        <member name="M:Abatab.Core.DataExport.DataWriter.LocalFile(System.String,System.String)">
+            <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.DataExport.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
+        </member>
+        <member name="T:Abatab.Core.DataExport.SessionInformation">
+            <summary>Summary goes here.</summary>
+        </member>
+        <member name="M:Abatab.Core.DataExport.SessionInformation.ToSessionRoot(Abatab.Core.Catalog.Definition.AbSession)">
+            <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.DataExport.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
+        </member>
+        <member name="M:Abatab.Core.DataExport.SessionInformation.DailyRefresh(Abatab.Core.Catalog.Definition.AbSession,System.String)">
+            <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.DataExport.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
+        </member>
+    </members>
+</doc>
