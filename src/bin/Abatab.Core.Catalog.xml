@@ -122,11 +122,11 @@
             <summary>Summary goes here.</summary>
         </member>
         <member name="P:Abatab.Core.Catalog.Definition.AbSession.TraceLogDirectory">
-            <summary>Summary goes here.</summary>
+             <summary>Summary goes here.</summary>
             
-            <summary>Summary goes here.</summary>
+             <summary>Summary goes here.</summary>
             
-            <summary>Summary goes here.</summary>
+             <summary>Summary goes here.</summary>
         </member>
         <member name="P:Abatab.Core.Catalog.Definition.AbSession.WarningLogDirectory">
             <summary>Summary goes here.</summary>
@@ -179,7 +179,10 @@
         <member name="P:Abatab.Core.Catalog.Definition.ModProgressNote.LocationFieldId">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Definition.ModProgressNote.ValidLocations">
+        <member name="P:Abatab.Core.Catalog.Definition.ModProgressNote.ValidLocationCodes">
+            <summary>Summary goes here.</summary>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.ModProgressNote.ValidLocationNames">
             <summary>Summary goes here.</summary>
         </member>
         <member name="T:Abatab.Core.Catalog.Definition.ModPrototype">
