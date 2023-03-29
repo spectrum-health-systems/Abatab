@@ -7,13 +7,16 @@
         <member name="T:Abatab.Core.Logger.LogEvent">
             <summary>Summary goes here.</summary>
         </member>
+        <member name="M:Abatab.Core.Logger.LogEvent.Alert(Abatab.Core.Catalog.Definition.AbSession,System.String,System.String,System.String)">
+            <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Logger.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
+        </member>
         <member name="M:Abatab.Core.Logger.LogEvent.Trace(Abatab.Core.Catalog.Definition.AbSession,System.String,System.String,System.String,System.Int32)">
             <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Logger.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
         </member>
         <member name="M:Abatab.Core.Logger.LogEvent.TraceMsg(Abatab.Core.Catalog.Definition.AbSession,System.String,System.String,System.String,System.String,System.Int32)">
             <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Logger.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
         </member>
-        <member name="M:Abatab.Core.Logger.LogEvent.Alert(Abatab.Core.Catalog.Definition.AbSession)">
+        <member name="M:Abatab.Core.Logger.LogEvent.Warning(Abatab.Core.Catalog.Definition.AbSession)">
             <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Logger.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
         </member>
         <member name="T:Abatab.Core.Logger.LogPath">

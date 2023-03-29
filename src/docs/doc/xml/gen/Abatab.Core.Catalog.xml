@@ -4,12 +4,6 @@
         <name>Abatab.Core.Catalog</name>
     </assembly>
     <members>
-        <member name="M:Abatab.Core.Catalog.Component.Alert.AlertProgNoteVfyLocGroupIndiNote(Abatab.Core.Catalog.Definition.AbSession)">
-            <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Catalog.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
-        </member>
-        <member name="M:Abatab.Core.Catalog.Component.Alert.ProgNoteVfyLocIndiCounselingNote(Abatab.Core.Catalog.Definition.AbSession)">
-            <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Catalog.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
-        </member>
         <member name="T:Abatab.Core.Catalog.Component.Directories">
             <summary>Pre-defined directory lists.</summary>
         </member>
@@ -47,12 +41,6 @@
             <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Catalog.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
         </member>
         <member name="M:Abatab.Core.Catalog.Component.Detail.AbatabDetailFull(Abatab.Core.Catalog.Definition.AbSession)">
-            <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Catalog.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
-        </member>
-        <member name="M:Abatab.Core.Catalog.Component.Detail.ModProgressNoteDetail(Abatab.Core.Catalog.Definition.AbSession)">
-            <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Catalog.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
-        </member>
-        <member name="M:Abatab.Core.Catalog.Component.Detail.ModProgressNoteVfyLoc(Abatab.Core.Catalog.Definition.AbSession)">
             <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Catalog.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
         </member>
         <member name="M:Abatab.Core.Catalog.Component.Detail.ModPrototypeDetail(Abatab.Core.Catalog.Definition.AbSession)">
@@ -226,6 +214,12 @@
         </member>
         <member name="P:Abatab.Core.Catalog.Definition.ModTesting.Mode">
             <summary>Summary goes here.</summary>
+        </member>
+        <member name="M:Abatab.Core.Catalog.Modules.ModProgressNote.ModProgressNoteDetail(Abatab.Core.Catalog.Definition.AbSession)">
+            <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Catalog.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
+        </member>
+        <member name="M:Abatab.Core.Catalog.Modules.ModProgressNote.VerifyLocation(Abatab.Core.Catalog.Definition.AbSession)">
+            <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Catalog.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
         </member>
     </members>
 </doc>
