@@ -62,8 +62,8 @@ PreCommand__
 
 ### PROGRESSNOTE
 `MODULE__-COMMAND_____-ACTION__________-OP`
-`ProgNote-VfyLoc-IndiCounselingNote`  
 `ProgNote-VfyLoc-GroupIndiNote`
+`ProgNote-VfyLoc-IndiCounselingNote`  
 
 ### QUICKMEDICATIONORDER
 `QMedOrdr-vfyAmount-Dose`
@@ -92,6 +92,8 @@ Keyword abbreviations are 4 characters.
 * Indi = Individual/Individualized
 * Inde = Independent
 
+<br>
+
 ***
 
 <div align="center">
@@ -99,7 +101,7 @@ Keyword abbreviations are 4 characters.
   This document is part of the [Abatab Documentation Project](../Abatab%20Documentation%20Project.md).
 
   <h5>
-    Last updated: 230307.0942
+    Last updated: 230329.1117
   </h5>
 
 </div>

@@ -10,7 +10,7 @@ namespace Abatab
     /// <summary>Summary goes here.</summary>
     public static class WebConfig
     {
-        /// <include file='Documentation/Abatab.xmldoc' path='XMLDoc/Class[@name="WebConfig.cs"]/Load/*' />
+        /// <include file='docs/doc/xml/inc/Abatab.xmldoc' path='XMLDoc/Class[@name="WebConfig.cs"]/Load/*' />
         public static void Load(AbSession abSession)
         {
             abSession.AbatabMode             = Settings.Default.AbatabMode;

@@ -13,32 +13,31 @@ namespace Abatab
     /// </summary>
     public static class Roundhouse
     {
-        /// <include file='Documentation/Abatab.xmldoc' path='XMLDoc/Class[@name="Roundhouse.cs"]/ParseModule/*' />
+        public static string AssemblyName { get; set; } = Assembly.GetExecutingAssembly().GetName().Name;
+
+        /// <include file='docs/doc/xml/inc/Abatab.xmldoc' path='XMLDoc/Class[@name="Roundhouse.cs"]/ParseModule/*' />
         public static void ParseModule(AbSession abSession)
         {
-            //Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name); /* For development/troubleshooting only. */
-
-            LogEvent.Trace(abSession, Assembly.GetExecutingAssembly().GetName().Name);
+            LogEvent.Trace(abSession, AssemblyName);
 
             switch (abSession.RequestModule)
             {
                 case "testing":
-                    LogEvent.Trace(abSession, Assembly.GetExecutingAssembly().GetName().Name);
+                    LogEvent.Trace(abSession, AssemblyName);
 
                     Module.Testing.Roundhouse.ParseCommand(abSession);
 
                     break;
 
                 case "prognote":
-                    LogEvent.Trace(abSession, Assembly.GetExecutingAssembly().GetName().Name);
+                    LogEvent.Trace(abSession, AssemblyName);
 
                     Module.ProgressNote.Roundhouse.ParseCommand(abSession);
 
                     break;
 
                 default:
-                    LogEvent.Trace(abSession, Assembly.GetExecutingAssembly().GetName().Name);
-
+                    LogEvent.Trace(abSession, AssemblyName);
                     // TODO - Exit gracefully.
 
                     break;

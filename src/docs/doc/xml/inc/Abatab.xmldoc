@@ -1,4 +1,12 @@
-﻿<XMLDoc>
+﻿<!--
+Comment file for Abatab.
+Last updated: 230328
+
+Syntax:
+    /// <include file='docs/doc/xml/inc/Abatab.Core.Framework.xmldoc' path='XMLDoc/Class[@name="ClassName"]/MethodName/*' />
+-->
+
+<XMLDoc>
 	<Class name="Abatab.asmx.cs">
         <GetVersion>
             <summary>Returns the current version of Abatab.</summary>

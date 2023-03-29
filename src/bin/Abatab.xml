@@ -5,7 +5,7 @@
     </assembly>
     <members>
         <member name="T:Abatab.Abatab">
-            <summary>The entry point for Abatab.</summary>
+            <summary>Entry point for Abatab.</summary>
         </member>
         <member name="M:Abatab.Abatab.GetVersion">
             <summary>Returns the current version of Abatab.</summary><returns>The current version of Abatab.</returns><remarks>
@@ -31,10 +31,10 @@
             <summary>Handles high-level program flow.</summary>
         </member>
         <member name="M:Abatab.Flightpath.StartAbatab(ScriptLinkStandard.Objects.OptionObject2015,System.String,Abatab.Core.Catalog.Definition.AbSession)">
-            <!-- No matching elements were found for the following include tag --><include file="Documentation/Abatab.xmldoc" path="XMLDoc/Class[@name=&quot;Flightpath.cs&quot;]/StartAbatab/*" />
+            <!-- No matching elements were found for the following include tag --><include file="docs/doc/xml/inc/Abatab.xmldoc" path="XMLDoc/Class[@name=&quot;Flightpath.cs&quot;]/StartAbatab/*" />
         </member>
         <member name="M:Abatab.Flightpath.FinishAbatab(Abatab.Core.Catalog.Definition.AbSession)">
-            <!-- No matching elements were found for the following include tag --><include file="Documentation/Abatab.xmldoc" path="XMLDoc/Class[@name=&quot;Flightpath.cs&quot;]/FinishAbatab/*" />
+            <!-- No matching elements were found for the following include tag --><include file="docs/doc/xml/inc/Abatab.xmldoc" path="XMLDoc/Class[@name=&quot;Flightpath.cs&quot;]/FinishAbatab/*" />
         </member>
         <member name="T:Abatab.Roundhouse">
             <summary>
@@ -42,13 +42,13 @@
             </summary>
         </member>
         <member name="M:Abatab.Roundhouse.ParseModule(Abatab.Core.Catalog.Definition.AbSession)">
-            <!-- No matching elements were found for the following include tag --><include file="Documentation/Abatab.xmldoc" path="XMLDoc/Class[@name=&quot;Roundhouse.cs&quot;]/ParseModule/*" />
+            <!-- No matching elements were found for the following include tag --><include file="docs/doc/xml/inc/Abatab.xmldoc" path="XMLDoc/Class[@name=&quot;Roundhouse.cs&quot;]/ParseModule/*" />
         </member>
         <member name="T:Abatab.WebConfig">
             <summary>Summary goes here.</summary>
         </member>
         <member name="M:Abatab.WebConfig.Load(Abatab.Core.Catalog.Definition.AbSession)">
-            <!-- No matching elements were found for the following include tag --><include file="Documentation/Abatab.xmldoc" path="XMLDoc/Class[@name=&quot;WebConfig.cs&quot;]/Load/*" />
+            <!-- No matching elements were found for the following include tag --><include file="docs/doc/xml/inc/Abatab.xmldoc" path="XMLDoc/Class[@name=&quot;WebConfig.cs&quot;]/Load/*" />
         </member>
     </members>
 </doc>
