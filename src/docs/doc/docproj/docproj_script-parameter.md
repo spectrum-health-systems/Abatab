@@ -62,8 +62,8 @@ PreCommand__
 
 ### PROGRESSNOTE
 `MODULE__-COMMAND_____-ACTION__________-OP`
-`ProgNote-VfyLoc-IndiCounselingNote`  
 `ProgNote-VfyLoc-GroupIndiNote`
+`ProgNote-VfyLoc-IndiCounselingNote`  
 
 ### QUICKMEDICATIONORDER
 `QMedOrdr-vfyAmount-Dose`
