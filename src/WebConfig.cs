@@ -15,10 +15,10 @@ namespace Abatab
         /// <include file='docs/doc/xml/inc/Abatab.xmldoc' path='XMLDoc/Class[@name="WebConfig.cs"]/Load/*' />
         public static void Load(AbSession abSession)
         {
-            if (Settings.Default.DebugglerMode == "enabled") /* Can't put a trace log here. */
-            {
-                LogFile.Debuggler(Assembly.GetExecutingAssembly().GetName().Name);
-            }
+            //if (Settings.Default.DebugglerMode == "enabled") /* Can't put a trace log here. */
+            //{
+            //    LogFile.Debuggler(Assembly.GetExecutingAssembly().GetName().Name);
+            //}
 
             abSession.AbatabMode              = Settings.Default.AbatabMode;
             abSession.AbatabVersion           = Settings.Default.AbatabVersion;

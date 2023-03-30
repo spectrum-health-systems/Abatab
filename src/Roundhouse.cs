@@ -19,22 +19,22 @@ namespace Abatab
         /// <include file='docs/doc/xml/inc/Abatab.xmldoc' path='XMLDoc/Class[@name="Roundhouse.cs"]/ParseModule/*' />
         public static void ParseModule(AbSession abSession)
         {
-            LogEvent.Trace(abSession, AssemblyName);
+            LogEvent.Trace("trace", abSession, AssemblyName);
 
             switch (abSession.RequestModule)
             {
                 case "testing":
-                    LogEvent.TraceIota(abSession, AssemblyName);
+                    LogEvent.Trace("traceiota", abSession, AssemblyName);
                     Module.Testing.Roundhouse.ParseCommand(abSession);
                     break;
 
                 case "prognote":
-                    LogEvent.TraceIota(abSession, AssemblyName);
+                    LogEvent.Trace("traceiota", abSession, AssemblyName);
                     Module.ProgressNote.Roundhouse.ParseCommand(abSession);
                     break;
 
                 default:
-                    LogEvent.TraceIota(abSession, AssemblyName);
+                    LogEvent.Trace("traceiota", abSession, AssemblyName);
                     // TODO - Exit gracefully.
                     break;
             }

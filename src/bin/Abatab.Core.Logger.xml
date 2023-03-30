@@ -16,13 +16,7 @@
         <member name="M:Abatab.Core.Logger.LogEvent.Alert(Abatab.Core.Catalog.Session.AbSession,System.String,System.String,System.String)">
             <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Logger.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
         </member>
-        <member name="M:Abatab.Core.Logger.LogEvent.Trace(Abatab.Core.Catalog.Session.AbSession,System.String,System.String,System.String,System.Int32)">
-            <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Logger.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
-        </member>
-        <member name="M:Abatab.Core.Logger.LogEvent.TraceIota(Abatab.Core.Catalog.Session.AbSession,System.String,System.String,System.String,System.Int32)">
-            <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Logger.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
-        </member>
-        <member name="M:Abatab.Core.Logger.LogEvent.TraceMsg(Abatab.Core.Catalog.Session.AbSession,System.String,System.String,System.String,System.String,System.Int32)">
+        <member name="M:Abatab.Core.Logger.LogEvent.Trace(System.String,Abatab.Core.Catalog.Session.AbSession,System.String,System.String,System.String,System.Int32)">
             <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Logger.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
         </member>
         <member name="M:Abatab.Core.Logger.LogEvent.Warning(Abatab.Core.Catalog.Session.AbSession)">
