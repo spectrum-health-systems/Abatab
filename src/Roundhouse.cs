@@ -3,7 +3,7 @@
 // Copyright (c) A Pretty Cool Program
 
 using System.Reflection;
-using Abatab.Core.Catalog.Definition;
+using Abatab.Core.Catalog.Session;
 using Abatab.Core.Logger;
 
 namespace Abatab
@@ -13,6 +13,7 @@ namespace Abatab
     /// </summary>
     public static class Roundhouse
     {
+        /// <summary>Executing assembly name for log files.</summary>
         public static string AssemblyName { get; set; } = Assembly.GetExecutingAssembly().GetName().Name;
 
         /// <include file='docs/doc/xml/inc/Abatab.xmldoc' path='XMLDoc/Class[@name="Roundhouse.cs"]/ParseModule/*' />

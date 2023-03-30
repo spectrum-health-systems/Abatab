@@ -7,7 +7,10 @@
         <member name="T:Abatab.Core.Framework.Refresh">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="M:Abatab.Core.Framework.Refresh.Daily(Abatab.Core.Catalog.Definition.AbSession)">
+        <member name="P:Abatab.Core.Framework.Refresh.AssemblyName">
+            <summary>Executing assembly name for log files.</summary>
+        </member>
+        <member name="M:Abatab.Core.Framework.Refresh.Daily(Abatab.Core.Catalog.Session.AbSession)">
             <summary>Method summary</summary><returns>test</returns><remarks>
                 Method remarks
             </remarks>

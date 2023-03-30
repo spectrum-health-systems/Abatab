@@ -4,7 +4,7 @@
 
 using System.IO;
 using System.Reflection;
-using Abatab.Core.Catalog.Definition;
+using Abatab.Core.Catalog.Session;
 using Abatab.Core.Framework;
 using Abatab.Core.Logger;
 using Abatab.Core.Session;
@@ -15,6 +15,7 @@ namespace Abatab
     /// <summary>Handles high-level program flow.</summary>
     public static class Flightpath
     {
+        /// <summary>Executing assembly name for log files.</summary>
         public static string AssemblyName { get; set; } = Assembly.GetExecutingAssembly().GetName().Name;
 
         /// <include file='docs/doc/xml/inc/Abatab.xmldoc' path='XMLDoc/Class[@name="Flightpath.cs"]/StartAbatab/*' />
