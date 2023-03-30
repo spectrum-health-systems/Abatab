@@ -13,6 +13,7 @@ namespace Abatab
     /// </summary>
     public static class Roundhouse
     {
+        /// <summary>Executing assembly name for log files.</summary>
         public static string AssemblyName { get; set; } = Assembly.GetExecutingAssembly().GetName().Name;
 
         /// <include file='docs/doc/xml/inc/Abatab.xmldoc' path='XMLDoc/Class[@name="Roundhouse.cs"]/ParseModule/*' />

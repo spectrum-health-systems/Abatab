@@ -15,6 +15,7 @@ namespace Abatab
     /// <summary>Handles high-level program flow.</summary>
     public static class Flightpath
     {
+        /// <summary>Executing assembly name for log files.</summary>
         public static string AssemblyName { get; set; } = Assembly.GetExecutingAssembly().GetName().Name;
 
         /// <include file='docs/doc/xml/inc/Abatab.xmldoc' path='XMLDoc/Class[@name="Flightpath.cs"]/StartAbatab/*' />
