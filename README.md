@@ -2,10 +2,13 @@
 
   ![BranchWarning][BranchWarning]
   
-  **This is the development branch of Abatab, and is not intended for use in production environments!**
+  **This is the *DEPRECIATED* branch of Abatab, archived for historical reasons!**
 
-  Please use the current Abatab Community Release (coming soon) instead.
-
+  Please use one of the following Abatab branches instead:
+  
+  * [main](https://github.com/spectrum-health-systems/Abatab)
+  * [development](https://github.com/spectrum-health-systems/Abatab/tree/development)
+  
   ***
 
   [![AbatabLogo][AbatabLogo]][AbatabRepoUrl]
