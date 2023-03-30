@@ -2,7 +2,9 @@
 // b---------x
 // Copyright (c) A Pretty Cool Program
 
+using System.Reflection;
 using Abatab.Core.Catalog.Session;
+using Abatab.Core.Utility;
 using Abatab.Properties;
 
 namespace Abatab
@@ -13,29 +15,32 @@ namespace Abatab
         /// <include file='docs/doc/xml/inc/Abatab.xmldoc' path='XMLDoc/Class[@name="WebConfig.cs"]/Load/*' />
         public static void Load(AbSession abSession)
         {
-            abSession.AbatabMode             = Settings.Default.AbatabMode;
-            abSession.AbatabVersion          = Settings.Default.AbatabVersion;
-            abSession.AbatabBuild            = Settings.Default.AbatabBuild;
-            abSession.AbatabServiceRoot      = Settings.Default.AbatabServiceRoot;
-            abSession.AbatabDataRoot         = Settings.Default.AbatabDataRoot;
-            abSession.LoggerMode             = Settings.Default.LoggerMode;
-            abSession.LoggerDelay            = Settings.Default.LoggerDelay;
-            abSession.LoggerTypes            = Settings.Default.LoggerTypes;
-            abSession.AvatarEnvironment      = Settings.Default.AvatarEnvironment;
-            abSession.AbatabFallbackUserName = Settings.Default.AbatabFallbackUserName;
+            if (Settings.Default.DebugglerMode == "enabled") /* Can't put a trace log here. */
+            {
+                LogFile.Debuggler(Assembly.GetExecutingAssembly().GetName().Name);
+            }
 
-            abSession.ModProgressNote = new ModProgressNote
+            abSession.AbatabMode              = Settings.Default.AbatabMode;
+            abSession.AbatabVersion           = Settings.Default.AbatabVersion;
+            abSession.AbatabBuild             = Settings.Default.AbatabBuild;
+            abSession.AbatabServiceRoot       = Settings.Default.AbatabServiceRoot;
+            abSession.AbatabDataRoot          = Settings.Default.AbatabDataRoot;
+            abSession.LoggerMode              = Settings.Default.LoggerMode;
+            abSession.LoggerDelay             = Settings.Default.LoggerDelay;
+            abSession.LoggerTypes             = Settings.Default.LoggerTypes;
+            abSession.AvatarEnvironment       = Settings.Default.AvatarEnvironment;
+            abSession.AbatabFallbackUserName  = Settings.Default.AbatabFallbackUserName;
+            abSession.DebugglerMode           = Settings.Default.DebugglerMode;
+            abSession.ModProgressNote         = new ModProgressNote
             {
                 Mode            = Settings.Default.ModProgressNoteMode,
                 AuthorizedUsers = Settings.Default.ModProgressNoteAuthorizedUsers
             };
-
-            abSession.ModPrototype = new ModPrototype
+            abSession.ModPrototype            = new ModPrototype
             {
                 Mode            = Settings.Default.ModPrototypeMode,
                 AuthorizedUsers = Settings.Default.ModPrototypeAuthorizedUsers
             };
-
             abSession.ModQuickMedicationOrder = new ModQuickMedicationOrder
             {
                 Mode                  = Settings.Default.ModQuickMedicationOrderMode,
@@ -44,13 +49,10 @@ namespace Abatab
                 DosePercentBoundary   = Settings.Default.ModQuickMedicationOrderDosePercentBoundary,
                 DoseMilligramBoundary = Settings.Default.ModQuickMedicationOrderDoseMilligramBoundary
             };
-
-            abSession.ModTesting = new ModTesting
+            abSession.ModTesting              = new ModTesting
             {
                 Mode = Settings.Default.ModTestingMode
             };
-
-            abSession.DebugglerMode = Settings.Default.DebugglerMode;
         }
     }
 }

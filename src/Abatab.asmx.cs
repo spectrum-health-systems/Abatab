@@ -4,15 +4,16 @@
  * https://github.com/spectrum-health-systems/Abatab
  ************************************************************************/
 
-// Development build 230330.1030
+// Development build 230330.1415
 
 // Abatab.asmx.cs
 // b---------x
 // (c) A Pretty Cool Program
 
+using System.Reflection;
 using System.Web.Services;
 using Abatab.Core.Catalog.Session;
-using Abatab.Core.Utilities;
+using Abatab.Core.Utility;
 using Abatab.Properties;
 using ScriptLinkStandard.Objects;
 
@@ -35,6 +36,11 @@ namespace Abatab
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string scriptParameter)
         {
+            if (Settings.Default.DebugglerMode == "enabled") /* Can't put a trace log here. */
+            {
+                LogFile.Debuggler(Assembly.GetExecutingAssembly().GetName().Name);
+            }
+
             AbSession abSession = new AbSession();
 
             if (Settings.Default.AbatabMode == "enabled")
@@ -45,7 +51,7 @@ namespace Abatab
             }
             else
             {
-                PrimevalLog.WriteLocal("disabled");
+                LogFile.Primeval("disabled");
             }
 
             return abSession.ReturnOptionObject;
