@@ -215,6 +215,9 @@
         <member name="P:Abatab.Core.Catalog.ModTesting.Mode">
             <summary>Summary goes here.</summary>
         </member>
+        <member name="T:Abatab.Core.Catalog.Modules.ModProgressNote">
+            <summary>Summary goes here.</summary>
+        </member>
         <member name="M:Abatab.Core.Catalog.Modules.ModProgressNote.Detail(Abatab.Core.Catalog.AbSession)">
             <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Catalog.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
         </member>

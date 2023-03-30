@@ -4,6 +4,9 @@
         <name>Abatab.Module.ProgressNote</name>
     </assembly>
     <members>
+        <member name="P:Abatab.Module.ProgressNote.Action.VerifyLocation.AssemblyName">
+            <summary>Executing assembly name for log files.</summary>
+        </member>
         <member name="M:Abatab.Module.ProgressNote.Action.VerifyLocation.ParseAction(Abatab.Core.Catalog.AbSession)">
             <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Module.ProgressNote.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
         </member>
@@ -18,6 +21,9 @@
         </member>
         <member name="T:Abatab.Module.ProgressNote.Roundhouse">
             <summary>Summary goes here.</summary>
+        </member>
+        <member name="P:Abatab.Module.ProgressNote.Roundhouse.AssemblyName">
+            <summary>Executing assembly name for log files.</summary>
         </member>
         <member name="M:Abatab.Module.ProgressNote.Roundhouse.ParseCommand(Abatab.Core.Catalog.AbSession)">
             <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Module.ProgressNote.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />

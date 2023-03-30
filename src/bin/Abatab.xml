@@ -30,6 +30,9 @@
         <member name="T:Abatab.Flightpath">
             <summary>Handles high-level program flow.</summary>
         </member>
+        <member name="P:Abatab.Flightpath.AssemblyName">
+            <summary>Executing assembly name for log files.</summary>
+        </member>
         <member name="M:Abatab.Flightpath.StartAbatab(ScriptLinkStandard.Objects.OptionObject2015,System.String,Abatab.Core.Catalog.AbSession)">
             <!-- No matching elements were found for the following include tag --><include file="docs/doc/xml/inc/Abatab.xmldoc" path="XMLDoc/Class[@name=&quot;Flightpath.cs&quot;]/StartAbatab/*" />
         </member>
@@ -40,6 +43,9 @@
             <summary>
             Determines what should be done with the <b>module</b> component of the Script Parameter.
             </summary>
+        </member>
+        <member name="P:Abatab.Roundhouse.AssemblyName">
+            <summary>Executing assembly name for log files.</summary>
         </member>
         <member name="M:Abatab.Roundhouse.ParseModule(Abatab.Core.Catalog.AbSession)">
             <!-- No matching elements were found for the following include tag --><include file="docs/doc/xml/inc/Abatab.xmldoc" path="XMLDoc/Class[@name=&quot;Roundhouse.cs&quot;]/ParseModule/*" />
