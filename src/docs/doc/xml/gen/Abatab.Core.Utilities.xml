@@ -4,46 +4,46 @@
         <name>Abatab.Core.Utilities</name>
     </assembly>
     <members>
-        <member name="M:Abatab.Core.Utilities.Common.ListToString(System.Collections.Generic.List{System.String})">
-            <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Utilities.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
+        <member name="M:Abatab.Core.Utility.Common.ListToString(System.Collections.Generic.List{System.String})">
+            <!-- Failed to insert some or all of included XML --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Utilities.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
         </member>
-        <member name="M:Abatab.Core.Utilities.Common.ListToNewLineString(System.Collections.Generic.List{System.String})">
-            <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Utilities.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
+        <member name="M:Abatab.Core.Utility.Common.ListToNewLineString(System.Collections.Generic.List{System.String})">
+            <!-- Failed to insert some or all of included XML --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Utilities.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
         </member>
-        <member name="T:Abatab.Core.Utilities.Debuggler">
+        <member name="T:Abatab.Core.Utility.Debuggler">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="M:Abatab.Core.Utilities.Debuggler.WriteLocal(System.String,System.String,System.String,System.String,System.Int32)">
-            <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Utilities.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
+        <member name="M:Abatab.Core.Utility.Debuggler.WriteLocal(System.String,System.String,System.String,System.String,System.Int32)">
+            <!-- Failed to insert some or all of included XML --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Utilities.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
         </member>
-        <member name="T:Abatab.Core.Utilities.Framework">
+        <member name="T:Abatab.Core.Utility.Framework">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="M:Abatab.Core.Utilities.Framework.RefreshDirectory(System.String)">
+        <member name="M:Abatab.Core.Utility.Framework.RefreshDirectory(System.String)">
             <summary>Method summary</summary><returns>test</returns><remarks>
                 Method remarks
             </remarks>
         </member>
-        <member name="M:Abatab.Core.Utilities.Framework.RefreshDirectories(System.Collections.Generic.List{System.String})">
+        <member name="M:Abatab.Core.Utility.Framework.RefreshDirectories(System.Collections.Generic.List{System.String})">
             <summary>Method summary</summary><returns>test</returns><remarks>
                 Method remarks
             </remarks>
         </member>
-        <member name="M:Abatab.Core.Utilities.Framework.VerifyDirectory(System.String)">
+        <member name="M:Abatab.Core.Utility.Framework.VerifyDirectory(System.String)">
             <summary>Method summary</summary><returns>test</returns><remarks>
                 Method remarks
             </remarks>
         </member>
-        <member name="M:Abatab.Core.Utilities.Framework.VerifyDirectories(System.Collections.Generic.List{System.String})">
+        <member name="M:Abatab.Core.Utility.Framework.VerifyDirectories(System.Collections.Generic.List{System.String})">
             <summary>Method summary</summary><returns>test</returns><remarks>
                 Method remarks
             </remarks>
         </member>
-        <member name="T:Abatab.Core.Utilities.PrimevalLog">
-            <summary>Summary goes here.</summary>
+        <member name="T:Abatab.Core.Utility.Logging">
+            <summary>Primeval log logic.</summary>
         </member>
-        <member name="M:Abatab.Core.Utilities.PrimevalLog.WriteLocal(System.String)">
-            <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Utilities.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
+        <member name="M:Abatab.Core.Utility.Logging.Primeval(System.String)">
+            <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Utility.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
         </member>
     </members>
 </doc>

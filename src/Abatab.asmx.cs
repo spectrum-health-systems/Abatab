@@ -4,7 +4,7 @@
  * https://github.com/spectrum-health-systems/Abatab
  ************************************************************************/
 
-// Development build 230330.1030
+// Development build 230330.1415
 
 // Abatab.asmx.cs
 // b---------x
@@ -12,7 +12,7 @@
 
 using System.Web.Services;
 using Abatab.Core.Catalog.Session;
-using Abatab.Core.Utilities;
+using Abatab.Core.Utility;
 using Abatab.Properties;
 using ScriptLinkStandard.Objects;
 
@@ -45,7 +45,7 @@ namespace Abatab
             }
             else
             {
-                PrimevalLog.WriteLocal("disabled");
+                Logging.Primeval("disabled");
             }
 
             return abSession.ReturnOptionObject;

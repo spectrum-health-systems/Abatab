@@ -163,9 +163,9 @@
       <Project>{67d07064-68d8-4aeb-a562-093fa9973b43}</Project>
       <Name>Abatab.Core.Session</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Core\Abatab.Core.Utilities\Abatab.Core.Utilities.csproj">
+    <ProjectReference Include="..\..\Core\Abatab.Core.Utilities\Abatab.Core.Utility.csproj">
       <Project>{88553C90-6BAE-4005-B2CC-FD9A68ADC094}</Project>
-      <Name>Abatab.Core.Utilities</Name>
+      <Name>Abatab.Core.Utility</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Module\Abatab.Module.ProgressNote\Abatab.Module.ProgressNote.csproj">
       <Project>{c909f7a7-789f-44bb-8f60-d27f9de261af}</Project>
