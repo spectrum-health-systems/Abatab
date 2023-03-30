@@ -10,6 +10,7 @@
 // b---------x
 // (c) A Pretty Cool Program
 
+using System.Reflection;
 using System.Web.Services;
 using Abatab.Core.Catalog.Session;
 using Abatab.Core.Utility;
@@ -35,10 +36,10 @@ namespace Abatab
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string scriptParameter)
         {
-            //if (Settings.Default.DebugglerMode == "enabled") /* Can't put a trace log here. */
-            //{
-            //    LogFile.Debuggler(Assembly.GetExecutingAssembly().GetName().Name);
-            //}
+            if (Settings.Default.DebugglerMode == "enabled") /* Can't put a trace log here. */
+            {
+                LogFile.Debuggler(Assembly.GetExecutingAssembly().GetName().Name);
+            }
 
             AbSession abSession = new AbSession();
 

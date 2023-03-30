@@ -8,6 +8,8 @@ using Abatab.Core.Catalog.Session;
 using Abatab.Core.Framework;
 using Abatab.Core.Logger;
 using Abatab.Core.Session;
+using Abatab.Core.Utility;
+using Abatab.Properties;
 using ScriptLinkStandard.Objects;
 
 namespace Abatab
@@ -21,10 +23,10 @@ namespace Abatab
         /// <include file='docs/doc/xml/inc/Abatab.xmldoc' path='XMLDoc/Class[@name="Flightpath.cs"]/StartAbatab/*' />
         public static void StartAbatab(OptionObject2015 sentOptionObject, string scriptParameter, AbSession abSession)
         {
-            //if (Settings.Default.DebugglerMode == "enabled") /* Can't put a trace log here. */
-            //{
-            //    LogFile.Debuggler(Assembly.GetExecutingAssembly().GetName().Name);
-            //}
+            if (Settings.Default.DebugglerMode == "enabled") /* Can't put a trace log here. */
+            {
+                LogFile.Debuggler(Assembly.GetExecutingAssembly().GetName().Name);
+            }
 
             WebConfig.Load(abSession);
             Build.NewSession(sentOptionObject, scriptParameter, abSession);
