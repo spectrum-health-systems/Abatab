@@ -55,7 +55,7 @@ Abatab is developed by [A Pretty Cool Program][APrettyCoolProgramUrl]
 </div>
 
 <!-- REFERENCE LINKS -->
-[BranchWarning]: https://img.shields.io/badge/DEPRECIATED%20BRANCH-DEPRECIATED%20BRANCH-FF160C?style=for-the-badge
+[BranchWarning]: https://img.shields.io/badge/DEPRECIATED%20BRANCH-FF160C?style=for-the-badge
 [AbatabRepoUrl]: README.md
 [AbatabLogo]: ./resources/images/logos/AbatabLogo.png
 [RepoStatus]: https://img.shields.io/badge/StatusActiveRepo-brightgreen?style=flat-square
