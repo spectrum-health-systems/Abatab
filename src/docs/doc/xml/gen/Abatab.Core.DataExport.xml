@@ -16,10 +16,10 @@
         <member name="P:Abatab.Core.DataExport.SessionInformation.AssemblyName">
             <summary>Executing assembly name for log files.</summary>
         </member>
-        <member name="M:Abatab.Core.DataExport.SessionInformation.ToSessionRoot(Abatab.Core.Catalog.AbSession)">
+        <member name="M:Abatab.Core.DataExport.SessionInformation.ToSessionRoot(Abatab.Core.Catalog.Session.AbSession)">
             <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.DataExport.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
         </member>
-        <member name="M:Abatab.Core.DataExport.SessionInformation.DailyRefresh(Abatab.Core.Catalog.AbSession,System.String)">
+        <member name="M:Abatab.Core.DataExport.SessionInformation.DailyRefresh(Abatab.Core.Catalog.Session.AbSession,System.String)">
             <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.DataExport.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
         </member>
     </members>

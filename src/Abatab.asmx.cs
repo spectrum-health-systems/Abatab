@@ -11,7 +11,7 @@
 // (c) A Pretty Cool Program
 
 using System.Web.Services;
-using Abatab.Core.Catalog;
+using Abatab.Core.Catalog.Session;
 using Abatab.Core.Utilities;
 using Abatab.Properties;
 using ScriptLinkStandard.Objects;

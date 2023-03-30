@@ -3,7 +3,7 @@
 // Copyright (c) A Pretty Cool Program
 
 using System.Reflection;
-using Abatab.Core.Catalog;
+using Abatab.Core.Catalog.Session;
 using Abatab.Core.Logger;
 
 namespace Abatab

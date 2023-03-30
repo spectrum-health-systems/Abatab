@@ -4,19 +4,25 @@
         <name>Abatab.Core.Logger</name>
     </assembly>
     <members>
+        <member name="T:Abatab.Core.Logger.LogContent">
+            <summary>Summary goes here.</summary>
+        </member>
+        <member name="M:Abatab.Core.Logger.LogContent.Alert(Abatab.Core.Catalog.Session.AbSession,System.String)">
+            <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Catalog.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
+        </member>
         <member name="T:Abatab.Core.Logger.LogEvent">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="M:Abatab.Core.Logger.LogEvent.Alert(Abatab.Core.Catalog.AbSession,System.String,System.String,System.String)">
+        <member name="M:Abatab.Core.Logger.LogEvent.Alert(Abatab.Core.Catalog.Session.AbSession,System.String,System.String,System.String)">
             <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Logger.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
         </member>
-        <member name="M:Abatab.Core.Logger.LogEvent.Trace(Abatab.Core.Catalog.AbSession,System.String,System.String,System.String,System.Int32)">
+        <member name="M:Abatab.Core.Logger.LogEvent.Trace(Abatab.Core.Catalog.Session.AbSession,System.String,System.String,System.String,System.Int32)">
             <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Logger.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
         </member>
-        <member name="M:Abatab.Core.Logger.LogEvent.TraceMsg(Abatab.Core.Catalog.AbSession,System.String,System.String,System.String,System.String,System.Int32)">
+        <member name="M:Abatab.Core.Logger.LogEvent.TraceMsg(Abatab.Core.Catalog.Session.AbSession,System.String,System.String,System.String,System.String,System.Int32)">
             <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Logger.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
         </member>
-        <member name="M:Abatab.Core.Logger.LogEvent.Warning(Abatab.Core.Catalog.AbSession)">
+        <member name="M:Abatab.Core.Logger.LogEvent.Warning(Abatab.Core.Catalog.Session.AbSession)">
             <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Logger.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
         </member>
         <member name="T:Abatab.Core.Logger.LogPath">

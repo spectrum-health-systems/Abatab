@@ -2,7 +2,7 @@
 // b---------x
 // Copyright (c) A Pretty Cool Program
 
-using Abatab.Core.Catalog;
+using Abatab.Core.Catalog.Session;
 using Abatab.Properties;
 
 namespace Abatab
