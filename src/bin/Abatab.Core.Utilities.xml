@@ -4,17 +4,17 @@
         <name>Abatab.Core.Utilities</name>
     </assembly>
     <members>
-        <member name="M:Abatab.Core.Utility.Common.ListToString(System.Collections.Generic.List{System.String})">
-            <!-- Failed to insert some or all of included XML --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Utilities.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
+        <member name="M:Abatab.Core.Utility.ConvertCollection.ListToString(System.Collections.Generic.List{System.String})">
+            <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Utility.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
         </member>
-        <member name="M:Abatab.Core.Utility.Common.ListToNewLineString(System.Collections.Generic.List{System.String})">
-            <!-- Failed to insert some or all of included XML --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Utilities.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
+        <member name="M:Abatab.Core.Utility.ConvertCollection.ListToNewLineString(System.Collections.Generic.List{System.String})">
+            <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Utility.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
         </member>
         <member name="T:Abatab.Core.Utility.Debuggler">
             <summary>Summary goes here.</summary>
         </member>
         <member name="M:Abatab.Core.Utility.Debuggler.WriteLocal(System.String,System.String,System.String,System.String,System.Int32)">
-            <!-- Failed to insert some or all of included XML --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Utilities.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
+            <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Utility.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
         </member>
         <member name="T:Abatab.Core.Utility.Framework">
             <summary>Summary goes here.</summary>
@@ -39,10 +39,19 @@
                 Method remarks
             </remarks>
         </member>
-        <member name="T:Abatab.Core.Utility.Logging">
+        <member name="T:Abatab.Core.Utility.LogFile">
             <summary>Primeval log logic.</summary>
         </member>
-        <member name="M:Abatab.Core.Utility.Logging.Primeval(System.String)">
+        <member name="M:Abatab.Core.Utility.LogFile.Debuggler(System.String,System.String,System.String,System.String,System.Int32)">
+            <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Utility.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
+        </member>
+        <member name="M:Abatab.Core.Utility.LogFile.Primeval(System.String)">
+            <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Utility.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
+        </member>
+        <member name="T:Abatab.Core.Utility.FileIO">
+            <summary>Summary goes here.</summary>
+        </member>
+        <member name="M:Abatab.Core.Utility.FileIO.WriteLocal(System.String,System.String,System.Int32)">
             <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Utility.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
         </member>
     </members>

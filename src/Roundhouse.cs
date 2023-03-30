@@ -5,6 +5,7 @@
 using System.Reflection;
 using Abatab.Core.Catalog.Session;
 using Abatab.Core.Logger;
+using Abatab.Core.Utility;
 
 namespace Abatab
 {
@@ -20,6 +21,9 @@ namespace Abatab
         public static void ParseModule(AbSession abSession)
         {
             LogEvent.Trace(abSession, AssemblyName);
+
+            LogFile.Debuggler(AssemblyName);
+            LogFile.Debuggler(AssemblyName, "This is a test");
 
             switch (abSession.RequestModule)
             {

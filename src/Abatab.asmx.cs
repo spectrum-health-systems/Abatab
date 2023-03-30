@@ -45,7 +45,7 @@ namespace Abatab
             }
             else
             {
-                Logging.Primeval("disabled");
+                LogFile.Primeval("disabled");
             }
 
             return abSession.ReturnOptionObject;
