@@ -2,10 +2,10 @@
 
   ![BranchWarning][BranchWarning]
   
-  **This is a development branch of Abatab, and is not intended for use in production environments!**
+  **This is the *DEPRECIATED* branch of Abatab, archived for historical reasons**
 
-  Please use the current [Abatab Community Release](https://github.com/spectrum-health-systems/Abatab-Community-Release) instead.
-
+  Please use one of the following Abatab branches instead: [[main](https://github.com/spectrum-health-systems/Abatab)] | [[development](https://github.com/spectrum-health-systems/Abatab/tree/development)]
+  
   ***
 
   [![AbatabLogo][AbatabLogo]][AbatabRepoUrl]
@@ -15,6 +15,7 @@
   ![RepoStatus][RepoStatus]&nbsp;&nbsp;[![AbatabLicense][AbatabLicense]][AbatabLicenseUrl]&nbsp;&nbsp;[![AbatabCurrentRelease][AbatabCurrentRelease]][AbatabCurrentReleaseUrl]
 
 </div>
+
 
 # About
 
@@ -59,7 +60,7 @@ Abatab is developed by [A Pretty Cool Program][APrettyCoolProgramUrl]
 </div>
 
 <!-- REFERENCE LINKS -->
-[BranchWarning]: https://img.shields.io/badge/WARNING-THIS%20IS%20BETA%20SOFTWARE-FF160C?style=for-the-badge
+[BranchWarning]: https://img.shields.io/badge/DEPRECIATED%20BRANCH-FF160C?style=for-the-badge
 [AbatabRepoUrl]: README.md
 [AbatabLogo]: ./resources/images/logos/AbatabLogo.png
 [RepoStatus]: https://img.shields.io/badge/status-Active-brightgreen?style=flat
