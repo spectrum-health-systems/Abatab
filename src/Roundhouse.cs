@@ -22,8 +22,9 @@ namespace Abatab
         {
             LogEvent.Trace(abSession, AssemblyName);
 
-            LogFile.Debuggler(AssemblyName);
-            LogFile.Debuggler(AssemblyName, "This is a test");
+            LogFile.Debuggler(Assembly.GetExecutingAssembly().GetName().Name);
+            LogFile.Debuggler(Assembly.GetExecutingAssembly().GetName().Name, "This is a test");
+            LogFile.Primeval("disabled");
 
             switch (abSession.RequestModule)
             {
