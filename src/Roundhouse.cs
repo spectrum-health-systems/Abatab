@@ -5,7 +5,6 @@
 using System.Reflection;
 using Abatab.Core.Catalog.Session;
 using Abatab.Core.Logger;
-using Abatab.Core.Utility;
 
 namespace Abatab
 {
@@ -22,24 +21,20 @@ namespace Abatab
         {
             LogEvent.Trace(abSession, AssemblyName);
 
-            LogFile.Debuggler(Assembly.GetExecutingAssembly().GetName().Name);
-            LogFile.Debuggler(Assembly.GetExecutingAssembly().GetName().Name, "This is a test");
-            LogFile.Primeval("disabled");
-
             switch (abSession.RequestModule)
             {
                 case "testing":
-                    LogEvent.Trace(abSession, AssemblyName);
+                    LogEvent.TraceIota(abSession, AssemblyName);
                     Module.Testing.Roundhouse.ParseCommand(abSession);
                     break;
 
                 case "prognote":
-                    LogEvent.Trace(abSession, AssemblyName);
+                    LogEvent.TraceIota(abSession, AssemblyName);
                     Module.ProgressNote.Roundhouse.ParseCommand(abSession);
                     break;
 
                 default:
-                    LogEvent.Trace(abSession, AssemblyName);
+                    LogEvent.TraceIota(abSession, AssemblyName);
                     // TODO - Exit gracefully.
                     break;
             }
