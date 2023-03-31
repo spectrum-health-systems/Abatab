@@ -70,6 +70,8 @@ namespace Abatab
         /// <include file='docs/doc/xml/inc/Abatab.xmldoc' path='XMLDoc/Class[@name="Flightpath.cs"]/StartAbatab/*' />
         private static void RefreshAbatab(AbSession abSession, string scriptParameter, OptionObject2015 sentOptionObject)
         {
+            LogEvent.Trace("trace", abSession, AssemblyName);
+
             /* We can't put a trace log here, so we'll do the next best thing and put a debuggler statement that fires if the DebugglerMode is "enabled". This is helpful for
             * development, but eventually I'll probably remove or simplify these in order to keep the code clean.
             */

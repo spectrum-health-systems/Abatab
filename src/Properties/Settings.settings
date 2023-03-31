@@ -18,7 +18,7 @@
       <Value Profile="(Default)">10</Value>
     </Setting>
     <Setting Name="LoggerTypes" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">all</Value>
+      <Value Profile="(Default)">traceinternal</Value>
     </Setting>
     <Setting Name="AvatarEnvironment" Type="System.String" Scope="Application">
       <Value Profile="(Default)">UAT</Value>
@@ -63,7 +63,7 @@
       <Value Profile="(Default)">23.3</Value>
     </Setting>
     <Setting Name="AbatabBuild" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">230330.1554</Value>
+      <Value Profile="(Default)">230331.0913</Value>
     </Setting>
   </Settings>
 </SettingsFile>
