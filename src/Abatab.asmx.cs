@@ -48,7 +48,7 @@ namespace Abatab
 
             if (Settings.Default.AbatabMode == "enabled")
             {
-                Flightpath.StartAbatab(abSession, scriptParameter, sentOptionObject);
+                Flightpath.InitializeAbatab(abSession, scriptParameter, sentOptionObject);
 
                 Roundhouse.ParseModule(abSession);
 
