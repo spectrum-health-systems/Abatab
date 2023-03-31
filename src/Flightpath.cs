@@ -23,7 +23,18 @@ namespace Abatab
         /// <include file='docs/doc/xml/inc/Abatab.xmldoc' path='XMLDoc/Class[@name="Flightpath.cs"]/StartAbatab/*' />
         public static void StartAbatab(OptionObject2015 sentOptionObject, string scriptParameter, AbSession abSession)
         {
-            if (Settings.Default.DebugglerMode == "enabled") /* Can't put a trace log here. */
+            /* We can't put a trace log here, so we'll do the next best thing and put a debuggler statement that fires if the
+            * DebugglerMode is "enabled". This is helpful for development, but eventually I'll probably remove or simplify these
+            * in order to keep the code clean.
+            */
+
+
+            /*
+            1abcdefghijklmnopqrstuvwxyz2abcdefghijklmnopqrstuvwxyz3abcdefghijklmnopqrstuvwxyz3abcdefghijklmnopqrstuvwxyz3abcdefghijklmnopqrstuvwxyz3abcdefghijklmnopqrstuvwxyz3abcdefghijklmnopqrstuvwxyz
+
+
+            */
+            if (Settings.Default.DebugglerMode == "enabled")
             {
                 LogFile.Debuggler(Assembly.GetExecutingAssembly().GetName().Name);
             }
