@@ -32,7 +32,7 @@ namespace Abatab
             }
 
             InitializeAbatab(abSession, scriptParameter, sentOptionObject);
-            RefreshAbatab(abSession, scriptParameter, sentOptionObject);
+            //RefreshAbatab(abSession, scriptParameter, sentOptionObject);
         }
 
         /// <include file='docs/doc/xml/inc/Abatab.xmldoc' path='XMLDoc/Class[@name="Flightpath.cs"]/FinishAbatab/*' />
