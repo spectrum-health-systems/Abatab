@@ -24,17 +24,17 @@ namespace Abatab
             switch (abSession.RequestModule)
             {
                 case "testing":
-                    LogEvent.Trace("traceiota", abSession, AssemblyName);
+                    LogEvent.Trace("traceinternal", abSession, AssemblyName);
                     Module.Testing.Roundhouse.ParseCommand(abSession);
                     break;
 
                 case "prognote":
-                    LogEvent.Trace("traceiota", abSession, AssemblyName);
+                    LogEvent.Trace("traceinternal", abSession, AssemblyName);
                     Module.ProgressNote.Roundhouse.ParseCommand(abSession);
                     break;
 
                 default:
-                    LogEvent.Trace("traceiota", abSession, AssemblyName);
+                    LogEvent.Trace("traceinternal", abSession, AssemblyName);
                     // TODO - Exit gracefully.
                     break;
             }

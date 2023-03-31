@@ -21,20 +21,40 @@ namespace Abatab
         public static string AssemblyName { get; set; } = Assembly.GetExecutingAssembly().GetName().Name;
 
         /// <include file='docs/doc/xml/inc/Abatab.xmldoc' path='XMLDoc/Class[@name="Flightpath.cs"]/StartAbatab/*' />
-        public static void StartAbatab(OptionObject2015 sentOptionObject, string scriptParameter, AbSession abSession)
+        public static void StartAbatab(AbSession abSession, string scriptParameter, OptionObject2015 sentOptionObject)
         {
-            /* We can't put a trace log here, so we'll do the next best thing and put a debuggler statement that fires if the
-            * DebugglerMode is "enabled". This is helpful for development, but eventually I'll probably remove or simplify these
-            * in order to keep the code clean.
+            /* We can't put a trace log here, so we'll do the next best thing and put a debuggler statement that fires if the DebugglerMode is "enabled". This is helpful for
+            * development, but eventually I'll probably remove or simplify these in order to keep the code clean.
             */
+            if (Settings.Default.DebugglerMode == "enabled")
+            {
+                LogFile.Debuggler(Assembly.GetExecutingAssembly().GetName().Name);
+            }
 
+            InitializeAbatab(abSession, scriptParameter, sentOptionObject);
+            RefreshAbatab(abSession, scriptParameter, sentOptionObject);
+        }
 
-            /*
-            1abcdefghijklmnopqrstuvwxyz2abcdefghijklmnopqrstu - 80 - cdefg
-            1abcdefghijklmnopqrstuvwxyz2abcdefghijklmnopqrstuvwxyz3abcdefghijklmnopqrs - 100 - bcdef
-            1abcdefghijklmnopqrstuvwxyz2abcdefghijklmnopqrstuvwxyz3abcdefghijklmnopqrstuvwxyz4abcdefghijklm - 120 - wxyz
-            1abcdefghijklmnopqrstuvwxyz2abcdefghijklmnopqrstuvwxyz3abcdefghijklmnopqrstuvwxyz4abcdefghijklmnopqrstuvwxyz5abcg - 150 - nmopq
-            1abcdefghijklmnopqrstuvwxyz2abcdefghijklmnopqrstuvwxyz3abcdefghijklmnopqrstuvwxyz4abcdefghijklmnopqrstuvwxyz5abcdefghijklmnopqrstuvwxyz6abcdefghijkl - 175 - uvwxy7
+        /// <include file='docs/doc/xml/inc/Abatab.xmldoc' path='XMLDoc/Class[@name="Flightpath.cs"]/FinishAbatab/*' />
+        public static void FinishAbatab(AbSession abSession)
+        {
+            /* We can't put a trace log here, so we'll do the next best thing and put a debuggler statement that fires if the DebugglerMode is "enabled". This is helpful for
+            * development, but eventually I'll probably remove or simplify these in order to keep the code clean.
+            */
+            if (Settings.Default.DebugglerMode == "enabled")
+            {
+                LogFile.Debuggler(Assembly.GetExecutingAssembly().GetName().Name);
+            }
+
+            LogEvent.Trace("trace", abSession, AssemblyName);
+            Core.DataExport.SessionInformation.ToSessionRoot(abSession);
+        }
+
+        /// <include file='docs/doc/xml/inc/Abatab.xmldoc' path='XMLDoc/Class[@name="Flightpath.cs"]/StartAbatab/*' />
+        private static void InitializeAbatab(AbSession abSession, string scriptParameter, OptionObject2015 sentOptionObject)
+        {
+            /* We can't put a trace log here, so we'll do the next best thing and put a debuggler statement that fires if the DebugglerMode is "enabled". This is helpful for
+            * development, but eventually I'll probably remove or simplify these in order to keep the code clean.
             */
             if (Settings.Default.DebugglerMode == "enabled")
             {
@@ -44,19 +64,27 @@ namespace Abatab
             WebConfig.Load(abSession);
             Build.NewSession(sentOptionObject, scriptParameter, abSession);
 
-            if (!Directory.Exists(abSession.SessionDataRoot))
-            {
-                LogEvent.Trace("traceiota", abSession, AssemblyName);
-                Refresh.Daily(abSession);
-            }
             Roundhouse.ParseModule(abSession);
         }
 
-        /// <include file='docs/doc/xml/inc/Abatab.xmldoc' path='XMLDoc/Class[@name="Flightpath.cs"]/FinishAbatab/*' />
-        public static void FinishAbatab(AbSession abSession)
+        /// <include file='docs/doc/xml/inc/Abatab.xmldoc' path='XMLDoc/Class[@name="Flightpath.cs"]/StartAbatab/*' />
+        private static void RefreshAbatab(AbSession abSession, string scriptParameter, OptionObject2015 sentOptionObject)
         {
-            LogEvent.Trace("trace", abSession, AssemblyName);
-            Core.DataExport.SessionInformation.ToSessionRoot(abSession);
+            /* We can't put a trace log here, so we'll do the next best thing and put a debuggler statement that fires if the DebugglerMode is "enabled". This is helpful for
+            * development, but eventually I'll probably remove or simplify these in order to keep the code clean.
+            */
+            if (Settings.Default.DebugglerMode == "enabled")
+            {
+                LogFile.Debuggler(Assembly.GetExecutingAssembly().GetName().Name);
+            }
+
+            if (!Directory.Exists(abSession.SessionDataRoot))
+            {
+                LogEvent.Trace("traceinternal", abSession, AssemblyName);
+                Refresh.Daily(abSession);
+            }
+
+            //Roundhouse.ParseModule(abSession);
         }
     }
 }
