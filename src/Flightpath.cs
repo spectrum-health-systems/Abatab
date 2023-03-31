@@ -77,11 +77,12 @@ namespace Abatab
             */
             if (Settings.Default.DebugglerMode == "enabled")
             {
-                LogFile.Debuggler(Assembly.GetExecutingAssembly().GetName().Name);
+                LogFile.Debuggler(Assembly.GetExecutingAssembly().GetName().Name, abSession.SessionDataRoot);
             }
 
             if (!Directory.Exists(abSession.SessionDataRoot))
             {
+                LogFile.Debuggler(Assembly.GetExecutingAssembly().GetName().Name, abSession.SessionDataRoot);
                 LogEvent.Trace("traceinternal", abSession, AssemblyName);
                 Refresh.Daily(abSession);
             }
