@@ -4,7 +4,7 @@
  * https://github.com/spectrum-health-systems/Abatab
  ************************************************************************/
 
-// Development build 230331.0807
+// Development build 230403.0838
 
 // Abatab.asmx.cs
 // b---------x
@@ -36,13 +36,15 @@ namespace Abatab
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string scriptParameter)
         {
-            /* We can't put a trace log here, so we'll do the next best thing and put a debuggler statement that fires if the DebugglerMode is "enabled". This is helpful for
-            * development, but eventually I'll probably remove or simplify these in order to keep the code clean.
-            */
+            /* INFO: We can't put a trace log here, so we'll do the next best thing and put a debuggler statement that fires if the DebugglerMode is "enabled". This is helpful for
+             * development, but eventually I'll probably remove or simplify these in order to keep the code clean.
+             */
             if (Settings.Default.DebugglerMode == "enabled")
             {
                 LogFile.Debuggler(Assembly.GetExecutingAssembly().GetName().Name);
             }
+
+            // REVIEW: stetst
 
             AbSession abSession = new AbSession();
 

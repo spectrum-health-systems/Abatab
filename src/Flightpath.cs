@@ -22,8 +22,8 @@ namespace Abatab
         public static void InitializeAbatab(AbSession abSession, string scriptParameter, OptionObject2015 sentOptionObject)
         {
             /* We can't put a trace log here, so we'll do the next best thing and put a debuggler statement that fires if the DebugglerMode is "enabled". This is helpful for
-            * development, but eventually I'll probably remove or simplify these in order to keep the code clean.
-            */
+             * development, but eventually I'll probably remove or simplify these in order to keep the code clean.
+             */
             if (Settings.Default.DebugglerMode == "enabled")
             {
                 LogFile.Debuggler(Assembly.GetExecutingAssembly().GetName().Name);
@@ -37,8 +37,8 @@ namespace Abatab
         public static void FinishAbatab(AbSession abSession)
         {
             /* We can't put a trace log here, so we'll do the next best thing and put a debuggler statement that fires if the DebugglerMode is "enabled". This is helpful for
-            * development, but eventually I'll probably remove or simplify these in order to keep the code clean.
-            */
+             * development, but eventually I'll probably remove or simplify these in order to keep the code clean.
+             */
             if (Settings.Default.DebugglerMode == "enabled")
             {
                 LogFile.Debuggler(Assembly.GetExecutingAssembly().GetName().Name);
