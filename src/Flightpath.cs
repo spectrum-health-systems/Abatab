@@ -21,8 +21,7 @@ namespace Abatab
         /// <include file='docs/doc/xml/inc/Abatab.xmldoc' path='XMLDoc/Class[@name="Flightpath.cs"]/StartAbatab/*' />
         public static void InitializeAbatab(AbSession abSession, string scriptParameter, OptionObject2015 sentOptionObject)
         {
-            /* We can't put a trace log here, so we'll do the next best thing and put a debuggler statement that fires if the DebugglerMode is "enabled". This is helpful for
-             * development, but eventually I'll probably remove or simplify these in order to keep the code clean.
+            /* INFO: Debuggler statement here, since a Trace log won't work. Helpful for development.
              */
             if (Settings.Default.DebugglerMode == "enabled")
             {
@@ -34,10 +33,9 @@ namespace Abatab
         }
 
         /// <include file='docs/doc/xml/inc/Abatab.xmldoc' path='XMLDoc/Class[@name="Flightpath.cs"]/FinishAbatab/*' />
-        public static void FinishAbatab(AbSession abSession)
+        public static void WrapUpAbatab(AbSession abSession)
         {
-            /* We can't put a trace log here, so we'll do the next best thing and put a debuggler statement that fires if the DebugglerMode is "enabled". This is helpful for
-             * development, but eventually I'll probably remove or simplify these in order to keep the code clean.
+            /* INFO: Debuggler statement here, since a Trace log won't work. Helpful for development.
              */
             if (Settings.Default.DebugglerMode == "enabled")
             {
