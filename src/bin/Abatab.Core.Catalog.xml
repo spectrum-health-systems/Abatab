@@ -4,232 +4,232 @@
         <name>Abatab.Core.Catalog</name>
     </assembly>
     <members>
-        <member name="T:Abatab.Core.Catalog.CoreComponent.DirectoryKeys">
-            <summary>Pre-defined directory lists.</summary>
+        <member name="T:Abatab.Core.Catalog.Cues.OptionObjectCues">
+            <summary>Summary goes here.</summary>
         </member>
-        <member name="M:Abatab.Core.Catalog.CoreComponent.DirectoryKeys.ForFramework(Abatab.Core.Catalog.Session.AbSession)">
+        <member name="M:Abatab.Core.Catalog.Cues.OptionObjectCues.SentObject(Abatab.Core.Catalog.Definitions.AbSession)">
             <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Catalog.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
         </member>
-        <member name="M:Abatab.Core.Catalog.CoreComponent.DirectoryKeys.ForSession(Abatab.Core.Catalog.Session.AbSession)">
+        <member name="M:Abatab.Core.Catalog.Cues.OptionObjectCues.ReturnObject(Abatab.Core.Catalog.Definitions.AbSession)">
+            <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Catalog.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
+        </member>
+        <member name="T:Abatab.Core.Catalog.Cues.SettingCues">
+            <summary>Summary goes here.</summary>
+        </member>
+        <member name="M:Abatab.Core.Catalog.Cues.SettingCues.DailySettings(Abatab.Core.Catalog.Definitions.AbSession)">
+            <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Catalog.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
+        </member>
+        <member name="T:Abatab.Core.Catalog.Cues.UtilityCues">
+            <summary>Summary goes here.</summary>
+        </member>
+        <member name="M:Abatab.Core.Catalog.Cues.ModPrototypeCues.Detail(Abatab.Core.Catalog.Definitions.AbSession)">
+            <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Catalog.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
+        </member>
+        <member name="M:Abatab.Core.Catalog.Cues.ModQuickMedicationOrderCues.Detail(Abatab.Core.Catalog.Definitions.AbSession)">
+            <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Catalog.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
+        </member>
+        <member name="M:Abatab.Core.Catalog.Cues.ModTestingCues.Detail(Abatab.Core.Catalog.Definitions.AbSession)">
+            <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Catalog.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
+        </member>
+        <member name="T:Abatab.Core.Catalog.Cues.ModProgressNoteCues">
+            <summary>Catalog data for the Progress Note module.</summary>
+        </member>
+        <member name="M:Abatab.Core.Catalog.Cues.ModProgressNoteCues.Detail(Abatab.Core.Catalog.Definitions.AbSession)">
+            <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Catalog.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
+        </member>
+        <member name="M:Abatab.Core.Catalog.Cues.ModProgressNoteCues.LogVerifyLocation(Abatab.Core.Catalog.Definitions.AbSession,System.String)">
+            <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Catalog.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
+        </member>
+        <member name="T:Abatab.Core.Catalog.Keys.RequiredDirectories">
+            <summary>Pre-defined lists of directories.</summary>
+        </member>
+        <member name="M:Abatab.Core.Catalog.Keys.RequiredDirectories.Framework(Abatab.Core.Catalog.Definitions.AbSession)">
+            <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Catalog.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
+        </member>
+        <member name="M:Abatab.Core.Catalog.Keys.RequiredDirectories.Session(Abatab.Core.Catalog.Definitions.AbSession)">
             <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Catalog.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
         </member>
         <member name="T:Abatab.Core.Catalog.CoreComponent.Information">
             <summary>Class description goes here.</summary>
         </member>
-        <member name="M:Abatab.Core.Catalog.CoreComponent.Information.DailySettingInformation(Abatab.Core.Catalog.Session.AbSession)">
+        <member name="M:Abatab.Core.Catalog.CoreComponent.Information.DailySettingInformation(Abatab.Core.Catalog.Definitions.AbSession)">
             <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Catalog.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
         </member>
-        <member name="M:Abatab.Core.Catalog.CoreComponent.Information.SessionInformationBasic(Abatab.Core.Catalog.Session.AbSession)">
+        <member name="M:Abatab.Core.Catalog.CoreComponent.Information.SessionInformationBasic(Abatab.Core.Catalog.Definitions.AbSession)">
             <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Catalog.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
         </member>
-        <member name="M:Abatab.Core.Catalog.CoreComponent.Information.SessionInformationFull(Abatab.Core.Catalog.Session.AbSession)">
+        <member name="M:Abatab.Core.Catalog.CoreComponent.Information.SessionInformationFull(Abatab.Core.Catalog.Definitions.AbSession)">
             <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Catalog.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
         </member>
-        <member name="M:Abatab.Core.Catalog.CoreComponent.Information.SessionInformationTargeted(Abatab.Core.Catalog.Session.AbSession)">
+        <member name="M:Abatab.Core.Catalog.CoreComponent.Information.SessionInformationTargeted(Abatab.Core.Catalog.Definitions.AbSession)">
             <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Catalog.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
         </member>
-        <member name="M:Abatab.Core.Catalog.CoreComponent.Information.OptionObjectInformationFull(Abatab.Core.Catalog.Session.AbSession)">
+        <member name="M:Abatab.Core.Catalog.CoreComponent.Information.OptionObjectInformationFull(Abatab.Core.Catalog.Definitions.AbSession)">
             <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Catalog.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
         </member>
-        <member name="M:Abatab.Core.Catalog.CoreComponent.Information.ModuleInformationFull(Abatab.Core.Catalog.Session.AbSession)">
+        <member name="M:Abatab.Core.Catalog.CoreComponent.Information.ModuleInformationFull(Abatab.Core.Catalog.Definitions.AbSession)">
             <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Catalog.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
         </member>
-        <member name="T:Abatab.Core.Catalog.CoreComponent.OptionObjectCues">
-            <summary>Summary goes here.</summary>
-        </member>
-        <member name="M:Abatab.Core.Catalog.CoreComponent.OptionObjectCues.SentObject(Abatab.Core.Catalog.Session.AbSession)">
-            <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Catalog.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
-        </member>
-        <member name="M:Abatab.Core.Catalog.CoreComponent.OptionObjectCues.ReturnObject(Abatab.Core.Catalog.Session.AbSession)">
-            <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Catalog.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
-        </member>
-        <member name="T:Abatab.Core.Catalog.CoreComponent.SettingCues">
-            <summary>Summary goes here.</summary>
-        </member>
-        <member name="M:Abatab.Core.Catalog.CoreComponent.SettingCues.DailySettings(Abatab.Core.Catalog.Session.AbSession)">
-            <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Catalog.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
-        </member>
-        <member name="T:Abatab.Core.Catalog.CoreComponent.UtilityDetail">
-            <summary>Summary goes here.</summary>
-        </member>
-        <member name="M:Abatab.Core.Catalog.Module.PrototypeCues.Detail(Abatab.Core.Catalog.Session.AbSession)">
-            <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Catalog.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
-        </member>
-        <member name="M:Abatab.Core.Catalog.Module.QuickMedicationOrderCues.Detail(Abatab.Core.Catalog.Session.AbSession)">
-            <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Catalog.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
-        </member>
-        <member name="M:Abatab.Core.Catalog.Module.TestingCues.Detail(Abatab.Core.Catalog.Session.AbSession)">
-            <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Catalog.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
-        </member>
-        <member name="T:Abatab.Core.Catalog.Module.ProgressNoteCues">
-            <summary>Catalog data for the Progress Note module.</summary>
-        </member>
-        <member name="M:Abatab.Core.Catalog.Module.ProgressNoteCues.Detail(Abatab.Core.Catalog.Session.AbSession)">
-            <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Catalog.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
-        </member>
-        <member name="M:Abatab.Core.Catalog.Module.ProgressNoteCues.LogVerifyLocation(Abatab.Core.Catalog.Session.AbSession,System.String)">
-            <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Catalog.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
-        </member>
-        <member name="T:Abatab.Core.Catalog.Session.AbSession">
+        <member name="T:Abatab.Core.Catalog.Definitions.AbSession">
             <summary>Properties for the AbSession object.</summary>
             <remarks>
             The AbSession object contains all of the necessary information that Abatab needs to do what it does.
             </remarks>
         </member>
-        <member name="P:Abatab.Core.Catalog.Session.AbSession.AbatabMode">
+        <member name="P:Abatab.Core.Catalog.Definitions.AbSession.AbatabMode">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Session.AbSession.AbatabVersion">
+        <member name="P:Abatab.Core.Catalog.Definitions.AbSession.AbatabVersion">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Session.AbSession.AbatabBuild">
+        <member name="P:Abatab.Core.Catalog.Definitions.AbSession.AbatabBuild">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Session.AbSession.AbatabServiceRoot">
+        <member name="P:Abatab.Core.Catalog.Definitions.AbSession.AbatabServiceRoot">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Session.AbSession.AbatabDataRoot">
+        <member name="P:Abatab.Core.Catalog.Definitions.AbSession.AbatabDataRoot">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Session.AbSession.LoggerMode">
+        <member name="P:Abatab.Core.Catalog.Definitions.AbSession.LoggerMode">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Session.AbSession.LoggerTypes">
+        <member name="P:Abatab.Core.Catalog.Definitions.AbSession.LoggerTypes">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Session.AbSession.LoggerDelay">
+        <member name="P:Abatab.Core.Catalog.Definitions.AbSession.LoggerDelay">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Session.AbSession.AvatarEnvironment">
+        <member name="P:Abatab.Core.Catalog.Definitions.AbSession.AvatarEnvironment">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Session.AbSession.AbatabFallbackUserName">
+        <member name="P:Abatab.Core.Catalog.Definitions.AbSession.AbatabFallbackUserName">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Session.AbSession.DebugglerMode">
+        <member name="P:Abatab.Core.Catalog.Definitions.AbSession.DebugglerMode">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Session.AbSession.Datestamp">
+        <member name="P:Abatab.Core.Catalog.Definitions.AbSession.Datestamp">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Session.AbSession.Timestamp">
+        <member name="P:Abatab.Core.Catalog.Definitions.AbSession.Timestamp">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Session.AbSession.RequestModule">
+        <member name="P:Abatab.Core.Catalog.Definitions.AbSession.RequestModule">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Session.AbSession.RequestCommand">
+        <member name="P:Abatab.Core.Catalog.Definitions.AbSession.RequestCommand">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Session.AbSession.RequestAction">
+        <member name="P:Abatab.Core.Catalog.Definitions.AbSession.RequestAction">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Session.AbSession.RequestOption">
+        <member name="P:Abatab.Core.Catalog.Definitions.AbSession.RequestOption">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Session.AbSession.AbatabUserName">
+        <member name="P:Abatab.Core.Catalog.Definitions.AbSession.AbatabUserName">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Session.AbSession.SessionDataRoot">
+        <member name="P:Abatab.Core.Catalog.Definitions.AbSession.SessionDataRoot">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Session.AbSession.SessionDataDirectory">
+        <member name="P:Abatab.Core.Catalog.Definitions.AbSession.SessionDataDirectory">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Session.AbSession.TraceLogDirectory">
+        <member name="P:Abatab.Core.Catalog.Definitions.AbSession.TraceLogDirectory">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Session.AbSession.WarningLogDirectory">
+        <member name="P:Abatab.Core.Catalog.Definitions.AbSession.WarningLogDirectory">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Session.AbSession.PublicDataRoot">
+        <member name="P:Abatab.Core.Catalog.Definitions.AbSession.PublicDataRoot">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Session.AbSession.AlertLogDirectory">
+        <member name="P:Abatab.Core.Catalog.Definitions.AbSession.AlertLogDirectory">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Session.AbSession.DebugglerLogDirectory">
+        <member name="P:Abatab.Core.Catalog.Definitions.AbSession.DebugglerLogDirectory">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Session.AbSession.SentOptionObject">
+        <member name="P:Abatab.Core.Catalog.Definitions.AbSession.SentOptionObject">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Session.AbSession.ReturnOptionObject">
+        <member name="P:Abatab.Core.Catalog.Definitions.AbSession.ReturnOptionObject">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Session.AbSession.ModProgressNote">
+        <member name="P:Abatab.Core.Catalog.Definitions.AbSession.ModProgressNote">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Session.AbSession.ModPrototype">
+        <member name="P:Abatab.Core.Catalog.Definitions.AbSession.ModPrototype">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Session.AbSession.ModQuickMedicationOrder">
+        <member name="P:Abatab.Core.Catalog.Definitions.AbSession.ModQuickMedicationOrder">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Session.AbSession.ModTesting">
+        <member name="P:Abatab.Core.Catalog.Definitions.AbSession.ModTesting">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="M:Abatab.Core.Catalog.Session.AbSession.AbatabDetailFull(Abatab.Core.Catalog.Session.AbSession)">
+        <member name="M:Abatab.Core.Catalog.Definitions.AbSession.AbatabDetailFull(Abatab.Core.Catalog.Definitions.AbSession)">
             <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Catalog.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
         </member>
-        <member name="T:Abatab.Core.Catalog.Session.ModProgressNote">
+        <member name="T:Abatab.Core.Catalog.Definitions.ModProgressNote">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Session.ModProgressNote.Mode">
+        <member name="P:Abatab.Core.Catalog.Definitions.ModProgressNote.Mode">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Session.ModProgressNote.AuthorizedUsers">
+        <member name="P:Abatab.Core.Catalog.Definitions.ModProgressNote.AuthorizedUsers">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Session.ModProgressNote.ServiceChargeCodeFieldId">
+        <member name="P:Abatab.Core.Catalog.Definitions.ModProgressNote.ServiceChargeCodeFieldId">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Session.ModProgressNote.FlaggedServiceChargeCodePrefixes">
+        <member name="P:Abatab.Core.Catalog.Definitions.ModProgressNote.FlaggedServiceChargeCodePrefixes">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Session.ModProgressNote.FlaggedServiceChargeCodeCodes">
+        <member name="P:Abatab.Core.Catalog.Definitions.ModProgressNote.FlaggedServiceChargeCodeCodes">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Session.ModProgressNote.LocationFieldId">
+        <member name="P:Abatab.Core.Catalog.Definitions.ModProgressNote.LocationFieldId">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Session.ModProgressNote.ValidLocationCodes">
+        <member name="P:Abatab.Core.Catalog.Definitions.ModProgressNote.ValidLocationCodes">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Session.ModProgressNote.ValidLocationNames">
+        <member name="P:Abatab.Core.Catalog.Definitions.ModProgressNote.ValidLocationNames">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="T:Abatab.Core.Catalog.Session.ModPrototype">
+        <member name="T:Abatab.Core.Catalog.Definitions.ModPrototype">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Session.ModPrototype.Mode">
+        <member name="P:Abatab.Core.Catalog.Definitions.ModPrototype.Mode">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Session.ModPrototype.AuthorizedUsers">
+        <member name="P:Abatab.Core.Catalog.Definitions.ModPrototype.AuthorizedUsers">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="T:Abatab.Core.Catalog.Session.ModQuickMedicationOrder">
+        <member name="T:Abatab.Core.Catalog.Definitions.ModQuickMedicationOrder">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Session.ModQuickMedicationOrder.Mode">
+        <member name="P:Abatab.Core.Catalog.Definitions.ModQuickMedicationOrder.Mode">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Session.ModQuickMedicationOrder.AuthorizedUsers">
+        <member name="P:Abatab.Core.Catalog.Definitions.ModQuickMedicationOrder.AuthorizedUsers">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Session.ModQuickMedicationOrder.ValidOrderTypes">
+        <member name="P:Abatab.Core.Catalog.Definitions.ModQuickMedicationOrder.ValidOrderTypes">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Session.ModQuickMedicationOrder.DosePercentBoundary">
+        <member name="P:Abatab.Core.Catalog.Definitions.ModQuickMedicationOrder.DosePercentBoundary">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Session.ModQuickMedicationOrder.DoseMilligramBoundary">
+        <member name="P:Abatab.Core.Catalog.Definitions.ModQuickMedicationOrder.DoseMilligramBoundary">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="T:Abatab.Core.Catalog.Session.ModTesting">
+        <member name="T:Abatab.Core.Catalog.Definitions.ModTesting">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Session.ModTesting.Mode">
+        <member name="P:Abatab.Core.Catalog.Definitions.ModTesting.Mode">
             <summary>Summary goes here.</summary>
         </member>
     </members>

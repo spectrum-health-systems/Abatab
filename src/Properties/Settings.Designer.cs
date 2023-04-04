@@ -70,7 +70,7 @@ namespace Abatab.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("traceinternal")]
+        [global::System.Configuration.DefaultSettingValueAttribute("all")]
         public string LoggerTypes {
             get {
                 return ((string)(this["LoggerTypes"]));
@@ -187,7 +187,7 @@ namespace Abatab.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("enabled")]
+        [global::System.Configuration.DefaultSettingValueAttribute("disabled")]
         public string DebugglerMode {
             get {
                 return ((string)(this["DebugglerMode"]));
@@ -205,7 +205,7 @@ namespace Abatab.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("230331.0913")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Development build 230404.0957")]
         public string AbatabBuild {
             get {
                 return ((string)(this["AbatabBuild"]));

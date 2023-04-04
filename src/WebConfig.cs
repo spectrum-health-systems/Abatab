@@ -1,7 +1,7 @@
 ﻿// b---------x
 
 using System.Reflection;
-using Abatab.Core.Catalog.Session;
+using Abatab.Core.Catalog.Definitions;
 using Abatab.Core.Utility;
 using Abatab.Properties;
 

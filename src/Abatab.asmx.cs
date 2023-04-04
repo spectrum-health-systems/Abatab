@@ -11,7 +11,7 @@
 
 using System.Reflection;
 using System.Web.Services;
-using Abatab.Core.Catalog.Session;
+using Abatab.Core.Catalog.Definitions;
 using Abatab.Core.Utility;
 using Abatab.Properties;
 using ScriptLinkStandard.Objects;
