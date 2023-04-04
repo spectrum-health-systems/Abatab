@@ -21,7 +21,7 @@ namespace Abatab
         /// <include file='docs/doc/xml/inc/Abatab.xmldoc' path='XMLDoc/Class[@name="Flightpath.cs"]/StartAbatab/*' />
         public static void InitializeAbatab(AbSession abSession, string scriptParameter, OptionObject2015 sentOptionObject)
         {
-            /* INFO: Debuggler statement here, since a Trace log won't work. Helpful for development.
+            /* INFO: Debuggler statement here, since a Trace log won't work. Used for development/testing.
              */
             if (Settings.Default.DebugglerMode == "enabled")
             {
@@ -35,7 +35,7 @@ namespace Abatab
         /// <include file='docs/doc/xml/inc/Abatab.xmldoc' path='XMLDoc/Class[@name="Flightpath.cs"]/FinishAbatab/*' />
         public static void WrapUpAbatab(AbSession abSession)
         {
-            /* INFO: Debuggler statement here, since a Trace log won't work. Helpful for development.
+            /* INFO: Debuggler statement here, since a Trace log won't work. Used for development/testing.
              */
             if (Settings.Default.DebugglerMode == "enabled")
             {

@@ -25,17 +25,24 @@ namespace Abatab
             {
                 case "testing":
                     LogEvent.Trace("traceinternal", abSession, AssemblyName);
+
                     Module.Testing.Roundhouse.ParseCommand(abSession);
+
                     break;
 
                 case "prognote":
                     LogEvent.Trace("traceinternal", abSession, AssemblyName);
+
                     Module.ProgressNote.Roundhouse.ParseCommand(abSession);
+
                     break;
 
                 default:
+
                     LogEvent.Trace("traceinternal", abSession, AssemblyName);
-                    // TODO - Exit gracefully.
+
+                    // Todo: Eventually this should exit gracefully
+
                     break;
             }
         }

@@ -36,7 +36,7 @@ namespace Abatab
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string scriptParameter)
         {
-            /* INFO: Debuggler statement here, since a Trace log won't work. Helpful for development.
+            /* INFO: Debuggler statement here, since a Trace log won't work. Used for development/testing.
              */
             if (Settings.Default.DebugglerMode == "enabled")
             {
