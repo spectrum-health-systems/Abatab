@@ -1,7 +1,7 @@
 ﻿// b---------x
 
 using System.Reflection;
-using Abatab.Core.Catalog.Definitions;
+using Abatab.Core.Catalog.Definition;
 using Abatab.Core.Logger;
 using Abatab.Core.Session;
 using Abatab.Core.Utility;
@@ -19,8 +19,7 @@ namespace Abatab
         /// <include file='docs/doc/xml/inc/Abatab.xmldoc' path='XMLDoc/Class[@name="Flightpath.cs"]/StartAbatab/*' />
         public static void InitializeAbatab(AbSession abSession, string scriptParameter, OptionObject2015 sentOptionObject)
         {
-            /* INFO: Debuggler statement here, since a Trace log won't work. Used for development/testing.
-             */
+            // DEVNOTE: Debuggler statement here, since a Trace log won't work. Used for development/testing.
             if (Settings.Default.DebugglerMode == "enabled")
             {
                 LogFile.Debuggler(Assembly.GetExecutingAssembly().GetName().Name);
@@ -28,20 +27,21 @@ namespace Abatab
 
             WebConfig.Load(abSession);
             Build.NewSession(sentOptionObject, scriptParameter, abSession);
+
+            Core.Framework.Validate.Status(abSession);
         }
 
         /// <include file='docs/doc/xml/inc/Abatab.xmldoc' path='XMLDoc/Class[@name="Flightpath.cs"]/FinishAbatab/*' />
         public static void WrapUpAbatab(AbSession abSession)
         {
-            /* INFO: Debuggler statement here, since a Trace log won't work. Used for development/testing.
-             */
+            // DEVNOTE: Debuggler statement here, since a Trace log won't work. Used for development/testing.
             if (Settings.Default.DebugglerMode == "enabled")
             {
                 LogFile.Debuggler(Assembly.GetExecutingAssembly().GetName().Name);
             }
 
             LogEvent.Trace("trace", abSession, AssemblyName);
-            Core.DataExport.SessionInformation.ToSessionRoot(abSession);
+            LogEvent.Session(abSession);
         }
     }
 }

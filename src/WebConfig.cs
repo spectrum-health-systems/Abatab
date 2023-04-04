@@ -1,7 +1,7 @@
 ﻿// b---------x
 
 using System.Reflection;
-using Abatab.Core.Catalog.Definitions;
+using Abatab.Core.Catalog.Definition;
 using Abatab.Core.Utility;
 using Abatab.Properties;
 
@@ -13,8 +13,7 @@ namespace Abatab
         /// <include file='docs/doc/xml/inc/Abatab.xmldoc' path='XMLDoc/Class[@name="WebConfig.cs"]/Load/*' />
         public static void Load(AbSession abSession)
         {
-            /* INFO: Debuggler statement here, since a Trace log won't work. Used for development/testing.
-             */
+            // DEVNOTE: Debuggler statement here, since a Trace log won't work. Used for development/testing.
             if (Settings.Default.DebugglerMode == "enabled")
             {
                 LogFile.Debuggler(Assembly.GetExecutingAssembly().GetName().Name);

@@ -33,10 +33,10 @@
         <member name="P:Abatab.Flightpath.AssemblyName">
             <summary>Executing assembly name for log files.</summary>
         </member>
-        <member name="M:Abatab.Flightpath.InitializeAbatab(Abatab.Core.Catalog.Definitions.AbSession,System.String,ScriptLinkStandard.Objects.OptionObject2015)">
+        <member name="M:Abatab.Flightpath.InitializeAbatab(Abatab.Core.Catalog.Definition.AbSession,System.String,ScriptLinkStandard.Objects.OptionObject2015)">
             <!-- No matching elements were found for the following include tag --><include file="docs/doc/xml/inc/Abatab.xmldoc" path="XMLDoc/Class[@name=&quot;Flightpath.cs&quot;]/StartAbatab/*" />
         </member>
-        <member name="M:Abatab.Flightpath.WrapUpAbatab(Abatab.Core.Catalog.Definitions.AbSession)">
+        <member name="M:Abatab.Flightpath.WrapUpAbatab(Abatab.Core.Catalog.Definition.AbSession)">
             <!-- No matching elements were found for the following include tag --><include file="docs/doc/xml/inc/Abatab.xmldoc" path="XMLDoc/Class[@name=&quot;Flightpath.cs&quot;]/FinishAbatab/*" />
         </member>
         <member name="T:Abatab.Roundhouse">
@@ -47,13 +47,13 @@
         <member name="P:Abatab.Roundhouse.AssemblyName">
             <summary>Executing assembly name for log files.</summary>
         </member>
-        <member name="M:Abatab.Roundhouse.ParseModule(Abatab.Core.Catalog.Definitions.AbSession)">
+        <member name="M:Abatab.Roundhouse.ParseModule(Abatab.Core.Catalog.Definition.AbSession)">
             <!-- No matching elements were found for the following include tag --><include file="docs/doc/xml/inc/Abatab.xmldoc" path="XMLDoc/Class[@name=&quot;Roundhouse.cs&quot;]/ParseModule/*" />
         </member>
         <member name="T:Abatab.WebConfig">
             <summary>Loads settings from the local Web.config file.</summary>
         </member>
-        <member name="M:Abatab.WebConfig.Load(Abatab.Core.Catalog.Definitions.AbSession)">
+        <member name="M:Abatab.WebConfig.Load(Abatab.Core.Catalog.Definition.AbSession)">
             <!-- No matching elements were found for the following include tag --><include file="docs/doc/xml/inc/Abatab.xmldoc" path="XMLDoc/Class[@name=&quot;WebConfig.cs&quot;]/Load/*" />
         </member>
     </members>

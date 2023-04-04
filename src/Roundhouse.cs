@@ -1,7 +1,7 @@
 ﻿// b---------x
 
 using System.Reflection;
-using Abatab.Core.Catalog.Definitions;
+using Abatab.Core.Catalog.Definition;
 using Abatab.Core.Logger;
 
 namespace Abatab
@@ -39,7 +39,7 @@ namespace Abatab
 
                     LogEvent.Trace("traceinternal", abSession, AssemblyName);
 
-                    //Todo: Eventually this should exit gracefully
+                    // TODO: Eventually this should exit gracefully
 
                     break;
             }

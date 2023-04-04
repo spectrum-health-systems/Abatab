@@ -11,7 +11,7 @@
 
 using System.Reflection;
 using System.Web.Services;
-using Abatab.Core.Catalog.Definitions;
+using Abatab.Core.Catalog.Definition;
 using Abatab.Core.Utility;
 using Abatab.Properties;
 using ScriptLinkStandard.Objects;
@@ -35,8 +35,7 @@ namespace Abatab
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string scriptParameter)
         {
-            /* INFO: Debuggler statement here, since a Trace log won't work. Used for development/testing.
-             */
+            // DEVNOTE: Debuggler statement here, since a Trace log won't work. Used for development/testing.
             if (Settings.Default.DebugglerMode == "enabled")
             {
                 LogFile.Debuggler(Assembly.GetExecutingAssembly().GetName().Name);
