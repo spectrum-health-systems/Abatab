@@ -1,6 +1,4 @@
-﻿// Abatab.Roundhouse.cs
-// b---------x
-// Copyright (c) A Pretty Cool Program
+﻿// b---------x
 
 using System.Reflection;
 using Abatab.Core.Catalog.Session;
@@ -9,7 +7,7 @@ using Abatab.Core.Logger;
 namespace Abatab
 {
     /// <summary>
-    /// Determines what should be done with the <b>module</b> component of the Script Parameter.
+    /// Determines what should be done with the module component of the Script Parameter.
     /// </summary>
     public static class Roundhouse
     {
@@ -41,7 +39,7 @@ namespace Abatab
 
                     LogEvent.Trace("traceinternal", abSession, AssemblyName);
 
-                    // Todo: Eventually this should exit gracefully
+                    //Todo: Eventually this should exit gracefully
 
                     break;
             }

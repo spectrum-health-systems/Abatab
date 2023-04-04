@@ -4,11 +4,10 @@
  * https://github.com/spectrum-health-systems/Abatab
  ************************************************************************/
 
-// Development build 230403.0838
+/* Development build 230404.0949
+ */
 
-// Abatab.asmx.cs
 // b---------x
-// (c) A Pretty Cool Program
 
 using System.Reflection;
 using System.Web.Services;

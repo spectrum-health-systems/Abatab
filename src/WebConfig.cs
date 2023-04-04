@@ -1,6 +1,4 @@
-﻿// Abatab.WebConfig.cs
-// b---------x
-// Copyright (c) A Pretty Cool Program
+﻿// b---------x
 
 using System.Reflection;
 using Abatab.Core.Catalog.Session;
@@ -9,13 +7,13 @@ using Abatab.Properties;
 
 namespace Abatab
 {
-    /// <summary>Summary goes here.</summary>
+    /// <summary>Loads settings from the local Web.config file.</summary>
     public static class WebConfig
     {
         /// <include file='docs/doc/xml/inc/Abatab.xmldoc' path='XMLDoc/Class[@name="WebConfig.cs"]/Load/*' />
         public static void Load(AbSession abSession)
         {
-            /* INFO: Debuggler statement here, since a Trace log won't work. Helpful for development.
+            /* INFO: Debuggler statement here, since a Trace log won't work. Used for development/testing.
              */
             if (Settings.Default.DebugglerMode == "enabled")
             {

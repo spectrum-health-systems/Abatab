@@ -64,6 +64,15 @@
         <member name="T:Abatab.Core.Catalog.CoreComponent.UtilityDetail">
             <summary>Summary goes here.</summary>
         </member>
+        <member name="T:Abatab.Core.Catalog.Module.ModProgressNote">
+            <summary>Catalog data for the Progress Note module.</summary>
+        </member>
+        <member name="M:Abatab.Core.Catalog.Module.ModProgressNote.Detail(Abatab.Core.Catalog.Session.AbSession)">
+            <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Catalog.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
+        </member>
+        <member name="M:Abatab.Core.Catalog.Module.ModProgressNote.LogVerifyLocation(Abatab.Core.Catalog.Session.AbSession,System.String)">
+            <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Catalog.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
+        </member>
         <member name="T:Abatab.Core.Catalog.Session.AbSession">
             <summary>Properties for the AbSession object.</summary>
             <remarks>
@@ -225,15 +234,6 @@
         </member>
         <member name="P:Abatab.Core.Catalog.Session.ModTesting.Mode">
             <summary>Summary goes here.</summary>
-        </member>
-        <member name="T:Abatab.Core.Catalog.Module.ModProgressNote">
-            <summary>Catalog data for the Progress Note module.</summary>
-        </member>
-        <member name="M:Abatab.Core.Catalog.Module.ModProgressNote.Detail(Abatab.Core.Catalog.Session.AbSession)">
-            <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Catalog.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
-        </member>
-        <member name="M:Abatab.Core.Catalog.Module.ModProgressNote.LogVerifyLocation(Abatab.Core.Catalog.Session.AbSession,System.String)">
-            <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Catalog.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
         </member>
     </members>
 </doc>

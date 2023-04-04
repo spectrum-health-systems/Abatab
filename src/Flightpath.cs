@@ -1,6 +1,4 @@
-﻿// Abatab.Flightpath.cs
-// b---------x
-// Copyright (c) A Pretty Cool Program
+﻿// b---------x
 
 using System.Reflection;
 using Abatab.Core.Catalog.Session;

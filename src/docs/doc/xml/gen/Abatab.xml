@@ -41,7 +41,7 @@
         </member>
         <member name="T:Abatab.Roundhouse">
             <summary>
-            Determines what should be done with the <b>module</b> component of the Script Parameter.
+            Determines what should be done with the module component of the Script Parameter.
             </summary>
         </member>
         <member name="P:Abatab.Roundhouse.AssemblyName">
@@ -51,7 +51,7 @@
             <!-- No matching elements were found for the following include tag --><include file="docs/doc/xml/inc/Abatab.xmldoc" path="XMLDoc/Class[@name=&quot;Roundhouse.cs&quot;]/ParseModule/*" />
         </member>
         <member name="T:Abatab.WebConfig">
-            <summary>Summary goes here.</summary>
+            <summary>Loads settings from the local Web.config file.</summary>
         </member>
         <member name="M:Abatab.WebConfig.Load(Abatab.Core.Catalog.Session.AbSession)">
             <!-- No matching elements were found for the following include tag --><include file="docs/doc/xml/inc/Abatab.xmldoc" path="XMLDoc/Class[@name=&quot;WebConfig.cs&quot;]/Load/*" />
