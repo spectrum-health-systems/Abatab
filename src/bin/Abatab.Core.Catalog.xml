@@ -106,13 +106,13 @@
         <member name="M:Abatab.Core.Catalog.Output.Setting.Daily(Abatab.Core.Catalog.Definitions.AbSession)">
             <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Catalog.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
         </member>
-        <member name="T:Abatab.Core.Catalog.Keys.DirectoryKey">
+        <member name="T:Abatab.Core.Catalog.Key.Directories">
             <summary>Pre-defined lists of directories.</summary>
         </member>
-        <member name="M:Abatab.Core.Catalog.Keys.DirectoryKey.Framework(Abatab.Core.Catalog.Definitions.AbSession)">
+        <member name="M:Abatab.Core.Catalog.Key.Directories.Framework(Abatab.Core.Catalog.Definitions.AbSession)">
             <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Catalog.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
         </member>
-        <member name="M:Abatab.Core.Catalog.Keys.DirectoryKey.Session(Abatab.Core.Catalog.Definitions.AbSession)">
+        <member name="M:Abatab.Core.Catalog.Key.Directories.Session(Abatab.Core.Catalog.Definitions.AbSession)">
             <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Catalog.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
         </member>
         <member name="T:Abatab.Core.Catalog.Definitions.AbSession">
