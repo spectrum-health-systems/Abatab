@@ -59,7 +59,8 @@ namespace Abatab
             abSession.ModQMedOrdr = new ModQMedOrdr
             {
                 Mode                  = Settings.Default.ModQMedOrdrMode,
-                Users       = Settings.Default.ModQMedOrdrUsers,
+                Users                 = Settings.Default.ModQMedOrdrUsers,
+                OrderTypeFieldId = Settings.Default.
                 ValidOrderTypes       = Settings.Default.ModQMedOrdrValidOrderTypes,
                 DosePercentBoundary   = Settings.Default.ModQMedOrdrDosePercentBoundary,
                 DoseMilligramBoundary = Settings.Default.ModQMedOrdrDoseMilligramBoundary

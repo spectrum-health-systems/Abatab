@@ -275,5 +275,59 @@ namespace Abatab.Properties {
                 return ((global::System.Collections.Specialized.StringCollection)(this["ModProgNoteValidLocationNames"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("121")]
+        public string ModQMedOrdrOrderTypeFieldId {
+            get {
+                return ((string)(this["ModQMedOrdrOrderTypeFieldId"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Recurring Dosage:")]
+        public string ModQMedOrdrPreviousDosePrefix {
+            get {
+                return ((string)(this["ModQMedOrdrPreviousDosePrefix"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute(" mgs")]
+        public string ModQMedOrdrPreviousDoseSuffix {
+            get {
+                return ((string)(this["ModQMedOrdrPreviousDoseSuffix"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("107")]
+        public string ModQMedOrdrDosageOneFieldId {
+            get {
+                return ((string)(this["ModQMedOrdrDosageOneFieldId"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0.0")]
+        public string ModQMedOrdrCurrentDoseage {
+            get {
+                return ((string)(this["ModQMedOrdrCurrentDoseage"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string ModQMedOrdr {
+            get {
+                return ((string)(this["ModQMedOrdr"]));
+            }
+        }
     }
 }
