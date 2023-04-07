@@ -184,70 +184,94 @@
         <member name="P:Abatab.Core.Catalog.Definition.AbSession.ReturnOptionObject">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Definition.AbSession.ModProgressNote">
+        <member name="P:Abatab.Core.Catalog.Definition.AbSession.ModProgNote">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Definition.AbSession.ModPrototype">
+        <member name="P:Abatab.Core.Catalog.Definition.AbSession.ModProto">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Definition.AbSession.ModQuickMedicationOrder">
+        <member name="P:Abatab.Core.Catalog.Definition.AbSession.ModQMedOrdr">
             <summary>Summary goes here.</summary>
         </member>
         <member name="P:Abatab.Core.Catalog.Definition.AbSession.ModTesting">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="T:Abatab.Core.Catalog.Definition.ModProgressNote">
+        <member name="T:Abatab.Core.Catalog.Definition.ModProgNote">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Definition.ModProgressNote.Mode">
+        <member name="P:Abatab.Core.Catalog.Definition.ModProgNote.Mode">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Definition.ModProgressNote.AuthorizedUsers">
+        <member name="P:Abatab.Core.Catalog.Definition.ModProgNote.Users">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Definition.ModProgressNote.ServiceChargeCodeFieldId">
+        <member name="P:Abatab.Core.Catalog.Definition.ModProgNote.ServiceChargeCodeFieldId">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Definition.ModProgressNote.FlaggedServiceChargeCodePrefixes">
+        <member name="P:Abatab.Core.Catalog.Definition.ModProgNote.FlaggedServiceChargeCodePrefixes">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Definition.ModProgressNote.FlaggedServiceChargeCodeCodes">
+        <member name="P:Abatab.Core.Catalog.Definition.ModProgNote.FlaggedServiceChargeCodeCodes">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Definition.ModProgressNote.LocationFieldId">
+        <member name="P:Abatab.Core.Catalog.Definition.ModProgNote.LocationFieldId">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Definition.ModProgressNote.ValidLocationCodes">
+        <member name="P:Abatab.Core.Catalog.Definition.ModProgNote.ValidLocationCodes">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Definition.ModProgressNote.ValidLocationNames">
+        <member name="P:Abatab.Core.Catalog.Definition.ModProgNote.ValidLocationNames">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="T:Abatab.Core.Catalog.Definition.ModPrototype">
+        <member name="T:Abatab.Core.Catalog.Definition.ModProto">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Definition.ModPrototype.Mode">
+        <member name="P:Abatab.Core.Catalog.Definition.ModProto.Mode">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Definition.ModPrototype.AuthorizedUsers">
+        <member name="P:Abatab.Core.Catalog.Definition.ModProto.Users">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="T:Abatab.Core.Catalog.Definition.ModQuickMedicationOrder">
+        <member name="T:Abatab.Core.Catalog.Definition.ModQMedOrdr">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Definition.ModQuickMedicationOrder.Mode">
+        <member name="P:Abatab.Core.Catalog.Definition.ModQMedOrdr.Mode">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Definition.ModQuickMedicationOrder.AuthorizedUsers">
+        <member name="P:Abatab.Core.Catalog.Definition.ModQMedOrdr.Users">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Definition.ModQuickMedicationOrder.ValidOrderTypes">
+        <member name="P:Abatab.Core.Catalog.Definition.ModQMedOrdr.OrderTypeFieldId">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Definition.ModQuickMedicationOrder.DosePercentBoundary">
+        <member name="P:Abatab.Core.Catalog.Definition.ModQMedOrdr.ValidOrderTypes">
             <summary>Summary goes here.</summary>
         </member>
-        <member name="P:Abatab.Core.Catalog.Definition.ModQuickMedicationOrder.DoseMilligramBoundary">
+        <member name="P:Abatab.Core.Catalog.Definition.ModQMedOrdr.LastOrderScheduleFieldId">
+            <summary>Summary goes here.</summary>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.ModQMedOrdr.LastOrderScheduleText">
+            <summary>Summary goes here.</summary>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.ModQMedOrdr.LastScheduledDosage">
+            <summary>Summary goes here.</summary>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.ModQMedOrdr.PreviousDosePrefix">
+            <summary>Summary goes here.</summary>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.ModQMedOrdr.PreviousDoseSuffix">
+            <summary>Summary goes here.</summary>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.ModQMedOrdr.DosageOneFieldId">
+            <summary>Summary goes here.</summary>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.ModQMedOrdr.CurrentDosage">
+            <summary>Summary goes here.</summary>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.ModQMedOrdr.DosePercentBoundary">
+            <summary>Summary goes here.</summary>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.ModQMedOrdr.DoseMilligramBoundary">
             <summary>Summary goes here.</summary>
         </member>
         <member name="T:Abatab.Core.Catalog.Definition.ModTesting">

@@ -35,6 +35,13 @@ namespace Abatab
 
                     break;
 
+                case "qmedordr":
+                    LogEvent.Trace("traceinternal", abSession, AssemblyName);
+
+                    Module.QuickMedicationOrder.Roundhouse.ParseCommand(abSession);
+
+                    break;
+
                 default:
 
                     LogEvent.Trace("traceinternal", abSession, AssemblyName);

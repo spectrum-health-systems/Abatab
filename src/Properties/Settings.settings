@@ -26,31 +26,31 @@
     <Setting Name="AbatabFallbackUserName" Type="System.String" Scope="Application">
       <Value Profile="(Default)">ABATAB</Value>
     </Setting>
-    <Setting Name="ModProgressNoteMode" Type="System.String" Scope="Application">
+    <Setting Name="ModProgNoteMode" Type="System.String" Scope="Application">
       <Value Profile="(Default)">enabled</Value>
     </Setting>
-    <Setting Name="ModProgressNoteAuthorizedUsers" Type="System.String" Scope="Application">
+    <Setting Name="ModProgNoteUsers" Type="System.String" Scope="Application">
       <Value Profile="(Default)">all</Value>
     </Setting>
-    <Setting Name="ModPrototypeMode" Type="System.String" Scope="Application">
+    <Setting Name="ModProtoMode" Type="System.String" Scope="Application">
       <Value Profile="(Default)">enabled</Value>
     </Setting>
-    <Setting Name="ModPrototypeAuthorizedUsers" Type="System.String" Scope="Application">
+    <Setting Name="ModProtoUsers" Type="System.String" Scope="Application">
       <Value Profile="(Default)">all</Value>
     </Setting>
-    <Setting Name="ModQuickMedicationOrderMode" Type="System.String" Scope="Application">
+    <Setting Name="ModQMedOrdrMode" Type="System.String" Scope="Application">
       <Value Profile="(Default)">enabled</Value>
     </Setting>
-    <Setting Name="ModQuickMedicationOrderAuthorizedUsers" Type="System.String" Scope="Application">
+    <Setting Name="ModQMedOrdrUsers" Type="System.String" Scope="Application">
       <Value Profile="(Default)">all</Value>
     </Setting>
-    <Setting Name="ModQuickMedicationOrderValidOrderTypes" Type="System.String" Scope="Application">
+    <Setting Name="ModQMedOrdrValidOrderTypes" Type="System.String" Scope="Application">
       <Value Profile="(Default)">4</Value>
     </Setting>
-    <Setting Name="ModQuickMedicationOrderDosePercentBoundary" Type="System.String" Scope="Application">
+    <Setting Name="ModQMedOrdrDosePercentBoundary" Type="System.String" Scope="Application">
       <Value Profile="(Default)">25</Value>
     </Setting>
-    <Setting Name="ModQuickMedicationOrderDoseMilligramBoundary" Type="System.String" Scope="Application">
+    <Setting Name="ModQMedOrdrDoseMilligramBoundary" Type="System.String" Scope="Application">
       <Value Profile="(Default)">20</Value>
     </Setting>
     <Setting Name="ModTestingMode" Type="System.String" Scope="Application">
@@ -63,7 +63,17 @@
       <Value Profile="(Default)">23.3</Value>
     </Setting>
     <Setting Name="AbatabBuild" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">Development build 230404.1501</Value>
+      <Value Profile="(Default)">Development build 230407.1558</Value>
+    </Setting>
+    <Setting Name="ModProgNoteServiceChargeCodeFieldId" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">51001</Value>
+    </Setting>
+    <Setting Name="ModProgNoteFlaggedServiceChargeCodePrefixes" Type="System.Collections.Specialized.StringCollection" Scope="Application">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;string&gt;TMH&lt;/string&gt;
+  &lt;string&gt;AOTMH&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
     </Setting>
   </Settings>
 </SettingsFile>

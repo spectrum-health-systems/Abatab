@@ -98,81 +98,81 @@ namespace Abatab.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("enabled")]
-        public string ModProgressNoteMode {
+        public string ModProgNoteMode {
             get {
-                return ((string)(this["ModProgressNoteMode"]));
+                return ((string)(this["ModProgNoteMode"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("all")]
-        public string ModProgressNoteAuthorizedUsers {
+        public string ModProgNoteUsers {
             get {
-                return ((string)(this["ModProgressNoteAuthorizedUsers"]));
+                return ((string)(this["ModProgNoteUsers"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("enabled")]
-        public string ModPrototypeMode {
+        public string ModProtoMode {
             get {
-                return ((string)(this["ModPrototypeMode"]));
+                return ((string)(this["ModProtoMode"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("all")]
-        public string ModPrototypeAuthorizedUsers {
+        public string ModProtoUsers {
             get {
-                return ((string)(this["ModPrototypeAuthorizedUsers"]));
+                return ((string)(this["ModProtoUsers"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("enabled")]
-        public string ModQuickMedicationOrderMode {
+        public string ModQMedOrdrMode {
             get {
-                return ((string)(this["ModQuickMedicationOrderMode"]));
+                return ((string)(this["ModQMedOrdrMode"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("all")]
-        public string ModQuickMedicationOrderAuthorizedUsers {
+        public string ModQMedOrdrUsers {
             get {
-                return ((string)(this["ModQuickMedicationOrderAuthorizedUsers"]));
+                return ((string)(this["ModQMedOrdrUsers"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("4")]
-        public string ModQuickMedicationOrderValidOrderTypes {
+        public string ModQMedOrdrValidOrderTypes {
             get {
-                return ((string)(this["ModQuickMedicationOrderValidOrderTypes"]));
+                return ((string)(this["ModQMedOrdrValidOrderTypes"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("25")]
-        public string ModQuickMedicationOrderDosePercentBoundary {
+        public string ModQMedOrdrDosePercentBoundary {
             get {
-                return ((string)(this["ModQuickMedicationOrderDosePercentBoundary"]));
+                return ((string)(this["ModQMedOrdrDosePercentBoundary"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("20")]
-        public string ModQuickMedicationOrderDoseMilligramBoundary {
+        public string ModQMedOrdrDoseMilligramBoundary {
             get {
-                return ((string)(this["ModQuickMedicationOrderDoseMilligramBoundary"]));
+                return ((string)(this["ModQMedOrdrDoseMilligramBoundary"]));
             }
         }
         
@@ -205,10 +205,30 @@ namespace Abatab.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Development build 230404.1501")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Development build 230407.1558")]
         public string AbatabBuild {
             get {
                 return ((string)(this["AbatabBuild"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("51001")]
+        public string ModProgNoteServiceChargeCodeFieldId {
+            get {
+                return ((string)(this["ModProgNoteServiceChargeCodeFieldId"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("<?xml version=\"1.0\" encoding=\"utf-16\"?>\r\n<ArrayOfString xmlns:xsd=\"http://www.w3." +
+            "org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n  <s" +
+            "tring>TMH</string>\r\n  <string>AOTMH</string>\r\n</ArrayOfString>")]
+        public global::System.Collections.Specialized.StringCollection ModProgNoteFlaggedServiceChargeCodePrefixes {
+            get {
+                return ((global::System.Collections.Specialized.StringCollection)(this["ModProgNoteFlaggedServiceChargeCodePrefixes"]));
             }
         }
     }

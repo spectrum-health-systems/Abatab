@@ -1,5 +1,6 @@
 ﻿// b---------x
 
+using System.Linq;
 using System.Reflection;
 using Abatab.Core.Catalog.Definition;
 using Abatab.Core.Utility;
@@ -30,25 +31,39 @@ namespace Abatab
             abSession.AvatarEnvironment       = Settings.Default.AvatarEnvironment;
             abSession.AbatabFallbackUserName  = Settings.Default.AbatabFallbackUserName;
             abSession.DebugglerMode           = Settings.Default.DebugglerMode;
-            abSession.ModProgressNote         = new ModProgressNote
+
+            /* There are additional Progress Note module settings that are created at runtime in Abatab.Core.Session.Build()
+             */
+            abSession.ModProgNote = new ModProgNote
             {
-                Mode            = Settings.Default.ModProgressNoteMode,
-                AuthorizedUsers = Settings.Default.ModProgressNoteAuthorizedUsers
+                Mode  = Settings.Default.ModProgNoteMode,
+                Users = Settings.Default.ModProgNoteUsers,
+                ServiceChargeCodeFieldId = Settings.Default.ModProgNoteServiceChargeCodeFieldId,
+                FlaggedServiceChargeCodePrefixes = Settings.Default.ModProgNoteFlaggedServiceChargeCodePrefixes.Cast<string>().ToList()
             };
-            abSession.ModPrototype            = new ModPrototype
+
+            /* There are additional Prototype module settings that are created at runtime in Abatab.Core.Session.Build()
+             */
+            abSession.ModProto = new ModProto
             {
-                Mode            = Settings.Default.ModPrototypeMode,
-                AuthorizedUsers = Settings.Default.ModPrototypeAuthorizedUsers
+                Mode            = Settings.Default.ModProtoMode,
+                Users = Settings.Default.ModProtoUsers
             };
-            abSession.ModQuickMedicationOrder = new ModQuickMedicationOrder
+
+            /* There are additional Quick Medication Order module settings that are created at runtime in Abatab.Core.Session.Build()
+             */
+            abSession.ModQMedOrdr = new ModQMedOrdr
             {
-                Mode                  = Settings.Default.ModQuickMedicationOrderMode,
-                AuthorizedUsers       = Settings.Default.ModQuickMedicationOrderAuthorizedUsers,
-                ValidOrderTypes       = Settings.Default.ModQuickMedicationOrderValidOrderTypes,
-                DosePercentBoundary   = Settings.Default.ModQuickMedicationOrderDosePercentBoundary,
-                DoseMilligramBoundary = Settings.Default.ModQuickMedicationOrderDoseMilligramBoundary
+                Mode                  = Settings.Default.ModQMedOrdrMode,
+                Users       = Settings.Default.ModQMedOrdrUsers,
+                ValidOrderTypes       = Settings.Default.ModQMedOrdrValidOrderTypes,
+                DosePercentBoundary   = Settings.Default.ModQMedOrdrDosePercentBoundary,
+                DoseMilligramBoundary = Settings.Default.ModQMedOrdrDoseMilligramBoundary
             };
-            abSession.ModTesting              = new ModTesting
+
+            /* There are additional Testing module settings that are created at runtime in Abatab.Core.Session.Build()
+             */
+            abSession.ModTesting = new ModTesting
             {
                 Mode = Settings.Default.ModTestingMode
             };
