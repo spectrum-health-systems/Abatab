@@ -231,5 +231,49 @@ namespace Abatab.Properties {
                 return ((global::System.Collections.Specialized.StringCollection)(this["ModProgNoteFlaggedServiceChargeCodePrefixes"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("<?xml version=\"1.0\" encoding=\"utf-16\"?>\r\n<ArrayOfString xmlns:xsd=\"http://www.w3." +
+            "org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n  <s" +
+            "tring>TMH90853</string>\r\n  <string>AOTMH90853</string>\r\n</ArrayOfString>")]
+        public global::System.Collections.Specialized.StringCollection ModProgNoteFlaggedServiceChargeCodeCodes {
+            get {
+                return ((global::System.Collections.Specialized.StringCollection)(this["ModProgNoteFlaggedServiceChargeCodeCodes"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("50004")]
+        public string ModProgNoteLocationFieldId {
+            get {
+                return ((string)(this["ModProgNoteLocationFieldId"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("<?xml version=\"1.0\" encoding=\"utf-16\"?>\r\n<ArrayOfString xmlns:xsd=\"http://www.w3." +
+            "org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n  <s" +
+            "tring>T110</string>\r\n  <string>T102</string>\r\n</ArrayOfString>")]
+        public global::System.Collections.Specialized.StringCollection ModProgNoteValidLocationCodes {
+            get {
+                return ((global::System.Collections.Specialized.StringCollection)(this["ModProgNoteValidLocationCodes"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute(@"<?xml version=""1.0"" encoding=""utf-16""?>
+<ArrayOfString xmlns:xsd=""http://www.w3.org/2001/XMLSchema"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"">
+  <string>Telehealth Patient Home</string>
+  <string>Telehealth Patient Loc Not Home</string>
+</ArrayOfString>")]
+        public global::System.Collections.Specialized.StringCollection ModProgNoteValidLocationNames {
+            get {
+                return ((global::System.Collections.Specialized.StringCollection)(this["ModProgNoteValidLocationNames"]));
+            }
+        }
     }
 }

@@ -36,10 +36,14 @@ namespace Abatab
              */
             abSession.ModProgNote = new ModProgNote
             {
-                Mode  = Settings.Default.ModProgNoteMode,
-                Users = Settings.Default.ModProgNoteUsers,
-                ServiceChargeCodeFieldId = Settings.Default.ModProgNoteServiceChargeCodeFieldId,
-                FlaggedServiceChargeCodePrefixes = Settings.Default.ModProgNoteFlaggedServiceChargeCodePrefixes.Cast<string>().ToList()
+                Mode                             = Settings.Default.ModProgNoteMode,
+                Users                            = Settings.Default.ModProgNoteUsers,
+                ServiceChargeCodeFieldId         = Settings.Default.ModProgNoteServiceChargeCodeFieldId,
+                FlaggedServiceChargeCodePrefixes = Settings.Default.ModProgNoteFlaggedServiceChargeCodePrefixes.Cast<string>().ToList(),
+                FlaggedServiceChargeCodeCodes    = Settings.Default.ModProgNoteFlaggedServiceChargeCodeCodes.Cast<string>().ToList(),
+                LocationFieldId                  = Settings.Default.ModProgNoteLocationFieldId,
+                ValidLocationNames               = Settings.Default.ModProgNoteValidLocationNames.Cast<string>().ToList(),
+                ValidLocationCodes               = Settings.Default.ModProgNoteValidLocationCodes.Cast<string>().ToList(),
             };
 
             /* There are additional Prototype module settings that are created at runtime in Abatab.Core.Session.Build()
