@@ -28,8 +28,5 @@
         <member name="M:Abatab.Core.Session.Build.BuildAbatabRequest(Abatab.Core.Catalog.Definition.AbSession,System.String)">
             <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Session.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
         </member>
-        <member name="M:Abatab.Core.Session.Build.BuildModProgressNote(Abatab.Core.Catalog.Definition.AbSession)">
-            <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Session.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
-        </member>
     </members>
 </doc>

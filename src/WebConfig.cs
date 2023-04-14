@@ -60,7 +60,7 @@ namespace Abatab
             {
                 Mode                  = Settings.Default.ModQMedOrdrMode,
                 Users                 = Settings.Default.ModQMedOrdrUsers,
-                OrderTypeFieldId = Settings.Default.
+                OrderTypeFieldId      = Settings.Default.ModQMedOrdrOrderTypeFieldId,
                 ValidOrderTypes       = Settings.Default.ModQMedOrdrValidOrderTypes,
                 DosePercentBoundary   = Settings.Default.ModQMedOrdrDosePercentBoundary,
                 DoseMilligramBoundary = Settings.Default.ModQMedOrdrDoseMilligramBoundary
