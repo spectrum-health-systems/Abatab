@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Abatab.Module.ProgressNote</name>
+    </assembly>
+    <members>
+        <member name="P:Abatab.Module.ProgressNote.Action.VerifyLocation.AssemblyName">
+            <summary>Executing assembly name for log files.</summary>
+        </member>
+        <member name="M:Abatab.Module.ProgressNote.Action.VerifyLocation.ParseAction(Abatab.Core.Catalog.Definition.AbSession)">
+            <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Module.ProgressNote.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
+        </member>
+        <member name="M:Abatab.Module.ProgressNote.Action.VerifyLocation.ValidGroupIndividualizedNote(System.Collections.Generic.List{System.String},System.String,System.Collections.Generic.List{System.String},System.String)">
+            <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Module.ProgressNote.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
+        </member>
+        <member name="M:Abatab.Module.ProgressNote.Action.VerifyLocation.ValidIndividualCounselingNote(System.Collections.Generic.List{System.String},System.String,System.Collections.Generic.List{System.String},System.String)">
+            <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Module.ProgressNote.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
+        </member>
+        <member name="M:Abatab.Module.ProgressNote.Action.VerifyLocation.CreateWarning(Abatab.Core.Catalog.Definition.AbSession,System.String)">
+            <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Module.ProgressNote.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
+        </member>
+        <member name="T:Abatab.Module.ProgressNote.Roundhouse">
+            <summary>Summary goes here.</summary>
+        </member>
+        <member name="P:Abatab.Module.ProgressNote.Roundhouse.AssemblyName">
+            <summary>Executing assembly name for log files.</summary>
+        </member>
+        <member name="M:Abatab.Module.ProgressNote.Roundhouse.ParseCommand(Abatab.Core.Catalog.Definition.AbSession)">
+            <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Module.ProgressNote.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
+        </member>
+    </members>
+</doc>
