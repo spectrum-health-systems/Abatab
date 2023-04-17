@@ -10,7 +10,7 @@
         <member name="M:Abatab.Module.ProgressNote.Action.VerifyLocation.ParseAction(Abatab.Core.Catalog.Definition.AbSession)">
             <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Module.ProgressNote.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
         </member>
-        <member name="M:Abatab.Module.ProgressNote.Action.VerifyLocation.ValidGroupIndividualizedNote(System.Collections.Generic.List{System.String},System.String,System.Collections.Generic.List{System.String},System.String)">
+        <member name="M:Abatab.Module.ProgressNote.Action.VerifyLocation.ValidGroupIndividualizedNote(System.Collections.Generic.List{System.String},System.String,System.Collections.Generic.List{System.String},System.String,Abatab.Core.Catalog.Definition.AbSession)">
             <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Module.ProgressNote.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
         </member>
         <member name="M:Abatab.Module.ProgressNote.Action.VerifyLocation.ValidIndividualCounselingNote(System.Collections.Generic.List{System.String},System.String,System.Collections.Generic.List{System.String},System.String)">
