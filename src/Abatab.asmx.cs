@@ -35,11 +35,13 @@ namespace Abatab
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string scriptParameter)
         {
-            // DEVNOTE: Debuggler statement here, since a Trace log won't work. Used for development/testing.
-            if (Settings.Default.DebugglerMode == "enabled")
-            {
-                LogFile.Debuggler(Assembly.GetExecutingAssembly().GetName().Name);
-            }
+            Debuggler.DebugLog(Settings.Default.DebugglerMode, Assembly.GetExecutingAssembly().GetName().Name);
+
+            //// Please see replacewith_DebugglerModeInfoLink for more information about DebugglerMode.
+            //if (Settings.Default.DebugglerMode == "enabled")
+            //{
+            //    LogFile.Debuggler(Assembly.GetExecutingAssembly().GetName().Name);
+            //}
 
             AbSession abSession = new AbSession();
 
@@ -53,7 +55,7 @@ namespace Abatab
             }
             else
             {
-                LogFile.Primeval("disabled");
+                Debuggler.PrimevalLog("disabled");
             }
 
             return abSession.ReturnOptionObject;

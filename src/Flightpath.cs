@@ -19,11 +19,13 @@ namespace Abatab
         /// <include file='docs/doc/xml/inc/Abatab.xmldoc' path='XMLDoc/Class[@name="Flightpath.cs"]/StartAbatab/*' />
         public static void InitializeAbatab(AbSession abSession, string scriptParameter, OptionObject2015 sentOptionObject)
         {
-            // DEVNOTE: Debuggler statement here, since a Trace log won't work. Used for development/testing.
-            if (Settings.Default.DebugglerMode == "enabled")
-            {
-                LogFile.Debuggler(Assembly.GetExecutingAssembly().GetName().Name);
-            }
+            Debuggler.DebugLog(Settings.Default.DebugglerMode, Assembly.GetExecutingAssembly().GetName().Name);
+
+            //// Please see replacewith_DebugglerModeInfoLink for more information about DebugglerMode.
+            //if (Settings.Default.DebugglerMode == "enabled")
+            //{
+            //    LogFile.Debuggler(Assembly.GetExecutingAssembly().GetName().Name);
+            //}
 
             WebConfig.Load(abSession);
             Build.NewSession(sentOptionObject, scriptParameter, abSession);
@@ -34,11 +36,13 @@ namespace Abatab
         /// <include file='docs/doc/xml/inc/Abatab.xmldoc' path='XMLDoc/Class[@name="Flightpath.cs"]/FinishAbatab/*' />
         public static void WrapUpAbatab(AbSession abSession)
         {
-            // DEVNOTE: Debuggler statement here, since a Trace log won't work. Used for development/testing.
-            if (Settings.Default.DebugglerMode == "enabled")
-            {
-                LogFile.Debuggler(Assembly.GetExecutingAssembly().GetName().Name);
-            }
+            Debuggler.DebugLog(Settings.Default.DebugglerMode, Assembly.GetExecutingAssembly().GetName().Name);
+
+            //// Please see replacewith_DebugglerModeInfoLink for more information about DebugglerMode.
+            //if (Settings.Default.DebugglerMode == "enabled")
+            //{
+            //    LogFile.Debuggler(Assembly.GetExecutingAssembly().GetName().Name);
+            //}
 
             LogEvent.Trace("trace", abSession, AssemblyName);
             LogEvent.Session(abSession);
