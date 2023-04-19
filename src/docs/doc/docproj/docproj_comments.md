@@ -1,5 +1,13 @@
 # Comments
 
+## XML documentation
+
+XML documentation is contained in external files.
+
+```csharp
+/// <include file='docs/doc/xml/inc/Abatab.xmldoc' path='XMLDoc/Class[@name="Abatab.asmx.cs"]/GetVersion/*' />
+```
+
 ## Types
 
 ### Development
