@@ -2,7 +2,7 @@
 
 ## Debuggler Mode
 
-Debuggler Mode information here.
+Debuggler Logs exist where Trace Logs cannot.
 
 ## Trace logs
 

@@ -4,7 +4,7 @@
  * https://github.com/spectrum-health-systems/Abatab
  ************************************************************************/
 
-/* Development build 230419.0819
+/* Development build 230427.0948
  */
 
 // b---------x
@@ -37,20 +37,12 @@ namespace Abatab
         {
             Debuggler.DebugLog(Settings.Default.DebugglerMode, Assembly.GetExecutingAssembly().GetName().Name);
 
-            //// Please see replacewith_DebugglerModeInfoLink for more information about DebugglerMode.
-            //if (Settings.Default.DebugglerMode == "enabled")
-            //{
-            //    LogFile.Debuggler(Assembly.GetExecutingAssembly().GetName().Name);
-            //}
-
             AbSession abSession = new AbSession();
 
             if (Settings.Default.AbatabMode == "enabled")
             {
                 Flightpath.InitializeAbatab(abSession, scriptParameter, sentOptionObject);
-
                 Roundhouse.ParseModule(abSession);
-
                 Flightpath.WrapUpAbatab(abSession);
             }
             else

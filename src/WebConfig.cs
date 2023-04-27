@@ -16,14 +16,6 @@ namespace Abatab
         {
             Debuggler.DebugLog(Settings.Default.DebugglerMode, Assembly.GetExecutingAssembly().GetName().Name);
 
-            //// Please see replacewith_DebugglerModeInfoLink for more information about DebugglerMode.
-            //if (Settings.Default.DebugglerMode == "enabled")
-            //{
-            //    Debuggler.Debuggler(Assembly.GetExecutingAssembly().GetName().Name);
-            //}
-
-            /* These are the generic Abatab settings.
-             */
             abSession.AbatabMode             = Settings.Default.AbatabMode;
             abSession.AbatabVersion          = Settings.Default.AbatabVersion;
             abSession.AbatabBuild            = Settings.Default.AbatabBuild;
@@ -36,8 +28,6 @@ namespace Abatab
             abSession.AbatabFallbackUserName = Settings.Default.AbatabFallbackUserName;
             abSession.DebugglerMode          = Settings.Default.DebugglerMode;
 
-            /* These are Progress Note module settings that are created at runtime in Abatab.Core.Session.Build()
-             */
             abSession.ModProgNote = new ModProgNote
             {
                 Mode                             = Settings.Default.ModProgNoteMode,
@@ -50,16 +40,12 @@ namespace Abatab
                 ValidLocationCodes               = Settings.Default.ModProgNoteValidLocationCodes.Cast<string>().ToList(),
             };
 
-            /* These are additional Prototype module settings that are created at runtime in Abatab.Core.Session.Build()
-             */
             abSession.ModProto = new ModProto
             {
                 Mode  = Settings.Default.ModProtoMode,
                 Users = Settings.Default.ModProtoUsers
             };
 
-            /* These are additional Quick Medication Order module settings that are created at runtime in Abatab.Core.Session.Build()
-             */
             abSession.ModQMedOrdr = new ModQMedOrdr
             {
                 Mode                  = Settings.Default.ModQMedOrdrMode,
@@ -70,8 +56,6 @@ namespace Abatab
                 DoseMilligramBoundary = Settings.Default.ModQMedOrdrDoseMilligramBoundary
             };
 
-            /* These are additional Testing module settings that are created at runtime in Abatab.Core.Session.Build()
-             */
             abSession.ModTesting = new ModTesting
             {
                 Mode = Settings.Default.ModTestingMode

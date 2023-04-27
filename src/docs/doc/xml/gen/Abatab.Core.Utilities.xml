@@ -4,6 +4,9 @@
         <name>Abatab.Core.Utilities</name>
     </assembly>
     <members>
+        <member name="M:Abatab.Core.Utility.ConvertCollection.ArrayToList(System.String[])">
+            <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Utility.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
+        </member>
         <member name="M:Abatab.Core.Utility.ConvertCollection.ListToString(System.Collections.Generic.List{System.String})">
             <!-- No matching elements were found for the following include tag --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Utility.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
         </member>
