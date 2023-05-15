@@ -1,24 +1,22 @@
 <div align="center">
 
-  ![BranchWarning][BranchWarning]
+  ![BranchWarning](https://img.shields.io/badge/WARNING-THIS%20IS%20BETA%20SOFTWARE-FF160C?style=for-the-badge)
   
   **This is a development branch of Abatab, and is not intended for use in production environments!**
 
-  Please use the current [Abatab Community Release](https://github.com/spectrum-health-systems/Abatab-Community-Release) instead.
-
   ***
 
-  [![AbatabLogo][AbatabLogo]][AbatabRepoUrl]
+  ![AbatabLogo](./.github/res/image/logo/app/AbatabLogo-v23.5.png)
 
 # A custom web service for Netsmart's myAvatar™ EHR
 
-  ![RepoStatus][RepoStatus]&nbsp;&nbsp;[![AbatabLicense][AbatabLicense]][AbatabLicenseUrl]&nbsp;&nbsp;[![AbatabCurrentRelease][AbatabCurrentRelease]][AbatabCurrentReleaseUrl]
+  ![RepoStatus](https://img.shields.io/badge/status-Active-brightgreen?style=flat)&nbsp;&nbsp;![AbatabLicense](https://img.shields.io/github/license/spectrum-health-systems/abatab)&nbsp;&nbsp;![AbatabCurrentRelease](https://img.shields.io/github/v/release/spectrum-health-systems/Abatab?style=flat)
 
 </div>
 
 # About
 
-[Netsmart's myAvatar™][MyAvatarUrl] is a behavioral health EHR that offers a recovery-focused suite of solutions that leverage real-time analytics and clinical decision support to drive value-based care.
+[Netsmart's myAvatar™](https://www.ntst.com/Solutions-and-Services/Offerings/myAvatar) is a behavioral health EHR that offers a recovery-focused suite of solutions that leverage real-time analytics and clinical decision support to drive value-based care.
 
 While myAvatar™ is a robust platform, it isn't perfect. The good news is that you can extend myAvatar™ functionality via Netsmart's myAvatar™ Web Services, and/or custom web services that are written by other myAvatar™ users.
 
@@ -34,19 +32,19 @@ While myAvatar™ is a robust platform, it isn't perfect. The good news is that 
 
 * A location to host the Abatab which meets the following requirements:
 * .NET Framework 4.8+ installed
-* Access to yourmyAvatar™ environments via HTTPS
+* Access to your myAvatar™ environments via HTTPS
 
 ### Development requirements
 
-* The [OptionObject2015][OptionObject2015]
+* [ScriptLink Standard](https://github.com/rcskids/ScriptLinkStandard)
 
 <br>
 
-# The Abatab Manual
+# Abatab documentation
 
-> PLEASE NOTE: As of version 23.2, Abatab documentation is in active development, and may be incomplete and/or innacurate. The plan is to have the documentation complete for the Spring23 Community Release.
+> PLEASE NOTE: Abatab documentation is a work in progress, and may be incomplete and/or innacurate.
 
-For everything else, please see the [Abatab documentation][AbatabDocumentation].
+Please see the [Abatab documentation](https://spectrum-health-systems.github.io/Abatab/).
 
 <br>
 
@@ -54,20 +52,7 @@ For everything else, please see the [Abatab documentation][AbatabDocumentation].
 
 ***
 
-Abatab is developed by [A Pretty Cool Program][APrettyCoolProgramUrl]
+Abatab is developed by:<br>
+[A Pretty Cool Program](https://github.com/APrettyCoolProgram)
 
 </div>
-
-<!-- REFERENCE LINKS -->
-[BranchWarning]: https://img.shields.io/badge/WARNING-THIS%20IS%20BETA%20SOFTWARE-FF160C?style=for-the-badge
-[AbatabRepoUrl]: README.md
-[AbatabLogo]: ./resources/images/logos/AbatabLogo.png
-[RepoStatus]: https://img.shields.io/badge/status-Active-brightgreen?style=flat
-[AbatabLicense]: https://img.shields.io/github/license/spectrum-health-systems/Abatab?style=flat
-[AbatabLicenseUrl]: https://www.apache.org/licenses/LICENSE-2.0
-[AbatabCurrentRelease]: https://img.shields.io/github/v/release/spectrum-health-systems/Abatab?style=flat
-[AbatabCurrentReleaseUrl]: https://github.com/spectrum-health-systems/Abatab/releases
-[OptionObject2015]: https://github.com/spectrum-health-systems/.github/blob/profile/Third-party%20components/Netsmart/OptionObject2015/136_4354_20.7z
-[AbatabDocumentation]: https://spectrum-health-systems.github.io/Abatab/
-[MyAvatarUrl]: https://www.ntst.com/Solutions-and-Services/Offerings/myAvatar
-[APrettyCoolProgramUrl]: https://github.com/APrettyCoolProgram 

@@ -1,7 +1,6 @@
 # Additional resources
 
-* [Avatar Development Community][AvatarDevCommunityUrl]  
+* [Avatar Development Community](https://github.com/myAvatar-Development-Community)
 The myAvatar™ Development Community contains community-driven documentation, projects, and templates for Netsmart's myAvatar™ EHR.
 
-<!-- REFERENCE LINKS -->
-[AvatarDevCommunityUrl]: https://github.com/myAvatarDevCommunityUrl
+* [ScriptLink Standard](https://github.com/rcskids/ScriptLinkStandard)

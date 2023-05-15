@@ -1,6 +1,3 @@
 # Authors
 
-* [Christopher Banwarth][ChristopherBanwarth]
-
-<!-- REFERENCE LINKS -->
-[ChristopherBanwarth]: https://github.com/APrettyCoolProgram
+* [Christopher Banwarth](https://github.com/APrettyCoolProgram)
