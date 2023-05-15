@@ -63,7 +63,7 @@
       <Value Profile="(Default)">23.3</Value>
     </Setting>
     <Setting Name="AbatabBuild" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">Development build 230419.0853</Value>
+      <Value Profile="(Default)">development+230515.1033</Value>
     </Setting>
     <Setting Name="ModProgNoteServiceChargeCodeFieldId" Type="System.String" Scope="Application">
       <Value Profile="(Default)">51001</Value>

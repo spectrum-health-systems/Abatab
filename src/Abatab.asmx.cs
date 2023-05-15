@@ -4,7 +4,6 @@
  * https://github.com/spectrum-health-systems/Abatab
  ************************************************************************/
 
-// b230515.0953
 // b---------x
 
 using System.Reflection;
@@ -26,7 +25,7 @@ namespace Abatab
         [WebMethod]
         public string GetVersion()
         {
-            return "VERSION 23.3";
+            return "VERSION 23.5";
         }
 
         /// <include file='docs/doc/xml/inc/Abatab.xmldoc' path='XMLDoc/Class[@name="Abatab.asmx.cs"]/RunScript/*' />
@@ -40,7 +39,9 @@ namespace Abatab
             if (Settings.Default.AbatabMode == "enabled")
             {
                 Flightpath.InitializeAbatab(abSession, scriptParameter, sentOptionObject);
+
                 Roundhouse.ParseModule(abSession);
+
                 Flightpath.WrapUpAbatab(abSession);
             }
             else
