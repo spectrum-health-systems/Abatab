@@ -133,6 +133,12 @@
         <member name="P:Abatab.Core.Catalog.Definition.AbSession.AbatabFallbackUserName">
             <summary>Summary goes here.</summary>
         </member>
+        <member name="P:Abatab.Core.Catalog.Definition.AbSession.AbatabEmailAddress">
+            <summary>Summary goes here.</summary>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.AbSession.AbatabEmailPassword">
+            <summary>Summary goes here.</summary>
+        </member>
         <member name="P:Abatab.Core.Catalog.Definition.AbSession.DebugglerMode">
             <summary>Summary goes here.</summary>
         </member>
