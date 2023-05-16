@@ -117,5 +117,11 @@
     <Setting Name="ModQMedOrdr" Type="System.String" Scope="Application">
       <Value Profile="(Default)" />
     </Setting>
+    <Setting Name="AbatabEmailAddress" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">abatab@spectrumhealthsystems.org</Value>
+    </Setting>
+    <Setting Name="AbatabEmailPassword" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ChrisIsSmarterThanNetsmart123</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

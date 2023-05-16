@@ -26,6 +26,8 @@ namespace Abatab
             abSession.LoggerTypes            = Settings.Default.LoggerTypes;
             abSession.AvatarEnvironment      = Settings.Default.AvatarEnvironment;
             abSession.AbatabFallbackUserName = Settings.Default.AbatabFallbackUserName;
+            abSession.AbatabEmailAddress     = Settings.Default.AbatabEmailAddress;
+            abSession.AbatabEmailPassword    = Settings.Default.AbatabEmailPassword;
             abSession.DebugglerMode          = Settings.Default.DebugglerMode;
 
             abSession.ModProgNote = new ModProgNote

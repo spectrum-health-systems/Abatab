@@ -329,5 +329,23 @@ namespace Abatab.Properties {
                 return ((string)(this["ModQMedOrdr"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("abatab@spectrumhealthsystems.org")]
+        public string AbatabEmailAddress {
+            get {
+                return ((string)(this["AbatabEmailAddress"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("ChrisIsSmarterThanNetsmart123")]
+        public string AbatabEmailPassword {
+            get {
+                return ((string)(this["AbatabEmailPassword"]));
+            }
+        }
     }
 }
