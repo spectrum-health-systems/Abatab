@@ -7,4 +7,6 @@
     - Alerts
     - Errors
 
-* Sandboxes for developers.
+* Sandboxes for developers
+
+* Progress Note functionality only on "final" notes

@@ -34,10 +34,10 @@
             <summary>Executing assembly name for log files.</summary>
         </member>
         <member name="M:Abatab.Flightpath.InitializeAbatab(Abatab.Core.Catalog.Definition.AbSession,System.String,ScriptLinkStandard.Objects.OptionObject2015)">
-            <!-- No matching elements were found for the following include tag --><include file="docs/doc/xml/inc/Abatab.xmldoc" path="XMLDoc/Class[@name=&quot;Flightpath.cs&quot;]/StartAbatab/*" />
+            <!-- No matching elements were found for the following include tag --><include file="docs/doc/xml/inc/Abatab.xmldoc" path="XMLDoc/Class[@name=&quot;Flightpath.cs&quot;]/InitializeAbatab/*" />
         </member>
         <member name="M:Abatab.Flightpath.WrapUpAbatab(Abatab.Core.Catalog.Definition.AbSession)">
-            <!-- No matching elements were found for the following include tag --><include file="docs/doc/xml/inc/Abatab.xmldoc" path="XMLDoc/Class[@name=&quot;Flightpath.cs&quot;]/FinishAbatab/*" />
+            <!-- No matching elements were found for the following include tag --><include file="docs/doc/xml/inc/Abatab.xmldoc" path="XMLDoc/Class[@name=&quot;Flightpath.cs&quot;]/WrapUpAbatab/*" />
         </member>
         <member name="T:Abatab.Roundhouse">
             <summary>

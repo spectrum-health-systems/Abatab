@@ -1,4 +1,4 @@
-﻿// b---------x
+﻿// b230516.0855
 
 using System.Reflection;
 using Abatab.Core.Catalog.Definition;

@@ -4,6 +4,9 @@
         <name>Abatab.Module.ProgressNote</name>
     </assembly>
     <members>
+        <member name="T:Abatab.Module.ProgressNote.Action.VerifyLocation">
+            <summary>Summary goes here.</summary>
+        </member>
         <member name="P:Abatab.Module.ProgressNote.Action.VerifyLocation.AssemblyName">
             <summary>Executing assembly name for log files.</summary>
         </member>
