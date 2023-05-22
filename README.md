@@ -2,11 +2,15 @@
 
   ![BranchWarning](https://img.shields.io/badge/WARNING-THIS%20IS%20BETA%20SOFTWARE-FF160C?style=for-the-badge)
   
+  <h3>
+
   **This is a development branch of Abatab, and is not intended for use in production environments!**
+
+  </h3>
 
   ***
 
-  ![AbatabLogo](./.github/res/image/logo/app/AbatabLogo-v23.5.png)
+  ![AbatabLogo](./.github/images/logo/app/AbatabLogo-v23.5.png)
 
 # A custom web service for Netsmart's myAvatar™ EHR
 
@@ -39,6 +43,9 @@ While myAvatar™ is a robust platform, it isn't perfect. The good news is that 
 * [ScriptLink Standard](https://github.com/rcskids/ScriptLinkStandard)
 
 <br>
+
+# Development version -VS- Community Release
+
 
 # Abatab documentation
 
