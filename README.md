@@ -6,8 +6,8 @@
 
   <h3>
 
-  **This is a development branch of Abatab, and is not intended<br>
-    for use in production environments!**
+  **This is the development branch of Abatab!<br>
+    It is not intended for use in production environments!**
 
   You are probably looking for the [Abatab Community Release](https://github.com/spectrum-health-systems/Abatab-Community-Release).
 
