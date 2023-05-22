@@ -25,7 +25,7 @@
 
 # About this repository
 
-This repository is for **development versions** of Abatab, and is **not intended for use in production environments**.
+This repository is for **development versions** of Abatab, which **are not intended for use in production environments**.
 
 Development versions of Abatab:
 * May have broken/missing functionality
@@ -33,7 +33,7 @@ Development versions of Abatab:
 * Is extensively commented
 * Might not work at all!
 
-The current development version of Abatab is **v23.5**.
+The current development version of Abatab is `v23.5`.
 
 ## Community Release
 
