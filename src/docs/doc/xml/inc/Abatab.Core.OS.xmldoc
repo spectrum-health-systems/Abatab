@@ -1,0 +1,19 @@
+﻿<!--
+Comment file for Abatab.Core.OS.
+Last updated: 230328
+
+Syntax:
+	/// <include file='../../Abatab/src/docs/doc/xml/inc/Abatab.Core.OS.xmldoc' path='XMLDoc/Class[@name="ClassName"]/MethodName/*' />
+-->
+
+<XMLDoc>
+	<Class name="ClassName.cs">
+		<MethodName>
+			<summary>Method summary</summary>
+			<returns>test</returns>
+			<remarks>
+				Method remarks
+			</remarks>
+		</MethodName>
+	</Class>
+</XMLDoc>
