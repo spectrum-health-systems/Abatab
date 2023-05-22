@@ -9,9 +9,9 @@
   **This is the development branch of Abatab!<br>
     It is not intended for use in production environments!**
 
-  You are probably looking for the [Abatab Community Release](https://github.com/spectrum-health-systems/Abatab-Community-Release).
-
   </h3>
+
+  You are probably looking for the [Abatab Community Release](https://github.com/spectrum-health-systems/Abatab-Community-Release).
 
   ***
 
@@ -23,9 +23,7 @@
 
 </div>
 
-<br>
-
-# These are **development versions** of Abatab!
+# About this repository
 
 This repository is for **development versions** of Abatab, and is **not intended for use in production environments**.
 
