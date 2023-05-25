@@ -12,13 +12,11 @@
 
   <h2>
 
-  **DO NOT USE IN PRODUCTION ENVIRONMENTS!**
+  **DO NOT USE THIS SOURCECODE IN PRODUCTION ENVIRONMENTS!**
 
   </h2>
 
-  You are probably looking for the [Abatab Community Release](https://github.com/spectrum-health-systems/Abatab-Community-Release) repository.
-
-  <br>
+  If you want to use Abatab in a production environment, use the [Abatab Community Release](https://github.com/spectrum-health-systems/Abatab-Community-Release).
 
   ***
 
@@ -38,22 +36,22 @@
 
 This repository is for **development versions** of Abatab, which **are not intended for use in production environments**.
 
+If you want to use Abatab in a production environment, use the [Abatab Community Release](https://github.com/spectrum-health-systems/Abatab-Community-Release).
+
+<br>
+
+# Abatab development
+
 The current development version of Abatab is `v23.5`.
 
-Development versions of Abatab:
-* May have broken/missing functionality
-* Will have lots of ugly, gross code
-* Is extensively commented
-* Might not work at all!
+Since this a development version of Abatab:
 
-## Community Release
+* There probably will be broken/missing functionality!
+* There definately Will have lots of ugly, gross code!
+* There will be extensive comments!
+* It might not even work!
 
-If you want to use Abatab in a production environment, you will want the [Abatab Community Release](https://github.com/spectrum-health-systems/Abatab-Community-Release). The Community Release:
 
-* Has been tested in a production environment
-* Is released quarterly
-
-The current Community Release of Abatab is [CommunityReleasePreview](https://github.com/spectrum-health-systems/Abatab-Community-Release)
 
 <br>
 
@@ -96,9 +94,9 @@ This is the official current development release of Abatab.
 
 When a version of Abatab is completed and released, the branch is renamed to `vYY.MM-final`  (e.g., `23.5-final`)
 
-## Other
+<br>
 
-* [Roadmap](https://github.com/orgs/spectrum-health-systems/projects/25/views/2)
+# Contributing
 
 If you are interested in Abatab development, you will need:
 
@@ -106,6 +104,14 @@ If you are interested in Abatab development, you will need:
 * .NET Framework 4.8+ installed
 * Access to yourmyAvatar™ environments via HTTPS
 * [ScriptLink Standard](https://github.com/rcskids/ScriptLinkStandard)
+
+<br>
+
+# Additional information
+
+For Abatab changes, please see the [development changelog](./src/docs/doc/CHANGELOG.md)
+
+Details on upcoming Abatab functionality can be found in the [Abatab Development Roadmap](https://github.com/orgs/spectrum-health-systems/projects/25/views/2)
 
 <br>
 
