@@ -1,12 +1,3 @@
-# Abatab roadmap
+# Abatab Roadmap
 
-## Future
-
-* Email the following to users:
-    - Warnings
-    - Alerts
-    - Errors
-
-* Sandboxes for developers
-
-* Progress Note functionality only on "final" notes
+Details on upcoming Abatab functionality can be found in the [Abatab Development Roadmap](https://github.com/orgs/spectrum-health-systems/projects/25/views/2)
