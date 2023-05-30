@@ -23,8 +23,7 @@ This documentation is incomplete.
 <tr>
 <td>
 
-  <b><u>CONTENTS</u><b>
-
+  ## CONTENTS
   [Adding a new local setting](#adding-a-new-local-setting)<br>
   [Adding a new runtime setting](#adding-a-new-runtime-setting)<br>
   
