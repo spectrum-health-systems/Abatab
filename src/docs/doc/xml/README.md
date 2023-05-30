@@ -6,12 +6,12 @@ This documentation is incomplete.
 
 # src/docs/xml/
 
-XML documentation files.
+This folder contains Abatab XML documentation files.
 
 ## src/docs/xml/gen
 
-Generated XML files.
+Visual Studio generated XML files.
 
 ## src/docs/xml/inc
 
-XML include files.
+XML comment include files.
