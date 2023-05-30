@@ -27,9 +27,7 @@ This documentation is incomplete.
 </tr>
 </table>
 
-<br>
-
-# Adding a new local setting 
+# Adding a new local setting
 
 <!--
   *****************************************
