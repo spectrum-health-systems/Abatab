@@ -1,3 +1,9 @@
+<!--
+Last updated 5.30.23
+
+This folder is a placeholder until DocFX is re-integrated into Abatab.
+-->
+
 ## docs/
 
 DocFX generated documentation will go here.

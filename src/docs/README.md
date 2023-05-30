@@ -6,12 +6,9 @@ This documentation is incomplete.
 
 # src/docs/
 
-Eventually this folder will contain the templates data for DocFX
+Eventually this root folder will contain the data that DocFX uses to build
+dynamic documentation.
 
-## src/docs/docproj/
+## src/docs/doc/
 
-The [Abatab Documentation Project](/src/docs/doc/docproj/docproj_Index.md).
-
-## src/docs/xml/
-
-This folder contains Abatab XML documentation files.
+Static documentation files.
