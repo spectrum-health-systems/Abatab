@@ -1,7 +1,19 @@
-# Abatab changelog
+<!--
+Last updated 5.30.23
 
-## v23.5
+This document follows Keep a Changelog guidelines:
+    https://keepachangelog.com/en/1.1.0/
+-->
 
-> Detailed information about Abatab v23.5 can be found [here](https://github.com/orgs/spectrum-health-systems/projects/22/views/4).
+# Changelog
 
-* `ADDED`
+## **Unreleased**
+
+### Added
+* Messaging - Basic email functionality ([#125](https://github.com/spectrum-health-systems/Abatab/issues/125))
+* Progress Note - Add TeleHealth location verification to additional progress notes ([#126](https://github.com/spectrum-health-systems/Abatab/issues/126))
+
+## **23.5.0** [2023-MM-DD]
+
+### Added
+* Progress Note - Generalize TeleHealth location verification ([#129](https://github.com/spectrum-health-systems/Abatab/issues/129))
