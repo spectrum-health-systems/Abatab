@@ -4,8 +4,6 @@ This documentation is incomplete.
 
 <div align="center">
 
-  Last updated: 5.30.23
-
   ![AbatabDocumentationProjectLogo](../../../../../.github/images/logo/docproj/AbatabDocumentationProjectLogo.png)
 
   <h1>
@@ -212,7 +210,7 @@ private static void BuildModProgressNote(AbSession abSession)
   This document is part of the [Abatab Documentation Project](../Abatab%20Documentation%20Project.md).
 
   <h5>
-    Last updated: 230329.1117
+    Last updated: May 30, 2023
   </h5>
 
 </div>
