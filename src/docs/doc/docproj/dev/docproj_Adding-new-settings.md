@@ -1,8 +1,12 @@
+<!--
+This documentation is incomplete.
+-->
+
 <div align="center">
 
-  <h3>
-    The Abatab Documentation Project
-  </h3>
+  Last updated: 5.30.23
+
+  ![AbatabDocumentationProjectLogo](../../../../../.github/images/logo/docproj/AbatabDocumentationProjectLogo.png)
 
   <h1>
     Adding new settings
@@ -16,16 +20,30 @@
     CONTENTS
   </h3>
 
-[Adding a new local setting](#adding-a-new-local-setting)<br>
-[Adding a new runtime setting](#adding-a-new-runtime-setting)
+<!-- The HTML indentations have to stay this way to work. -->
+<table>
+<tr>
+<td img src="RepositoryData/Asset/Image/Document/README/spacer.png" alt="blank-spacer" width="1000" height="1">
+
+  ### CONTENTS
+  [Adding a new local setting](#adding-a-new-local-setting)<br>
+  [Adding a new runtime setting](#adding-a-new-runtime-setting)
+
+</td>
+</tr>
+</table>
 
 </div>
 
 <br>
 
-# Adding a new local setting <!-- Last updated: 230329.1121 -->
+# Adding a new local setting 
 
-> This section needs to be reviewed/updated.
+<!--
+  *****************************************
+  This section needs to be reviewed/updated
+  *****************************************
+-->
 
 <div align="center">
 

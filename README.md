@@ -22,7 +22,7 @@
 
   <br>
   
-  ![AbatabLogo](./.github/images/logo/app/AbatabLogo-v23.5.png)
+  ![AbatabLogo](./.github/images/logo/app/AbatabLogo.png)
 
   <br>
 
