@@ -16,9 +16,7 @@ This documentation is incomplete.
 
 <div>
 
-  <h3>
-    CONTENTS
-  </h3>
+</div>
 
 <!-- The HTML indentations have to stay this way to work. -->
 <table>
@@ -33,7 +31,6 @@ This documentation is incomplete.
 </tr>
 </table>
 
-</div>
 
 <br>
 
