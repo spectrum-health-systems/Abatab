@@ -21,16 +21,15 @@ This documentation is incomplete.
 <!-- The HTML indentations have to stay this way to work. -->
 <table>
 <tr>
-<td >
+<td>
 
   ### CONTENTS
   [Adding a new local setting](#adding-a-new-local-setting)<br>
-  [Adding a new runtime setting](#adding-a-new-runtime-setting)
+  [Adding a new runtime setting](#adding-a-new-runtime-setting)<br>
 
 </td>
 </tr>
 </table>
-
 
 <br>
 
