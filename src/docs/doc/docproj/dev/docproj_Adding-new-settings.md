@@ -26,6 +26,7 @@ This documentation is incomplete.
   ### CONTENTS
   [Adding a new local setting](#adding-a-new-local-setting)<br>
   [Adding a new runtime setting](#adding-a-new-runtime-setting)<br>
+  <br>
 
 </td>
 </tr>
