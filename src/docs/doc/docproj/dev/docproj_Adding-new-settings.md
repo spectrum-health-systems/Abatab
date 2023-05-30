@@ -21,6 +21,7 @@ This documentation is incomplete.
 <!-- The HTML indentations have to stay this way to work. -->
 <table>
 <tr>
+<td >
 
   ### CONTENTS
   [Adding a new local setting](#adding-a-new-local-setting)<br>
