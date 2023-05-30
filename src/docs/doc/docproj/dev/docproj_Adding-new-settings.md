@@ -19,7 +19,7 @@ This documentation is incomplete.
 <!-- The HTML indentations have to stay this way to work. -->
 <table>
 <tr>
-<td>
+<td img src="RepositoryData/Asset/Image/Document/README/spacer.png" alt="blank-spacer" width="1000" height="1">
 
   ## CONTENTS
   [Adding a new local setting](#adding-a-new-local-setting)<br>
