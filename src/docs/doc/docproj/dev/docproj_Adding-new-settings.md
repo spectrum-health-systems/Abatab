@@ -19,9 +19,9 @@ This documentation is incomplete.
 <!-- The HTML indentations have to stay this way to work. -->
 <table>
 <tr>
-<td img src="RepositoryData/Asset/Image/Document/README/spacer.png" alt="blank-spacer" width="1000" height="1">
+<td img src="imaginare-spacer.png" alt="blank-spacer" width="1000" height="1">
 
-  ## CONTENTS
+  ### CONTENTS
   [Adding a new local setting](#adding-a-new-local-setting)<br>
   [Adding a new runtime setting](#adding-a-new-runtime-setting)
 
