@@ -2,7 +2,17 @@
   This documentation is incomplete.
 -->
 
-# The Debuggler
+<div align="center">
+
+  ![AbatabDocumentationProjectLogo](../../../../../.github/images/logo/docproj/AbatabDocumentationProjectLogo.png)
+
+  <h1>
+    The Debuggler
+  </h1>
+
+</div>
+
+<br>
 
 * The Debuggler is a *very* basic debugging utility.
 * Debuggler logic is in Abatab.Core.Utility.LogFile.cs, so you will need the following using statements:
