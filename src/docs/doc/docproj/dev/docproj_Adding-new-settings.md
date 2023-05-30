@@ -12,9 +12,7 @@ This documentation is incomplete.
 
 </div>
 
-<div>
-
-</div>
+<br>
 
 <!-- The HTML indentations have to stay this way to work. -->
 <table>
