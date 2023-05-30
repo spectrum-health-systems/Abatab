@@ -6,8 +6,6 @@ This documentation is incomplete.
 
 # src/docs/xml/
 
-This folder contains Abatab XML documentation files.
-
 ## src/docs/xml/gen
 
 Visual Studio generated XML files.

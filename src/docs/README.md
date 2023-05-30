@@ -6,8 +6,6 @@ This documentation is incomplete.
 
 # src/docs/
 
-## src/docs/
-
 Eventually this folder will contain the templates data for DocFX
 
 ## src/docs/docproj/
