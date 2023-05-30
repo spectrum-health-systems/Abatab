@@ -14,7 +14,9 @@ This documentation is incomplete.
 
 <br>
 
-<!-- The HTML indentations have to stay this way to work. -->
+<!--
+  The HTML indentations have to stay this way to work.
+-->
 <table>
 <tr>
 <td img src="imaginare-spacer.png" alt="blank-spacer" width="1000" height="1">
@@ -55,14 +57,14 @@ Simply add the new setting/value to the file.
 
 For example, to add the `AbatabDataRoot` setting, you would take the webConfig Dictionary in Abatab.WebConfig.Load():
 
-```
+```csharp
 { "AbatabMode",                             Settings.Default.AbatabMode.ToLower() },
 { "AbatabRoot",                             Settings.Default.AbatabRoot.ToLower() },
 ```
 
 And add a line for `AbatabDataRoot`:
 
-```
+```csharp
 { "AbatabMode",                             Settings.Default.AbatabMode.ToLower() },
 { "AbatabRoot",                             Settings.Default.AbatabRoot.ToLower() },
 { "AbatabDataRoot",                         Settings.Default.AbatabDataRoot.ToLower() },
@@ -76,7 +78,7 @@ Just add the setting where it belongs.
 
 For example, to add the `AbatabDataRoot` setting, you would take the webConfig Dictionary in Abatab.WebConfig.Load():
 
-```
+```csharp
 var abatabSession = new Session
 {
     AbatabMode             = webConfig["AbatabMode"],
@@ -86,7 +88,7 @@ var abatabSession = new Session
 
 And add a line for `AbatabDataRoot`:
 
-```
+```csharp
 var abatabSession = new Session
 {
     AbatabMode             = webConfig["AbatabMode"],
