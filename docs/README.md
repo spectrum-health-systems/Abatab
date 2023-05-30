@@ -1,1 +1,5 @@
-## Docs 5
+## docs/
+
+DocFX generated documentation will go here.
+
+The .7z file in this folder contains the previous DocFX data, which may be helpful when reinstalling DocFX.
