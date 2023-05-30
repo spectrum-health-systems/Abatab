@@ -1,4 +1,6 @@
-# Code snippits
+<!--
+  This documentation is incomplete.
+-->
 
 # The Debuggler
 
@@ -36,3 +38,18 @@ if (DebugglerMode == "enabled")
     LogFile.Debuggler(Assembly.GetExecutingAssembly().GetName().Name, "Content goes here");
 }
 ```
+
+
+<br>
+
+***
+
+<div align="center">
+
+  This document is part of the [Abatab Documentation Project](../Abatab%20Documentation%20Project.md).
+
+  <h5>
+    Last updated: May 30, 2023
+  </h5>
+
+</div>

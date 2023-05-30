@@ -5,8 +5,8 @@ The goal of the Abatab Documenation Project is to provide useful documenation fo
 ## Development documentation
 
 * [Adding New Settings](dev/docproj_Adding-new-settings.md)
-* [Code Snippits](dev/docproj_Code-snippits.md)
 * [Commenting](dev/docproj_Commenting.md)
+* [Debuggler](dev/docproj_Debuggler.md)
 * [Development notes](dev/docproj_Development-notes.md)
 * [Directory structure](dev/docproj_Directory-structure.md)
 * [Logging](dev/docproj_Logging.md)
