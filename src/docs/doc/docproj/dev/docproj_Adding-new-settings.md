@@ -23,9 +23,11 @@ This documentation is incomplete.
 <tr>
 <td>
 
-  ### CONTENTS
+  <b><u>CONTENTS</u><b>
+
   [Adding a new local setting](#adding-a-new-local-setting)<br>
   [Adding a new runtime setting](#adding-a-new-runtime-setting)<br>
+  
   <br>
 
 </td>
