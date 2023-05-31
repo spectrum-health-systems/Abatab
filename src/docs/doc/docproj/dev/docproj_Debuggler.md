@@ -12,13 +12,13 @@
 
 </div>
 
-<br>
+The Debuggler is a *very* basic debugging utility.
 
-* The Debuggler is a *very* basic debugging utility.
-* Debuggler logic is in Abatab.Core.Utility.LogFile.cs, so you will need the following using statements:
+Debuggler logic is in Abatab.Core.Utility.LogFile.cs, so you will need the following using statements:
   * `using Abatab.Core.Utility;`
   * `using System.Reflection;`
-* Debuggler files are written to **"C:\AbatabData\Debuggler\"**, which has to exist prior to using Debuggler.
+
+Debuggler files are written to **"C:\AbatabData\Debuggler\"**, which has to exist prior to using Debuggler.
 
 ## Temporary debugging
 
