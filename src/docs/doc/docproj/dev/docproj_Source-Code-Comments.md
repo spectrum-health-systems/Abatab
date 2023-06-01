@@ -1,4 +1,16 @@
-# Comments
+<!--
+  This documentation is incomplete.
+-->
+
+<div align="center">
+
+  ![AbatabDocumentationProjectLogo](../../../../../.github/images/logo/docproj/AbatabDocumentationProjectLogo.png)
+
+  <h1>
+    Source Code Comments
+  </h1>
+
+</div>
 
 ## XML documentation
 
@@ -100,3 +112,17 @@ Example:
 ```csharp
 // TODO: Do a thing.
 ```
+
+<br>
+
+***
+
+<div align="center">
+
+  This document is part of the [Abatab Documentation Project](../Abatab%20Documentation%20Project.md).
+
+  <h5>
+    Last updated: May 30, 2023
+  </h5>
+
+</div>
