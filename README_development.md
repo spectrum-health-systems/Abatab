@@ -58,9 +58,9 @@
 
 Abatab development takes place in X stages:
 
-[Stage I: Monthly development branches and testing](#stage-i-monthly-development-branches-and-testing)
+[Stage I: Monthly development branch](#stage-i-monthly-development-branch)
 
-# **Stage I**: Monthly development branches and testing
+# **Stage I**: Monthly development branch
 
 This stage is where the majority of Abatab development takes place.
 
@@ -72,6 +72,65 @@ During monthly development and testing:
 * New documentation is added, and existing documentation is updated/modified
 * Continual testing is done in a non-production environment
 
+<br>
+
+<div align="center">
+
+```mermaid
+%%{init: {'theme':'dark'}}%%
+gantt
+  title Abatab monthly development branch timeline
+  dateFormat X
+  axisFormat %d
+  section Pre-development
+  Create/Refactor/Clean-up  : 0, 5d
+  section Development
+  Development   : 20d
+  section Post-development
+  Testing   : 5d
+```
+
+</div>
+
+## Preparation
+
+<div align="left">
+
+```mermaid
+flowchart LR
+  CreateNewMonthlyDevelopmentBranch[Create new monthly development branch] --> Refactor[Refactor] --> CleanUp[Clean-up]
+  CreateNewMonthlyDevelopmentBranch --> RenamePreviousMonthlyDevelopmentBranch["Rename previous monthly development branch"]
+
+  classDef Green73A942BlackBlack fill:#73A942, color:#000000, stroke:#000000,stroke-width:2px
+  classDef GreenAAD576BlackBlack fill:#AAD576, color:#000000, stroke:#000000,stroke-width:2px
+  classDef WhiteBlackBlack fill:#FFFFFF, color:#000000, stroke:#000000,stroke-width:2px
+  
+  class CreateNewMonthlyDevelopmentBranch Green73A942BlackBlack
+  class Refactor,CleanUp GreenAAD576BlackBlack
+  class NonProductionTesting WhiteBlackBlack
+```
+
+</div>
+
+The monthly development branch is created from the previous m
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+
+
+<div align="center">
+
 ```mermaid
 ---
 title: Monthly development and testing workflow
@@ -79,54 +138,22 @@ title: Monthly development and testing workflow
 flowchart LR
   MonthlyBranch[MM.DD-development branch] --> TestingBranch[testing branch] -.-> NonProductionTesting[\Non-production\ntesting/]
 
-  classDef PistachioBlackBlack fill:#90BE6D, color:#000000, stroke:#000000,stroke-width:2px
+  classDef Green73A942BlackBlack fill:#73A942, color:#000000, stroke:#000000,stroke-width:2px
   classDef MaizeBlackBlack fill:#F9C74F, color:#000000, stroke:#000000,stroke-width:2px
   classDef WhiteBlackBlack fill:#FFFFFF, color:#000000, stroke:#000000,stroke-width:2px
   
-  class MonthlyBranch PistachioBlackBlack
+  class MonthlyBranch Green73A942BlackBlack
   class TestingBranch MaizeBlackBlack
   class NonProductionTesting WhiteBlackBlack
 ```
 
-```mermaid
----
-displayMode: compact
----
-gantt
-  title Abatab monthly development branch timeline 
-  dateFormat X
-  axisFormat %d
-  Create/Cleanup/Refactor  : 1, 5d
-  Development   : 21d
-  Testing   : 5d
-```
+</div>
 
-```mermaid
-gantt
-       dateFormat  YYYY-MM-DD
-       title Adding GANTT diagram functionality to mermaid
+<br>
 
-      section A section
-      Completed task            :done,    des1, 2014-01-06,2014-01-08
-      Active task               :active,  des2, 2014-01-09, 3d
-      Future task               :         des3, after des2, 5d
-      Future task2              :         des4, after des3, 5d
-```
 
-```mermaid
----
-displayMode: compact
----
-gantt
-       dateFormat  YYYY-MM-DD
-       title Adding GANTT diagram functionality to mermaid
 
-      section A section
-      Completed task            :done,    des1, 2014-01-06,2014-01-08
-      Active task               :active,  des2, 2014-01-09, 3d
-      Future task               :         des3, after des2, 5d
-      Future task2              :         des4, after des3, 5d
-```
+
 
 ## Timeline breakdown
 
