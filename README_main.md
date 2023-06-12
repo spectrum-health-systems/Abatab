@@ -1,3 +1,7 @@
+<!--
+  This is the README.md document for main branches of Abatab.
+-->
+
 <div align="center">
 
   ![BranchWarning][BranchWarning]
@@ -71,3 +75,13 @@ Abatab is developed by [A Pretty Cool Program][APrettyCoolProgramUrl]
 [AbatabDocumentation]: https://spectrum-health-systems.github.io/Abatab/
 [MyAvatarUrl]: https://www.ntst.com/Solutions-and-Services/Offerings/myAvatar
 [APrettyCoolProgramUrl]: https://github.com/APrettyCoolProgram 
+
+
+
+<br>
+
+# Additional information
+
+For Abatab changes, please see the [development changelog](./src/docs/doc/CHANGELOG.md)
+
+Details on upcoming Abatab functionality can be found in the [Abatab Development Roadmap](https://github.com/orgs/spectrum-health-systems/projects/25/views/2)

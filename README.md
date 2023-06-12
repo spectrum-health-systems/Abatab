@@ -59,16 +59,23 @@ Since this a development version of Abatab:
 
 The Abatab development workflow is:
 
-<div align="center">
+```mermaid
+
+graph LR
+  VersionBranch[Version Branch] --> DevelopmentBranch[Development Branch] --> MainBranch[Main Branch]
+```
+
+For example (and you can click on these to see where they end up):
 
 ```mermaid
 
 graph LR
+  25.5d --> development --> main
 
-  VersionBranch[Version Branch] --> DevelopmentBranch[Development Branch] --> MainBranch[Main Branch]
+  click 25.5d "https://github.com/spectrum-health-systems/Abatab/tree/23.5d"
+  click development "https://github.com/spectrum-health-systems/Abatab/tree/development"
+  click main "https://github.com/spectrum-health-systems/Abatab"
 ```
-
-</div>
 
 ## Version Branch
 
@@ -77,6 +84,13 @@ The majority of development is done in the **Version Branch**, including additio
 The version branch name is the version being developed (e.g., `23.5`)
 
 The version branch is not deployed to the web service host.
+
+### Release types
+
+When a version of Abatab is completed and released, the branch is renamed to `YY.MMx`, where `x` is:
+
+* `d` for development branches that may not be fully functional
+* `f` for final branches that have been tested and are fully functional
 
 ## Development branch
 
@@ -90,9 +104,7 @@ When testing functionality in the development branch is complete, it is merged w
 
 This is the official current development release of Abatab.
 
-## Final release
 
-When a version of Abatab is completed and released, the branch is renamed to `vYY.MM-final`  (e.g., `23.5-final`)
 
 <br>
 
