@@ -97,7 +97,6 @@ graph LR
 ### Monthly branch development timeline
 
 ```mermaid
-%%{init: {'theme':'dark'}}%%
 gantt
   title Monthly development timeline
   dateFormat X
