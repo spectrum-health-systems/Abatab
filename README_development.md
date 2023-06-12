@@ -88,8 +88,8 @@ gantt
 
 ```mermaid
 flowchart LR
-  ArchivePreviousMonthlyDevelopmentBranch["Archive previous monthly\n development branch"] --> CreateNewMonthlyDevelopmentBranch[Create new monthly\ndevelopment branch]
-  CreateNewMonthlyDevelopmentBranch --> Refactor[Refactor] --> CleanUp[Clean-up]
+  ArchivePreviousMonthlyDevelopmentBranch("Archive previous monthly\n development branch") --> CreateNewMonthlyDevelopmentBranch(Create new monthly\ndevelopment branch)
+  CreateNewMonthlyDevelopmentBranch --> Refactor(Refactor) --> CleanUp(Clean-up)
   
   %%classDef Green1A4301BlackBlack fill:#1A4301, color:#000000, stroke:#000000,stroke-width:2px
   classDef Green245501WhiteBlack fill:#245501, color:#FFFFFF, stroke:#000000,stroke-width:2px
