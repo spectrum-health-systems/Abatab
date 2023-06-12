@@ -36,26 +36,35 @@
 
 <br>
 
-# About this repository
 
-This repository is a **development version** of Abatab, which **is not intended for use in production environments**.
+# IMPORTANT INFORMATION ABOUT THIS REPOSITORY
 
-Abatab development, and its repositories are a little different than most source code repositories. This document will detail what those differences are, and why they exist.
-
-If you want to use Abatab in a production environment, please see the [Abatab Community Release](https://github.com/spectrum-health-systems/Abatab-Community-Release).
-
-If you are looking for the most recent stable release of Abatab, please see the Abatab [main branch](https://github.com/spectrum-health-systems/Abatab).
+>This repository is a **development version** of Abatab, which **is not intended for use in production environments**.  
+>
+>Abatab development, and its repositories are a little different than most source code repositories. This document  
+> will detail what those differences are, and why they exist.  
+>
+>If you want to use Abatab in a production environment, please see the [Abatab Community Release](https://github.com/spectrum-health-systems/Abatab-Community-Release).  
+>
+>If you are looking for the most recent stable release of Abatab, please see the Abatab [main branch](https://github.com/spectrum-health-systems/Abatab).
 
 <br>
 
+***
+
+<br>
 
 # Abatab development
 
-Abatab development takes place in X "Stages".
+Abatab development takes place in X stages:
 
-## **Stage I**: Monthly development branches and testing
+[Stage I: Monthly development branches and testing](#stage-i-monthly-development-branches-and-testing)
 
-The majority of Abatab development takes place in **monthly development branches**, where:
+# **Stage I**: Monthly development branches and testing
+
+This stage is where the majority of Abatab development takes place.
+
+During monthly development and testing:
 
 * New functionality is added, and existing functionality is updated/modified
 * Bugs are squished
@@ -64,7 +73,10 @@ The majority of Abatab development takes place in **monthly development branches
 * Continual testing is done in a non-production environment
 
 ```mermaid
-graph LR
+---
+title: Monthly development and testing workflow
+---
+flowchart LR
   MonthlyBranch[MM.DD-development branch] --> TestingBranch[testing branch] -.-> NonProductionTesting[\Non-production\ntesting/]
 
   classDef PistachioBlackBlack fill:#90BE6D, color:#000000, stroke:#000000,stroke-width:2px
@@ -76,35 +88,17 @@ graph LR
   class NonProductionTesting WhiteBlackBlack
 ```
 
-For example (and you can click on these to see where they end up):
-
-```mermaid
-graph LR
-  255Development[25.5-development branch] --> TestingBranch[testing branch] -.-> NonProductionTesting[\Non-production\ntesting/]
-
-  classDef PistachioBlackBlack fill:#90BE6D, color:#000000, stroke:#000000,stroke-width:2px
-  classDef MaizeBlackBlack fill:#F9C74F, color:#000000, stroke:#000000,stroke-width:2px
-  classDef WhiteBlackBlack fill:#FFFFFF, color:#000000, stroke:#000000,stroke-width:2px
-
-  class 255Development PistachioBlackBlack
-  class TestingBranch MaizeBlackBlack
-  class NonProductionTesting WhiteBlackBlack
-
-  click 255Development "https://github.com/spectrum-health-systems/Abatab/tree/23.5-development"
-  click testing "https://github.com/spectrum-health-systems/Abatab/tree/testing"
-```
-
-### Monthly branch development timeline
-
 ```mermaid
 gantt
-  title Monthly development timeline
+  title Abatab monthly development branch timeline 
   dateFormat X
   axisFormat %d
   Cleanup/Refactor  : 1, 5d
   Development   : 21d
   Testing   : 5d
 ```
+
+
 
 
 On the first day of a new month, a new monthly development branch is created from the previous monthly development branch.
