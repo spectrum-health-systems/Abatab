@@ -4,14 +4,14 @@ The goal of the Abatab Documenation Project is to provide useful documenation fo
 
 ## Development documentation
 
-* [Adding New Settings](dev/docproj_Adding-new-settings.md)
-* [Commenting](dev/docproj_Commenting.md)
-* [Debuggler](dev/docproj_Debuggler.md)
-* [Development notes](dev/docproj_Development-notes.md)
-* [Directory structure](dev/docproj_Directory-structure.md)
+* [Adding New Settings](dev/docproj_Adding-New-Settings.md)
+* [Development Notes](dev/docproj_Development-Notes.md)
+* [Directory Structure](dev/docproj_Directory-Structure.md)
 * [Logging](dev/docproj_Logging.md)
-* [Script parameters](dev/docproj_Script-parameters.md)
-* [Testing](dev/docproj_Testing.md)
+* [Script Parameters](dev/docproj_Script-Parameters.md)
+* [Source-CodeComments](dev/docproj_Source-Code-Comments.md)
+* [Testing Procedures](dev/docproj_Testing-Procedures.md)
+* [The Debuggler](dev/docproj_The-=Debuggler.md)
 
 ## Source code documentation
 

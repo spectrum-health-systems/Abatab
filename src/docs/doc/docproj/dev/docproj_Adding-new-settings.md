@@ -7,7 +7,7 @@
   ![AbatabDocumentationProjectLogo](../../../../../.github/images/logo/docproj/AbatabDocumentationProjectLogo.png)
 
   <h1>
-    Adding new settings
+    Adding New Settings
   </h1>
 
 </div>

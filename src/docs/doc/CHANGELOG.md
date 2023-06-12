@@ -10,10 +10,11 @@ This document follows Keep a Changelog guidelines:
 ## **Unreleased**
 
 ### Added
-* Messaging - Basic email functionality ([#125](https://github.com/spectrum-health-systems/Abatab/issues/125))
-* Progress Note - Add TeleHealth location verification to additional progress notes ([#126](https://github.com/spectrum-health-systems/Abatab/issues/126))
 
-## **23.5.0** [2023-MM-DD]
+* **Progress Note**: Add TeleHealth location verification to additional progress notes ([#126](https://github.com/spectrum-health-systems/Abatab/issues/126))
+
+## **23.6.0** [2023-06-DD]
 
 ### Added
-* Progress Note - Generalize TeleHealth location verification ([#129](https://github.com/spectrum-health-systems/Abatab/issues/129))
+* Progress Note: Generalize TeleHealth location verification ([#129](https://github.com/spectrum-health-systems/Abatab/issues/129))
+* Messaging: Basic email functionality test ([#125](https://github.com/spectrum-health-systems/Abatab/issues/125))

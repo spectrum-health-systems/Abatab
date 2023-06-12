@@ -42,7 +42,7 @@ If you want to use Abatab in a production environment, use the [Abatab Community
 
 # Abatab development
 
-The current development version of Abatab is `v23.5`.
+The current development version of Abatab is `v23.6`.
 
 Since this a development version of Abatab:
 
