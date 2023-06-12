@@ -75,10 +75,9 @@ gantt
   title Abatab monthly development branch timeline
   dateFormat X
   axisFormat %d
-  Pre-development : 0, 5d
-  Development : 20d
-  Testing : 4d
-  Release : 1d
+  Pre-development : 0, 3d
+  Development : 22d
+  Testing : 5d
 ```
 
 </div>
