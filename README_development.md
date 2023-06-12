@@ -1,7 +1,9 @@
 <!--
   README.md for development branches of Abatab.
 
-  Color names/HEX codes from https://coolors.co
+  Flowcharts:
+    - Class names are BackgroundTextBorder
+    - Color names/HEX codes from https://coolors.co
 -->
 
 <div align="center">
@@ -65,13 +67,13 @@ The majority of Abatab development takes place in **monthly development branches
 graph LR
   MonthlyBranch[MM.DD-development branch] --> TestingBranch[testing branch] -.-> NonProductionTesting[\Non-production\ntesting/]
 
-  classDef WintergreenDreamBackgroundWhiteText fill:#4D908E, stroke:#FFFFFF,stroke-width:2px
-  classDef OrangeRedBackgroundWhiteText fill:#F3722C, stroke:#FFFFFF,stroke-width:2px
-  classDef WhiteBackgroundBlackText fill:#FFFFFF, color:#000000, stroke:#000000,stroke-width:2px
+  classDef PistachioBlackBlack fill:#90BE6D, color:#000000, stroke:#000000,stroke-width:2px
+  classDef MaizeBlackBlack fill:#F9C74F, color:#000000, stroke:#000000,stroke-width:2px
+  classDef WhiteBlackBlack fill:#FFFFFF, color:#000000, stroke:#000000,stroke-width:2px
   
-  class MonthlyBranch WintergreenDreamBackgroundWhiteText
-  class TestingBranch OrangeRedBackgroundWhiteText
-  class NonProductionTesting WhiteBackgroundBlackText
+  class MonthlyBranch PistachioBlackBlack
+  class TestingBranch MaizeBlackBlack
+  class NonProductionTesting WhiteBlackBlack
 ```
 
 For example (and you can click on these to see where they end up):
@@ -80,13 +82,13 @@ For example (and you can click on these to see where they end up):
 graph LR
   255Development[25.5-development branch] --> TestingBranch[testing branch] -.-> NonProductionTesting[\Non-production\ntesting/]
 
-  classDef WintergreenDreamBackgroundWhiteText fill:#4D908E, stroke:#FFFFFF,stroke-width:2px
-  classDef OrangeRedBackgroundWhiteText fill:#F3722C, stroke:#FFFFFF,stroke-width:2px
-  classDef WhiteBackgroundBlackText fill:#FFFFFF, color:#000000, stroke:#000000,stroke-width:2px
+  classDef PistachioBlackBlack fill:#90BE6D, color:#000000, stroke:#000000,stroke-width:2px
+  classDef MaizeBlackBlack fill:#F9C74F, color:#000000, stroke:#000000,stroke-width:2px
+  classDef WhiteBlackBlack fill:#FFFFFF, color:#000000, stroke:#000000,stroke-width:2px
 
-  class 255Development WintergreenDreamBackgroundWhiteText
-  class TestingBranch OrangeRedBackgroundWhiteText
-  class NonProductionTesting WhiteBackgroundBlackText
+  class 255Development PistachioBlackBlack
+  class TestingBranch MaizeBlackBlack
+  class NonProductionTesting WhiteBlackBlack
 
   click 255Development "https://github.com/spectrum-health-systems/Abatab/tree/23.5-development"
   click testing "https://github.com/spectrum-health-systems/Abatab/tree/testing"
@@ -95,13 +97,14 @@ graph LR
 ### Monthly branch development timeline
 
 ```mermaid
+%%{init: {'theme':'forest'}}%%
 gantt
-    title Monthly development timeline
-    dateFormat X
-    axisFormat %s
-    Cleanup/Refactor  : 1, 5
-    Development   : 5, 25
-    Testing   : 25, 30
+  title Monthly development timeline
+  dateFormat X
+  axisFormat %d
+  Cleanup/Refactor  : 1, 5d
+  Development   : 21d
+  Testing   : 5d
 ```
 
 
