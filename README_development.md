@@ -95,15 +95,13 @@ graph LR
 ### Monthly branch development timeline
 
 ```mermaid
----
-displayMode: compact
----
 gantt
-  title Monthly development branch timeline
-  dateFormat YY-MM-DD
-  Cleanup/Refactor :23-05-01,5d
-  Development :20d
-  Testing : 5d
+    title Monthly development timeline
+    dateFormat X
+    axisFormat %s
+    Cleanup/Refactor  : 1, 5
+    Development   : 5, 25
+    Testing   : 25, 30
 ```
 
 
