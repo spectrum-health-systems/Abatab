@@ -89,15 +89,19 @@ flowchart LR
 ```
 
 ```mermaid
+---
+displayMode: compact
+---
 gantt
   title Abatab monthly development branch timeline 
   dateFormat X
   axisFormat %d
-  Cleanup/Refactor  : 1, 5d
+  Create/Cleanup/Refactor  : 1, 5d
   Development   : 21d
   Testing   : 5d
 ```
 
+## Timeline breakdown
 
 
 
