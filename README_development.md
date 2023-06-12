@@ -84,8 +84,6 @@ gantt
 
 ## Pre-development
 
-<div align="left">
-
 ```mermaid
 flowchart LR
   ArchivePreviousMonthlyDevelopmentBranch("Archive previous monthly\n development branch") --> CreateNewMonthlyDevelopmentBranch(Create new monthly\ndevelopment branch)
@@ -102,8 +100,6 @@ flowchart LR
   class Refactor,CleanUp GreenAAD576BlackBlack
   class FirstDayOfTheMonth WhiteBlackBlack
 ```
-
-</div>
 
 ### Archive the previous monthly development branch
 
