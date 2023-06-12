@@ -77,7 +77,8 @@ gantt
   axisFormat %d
   Pre-development : 0, 5d
   Development : 20d
-  Testing : 5d
+  Testing : 4d
+  Release : 1d
 ```
 
 </div>
