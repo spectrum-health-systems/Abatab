@@ -34,7 +34,7 @@
 
 </div>
 
-<br>
+***
 
 >This repository is a **development version** of Abatab, which **is not intended for use in production environments**.  
 >
@@ -44,8 +44,6 @@
 >If you want to use Abatab in a production environment, please see the [Abatab Community Release](https://github.com/spectrum-health-systems/Abatab-Community-Release).  
 >
 >If you are looking for the most recent stable release of Abatab, please see the Abatab [main branch](https://github.com/spectrum-health-systems/Abatab).
-
-<br>
 
 ***
 
