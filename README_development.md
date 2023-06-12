@@ -47,8 +47,6 @@
 
 ***
 
-<br>
-
 # Abatab development
 
 Abatab development takes place in X stages:
