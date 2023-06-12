@@ -119,26 +119,9 @@ Refactor code.
 
 Clean-up code and comments
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
-
-
-
-
-<div align="center">
+## Development
 
 ```mermaid
----
-title: Monthly development and testing workflow
----
 flowchart LR
   MonthlyBranch[MM.DD-development branch] --> TestingBranch[testing branch] -.-> NonProductionTesting[\Non-production\ntesting/]
 
@@ -150,8 +133,6 @@ flowchart LR
   class TestingBranch MaizeBlackBlack
   class NonProductionTesting WhiteBlackBlack
 ```
-
-</div>
 
 <br>
 
