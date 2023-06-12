@@ -82,32 +82,46 @@ gantt
   title Abatab monthly development branch timeline
   dateFormat X
   axisFormat %d
-  section Pre-development
-  Create/Refactor/Clean-up  : 0, 5d
-  section Development
-  Development   : 20d
-  section Post-development
-  Testing   : 5d
+  Pre-development : 0, 5d
+  Development : 20d
+  Testing : 5d
 ```
 
 </div>
 
-## Preparation
+## Pre-development
 
-<div align="left">
+<div align="center">
 
 ```mermaid
+---
+title: Pre-development
+---
 flowchart LR
-  CreateNewMonthlyDevelopmentBranch[Create new monthly development branch] --> Refactor[Refactor] --> CleanUp[Clean-up]
-  CreateNewMonthlyDevelopmentBranch --> RenamePreviousMonthlyDevelopmentBranch["Rename previous monthly development branch"]
-
-  classDef Green73A942BlackBlack fill:#73A942, color:#000000, stroke:#000000,stroke-width:2px
-  classDef GreenAAD576BlackBlack fill:#AAD576, color:#000000, stroke:#000000,stroke-width:2px
-  classDef WhiteBlackBlack fill:#FFFFFF, color:#000000, stroke:#000000,stroke-width:2px
+  FirstDayOfTheMonth((("First day of the month"))) --> sgArchivePrevious
+  FirstDayOfTheMonth((("First day of the month"))) --> sgCreateNew
   
-  class CreateNewMonthlyDevelopmentBranch Green73A942BlackBlack
+  ArchivePreviousMonthlyDevelopmentBranch["Archive previous monthly\n development branch"] --> CreateNewMonthlyDevelopmentBranch[Create new monthly\ndevelopment branch]
+  CreateNewMonthlyDevelopmentBranch --> Refactor[Refactor] --> CleanUp[Clean-up]
+  
+  ArchivePreviousMonthlyDevelopmentBranch --> one
+  subgraph sgArchivePrevious ["Archive previous monthly development branch"]
+  a1
+  end
+  subgraph sgCreateNew ["Create new monthly development branch"]
+  a2
+  end
+
+  %%classDef Green1A4301BlackBlack fill:#1A4301, color:#000000, stroke:#000000,stroke-width:2px
+  classDef Green245501WhiteBlack fill:#245501, color:#FFFFFF, stroke:#000000,stroke-width:2px
+  classDef Green73A942WhiteBlack fill:#73A942, color:#FFFFFF, stroke:#000000,stroke-width:2px
+  classDef GreenAAD576BlackBlack fill:#AAD576, color:#000000, stroke:#000000,stroke-width:2px
+  classDef WhiteBlackBlack fill:#000000, color:#FFFFFF, stroke:#FFFFFF,stroke-width:2px
+  
+  class ArchivePreviousMonthlyDevelopmentBranch Green245501WhiteBlack
+  class CreateNewMonthlyDevelopmentBranch Green73A942WhiteBlack
   class Refactor,CleanUp GreenAAD576BlackBlack
-  class NonProductionTesting WhiteBlackBlack
+  class FirstDayOfTheMonth WhiteBlackBlack
 ```
 
 </div>
