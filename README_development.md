@@ -99,7 +99,7 @@ gantt
   title Monthly development branch timeline
   dateFormat YY-MM-DD
   Cleanup/Refactor :23-05-01,5d
-  Development :after a1, 20d
+  Development :20d
   Testing : 5d
 ```
 
