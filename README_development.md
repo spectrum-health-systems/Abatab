@@ -91,27 +91,13 @@ gantt
 
 ## Pre-development
 
-<div align="center">
+<div align="left">
 
 ```mermaid
----
-title: Pre-development
----
 flowchart LR
-  FirstDayOfTheMonth((("First day of the month"))) --> sgArchivePrevious
-  FirstDayOfTheMonth((("First day of the month"))) --> sgCreateNew
-  
   ArchivePreviousMonthlyDevelopmentBranch["Archive previous monthly\n development branch"] --> CreateNewMonthlyDevelopmentBranch[Create new monthly\ndevelopment branch]
   CreateNewMonthlyDevelopmentBranch --> Refactor[Refactor] --> CleanUp[Clean-up]
   
-  ArchivePreviousMonthlyDevelopmentBranch --> one
-  subgraph sgArchivePrevious ["Archive previous monthly development branch"]
-  a1
-  end
-  subgraph sgCreateNew ["Create new monthly development branch"]
-  a2
-  end
-
   %%classDef Green1A4301BlackBlack fill:#1A4301, color:#000000, stroke:#000000,stroke-width:2px
   classDef Green245501WhiteBlack fill:#245501, color:#FFFFFF, stroke:#000000,stroke-width:2px
   classDef Green73A942WhiteBlack fill:#73A942, color:#FFFFFF, stroke:#000000,stroke-width:2px
@@ -126,8 +112,23 @@ flowchart LR
 
 </div>
 
-The monthly development branch is created from the previous m
+### Archive the previous monthly development branch
 
+If the previous monthly development branch was not released, the branch name should remain `MM.DD-development`
+
+If the previous monthly development branch was released, the branch name should be reanemd to `MM.DD-release`
+
+### Create a new monthly development branch
+
+Create a new repository branch named `MM.DD-development` from the previous monthly development branch
+
+### Refactor
+
+Refactor code.
+
+### Clean-up
+
+Clean-up code and comments
 
 <br>
 <br>
