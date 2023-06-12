@@ -116,7 +116,7 @@ flowchart LR
   classDef Green245501WhiteBlack fill:#245501, color:#FFFFFF, stroke:#000000,stroke-width:2px
   classDef Green73A942WhiteBlack fill:#73A942, color:#FFFFFF, stroke:#000000,stroke-width:2px
   classDef GreenAAD576BlackBlack fill:#AAD576, color:#000000, stroke:#000000,stroke-width:2px
-  classDef WhiteBlackBlack fill:#000000, color:#FFFFFF, stroke:#FFFFFF,stroke-width:2px
+  classDef WhiteBlackBlack fill:#FFFFFF, color:#000000, stroke:#000000,stroke-width:2px
   
   class ArchivePreviousMonthlyDevelopmentBranch Green245501WhiteBlack
   class CreateNewMonthlyDevelopmentBranch Green73A942WhiteBlack
