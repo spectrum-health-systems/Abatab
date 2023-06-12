@@ -36,9 +36,6 @@
 
 <br>
 
-
-# IMPORTANT INFORMATION ABOUT THIS REPOSITORY
-
 >This repository is a **development version** of Abatab, which **is not intended for use in production environments**.  
 >
 >Abatab development, and its repositories are a little different than most source code repositories. This document  
