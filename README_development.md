@@ -95,6 +95,9 @@ graph LR
 ### Monthly branch development timeline
 
 ```mermaid
+---
+displayMode: compact
+---
 gantt
   title Monthly development branch timeline
   dateFormat YY-MM-DD
