@@ -49,9 +49,68 @@
 
 # Abatab development
 
-Abatab development takes place in X stages:
+<div align="center">
 
-[Stage I: Monthly development branch](#stage-i-monthly-development-branch)
+```mermaid
+%%{init: {'theme':'dark'}}%%
+gantt
+  title Abatab development timeline
+  dateFormat X
+  axisFormat %d
+  Pre-development : 0, 1d
+  Code review : 3d
+  Development : 23d
+  Testing : 2d
+  Post-development : 2d
+```
+
+</div>
+
+# Pre-development
+
+## Create new development branch
+
+What this is.
+
+`MM.DD-development`
+
+# Code review
+
+Desc
+
+## Refactor
+
+Desc
+
+## Clean-up
+
+Desc
+
+# Development
+
+Desc
+
+# Testing
+
+Production environment
+
+# Post-development
+
+## Archive previous development branch
+
+What this is.
+
+* `MM.DD-development`  
+Desc
+* `MM.DD-stable`  
+Desc
+* `MM.DD-hotfix`  
+Desc
+* `MM.DD-community`  
+Desc
+
+
+
 
 # **Stage I**: Monthly development branch
 
@@ -59,30 +118,23 @@ This stage is where the majority of Abatab development takes place.
 
 During monthly development and testing:
 
+* Old monthly development branches are archived, and new monthly development branches are created
+* The existing codebase is refactored and cleaned up
 * New functionality is added, and existing functionality is updated/modified
 * Bugs are squished
 * Code is refactored
 * New documentation is added, and existing documentation is updated/modified
-* Continual testing is done in a non-production environment
+* Iterative testing is done in a non-production environment
 
 <br>
 
-<div align="center">
 
-```mermaid
-%%{init: {'theme':'dark'}}%%
-gantt
-  title Abatab monthly development branch timeline
-  dateFormat X
-  axisFormat %d
-  Pre-development : 0, 3d
-  Development : 22d
-  Testing : 5d
-```
 
-</div>
+
 
 ## Pre-development
+
+Pre-development includes creating a new monthly development branch, and spending a few days refactoring and cleaning up the code and comments. This should be done prior to staring the development of new features, so the entire code base can be tested.
 
 ```mermaid
 flowchart LR
@@ -109,17 +161,26 @@ If the previous monthly development branch was released, the branch name should 
 
 ### Create a new monthly development branch
 
-Create a new repository branch named `MM.DD-development` from the previous monthly development branch
+Create a new repository branch named `MM.DD-development` from the previous monthly development branch.
 
 ### Refactor
 
-Refactor code.
+Refactor any code that has been tagged as `// REFACTOR`
 
 ### Clean-up
 
-Clean-up code and comments
+Clean-up code and comments.
 
 ## Development
+
+Development includes:
+
+* Adding/enhancing features
+* Adding/modifying documentation
+* Bug fixes
+* Etc.
+
+During development, iterative testing should be done using a non-production environment.
 
 ```mermaid
 flowchart LR
@@ -245,3 +306,26 @@ Abatab is developed by:<br>
 [A Pretty Cool Program](https://github.com/APrettyCoolProgram)
 
 </div>
+
+
+
+<!--
+
+
+--```mermaid
+flowchart LR
+  ArchivePreviousMonthlyDevelopmentBranch("Archive previous monthly\n development branch") --> CreateNewMonthlyDevelopmentBranch(Create new monthly\ndevelopment branch)
+  CreateNewMonthlyDevelopmentBranch --> Refactor(Refactor) --> CleanUp(Clean-up)
+  
+  %%classDef Green1A4301BlackBlack fill:#1A4301, color:#000000, stroke:#000000,stroke-width:2px
+  classDef Green245501WhiteBlack fill:#245501, color:#FFFFFF, stroke:#000000,stroke-width:2px
+  classDef Green73A942WhiteBlack fill:#73A942, color:#FFFFFF, stroke:#000000,stroke-width:2px
+  classDef GreenAAD576BlackBlack fill:#AAD576, color:#000000, stroke:#000000,stroke-width:2px
+  classDef WhiteBlackBlack fill:#FFFFFF, color:#000000, stroke:#000000,stroke-width:2px
+  
+  class ArchivePreviousMonthlyDevelopmentBranch Green245501WhiteBlack
+  class CreateNewMonthlyDevelopmentBranch Green73A942WhiteBlack
+  class Refactor,CleanUp GreenAAD576BlackBlack
+  class FirstDayOfTheMonth WhiteBlackBlack
+
+```>
