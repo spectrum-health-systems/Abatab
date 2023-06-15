@@ -1,0 +1,48 @@
+﻿<!--
+Comment file for Abatab.
+Last updated: 230328
+
+Syntax:
+    /// <include file='docs/doc/xml/inc/Abatab.Core.Framework.xmldoc' path='XMLDoc/Class[@name="ClassName"]/MethodName/*' />
+-->
+
+<XMLDoc>
+	<Class name="Abatab.asmx.cs">
+        <GetVersion>
+            <summary>Returns the current version of Abatab.</summary>
+            <returns>The current version of Abatab.</returns>
+            <remarks>
+                <list type="bullet">
+                    <item>This method is required by Avatar.</item>
+                    <item>The version number is always the version that is in development.</item>
+                </list>
+            </remarks>
+        </GetVersion>
+        <RunScript>
+            <summary>Executes script parameter request from Avatar, then returns a potentially modified OptionObject to Avatar.</summary>
+            <param name="sentOptionObject">The original OptionObject sent from Avatar.</param>
+            <param name="scriptParameter">The original Script Parameter request from Avatar.</param>
+            <returns>A finalized OptionObject that will be returned to Avatar.</returns>
+            <remarks>
+                <list type="bullet">
+                    <item>This method is required by Avatar.</item>
+                </list>
+                Abatab receives two things from Avatar:
+                <list type="number">
+                    <item>An OptionObject, which contains all of the information that Abatab needs to do it's thing.</item>
+                    <item>A Script Parameter that tells Abatab what it needs to do with the OptionObject.</item>
+                </list>
+            </remarks>
+        </RunScript>
+    </Class>
+    <Class name="Flightpath.cs">
+        <StartAbatab>
+        </StartAbatab>
+        <FinishAbatab>
+        </FinishAbatab>
+	</Class>
+    <Class name="WebConfig.cs">
+        <Load>
+        </Load>
+	</Class>
+</XMLDoc>
