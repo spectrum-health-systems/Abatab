@@ -1,3 +1,0 @@
-﻿# Abatab.Core.OS
-
-TBD

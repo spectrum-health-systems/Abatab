@@ -1,3 +1,0 @@
-﻿# Abatab.Module.Testing
-
-TBD
