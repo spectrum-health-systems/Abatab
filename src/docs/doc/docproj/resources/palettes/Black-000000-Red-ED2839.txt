@@ -1,0 +1,28 @@
+/* Coolors Exported Palette - https://coolors.co/000000-220608-440b10-661118-871721-a91d29-cb2231-ed2839 */
+
+/* CSV */
+000000,220608,440B10,661118,871721,A91D29,CB2231,ED2839
+
+/* With # */
+#000000, #220608, #440B10, #661118, #871721, #A91D29, #CB2231, #ED2839
+
+/* Array */
+["000000","220608","440B10","661118","871721","A91D29","CB2231","ED2839"]
+
+/* Object */
+{"Black":"000000","Licorice":"220608","Black bean":"440B10","Rosewood":"661118","Falu red":"871721","Auburn":"A91D29","Fire engine red":"CB2231","Red (Pantone)":"ED2839"}
+
+/* Extended Array */
+[{"name":"Black","hex":"000000","rgb":[0,0,0],"cmyk":[0,0,0,100],"hsb":[0,0,0],"hsl":[0,0,0],"lab":[0,0,0]},{"name":"Licorice","hex":"220608","rgb":[34,6,8],"cmyk":[0,82,76,87],"hsb":[356,82,13],"hsl":[356,70,8],"lab":[4,12,4]},{"name":"Black bean","hex":"440B10","rgb":[68,11,16],"cmyk":[0,84,76,73],"hsb":[355,84,27],"hsl":[355,72,15],"lab":[13,27,13]},{"name":"Rosewood","hex":"661118","rgb":[102,17,24],"cmyk":[0,83,76,60],"hsb":[355,83,40],"hsl":[355,71,23],"lab":[21,37,20]},{"name":"Falu red","hex":"871721","rgb":[135,23,33],"cmyk":[0,83,76,47],"hsb":[355,83,53],"hsl":[355,71,31],"lab":[29,46,25]},{"name":"Auburn","hex":"A91D29","rgb":[169,29,41],"cmyk":[0,83,76,34],"hsb":[355,83,66],"hsl":[355,71,39],"lab":[37,55,31]},{"name":"Fire engine red","hex":"CB2231","rgb":[203,34,49],"cmyk":[0,83,76,20],"hsb":[355,83,80],"hsl":[355,71,46],"lab":[44,64,36]},{"name":"Red (Pantone)","hex":"ED2839","rgb":[237,40,57],"cmyk":[0,83,76,7],"hsb":[355,83,93],"hsl":[355,85,54],"lab":[52,72,41]}]
+
+/* XML */
+<palette>
+  <color name="Black" hex="000000" r="0" g="0" b="0" />
+  <color name="Licorice" hex="220608" r="34" g="6" b="8" />
+  <color name="Black bean" hex="440B10" r="68" g="11" b="16" />
+  <color name="Rosewood" hex="661118" r="102" g="17" b="24" />
+  <color name="Falu red" hex="871721" r="135" g="23" b="33" />
+  <color name="Auburn" hex="A91D29" r="169" g="29" b="41" />
+  <color name="Fire engine red" hex="CB2231" r="203" g="34" b="49" />
+  <color name="Red (Pantone)" hex="ED2839" r="237" g="40" b="57" />
+</palette>

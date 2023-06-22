@@ -1,9 +1,7 @@
-﻿// b230516.0855
+﻿// b230615.1008
 
 using System.Linq;
 using System.Reflection;
-using Abatab.Core.Catalog.Definition;
-using Abatab.Core.Utility;
 using Abatab.Properties;
 
 namespace Abatab

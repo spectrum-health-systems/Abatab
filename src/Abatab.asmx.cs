@@ -1,17 +1,14 @@
 ﻿/*************************************************************************
- * Abatab v23.5.0.0-development+230516
+ * Abatab v23.6.0.0
  * A custom web service/framework for Netsmart's myAvatar EHR.
  * https://github.com/spectrum-health-systems/Abatab
  ************************************************************************/
 
-// b230516.0855
+// b230615.1008
 
 using System.Reflection;
 using System.Web.Services;
-using Abatab.Core.Catalog.Definition;
-using Abatab.Core.Utility;
 using Abatab.Properties;
-using ScriptLinkStandard.Objects;
 
 namespace Abatab
 {

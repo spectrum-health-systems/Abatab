@@ -1,12 +1,7 @@
-﻿// b230516.0855
+﻿// b230615.1008
 
 using System.Reflection;
-using Abatab.Core.Catalog.Definition;
-using Abatab.Core.Logger;
-using Abatab.Core.Session;
-using Abatab.Core.Utility;
 using Abatab.Properties;
-using ScriptLinkStandard.Objects;
 
 namespace Abatab
 {

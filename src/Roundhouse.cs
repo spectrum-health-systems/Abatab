@@ -1,8 +1,6 @@
-﻿// b230516.0855
+﻿// b230615.1008
 
 using System.Reflection;
-using Abatab.Core.Catalog.Definition;
-using Abatab.Core.Logger;
 
 namespace Abatab
 {

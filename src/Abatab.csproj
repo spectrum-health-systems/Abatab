@@ -143,52 +143,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Core\Abatab.Core.Catalog\Abatab.Core.Catalog.csproj">
-      <Project>{1B44E970-AF13-4188-A6EC-449BF42FA32E}</Project>
-      <Name>Abatab.Core.Catalog</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Core\Abatab.Core.DataExport\Abatab.Core.DataExport.csproj">
-      <Project>{9db81d7f-ba9f-4e59-a63f-b00514ac1f40}</Project>
-      <Name>Abatab.Core.DataExport</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Core\Abatab.Core.Framework\Abatab.Core.Framework.csproj">
-      <Project>{be5dbe90-0987-4b10-a87c-0a4fccc49a5b}</Project>
-      <Name>Abatab.Core.Framework</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Core\Abatab.Core.Logger\Abatab.Core.Logger.csproj">
-      <Project>{C94AF429-C995-4E3F-9ACF-E989FC95F7EA}</Project>
-      <Name>Abatab.Core.Logger</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Core\Abatab.Core.Session\Abatab.Core.Session.csproj">
-      <Project>{67d07064-68d8-4aeb-a562-093fa9973b43}</Project>
-      <Name>Abatab.Core.Session</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Core\Abatab.Core.Utilities\Abatab.Core.Utility.csproj">
-      <Project>{88553C90-6BAE-4005-B2CC-FD9A68ADC094}</Project>
-      <Name>Abatab.Core.Utility</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Module\Abatab.Module.ProgressNote\Abatab.Module.ProgressNote.csproj">
-      <Project>{c909f7a7-789f-44bb-8f60-d27f9de261af}</Project>
-      <Name>Abatab.Module.ProgressNote</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Module\Abatab.Module.Prototype\Abatab.Module.Prototype.csproj">
-      <Project>{1e0f71ad-e7bb-4eaf-8120-6a19a20be962}</Project>
-      <Name>Abatab.Module.Prototype</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Module\Abatab.Module.QuickMedicationOrder\Abatab.Module.QuickMedicationOrder.csproj">
-      <Project>{8732ffaf-c872-4622-8a46-ba629a811e6a}</Project>
-      <Name>Abatab.Module.QuickMedicationOrder</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Module\Abatab.Module.Testing\Abatab.Module.Testing.csproj">
-      <Project>{74607575-e22f-4d54-a5ed-2064176e1901}</Project>
-      <Name>Abatab.Module.Testing</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\ThirdParty\ScriptLinkStandard\ScriptLinkStandard.csproj">
-      <Project>{8151D74C-D8A4-43F8-99E7-3CAC9DC06B0E}</Project>
-      <Name>ScriptLinkStandard</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="docs\doc\relnotes\" />
   </ItemGroup>
   <PropertyGroup>

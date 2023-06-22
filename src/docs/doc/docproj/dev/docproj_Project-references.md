@@ -20,33 +20,23 @@ graph LR
   Abatab --> Module.Prototype(Module.Prototype)
   Abatab --> Module.QuickMedicationOrder(Module.QuickMedicationOrder)
   Abatab --> Module.Testing(Module.Testing)
+  Abatab --> Sandbox.DevOne(Sandbox.DevOne)
+  Abatab --> Sandbox.DevTwo(Sandbox.DevTwo)
+  Abatab --> Sandbox.DevThree(Sandbox.DevThree)
+  Abatab --> Sandbox.DevFour(Sandbox.DevFour)
+  Abatab --> Sandbox.DevFive(Sandbox.DevFive)
   Abatab --> ScriptLinkStandard(ScriptLinkStandard)
 
-  classDef Abatab fill:#000000, stroke:#F94144,stroke-width:2px
-  classDef CoreCatalog fill:#000000, stroke:#277DA1,stroke-width:2px
-  classDef CoreDataExport fill:#000000, stroke:#F3722C,stroke-width:2px
-  classDef CoreFramework fill:#000000, stroke:#577590,stroke-width:2px
-  classDef CoreLogger fill:#000000, stroke:#F8961E,stroke-width:2px
-  classDef CoreSession fill:#000000, stroke:#4D908E,stroke-width:2px
-  classDef CoreUtilities fill:#000000, stroke:#F9844A,stroke-width:2px
-  classDef ModProgressNote fill:#000000, stroke:#277DA1,stroke-width:2px
-  classDef ModPrototype fill:#000000, stroke:#F3722C,stroke-width:2px
-  classDef ModQuickMedicationOrder fill:#000000, stroke:#577590,stroke-width:2px
-  classDef ModTesting fill:#000000, stroke:#F8961E,stroke-width:2px
-  classDef ScriptLinkStandard fill:#000000, stroke:#43AA8B,stroke-width:2px
+  classDef Abatab fill:#FFC971, stroke:#CC5803, color:#CC5803, stroke-width:2px
+  classDef CoreComponent fill:#F4EFFA, color:#2F184B, stroke:#2F184B,stroke-width:1px
+  classDef ModuleComponent fill:#03B5AA, stroke:#023436, color:#023436,stroke-width:1px
+  classDef Sandbox fill:#000000, stroke:#F3722C,stroke-width:1px
+  classDef ThirdParty fill:#000000, stroke:#43AA8B,stroke-width:2px
   classDef Description fill:#000000, stroke:#FFFFFF,stroke-width:2px
 
   class Abatab Abatab
-  class Abatab.Core.Catalog CoreCatalog
-  class Core.DataExport CoreDataExport
-  class Core.Framework CoreFramework
-  class Core.Logger CoreLogger
-  class Core.Session CoreSession
-  class Core.Utilities CoreUtilities
-  class Module.ProgressNote ModProgressNote
-  class Module.Prototype ModPrototype
-  class Module.QuickMedicationOrder ModQuickMedicationOrder
-  class Module.Testing ModTesting
+  class Abatab.Core.Catalog,Core.DataExport,Core.Framework,Core.Logger,Core.Session,Core.Utilities CoreComponent
+  class Module.ProgressNote,Module.Prototype,Module.QuickMedicationOrder,Module.Testing ModuleComponent
   class ScriptLinkStandard ScriptLinkStandard
 ```
 
