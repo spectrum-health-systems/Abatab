@@ -1,0 +1,3 @@
+﻿# Abatab.Core.Utilities
+
+TBD
