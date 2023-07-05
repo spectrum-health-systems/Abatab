@@ -1,0 +1,3 @@
+﻿# Abatab.Core.Framework
+
+TBD

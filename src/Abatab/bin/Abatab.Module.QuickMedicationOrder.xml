@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Abatab.Module.QuickMedicationOrder</name>
+    </assembly>
+    <members>
+        <member name="P:Abatab.Module.QuickMedicationOrder.Action.VerifyAmount.AssemblyName">
+            <summary>Executing assembly name for log files.</summary>
+        </member>
+        <member name="M:Abatab.Module.QuickMedicationOrder.Action.VerifyAmount.ParseAction(Abatab.Core.Catalog.Definition.AbSession)">
+            <!-- Failed to insert some or all of included XML --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Module.QuickMedicationOrder.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
+        </member>
+        <member name="P:Abatab.Module.QuickMedicationOrder.Roundhouse.AssemblyName">
+            <summary>Executing assembly name for log files.</summary>
+        </member>
+        <member name="M:Abatab.Module.QuickMedicationOrder.Roundhouse.ParseCommand(Abatab.Core.Catalog.Definition.AbSession)">
+            <!-- Failed to insert some or all of included XML --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Module.QuickMedicationOrder.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
+        </member>
+    </members>
+</doc>
