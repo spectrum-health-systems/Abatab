@@ -41,13 +41,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="EmailMsg.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Abatab.ThirdParty\ScriptLinkStandard\ScriptLinkStandard.csproj">
       <Project>{de6dbd70-a9a9-444b-bd09-9a1b50204add}</Project>
       <Name>ScriptLinkStandard</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Abatab.Core.Catalog\Abatab.Core.Catalog.csproj">
+      <Project>{1B44E970-AF13-4188-A6EC-449BF42FA32E}</Project>
+      <Name>Abatab.Core.Catalog</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Abatab.Core.Logger\Abatab.Core.Logger.csproj">
+      <Project>{C94AF429-C995-4E3F-9ACF-E989FC95F7EA}</Project>
+      <Name>Abatab.Core.Logger</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

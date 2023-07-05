@@ -1,8 +1,8 @@
 ﻿// b230516.0855
 
-using System.Reflection;
 using Abatab.Core.Catalog.Definition;
 using Abatab.Core.Logger;
+using System.Reflection;
 
 namespace Abatab.Module.Testing
 {
@@ -21,6 +21,14 @@ namespace Abatab.Module.Testing
 
             switch (abSession.RequestCommand)
             {
+
+                case "admin":
+                    LogEvent.Trace("traceinternal", abSession, AssemblyName);
+
+                    //Action.Admin.SendEmail(abSession);
+
+                    break;
+
                 case "datadump":
                     LogEvent.Trace("traceinternal", abSession, AssemblyName);
 
@@ -38,11 +46,14 @@ namespace Abatab.Module.Testing
                 case "sendemail":
                     LogEvent.Trace("traceinternal", abSession, AssemblyName);
 
-                    Action.Messaging.SendEmail(abSession);
+                    Abatab.Core.Messaging.EmailMsg.Send(abSession, "chris.banwarth@spectrumhealthsystems.org", abSession.AbatabEmailAddress, abSession.AbatabEmailPassword, "This is a test", "Did the test work?");
+
+                    //Action.Messaging.SendEmail(abSession);
 
                     //Action.Messaging.ParseAction(abSession);
 
                     break;
+
 
                 default:
                     LogEvent.Trace("traceinternal", abSession, AssemblyName);

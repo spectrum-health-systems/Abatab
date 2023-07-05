@@ -97,3 +97,26 @@ Keyword abbreviations are 4 characters.
 `43AA8B`: ScriptLinkStandard  
 `F9C74F`:  
 `90BE6D`:  
+
+
+# New deployment
+
+## XX. Update Settings.settings
+
+* Update `AbatabVersion`
+* Update `AbatabBuild`
+
+## XX. Rebuild Abatab
+
+* Clean solution
+* Rebuild solution
+
+## 
+
+## XX. Update Web.config
+
+* Verify `LoggerMode` is set to `enabled`
+* Verify `LoggerTypes` is set to `all`
+* Update `AvatarEnvironment`
+* Update `AbatabEmailPassword`
+* Verify `DebugglerMode` is set to `disabled`

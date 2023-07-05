@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Action\Admin.cs" />
     <Compile Include="Action\DataDump.cs" />
     <Compile Include="Action\ErrorCode.cs" />
     <Compile Include="Action\Messaging.cs" />

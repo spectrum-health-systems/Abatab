@@ -130,6 +130,24 @@
     <Content Include="docs\doc\xml\inc\Abatab.Module.QuickMedicationOrder.xmldoc" />
     <Content Include="docs\doc\xml\inc\Abatab.Module.Testing.xmldoc" />
     <Content Include="docs\doc\xml\inc\Abatab.xmldoc" />
+    <Content Include="AppData\Module\README.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AppData\Module\ProgressNotes\README.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AppData\Module\Prototype\README.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AppData\Module\QuickMedicationOrder\README.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AppData\Module\Testing\README.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="AppData\README.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

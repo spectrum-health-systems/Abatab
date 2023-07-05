@@ -196,7 +196,7 @@ namespace Abatab.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("23.3")]
+        [global::System.Configuration.DefaultSettingValueAttribute("23.7")]
         public string AbatabVersion {
             get {
                 return ((string)(this["AbatabVersion"]));
@@ -205,7 +205,7 @@ namespace Abatab.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("development+230523.1121")]
+        [global::System.Configuration.DefaultSettingValueAttribute("development+230705.0858")]
         public string AbatabBuild {
             get {
                 return ((string)(this["AbatabBuild"]));
@@ -341,7 +341,7 @@ namespace Abatab.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("ChrisIsSmarterThanNetsmart123")]
+        [global::System.Configuration.DefaultSettingValueAttribute("nopass123")]
         public string AbatabEmailPassword {
             get {
                 return ((string)(this["AbatabEmailPassword"]));
