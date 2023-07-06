@@ -101,39 +101,4 @@ Keyword abbreviations are 4 characters.
 
 # New deployment
 
-## XX. Update Settings.settings
-
-* Update `AbatabVersion`
-* Update `AbatabBuild`
-
-## XX. Rebuild Abatab
-
-* Clean solution
-* Rebuild solution
-
-## XX. Commit to development branch
-
-For example, if you are currently developing v23.7, commit changes to that branch
-
-## XX. Create a pull request for the Testing branch
-
-* Create a pull request from the development branch to the testing branch
-* Merge branches
-
-## XX. Deploy the testing branch to the web server
-
-* Open a Command Prompt as Adminitistrator
-* Type `cd ../../IT/Abatab Lieutenant`
-* Type `AbatabLieutenant`, and a simple help screen should pop up
-* Type `AbatabLieutenant testing`
-
-This will deploy the Abatab testing branch to the web server
-
-
-## XX. Update Web.config
-
-* Verify `LoggerMode` is set to `enabled`
-* Verify `LoggerTypes` is set to `all`
-* Update `AvatarEnvironment`
-* Update `AbatabEmailPassword`
-* Verify `DebugglerMode` is set to `disabled`
+See "Abatab Lieutenant" for more info
