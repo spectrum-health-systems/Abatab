@@ -1,10 +1,16 @@
-﻿/*************************************************************************
- * Abatab v23.7.0.0
- * A custom web service/framework for Netsmart's myAvatar EHR.
- * https://github.com/spectrum-health-systems/Abatab
- ************************************************************************/
+﻿// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+// Abatab v23.7.0.0
+// A custom web service/framework for myAvatar.
+// https://github.com/spectrum-health-systems/Abatab
+// Copyright (c) A Pretty Cool Program. All rights reserved.
+// Licensed under the Apache 2.0 license.
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
-// b230705.0845
+// -----------------------------------------------------------------------------
+// Abatab.asmx.cs
+// Entry point for Abatab.
+// b230713.1524
+// -----------------------------------------------------------------------------
 
 using Abatab.Core.Catalog.Definition;
 using Abatab.Core.Utility;
@@ -15,20 +21,28 @@ using System.Web.Services;
 
 namespace Abatab
 {
-    /// <summary>Entry point for Abatab.</summary>
+    /// <summary>
+    /// Entry point for Abatab.
+    /// </summary>
     [WebService(Namespace = "http://tempuri.org/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
     public class Abatab : WebService
     {
-        /// <include file='docs/doc/xml/inc/Abatab.xmldoc' path='XMLDoc/Class[@name="Abatab.asmx.cs"]/GetVersion/*' />
+        /// <summary>
+        /// Method summary goes here.
+        /// </summary>
+        /// <remarks>This method is required by myAvatar.</remarks>
         [WebMethod]
         public string GetVersion()
         {
             return "VERSION 23.7";
         }
 
-        /// <include file='docs/doc/xml/inc/Abatab.xmldoc' path='XMLDoc/Class[@name="Abatab.asmx.cs"]/RunScript/*' />
+        /// <summary>
+        /// Method summary goes here.
+        /// </summary>
+        /// <remarks>This method is required by myAvatar.</remarks>
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string scriptParameter)
         {

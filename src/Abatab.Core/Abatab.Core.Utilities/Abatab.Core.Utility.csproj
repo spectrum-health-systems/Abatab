@@ -48,8 +48,7 @@
     <Compile Include="ConvertCollection.cs" />
     <Compile Include="FileSys.cs" />
     <Compile Include="Debuggler.cs" />
-    <Compile Include="JsonDeserialize.cs" />
-    <Compile Include="JsonSerialize.cs" />
+    <Compile Include="JsonData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="FileIO.cs" />
   </ItemGroup>

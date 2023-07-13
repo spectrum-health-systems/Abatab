@@ -1,20 +1,36 @@
-﻿// b230615.1008
+﻿// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+// Abatab v23.7.0.0
+// A custom web service/framework for myAvatar.
+// https://github.com/spectrum-health-systems/Abatab
+// Copyright (c) A Pretty Cool Program. All rights reserved.
+// Licensed under the Apache 2.0 license.
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
-using System.Linq;
-using System.Reflection;
+// -----------------------------------------------------------------------------
+// Abatab.WebConfig.cs
+// Logic for the local Web.config file.
+// b230713.1524
+// -----------------------------------------------------------------------------
+
 using Abatab.Core.Catalog.Definition;
 using Abatab.Core.Utility;
 using Abatab.Properties;
+using System.Linq;
+using System.Reflection;
 
 namespace Abatab
 {
-    /// <summary>Loads settings from the local Web.config file.</summary>
+    /// <summary>
+    /// Logic for the local Web.config file.
+    /// </summary>
     public static class WebConfig
     {
-        /// <include file='docs/doc/xml/inc/Abatab.xmldoc' path='XMLDoc/Class[@name="WebConfig.cs"]/Load/*' />
+        /// <summary>
+        /// Method summary goes here.
+        /// </summary>
         public static void Load(AbSession abSession)
         {
-            Debuggler.DebugLog(Settings.Default.DebugglerMode, Assembly.GetExecutingAssembly().GetName().Name);
+            Debuggler.DebugLog(Settings.Default.DebugglerMode,Assembly.GetExecutingAssembly().GetName().Name);
 
             abSession.AbatabMode             = Settings.Default.AbatabMode;
             abSession.AbatabVersion          = Settings.Default.AbatabVersion;
