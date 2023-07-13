@@ -6,15 +6,25 @@
 // Licensed under the Apache 2.0 license.
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
+// -----------------------------------------------------------------------------
+// Abatab.Core.Utility.FileIO.cs
+// Class summary goes here.
+// b230713.1524
+// -----------------------------------------------------------------------------
+
 using System.IO;
 using System.Threading;
 
 namespace Abatab.Core.Utility
 {
-    /// <summary>Summary goes here.</summary>
+    /// <summary>
+    /// Class summary goes here.
+    /// </summary>
     public static class FileIO
     {
-        /// <include file='../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Utility.xmldoc' path='XMLDoc/Class[@name="ClassName"]/MethodName/*' />
+        /// <summary>
+        /// Method summary goes here.
+        /// </summary>
         public static void WriteLocal(string filePath, string fileContent, int writeDelay = 0)
         {
             Thread.Sleep(writeDelay);

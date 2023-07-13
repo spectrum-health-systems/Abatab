@@ -184,10 +184,14 @@ Each source code file has the following header, defined in the .editorconfig `fi
 
 
 
+/* DEVELOPER_NOTE
+ * We want to write this all the time, so the depreciated code below is probably not needed.
+ */
+
+/* TODO: Make sure this exits gracefully. */
 
 
-
-
+/* REVIEW: Can a trace log go here? */
 
 
 /// <summary>

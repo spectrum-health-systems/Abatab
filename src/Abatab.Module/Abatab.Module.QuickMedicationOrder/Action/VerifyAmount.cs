@@ -6,22 +6,35 @@
 // Licensed under the Apache 2.0 license.
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
+// -----------------------------------------------------------------------------
+// Abatab.Module.QuickMedicationOrder.VerifyAmount.cs
+// Class summary goes here.
+// b230713.1524
+// -----------------------------------------------------------------------------
+
 using Abatab.Core.Catalog.Definition;
 using Abatab.Core.Logger;
 using System.Reflection;
 
 namespace Abatab.Module.QuickMedicationOrder.Action
 {
+    /// <summary>
+    /// Class summary goes here.
+    /// </summary>
     internal class VerifyAmount
     {
-        /// <summary>Executing assembly name for log files.</summary>
+        /// <summary>
+        /// Executing assembly name for log files.
+        /// </summary>
+        /// <remarks>This is defined at the start of the class so it can be easily used throughout the method.</remarks>
         public static string AssemblyName { get; set; } = Assembly.GetExecutingAssembly().GetName().Name;
 
-        /// <include file='../../Abatab/src/docs/doc/xml/inc/Abatab.Module.QuickMedicationOrder.xmldoc' path='XMLDoc/Class[@name="ClassName"]/MethodName/*' />
+        /// <summary>
+        /// Method summary goes here.
+        /// </summary>
         public static void ParseAction(AbSession abSession)
         {
             LogEvent.Trace("trace", abSession, AssemblyName);
-
 
             switch (abSession.RequestAction)
             {
@@ -61,7 +74,8 @@ namespace Abatab.Module.QuickMedicationOrder.Action
 
                 default:
                     LogEvent.Trace("traceinternal", abSession, AssemblyName);
-                    // TODO - Exit gracefully.
+
+                    /* TODO: Make sure this exits gracefully. */
                     break;
             }
         }

@@ -6,6 +6,12 @@
 // Licensed under the Apache 2.0 license.
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
+// -----------------------------------------------------------------------------
+// Abatab.Core.Logger.LogPath.cs
+// Class summary goes here.
+// b230713.1524
+// -----------------------------------------------------------------------------
+
 using Abatab.Core.Catalog.Definition;
 using Abatab.Core.Utility;
 using System;
@@ -14,10 +20,14 @@ using System.Reflection;
 
 namespace Abatab.Core.Logger
 {
-    /// <summary>Summary goes here.</summary>
+    /// <summary>
+    /// Class summary goes here.
+    /// </summary>
     internal static class LogPath
     {
-        /// <include file='../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Logger.xmldoc' path='XMLDoc/Class[@name="ClassName"]/MethodName/*' />
+        /// <summary>
+        /// Method summary goes here.
+        /// </summary>
         public static string Alert(AbSession abSession)
         {
             Debuggler.DebugLog(abSession.DebugglerMode, Assembly.GetExecutingAssembly().GetName().Name);
@@ -29,7 +39,9 @@ namespace Abatab.Core.Logger
         }
 
 
-        /// <include file='../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Logger.xmldoc' path='XMLDoc/Class[@name="ClassName"]/MethodName/*' />
+        /// <summary>
+        /// Method summary goes here.
+        /// </summary>
         public static string Trace(AbSession abSession, string exeAssembly = "", string callPath = "", string callMember = "", int callLine = 0)
         {
             Debuggler.DebugLog(abSession.DebugglerMode, Assembly.GetExecutingAssembly().GetName().Name);
@@ -37,16 +49,21 @@ namespace Abatab.Core.Logger
             return $@"{abSession.TraceLogDirectory}\{DateTime.Now:HHmmss_fffffff}-{exeAssembly}-{Path.GetFileName(callPath)}-{callMember}-{callLine}-[TRACE].md";
         }
 
-        /// <include file='../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Logger.xmldoc' path='XMLDoc/Class[@name="ClassName"]/MethodName/*' />
+        /// <summary>
+        /// Method summary goes here.
+        /// </summary>
         public static string Session(AbSession abSession)
         {
-            // REVIEW: Can a trace log go here?
+            /* QUESTION Can a trace log go here?
+ */
             Debuggler.DebugLog(abSession.DebugglerMode, Assembly.GetExecutingAssembly().GetName().Name);
 
             return $@"{abSession.SessionDataDirectory}\{DateTime.Now:HHmmss.fffffff}-[SESSION].md";
         }
 
-        /// <include file='../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Logger.xmldoc' path='XMLDoc/Class[@name="ClassName"]/MethodName/*' />
+        /// <summary>
+        /// Method summary goes here.
+        /// </summary>
         public static string Setting(AbSession abSession)
         {
             // REVIEW: Can a trace log go here?
@@ -55,7 +72,9 @@ namespace Abatab.Core.Logger
             return $@"{abSession.AbatabDataRoot}\{abSession.AvatarEnvironment}\Abatab current settings.md";
         }
 
-        /// <include file='../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Logger.xmldoc' path='XMLDoc/Class[@name="ClassName"]/MethodName/*' />
+        /// <summary>
+        /// Method summary goes here.
+        /// </summary>
         public static string Warning(AbSession abSession)
         {
             Debuggler.DebugLog(abSession.DebugglerMode, Assembly.GetExecutingAssembly().GetName().Name);

@@ -5,31 +5,51 @@
     </assembly>
     <members>
         <member name="T:Abatab.Module.ProgressNote.Action.VerifyLocation">
-            <summary>Summary goes here.</summary>
+            <summary>
+            Class summary goes here.
+            </summary>
         </member>
         <member name="P:Abatab.Module.ProgressNote.Action.VerifyLocation.AssemblyName">
-            <summary>Executing assembly name for log files.</summary>
+            <summary>
+            Executing assembly name for log files.
+            </summary>
+            <remarks>This is defined at the start of the class so it can be easily used throughout the method.</remarks>
         </member>
         <member name="M:Abatab.Module.ProgressNote.Action.VerifyLocation.ParseAction(Abatab.Core.Catalog.Definition.AbSession)">
-            <!-- Failed to insert some or all of included XML --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Module.ProgressNote.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
+            <summary>
+            Method summary goes here.
+            </summary>
         </member>
         <member name="M:Abatab.Module.ProgressNote.Action.VerifyLocation.ValidGroupIndividualizedNote(System.Collections.Generic.List{System.String},System.String,System.Collections.Generic.List{System.String},System.String,Abatab.Core.Catalog.Definition.AbSession)">
-            <!-- Failed to insert some or all of included XML --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Module.ProgressNote.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
+            <summary>
+            Method summary goes here.
+            </summary>
         </member>
         <member name="M:Abatab.Module.ProgressNote.Action.VerifyLocation.ValidIndividualCounselingNote(System.Collections.Generic.List{System.String},System.String,System.Collections.Generic.List{System.String},System.String,Abatab.Core.Catalog.Definition.AbSession)">
-            <!-- Failed to insert some or all of included XML --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Module.ProgressNote.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
+            <summary>
+            Method summary goes here.
+            </summary>
         </member>
         <member name="M:Abatab.Module.ProgressNote.Action.VerifyLocation.CreateWarning(Abatab.Core.Catalog.Definition.AbSession,System.String)">
-            <!-- Failed to insert some or all of included XML --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Module.ProgressNote.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
+            <summary>
+            Method summary goes here.
+            </summary>
         </member>
         <member name="T:Abatab.Module.ProgressNote.Roundhouse">
-            <summary>Summary goes here.</summary>
+            <summary>
+            Class summary goes here.
+            </summary>
         </member>
         <member name="P:Abatab.Module.ProgressNote.Roundhouse.AssemblyName">
-            <summary>Executing assembly name for log files.</summary>
+            <summary>
+            Executing assembly name for log files.
+            </summary>
+            <remarks>This is defined at the start of the class so it can be easily used throughout the method.</remarks>
         </member>
         <member name="M:Abatab.Module.ProgressNote.Roundhouse.ParseCommand(Abatab.Core.Catalog.Definition.AbSession)">
-            <!-- Failed to insert some or all of included XML --><include file="../../Abatab/src/docs/doc/xml/inc/Abatab.Module.ProgressNote.xmldoc" path="XMLDoc/Class[@name=&quot;ClassName&quot;]/MethodName/*" />
+            <summary>
+            Method summary goes here.
+            </summary>
         </member>
     </members>
 </doc>

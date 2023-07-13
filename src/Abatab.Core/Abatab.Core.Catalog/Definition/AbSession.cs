@@ -7,8 +7,8 @@
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 // -----------------------------------------------------------------------------
-// Abatab.Core.Catalog.Component.Setting.cs
-// String values.
+// Abatab.Core.Catalog.Definition.AbSession.cs
+// Properties for the AbSession object.
 // b230713.1524
 // -----------------------------------------------------------------------------
 
@@ -18,7 +18,7 @@ using System.Collections.Generic;
 namespace Abatab.Core.Catalog.Definition
 {
     /// <summary>
-    /// Properties for the AbSession object
+    /// Properties for the AbSession object.
     /// </summary>
     /// <remarks>
     /// The AbSession object contains all of the necessary information that Abatab needs to do what it does.

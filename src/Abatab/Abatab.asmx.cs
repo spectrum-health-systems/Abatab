@@ -12,6 +12,10 @@
 // b230713.1524
 // -----------------------------------------------------------------------------
 
+/* DEVNOTE
+ * Write something about Abatab here.
+ */
+
 using Abatab.Core.Catalog.Definition;
 using Abatab.Core.Utility;
 using Abatab.Properties;

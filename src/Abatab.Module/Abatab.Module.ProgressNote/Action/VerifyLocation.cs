@@ -6,6 +6,12 @@
 // Licensed under the Apache 2.0 license.
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
+// -----------------------------------------------------------------------------
+// Abatab.Module.ProgressNote.Action.VerifyLocation.cs
+// Class summary goes here.
+// b230713.1524
+// -----------------------------------------------------------------------------
+
 using Abatab.Core.Catalog.Definition;
 using Abatab.Core.Logger;
 using Abatab.Core.Utility;
@@ -16,18 +22,25 @@ using System.Reflection;
 
 namespace Abatab.Module.ProgressNote.Action
 {
-    /// <summary>Summary goes here.</summary>
+    /// <summary>
+    /// Class summary goes here.
+    /// </summary>
     public static class VerifyLocation
     {
-        /// <summary>Executing assembly name for log files.</summary>
+        /// <summary>
+        /// Executing assembly name for log files.
+        /// </summary>
+        /// <remarks>This is defined at the start of the class so it can be easily used throughout the method.</remarks>
         public static string AssemblyName { get; set; } = Assembly.GetExecutingAssembly().GetName().Name;
 
-        /// <include file='../../Abatab/src/docs/doc/xml/inc/Abatab.Module.ProgressNote.xmldoc' path='XMLDoc/Class[@name="ClassName"]/MethodName/*' />
+        /// <summary>
+        /// Method summary goes here.
+        /// </summary>
         public static void ParseAction(AbSession abSession)
         {
             LogEvent.Trace("trace", abSession, AssemblyName);
 
-            // TODO: These values should be in the local settings file.
+            /* TODO: These values should be in the local settings file.*/
             var serviceChargeCodeValue = abSession.SentOptionObject.GetFieldValue("51001");
             var locationValue          = abSession.SentOptionObject.GetFieldValue("50004");
 
@@ -45,9 +58,9 @@ namespace Abatab.Module.ProgressNote.Action
                     else
                     {
                         LogEvent.Trace("traceinternal", abSession, AssemblyName);
-                        LogEvent.Trace("traceinternal", abSession, AssemblyName, serviceChargeCodeValue); // Testing
+                        LogEvent.Trace("traceinternal", abSession, AssemblyName, serviceChargeCodeValue); /* DEVELOPER_NOTE: For testing */
 
-                        // TODO: Quick fix
+                        /* DEVNOTE: This is a quick fix.*/
                         if (serviceChargeCodeValue != "")
                         {
                             CreateWarning(abSession, serviceChargeCodeValue);
@@ -73,7 +86,7 @@ namespace Abatab.Module.ProgressNote.Action
                     {
                         LogEvent.Trace("traceinternal", abSession, AssemblyName);
 
-                        // TODO: Quick fix
+                        /* DEVNOTE: This is a quick fix.*/
                         if (serviceChargeCodeValue != "")
                         {
                             CreateWarning(abSession, serviceChargeCodeValue);
@@ -89,23 +102,28 @@ namespace Abatab.Module.ProgressNote.Action
                 default:
                     LogEvent.Trace("traceinternal", abSession, AssemblyName);
 
-                    // TODO - Exit gracefully.
-
+                    /* TODO: Make sure this exits gracefully. */
                     break;
             }
         }
 
-        /// <include file='../../Abatab/src/docs/doc/xml/inc/Abatab.Module.ProgressNote.xmldoc' path='XMLDoc/Class[@name="ClassName"]/MethodName/*' />
+        /// <summary>
+        /// Method summary goes here.
+        /// </summary>
         private static bool ValidGroupIndividualizedNote(List<string> flaggedServiceChargeCodeCodes, string serviceChargeCodeValue, List<string> validLocations, string locationValue, AbSession abSession) // remove last argument after testing
         {
-            //LogFile.Debuggler(Assembly.GetExecutingAssembly().GetName().Name); /* Can't put a trace log here. */ // TODO - Figure out a better way to do this.
+            /* DEVNOTE: We can't put a trace log here. */
 
-            /*  IF the Service Charge Code on the form is in the list of service charge codes to check
+            /* DEVNOTE
+             * This is how this works:
+             *
+             *  IF the Service Charge Code on the form is in the list of service charge codes to check
              *      IF the location on the form is in the list of valid locations, return true
              *      IF the location on the form is not in the list of valid locations, return false
              *  IF the Service Charge Code on the form is not in the list of Service Charge Codes to check, return true.
              */
 
+            /* TODO: Figure out a better way to do this. */
             if (flaggedServiceChargeCodeCodes.Contains(serviceChargeCodeValue))
             {
                 LogEvent.Trace("traceinternal", abSession, AssemblyName, serviceChargeCodeValue);
@@ -117,11 +135,14 @@ namespace Abatab.Module.ProgressNote.Action
             }
         }
 
-        /// <include file='../../Abatab/src/docs/doc/xml/inc/Abatab.Module.ProgressNote.xmldoc' path='XMLDoc/Class[@name="ClassName"]/MethodName/*' />
+        /// <summary>
+        /// Method summary goes here.
+        /// </summary>
         private static bool ValidIndividualCounselingNote(List<string> flaggedServiceChargeCodePrefixes, string serviceChargeCodeValue, List<string> validLocations, string locationValue, AbSession abSession) // remove last argument after testing // Can't put a log event here.
         {
-            //LogFile.Debuggler(Assembly.GetExecutingAssembly().GetName().Name); /* Can't put a trace log here. */ // TODO - Figure out a better way to do this.
+            /* DEVNOTE: We can't put a trace log here. */
 
+            /* TODO: Figure out a better way to do this. */
             if (flaggedServiceChargeCodePrefixes.Any(codePrefix => serviceChargeCodeValue.StartsWith(codePrefix)))
             {
                 LogEvent.Trace("traceinternal", abSession, AssemblyName, serviceChargeCodeValue);
@@ -133,13 +154,23 @@ namespace Abatab.Module.ProgressNote.Action
             }
         }
 
-        /// <include file='../../Abatab/src/docs/doc/xml/inc/Abatab.Module.ProgressNote.xmldoc' path='XMLDoc/Class[@name="ClassName"]/MethodName/*' />
+        /// <summary>
+        /// Method summary goes here.
+        /// </summary>
         private static void CreateWarning(AbSession abSession, string serviceChargeCodeValue)
         {
             LogEvent.Trace("trace", abSession, AssemblyName);
 
-            /* The following code will allow the user to file the note, but suggests they review the details.
-            */
+            /* DEVNOTE
+             * The [TESTING] will let the user to be able to file the note after reviewing any warnings that pop up,
+             * which will allow us to catch any edge-case issues. Once testing is complete, this block of code should
+             * be removed.
+             *
+             * The [PRODUCTION] will not allow the user to file the note unless the information on the form is valid.
+             * Once testing is complete, this block of code should be un-commented.
+             */
+
+            /* [TESTING] */
             var errorCode = 2;
             var errorMesg = $"WARNING!{Environment.NewLine}" +
                             $"{Environment.NewLine}" +
@@ -149,8 +180,7 @@ namespace Abatab.Module.ProgressNote.Action
                             $"{Environment.NewLine}" +
                             $"Please click \"Cancel\" and verify you have the correct location, or \"OK\" if you are sure the location is correct.";
 
-            /* The following code will force the user to make changes before filing the note.
-            */
+            /* [PRODUCTION] */
             //var errorCode = 1;
             //var errorMesg = $"WARNING!{Environment.NewLine}" +
             //                $"{Environment.NewLine}" +
@@ -160,9 +190,10 @@ namespace Abatab.Module.ProgressNote.Action
             //                $"{Environment.NewLine}" +
             //                $"Please verify you have the correct location.";
 
+            /* REVIEW: Not sure what this is. */
             //var alertLogName = $"{DateTime.Now:yyMMdd}-{abSession.SentOptionObject.OptionId}-{abSession.RequestModule}-{abSession.RequestCommand}-{abSession.RequestAction}-{abSession.RequestOption}";
 
-            _=abSession.ReturnOptionObject.ToReturnOptionObject(errorCode, errorMesg);
+            _ = abSession.ReturnOptionObject.ToReturnOptionObject(errorCode, errorMesg);
 
             LogEvent.Warning(abSession);
             LogEvent.Alert(abSession, AssemblyName);

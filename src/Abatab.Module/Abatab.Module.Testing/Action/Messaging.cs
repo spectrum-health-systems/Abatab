@@ -6,15 +6,31 @@
 // Licensed under the Apache 2.0 license.
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
+// -----------------------------------------------------------------------------
+// Abatab.Module.Testing.Action.Messaging.cs
+// Class summary goes here.
+// b230713.1524
+// -----------------------------------------------------------------------------
+
+/* DEVNOTE
+ * Write something about what this testing functionality is used for.
+ */
+
 using Abatab.Core.Catalog.Definition;
 using Abatab.Core.Logger;
 using System.Reflection;
 
 namespace Abatab.Module.Testing.Action
 {
+    /// <summary>
+    /// Class summary goes here.
+    /// </summary>
     public static class Messaging
     {
-        /// <summary>Executing assembly name for log files.</summary>
+        /// <summary>
+        /// Executing assembly name for log files.
+        /// </summary>
+        /// <remarks>This is defined at the start of the class so it can be easily used throughout the method.</remarks>
         public static string AssemblyName { get; set; } = Assembly.GetExecutingAssembly().GetName().Name;
 
         public static void ParseAction(AbSession abSession)
@@ -34,12 +50,14 @@ namespace Abatab.Module.Testing.Action
 
                     LogEvent.Trace("traceinternal", abSession, AssemblyName);
 
-                    // TODO - Exit gracefully.
-
+                    /* TODO: Make sure this exits gracefully. */
                     break;
             }
         }
 
+        /// <summary>
+        /// Method summary goes here.
+        /// </summary>
         private static void SendEmail(AbSession abSession)
         {
             //LogEvent.Trace("trace", abSession, AssemblyName);
@@ -71,8 +89,6 @@ namespace Abatab.Module.Testing.Action
             ////smtpClient.Send(emailTo, abSession.AbatabEmailAddress, "test", "This is a test");
             //LogEvent.Trace("trace", abSession, AssemblyName);
             //abSession.ReturnOptionObject.ToReturnOptionObject();
-
-
 
             //LogEvent.Trace("trace", abSession, AssemblyName);
         }

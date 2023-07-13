@@ -6,6 +6,12 @@
 // Licensed under the Apache 2.0 license.
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
+// -----------------------------------------------------------------------------
+// Abatab.Core.Logger.LogEvent.cs
+// Class summary goes here.
+// b230713.1524
+// -----------------------------------------------------------------------------
+
 using Abatab.Core.Catalog.Definition;
 using Abatab.Core.Utility;
 using System.Reflection;
@@ -13,10 +19,14 @@ using System.Runtime.CompilerServices;
 
 namespace Abatab.Core.Logger
 {
-    /// <summary>Summary goes here.</summary>
+    /// <summary>
+    /// Class summary goes here.
+    /// </summary>
     public static class LogEvent
     {
-        /// <include file='../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Logger.xmldoc' path='XMLDoc/Class[@name="ClassName"]/MethodName/*' />
+        /// <summary>
+        /// Method summary goes here.
+        /// </summary>
         public static void Alert(AbSession abSession, string assemblyName, [CallerFilePath] string callPath = "", [CallerMemberName] string callMember = "")
         {
             Debuggler.DebugLog(abSession.DebugglerMode, Assembly.GetExecutingAssembly().GetName().Name);
@@ -24,12 +34,17 @@ namespace Abatab.Core.Logger
             LogWriter.WriteAlert(abSession, assemblyName, callPath, callMember);
         }
 
-        // TODO - Maybe figure out a better way to do this, instead of checking if logging is enabled and then checking to see if the types are correct.
+        /* QUESTION Is there a better way to do this, instead of checking if logging is enabled and then checking to see if the types are correct?
+         */
 
-        /// <include file='../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Logger.xmldoc' path='XMLDoc/Class[@name="ClassName"]/MethodName/*' />
+        /// <summary>
+        /// Method summary goes here.
+        /// </summary>
         public static void Trace(string logType, AbSession abSession, string assemblyName, string logMsg = "", [CallerFilePath] string callPath = "", [CallerMemberName] string callMember = "", [CallerLineNumber] int callLine = 0)
         {
             Debuggler.DebugLog(abSession.DebugglerMode, Assembly.GetExecutingAssembly().GetName().Name);
+
+            /* TODO Refactor &&/|| to and/or */
 
             if (abSession.LoggerMode == "enabled" && (abSession.LoggerTypes == "all" || abSession.LoggerTypes.Contains(logType)))
             {
@@ -37,32 +52,44 @@ namespace Abatab.Core.Logger
             }
         }
 
-        /// <include file='../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Logger.xmldoc' path='XMLDoc/Class[@name="ClassName"]/MethodName/*' />
+        /// <summary>
+        /// Method summary goes here.
+        /// </summary>
         public static void Session(AbSession abSession)
         {
-            // REVIEW: Can a trace log go here?
+            /* QUESTION Can a trace log go here?
+             */
             Debuggler.DebugLog(abSession.DebugglerMode, Assembly.GetExecutingAssembly().GetName().Name);
 
             LogWriter.WriteSession(abSession, Catalog.Output.Session.Complete(abSession));
         }
 
-        /// <include file='../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Logger.xmldoc' path='XMLDoc/Class[@name="ClassName"]/MethodName/*' />
+        /// <summary>
+        /// Method summary goes here.
+        /// </summary>
         public static void CurrentSetting(AbSession abSession)
         {
-            // REVIEW: Can a trace log go here?
+            /* QUESTION Can a trace log go here?
+             */
             Debuggler.DebugLog(abSession.DebugglerMode, Assembly.GetExecutingAssembly().GetName().Name);
 
             LogWriter.WriteSetting(abSession, Catalog.Output.Setting.Current(abSession));
         }
 
-        /// <include file='../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Logger.xmldoc' path='XMLDoc/Class[@name="ClassName"]/MethodName/*' />
+        /// <summary>
+        /// Method summary goes here.
+        /// </summary>
         public static void Warning(AbSession abSession)
         {
-            // REVIEW: Can a trace log go here?
+            /* QUESTION Can a trace log go here?
+             */
             Debuggler.DebugLog(abSession.DebugglerMode, Assembly.GetExecutingAssembly().GetName().Name);
 
-            // DEVNOTE: We want to write this all the time.
+            /* DEVELOPER_NOTE
+             * We want to write this all the time, so the depreciated code below is probably not needed.
+             */
 
+            /* DEPRECIATED
             //if (abSession.LoggerMode == "enabled")
             //{
             //    if (abSession.LoggerTypes == "all" || abSession.LoggerTypes.Contains("warning"))
@@ -73,6 +100,7 @@ namespace Abatab.Core.Logger
             //        //LogWriter.LocalFile(logPath, logMsg, Convert.ToInt32(abSession.LoggerDelay));
             //    }
             //}
+            */
         }
     }
 }

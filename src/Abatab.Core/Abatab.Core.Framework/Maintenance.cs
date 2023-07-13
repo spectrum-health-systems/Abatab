@@ -6,6 +6,12 @@
 // Licensed under the Apache 2.0 license.
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
+// -----------------------------------------------------------------------------
+// Abatab.Core.Framework.Maintenance.cs
+// Class summary goes here.
+// b230713.1524
+// -----------------------------------------------------------------------------
+
 using Abatab.Core.Catalog.Definition;
 using Abatab.Core.Logger;
 using System.Collections.Generic;
@@ -13,13 +19,20 @@ using System.Reflection;
 
 namespace Abatab.Core.Framework
 {
-    /// <summary>Summary goes here.</summary>
+    /// <summary>
+    /// Class summary goes here.
+    /// </summary>
     public static class Maintenance
     {
-        /// <summary>Executing assembly name for log files.</summary>
+        /// <summary>
+        /// Executing assembly name for log files.
+        /// </summary>
+        /// <remarks>This is defined at the start of the class so it can be easily used throughout the method.</remarks>
         public static string AssemblyName { get; set; } = Assembly.GetExecutingAssembly().GetName().Name;
 
-        /// <include file='../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Framework.xmldoc' path='XMLDoc/Class[@name="ClassName.cs"]/MethodName/*' />
+        /// <summary>
+        /// Method summary goes here.
+        /// </summary>
         public static void Refresh(AbSession abSession)
         {
             LogEvent.Trace("trace", abSession, AssemblyName);
@@ -28,7 +41,9 @@ namespace Abatab.Core.Framework
             ExportCurrentSettings(abSession);
         }
 
-        /// <include file='../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Framework.xmldoc' path='XMLDoc/Class[@name="ClassName.cs"]/MethodName/*' />
+        /// <summary>
+        /// Method summary goes here.
+        /// </summary>
         private static void VerifyDirectories(AbSession abSession)
         {
             LogEvent.Trace("trace", abSession, AssemblyName);
@@ -37,7 +52,9 @@ namespace Abatab.Core.Framework
             Utility.FileSys.VerifyDirectories(frameworkDirectories);
         }
 
-        /// <include file='../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Framework.xmldoc' path='XMLDoc/Class[@name="ClassName.cs"]/MethodName/*' />
+        /// <summary>
+        /// Method summary goes here.
+        /// </summary>
         private static void ExportCurrentSettings(AbSession abSession)
         {
             LogEvent.Trace("trace", abSession, AssemblyName);

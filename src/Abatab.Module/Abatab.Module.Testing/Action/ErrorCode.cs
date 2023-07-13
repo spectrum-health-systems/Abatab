@@ -6,19 +6,36 @@
 // Licensed under the Apache 2.0 license.
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
+// -----------------------------------------------------------------------------
+// Abatab.Module.Testing.Action.DataDump.cs
+// Class summary goes here.
+// b230713.1524
+// -----------------------------------------------------------------------------
+
+/* DEVNOTE
+ * Write something about what this testing functionality is used for.
+ */
+
 using Abatab.Core.Catalog.Definition;
 using Abatab.Core.Logger;
 using System.Reflection;
 
 namespace Abatab.Module.Testing.Action
 {
-    /// <summary>Summary goes here.</summary>
+    /// <summary>
+    /// Class summary goes here.
+    /// </summary>
     public class ErrorCode
     {
-        /// <summary>Executing assembly name for log files.</summary>
+        /// <summary>
+        /// Executing assembly name for log files.
+        /// </summary>
+        /// <remarks>This is defined at the start of the class so it can be easily used throughout the method.</remarks>
         public static string AssemblyName { get; set; } = Assembly.GetExecutingAssembly().GetName().Name;
 
-        /// <include file='../../Abatab/src/docs/doc/xml/inc/Abatab.Module.Testing.xmldoc' path='XMLDoc/Class[@name="ClassName"]/MethodName/*' />
+        /// <summary>
+        /// Method summary goes here.
+        /// </summary>
         public static void ParseAction(AbSession abSession)
         {
             LogEvent.Trace("trace", abSession, AssemblyName);
@@ -41,11 +58,9 @@ namespace Abatab.Module.Testing.Action
 
                     LogEvent.Trace("traceinternal", abSession, AssemblyName);
 
-                    // TODO - Exit gracefully.
-
+                    /* TODO: Make sure this exits gracefully. */
                     break;
             }
         }
-
     }
 }

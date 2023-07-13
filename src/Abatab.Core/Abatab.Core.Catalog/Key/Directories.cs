@@ -6,15 +6,25 @@
 // Licensed under the Apache 2.0 license.
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
+// -----------------------------------------------------------------------------
+// Abatab.Core.Catalog.Key.Directories.cs
+// Pre-defined lists of directories.
+// b230713.1524
+// -----------------------------------------------------------------------------
+
 using Abatab.Core.Catalog.Definition;
 using System.Collections.Generic;
 
 namespace Abatab.Core.Catalog.Key
 {
-    /// <summary>Pre-defined lists of directories.</summary>
+    /// <summary>
+    /// Pre-defined lists of directories.
+    /// </summary>
     public static class Directories
     {
-        /// <include file='../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Catalog.xmldoc' path='XMLDoc/Class[@name="ClassName"]/MethodName/*' />
+        /// <summary>
+        /// Method summary goes here.
+        /// </summary>
         public static List<string> Framework(AbSession abSession) => new List<string>()
         {
             abSession.AbatabDataRoot,
@@ -24,7 +34,9 @@ namespace Abatab.Core.Catalog.Key
             abSession.DebugglerLogDirectory
         };
 
-        /// <include file='../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Catalog.xmldoc' path='XMLDoc/Class[@name="ClassName"]/MethodName/*' />
+        /// <summary>
+        /// Method summary goes here.
+        /// </summary
         public static List<string> Session(AbSession abSession) => new List<string>()
         {
             abSession.SessionDataDirectory,

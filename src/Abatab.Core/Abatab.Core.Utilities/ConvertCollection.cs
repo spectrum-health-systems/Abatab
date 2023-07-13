@@ -6,14 +6,25 @@
 // Licensed under the Apache 2.0 license.
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
+// -----------------------------------------------------------------------------
+// Abatab.Core.Utility.ConvertCollection.cs
+// Class summary goes here.
+// b230713.1524
+// -----------------------------------------------------------------------------
+
 using System;
 using System.Collections.Generic;
 
 namespace Abatab.Core.Utility
 {
+    /// <summary>
+    /// Class summary goes here.
+    /// </summary>
     public static class ConvertCollection
     {
-        /// <include file='../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Utility.xmldoc' path='XMLDoc/Class[@name="ClassName"]/MethodName/*' />
+        /// <summary>
+        /// Method summary goes here.
+        /// </summary>
         public static List<string> ArrayToList(string[] arrayToConvert)
         {
             var list = new List<string>();
@@ -26,15 +37,20 @@ namespace Abatab.Core.Utility
             return list;
         }
 
-
-        /// <include file='../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Utility.xmldoc' path='XMLDoc/Class[@name="ClassName"]/MethodName/*' />
+        /// <summary>
+        /// Method summary goes here.
+        /// </summary>
         public static string ListToString(List<string> listToConvert)
         {
-            // REVIEW: Remove this abstraction?
+            /* QUESTION
+             * Do we need this abstraction?
+             */
             return string.Join(", ", listToConvert);
         }
 
-        /// <include file='../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Utility.xmldoc' path='XMLDoc/Class[@name="ClassName"]/MethodName/*' />
+        /// <summary>
+        /// Method summary goes here.
+        /// </summary>
         public static string ListToNewLineString(List<string> listToConvert)
         {
             var toReturn = "";

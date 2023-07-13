@@ -6,6 +6,12 @@
 // Licensed under the Apache 2.0 license.
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
+// -----------------------------------------------------------------------------
+// Abatab.Core.Session.Build.cs
+// Class summary goes here.
+// b230713.1524
+// -----------------------------------------------------------------------------
+
 using Abatab.Core.Catalog.Definition;
 using Abatab.Core.Logger;
 using Abatab.Core.Utility;
@@ -15,13 +21,20 @@ using System.Reflection;
 
 namespace Abatab.Core.Session
 {
-    /// <summary>Summary goes here.</summary>
+    /// <summary>
+    /// Class summary goes here.
+    /// </summary>
     public static class Build
     {
-        /// <summary>Executing assembly name for log files.</summary>
+        /// <summary>
+        /// Executing assembly name for log files.
+        /// </summary>
+        /// <remarks>This is defined at the start of the class so it can be easily used throughout the method.</remarks>
         public static string AssemblyName { get; set; } = Assembly.GetExecutingAssembly().GetName().Name;
 
-        /// <include file='../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Session.xmldoc' path='XMLDoc/Class[@name="ClassName"]/MethodName/*' />
+        /// <summary>
+        /// Method summary goes here.
+        /// </summary>
         public static void NewSession(OptionObject2015 sentOptionObject, string scriptParameter, AbSession abSession)
         {
             Debuggler.DebugLog(abSession.DebugglerMode, Assembly.GetExecutingAssembly().GetName().Name);
@@ -37,7 +50,9 @@ namespace Abatab.Core.Session
             //BuildModTesting(abSession);
         }
 
-        /// <include file='../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Session.xmldoc' path='XMLDoc/Class[@name="ClassName"]/MethodName/*' />
+        /// <summary>
+        /// Method summary goes here.
+        /// </summary>
         public static void BuildSessionRuntimeDetail(AbSession abSession)
         {
             Debuggler.DebugLog(abSession.DebugglerMode, Assembly.GetExecutingAssembly().GetName().Name);
@@ -46,7 +61,9 @@ namespace Abatab.Core.Session
             abSession.Timestamp = $"{DateTime.Now:HHmmss}";
         }
 
-        /// <include file='../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Session.xmldoc' path='XMLDoc/Class[@name="ClassName"]/MethodName/*' />
+        /// <summary>
+        /// Method summary goes here.
+        /// </summary>
         public static void BuildSessionFrameworkDetail(AbSession abSession)
         {
             Debuggler.DebugLog(abSession.DebugglerMode, Assembly.GetExecutingAssembly().GetName().Name);
@@ -62,10 +79,13 @@ namespace Abatab.Core.Session
             Utility.FileSys.VerifyDirectories(Catalog.Key.Directories.Session(abSession));
         }
 
-        /// <include file='../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Session.xmldoc' path='XMLDoc/Class[@name="ClassName"]/MethodName/*' />
+        /// <summary>
+        /// Method summary goes here.
+        /// </summary>
         public static void BuildAbatabUserName(AbSession abSession)
         {
-            // REVIEW: Can a trace log go here?
+            /* QUESTION Can a trace log go here?
+             */
             Debuggler.DebugLog(abSession.DebugglerMode, Assembly.GetExecutingAssembly().GetName().Name);
 
             abSession.AbatabUserName = string.IsNullOrWhiteSpace(abSession.SentOptionObject.OptionUserId)
@@ -73,10 +93,13 @@ namespace Abatab.Core.Session
                 : abSession.SentOptionObject.OptionUserId;
         }
 
-        /// <include file='../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Session.xmldoc' path='XMLDoc/Class[@name="ClassName"]/MethodName/*' />
+        /// <summary>
+        /// Method summary goes here.
+        /// </summary>
         public static void BuildSessionOptionObjectDetail(AbSession abSession, OptionObject2015 sentOptionObject)
         {
-            // REVIEW: Can a trace log go here?
+            /* QUESTION Can a trace log go here?
+             */
             Debuggler.DebugLog(abSession.DebugglerMode, Assembly.GetExecutingAssembly().GetName().Name);
 
             //LogEvent.Trace(abSession, "trace", AssemblyName);
@@ -85,7 +108,9 @@ namespace Abatab.Core.Session
             abSession.ReturnOptionObject = sentOptionObject.Clone();
         }
 
-        /// <include file='../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Session.xmldoc' path='XMLDoc/Class[@name="ClassName"]/MethodName/*' />
+        /// <summary>
+        /// Method summary goes here.
+        /// </summary>
         public static void BuildAbatabRequest(AbSession abSession, string scriptParameter)
         {
             LogEvent.Trace("trace", abSession, AssemblyName);
@@ -114,12 +139,17 @@ namespace Abatab.Core.Session
         //    };
         //}
 
+        /// <summary>
+        /// Method summary goes here.
+        /// </summary>
         private static void BuildModQuickMedicationOrder(AbSession abSession)
         {
-            // REVIEW: Can a trace log go here?
+            /* QUESTION Can a trace log go here?
+ */
             Debuggler.DebugLog(abSession.DebugglerMode, Assembly.GetExecutingAssembly().GetName().Name);
 
-            /* These are the Quick Medication Order module settings that are created at runtime. There are also setting for the Progress Note module that are stored in
+            /* DEVELOPER_NOTE
+             * These are the Quick Medication Order module settings that are created at runtime. There are also setting for the Progress Note module that are stored in
              * the local Web.config file that are loaded in Abatab.WebConfig.Load().
              */
 

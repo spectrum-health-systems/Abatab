@@ -6,19 +6,32 @@
 // Licensed under the Apache 2.0 license.
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
+// -----------------------------------------------------------------------------
+// Abatab.Module.ProgressNote.Roundhouse.cs
+// Class summary goes here.
+// b230713.1524
+// -----------------------------------------------------------------------------
+
 using Abatab.Core.Catalog.Definition;
 using Abatab.Core.Logger;
 using System.Reflection;
 
 namespace Abatab.Module.ProgressNote
 {
-    /// <summary>Summary goes here.</summary>
+    /// <summary>
+    /// Class summary goes here.
+    /// </summary>
     public static class Roundhouse
     {
-        /// <summary>Executing assembly name for log files.</summary>
+        /// <summary>
+        /// Executing assembly name for log files.
+        /// </summary>
+        /// <remarks>This is defined at the start of the class so it can be easily used throughout the method.</remarks>
         public static string AssemblyName { get; set; } = Assembly.GetExecutingAssembly().GetName().Name;
 
-        /// <include file='../../Abatab/src/docs/doc/xml/inc/Abatab.Module.ProgressNote.xmldoc' path='XMLDoc/Class[@name="ClassName"]/MethodName/*' />
+        /// <summary>
+        /// Method summary goes here.
+        /// </summary>
         public static void ParseCommand(AbSession abSession)
         {
             LogEvent.Trace("trace", abSession, AssemblyName);
@@ -35,8 +48,7 @@ namespace Abatab.Module.ProgressNote
                 default:
                     LogEvent.Trace("traceinternal", abSession, AssemblyName);
 
-                    // TODO - Exit gracefully.
-
+                    /* TODO: Make sure this exits gracefully. */
                     break;
             }
         }

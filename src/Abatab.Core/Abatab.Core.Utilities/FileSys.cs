@@ -6,15 +6,25 @@
 // Licensed under the Apache 2.0 license.
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
+// -----------------------------------------------------------------------------
+// Abatab.Core.Utility.FileSys.cs
+// Class summary goes here.
+// b230713.1524
+// -----------------------------------------------------------------------------
+
 using System.Collections.Generic;
 using System.IO;
 
 namespace Abatab.Core.Utility
 {
-    /// <summary>Summary goes here.</summary>
+    /// <summary>
+    /// Class summary goes here.
+    /// </summary>
     public static class FileSys
     {
-        /// <include file='../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Framework.xmldoc' path='XMLDoc/Class[@name="ClassName.cs"]/MethodName/*' />
+        /// <summary>
+        /// Method summary goes here.
+        /// </summary>
         public static void RefreshDirectory(string directory)
         {
             if (!Directory.Exists(directory))
@@ -25,7 +35,9 @@ namespace Abatab.Core.Utility
             _=Directory.CreateDirectory(directory);
         }
 
-        /// <include file='../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Framework.xmldoc' path='XMLDoc/Class[@name="ClassName.cs"]/MethodName/*' />
+        /// <summary>
+        /// Method summary goes here.
+        /// </summary>
         public static void RefreshDirectories(List<string> directories)
         {
             foreach (string directory in directories)
@@ -34,7 +46,9 @@ namespace Abatab.Core.Utility
             }
         }
 
-        /// <include file='../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Framework.xmldoc' path='XMLDoc/Class[@name="ClassName.cs"]/MethodName/*' />
+        /// <summary>
+        /// Method summary goes here.
+        /// </summary>
         public static void VerifyDirectory(string directory)
         {
             if (!Directory.Exists(directory))
@@ -43,7 +57,9 @@ namespace Abatab.Core.Utility
             }
         }
 
-        /// <include file='../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Framework.xmldoc' path='XMLDoc/Class[@name="ClassName.cs"]/MethodName/*' />
+        /// <summary>
+        /// Method summary goes here.
+        /// </summary>
         public static void VerifyDirectories(List<string> directories)
         {
             foreach (string directory in directories)
