@@ -6,18 +6,28 @@
 // Licensed under the Apache 2.0 license.
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
-/* DEVNOTE: The strings that these methods return use Markdown syntax, which creates a carriage return when a line ends
- * with two blank characters:
+// -----------------------------------------------------------------------------
+// Abatab.Core.Catalog.Component.Logger.cs
+// String values.
+// b230713.1524
+// -----------------------------------------------------------------------------
+
+/* DEVELOPER_NOTE
+ * The strings that these methods return use Markdown syntax, which creates a
+ * carriage return when a line ends with two blank characters:
  *
- *  $"**Mode:** {abSession.ModProgressNote.Mode}  {Environment.NewLine}"
- *                                              ^^
+ *      $"**Mode:** {abSession.ModProgressNote.Mode}  {Environment.NewLine}"
+ *                                                  ^^
  * Removing the blank characters will break the Markdown output.
  */
 
 namespace Abatab.Core.Catalog.Component
 {
-    /// <summary>Cues for logging functionality.</summary>
+    /// <summary>
+    /// Class summary goes here.
+    /// </summary>
     public static class Logger
     {
+        // No methods yet.
     }
 }

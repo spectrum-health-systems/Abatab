@@ -6,11 +6,18 @@
 // Licensed under the Apache 2.0 license.
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
-/* DEVNOTE: The strings that these methods return use Markdown syntax, which creates a carriage return when a line ends
- * with two blank characters:
+// -----------------------------------------------------------------------------
+// Abatab.Core.Catalog.Component.Setting.cs
+// String values.
+// b230713.1524
+// -----------------------------------------------------------------------------
+
+/* DEVELOPER_NOTE
+ * The strings that these methods return use Markdown syntax, which creates a
+ * carriage return when a line ends with two blank characters:
  *
- *  $"**Mode:** {abSession.ModProgressNote.Mode}  {Environment.NewLine}"
- *                                              ^^
+ *      $"**Mode:** {abSession.ModProgressNote.Mode}  {Environment.NewLine}"
+ *                                                  ^^
  * Removing the blank characters will break the Markdown output.
  */
 
@@ -19,10 +26,14 @@ using System;
 
 namespace Abatab.Core.Catalog.Component
 {
-    /// <summary>Cues for settings.</summary>
+    /// <summary>
+    /// Class summary goes here.
+    /// </summary>
     public static class Setting
     {
-        /// <include file='../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Catalog.xmldoc' path='XMLDoc/Class[@name="ClassName"]/MethodName/*' />
+        /// <summary>
+        /// Method summary goes here.
+        /// </summary>
         public static string Detail(AbSession abSession) =>
             $"**Abatab version:** {abSession.AbatabVersion}  {Environment.NewLine}" +
             $"**Abatab build:** {abSession.AbatabBuild}  {Environment.NewLine}" +
@@ -52,8 +63,9 @@ namespace Abatab.Core.Catalog.Component
             $"**Request action:** {abSession.RequestAction}  {Environment.NewLine}" +
             $"**Request option:** {abSession.RequestOption}  {Environment.NewLine}";
 
-
-        /// <include file='../../Abatab/src/docs/doc/xml/inc/Abatab.Core.Catalog.xmldoc' path='XMLDoc/Class[@name="ClassName"]/MethodName/*' />
+        /// <summary>
+        /// Method summary goes here.
+        /// </summary>
         public static string Current(AbSession abSession) =>
             $"> These settings are current as of {abSession.Datestamp}.{abSession.Timestamp} {Environment.NewLine}" +
             $"**Avatar version:** {abSession.AbatabVersion} {abSession.AbatabBuild}  {Environment.NewLine}" +

@@ -199,6 +199,10 @@ Each source code file has the following header, defined in the .editorconfig `fi
 /// </summary>
 
 /// <summary>
+/// Property description goes here.
+/// </summary>
+
+/// <summary>
 /// Executing assembly name for log files.
 /// </summary>
 /// <remarks>This is defined at the start of the class so it can be easily used throughout the method.</remarks>
