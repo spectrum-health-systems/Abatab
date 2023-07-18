@@ -12,9 +12,9 @@
 // b230718.1052
 // -----------------------------------------------------------------------------
 
-/* DEVNOTE:
- * The development version of Abatab is not intended for use in production
- * environments. Production environments should use the Abatab Community Release
+/* DEVNOTE: The development version of Abatab is not intended for use in
+ * production environments. Production environments should use the Abatab
+ * Community Release.
  * https://github.com/spectrum-health-systems/Abatab-Community-Release
  */
 
