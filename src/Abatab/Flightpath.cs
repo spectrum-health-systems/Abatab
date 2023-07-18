@@ -32,7 +32,7 @@ namespace Abatab
 
         /// <summary>Initialize a new Abatab session.</summary>
         /// <param name="abSession">The Abatab session object.</param>
-        /// <param name="scriptParameter"></param>
+        /// <param name="scriptParameter">The Script Parameter sent from myAvatar. <see href="https://github.com">[More info]</see></param>
         /// <param name="sentOptionObject"></param>
         public static void InitializeAbatab(AbSession abSession, string scriptParameter, OptionObject2015 sentOptionObject)
         {

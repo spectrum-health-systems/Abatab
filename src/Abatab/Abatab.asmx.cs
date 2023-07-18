@@ -42,7 +42,7 @@ namespace Abatab
 
         /// <summary>The starting point for Abatab.</summary>
         /// <param name="sentOptionObject">The OptionObject sent from myAvatar.</param>
-        /// <param name="scriptParameter">The Script Parameter sent from myAvatar.<see href="https://github.com">GitHub</see></param>
+        /// <param name="scriptParameter">The Script Parameter sent from myAvatar. <see href="https://github.com">[More info]</see></param>
         /// <remarks>
         /// This method is required by myAvatar.
         ///
