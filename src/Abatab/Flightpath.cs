@@ -9,7 +9,7 @@
 // -----------------------------------------------------------------------------
 // Abatab.Flightpath.cs
 // Logic for starting/stopping an Abatab session.
-// b230718.1041
+// b230718.1104
 // -----------------------------------------------------------------------------
 
 using Abatab.Core.Catalog.Definition;
@@ -23,20 +23,17 @@ using System.Reflection;
 
 namespace Abatab
 {
-    /// <summary>
-    /// Logic for starting/stopping an Abatab session.
-    /// </summary>
+    /// <summary>Logic for starting/stopping an Abatab session.</summary>
     public static class Flightpath
     {
-        /// <summary>
-        /// Executing assembly name for log files.
-        /// </summary>
+        /// <summary>Executing assembly name for log files.</summary>
         /// <remarks>This is defined at the start of the class so it can be easily used throughout the method.</remarks>
         public static string AssemblyName { get; set; } = Assembly.GetExecutingAssembly().GetName().Name;
 
-        /// <summary>
-        /// Initialize a new Abatab session.
-        /// </summary>
+        /// <summary>Initialize a new Abatab session.</summary>
+        /// <param name="abSession">The Abatab session object.</param>
+        /// <param name="scriptParameter"></param>
+        /// <param name="sentOptionObject"></param>
         public static void InitializeAbatab(AbSession abSession, string scriptParameter, OptionObject2015 sentOptionObject)
         {
             Debuggler.DebugLog(Settings.Default.DebugglerMode, Assembly.GetExecutingAssembly().GetName().Name);
@@ -45,9 +42,8 @@ namespace Abatab
             Validate.Status(abSession);
         }
 
-        /// <summary>
-        /// Finalizes an Abatab session.
-        /// </summary>
+        /// <summary>Finalizes an Abatab session.</summary>
+        /// <param name="abSession"></param>
         public static void WrapUpAbatab(AbSession abSession)
         {
             LogEvent.Trace("trace", abSession, AssemblyName);

@@ -12,10 +12,8 @@
 // b230718.1052
 // -----------------------------------------------------------------------------
 
-/* DEVNOTE: The development version of Abatab is not intended for use in
- * production environments. Production environments should use the Abatab
- * Community Release.
- * https://github.com/spectrum-health-systems/Abatab-Community-Release
+/* DEVNOTE: The development version of Abatab is not intended for use in production environments, which should use the
+ * Abatab Community Release: https://github.com/spectrum-health-systems/Abatab-Community-Release
  */
 
 using Abatab.Core.Catalog.Definition;
@@ -27,20 +25,14 @@ using System.Web.Services;
 
 namespace Abatab
 {
-    /// <summary>
-    /// Entry point for Abatab.
-    /// </summary>
+    /// <summary>Entry point for Abatab.</summary>
     [WebService(Namespace = "http://tempuri.org/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
     public class Abatab : WebService
     {
-        /// <summary>
-        /// Returns the current version of Abatab.
-        /// </summary>
-        /// <remarks>
-        /// This method is required by myAvatar.
-        /// </remarks>
+        /// <summary>Returns the current version of Abatab.</summary>
+        /// <remarks>This method is required by myAvatar.</remarks>
         /// <returns>The current version of Abatab.</returns>
         [WebMethod]
         public string GetVersion()
@@ -48,13 +40,12 @@ namespace Abatab
             return "VERSION 23.7";
         }
 
-        /// <summary>
-        /// The starting point for Abatab.
-        /// </summary>
+        /// <summary>The starting point for Abatab.</summary>
         /// <param name="sentOptionObject">The OptionObject sent from myAvatar.</param>
         /// <param name="scriptParameter">The Script Parameter sent from myAvatar.</param>
         /// <remarks>
         /// This method is required by myAvatar.
+        /// This is a test
         /// </remarks>
         /// <returns>The finalized OptionObject to myAvatar.</returns>
         [WebMethod]
