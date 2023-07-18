@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Abatab.Core.Utilities</name>
+    </assembly>
+    <members>
+        <member name="T:Abatab.Core.Utility.ConvertCollection">
+            <summary>
+            Class summary goes here.
+            </summary>
+        </member>
+        <member name="M:Abatab.Core.Utility.ConvertCollection.ArrayToList(System.String[])">
+            <summary>
+            Method summary goes here.
+            </summary>
+        </member>
+        <member name="M:Abatab.Core.Utility.ConvertCollection.ListToString(System.Collections.Generic.List{System.String})">
+            <summary>
+            Method summary goes here.
+            </summary>
+        </member>
+        <member name="M:Abatab.Core.Utility.ConvertCollection.ListToNewLineString(System.Collections.Generic.List{System.String})">
+            <summary>
+            Method summary goes here.
+            </summary>
+        </member>
+        <member name="T:Abatab.Core.Utility.FileSys">
+            <summary>
+            Class summary goes here.
+            </summary>
+        </member>
+        <member name="M:Abatab.Core.Utility.FileSys.RefreshDirectory(System.String)">
+            <summary>
+            Method summary goes here.
+            </summary>
+        </member>
+        <member name="M:Abatab.Core.Utility.FileSys.RefreshDirectories(System.Collections.Generic.List{System.String})">
+            <summary>
+            Method summary goes here.
+            </summary>
+        </member>
+        <member name="M:Abatab.Core.Utility.FileSys.VerifyDirectory(System.String)">
+            <summary>
+            Method summary goes here.
+            </summary>
+        </member>
+        <member name="M:Abatab.Core.Utility.FileSys.VerifyDirectories(System.Collections.Generic.List{System.String})">
+            <summary>
+            Method summary goes here.
+            </summary>
+        </member>
+        <member name="T:Abatab.Core.Utility.Debuggler">
+            <summary>
+            Primeval log logic.
+            </summary>
+        </member>
+        <member name="M:Abatab.Core.Utility.Debuggler.DebugLog(System.String,System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Method summary goes here.
+            </summary>
+        </member>
+        <member name="M:Abatab.Core.Utility.Debuggler.PrimevalLog(System.String)">
+            <summary>
+            Method summary goes here.
+            </summary>
+        </member>
+        <member name="T:Abatab.Core.Utility.FileIO">
+            <summary>
+            Class summary goes here.
+            </summary>
+        </member>
+        <member name="M:Abatab.Core.Utility.FileIO.WriteLocal(System.String,System.String,System.Int32)">
+            <summary>
+            Method summary goes here.
+            </summary>
+        </member>
+        <member name="T:Abatab.Core.Utilities.JsonData">
+            <summary>
+            Class summary goes here.
+            </summary>
+        </member>
+        <member name="M:Abatab.Core.Utilities.JsonData.SerializeData">
+            <summary>
+            Method summary goes here.
+            </summary>
+        </member>
+        <member name="M:Abatab.Core.Utilities.JsonData.DeserializeData">
+            <summary>
+            Method summary goes here.
+            </summary>
+        </member>
+    </members>
+</doc>

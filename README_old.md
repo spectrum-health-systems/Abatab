@@ -1,52 +1,129 @@
 <div align="center">
 
-  ![BranchWarning][BranchWarning]
-  
-  **This is a development branch of Abatab, and is not intended for use in production environments!**
+  <br>
 
-  Please use the current [Abatab Community Release](https://github.com/spectrum-health-systems/Abatab-Community-Release) instead.
+  ![BranchWarning](https://img.shields.io/badge/WARNING!-THIS%20IS%20BETA%20SOFTWARE-FF160C?style=for-the-badge) 
+  
+  **AND**
+  
+  ![BranchWarning](https://img.shields.io/badge/THIS%20IS%20A-DEVELOPMENT%20BRANCH-ffd700?style=for-the-badge)
+
+  **SO...**
+
+  <h2>
+
+  **DO NOT USE THIS SOURCE CODE IN PRODUCTION ENVIRONMENTS!**
+
+  </h2>
+
+  If you want to use Abatab in a production environment, use the [Abatab Community Release](https://github.com/spectrum-health-systems/Abatab-Community-Release).
 
   ***
 
-  [![AbatabLogo][AbatabLogo]][AbatabRepoUrl]
+  <br>
+  
+  ![AbatabLogo](./.github/images/logo/app/AbatabLogo.png)
 
-# A custom web service for Netsmart's myAvatar™ EHR
+  <br>
 
-  ![RepoStatus][RepoStatus]&nbsp;&nbsp;[![AbatabLicense][AbatabLicense]][AbatabLicenseUrl]&nbsp;&nbsp;[![AbatabCurrentRelease][AbatabCurrentRelease]][AbatabCurrentReleaseUrl]
+  ![RepoStatus](https://img.shields.io/badge/status-Active-brightgreen?style=flat)&nbsp;&nbsp;![AbatabLicense](https://img.shields.io/github/license/spectrum-health-systems/abatab)&nbsp;&nbsp;![AbatabCurrentRelease](https://img.shields.io/github/v/release/spectrum-health-systems/Abatab?style=flat)
 
 </div>
 
-# About
+<br>
 
-[Netsmart's myAvatar™][MyAvatarUrl] is a behavioral health EHR that offers a recovery-focused suite of solutions that leverage real-time analytics and clinical decision support to drive value-based care.
+# About this repository
 
-While myAvatar™ is a robust platform, it isn't perfect. The good news is that you can extend myAvatar™ functionality via Netsmart's myAvatar™ Web Services, and/or custom web services that are written by other myAvatar™ users.
+This repository is for **development versions** of Abatab, which **are not intended for use in production environments**.
 
-**Abatab** is one such custom web service which includes various tools and utilities for myAvatar™ that aren't included in the official release, and provides a solid foundation for building additional functionality quickly and efficiently.
+If you want to use Abatab in a production environment, use the [Abatab Community Release](https://github.com/spectrum-health-systems/Abatab-Community-Release).
 
-## Features
+<br>
 
-* Several built-in tools and utilities for use with myAvatar™
-* Does not require Java to be installed
-* A solid foundation to build additional myAvatar™ custom tools and utilities
+# Abatab development
 
-## Requirements
+The current development version of Abatab is `v23.6`.
+
+Since this a development version of Abatab:
+
+* There probably will be broken/missing functionality!
+* There definately Will have lots of ugly, gross code!
+* There will be extensive comments!
+* It might not even work!
+
+
+
+<br>
+
+# Development workflow
+
+The Abatab development workflow is:
+
+```mermaid
+
+graph LR
+  VersionBranch[Version Branch] --> DevelopmentBranch[Development Branch] --> MainBranch[Main Branch]
+```
+
+For example (and you can click on these to see where they end up):
+
+```mermaid
+
+graph LR
+  25.5d --> development --> main
+
+  click 25.5d "https://github.com/spectrum-health-systems/Abatab/tree/23.5d"
+  click development "https://github.com/spectrum-health-systems/Abatab/tree/development"
+  click main "https://github.com/spectrum-health-systems/Abatab"
+```
+
+## Version Branch
+
+The majority of development is done in the **Version Branch**, including additions and updates to documentation.
+
+The version branch name is the version being developed (e.g., `23.5`)
+
+The version branch is not deployed to the web service host.
+
+### Release types
+
+When a version of Abatab is completed and released, the branch is renamed to `YY.MMx`, where `x` is:
+
+* `d` for development branches that may not be fully functional
+* `f` for final branches that have been tested and are fully functional
+
+## Development branch
+
+Once the version branch is stable, it is merged with the **Development Branch**.
+
+This is the branch that is deployed to the web service host, and used for testing.
+
+## Main branch
+
+When testing functionality in the development branch is complete, it is merged with the **Main Branch**.
+
+This is the official current development release of Abatab.
+
+
+
+<br>
+
+# Contributing
+
+If you are interested in Abatab development, you will need:
 
 * A location to host the Abatab which meets the following requirements:
 * .NET Framework 4.8+ installed
 * Access to yourmyAvatar™ environments via HTTPS
-
-### Development requirements
-
-* The [OptionObject2015][OptionObject2015]
+* [ScriptLink Standard](https://github.com/rcskids/ScriptLinkStandard)
 
 <br>
 
-# The Abatab Manual
+# Additional information
 
-> PLEASE NOTE: As of version 23.2, Abatab documentation is in active development, and may be incomplete and/or innacurate. The plan is to have the documentation complete for the Spring23 Community Release.
+For Abatab changes, please see the [development changelog](./src/docs/doc/CHANGELOG.md)
 
-For everything else, please see the [Abatab documentation][AbatabDocumentation].
+Details on upcoming Abatab functionality can be found in the [Abatab Development Roadmap](https://github.com/orgs/spectrum-health-systems/projects/25/views/2)
 
 <br>
 
@@ -54,20 +131,7 @@ For everything else, please see the [Abatab documentation][AbatabDocumentation].
 
 ***
 
-Abatab is developed by [A Pretty Cool Program][APrettyCoolProgramUrl]
+Abatab is developed by:<br>
+[A Pretty Cool Program](https://github.com/APrettyCoolProgram)
 
 </div>
-
-<!-- REFERENCE LINKS -->
-[BranchWarning]: https://img.shields.io/badge/WARNING-THIS%20IS%20BETA%20SOFTWARE-FF160C?style=for-the-badge
-[AbatabRepoUrl]: README.md
-[AbatabLogo]: ./resources/images/logos/AbatabLogo.png
-[RepoStatus]: https://img.shields.io/badge/status-Active-brightgreen?style=flat
-[AbatabLicense]: https://img.shields.io/github/license/spectrum-health-systems/Abatab?style=flat
-[AbatabLicenseUrl]: https://www.apache.org/licenses/LICENSE-2.0
-[AbatabCurrentRelease]: https://img.shields.io/github/v/release/spectrum-health-systems/Abatab?style=flat
-[AbatabCurrentReleaseUrl]: https://github.com/spectrum-health-systems/Abatab/releases
-[OptionObject2015]: https://github.com/spectrum-health-systems/.github/blob/profile/Third-party%20components/Netsmart/OptionObject2015/136_4354_20.7z
-[AbatabDocumentation]: https://spectrum-health-systems.github.io/Abatab/
-[MyAvatarUrl]: https://www.ntst.com/Solutions-and-Services/Offerings/myAvatar
-[APrettyCoolProgramUrl]: https://github.com/APrettyCoolProgram 

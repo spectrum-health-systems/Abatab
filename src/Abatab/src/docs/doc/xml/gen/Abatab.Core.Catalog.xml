@@ -1,0 +1,467 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Abatab.Core.Catalog</name>
+    </assembly>
+    <members>
+        <member name="T:Abatab.Core.Catalog.Body.Module">
+            <summary>
+            Class summary goes here.
+            </summary>
+        </member>
+        <member name="M:Abatab.Core.Catalog.Body.Module.Standard(Abatab.Core.Catalog.Definition.AbSession)">
+            <summary>
+            Method summary goes here.
+            </summary>
+        </member>
+        <member name="T:Abatab.Core.Catalog.Body.OptionObject">
+            <summary>
+            Class summary goes here.
+            </summary>
+        </member>
+        <member name="M:Abatab.Core.Catalog.Body.OptionObject.Standard(Abatab.Core.Catalog.Definition.AbSession)">
+            <summary>
+            Method summary goes here.
+            </summary>
+        </member>
+        <member name="T:Abatab.Core.Catalog.Body.Setting">
+            <summary>
+            Class summary goes here.
+            </summary>
+        </member>
+        <member name="M:Abatab.Core.Catalog.Body.Setting.Standard(Abatab.Core.Catalog.Definition.AbSession)">
+            <summary>
+            Method summary goes here.
+            </summary>
+        </member>
+        <member name="M:Abatab.Core.Catalog.Body.Setting.Current(Abatab.Core.Catalog.Definition.AbSession)">
+            <summary>
+            Method summary goes here.
+            </summary>
+        </member>
+        <member name="T:Abatab.Core.Catalog.Component.Logger">
+            <summary>
+            Class summary goes here.
+            </summary>
+        </member>
+        <member name="T:Abatab.Core.Catalog.Component.OptionObject">
+            <summary>
+            Class summary goes here.
+            </summary>
+        </member>
+        <member name="M:Abatab.Core.Catalog.Component.OptionObject.SentObject(Abatab.Core.Catalog.Definition.AbSession)">
+            <summary>
+            Method summary goes here.
+            </summary>
+        </member>
+        <member name="M:Abatab.Core.Catalog.Component.OptionObject.ReturnObject(Abatab.Core.Catalog.Definition.AbSession)">
+            <summary>
+            Method summary goes here.
+            </summary>
+        </member>
+        <member name="T:Abatab.Core.Catalog.Component.Setting">
+            <summary>
+            Class summary goes here.
+            </summary>
+        </member>
+        <member name="M:Abatab.Core.Catalog.Component.Setting.Detail(Abatab.Core.Catalog.Definition.AbSession)">
+            <summary>
+            Method summary goes here.
+            </summary>
+        </member>
+        <member name="M:Abatab.Core.Catalog.Component.Setting.Current(Abatab.Core.Catalog.Definition.AbSession)">
+            <summary>
+            Method summary goes here.
+            </summary>
+        </member>
+        <member name="T:Abatab.Core.Catalog.Component.Utility">
+            <summary>
+            Class summary goes here.
+            </summary>
+        </member>
+        <member name="T:Abatab.Core.Catalog.Component.ModPrototype">
+            <summary>
+            Class summary goes here.
+            </summary>
+        </member>
+        <member name="M:Abatab.Core.Catalog.Component.ModPrototype.Detail(Abatab.Core.Catalog.Definition.AbSession)">
+            <summary>
+            Method summary goes here.
+            </summary>
+        </member>
+        <member name="T:Abatab.Core.Catalog.Component.ModQuickMedicationOrder">
+            <summary>
+            Class summary goes here.
+            </summary>
+        </member>
+        <member name="M:Abatab.Core.Catalog.Component.ModQuickMedicationOrder.Detail(Abatab.Core.Catalog.Definition.AbSession)">
+            <summary>
+            Method summary goes here.
+            </summary>
+        </member>
+        <member name="T:Abatab.Core.Catalog.Component.ModTesting">
+            <summary>
+            Class summary goes here.
+            </summary>
+        </member>
+        <member name="M:Abatab.Core.Catalog.Component.ModTesting.Detail(Abatab.Core.Catalog.Definition.AbSession)">
+            <summary>
+            Method summary goes here.
+            </summary>
+        </member>
+        <member name="T:Abatab.Core.Catalog.Component.ModProgressNote">
+            <summary>
+            Class summary goes here.
+            </summary>
+        </member>
+        <member name="M:Abatab.Core.Catalog.Component.ModProgressNote.Detail(Abatab.Core.Catalog.Definition.AbSession)">
+            <summary>
+            Method summary goes here.
+            </summary>
+        </member>
+        <member name="M:Abatab.Core.Catalog.Component.ModProgressNote.VfyLocMessage(Abatab.Core.Catalog.Definition.AbSession,System.String)">
+            <summary>
+            Method summary goes here.
+            </summary>
+        </member>
+        <member name="T:Abatab.Core.Catalog.Output.Session">
+            <summary>
+            Class summary goes here.
+            </summary>
+        </member>
+        <member name="M:Abatab.Core.Catalog.Output.Session.Complete(Abatab.Core.Catalog.Definition.AbSession)">
+            <summary>
+            Method summary goes here.
+            </summary>
+        </member>
+        <member name="T:Abatab.Core.Catalog.Output.Setting">
+            <summary>
+            Class summary goes here.
+            </summary>
+        </member>
+        <member name="M:Abatab.Core.Catalog.Output.Setting.Current(Abatab.Core.Catalog.Definition.AbSession)">
+            <summary>
+            Method summary goes here.
+            </summary>
+        </member>
+        <member name="T:Abatab.Core.Catalog.Key.Directories">
+            <summary>
+            Pre-defined lists of directories.
+            </summary>
+        </member>
+        <member name="M:Abatab.Core.Catalog.Key.Directories.Framework(Abatab.Core.Catalog.Definition.AbSession)">
+            <summary>
+            Method summary goes here.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Abatab.Core.Catalog.Key.Directories.Session(Abatab.Core.Catalog.Definition.AbSession)" -->
+        <member name="T:Abatab.Core.Catalog.Definition.AbSession">
+            <summary>
+            Properties for the AbSession object.
+            </summary>
+            <remarks>
+            The AbSession object contains all of the necessary information that Abatab needs to do what it does.
+            </remarks>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.AbSession.AbatabVersion">
+            <summary>
+            Property description goes here.
+            </summary>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.AbSession.AbatabBuild">
+            <summary>
+            Property description goes here.
+            </summary>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.AbSession.AbatabServiceRoot">
+            <summary>
+            Property description goes here.
+            </summary>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.AbSession.AbatabDataRoot">
+            <summary>
+            Property description goes here.
+            </summary>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.AbSession.LoggerMode">
+            <summary>
+            Property description goes here.
+            </summary>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.AbSession.LoggerTypes">
+            <summary>
+            Property description goes here.
+            </summary>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.AbSession.LoggerDelay">
+            <summary>
+            Property description goes here.
+            </summary>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.AbSession.AvatarEnvironment">
+            <summary>
+            Property description goes here.
+            </summary>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.AbSession.AbatabFallbackUserName">
+            <summary>
+            Property description goes here.
+            </summary>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.AbSession.AbatabEmailAddress">
+            <summary>
+            Property description goes here.
+            </summary>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.AbSession.AbatabEmailPassword">
+            <summary>
+            Property description goes here.
+            </summary>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.AbSession.DebugglerMode">
+            <summary>
+            Property description goes here.
+            </summary>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.AbSession.Datestamp">
+            <summary>
+            Property description goes here.
+            </summary>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.AbSession.Timestamp">
+            <summary>
+            Property description goes here.
+            </summary>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.AbSession.RequestModule">
+            <summary>
+            Property description goes here.
+            </summary>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.AbSession.RequestCommand">
+            <summary>
+            Property description goes here.
+            </summary>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.AbSession.RequestAction">
+            <summary>
+            Property description goes here.
+            </summary>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.AbSession.RequestOption">
+            <summary>
+            Property description goes here.
+            </summary>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.AbSession.AbatabUserName">
+            <summary>
+            Property description goes here.
+            </summary>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.AbSession.SessionDataRoot">
+            <summary>
+            Property description goes here.
+            </summary>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.AbSession.SessionDataDirectory">
+            <summary>
+            Property description goes here.
+            </summary>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.AbSession.TraceLogDirectory">
+            <summary>
+            Property description goes here.
+            </summary>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.AbSession.WarningLogDirectory">
+            <summary>
+            Property description goes here.
+            </summary>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.AbSession.PublicDataRoot">
+            <summary>
+            Property description goes here.
+            </summary>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.AbSession.AlertLogDirectory">
+            <summary>
+            Property description goes here.
+            </summary>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.AbSession.DebugglerLogDirectory">
+            <summary>
+            Property description goes here.
+            </summary>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.AbSession.SentOptionObject">
+            <summary>
+            Property description goes here.
+            </summary>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.AbSession.ReturnOptionObject">
+            <summary>
+            Property description goes here.
+            </summary>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.AbSession.ModProgNote">
+            <summary>
+            Property description goes here.
+            </summary>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.AbSession.ModProto">
+            <summary>
+            Property description goes here.
+            </summary>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.AbSession.ModQMedOrdr">
+            <summary>
+            Property description goes here.
+            </summary>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.AbSession.ModTesting">
+            <summary>
+            Property description goes here.
+            </summary>
+        </member>
+        <member name="T:Abatab.Core.Catalog.Definition.ModProgNote">
+            <summary>
+            Class summary goes here.
+            </summary>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.ModProgNote.Mode">
+            <summary>
+            Property description goes here.
+            </summary>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.ModProgNote.Users">
+            <summary>
+            Property description goes here.
+            </summary>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.ModProgNote.ServiceChargeCodeFieldId">
+            <summary>
+            Property description goes here.
+            </summary>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.ModProgNote.FlaggedServiceChargeCodePrefixes">
+            <summary>
+            Property description goes here.
+            </summary>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.ModProgNote.FlaggedServiceChargeCodeCodes">
+            <summary>
+            Property description goes here.
+            </summary>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.ModProgNote.LocationFieldId">
+            <summary>
+            Property description goes here.
+            </summary>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.ModProgNote.ValidLocationCodes">
+            <summary>
+            Property description goes here.
+            </summary>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.ModProgNote.ValidLocationNames">
+            <summary>
+            Property description goes here.
+            </summary>
+        </member>
+        <member name="T:Abatab.Core.Catalog.Definition.ModProto">
+            <summary>
+            Class summary goes here.
+            </summary>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.ModProto.Mode">
+            <summary>
+            Property description goes here.
+            </summary>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.ModProto.Users">
+            <summary>
+            Property description goes here.
+            </summary>
+        </member>
+        <member name="T:Abatab.Core.Catalog.Definition.ModQMedOrdr">
+            <summary>
+            Class summary goes here.
+            </summary>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.ModQMedOrdr.Mode">
+            <summary>
+            Property description goes here.
+            </summary>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.ModQMedOrdr.Users">
+            <summary>
+            Property description goes here.
+            </summary>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.ModQMedOrdr.OrderTypeFieldId">
+            <summary>
+            Property description goes here.
+            </summary>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.ModQMedOrdr.ValidOrderTypes">
+            <summary>
+            Property description goes here.
+            </summary>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.ModQMedOrdr.LastOrderScheduleFieldId">
+            <summary>
+            Property description goes here.
+            </summary>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.ModQMedOrdr.LastOrderScheduleText">
+            <summary>
+            Property description goes here.
+            </summary>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.ModQMedOrdr.LastScheduledDosage">
+            <summary>
+            Property description goes here.
+            </summary>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.ModQMedOrdr.PreviousDosePrefix">
+            <summary>
+            Property description goes here.
+            </summary>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.ModQMedOrdr.PreviousDoseSuffix">
+            <summary>
+            Property description goes here.
+            </summary>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.ModQMedOrdr.DosageOneFieldId">
+            <summary>
+            Property description goes here.
+            </summary>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.ModQMedOrdr.CurrentDosage">
+            <summary>
+            Property description goes here.
+            </summary>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.ModQMedOrdr.DosePercentBoundary">
+            <summary>
+            Property description goes here.
+            </summary>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.ModQMedOrdr.DoseMilligramBoundary">
+            <summary>
+            Property description goes here.
+            </summary>
+        </member>
+        <member name="T:Abatab.Core.Catalog.Definition.ModTesting">
+            <summary>
+            Class summary goes here.
+            </summary>
+        </member>
+        <member name="P:Abatab.Core.Catalog.Definition.ModTesting.Mode">
+            <summary>
+            Property description goes here.
+            </summary>
+        </member>
+    </members>
+</doc>

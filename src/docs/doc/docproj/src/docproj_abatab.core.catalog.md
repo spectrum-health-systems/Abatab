@@ -1,1 +1,0 @@
-﻿# Abatab.Core.Catalog

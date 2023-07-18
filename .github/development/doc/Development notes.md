@@ -97,3 +97,132 @@ Keyword abbreviations are 4 characters.
 `43AA8B`: ScriptLinkStandard  
 `F9C74F`:  
 `90BE6D`:  
+
+
+# New deployment
+
+See "Abatab Lieutenant" for more info
+
+
+
+# Comments
+
+## Types of comments
+
+`// Documentation`  
+`/* Narrative */`  
+`/// XML`
+
+## Better Comments
+
+Abatab uses the [Better Comments VS2022](https://marketplace.visualstudio.com/items?itemName=OmarRwemi.BetterCommentsVS2022) extension.
+
+### Developer notes
+
+Developer notes are contained in `/* DEVELOPER_NOTE */`
+
+Example:
+
+```csharp
+/* DEVELOPER_NOTE
+ * This is an example of a developer note.
+ * More info.
+ * Even more info
+ */
+```
+
+### Questions
+
+Questions are contained in `/* QUESTION */`
+
+Example:
+
+```csharp
+/* QUESTION
+ * This is a question
+ */
+```
+
+### TODO
+
+Todos are contained in `/* TODO */`
+
+```csharp
+/* TODO
+ * Refactor this thing.
+ * GitHub issue #123
+ */
+```
+
+# Headers
+
+## Source code header
+
+Each source code file has the following header, defined in the .editorconfig `file_header_template`
+
+```csharp
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+// Abatab v23.7.0.0
+// A custom web service/framework for myAvatar.
+// https://github.com/spectrum-health-systems/Abatab
+// Copyright (c) A Pretty Cool Program. All rights reserved.
+// Licensed under the Apache 2.0 license.
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+```
+## Class header
+
+```csharp
+// -----------------------------------------------------------------------------
+// Abatab.asmx.cs
+// Entry point for Abatab.
+// b230713.1524
+// -----------------------------------------------------------------------------
+```
+
+
+
+
+
+
+/* DEVELOPER_NOTE
+ * We want to write this all the time, so the depreciated code below is probably not needed.
+ */
+
+/* TODO: Make sure this exits gracefully. */
+
+
+/* REVIEW: Can a trace log go here? */
+
+
+/// <summary>
+/// Class summary goes here.
+/// </summary>
+
+/// <summary>
+/// Method summary goes here.
+/// </summary>
+
+/// <summary>
+/// Property description goes here.
+/// </summary>
+
+/// <summary>
+/// Executing assembly name for log files.
+/// </summary>
+/// <remarks>This is defined at the start of the class so it can be easily used throughout the method.</remarks>
+
+
+
+`/* *****************************************************************************`
+
+`/* =============================================================================`
+
+`/* -----------------------------------------------------------------------------`
+
+ * Abatab v23.7.0.0
+ * A custom web service/framework for Netsmart's myAvatar EHR.
+ * https://github.com/spectrum-health-systems/Abatab
+ * -----------------------------------------------------------------------------
+ * Developed by A Pretty Cool Program (https://github.com/APrettyCoolProgram)
+ * Apache 2.0 (https://www.apache.org/licenses/LICENSE-2.0.html)
+ * #############################################################################
