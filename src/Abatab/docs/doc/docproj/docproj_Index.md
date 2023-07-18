@@ -1,6 +1,6 @@
 # The Abatab Documentation Project
 
-The goal of the Abatab Documenation Project is to provide useful documenation for Abatab development purposes.
+The goal of the Abatab Documentation Project is to provide useful documentation for Abatab development purposes.
 
 ## Development documentation
 
