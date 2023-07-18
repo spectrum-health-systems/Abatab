@@ -12,12 +12,9 @@
 // b230718.1052
 // -----------------------------------------------------------------------------
 
-/* DEVNOTE
- * This is the development version of Abatab, which is not intended for use in production environments.
- *
- * If you want to use Abatab in a production environment, you should use the Abatab Community Release:
- *
- *      https://github.com/spectrum-health-systems/Abatab-Community-Release
+/* DEVNOTE: This is the development version of Abatab, which is not intended for use in production environments. If you
+ * want to use Abatab in a production environment, you should use the Abatab Community Release:
+ * https://github.com/spectrum-health-systems/Abatab-Community-Release
  */
 
 using Abatab.Core.Catalog.Definition;
