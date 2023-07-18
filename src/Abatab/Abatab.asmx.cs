@@ -9,11 +9,15 @@
 // -----------------------------------------------------------------------------
 // Abatab.asmx.cs
 // Entry point for Abatab.
-// b230713.1524
+// b230718.1052
 // -----------------------------------------------------------------------------
 
 /* DEVNOTE
- * Write something about Abatab here.
+ * This is the development version of Abatab, which is not intended for use in production environments.
+ *
+ * If you want to use Abatab in a production environment, you should use the Abatab Community Release:
+ *
+ *      https://github.com/spectrum-health-systems/Abatab-Community-Release
  */
 
 using Abatab.Core.Catalog.Definition;
@@ -34,9 +38,12 @@ namespace Abatab
     public class Abatab : WebService
     {
         /// <summary>
-        /// Method summary goes here.
+        /// Returns the current version of Abatab.
         /// </summary>
-        /// <remarks>This method is required by myAvatar.</remarks>
+        /// <remarks>
+        /// This method is required by myAvatar.
+        /// </remarks>
+        /// <returns>The current version of Abatab.</returns>
         [WebMethod]
         public string GetVersion()
         {
@@ -44,9 +51,14 @@ namespace Abatab
         }
 
         /// <summary>
-        /// Method summary goes here.
+        /// The starting point for Abatab.
         /// </summary>
-        /// <remarks>This method is required by myAvatar.</remarks>
+        /// <param name="sentOptionObject">The OptionObject sent from myAvatar.</param>
+        /// <param name="scriptParameter">The Script Parameter sent from myAvatar.</param>
+        /// <remarks>
+        /// This method is required by myAvatar.
+        /// </remarks>
+        /// <returns>The finalized OptionObject to myAvatar.</returns>
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string scriptParameter)
         {
@@ -57,16 +69,13 @@ namespace Abatab
             if (Settings.Default.AbatabMode == "enabled")
             {
                 Flightpath.InitializeAbatab(abSession, scriptParameter, sentOptionObject);
-
                 Roundhouse.ParseModule(abSession);
-
                 Flightpath.WrapUpAbatab(abSession);
             }
             else
             {
                 Debuggler.PrimevalLog("disabled");
             }
-
             return abSession.ReturnOptionObject;
         }
     }

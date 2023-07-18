@@ -9,8 +9,13 @@
 // -----------------------------------------------------------------------------
 // Abatab.Roundhouse.cs
 // Logic for parsing the module component of the Script Parameter.
-// b230713.1524
+// b230718.1044
 // -----------------------------------------------------------------------------
+
+/* DEVNOTE
+ *
+ */
+
 
 using Abatab.Core.Catalog.Definition;
 using Abatab.Core.Logger;
@@ -23,9 +28,7 @@ namespace Abatab
     /// </summary>
     public static class Roundhouse
     {
-        /// <summary>
-        /// Executing assembly name for log files.
-        /// </summary>
+        /// <summary>Executing assembly name for log files.</summary>
         /// <remarks>This is defined at the start of the class so it can be easily used throughout the method.</remarks>
         public static string AssemblyName { get; set; } = Assembly.GetExecutingAssembly().GetName().Name;
 

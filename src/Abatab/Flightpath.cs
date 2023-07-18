@@ -9,7 +9,7 @@
 // -----------------------------------------------------------------------------
 // Abatab.Flightpath.cs
 // Logic for starting/stopping an Abatab session.
-// b230713.1524
+// b230718.1041
 // -----------------------------------------------------------------------------
 
 using Abatab.Core.Catalog.Definition;
@@ -35,21 +35,18 @@ namespace Abatab
         public static string AssemblyName { get; set; } = Assembly.GetExecutingAssembly().GetName().Name;
 
         /// <summary>
-        /// Method summary goes here.
+        /// Initialize a new Abatab session.
         /// </summary>
         public static void InitializeAbatab(AbSession abSession, string scriptParameter, OptionObject2015 sentOptionObject)
         {
             Debuggler.DebugLog(Settings.Default.DebugglerMode, Assembly.GetExecutingAssembly().GetName().Name);
-
             WebConfig.Load(abSession);
-
             Build.NewSession(sentOptionObject, scriptParameter, abSession);
-
             Validate.Status(abSession);
         }
 
         /// <summary>
-        /// Method summary goes here.
+        /// Finalizes an Abatab session.
         /// </summary>
         public static void WrapUpAbatab(AbSession abSession)
         {
