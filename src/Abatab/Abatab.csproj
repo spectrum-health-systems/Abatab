@@ -176,6 +176,10 @@
       <Project>{C94AF429-C995-4E3F-9ACF-E989FC95F7EA}</Project>
       <Name>Abatab.Core.Logger</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Abatab.Core\Abatab.Core.Messaging\Abatab.Core.Messaging.csproj">
+      <Project>{e71d6257-73ff-4d89-9aa5-fc3a27346146}</Project>
+      <Name>Abatab.Core.Messaging</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Abatab.Core\Abatab.Core.Session\Abatab.Core.Session.csproj">
       <Project>{67D07064-68D8-4AEB-A562-093FA9973B43}</Project>
       <Name>Abatab.Core.Session</Name>
@@ -219,6 +223,10 @@
     <ProjectReference Include="..\Abatab.Sandbox\Abatab.Sandbox.DevTwo\Abatab.Sandbox.DevTwo.csproj">
       <Project>{655f2443-890a-429d-a0e5-e2161a13bfe3}</Project>
       <Name>Abatab.Sandbox.DevTwo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Abatab.ThirdParty\DocFX\DocFX.csproj">
+      <Project>{f13365be-b3c8-4d2e-b35d-a169cd6850d3}</Project>
+      <Name>DocFX</Name>
     </ProjectReference>
     <ProjectReference Include="..\Abatab.ThirdParty\ScriptLinkStandard\ScriptLinkStandard.csproj">
       <Project>{de6dbd70-a9a9-444b-bd09-9a1b50204add}</Project>
