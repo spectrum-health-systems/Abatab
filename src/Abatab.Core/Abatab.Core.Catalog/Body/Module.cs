@@ -8,7 +8,7 @@
 // -----------------------------------------------------------------------------
 // Abatab.Core.Catalog.Body.Module.cs
 // String values.
-// b230713.1524
+// b230807.1407
 // -----------------------------------------------------------------------------
 
 /* DEVNOTE
@@ -20,19 +20,19 @@
  * Removing the blank characters will break the Markdown output.
  */
 
+// REVIEW Maybe move away from string concat for these?
+
 using Abatab.Core.Catalog.Definition;
 using System;
 
 namespace Abatab.Core.Catalog.Body
 {
-    /// <summary>
-    /// Class summary goes here.
-    /// </summary>
+    /// <summary>Body strings for modules.</summary>
     public static class Module
     {
-        /// <summary>
-        /// Method summary goes here.
-        /// </summary>
+        /// <summary>Creates a standard module information body.</summary>
+        /// <param name="abSession">The Abatab session object.</param>
+        /// <returns>A standard module information body.</returns>
         public static string Standard(AbSession abSession) =>
             "## Modules" +
             Environment.NewLine +

@@ -8,10 +8,10 @@
 // -----------------------------------------------------------------------------
 // Abatab.Core.Catalog.Component.ModProgressNotes.cs
 // String values.
-// b230713.1524
+// b230807.1410
 // -----------------------------------------------------------------------------
 
-/* DEVELOPER_NOTE
+/* DEVNOTE
  * The strings that these methods return use Markdown syntax, which creates a
  * carriage return when a line ends with two blank characters:
  *
@@ -26,14 +26,12 @@ using System;
 
 namespace Abatab.Core.Catalog.Component
 {
-    /// <summary>
-    /// Class summary goes here.
-    /// </summary>
+    /// <summary>Component strings for progress notes.</summary>
     public static class ModProgressNote
     {
-        /// <summary>
-        /// Method summary goes here.
-        /// </summary>
+        /// <summary>Creates a detail body for progress notes.</summary>
+        /// <param name="abSession">The Abatab session object.</param>
+        /// <returns>A detail body for progress notes.</returns>
         public static string Detail(AbSession abSession) =>
             $"### Progress Note Module{Environment.NewLine}" +
             $"**Mode:** {abSession.ModProgNote.Mode}  {Environment.NewLine}" +
@@ -45,9 +43,10 @@ namespace Abatab.Core.Catalog.Component
             $"**Valid location codes:** {ConvertCollection.ListToString(abSession.ModProgNote.ValidLocationCodes)}  {Environment.NewLine}" +
             $"**Valid location names:** {ConvertCollection.ListToString(abSession.ModProgNote.ValidLocationNames)}  {Environment.NewLine}";
 
-        /// <summary>
-        /// Method summary goes here.
-        /// </summary>
+        /// <summary>Creates the verify location message for progress notes.</summary>
+        /// <param name="abSession">The Abatab session object.</param>
+        /// <param name="logType">The type of log.</param>
+        /// <returns>The verify location message for progress notes.</returns>
         public static string VfyLocMessage(AbSession abSession, string logType) =>
             $"# [{logType}] Progress Note >+ Verify Location{Environment.NewLine}" +
             $"{Detail(abSession)}{Environment.NewLine}" +

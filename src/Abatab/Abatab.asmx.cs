@@ -12,8 +12,9 @@
 // -----------------------------------------------------------------------------
 
 /* DEVNOTE
- * This is the development version of Abatab, and is not intended for use in production environments, which should use
- * the Abatab Community Release: https://github.com/spectrum-health-systems/Abatab-Community-Release
+ * The development version of Abatab is not intended for use in production
+ * environments. Please visit the Abatab Community Release repository:
+ * https://github.com/spectrum-health-systems/Abatab-Community-Release
  */
 
 using Abatab.Core.Catalog.Definition;

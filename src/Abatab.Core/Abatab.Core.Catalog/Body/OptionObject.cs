@@ -8,10 +8,10 @@
 // -----------------------------------------------------------------------------
 // Abatab.Core.Catalog.Body.OptionObject.cs
 // String values.
-// b230713.1524
+// b230807.1408
 // -----------------------------------------------------------------------------
 
-/* DEVELOPER_NOTE
+/* DEVNOTE
  * The strings that these methods return use Markdown syntax, which creates a
  * carriage return when a line ends with two blank characters:
  *
@@ -25,14 +25,12 @@ using System;
 
 namespace Abatab.Core.Catalog.Body
 {
-    /// <summary>
-    /// Class summary goes here.
-    /// </summary>
+    /// <summary>Body strings for OptionObjects.</summary>
     public static class OptionObject
     {
-        /// <summary>
-        /// Method summary goes here.
-        /// </summary>
+        /// <summary>Creates a standard OptionObject information body.</summary>
+        /// <param name="abSession">The Abatab session object.</param>
+        /// <returns>A standard OptionObject information body.</returns>
         public static string Standard(AbSession abSession) =>
             "## OptionObjects" +
             Environment.NewLine +
