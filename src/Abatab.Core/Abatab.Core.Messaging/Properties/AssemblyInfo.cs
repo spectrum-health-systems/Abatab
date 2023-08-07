@@ -1,6 +1,5 @@
 ﻿// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-// Abatab v23.7.0.0
-// A custom web service/framework for myAvatar.
+// Abatab: A custom web service/framework for myAvatar.
 // https://github.com/spectrum-health-systems/Abatab
 // Copyright (c) A Pretty Cool Program. All rights reserved.
 // Licensed under the Apache 2.0 license.
@@ -39,5 +38,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("23.7.0.0")]
-[assembly: AssemblyFileVersion("23.7.0.0")]
+[assembly: AssemblyVersion("23.8.0.0")]
+[assembly: AssemblyFileVersion("23.8.0.0")]

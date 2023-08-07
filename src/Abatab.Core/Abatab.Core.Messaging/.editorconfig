@@ -24,7 +24,7 @@ insert_final_newline = false
 # Organize usings
 dotnet_separate_import_directive_groups = false
 dotnet_sort_system_directives_first = false
-file_header_template = =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\nAbatab v23.7.0.0\nA custom web service/framework for myAvatar.\nhttps://github.com/spectrum-health-systems/Abatab\nCopyright (c) A Pretty Cool Program. All rights reserved.\nLicensed under the Apache 2.0 license.\n=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+file_header_template = =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\nAbatab: A custom web service/framework for myAvatar.\nhttps://github.com/spectrum-health-systems/Abatab\nCopyright (c) A Pretty Cool Program. All rights reserved.\nLicensed under the Apache 2.0 license.\n=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 # this. and Me. preferences
 dotnet_style_qualification_for_event = false
 dotnet_style_qualification_for_field = false

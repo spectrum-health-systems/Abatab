@@ -1,6 +1,5 @@
 ﻿// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-// Abatab v23.7.0.0
-// A custom web service/framework for myAvatar.
+// Abatab: A custom web service/framework for myAvatar.
 // https://github.com/spectrum-health-systems/Abatab
 // Copyright (c) A Pretty Cool Program. All rights reserved.
 // Licensed under the Apache 2.0 license.
@@ -35,10 +34,7 @@ namespace Abatab
         /// <remarks>This method is required by myAvatar.</remarks>
         /// <returns>The current version of Abatab.</returns>
         [WebMethod]
-        public string GetVersion()
-        {
-            return "VERSION 23.7";
-        }
+        public string GetVersion() => "VERSION 23.7";
 
         /// <summary>The starting point for Abatab.</summary>
         /// <param name="sentOptionObject">The OptionObject sent from myAvatar.</param>
@@ -62,6 +58,7 @@ namespace Abatab
             {
                 Debuggler.PrimevalLog("disabled");
             }
+
             return abSession.ReturnOptionObject;
         }
     }
