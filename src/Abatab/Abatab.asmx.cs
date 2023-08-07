@@ -8,11 +8,12 @@
 // -----------------------------------------------------------------------------
 // Abatab.asmx.cs
 // Entry point for Abatab.
-// b230718.1052
+// b230807.1023
 // -----------------------------------------------------------------------------
 
-/* DEVNOTE: The development version of Abatab is not intended for use in production environments, which should use the
- * Abatab Community Release: https://github.com/spectrum-health-systems/Abatab-Community-Release
+/* DEVNOTE
+ * This is the development version of Abatab, and is not intended for use in production environments, which should use
+ * the Abatab Community Release: https://github.com/spectrum-health-systems/Abatab-Community-Release
  */
 
 using Abatab.Core.Catalog.Definition;
@@ -34,11 +35,11 @@ namespace Abatab
         /// <remarks>This method is required by myAvatar.</remarks>
         /// <returns>The current version of Abatab.</returns>
         [WebMethod]
-        public string GetVersion() => "VERSION 23.7";
+        public string GetVersion() => "VERSION 23.8";
 
         /// <summary>The starting point for Abatab.</summary>
         /// <param name="sentOptionObject">The OptionObject sent from myAvatar.</param>
-        /// <param name="scriptParameter">The Script Parameter sent from myAvatar. <see href="https://github.com">[More info]</see></param>
+        /// <param name="scriptParameter">The Script Parameter sent from myAvatar.</param>
         /// <remarks>This method is required by myAvatar.</remarks>
         /// <returns>The finalized OptionObject to myAvatar.</returns>
         [WebMethod]
@@ -58,6 +59,8 @@ namespace Abatab
             {
                 Debuggler.PrimevalLog("disabled");
             }
+
+            DevelopmentNotes.XmlDocumentationCommentExample(1,2);
 
             return abSession.ReturnOptionObject;
         }

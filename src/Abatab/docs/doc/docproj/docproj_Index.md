@@ -2,6 +2,7 @@
 
 The goal of the Abatab Documentation Project is to provide useful documentation for Abatab development purposes.
 
+<!--
 ## Development documentation
 
 * [Adding New Settings](dev/docproj_Adding-New-Settings.md)
@@ -37,3 +38,5 @@ The goal of the Abatab Documentation Project is to provide useful documentation 
 ### Development sandbox functionality
 
 * [Abatab.Sandbox](./src/sandbox/docproj_Abatab.Sandbox.md)
+
+-->

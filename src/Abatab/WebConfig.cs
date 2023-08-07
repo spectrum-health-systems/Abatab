@@ -19,14 +19,11 @@ using System.Reflection;
 
 namespace Abatab
 {
-    /// <summary>
-    /// Logic for the local Web.config file.
-    /// </summary>
+    /// <summary>Logic for the local Web.config file.</summary>
     public static class WebConfig
     {
-        /// <summary>
-        /// Method summary goes here.
-        /// </summary>
+        /// <summary>Loads the configuration settings from the local Web.config file.</summary>
+        /// <param name="abSession">The Abatab session object.</param>
         public static void Load(AbSession abSession)
         {
             Debuggler.DebugLog(Settings.Default.DebugglerMode,Assembly.GetExecutingAssembly().GetName().Name);

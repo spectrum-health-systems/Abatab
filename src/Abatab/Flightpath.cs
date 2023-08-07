@@ -31,21 +31,23 @@ namespace Abatab
 
         /// <summary>Initialize a new Abatab session.</summary>
         /// <param name="abSession">The Abatab session object.</param>
-        /// <param name="scriptParameter">The Script Parameter sent from myAvatar. <see href="https://github.com/spectrum-health-systems/Abatab/blob/main/src/Abatab/docs/doc/docproj/dev/docproj_Script-parameters.md">[More info]</see></param>
-        /// <param name="sentOptionObject"></param>
+        /// <param name="scriptParameter">The Script Parameter sent from myAvatar.</param>
+        /// <param name="sentOptionObject">The OptionObject sent from myAvatar.</param>
         public static void InitializeAbatab(AbSession abSession, string scriptParameter, OptionObject2015 sentOptionObject)
         {
             Debuggler.DebugLog(Settings.Default.DebugglerMode, Assembly.GetExecutingAssembly().GetName().Name);
+
             WebConfig.Load(abSession);
             Build.NewSession(sentOptionObject, scriptParameter, abSession);
             Validate.Status(abSession);
         }
 
         /// <summary>Finalizes an Abatab session.</summary>
-        /// <param name="abSession"></param>
+        /// <param name="abSession">The Abatab session object.</param>
         public static void WrapUpAbatab(AbSession abSession)
         {
             LogEvent.Trace("trace", abSession, AssemblyName);
+
             LogEvent.Session(abSession);
         }
     }

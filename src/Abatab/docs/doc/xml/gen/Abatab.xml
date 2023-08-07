@@ -19,6 +19,44 @@
             <remarks>This method is required by myAvatar.</remarks>
             <returns>The finalized OptionObject to myAvatar.</returns>
         </member>
+        <member name="M:Abatab.DevelopmentNotes.XmlDocumentationCommentExample(System.Int32,System.Int32)">
+            <summary>Compares two numbers to determine if they are the same.</summary>
+            <param name="numberOne">The first number.</param>
+            <param name="numberTwo">The second number.</param>
+            <remarks>
+                <para>
+                    This method has a few quirks,so make sure you understand them all.
+                </para>
+                <para>
+                    Numbers to be compared must:
+                    <list type="bullet">
+                        <item>
+                            Be greater than zero
+                        </item>
+                        <item>
+                            Be less than <c>100</c>
+                        </item>
+                        <item>
+                            Not be an even number
+                        </item>
+                    </list>
+                </para>
+            </remarks>
+            <example>
+                Here is an example of the code:
+                <code>
+                    if(numberOne == numberTwo)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                </code>
+            </example>
+            <returns></returns>
+        </member>
         <member name="T:Abatab.Flightpath">
             <summary>Logic for starting/stopping an Abatab session.</summary>
         </member>
@@ -34,7 +72,7 @@
         </member>
         <member name="M:Abatab.Flightpath.WrapUpAbatab(Abatab.Core.Catalog.Definition.AbSession)">
             <summary>Finalizes an Abatab session.</summary>
-            <param name="abSession"></param>
+            <param name="abSession">The Abatab session object.</param>
         </member>
         <member name="T:Abatab.Roundhouse">
             <summary>
