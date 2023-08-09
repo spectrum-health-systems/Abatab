@@ -18,7 +18,7 @@
 
 ## Abatab header
 
-Each class should have the following header:
+Each class should have the following header (80col width):
 
 ```csharp
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
@@ -31,7 +31,7 @@ Each class should have the following header:
 
 ## Class header
 
-Each class should have the following header **underneath* the Abatab header:
+Each class should have the following header **underneath* the Abatab header (80col width):
 
 ```csharp
 // -----------------------------------------------------------------------------
@@ -39,6 +39,18 @@ Each class should have the following header **underneath* the Abatab header:
 // Development notes for Abatab.
 // b230807.1024
 // -----------------------------------------------------------------------------
+```
+
+## DEVNOTES 
+
+Some classes may have DEVNOTES below the class header (80col width):
+
+```csharp
+/* DEVNOTE
+ * The development version of Abatab is not intended for use in production
+ * environments. Please visit the Abatab Community Release repository:
+ * https://github.com/spectrum-health-systems/Abatab-Community-Release
+ */
 ```
 
 <br>

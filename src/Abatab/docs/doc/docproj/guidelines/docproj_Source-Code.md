@@ -16,8 +16,6 @@
 
 # Method calls
 
-## Standard code
-
 In general, method calls should not be separated by blank lines.
 
 ```csharp
@@ -26,9 +24,14 @@ MethodTwo();
 MethodThree();
 ```
 
-# Debuggler statement
+<br>
+<br>
 
-A Debuggler statement should be at the top of each method, and be separated from the rest of the method by a blank line.
+# Logging
+
+## Debuggler statement
+
+Debuggler statements should be used sparingly, and only at the top of a `method()` where debugging is needed and a Trace Log is not possible. Debuggler statements should also be separated from the rest of the method by a blank line.
 
 ```csharp
 public static void MethodOne(AbSession abSession)
@@ -41,89 +44,18 @@ public static void MethodOne(AbSession abSession)
 }
 ```
 
-# Variable declarations
+## Trace Logs
 
-Variables should be declared in their own block at the top of a method.
+Trace logs should be used:
 
-```csharp
-public static int MethodOne()
-{
-    var numberOne = 1;
-    var numberTwo = 2;  
+- in all methods
+- in all if...then...else blocks
+- in all switch case blocks
+- to debug specific code
 
-    var total = numberOne + numberTwo;
+### Methods
 
-    return total;
-}
-```
-
-# If...else
-
-If...else blocks should be in their own block.
-
-```csharp
-public static void MethodOne(bool doWork)
-{
-    var numberOne = 1;
-    var numberTwo = 2;  
-    var total = 0;
-
-    if (doWork)
-    {
-        total = numberOne + numberTwo;
-    }
-    else
-    {
-        total = numberOne - numberTwo;
-    }
-
-    return total;
-}
-```
-
-# Break statements
-
-```csharp
-public static void DoThing(bool doWork)
-{
-    switch (thing)
-    {
-        case true:
-            MethodOne();
-            break;
-
-        case false:
-            MethodTwo();
-            break;
-
-        default:
-            MethodThree();
-            break;
-    }
-}
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# Log statements
-
-## Method trace logs
-
-Trace log statements should be at the top of each method, and be separated from the rest of the method by a blank line.
+Trace log statements should be at the top of each `method()`, separated from the rest of the method by a blank line.
 
 ```csharp
 public static void DoThing(AbSession abSession)
@@ -136,7 +68,41 @@ public static void DoThing(AbSession abSession)
 }
 ```
 
-## Block trace logs
+### If...then...else blocks
+
+Trace log statements should be at the top of each `if...else if...else` block, separated from the rest of the method by a blank line.
+
+```csharp
+public static void DoThing(AbSession abSession)
+{
+    LogEvent.Trace("trace", abSession, AssemblyName);
+
+    var numberOne = 1;
+
+    if (numberOne == 1 )
+    {
+        LogEvent.Trace("trace", abSession, AssemblyName);
+
+        total = 1
+    }
+    else if (numberOne == 2)
+    {
+        LogEvent.Trace("trace", abSession, AssemblyName);
+
+        total = 2
+    }
+    else
+    {
+        LogEvent.Trace("trace", abSession, AssemblyName);
+
+        total = 30
+    }
+}
+```
+
+## Switch case blocks
+
+Trace log statements should be at the top of each `switch case` block, separated from the rest of the method by a blank line.
 
 ```csharp
 public static void DoThing(AbSession abSession)
@@ -168,9 +134,11 @@ public static void DoThing(AbSession abSession)
 }
 ```
 
-## In-line trace logs
+## Inline code
 
-Inline trace logs should directly follow what they are tracing.
+Inline Trace Log statements should be used sparingly, when you need to debug a specific line/block of code.
+
+When a Trace Log statement is added to code that you need to debug, the statement should follow the line of code directly, and should not be followed by a blank line.
 
 ```csharp
 public static void ParseCommand(AbSession abSession)
@@ -186,11 +154,74 @@ public static void ParseCommand(AbSession abSession)
 }
 ```
 
+# Variable declarations
+
+Variables should be declared in their own block at the top of a method.
+
+```csharp
+public static int MethodOne()
+{
+    var numberOne = 1;
+    var numberTwo = 2;  
+
+    var total = numberOne + numberTwo;
+
+    return total;
+}
+```
+
+# If...else if...else statments
+
+```csharp
+public static void MethodOne(bool doWork)
+{
+    var numberOne = 1;
+    var numberTwo = 2;  
+    var total = 0;
+
+    if (doWork)
+    {
+        total = numberOne + numberTwo;
+    }
+    else
+    {
+        total = numberOne - numberTwo;
+    }
+
+    return total;
+}
+```
+
+# Break statements
+
+```csharp
+public static void DoThing(bool doWork)
+{
+    switch (thing)
+    {
+        case true:
+            MethodOne();
+
+            break;
+
+        case false:
+            MethodTwo();
+
+            break;
+
+        default:
+            MethodThree();
+
+            break;
+    }
+}
+```
+
 # Return statements
 
-## Method return statements
+## Methods
 
-Return statements at the end of a method should be separated from that block by a blank line.
+Return statements at the end of a `method()` should be separated from that block by a blank line.
 
 ```csharp
 public static string DoThing(AbSession abSession)
@@ -205,23 +236,27 @@ public static string DoThing(AbSession abSession)
 }
 ```
 
+## Switch statements
+
+Return statements at the end of a `case` block should be separated from that block by a blank line.
+
 ```csharp
 public static void DoThing(string thing)
 {
     switch (thing)
     {
         case "true":
-            LogEvent.Trace("trace", abSession, AssemblyName);
+            DoAnotherThing();
 
             return true;
 
         case "false":
-            LogEvent.Trace("traceinternal",abSession,AssemblyName);
+            DoAnotherThing();
 
             return false;
 
         default:
-            LogEvent.Trace("traceinternal",abSession,AssemblyName);
+            DoAnotherThing();
 
             return false;
     }
@@ -230,7 +265,7 @@ public static void DoThing(string thing)
 
 ## In-line return statements
 
-Return statements in a block of code shouldn't have any blank lines.
+Return statements in a `if...else if...else` and `case` statment blocks of code shouldn't have any blank lines.
 
 ```csharp
 public static void DoThing(string thing)
@@ -249,14 +284,31 @@ public static void DoThing(string thing)
 }
 ```
 
+# Catalog information
 
+Catalog information is pre-defined text for logging/data export.
 
+Catalog information methods should use the expression body style, and string interpolation.
 
+The strings that these methods return use Markdown syntax, which creates a carriage return when a line ends with two blank characters:
 
+```csharp
+$"**Mode:** {abSession.ModProgressNote.Mode}  {Environment.NewLine}"
+                                            ^^
+```
 
+Removing the blank characters will break the Markdown output.
 
+Example:
 
-
+```csharp
+public static string CatalogInformation() =>
+    $"## Title{Environment.NewLine}" +
+    $"**First thing:** {firstThing}  {Environment.NewLine}" +
+    $"**Second thing:** {secondThing}  {Environment.NewLine}" +
+    $"**Third thing:** {thirdThing.ValidOrderTypes}  {Environment.NewLine}";
+}
+```
 
 
 <br>

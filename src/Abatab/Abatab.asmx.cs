@@ -8,7 +8,7 @@
 // -----------------------------------------------------------------------------
 // Abatab.asmx.cs
 // Entry point for Abatab.
-// b230807.1023
+// b230809.1032
 // -----------------------------------------------------------------------------
 
 /* DEVNOTE
@@ -60,8 +60,6 @@ namespace Abatab
             {
                 Debuggler.PrimevalLog("disabled");
             }
-
-            DevelopmentNotes.XmlDocumentationCommentExample(1,2);
 
             return abSession.ReturnOptionObject;
         }

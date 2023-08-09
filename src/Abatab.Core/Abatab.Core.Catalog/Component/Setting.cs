@@ -8,10 +8,10 @@
 // -----------------------------------------------------------------------------
 // Abatab.Core.Catalog.Component.Setting.cs
 // String values.
-// b230713.1524
+// b230809.1322
 // -----------------------------------------------------------------------------
 
-/* DEVELOPER_NOTE
+/* DEVNOTE
  * The strings that these methods return use Markdown syntax, which creates a
  * carriage return when a line ends with two blank characters:
  *
@@ -25,14 +25,12 @@ using System;
 
 namespace Abatab.Core.Catalog.Component
 {
-    /// <summary>
-    /// Class summary goes here.
-    /// </summary>
+    /// <summary>Component strings for setting values.</summary>
     public static class Setting
     {
-        /// <summary>
-        /// Method summary goes here.
-        /// </summary>
+        /// <summary>Creates a detail body for setting details.</summary>
+        /// <param name="abSession">The Abatab session object.</param>
+        /// <returns>A detail body for setting details.</returns>
         public static string Detail(AbSession abSession) =>
             $"**Abatab version:** {abSession.AbatabVersion}  {Environment.NewLine}" +
             $"**Abatab build:** {abSession.AbatabBuild}  {Environment.NewLine}" +
@@ -62,9 +60,9 @@ namespace Abatab.Core.Catalog.Component
             $"**Request action:** {abSession.RequestAction}  {Environment.NewLine}" +
             $"**Request option:** {abSession.RequestOption}  {Environment.NewLine}";
 
-        /// <summary>
-        /// Method summary goes here.
-        /// </summary>
+        /// <summary>Creates a detail body for current setting details.</summary>
+        /// <param name="abSession">The Abatab session object.</param>
+        /// <returns>A detail body for currentsetting details.</returns>
         public static string Current(AbSession abSession) =>
             $"> These settings are current as of {abSession.Datestamp}.{abSession.Timestamp} {Environment.NewLine}" +
             $"**Avatar version:** {abSession.AbatabVersion} {abSession.AbatabBuild}  {Environment.NewLine}" +

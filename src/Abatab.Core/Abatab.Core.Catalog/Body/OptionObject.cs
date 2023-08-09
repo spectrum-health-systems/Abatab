@@ -8,7 +8,7 @@
 // -----------------------------------------------------------------------------
 // Abatab.Core.Catalog.Body.OptionObject.cs
 // String values.
-// b230807.1408
+// b230809.1305
 // -----------------------------------------------------------------------------
 
 /* DEVNOTE
@@ -19,6 +19,8 @@
  *                                                  ^^
  * Removing the blank characters will break the Markdown output.
  */
+
+// REVIEW Better idea to use string interpolation here.
 
 using Abatab.Core.Catalog.Definition;
 using System;

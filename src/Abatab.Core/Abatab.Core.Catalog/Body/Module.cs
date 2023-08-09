@@ -8,7 +8,7 @@
 // -----------------------------------------------------------------------------
 // Abatab.Core.Catalog.Body.Module.cs
 // String values.
-// b230807.1407
+// b230809.1142
 // -----------------------------------------------------------------------------
 
 /* DEVNOTE
@@ -20,7 +20,7 @@
  * Removing the blank characters will break the Markdown output.
  */
 
-// REVIEW Maybe move away from string concat for these?
+// REVIEW Better idea to use string interpolation here.
 
 using Abatab.Core.Catalog.Definition;
 using System;

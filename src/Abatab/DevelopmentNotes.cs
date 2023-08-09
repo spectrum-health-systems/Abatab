@@ -8,7 +8,7 @@
 // -----------------------------------------------------------------------------
 // Abatab.DevelopmentNotes.cs
 // Development notes for Abatab.
-// b230807.1024
+// b230809.1112
 // -----------------------------------------------------------------------------
 
 /* DEVNOTE
@@ -19,7 +19,7 @@
 namespace Abatab
 {
     /// <summary>This method is for testing and examples.</summary>
-    public static class DevelopmentNotes
+    public static class XmlDocumentCommentsExample
     {
         /// <summary>Compares two numbers to determine if they are the same.</summary>
         /// <param name="numberOne">The first number.</param>
@@ -86,9 +86,9 @@ namespace Abatab
         /// </example>
         /// <returns>A boolean of true or false.</returns>
         /// <value>Default value is <c>false</c></value>
-        public static bool XmlDocumentationCommentExample(int numberOne, int numberTwo)
-        {
-            return true;
-        }
+        public static bool XmlDocumentationCommentExample(int numberOne,int numberTwo) => true;
+
+        /// <summary>Test for XML Documentation Comments.</summary>
+        public static void XmlDocumentationCommentTest() => _ = XmlDocumentCommentsExample.XmlDocumentationCommentExample(1,2);
     }
 }

@@ -8,7 +8,7 @@
 // -----------------------------------------------------------------------------
 // Abatab.Roundhouse.cs
 // Logic for parsing the module component of the Script Parameter.
-// b230807.1024
+// b230809.1109
 // -----------------------------------------------------------------------------
 
 using Abatab.Core.Catalog.Definition;
@@ -38,24 +38,28 @@ namespace Abatab
                     LogEvent.Trace("traceinternal",abSession,AssemblyName);
 
                     Module.Testing.Roundhouse.ParseCommand(abSession);
+
                     break;
 
                 case "prognote":
                     LogEvent.Trace("traceinternal",abSession,AssemblyName);
 
                     Module.ProgressNote.Roundhouse.ParseCommand(abSession);
+
                     break;
 
                 case "qmedordr":
                     LogEvent.Trace("traceinternal",abSession,AssemblyName);
 
                     Module.QuickMedicationOrder.Roundhouse.ParseCommand(abSession);
+
                     break;
 
                 default:
                     LogEvent.Trace("traceinternal",abSession,AssemblyName);
 
                     // TODO Eventually this should exit gracefully
+
                     break;
             }
         }

@@ -8,7 +8,7 @@
 // -----------------------------------------------------------------------------
 // Abatab.Core.Catalog.Component.ModProgressNotes.cs
 // String values.
-// b230807.1410
+// b230809.1307
 // -----------------------------------------------------------------------------
 
 /* DEVNOTE
@@ -19,6 +19,8 @@
  *                                                  ^^
  * Removing the blank characters will break the Markdown output.
  */
+
+// REVIEW Should this be moved to Abatab.Module.ProgressNote
 
 using Abatab.Core.Catalog.Definition;
 using Abatab.Core.Utility;
