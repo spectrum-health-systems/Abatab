@@ -8,7 +8,7 @@
 // -----------------------------------------------------------------------------
 // Abatab.Core.Framework.Validate.cs
 // Class summary goes here.
-// b230713.1524
+// b230810.1111
 // -----------------------------------------------------------------------------
 
 
@@ -26,7 +26,8 @@ namespace Abatab.Core.Framework
         /// <remarks>This is defined at the start of the class so it can be easily used throughout the method.</remarks>
         public static string AssemblyName { get; set; } = Assembly.GetExecutingAssembly().GetName().Name;
 
-        /// <summary>Verify framework status</summary>
+        /// <summary>Verify framework status.</summary>
+        /// <param name="abSession">The Abatab session object.</param>
         public static void Status(AbSession abSession)
         {
             LogEvent.Trace("trace", abSession, AssemblyName);

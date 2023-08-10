@@ -19,9 +19,6 @@ namespace Abatab.Core.Catalog.Key
     /// <summary>Pre-defined lists of directories.</summary>
     public static class Directories
     {
-        ///// 
-
-
         /// <summary>Framework directories.</summary>
         /// <param name="abSession">The Abatab session object.</param>
         /// <returns>A list of framework directories.</returns>
