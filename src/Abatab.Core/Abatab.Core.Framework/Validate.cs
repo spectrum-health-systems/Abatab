@@ -19,20 +19,14 @@ using System.Reflection;
 
 namespace Abatab.Core.Framework
 {
-    /// <summary>
-    /// Class summary goes here.
-    /// </summary>
+    /// <summary>Validate Abatab framework components.</summary>
     public static class Validate
     {
-        /// <summary>
-        /// Executing assembly name for log files.
-        /// </summary>
+        /// <summary>Executing assembly name for log files.</summary>
         /// <remarks>This is defined at the start of the class so it can be easily used throughout the method.</remarks>
         public static string AssemblyName { get; set; } = Assembly.GetExecutingAssembly().GetName().Name;
 
-        /// <summary>
-        /// Method summary goes here.
-        /// </summary>
+        /// <summary>Verify framework status</summary>
         public static void Status(AbSession abSession)
         {
             LogEvent.Trace("trace", abSession, AssemblyName);

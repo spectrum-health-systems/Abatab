@@ -8,10 +8,10 @@
 // -----------------------------------------------------------------------------
 // Abatab.Core.Catalog.Output.Session.cs
 // Summary goes here.
-// b230713.1524
+// b230810.1100
 // -----------------------------------------------------------------------------
 
-/* DEVELOPER_NOTE
+/* DEVNOTE
  * The strings that these methods return use Markdown syntax, which creates a
  * carriage return when a line ends with two blank characters:
  *
@@ -20,21 +20,20 @@
  * Removing the blank characters will break the Markdown output.
  */
 
+// REVIEW Better idea to use string interpolation here.
+
 using Abatab.Core.Catalog.Definition;
 using System;
 
 namespace Abatab.Core.Catalog.Output
 {
-    /// <summary>
-    /// Class summary goes here.
-    /// </summary>
-
+    /// <summary>Session details.</summary>
     public static class Session
     {
-        /// <summary>
-        /// Method summary goes here.
-        /// </summary>
-        public static string Complete(AbSession abSession) =>
+    /// <summary>Complete session data.</summary>
+    /// <param name="abSession">The Abatab session object.</param>
+    /// <returns>Complete session data.</returns>
+    public static string Complete(AbSession abSession) =>
             "# Abatab session" +
             Environment.NewLine +
             Body.Setting.Standard(abSession) +
