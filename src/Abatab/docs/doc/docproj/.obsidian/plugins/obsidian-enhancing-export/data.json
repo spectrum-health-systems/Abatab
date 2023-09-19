@@ -1,0 +1,62 @@
+{
+  "items": [
+    {
+      "name": "Markdown"
+    },
+    {
+      "name": "Markdown (Hugo)"
+    },
+    {
+      "name": "Html"
+    },
+    {
+      "name": "TextBundle"
+    },
+    {
+      "name": "Typst"
+    },
+    {
+      "name": "PDF"
+    },
+    {
+      "name": "Word (.docx)"
+    },
+    {
+      "name": "OpenOffice"
+    },
+    {
+      "name": "RTF"
+    },
+    {
+      "name": "Epub"
+    },
+    {
+      "name": "Latex"
+    },
+    {
+      "name": "Media Wiki"
+    },
+    {
+      "name": "reStructuredText"
+    },
+    {
+      "name": "Textile"
+    },
+    {
+      "name": "OPML"
+    },
+    {
+      "name": "Bibliography"
+    }
+  ],
+  "defaultExportDirectoryMode": "Custom",
+  "openExportedFile": true,
+  "env": {},
+  "customDefaultExportDirectory": {
+    "win32": "C:\\IT\\GitHub\\SHS\\Abatab-Documentation-Project\\release"
+  },
+  "lastExportDirectory": {
+    "win32": "C:\\IT\\GitHub\\SHS\\Abatab-Documentation-Project\\release"
+  },
+  "lastExportType": "Html"
+}

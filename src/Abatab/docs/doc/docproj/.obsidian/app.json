@@ -1,0 +1,14 @@
+{
+  "strictLineBreaks": true,
+  "showIndentGuide": false,
+  "trashOption": "local",
+  "alwaysUpdateLinks": true,
+  "showUnsupportedFiles": true,
+  "attachmentFolderPath": "./_attachments",
+  "userIgnoreFilters": [
+    "_excluded/"
+  ],
+  "showInlineTitle": false,
+  "useMarkdownLinks": true,
+  "newLinkFormat": "absolute"
+}
