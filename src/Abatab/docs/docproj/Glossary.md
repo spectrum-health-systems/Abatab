@@ -5,6 +5,9 @@
 ![](_attachments/AbatabDocumentationProjectLogo.png)
 # ABATAB DOCUMENTATION PROJECT > GLOSSARY
 
+	<h1>
+		Glossary
+	</h1>
 
 </div>
 
