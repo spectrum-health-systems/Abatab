@@ -12,7 +12,7 @@ This documentation isn't ready yet (but the drafts are [here](README_main.md) an
 
 <div align="center">
 
-  Abatab is developed by:<br>
+  Abatab is developed by<br>
   [A Pretty Cool Program](https://github.com/APrettyCoolProgram)
 
 </div>
