@@ -6,7 +6,7 @@
 
 <div align="center">
 
-![](_attachments/AbatabDocumentationProjectLogo.png)
+![](_attachments/AbatabDocumentationProjectLogo.png|508)
 
   <h1>
     Glossary
