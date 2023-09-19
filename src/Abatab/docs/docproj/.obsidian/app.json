@@ -1,13 +1,11 @@
 {
   "strictLineBreaks": true,
   "showIndentGuide": false,
-  "trashOption": "local",
+  "trashOption": "system",
   "alwaysUpdateLinks": true,
   "showUnsupportedFiles": true,
   "attachmentFolderPath": "./_attachments",
-  "userIgnoreFilters": [
-    "_excluded/"
-  ],
+  "userIgnoreFilters": null,
   "showInlineTitle": false,
   "useMarkdownLinks": true,
   "newLinkFormat": "absolute"
