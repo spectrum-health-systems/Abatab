@@ -1,3 +1,0 @@
-﻿# Abatab.Core.Logger
-
-TBD
