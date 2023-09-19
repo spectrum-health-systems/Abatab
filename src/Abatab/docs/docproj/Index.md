@@ -5,9 +5,9 @@
 The goal of the Abatab Documentation Project is to provide useful documentation for Abatab development purposes.
 
   
-
-%%
 <!--
+%%
+
 ## Development documentation
 
   
@@ -79,5 +79,6 @@ The goal of the Abatab Documentation Project is to provide useful documentation 
 * [Abatab.Sandbox](./src/sandbox/docproj_Abatab.Sandbox.md)
 
   
--->
+
 %%
+-->
