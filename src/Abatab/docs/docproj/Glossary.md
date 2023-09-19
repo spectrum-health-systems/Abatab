@@ -1,19 +1,10 @@
 <!--
-
   This documentation is incomplete.
-
 -->
+![](_attachments/AbatabDocumentationProjectLogo.png)
+# Glossary
 
-<div align="center">
-
-![](_attachments/AbatabDocumentationProjectLogo.png|508)
-
-  <h1>
-    Glossary
-  </h1>
-</div>
-
-<br>
+***
 
   
 
