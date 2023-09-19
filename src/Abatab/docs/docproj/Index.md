@@ -10,8 +10,6 @@ The goal of the Abatab Documentation Project is to provide useful documentation 
 
 ## Development documentation
 
-  
-
 * [Adding New Settings](dev/docproj_Adding-New-Settings.md)
 
 * [Development Notes](dev/docproj_Development-Notes.md)

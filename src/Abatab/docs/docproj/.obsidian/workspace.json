@@ -16,32 +16,6 @@
             }
           },
           {
-            "id": "89d1cf50be4bc9e8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Docu/Tester.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "6d35316d29b4a7e5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Abatab/Test document.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
             "id": "f990ad300cc43118",
             "type": "leaf",
             "state": {
@@ -53,9 +27,22 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "23e63faf3a6b4e59",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Glossary.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": true
+              }
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -121,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Index.md",
+                "file": "Glossary.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -138,7 +125,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Index.md",
+                "file": "Glossary.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -161,7 +148,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Index.md"
+                "file": "Glossary.md"
               }
             }
           }
@@ -186,10 +173,13 @@
       "webpage-html-export:Export Vault to HTML": false
     }
   },
-  "active": "f990ad300cc43118",
+  "active": "23e63faf3a6b4e59",
   "lastOpenFiles": [
-    "Abatab/Test document.md",
+    "_attachments/AbatabDocumentationProjectLogo.png",
+    "Glossary.md",
     "Index.md",
+    "_attachments",
+    "Abatab/Test document.md",
     "Docu/Tester.md",
     "Abatab/tex2pdf.-1706bdf80f40114d/input.tex",
     "Abatab/tex2pdf.-1706bdf80f40114d",
