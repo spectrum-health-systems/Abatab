@@ -1,7 +1,10 @@
-# The Abatab Documentation Project
+<!-- This documentation is incomplete. -->
 
-  
+![](_attachments/AbatabDocumentationProjectLogo.png)
+# INDEX
+***
 
+## Introduction
 The goal of the Abatab Documentation Project is to provide useful documentation for Abatab development purposes.
 
   
