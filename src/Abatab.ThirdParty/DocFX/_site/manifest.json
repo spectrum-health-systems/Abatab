@@ -40,12 +40,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "index.md",
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "GGOovSab6ZFxRkwbTiKX/AxcXz9WU1qSZOSIhjRqq74="
+          "hash": "thT5GpDLp0g+XrPvvtBMhjjSmuR/0xBwjishrkWXMAA="
         }
       },
       "is_incremental": false,
