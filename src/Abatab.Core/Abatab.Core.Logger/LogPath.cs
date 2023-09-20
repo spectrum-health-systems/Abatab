@@ -1,6 +1,5 @@
 ﻿// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-// Abatab v23.7.0.0
-// A custom web service/framework for myAvatar.
+// Abatab: A custom web service/framework for myAvatar.
 // https://github.com/spectrum-health-systems/Abatab
 // Copyright (c) A Pretty Cool Program. All rights reserved.
 // Licensed under the Apache 2.0 license.
@@ -9,7 +8,7 @@
 // -----------------------------------------------------------------------------
 // Abatab.Core.Logger.LogPath.cs
 // Class summary goes here.
-// b230713.1524
+// b230810.1150
 // -----------------------------------------------------------------------------
 
 using Abatab.Core.Catalog.Definition;
@@ -20,43 +19,42 @@ using System.Reflection;
 
 namespace Abatab.Core.Logger
 {
-    /// <summary>
-    /// Class summary goes here.
-    /// </summary>
+    /// <summary>Create the path for a log file.</summary>
     internal static class LogPath
     {
-        /// <summary>
-        /// Method summary goes here.
-        /// </summary>
+        /// <summary>Create a filepath for an alert log.</summary>
+        /// <param name="abSession">The Abatab session object.</param>
+        /// <returns>An alert log filepath.</returns>
         public static string Alert(AbSession abSession)
         {
             Debuggler.DebugLog(abSession.DebugglerMode, Assembly.GetExecutingAssembly().GetName().Name);
 
-            var logPath = $@"{abSession.AlertLogDirectory}\{abSession.SentOptionObject.OptionUserId}\{DateTime.Now:yyMMdd}\{abSession.RequestModule}\{abSession.RequestCommand}";
-            Utility.FileSys.VerifyDirectory(logPath); // TODO - need.
+            var logPath = $@"{abSession.AlertLogDirectory}\{abSession.SentOptionObject.OptionUserId}\{DateTime.Now:yyMMdd}\{abSession.RequestModule}\{abSession.RequestCommand}"; // REVIEW Oof, this is ugly.
+
+            Utility.FileSys.VerifyDirectory(logPath); // REVIEW Do we need this?
 
             return $@"{logPath}\{DateTime.Now:HHmmss}-{abSession.RequestAction}.md";
         }
 
-
-        /// <summary>
-        /// Method summary goes here.
-        /// </summary>
-        public static string Trace(AbSession abSession, string exeAssembly = "", string callPath = "", string callMember = "", int callLine = 0)
+        /// <summary>Create a filepath for a trace log.</summary>
+        /// <param name="abSession">The Abatab session object.</param>
+        /// <param name="assemblyName">The executing assembly name.</param>
+        /// <param name="callPath">The calling class (e.g., "ClassName".)</param>
+        /// <param name="callMember">The calling method (e.g., "MethodName").</param>
+        /// <param name="callLine">The calling line of the method (e.g., "100"</param>
+        /// <returns>A trace log filepath.</returns>
+        public static string Trace(AbSession abSession, string assemblyName = "", string callPath = "", string callMember = "", int callLine = 0)
         {
-            Debuggler.DebugLog(abSession.DebugglerMode, Assembly.GetExecutingAssembly().GetName().Name);
+            Debuggler.DebugLog(abSession.DebugglerMode, Assembly.GetExecutingAssembly().GetName().Name); // REVIEW Can a trace log go here, instead of a debuggler statement?
 
-            return $@"{abSession.TraceLogDirectory}\{DateTime.Now:HHmmss_fffffff}-{exeAssembly}-{Path.GetFileName(callPath)}-{callMember}-{callLine}-[TRACE].md";
+            return $@"{abSession.TraceLogDirectory}\{DateTime.Now:HHmmss_fffffff}-{assemblyName}-{Path.GetFileName(callPath)}-{callMember}-{callLine}-[TRACE].md";
         }
 
-        /// <summary>
-        /// Method summary goes here.
-        /// </summary>
+        /// <summary>Create a filepath for a session log.</summary>
+        /// <param name="abSession">The Abatab session object.</param> 
         public static string Session(AbSession abSession)
         {
-            /* QUESTION Can a trace log go here?
- */
-            Debuggler.DebugLog(abSession.DebugglerMode, Assembly.GetExecutingAssembly().GetName().Name);
+            Debuggler.DebugLog(abSession.DebugglerMode, Assembly.GetExecutingAssembly().GetName().Name); // REVIEW Can a trace log go here, instead of a debuggler statement?
 
             return $@"{abSession.SessionDataDirectory}\{DateTime.Now:HHmmss.fffffff}-[SESSION].md";
         }
@@ -66,21 +64,20 @@ namespace Abatab.Core.Logger
         /// </summary>
         public static string Setting(AbSession abSession)
         {
-            // REVIEW: Can a trace log go here?
-            Debuggler.DebugLog(abSession.DebugglerMode, Assembly.GetExecutingAssembly().GetName().Name);
+            Debuggler.DebugLog(abSession.DebugglerMode, Assembly.GetExecutingAssembly().GetName().Name); // REVIEW Can a trace log go here, instead of a debuggler statement?
 
             return $@"{abSession.AbatabDataRoot}\{abSession.AvatarEnvironment}\Abatab current settings.md";
         }
 
-        /// <summary>
-        /// Method summary goes here.
-        /// </summary>
+        /// <summary>Create a filepath for a warning log.</summary>
+        /// <param name="abSession">The Abatab session object.</param> 
         public static string Warning(AbSession abSession)
         {
-            Debuggler.DebugLog(abSession.DebugglerMode, Assembly.GetExecutingAssembly().GetName().Name);
+            Debuggler.DebugLog(abSession.DebugglerMode, Assembly.GetExecutingAssembly().GetName().Name); // REVIEW Can a trace log go here, instead of a debuggler statement?
 
-            var logPath = $@"{abSession.WarningLogDirectory}\{abSession.SentOptionObject.OptionUserId}\{DateTime.Now:yyMMdd}\{abSession.RequestModule}\{abSession.RequestCommand}";
-            Utility.FileSys.VerifyDirectory(logPath);
+            var logPath = $@"{abSession.WarningLogDirectory}\{abSession.SentOptionObject.OptionUserId}\{DateTime.Now:yyMMdd}\{abSession.RequestModule}\{abSession.RequestCommand}"; // REVIEW Oof, this is ugly.
+
+            Utility.FileSys.VerifyDirectory(logPath); // REVIEW Do we need this?
 
             return $@"{logPath}\{DateTime.Now:HHmmss}-{abSession.RequestAction}.md";
         }

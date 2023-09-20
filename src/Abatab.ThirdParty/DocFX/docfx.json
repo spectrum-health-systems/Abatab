@@ -4,9 +4,9 @@
       "src": [
         {
           "files": [
-            "*.csproj"
+            "*.sln"
           ],
-          "cwd": ".",
+          "src": "../../Abatab",
           "exclude": [
             "**/obj/**",
             "**/bin/**",
@@ -14,7 +14,7 @@
           ]
         }
       ],
-      "dest": "obj/api"
+      "dest": "../../../docs/obj/api"
     }
   ],
   "build": {
@@ -23,7 +23,7 @@
         "files": [
           "api/**.yml"
         ],
-        "cwd": "obj"
+        "src": "../../../docs/obj"
       },
       {
         "files": [
@@ -60,7 +60,7 @@
         ]
       }
     ],
-    "dest": "_site",
+    "dest": "../../../docs",
     "template": [
       "default"
     ]

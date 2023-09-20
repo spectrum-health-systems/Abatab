@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../styles/docfx.css">
     <link rel="stylesheet" href="../styles/main.css">
-    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:navrel" content="">
     <meta property="docfx:tocrel" content="toc.html">
     
     
@@ -73,7 +73,7 @@
   
   <h1 id="Abatab_WebConfig" data-uid="Abatab.WebConfig" class="text-break">Class WebConfig
   </h1>
-  <div class="markdown level0 summary"><p>Loads settings from the <a href="../man/manAppendix.html#configuration">Web.config</a> file.</p>
+  <div class="markdown level0 summary"><p>Logic for the local Web.config file.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -116,33 +116,32 @@
   
   
   <a id="Abatab_WebConfig_Load_" data-uid="Abatab.WebConfig.Load*"></a>
-  <h4 id="Abatab_WebConfig_Load" data-uid="Abatab.WebConfig.Load">Load()</h4>
-  <div class="markdown level1 summary"><p>Load the settings from the Web.config file.</p>
+  <h4 id="Abatab_WebConfig_Load_Abatab_Core_Catalog_Definition_AbSession_" data-uid="Abatab.WebConfig.Load(Abatab.Core.Catalog.Definition.AbSession)">Load(AbSession)</h4>
+  <div class="markdown level1 summary"><p>Loads the configuration settings from the local Web.config file.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Dictionary&lt;string, string&gt; Load()</code></pre>
+    <pre><code class="lang-csharp hljs">public static void Load(AbSession abSession)</code></pre>
   </div>
-  <h5 class="returns">Returns</h5>
+  <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
+        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
-        <td><p>A dictionary containing the settings from Web.config.</p>
+        <td><a class="xref" href="Abatab.Core.Catalog.Definition.AbSession.html">AbSession</a></td>
+        <td><span class="parametername">abSession</span></td>
+        <td><p>The Abatab session object.</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <h5 id="Abatab_WebConfig_Load_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><ul><li>These <a href="../man/manAppendix.html#configuration">configuration settings</a> are setup in <em>src/Properties/Settings.settings</em>, and modified in the <a href="../man/manAppendix.html#webconfig">Web.config</a> file.</li><li>Whenever a new value is added/removed to <em>src/Properties/Settings.settings</em>, it needs to be added/removed here as well.</li><li>Settings are <a href="../man/manSourceCode.html#casing-and-trimming">trimmed and converted to lowercase</a>.</li></ul>
-</div>
 </article>
           </div>
           

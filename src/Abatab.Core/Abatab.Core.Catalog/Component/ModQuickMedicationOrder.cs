@@ -1,6 +1,5 @@
 ﻿// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-// Abatab v23.7.0.0
-// A custom web service/framework for myAvatar.
+// Abatab: A custom web service/framework for myAvatar.
 // https://github.com/spectrum-health-systems/Abatab
 // Copyright (c) A Pretty Cool Program. All rights reserved.
 // Licensed under the Apache 2.0 license.
@@ -9,10 +8,10 @@
 // -----------------------------------------------------------------------------
 // Abatab.Core.Catalog.Component.ModQuickMedicationOrder.cs
 // String values.
-// b230713.1524
+// b230809.1309
 // -----------------------------------------------------------------------------
 
-/* DEVELOPER_NOTE
+/* DEVNOTE
  * The strings that these methods return use Markdown syntax, which creates a
  * carriage return when a line ends with two blank characters:
  *
@@ -21,19 +20,19 @@
  * Removing the blank characters will break the Markdown output.
  */
 
+// REVIEW Should this be moved to Abatab.Module.QuickMedicationOrder
+
 using Abatab.Core.Catalog.Definition;
 using System;
 
 namespace Abatab.Core.Catalog.Component
 {
-    /// <summary>
-    /// Class summary goes here.
-    /// </summary>
+    /// <summary>Component strings for progress notes.</summary>
     public static class ModQuickMedicationOrder
     {
-        /// <summary>
-        /// Method summary goes here.
-        /// </summary>
+        /// <summary>Creates a detail body for Quick Medication Orders.</summary>
+        /// <param name="abSession">The Abatab session object.</param>
+        /// <returns>A detail body for Quick Medication Orders.</returns>
         public static string Detail(AbSession abSession) =>
             $"### QuickMedicationOrder Module{Environment.NewLine}" +
             $"**Mode:** {abSession.ModQMedOrdr.Mode}  {Environment.NewLine}" +

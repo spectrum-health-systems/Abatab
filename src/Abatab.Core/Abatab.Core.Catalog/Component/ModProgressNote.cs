@@ -1,6 +1,5 @@
 ﻿// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-// Abatab v23.7.0.0
-// A custom web service/framework for myAvatar.
+// Abatab: A custom web service/framework for myAvatar.
 // https://github.com/spectrum-health-systems/Abatab
 // Copyright (c) A Pretty Cool Program. All rights reserved.
 // Licensed under the Apache 2.0 license.
@@ -9,10 +8,10 @@
 // -----------------------------------------------------------------------------
 // Abatab.Core.Catalog.Component.ModProgressNotes.cs
 // String values.
-// b230713.1524
+// b230809.1307
 // -----------------------------------------------------------------------------
 
-/* DEVELOPER_NOTE
+/* DEVNOTE
  * The strings that these methods return use Markdown syntax, which creates a
  * carriage return when a line ends with two blank characters:
  *
@@ -21,20 +20,20 @@
  * Removing the blank characters will break the Markdown output.
  */
 
+// REVIEW Should this be moved to Abatab.Module.ProgressNote
+
 using Abatab.Core.Catalog.Definition;
 using Abatab.Core.Utility;
 using System;
 
 namespace Abatab.Core.Catalog.Component
 {
-    /// <summary>
-    /// Class summary goes here.
-    /// </summary>
+    /// <summary>Component strings for progress notes.</summary>
     public static class ModProgressNote
     {
-        /// <summary>
-        /// Method summary goes here.
-        /// </summary>
+        /// <summary>Creates a detail body for progress notes.</summary>
+        /// <param name="abSession">The Abatab session object.</param>
+        /// <returns>A detail body for progress notes.</returns>
         public static string Detail(AbSession abSession) =>
             $"### Progress Note Module{Environment.NewLine}" +
             $"**Mode:** {abSession.ModProgNote.Mode}  {Environment.NewLine}" +
@@ -46,9 +45,10 @@ namespace Abatab.Core.Catalog.Component
             $"**Valid location codes:** {ConvertCollection.ListToString(abSession.ModProgNote.ValidLocationCodes)}  {Environment.NewLine}" +
             $"**Valid location names:** {ConvertCollection.ListToString(abSession.ModProgNote.ValidLocationNames)}  {Environment.NewLine}";
 
-        /// <summary>
-        /// Method summary goes here.
-        /// </summary>
+        /// <summary>Creates the verify location message for progress notes.</summary>
+        /// <param name="abSession">The Abatab session object.</param>
+        /// <param name="logType">The type of log.</param>
+        /// <returns>The verify location message for progress notes.</returns>
         public static string VfyLocMessage(AbSession abSession, string logType) =>
             $"# [{logType}] Progress Note >+ Verify Location{Environment.NewLine}" +
             $"{Detail(abSession)}{Environment.NewLine}" +

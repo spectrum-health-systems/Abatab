@@ -1,6 +1,5 @@
 ﻿// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-// Abatab v23.7.0.0
-// A custom web service/framework for myAvatar.
+// Abatab: A custom web service/framework for myAvatar.
 // https://github.com/spectrum-health-systems/Abatab
 // Copyright (c) A Pretty Cool Program. All rights reserved.
 // Licensed under the Apache 2.0 license.
@@ -9,7 +8,7 @@
 // -----------------------------------------------------------------------------
 // Abatab.Core.Framework.Validate.cs
 // Class summary goes here.
-// b230713.1524
+// b230810.1111
 // -----------------------------------------------------------------------------
 
 
@@ -20,20 +19,15 @@ using System.Reflection;
 
 namespace Abatab.Core.Framework
 {
-    /// <summary>
-    /// Class summary goes here.
-    /// </summary>
+    /// <summary>Validate Abatab framework components.</summary>
     public static class Validate
     {
-        /// <summary>
-        /// Executing assembly name for log files.
-        /// </summary>
+        /// <summary>Executing assembly name for log files.</summary>
         /// <remarks>This is defined at the start of the class so it can be easily used throughout the method.</remarks>
         public static string AssemblyName { get; set; } = Assembly.GetExecutingAssembly().GetName().Name;
 
-        /// <summary>
-        /// Method summary goes here.
-        /// </summary>
+        /// <summary>Verify framework status.</summary>
+        /// <param name="abSession">The Abatab session object.</param>
         public static void Status(AbSession abSession)
         {
             LogEvent.Trace("trace", abSession, AssemblyName);

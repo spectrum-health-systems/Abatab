@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../styles/docfx.css">
     <link rel="stylesheet" href="../styles/main.css">
-    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:navrel" content="">
     <meta property="docfx:tocrel" content="toc.html">
     
     
@@ -73,7 +73,7 @@
   
   <h1 id="Abatab_Roundhouse" data-uid="Abatab.Roundhouse" class="text-break">Class Roundhouse
   </h1>
-  <div class="markdown level0 summary"><p>Determines what should be done with the <strong>module</strong> component of the <a href="../man/manAppendix.html#script-parameter">Script Parameter</a>.</p>
+  <div class="markdown level0 summary"><p>Logic for parsing the module component of the Script Parameter.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -111,18 +111,49 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static class Roundhouse</code></pre>
   </div>
-  <h3 id="methods">Methods
+  <h3 id="properties">Properties
   </h3>
   
   
-  <a id="Abatab_Roundhouse_ParseRequest_" data-uid="Abatab.Roundhouse.ParseRequest*"></a>
-  <h4 id="Abatab_Roundhouse_ParseRequest_AbatabData_Session_" data-uid="Abatab.Roundhouse.ParseRequest(AbatabData.Session)">ParseRequest(Session)</h4>
-  <div class="markdown level1 summary"><p>Parses the Script Parameter and sends valid requests to the proper destination.</p>
+  <a id="Abatab_Roundhouse_AssemblyName_" data-uid="Abatab.Roundhouse.AssemblyName*"></a>
+  <h4 id="Abatab_Roundhouse_AssemblyName" data-uid="Abatab.Roundhouse.AssemblyName">AssemblyName</h4>
+  <div class="markdown level1 summary"><p>Executing assembly name for log files.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void ParseRequest(Session abatabSession)</code></pre>
+    <pre><code class="lang-csharp hljs">public static string AssemblyName { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Abatab_Roundhouse_AssemblyName_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This is defined at the start of the class so it can be easily used throughout the method.</p>
+</div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Abatab_Roundhouse_ParseModule_" data-uid="Abatab.Roundhouse.ParseModule*"></a>
+  <h4 id="Abatab_Roundhouse_ParseModule_Abatab_Core_Catalog_Definition_AbSession_" data-uid="Abatab.Roundhouse.ParseModule(Abatab.Core.Catalog.Definition.AbSession)">ParseModule(AbSession)</h4>
+  <div class="markdown level1 summary"><p>Parses the &quot;module&quot; component of the Script Parameter sent from myAvata.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ParseModule(AbSession abSession)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -135,16 +166,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="AbatabData.Session.html">Session</a></td>
-        <td><span class="parametername">abatabSession</span></td>
-        <td><p>Settings and data for this session of Abatab.</p>
+        <td><a class="xref" href="Abatab.Core.Catalog.Definition.AbSession.html">AbSession</a></td>
+        <td><span class="parametername">abSession</span></td>
+        <td><p>The Abatab session object.</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <h5 id="Abatab_Roundhouse_ParseRequest_AbatabData_Session__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><ul><li>Only parses the <strong>module</strong> component of the <a href="../man/manAppendix.html#script-parameter">Script Parameter</a>.</li><li>Whenever a new Abatab Module is added, <a href="../man/manAppendix.html#script-parameter">the necessary logic</a> will need to be added here.</li></ul>
-</div>
 </article>
           </div>
           

@@ -1,6 +1,5 @@
 ﻿// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-// Abatab v23.7.0.0
-// A custom web service/framework for myAvatar.
+// Abatab: A custom web service/framework for myAvatar.
 // https://github.com/spectrum-health-systems/Abatab
 // Copyright (c) A Pretty Cool Program. All rights reserved.
 // Licensed under the Apache 2.0 license.
@@ -9,7 +8,7 @@
 // -----------------------------------------------------------------------------
 // Abatab.WebConfig.cs
 // Logic for the local Web.config file.
-// b230713.1524
+// b230809.1142
 // -----------------------------------------------------------------------------
 
 using Abatab.Core.Catalog.Definition;
@@ -20,14 +19,11 @@ using System.Reflection;
 
 namespace Abatab
 {
-    /// <summary>
-    /// Logic for the local Web.config file.
-    /// </summary>
+    /// <summary>Logic for the local Web.config file.</summary>
     public static class WebConfig
     {
-        /// <summary>
-        /// Method summary goes here.
-        /// </summary>
+        /// <summary>Loads the configuration settings from the local Web.config file.</summary>
+        /// <param name="abSession">The Abatab session object.</param>
         public static void Load(AbSession abSession)
         {
             Debuggler.DebugLog(Settings.Default.DebugglerMode,Assembly.GetExecutingAssembly().GetName().Name);
