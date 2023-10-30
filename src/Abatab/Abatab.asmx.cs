@@ -3,18 +3,10 @@
 // https://github.com/spectrum-health-systems/Abatab
 // Copyright (c) A Pretty Cool Program. All rights reserved.
 // Licensed under the Apache 2.0 license.
-// 
-// For more information, please see the Abatab Documenation Project
-// https://spectrum-health-systems.github.io/Abatab-Documentation-Project/
-// =============================================================================
-
-// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-// This is the development version of Abatab, and is not intended for use in
-// production environments.
 //
-// For production environments, please visit the Abatab Community Release:
-// https://github.com/spectrum-health-systems/Abatab-Community-Release
-// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+// For details about this release, please see the local Source Code README.md:
+//   Abatab/README.md
+// =============================================================================
 
 // -----------------------------------------------------------------------------
 // Abatab.asmx.cs: Entry point for Abatab.
