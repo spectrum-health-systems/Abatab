@@ -1,24 +1,26 @@
-﻿// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+﻿// =============================================================================
 // Abatab: A custom web service/framework for myAvatar.
 // https://github.com/spectrum-health-systems/Abatab
 // Copyright (c) A Pretty Cool Program. All rights reserved.
 // Licensed under the Apache 2.0 license.
-// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-
+// 
 // For more information, please see the Abatab Documenation Project
 // https://spectrum-health-systems.github.io/Abatab-Documentation-Project/
+// =============================================================================
+
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+// This is the development version of Abatab, and is not intended for use in
+// production environments.
+//
+// For production environments, please visit the Abatab Community Release:
+// https://github.com/spectrum-health-systems/Abatab-Community-Release
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 // -----------------------------------------------------------------------------
-// Abatab.asmx.cs
-// Entry point for Abatab.
-// b230920.1206
+// Abatab.asmx.cs: Entry point for Abatab.
+// https://spectrum-health-systems.github.io/Abatab-Documentation-Project/Source%20code/Abatab/Abatab.asmx.cs.html
+// b231030.1043
 // -----------------------------------------------------------------------------
-
-/* DEVNOTE
- * The development version of Abatab is not intended for use in production
- * environments. Please visit the Abatab Community Release repository:
- * https://github.com/spectrum-health-systems/Abatab-Community-Release
- */
 
 using Abatab.Core.Catalog.Definition;
 using Abatab.Core.Utility;
@@ -39,7 +41,7 @@ namespace Abatab
         /// <remarks>This method is required by myAvatar.</remarks>
         /// <returns>The current version of Abatab.</returns>
         [WebMethod]
-        public string GetVersion() => "VERSION 23.8";
+        public string GetVersion() => "VERSION 23.11";
 
         /// <summary>The starting point for Abatab!</summary>
         /// <param name="sentOptionObject">The OptionObject sent from myAvatar.</param>
