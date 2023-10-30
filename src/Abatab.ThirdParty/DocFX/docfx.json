@@ -6,7 +6,7 @@
           "files": [
             "*.sln"
           ],
-          "src": "../../Abatab",
+          "cwd": "../../Abatab",
           "exclude": [
             "**/obj/**",
             "**/bin/**",
@@ -14,7 +14,7 @@
           ]
         }
       ],
-      "dest": "../../../docs/obj/api"
+      "dest": "obj/api"
     }
   ],
   "build": {
@@ -23,7 +23,7 @@
         "files": [
           "api/**.yml"
         ],
-        "src": "../../../docs/obj"
+        "cwd": "obj"
       },
       {
         "files": [
@@ -60,7 +60,7 @@
         ]
       }
     ],
-    "dest": "../../../docs",
+    "dest": "_site",
     "template": [
       "default"
     ]

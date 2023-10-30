@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Spectrum Health Systems, Inc")]
 [assembly: AssemblyProduct("DocFX")]
-[assembly: AssemblyCopyright("Copyright © Spectrum Health Systems, Inc 2022")]
+[assembly: AssemblyCopyright("Copyright © Spectrum Health Systems, Inc 2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("f13365be-b3c8-4d2e-b35d-a169cd6850d3")]
+[assembly: Guid("b1c21fc7-b20f-4e99-8e7d-b017d75f0043")]
 
 // Version information for an assembly consists of the following four values:
 //

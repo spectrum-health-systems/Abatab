@@ -227,7 +227,7 @@
       <Name>Abatab.Sandbox.DevTwo</Name>
     </ProjectReference>
     <ProjectReference Include="..\Abatab.ThirdParty\DocFX\DocFX.csproj">
-      <Project>{f13365be-b3c8-4d2e-b35d-a169cd6850d3}</Project>
+      <Project>{b1c21fc7-b20f-4e99-8e7d-b017d75f0043}</Project>
       <Name>DocFX</Name>
     </ProjectReference>
     <ProjectReference Include="..\Abatab.ThirdParty\ScriptLinkStandard\ScriptLinkStandard.csproj">
