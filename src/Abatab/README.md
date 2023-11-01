@@ -1,12 +1,10 @@
 <!-- 
 	Abatab Source Code Readme
-	Last updated: 231030C:\IT\GitHub\SHS\Abatab\src\Abatab.ThirdParty\DocFX\index.md
-C:\IT\GitHub\SHS\Abatab\README.md
 -->
 
-# About this release
+Abatab v23.11.0-bDEVELOPMENT
 
-This is **v23.11.0-development+b------** of Abatab, a custom web service/framework for myAvatar.
+# Development release
 
 This is a [development version](https://github.com/spectrum-health-systems/Abatab) of Abatab, and is not intended for use in production environments.
 
