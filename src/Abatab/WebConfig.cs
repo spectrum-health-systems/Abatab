@@ -6,9 +6,9 @@
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 // -----------------------------------------------------------------------------
-// Abatab.WebConfig.cs
-// Logic for the local Web.config file.
-// b230809.1142
+// Abatab.WebConfig.cs: Logic for the local Web.config file.
+// https://spectrum-health-systems.github.io/Abatab-Documentation-Project/source-code/abatab/abatab.webconfig.html
+// b231106.1013
 // -----------------------------------------------------------------------------
 
 using Abatab.Core.Catalog.Definition;
@@ -19,10 +19,14 @@ using System.Reflection;
 
 namespace Abatab
 {
-    /// <summary>Logic for the local Web.config file.</summary>
+    /// <summary>
+    /// Logic for the local Web.config file.
+    /// </summary>
     public static class WebConfig
     {
-        /// <summary>Loads the configuration settings from the local Web.config file.</summary>
+        /// <summary>
+        /// Loads the configuration settings from the local Web.config file.
+        /// </summary>
         /// <param name="abSession">The Abatab session object.</param>
         public static void Load(AbSession abSession)
         {

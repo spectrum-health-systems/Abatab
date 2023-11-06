@@ -10,8 +10,8 @@
 
 // -----------------------------------------------------------------------------
 // Abatab.Abatab.asmx.cs: Entry point for Abatab.
-// https://spectrum-health-systems.github.io/Abatab-Documentation-Project/source-code/abatab/abatab.asmx.cs.html
-// b231101.1314
+// https://spectrum-health-systems.github.io/Abatab-Documentation-Project/source-code/abatab/abatab.asmxhtml
+// b231106.1008
 // -----------------------------------------------------------------------------
 
 using Abatab.Core.Catalog.Definition;
@@ -23,13 +23,20 @@ using System.Web.Services;
 
 namespace Abatab
 {
-    /// <summary>Entry point for Abatab.</summary>
+    /// <summary>
+    /// Entry point for Abatab.
+    /// </summary>
+    /// <remarks>
+    ///     - This is a test
+    /// </remarks>
     [WebService(Namespace = "http://tempuri.org/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
     public class Abatab :WebService
     {
-        /// <summary>Returns the current version of Abatab.</summary>
+        /// <summary>
+        /// Returns the current version of Abatab.
+        /// </summary>
         /// <remarks>
         ///     - This method is required by myAvatar.
         ///     - The version number the current development version in YY.MM format.
@@ -38,7 +45,9 @@ namespace Abatab
         [WebMethod]
         public string GetVersion() => "VERSION 23.11";
 
-        /// <summary>The starting point for Abatab.</summary>
+        /// <summary>
+        /// The starting point for Abatab.
+        /// </summary>
         /// <param name="sentOptionObject">The OptionObject sent from myAvatar.</param>
         /// <param name="scriptParameter">The Script Parameter sent from myAvatar.</param>
         /// <remarks>

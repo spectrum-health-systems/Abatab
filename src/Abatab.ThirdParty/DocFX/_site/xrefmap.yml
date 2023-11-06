@@ -1723,51 +1723,6 @@ references:
   isSpec: "True"
   fullName: Abatab.Core.Utility.FileSys.VerifyDirectory
   nameWithType: FileSys.VerifyDirectory
-- uid: Abatab.Flightpath
-  name: Flightpath
-  href: api/Abatab.Flightpath.html
-  commentId: T:Abatab.Flightpath
-  fullName: Abatab.Flightpath
-  nameWithType: Flightpath
-- uid: Abatab.Flightpath.AssemblyName
-  name: AssemblyName
-  href: api/Abatab.Flightpath.html#Abatab_Flightpath_AssemblyName
-  commentId: P:Abatab.Flightpath.AssemblyName
-  fullName: Abatab.Flightpath.AssemblyName
-  nameWithType: Flightpath.AssemblyName
-- uid: Abatab.Flightpath.AssemblyName*
-  name: AssemblyName
-  href: api/Abatab.Flightpath.html#Abatab_Flightpath_AssemblyName_
-  commentId: Overload:Abatab.Flightpath.AssemblyName
-  isSpec: "True"
-  fullName: Abatab.Flightpath.AssemblyName
-  nameWithType: Flightpath.AssemblyName
-- uid: Abatab.Flightpath.InitializeAbatab(Abatab.Core.Catalog.Definition.AbSession,System.String,ScriptLinkStandard.Objects.OptionObject2015)
-  name: InitializeAbatab(AbSession, String, OptionObject2015)
-  href: api/Abatab.Flightpath.html#Abatab_Flightpath_InitializeAbatab_Abatab_Core_Catalog_Definition_AbSession_System_String_ScriptLinkStandard_Objects_OptionObject2015_
-  commentId: M:Abatab.Flightpath.InitializeAbatab(Abatab.Core.Catalog.Definition.AbSession,System.String,ScriptLinkStandard.Objects.OptionObject2015)
-  fullName: Abatab.Flightpath.InitializeAbatab(Abatab.Core.Catalog.Definition.AbSession, System.String, ScriptLinkStandard.Objects.OptionObject2015)
-  nameWithType: Flightpath.InitializeAbatab(AbSession, String, OptionObject2015)
-- uid: Abatab.Flightpath.InitializeAbatab*
-  name: InitializeAbatab
-  href: api/Abatab.Flightpath.html#Abatab_Flightpath_InitializeAbatab_
-  commentId: Overload:Abatab.Flightpath.InitializeAbatab
-  isSpec: "True"
-  fullName: Abatab.Flightpath.InitializeAbatab
-  nameWithType: Flightpath.InitializeAbatab
-- uid: Abatab.Flightpath.WrapUpAbatab(Abatab.Core.Catalog.Definition.AbSession)
-  name: WrapUpAbatab(AbSession)
-  href: api/Abatab.Flightpath.html#Abatab_Flightpath_WrapUpAbatab_Abatab_Core_Catalog_Definition_AbSession_
-  commentId: M:Abatab.Flightpath.WrapUpAbatab(Abatab.Core.Catalog.Definition.AbSession)
-  fullName: Abatab.Flightpath.WrapUpAbatab(Abatab.Core.Catalog.Definition.AbSession)
-  nameWithType: Flightpath.WrapUpAbatab(AbSession)
-- uid: Abatab.Flightpath.WrapUpAbatab*
-  name: WrapUpAbatab
-  href: api/Abatab.Flightpath.html#Abatab_Flightpath_WrapUpAbatab_
-  commentId: Overload:Abatab.Flightpath.WrapUpAbatab
-  isSpec: "True"
-  fullName: Abatab.Flightpath.WrapUpAbatab
-  nameWithType: Flightpath.WrapUpAbatab
 - uid: Abatab.Module.ProgressNote
   name: Abatab.Module.ProgressNote
   href: api/Abatab.Module.ProgressNote.html
@@ -2088,6 +2043,70 @@ references:
   commentId: T:Abatab.Sandbox.DevTwo.Class1
   fullName: Abatab.Sandbox.DevTwo.Class1
   nameWithType: Class1
+- uid: Abatab.Start
+  name: Start
+  href: api/Abatab.Start.html
+  commentId: T:Abatab.Start
+  fullName: Abatab.Start
+  nameWithType: Start
+- uid: Abatab.Start.AssemblyName
+  name: AssemblyName
+  href: api/Abatab.Start.html#Abatab_Start_AssemblyName
+  commentId: P:Abatab.Start.AssemblyName
+  fullName: Abatab.Start.AssemblyName
+  nameWithType: Start.AssemblyName
+- uid: Abatab.Start.AssemblyName*
+  name: AssemblyName
+  href: api/Abatab.Start.html#Abatab_Start_AssemblyName_
+  commentId: Overload:Abatab.Start.AssemblyName
+  isSpec: "True"
+  fullName: Abatab.Start.AssemblyName
+  nameWithType: Start.AssemblyName
+- uid: Abatab.Start.NewSession(Abatab.Core.Catalog.Definition.AbSession,System.String,ScriptLinkStandard.Objects.OptionObject2015)
+  name: NewSession(AbSession, String, OptionObject2015)
+  href: api/Abatab.Start.html#Abatab_Start_NewSession_Abatab_Core_Catalog_Definition_AbSession_System_String_ScriptLinkStandard_Objects_OptionObject2015_
+  commentId: M:Abatab.Start.NewSession(Abatab.Core.Catalog.Definition.AbSession,System.String,ScriptLinkStandard.Objects.OptionObject2015)
+  fullName: Abatab.Start.NewSession(Abatab.Core.Catalog.Definition.AbSession, System.String, ScriptLinkStandard.Objects.OptionObject2015)
+  nameWithType: Start.NewSession(AbSession, String, OptionObject2015)
+- uid: Abatab.Start.NewSession*
+  name: NewSession
+  href: api/Abatab.Start.html#Abatab_Start_NewSession_
+  commentId: Overload:Abatab.Start.NewSession
+  isSpec: "True"
+  fullName: Abatab.Start.NewSession
+  nameWithType: Start.NewSession
+- uid: Abatab.Stop
+  name: Stop
+  href: api/Abatab.Stop.html
+  commentId: T:Abatab.Stop
+  fullName: Abatab.Stop
+  nameWithType: Stop
+- uid: Abatab.Stop.AssemblyName
+  name: AssemblyName
+  href: api/Abatab.Stop.html#Abatab_Stop_AssemblyName
+  commentId: P:Abatab.Stop.AssemblyName
+  fullName: Abatab.Stop.AssemblyName
+  nameWithType: Stop.AssemblyName
+- uid: Abatab.Stop.AssemblyName*
+  name: AssemblyName
+  href: api/Abatab.Stop.html#Abatab_Stop_AssemblyName_
+  commentId: Overload:Abatab.Stop.AssemblyName
+  isSpec: "True"
+  fullName: Abatab.Stop.AssemblyName
+  nameWithType: Stop.AssemblyName
+- uid: Abatab.Stop.ExistingSession(Abatab.Core.Catalog.Definition.AbSession)
+  name: ExistingSession(AbSession)
+  href: api/Abatab.Stop.html#Abatab_Stop_ExistingSession_Abatab_Core_Catalog_Definition_AbSession_
+  commentId: M:Abatab.Stop.ExistingSession(Abatab.Core.Catalog.Definition.AbSession)
+  fullName: Abatab.Stop.ExistingSession(Abatab.Core.Catalog.Definition.AbSession)
+  nameWithType: Stop.ExistingSession(AbSession)
+- uid: Abatab.Stop.ExistingSession*
+  name: ExistingSession
+  href: api/Abatab.Stop.html#Abatab_Stop_ExistingSession_
+  commentId: Overload:Abatab.Stop.ExistingSession
+  isSpec: "True"
+  fullName: Abatab.Stop.ExistingSession
+  nameWithType: Stop.ExistingSession
 - uid: Abatab.WebConfig
   name: WebConfig
   href: api/Abatab.WebConfig.html

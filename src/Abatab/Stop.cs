@@ -1,7 +1,7 @@
 ﻿// -----------------------------------------------------------------------------
-// Abatab.Stop.cs
-// Stop an existing Abatab session.
-// b231101.1329
+// Abatab.Stop.cs: Stop an Abatab session.
+// https://spectrum-health-systems.github.io/Abatab-Documentation-Project/source-code/abatab/abatab.stop.html
+// b231106.1013
 // -----------------------------------------------------------------------------
 
 using Abatab.Core.Catalog.Definition;

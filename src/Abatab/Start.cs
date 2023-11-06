@@ -1,7 +1,7 @@
 ﻿// -----------------------------------------------------------------------------
-// Abatab.Start.cs
-// Start a new Abatab session.
-// b231101.1329
+// Abatab.Start.cs: Start a new Abatab session.
+// https://spectrum-health-systems.github.io/Abatab-Documentation-Project/source-code/abatab/abatab.start.html
+// b231106.1013
 // -----------------------------------------------------------------------------
 
 using Abatab.Core.Catalog.Definition;
