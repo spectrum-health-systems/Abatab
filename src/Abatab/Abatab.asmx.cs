@@ -3,23 +3,15 @@
 // https://github.com/spectrum-health-systems/Abatab
 // Copyright (c) A Pretty Cool Program. All rights reserved.
 // Licensed under the Apache 2.0 license.
-// 
-// For more information, please see the Abatab Documenation Project
-// https://spectrum-health-systems.github.io/Abatab-Documentation-Project/
+//
+// For details about this release, please see the local Source Code README.md:
+//   Abatab/README.md
 // =============================================================================
 
-// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-// This is the development version of Abatab, and is not intended for use in
-// production environments.
-//
-// For production environments, please visit the Abatab Community Release:
-// https://github.com/spectrum-health-systems/Abatab-Community-Release
-// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-
 // -----------------------------------------------------------------------------
-// Abatab.asmx.cs: Entry point for Abatab.
-// https://spectrum-health-systems.github.io/Abatab-Documentation-Project/Source%20code/Abatab/Abatab.asmx.cs.html
-// b231030.1043
+// Abatab.Abatab.asmx.cs: Entry point for Abatab.
+// https://spectrum-health-systems.github.io/Abatab-Documentation-Project/source-code/abatab/abatab.asmxhtml
+// b231106.1008
 // -----------------------------------------------------------------------------
 
 using Abatab.Core.Catalog.Definition;
@@ -31,22 +23,36 @@ using System.Web.Services;
 
 namespace Abatab
 {
-    /// <summary>Entry point for Abatab.</summary>
+    /// <summary>
+    /// Entry point for Abatab.
+    /// </summary>
+    /// <remarks>
+    ///     - This is a test
+    /// </remarks>
     [WebService(Namespace = "http://tempuri.org/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
     public class Abatab :WebService
     {
-        /// <summary>Returns the current version of Abatab.</summary>
-        /// <remarks>This method is required by myAvatar.</remarks>
+        /// <summary>
+        /// Returns the current version of Abatab.
+        /// </summary>
+        /// <remarks>
+        ///     - This method is required by myAvatar.
+        ///     - The version number the current development version in YY.MM format.
+        /// </remarks>
         /// <returns>The current version of Abatab.</returns>
         [WebMethod]
         public string GetVersion() => "VERSION 23.11";
 
-        /// <summary>The starting point for Abatab!</summary>
+        /// <summary>
+        /// The starting point for Abatab.
+        /// </summary>
         /// <param name="sentOptionObject">The OptionObject sent from myAvatar.</param>
         /// <param name="scriptParameter">The Script Parameter sent from myAvatar.</param>
-        /// <remarks>This method is required by myAvatar.</remarks>
+        /// <remarks>
+        ///    - This method is required by myAvatar.
+        /// </remarks>
         /// <returns>The finalized OptionObject to myAvatar.</returns>
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject,string scriptParameter)
@@ -57,9 +63,11 @@ namespace Abatab
 
             if (Settings.Default.AbatabMode == "enabled")
             {
-                Flightpath.InitializeAbatab(abSession,scriptParameter,sentOptionObject);
+                Start.NewSession(abSession,scriptParameter,sentOptionObject);
+
                 Roundhouse.ParseModule(abSession);
-                Flightpath.WrapUpAbatab(abSession);
+
+                Stop.ExistingSession(abSession);
             }
             else
             {
