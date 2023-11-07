@@ -8,7 +8,7 @@
 //   Abatab/README.md
 // =============================================================================
 
-// b231106.1123
+// b231107.1015
 
 using Abatab.Core.Catalog.Definition;
 using Abatab.Core.Utility;

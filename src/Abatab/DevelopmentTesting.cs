@@ -1,25 +1,15 @@
-// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-// Abatab: A custom web service/framework for myAvatar.
-// https://github.com/spectrum-health-systems/Abatab
-// Copyright (c) A Pretty Cool Program. All rights reserved.
-// Licensed under the Apache 2.0 license.
-// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+// b231107.1014
 
-// -----------------------------------------------------------------------------
-// Abatab.DevelopmentNotes.cs
-// Development notes for Abatab.
-// b230809.1112
-// -----------------------------------------------------------------------------
-
-/* DEVNOTE
- * This class is used to test various development-related things, like how comments appear or whatever. There
+/* This class is used to test various development-related things, like how comments appear or whatever. There
  * isn't any actual logic here.
+ * 
+ * Eventually this can be removed.
  */
 
 namespace Abatab
 {
     /// <summary>This method is for testing and examples.</summary>
-    public static class XmlDocumentCommentsExample
+    public static class DevelopmentTesting
     {
         /// <summary>Compares two numbers to determine if they are the same.</summary>
         /// <param name="numberOne">The first number.</param>
@@ -89,6 +79,6 @@ namespace Abatab
         public static bool XmlDocumentationCommentExample(int numberOne,int numberTwo) => true;
 
         /// <summary>Test for XML Documentation Comments.</summary>
-        public static void XmlDocumentationCommentTest() => _ = XmlDocumentCommentsExample.XmlDocumentationCommentExample(1,2);
+        public static void XmlDocumentationCommentTest() => _ = XmlDocumentationCommentExample(1,2);
     }
 }
