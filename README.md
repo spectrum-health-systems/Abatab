@@ -32,8 +32,8 @@ While this is the main repository, I'm using it to test documentation updates fo
 
 ***SO DO NOT USE IT***
 
-- [Abatab API documentation (DocFX)](https://spectrum-health-systems.github.io/Abatab/)
-- [Abatab Documentation Project](https://spectrum-health-systems.github.io/Abatab-Documentation-Project/)
+- [Abatab API documentation](https://spectrum-health-systems.github.io/Abatab/)
+- [Abatab Documentation Project](https://github.com/spectrum-health-systems/Abatab-Documentation-Project/blob/main/README.md)
 
 ***
 
