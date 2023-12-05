@@ -24,9 +24,9 @@ namespace Abatab
         public static string AssemblyName { get; set; } = Assembly.GetExecutingAssembly().GetName().Name;
 
         /// <summary>
-        /// Parses the `module` component of the `module-command-action[-option]` <see href="https://spectrum-health-systems/Abatab-Documentation-Project/glossary.md#Script_Parameter">Script Parameter</see> sent from myAvatar.
+        /// Parses the `module` component of the `module-command-action[-option]` <see href="https://github.com/spectrum-health-systems/Abatab-Documentation-Project/blob/main/Glossary.md#script-parameter">Script Parameter</see> sent from myAvatar.
         /// </summary>
-        /// <param name="abSession">The Abatab session object!</param>
+        /// <param name="abSession">The Abatab session object.</param>
         /// <remarks>
         ///     - This method <i>will need to be modified</i> when a new Module functionality is added.
         ///     - This method <i>does not need to be modified</i> when new a new command-action[-option] for an existing
