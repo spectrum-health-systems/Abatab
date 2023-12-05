@@ -1,15 +1,4 @@
-﻿// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-// Abatab: A custom web service/framework for myAvatar.
-// https://github.com/spectrum-health-systems/Abatab
-// Copyright (c) A Pretty Cool Program. All rights reserved.
-// Licensed under the Apache 2.0 license.
-// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-
-// -----------------------------------------------------------------------------
-// Abatab.Core.Utility.ConvertCollection.cs
-// Class summary goes here.
-// b230713.1524
-// -----------------------------------------------------------------------------
+﻿// b231205.1411
 
 using System;
 using System.Collections.Generic;
@@ -44,7 +33,7 @@ namespace Abatab.Core.Utility
             /* QUESTION
              * Do we need this abstraction?
              */
-            return string.Join(", ", listToConvert);
+            return string.Join(", ",listToConvert);
         }
 
         /// <summary>

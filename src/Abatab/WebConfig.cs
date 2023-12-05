@@ -8,19 +8,17 @@ using System.Reflection;
 
 namespace Abatab
 {
-    /// <summary>
-    /// Logic for the local Web.config file.
-    /// </summary>
+    /// <summary>Logic for the local Web.config file.</summary>
     public static class WebConfig
     {
-        /// <summary>
-        /// Loads the configuration settings from the local Web.config file.
-        /// </summary>
+        /// <summary>Loads the configuration settings from the local Web.config file.</summary>
         /// <param name="abSession">The Abatab session object.</param>
         public static void Load(AbSession abSession)
         {
             Debuggler.DebugLog(Settings.Default.DebugglerMode,Assembly.GetExecutingAssembly().GetName().Name);
 
+
+            // Common Abatab session details.
             abSession.AbatabMode = Settings.Default.AbatabMode;
             abSession.AbatabVersion = Settings.Default.AbatabVersion;
             abSession.AbatabBuild = Settings.Default.AbatabBuild;
@@ -35,6 +33,7 @@ namespace Abatab
             abSession.AbatabEmailPassword = Settings.Default.AbatabEmailPassword;
             abSession.DebugglerMode = Settings.Default.DebugglerMode;
 
+            // Details for the Progress Note Module
             abSession.ModProgNote = new ModProgNote
             {
                 Mode = Settings.Default.ModProgNoteMode,
@@ -47,12 +46,14 @@ namespace Abatab
                 ValidLocationCodes = Settings.Default.ModProgNoteValidLocationCodes.Cast<string>().ToList(),
             };
 
+            // Details for the Prototype Module
             abSession.ModProto = new ModProto
             {
                 Mode = Settings.Default.ModProtoMode,
                 Users = Settings.Default.ModProtoUsers
             };
 
+            // Details for the Quick Medication Order Module
             abSession.ModQMedOrdr = new ModQMedOrdr
             {
                 Mode = Settings.Default.ModQMedOrdrMode,
@@ -63,6 +64,7 @@ namespace Abatab
                 DoseMilligramBoundary = Settings.Default.ModQMedOrdrDoseMilligramBoundary
             };
 
+            // Details for the Testing Module
             abSession.ModTesting = new ModTesting
             {
                 Mode = Settings.Default.ModTestingMode

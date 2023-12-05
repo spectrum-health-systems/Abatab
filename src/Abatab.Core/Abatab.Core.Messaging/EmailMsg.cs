@@ -1,15 +1,4 @@
-﻿// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-// Abatab: A custom web service/framework for myAvatar.
-// https://github.com/spectrum-health-systems/Abatab
-// Copyright (c) A Pretty Cool Program. All rights reserved.
-// Licensed under the Apache 2.0 license.
-// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-
-// -----------------------------------------------------------------------------
-// Abatab.Core.Messaging.EmailMsg.cs
-// Class summary goes here.
-// b230713.1524
-// -----------------------------------------------------------------------------
+﻿// b231205.1411
 
 /* DEVELOPER_NOTE
  * This class is under construction.
@@ -37,9 +26,9 @@ namespace Abatab.Core.Messaging
         /// <summary>
         /// Method summary goes here.
         /// </summary>
-        public static void Send(AbSession abSession, string msgTo, string msgFrom, string acctPwd, string msgSubject, string msgBody)
+        public static void Send(AbSession abSession,string msgTo,string msgFrom,string acctPwd,string msgSubject,string msgBody)
         {
-            LogEvent.Trace("trace", abSession, AssemblyName);
+            LogEvent.Trace("trace",abSession,AssemblyName);
 
             /* TODO
              * Most of this should be stored in external settings.
@@ -53,26 +42,26 @@ namespace Abatab.Core.Messaging
                 EnableSsl = true,
             };
 
-            LogEvent.Trace("trace", abSession, AssemblyName);
+            LogEvent.Trace("trace",abSession,AssemblyName);
 
             //smtpClient.UseDefaultCredentials = false;
 
-            LogEvent.Trace("trace", abSession, AssemblyName);
+            LogEvent.Trace("trace",abSession,AssemblyName);
 
             //Credentials = new NetworkCredential(abSession.AbatabEmailAddress, abSession.AbatabEmailPassword),
-            smtpClient.Credentials = new NetworkCredential(msgTo, acctPwd);
+            smtpClient.Credentials = new NetworkCredential(msgTo,acctPwd);
 
-            LogEvent.Trace("trace", abSession, AssemblyName);
+            LogEvent.Trace("trace",abSession,AssemblyName);
 
             //var emailTo = "courtney.cross@spectrumhealthsystems.org";
-            LogEvent.Trace("trace", abSession, AssemblyName);
+            LogEvent.Trace("trace",abSession,AssemblyName);
 
             //smtpClient.Send("abatab@spectrumhealthsystems.org", "chris.banwarth@spectrumhealthsystems.org", "I AM AVATAR!", "Yay!");
-            smtpClient.Send(msgTo, msgFrom, msgBody, msgSubject);
-            LogEvent.Trace("trace", abSession, AssemblyName);
+            smtpClient.Send(msgTo,msgFrom,msgBody,msgSubject);
+            LogEvent.Trace("trace",abSession,AssemblyName);
             abSession.ReturnOptionObject.ToReturnOptionObject();
 
-            LogEvent.Trace("trace", abSession, AssemblyName);
+            LogEvent.Trace("trace",abSession,AssemblyName);
         }
     }
 }

@@ -1,15 +1,4 @@
-﻿// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-// Abatab: A custom web service/framework for myAvatar.
-// https://github.com/spectrum-health-systems/Abatab
-// Copyright (c) A Pretty Cool Program. All rights reserved.
-// Licensed under the Apache 2.0 license.
-// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-
-// -----------------------------------------------------------------------------
-// Abatab.Core.Session.Build.cs
-// Class summary goes here.
-// b230713.1524
-// -----------------------------------------------------------------------------
+﻿// b231205.1411
 
 using Abatab.Core.Catalog.Definition;
 using Abatab.Core.Logger;
@@ -34,15 +23,15 @@ namespace Abatab.Core.Session
         /// <summary>
         /// Method summary goes here.
         /// </summary>
-        public static void NewSession(OptionObject2015 sentOptionObject, string scriptParameter, AbSession abSession)
+        public static void NewSession(OptionObject2015 sentOptionObject,string scriptParameter,AbSession abSession)
         {
-            Debuggler.DebugLog(abSession.DebugglerMode, Assembly.GetExecutingAssembly().GetName().Name);
+            Debuggler.DebugLog(abSession.DebugglerMode,Assembly.GetExecutingAssembly().GetName().Name);
 
             BuildSessionRuntimeDetail(abSession);
-            BuildSessionOptionObjectDetail(abSession, sentOptionObject);
+            BuildSessionOptionObjectDetail(abSession,sentOptionObject);
             BuildAbatabUserName(abSession);
             BuildSessionFrameworkDetail(abSession);
-            BuildAbatabRequest(abSession, scriptParameter);
+            BuildAbatabRequest(abSession,scriptParameter);
             //BuildModProgressNote(abSession);
             //BuildModPrototype(abSession);
             BuildModQuickMedicationOrder(abSession);
@@ -54,7 +43,7 @@ namespace Abatab.Core.Session
         /// </summary>
         public static void BuildSessionRuntimeDetail(AbSession abSession)
         {
-            Debuggler.DebugLog(abSession.DebugglerMode, Assembly.GetExecutingAssembly().GetName().Name);
+            Debuggler.DebugLog(abSession.DebugglerMode,Assembly.GetExecutingAssembly().GetName().Name);
 
             abSession.Datestamp = $"{DateTime.Now:yyMMdd}";
             abSession.Timestamp = $"{DateTime.Now:HHmmss}";
@@ -65,15 +54,15 @@ namespace Abatab.Core.Session
         /// </summary>
         public static void BuildSessionFrameworkDetail(AbSession abSession)
         {
-            Debuggler.DebugLog(abSession.DebugglerMode, Assembly.GetExecutingAssembly().GetName().Name);
+            Debuggler.DebugLog(abSession.DebugglerMode,Assembly.GetExecutingAssembly().GetName().Name);
 
-            abSession.SessionDataRoot           = $@"{abSession.AbatabDataRoot}\{abSession.AvatarEnvironment}\{abSession.Datestamp}";
-            abSession.SessionDataDirectory      = $@"{abSession.SessionDataRoot}\{abSession.AbatabUserName}\{abSession.Timestamp}";
-            abSession.TraceLogDirectory         = $@"{abSession.SessionDataDirectory}\trace";
-            abSession.WarningLogDirectory       = $@"{abSession.SessionDataDirectory}\warnings";
-            abSession.PublicDataRoot            = $@"{abSession.AbatabDataRoot}\public\";
-            abSession.AlertLogDirectory         = $@"{abSession.AbatabDataRoot}\public\alert";
-            abSession.DebugglerLogDirectory     = $@"{abSession.AbatabDataRoot}\debuggler";
+            abSession.SessionDataRoot = $@"{abSession.AbatabDataRoot}\{abSession.AvatarEnvironment}\{abSession.Datestamp}";
+            abSession.SessionDataDirectory = $@"{abSession.SessionDataRoot}\{abSession.AbatabUserName}\{abSession.Timestamp}";
+            abSession.TraceLogDirectory = $@"{abSession.SessionDataDirectory}\trace";
+            abSession.WarningLogDirectory = $@"{abSession.SessionDataDirectory}\warnings";
+            abSession.PublicDataRoot = $@"{abSession.AbatabDataRoot}\public\";
+            abSession.AlertLogDirectory = $@"{abSession.AbatabDataRoot}\public\alert";
+            abSession.DebugglerLogDirectory = $@"{abSession.AbatabDataRoot}\debuggler";
 
             Utility.FileSys.VerifyDirectories(Catalog.Key.Directories.Session(abSession));
         }
@@ -85,7 +74,7 @@ namespace Abatab.Core.Session
         {
             /* QUESTION Can a trace log go here?
              */
-            Debuggler.DebugLog(abSession.DebugglerMode, Assembly.GetExecutingAssembly().GetName().Name);
+            Debuggler.DebugLog(abSession.DebugglerMode,Assembly.GetExecutingAssembly().GetName().Name);
 
             abSession.AbatabUserName = string.IsNullOrWhiteSpace(abSession.SentOptionObject.OptionUserId)
                 ? abSession.AbatabFallbackUserName
@@ -95,34 +84,34 @@ namespace Abatab.Core.Session
         /// <summary>
         /// Method summary goes here.
         /// </summary>
-        public static void BuildSessionOptionObjectDetail(AbSession abSession, OptionObject2015 sentOptionObject)
+        public static void BuildSessionOptionObjectDetail(AbSession abSession,OptionObject2015 sentOptionObject)
         {
             /* QUESTION Can a trace log go here?
              */
-            Debuggler.DebugLog(abSession.DebugglerMode, Assembly.GetExecutingAssembly().GetName().Name);
+            Debuggler.DebugLog(abSession.DebugglerMode,Assembly.GetExecutingAssembly().GetName().Name);
 
             //LogEvent.Trace(abSession, "trace", AssemblyName);
 
-            abSession.SentOptionObject   = sentOptionObject;
+            abSession.SentOptionObject = sentOptionObject;
             abSession.ReturnOptionObject = sentOptionObject.Clone();
         }
 
         /// <summary>
         /// Method summary goes here.
         /// </summary>
-        public static void BuildAbatabRequest(AbSession abSession, string scriptParameter)
+        public static void BuildAbatabRequest(AbSession abSession,string scriptParameter)
         {
-            LogEvent.Trace("trace", abSession, AssemblyName);
+            LogEvent.Trace("trace",abSession,AssemblyName);
 
             string[] parameterComponent = scriptParameter.ToLower().Split('-');
 
-            abSession.RequestModule  = parameterComponent[0].Trim().ToLower();
+            abSession.RequestModule = parameterComponent[0].Trim().ToLower();
             abSession.RequestCommand = parameterComponent[1].Trim().ToLower();
-            abSession.RequestAction  = parameterComponent[2].Trim().ToLower();
+            abSession.RequestAction = parameterComponent[2].Trim().ToLower();
 
             if (parameterComponent.Length == 4)
             {
-                LogEvent.Trace("traceinternal", abSession, AssemblyName);
+                LogEvent.Trace("traceinternal",abSession,AssemblyName);
                 abSession.RequestOption = parameterComponent[3].ToLower();
             }
         }
@@ -145,7 +134,7 @@ namespace Abatab.Core.Session
         {
             /* QUESTION Can a trace log go here?
  */
-            Debuggler.DebugLog(abSession.DebugglerMode, Assembly.GetExecutingAssembly().GetName().Name);
+            Debuggler.DebugLog(abSession.DebugglerMode,Assembly.GetExecutingAssembly().GetName().Name);
 
             /* DEVELOPER_NOTE
              * These are the Quick Medication Order module settings that are created at runtime. There are also setting for the Progress Note module that are stored in

@@ -1,15 +1,4 @@
-﻿// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-// Abatab: A custom web service/framework for myAvatar.
-// https://github.com/spectrum-health-systems/Abatab
-// Copyright (c) A Pretty Cool Program. All rights reserved.
-// Licensed under the Apache 2.0 license.
-// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-
-// -----------------------------------------------------------------------------
-// Abatab.Module.ProgressNote.Roundhouse.cs
-// Class summary goes here.
-// b230713.1524
-// -----------------------------------------------------------------------------
+﻿// b231205.1411
 
 using Abatab.Core.Catalog.Definition;
 using Abatab.Core.Logger;
@@ -33,19 +22,19 @@ namespace Abatab.Module.ProgressNote
         /// </summary>
         public static void ParseCommand(AbSession abSession)
         {
-            LogEvent.Trace("trace", abSession, AssemblyName);
+            LogEvent.Trace("trace",abSession,AssemblyName);
 
             switch (abSession.RequestCommand)
             {
                 case "vfyloc":
-                    LogEvent.Trace("traceinternal", abSession, AssemblyName);
+                    LogEvent.Trace("traceinternal",abSession,AssemblyName);
 
                     Action.VerifyLocation.ParseAction(abSession);
 
                     break;
 
                 default:
-                    LogEvent.Trace("traceinternal", abSession, AssemblyName);
+                    LogEvent.Trace("traceinternal",abSession,AssemblyName);
 
                     /* TODO: Make sure this exits gracefully. */
                     break;

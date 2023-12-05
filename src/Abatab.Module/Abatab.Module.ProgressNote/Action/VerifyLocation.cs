@@ -1,15 +1,4 @@
-﻿// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-// Abatab: A custom web service/framework for myAvatar.
-// https://github.com/spectrum-health-systems/Abatab
-// Copyright (c) A Pretty Cool Program. All rights reserved.
-// Licensed under the Apache 2.0 license.
-// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-
-// -----------------------------------------------------------------------------
-// Abatab.Module.ProgressNote.Action.VerifyLocation.cs
-// Class summary goes here.
-// b230713.1524
-// -----------------------------------------------------------------------------
+﻿// b231205.1411
 
 using Abatab.Core.Catalog.Definition;
 using Abatab.Core.Logger;
@@ -37,7 +26,7 @@ namespace Abatab.Module.ProgressNote.Action
         /// </summary>
         public static void ParseAction(AbSession abSession)
         {
-            LogEvent.Trace("trace", abSession, AssemblyName);
+            LogEvent.Trace("trace",abSession,AssemblyName);
 
             /* TODO: These values should be in the local settings file.*/
             var serviceChargeCodeValue = abSession.SentOptionObject.GetFieldValue("51001");
@@ -46,60 +35,60 @@ namespace Abatab.Module.ProgressNote.Action
             switch (abSession.RequestAction)
             {
                 case "telehlth90853":
-                    LogEvent.Trace("traceinternal", abSession, AssemblyName);
+                    LogEvent.Trace("traceinternal",abSession,AssemblyName);
 
-                    if (ValidGroupIndividualizedNote(abSession.ModProgNote.FlaggedServiceChargeCodeCodes, serviceChargeCodeValue, abSession.ModProgNote.ValidLocationCodes, locationValue, abSession)) // remove last parameter after testing
+                    if (ValidGroupIndividualizedNote(abSession.ModProgNote.FlaggedServiceChargeCodeCodes,serviceChargeCodeValue,abSession.ModProgNote.ValidLocationCodes,locationValue,abSession)) // remove last parameter after testing
                     {
-                        LogEvent.Trace("traceinternal", abSession, AssemblyName);
+                        LogEvent.Trace("traceinternal",abSession,AssemblyName);
 
                         abSession.ReturnOptionObject.ToReturnOptionObject();
                     }
                     else
                     {
-                        LogEvent.Trace("traceinternal", abSession, AssemblyName);
-                        LogEvent.Trace("traceinternal", abSession, AssemblyName, serviceChargeCodeValue); /* DEVELOPER_NOTE: For testing */
+                        LogEvent.Trace("traceinternal",abSession,AssemblyName);
+                        LogEvent.Trace("traceinternal",abSession,AssemblyName,serviceChargeCodeValue); /* DEVELOPER_NOTE: For testing */
 
                         /* DEVNOTE: This is a quick fix.*/
                         if (serviceChargeCodeValue != "")
                         {
-                            CreateWarning(abSession, serviceChargeCodeValue);
+                            CreateWarning(abSession,serviceChargeCodeValue);
                         }
                         else
                         {
-                            _=abSession.ReturnOptionObject.ToReturnOptionObject();
+                            _ = abSession.ReturnOptionObject.ToReturnOptionObject();
                         }
                     }
 
                     break;
 
                 case "telehlthwildcards":
-                    LogEvent.Trace("traceinternal", abSession, AssemblyName);
+                    LogEvent.Trace("traceinternal",abSession,AssemblyName);
 
-                    if (ValidIndividualCounselingNote(abSession.ModProgNote.FlaggedServiceChargeCodePrefixes, serviceChargeCodeValue, abSession.ModProgNote.ValidLocationCodes, locationValue, abSession))
+                    if (ValidIndividualCounselingNote(abSession.ModProgNote.FlaggedServiceChargeCodePrefixes,serviceChargeCodeValue,abSession.ModProgNote.ValidLocationCodes,locationValue,abSession))
                     {
-                        LogEvent.Trace("traceinternal", abSession, AssemblyName);
+                        LogEvent.Trace("traceinternal",abSession,AssemblyName);
 
                         abSession.ReturnOptionObject.ToReturnOptionObject();
                     }
                     else
                     {
-                        LogEvent.Trace("traceinternal", abSession, AssemblyName);
+                        LogEvent.Trace("traceinternal",abSession,AssemblyName);
 
                         /* DEVNOTE: This is a quick fix.*/
                         if (serviceChargeCodeValue != "")
                         {
-                            CreateWarning(abSession, serviceChargeCodeValue);
+                            CreateWarning(abSession,serviceChargeCodeValue);
                         }
                         else
                         {
-                            _=abSession.ReturnOptionObject.ToReturnOptionObject();
+                            _ = abSession.ReturnOptionObject.ToReturnOptionObject();
                         }
                     }
 
                     break;
 
                 default:
-                    LogEvent.Trace("traceinternal", abSession, AssemblyName);
+                    LogEvent.Trace("traceinternal",abSession,AssemblyName);
 
                     /* TODO: Make sure this exits gracefully. */
                     break;
@@ -109,7 +98,7 @@ namespace Abatab.Module.ProgressNote.Action
         /// <summary>
         /// Method summary goes here.
         /// </summary>
-        private static bool ValidGroupIndividualizedNote(List<string> flaggedServiceChargeCodeCodes, string serviceChargeCodeValue, List<string> validLocations, string locationValue, AbSession abSession) // remove last argument after testing
+        private static bool ValidGroupIndividualizedNote(List<string> flaggedServiceChargeCodeCodes,string serviceChargeCodeValue,List<string> validLocations,string locationValue,AbSession abSession) // remove last argument after testing
         {
             /* DEVNOTE: We can't put a trace log here. */
 
@@ -125,7 +114,7 @@ namespace Abatab.Module.ProgressNote.Action
             /* TODO: Figure out a better way to do this. */
             if (flaggedServiceChargeCodeCodes.Contains(serviceChargeCodeValue))
             {
-                LogEvent.Trace("traceinternal", abSession, AssemblyName, serviceChargeCodeValue);
+                LogEvent.Trace("traceinternal",abSession,AssemblyName,serviceChargeCodeValue);
                 return validLocations.Contains(locationValue);
             }
             else
@@ -137,14 +126,14 @@ namespace Abatab.Module.ProgressNote.Action
         /// <summary>
         /// Method summary goes here.
         /// </summary>
-        private static bool ValidIndividualCounselingNote(List<string> flaggedServiceChargeCodePrefixes, string serviceChargeCodeValue, List<string> validLocations, string locationValue, AbSession abSession) // remove last argument after testing // Can't put a log event here.
+        private static bool ValidIndividualCounselingNote(List<string> flaggedServiceChargeCodePrefixes,string serviceChargeCodeValue,List<string> validLocations,string locationValue,AbSession abSession) // remove last argument after testing // Can't put a log event here.
         {
             /* DEVNOTE: We can't put a trace log here. */
 
             /* TODO: Figure out a better way to do this. */
             if (flaggedServiceChargeCodePrefixes.Any(codePrefix => serviceChargeCodeValue.StartsWith(codePrefix)))
             {
-                LogEvent.Trace("traceinternal", abSession, AssemblyName, serviceChargeCodeValue);
+                LogEvent.Trace("traceinternal",abSession,AssemblyName,serviceChargeCodeValue);
                 return validLocations.Contains(locationValue);
             }
             else
@@ -156,9 +145,9 @@ namespace Abatab.Module.ProgressNote.Action
         /// <summary>
         /// Method summary goes here.
         /// </summary>
-        private static void CreateWarning(AbSession abSession, string serviceChargeCodeValue)
+        private static void CreateWarning(AbSession abSession,string serviceChargeCodeValue)
         {
-            LogEvent.Trace("trace", abSession, AssemblyName);
+            LogEvent.Trace("trace",abSession,AssemblyName);
 
             /* DEVNOTE
              * The [TESTING] will let the user to be able to file the note after reviewing any warnings that pop up,
@@ -192,10 +181,10 @@ namespace Abatab.Module.ProgressNote.Action
             /* REVIEW: Not sure what this is. */
             //var alertLogName = $"{DateTime.Now:yyMMdd}-{abSession.SentOptionObject.OptionId}-{abSession.RequestModule}-{abSession.RequestCommand}-{abSession.RequestAction}-{abSession.RequestOption}";
 
-            _ = abSession.ReturnOptionObject.ToReturnOptionObject(errorCode, errorMesg);
+            _ = abSession.ReturnOptionObject.ToReturnOptionObject(errorCode,errorMesg);
 
             LogEvent.Warning(abSession);
-            LogEvent.Alert(abSession, AssemblyName);
+            LogEvent.Alert(abSession,AssemblyName);
         }
     }
 }

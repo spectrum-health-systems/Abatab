@@ -1,15 +1,4 @@
-﻿// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-// Abatab: A custom web service/framework for myAvatar.
-// https://github.com/spectrum-health-systems/Abatab
-// Copyright (c) A Pretty Cool Program. All rights reserved.
-// Licensed under the Apache 2.0 license.
-// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-
-// -----------------------------------------------------------------------------
-// Abatab.Module.Testing.Roundhouse.cs
-// Class summary goes here.
-// b230713.1524
-// -----------------------------------------------------------------------------
+﻿// b231205.1411
 
 using Abatab.Core.Catalog.Definition;
 using Abatab.Core.Logger;
@@ -36,35 +25,35 @@ namespace Abatab.Module.Testing
             /* DEVNOTE For development/troubleshooting only. */
             //Debuggler.WriteLocal(Assembly.GetExecutingAssembly().GetName().Name); 
 
-            LogEvent.Trace("trace", abSession, AssemblyName);
+            LogEvent.Trace("trace",abSession,AssemblyName);
 
             switch (abSession.RequestCommand)
             {
                 case "admin":
-                    LogEvent.Trace("traceinternal", abSession, AssemblyName);
+                    LogEvent.Trace("traceinternal",abSession,AssemblyName);
 
                     //Action.Admin.SendEmail(abSession);
 
                     break;
 
                 case "datadump":
-                    LogEvent.Trace("traceinternal", abSession, AssemblyName);
+                    LogEvent.Trace("traceinternal",abSession,AssemblyName);
 
                     Action.DataDump.ParseAction(abSession);
 
                     break;
 
                 case "errorcode":
-                    LogEvent.Trace("traceinternal", abSession, AssemblyName);
+                    LogEvent.Trace("traceinternal",abSession,AssemblyName);
 
                     Action.ErrorCode.ParseAction(abSession);
 
                     break;
 
                 case "sendemail":
-                    LogEvent.Trace("traceinternal", abSession, AssemblyName);
+                    LogEvent.Trace("traceinternal",abSession,AssemblyName);
 
-                    Abatab.Core.Messaging.EmailMsg.Send(abSession, "chris.banwarth@spectrumhealthsystems.org", abSession.AbatabEmailAddress, abSession.AbatabEmailPassword, "This is a test", "Did the test work?");
+                    Abatab.Core.Messaging.EmailMsg.Send(abSession,"chris.banwarth@spectrumhealthsystems.org",abSession.AbatabEmailAddress,abSession.AbatabEmailPassword,"This is a test","Did the test work?");
 
                     //Action.Messaging.SendEmail(abSession);
 
@@ -74,7 +63,7 @@ namespace Abatab.Module.Testing
 
 
                 default:
-                    LogEvent.Trace("traceinternal", abSession, AssemblyName);
+                    LogEvent.Trace("traceinternal",abSession,AssemblyName);
 
                     /* TODO: Make sure this exits gracefully. */
                     break;
