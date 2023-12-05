@@ -38,12 +38,6 @@ namespace Abatab
         public string GetVersion() => "VERSION 23.12";
 
         /// <summary>The starting point for Abatab.</summary>
-        /// <param name="sentOptionObject">The OptionObject sent from myAvatar.</param>
-        /// <param name="scriptParameter">The Script Parameter from myAvatar.</param>
-        /// <remarks>
-        ///    - This method is required by myAvatar.
-        /// </remarks>
-        /// <returns>The finalized OptionObject to myAvatar.</returns>
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject,string scriptParameter)
         {
@@ -68,3 +62,11 @@ namespace Abatab
         }
     }
 }
+
+/// <summary>The starting point for Abatab.</summary>
+/// <param name="sentOptionObject">The OptionObject sent from myAvatar.</param>
+/// <param name="scriptParameter">The Script Parameter from myAvatar.</param>
+/// <remarks>
+///    - This method is required by myAvatar.
+/// </remarks>
+/// <returns>The finalized OptionObject to myAvatar.</returns>
