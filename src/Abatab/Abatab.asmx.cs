@@ -37,7 +37,7 @@ namespace Abatab
         [WebMethod]
         public string GetVersion() => "VERSION 23.12";
 
-        /// <summary> The starting point for Abatab.</summary>
+        /// <summary> The starting point for Abatab!</summary>
         /// <param name="sentOptionObject">The <see href="https://spectrum-health-systems/Abatab-Documentation-Project/glossary.md#OptionObject">OptionObject2015 sent from myAvatar.</param>
         /// <param name="scriptParameter">The <see href="https://spectrum-health-systems.github.io/Abatab-Documentation-Project/glossary.md#Script_Parameter">Script Parameter</see> from myAvatar.</param>
         /// <remarks>
