@@ -30,7 +30,7 @@ namespace Abatab
     {
         /// <summary>Returns the current version of Abatab.</summary>
         /// <remarks>
-        ///     - This method is required by Avatar!
+        ///     - This method is required by Avatar.
         ///     - The version number the current development version in `YY.MM` format.
         /// </remarks>
         /// <returns>The current version of Abatab.</returns>
@@ -41,7 +41,7 @@ namespace Abatab
         /// <param name="sentOptionObject">The OptionObject sent from myAvatar.</param>
         /// <param name="scriptParameter">The Script Parameter from myAvatar.</param>
         /// <remarks>
-        ///    - This method is required by myAvatar!
+        ///    - This method is required by myAvatar.
         /// </remarks>
         /// <returns>The finalized OptionObject to myAvatar.</returns>
         [WebMethod]
