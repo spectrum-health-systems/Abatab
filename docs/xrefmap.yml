@@ -1723,6 +1723,38 @@ references:
   isSpec: "True"
   fullName: Abatab.Core.Utility.FileSys.VerifyDirectory
   nameWithType: FileSys.VerifyDirectory
+- uid: Abatab.DevelopmentTesting
+  name: DevelopmentTesting
+  href: api/Abatab.DevelopmentTesting.html
+  commentId: T:Abatab.DevelopmentTesting
+  fullName: Abatab.DevelopmentTesting
+  nameWithType: DevelopmentTesting
+- uid: Abatab.DevelopmentTesting.XmlDocumentationCommentExample(System.Int32,System.Int32)
+  name: XmlDocumentationCommentExample(Int32, Int32)
+  href: api/Abatab.DevelopmentTesting.html#Abatab_DevelopmentTesting_XmlDocumentationCommentExample_System_Int32_System_Int32_
+  commentId: M:Abatab.DevelopmentTesting.XmlDocumentationCommentExample(System.Int32,System.Int32)
+  fullName: Abatab.DevelopmentTesting.XmlDocumentationCommentExample(System.Int32, System.Int32)
+  nameWithType: DevelopmentTesting.XmlDocumentationCommentExample(Int32, Int32)
+- uid: Abatab.DevelopmentTesting.XmlDocumentationCommentExample*
+  name: XmlDocumentationCommentExample
+  href: api/Abatab.DevelopmentTesting.html#Abatab_DevelopmentTesting_XmlDocumentationCommentExample_
+  commentId: Overload:Abatab.DevelopmentTesting.XmlDocumentationCommentExample
+  isSpec: "True"
+  fullName: Abatab.DevelopmentTesting.XmlDocumentationCommentExample
+  nameWithType: DevelopmentTesting.XmlDocumentationCommentExample
+- uid: Abatab.DevelopmentTesting.XmlDocumentationCommentTest
+  name: XmlDocumentationCommentTest()
+  href: api/Abatab.DevelopmentTesting.html#Abatab_DevelopmentTesting_XmlDocumentationCommentTest
+  commentId: M:Abatab.DevelopmentTesting.XmlDocumentationCommentTest
+  fullName: Abatab.DevelopmentTesting.XmlDocumentationCommentTest()
+  nameWithType: DevelopmentTesting.XmlDocumentationCommentTest()
+- uid: Abatab.DevelopmentTesting.XmlDocumentationCommentTest*
+  name: XmlDocumentationCommentTest
+  href: api/Abatab.DevelopmentTesting.html#Abatab_DevelopmentTesting_XmlDocumentationCommentTest_
+  commentId: Overload:Abatab.DevelopmentTesting.XmlDocumentationCommentTest
+  isSpec: "True"
+  fullName: Abatab.DevelopmentTesting.XmlDocumentationCommentTest
+  nameWithType: DevelopmentTesting.XmlDocumentationCommentTest
 - uid: Abatab.Module.ProgressNote
   name: Abatab.Module.ProgressNote
   href: api/Abatab.Module.ProgressNote.html
@@ -2126,38 +2158,6 @@ references:
   isSpec: "True"
   fullName: Abatab.WebConfig.Load
   nameWithType: WebConfig.Load
-- uid: Abatab.XmlDocumentCommentsExample
-  name: XmlDocumentCommentsExample
-  href: api/Abatab.XmlDocumentCommentsExample.html
-  commentId: T:Abatab.XmlDocumentCommentsExample
-  fullName: Abatab.XmlDocumentCommentsExample
-  nameWithType: XmlDocumentCommentsExample
-- uid: Abatab.XmlDocumentCommentsExample.XmlDocumentationCommentExample(System.Int32,System.Int32)
-  name: XmlDocumentationCommentExample(Int32, Int32)
-  href: api/Abatab.XmlDocumentCommentsExample.html#Abatab_XmlDocumentCommentsExample_XmlDocumentationCommentExample_System_Int32_System_Int32_
-  commentId: M:Abatab.XmlDocumentCommentsExample.XmlDocumentationCommentExample(System.Int32,System.Int32)
-  fullName: Abatab.XmlDocumentCommentsExample.XmlDocumentationCommentExample(System.Int32, System.Int32)
-  nameWithType: XmlDocumentCommentsExample.XmlDocumentationCommentExample(Int32, Int32)
-- uid: Abatab.XmlDocumentCommentsExample.XmlDocumentationCommentExample*
-  name: XmlDocumentationCommentExample
-  href: api/Abatab.XmlDocumentCommentsExample.html#Abatab_XmlDocumentCommentsExample_XmlDocumentationCommentExample_
-  commentId: Overload:Abatab.XmlDocumentCommentsExample.XmlDocumentationCommentExample
-  isSpec: "True"
-  fullName: Abatab.XmlDocumentCommentsExample.XmlDocumentationCommentExample
-  nameWithType: XmlDocumentCommentsExample.XmlDocumentationCommentExample
-- uid: Abatab.XmlDocumentCommentsExample.XmlDocumentationCommentTest
-  name: XmlDocumentationCommentTest()
-  href: api/Abatab.XmlDocumentCommentsExample.html#Abatab_XmlDocumentCommentsExample_XmlDocumentationCommentTest
-  commentId: M:Abatab.XmlDocumentCommentsExample.XmlDocumentationCommentTest
-  fullName: Abatab.XmlDocumentCommentsExample.XmlDocumentationCommentTest()
-  nameWithType: XmlDocumentCommentsExample.XmlDocumentationCommentTest()
-- uid: Abatab.XmlDocumentCommentsExample.XmlDocumentationCommentTest*
-  name: XmlDocumentationCommentTest
-  href: api/Abatab.XmlDocumentCommentsExample.html#Abatab_XmlDocumentCommentsExample_XmlDocumentationCommentTest_
-  commentId: Overload:Abatab.XmlDocumentCommentsExample.XmlDocumentationCommentTest
-  isSpec: "True"
-  fullName: Abatab.XmlDocumentCommentsExample.XmlDocumentationCommentTest
-  nameWithType: XmlDocumentCommentsExample.XmlDocumentationCommentTest
 - uid: ScriptLinkStandard.Helpers
   name: ScriptLinkStandard.Helpers
   href: api/ScriptLinkStandard.Helpers.html

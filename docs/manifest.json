@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "D:/Development/GitHub/SpectrumHealthSystems/Abatab/src/Abatab.ThirdParty/DocFX",
+  "source_base_path": "C:/IT/GitHub/SHS/Abatab/src/Abatab.ThirdParty/DocFX",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -60,7 +60,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Abatab.Abatab.html",
-          "hash": "l8aK02aEZ2cAbRfFxb0VspyaAlqC+BC2L1ShY6vLPK0="
+          "hash": "OpxaFHcza6MR9MPaCODFcwVXBq171MSkPcE51Fc7rng="
         }
       },
       "is_incremental": false,
@@ -571,6 +571,21 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Abatab.DevelopmentTesting.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Abatab.DevelopmentTesting.html",
+          "hash": "Fsy9PTeIJCUFYfoEmxHpiKpvVEMzzkaCsBaUkMMJfoY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "ManagedReference",
       "source_relative_path": "obj/api/Abatab.Module.ProgressNote.Action.VerifyLocation.yml",
       "output": {
@@ -720,7 +735,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Abatab.Roundhouse.html",
-          "hash": "yc76Oy4lNDOQ9AjM7N2BIRxFbksat4PmxefXcp6+LAw="
+          "hash": "3BKKWyVvCoHIOEMOsNOZmT/1XfW7YJ5hdeO0sV2E5qU="
         }
       },
       "is_incremental": false,
@@ -883,27 +898,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Abatab.XmlDocumentCommentsExample.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Abatab.XmlDocumentCommentsExample.html",
-          "hash": "I65JQVvuWG4vRjtlrWfAMRaJg+pA76bhVke3O0Dm8cc="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
       "type": "ManagedReference",
       "source_relative_path": "obj/api/Abatab.yml",
       "output": {
         ".html": {
           "relative_path": "api/Abatab.html",
-          "hash": "0/y6se3ekRHU8izdqUo9C6ITBSuGRrl1pIDM/1w8FJY="
+          "hash": "wACtRK6uJIvmWtcer4JUdqgVwGnQuIq0jyXnlusahD0="
         }
       },
       "is_incremental": false,
@@ -1155,7 +1155,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "1AYkhWPUM1NGO4gEbgG7cMuWpCQ0cW5yVxw1WLh7iP0="
+          "hash": "lBV/rMKcZ1N+vTRCAbgORzk4F/tIW+BDVnNpSzDQqrs="
         }
       },
       "is_incremental": false,
