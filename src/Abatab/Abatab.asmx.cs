@@ -35,15 +35,15 @@ namespace Abatab
         /// </remarks>
         /// <returns>The current version of Abatab.</returns>
         [WebMethod]
-        public string GetVersion() => "VERSION 23.11";
+        public string GetVersion() => "VERSION 23.12";
 
         /// <summary> The starting point for Abatab.</summary>
-        /// <param name="sentOptionObject">The OptionObject2015 sent from myAvatar.</param>
-        /// <param name="scriptParameter">The <see href="https://spectrum-health-systems.github.io/Abatab-Documentation-Project/glossary.html#Script_Parameter">Script Parameter</see> from myAvatar.</param>
+        /// <param name="sentOptionObject">The <see href="https://spectrum-health-systems/Abatab-Documentation-Project/glossary.md#OptionObject">OptionObject2015 sent from myAvatar.</param>
+        /// <param name="scriptParameter">The <see href="https://spectrum-health-systems.github.io/Abatab-Documentation-Project/glossary.md#Script_Parameter">Script Parameter</see> from myAvatar.</param>
         /// <remarks>
         ///    - This method is required by myAvatar.
         /// </remarks>
-        /// <returns>The finalized <see href="https://spectrum-health-systems.github.io/Abatab-Documentation-Project/glossary.html#OptionObject">OptionObject</see> to myAvatar.</returns>
+        /// <returns>The finalized <see href="https://spectrum-health-systems/Abatab-Documentation-Project/glossary.md#OptionObject">OptionObject</see> to myAvatar.</returns>
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject,string scriptParameter)
         {
