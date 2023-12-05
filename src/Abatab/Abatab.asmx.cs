@@ -39,9 +39,10 @@ namespace Abatab
 
         /// <summary>The starting point for Abatab.</summary>
         /// <param name="sentOptionObject">The OptionObject sent from myAvatar.</param>
-        /// <param name="scriptParameter">The Script Parameter from myAvatar.</param>
+        /// <param name="scriptParameter">The Script Parameter sent from myAvatar.</param>
         /// <remarks>
-        ///    - This method is required by myAvatar.
+        ///     - This method is required by Avatar.
+        ///     - The version number the current development version in `YY.MM` format.
         /// </remarks>
         /// <returns>The finalized OptionObject to myAvatar.</returns>
         [WebMethod]
