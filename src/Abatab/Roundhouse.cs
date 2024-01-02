@@ -6,31 +6,28 @@ using System.Reflection;
 
 namespace Abatab
 {
-    /// <summary>
-    /// Parses the module component of the <see href="https://spectrum-health-systems.github.io/Abatab-Documentation-Project/glossary.html#Script_Parameter">Script Parameter</see>.
-    /// </summary>
+    /// <summary>Parses the module component of the Script Parameter.</summary>
     /// <remarks>
-    ///     - This class will need to be modified when a new <see href="https://spectrum-health-systems.github.io/Abatab-Documentation-Project/glossary.html#Abatab_Module">Abatab Module</see> is added.
+    ///     - This class will need to be modified when a new Abatab Module is added.
     /// </remarks>
     public static class Roundhouse
     {
-        /// <summary>
-        /// Executing assembly name for log files.
-        /// </summary>
+        /// <summary>Executing assembly name for log files.</summary>
         /// <remarks>
-        ///     - This is defined at the start of the class so it can be easily used throughout the method when creating
-        ///       log files.
+        ///     - The execuring assembly is defined at the start of the class so it can be easily used throughout the
+        ///       method when creating log files.
         /// </remarks>
         public static string AssemblyName { get; set; } = Assembly.GetExecutingAssembly().GetName().Name;
 
-        /// <summary>
-        /// Parses the `module` component of the `module-command-action[-option]` <see href="https://github.com/spectrum-health-systems/Abatab-Documentation-Project/blob/main/Glossary.md#script-parameter">Script Parameter</see> sent from myAvatar.
+        /// <summary>Parses the `module` component of the sent Script Parameter.
         /// </summary>
         /// <param name="abSession">The Abatab session object.</param>
         /// <remarks>
-        ///     - This method <i>will need to be modified</i> when a new Module functionality is added.
-        ///     - This method <i>does not need to be modified</i> when new a new command-action[-option] for an existing
-        ///       module is added, since that is handled by the Roundhouse class of the individual Module.
+        ///     - Each module has a case statement that routes the `command-action[-option]`n component of the sent
+        ///       Script Parameter to the Roundhouse.cs for that specific Module. Therefore, this method <i>will need
+        ///       to be modified</i> when new Module functionality is added.
+        ///     - This method <i>does not need to be modified</i> when new a new `command-action[-option]` for an
+        ///       existing module is added, since that is handled by the Roundhouse.cs of the Module.
         /// </remarks>
         public static void ParseModule(AbSession abSession)
         {

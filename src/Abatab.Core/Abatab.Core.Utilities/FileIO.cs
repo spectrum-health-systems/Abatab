@@ -1,15 +1,4 @@
-﻿// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-// Abatab: A custom web service/framework for myAvatar.
-// https://github.com/spectrum-health-systems/Abatab
-// Copyright (c) A Pretty Cool Program. All rights reserved.
-// Licensed under the Apache 2.0 license.
-// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-
-// -----------------------------------------------------------------------------
-// Abatab.Core.Utility.FileIO.cs
-// Class summary goes here.
-// b230713.1524
-// -----------------------------------------------------------------------------
+﻿// b231205.1411
 
 using System.IO;
 using System.Threading;
@@ -24,10 +13,10 @@ namespace Abatab.Core.Utility
         /// <summary>
         /// Method summary goes here.
         /// </summary>
-        public static void WriteLocal(string filePath, string fileContent, int writeDelay = 0)
+        public static void WriteLocal(string filePath,string fileContent,int writeDelay = 0)
         {
             Thread.Sleep(writeDelay);
-            File.WriteAllText(filePath, fileContent);
+            File.WriteAllText(filePath,fileContent);
         }
     }
 }

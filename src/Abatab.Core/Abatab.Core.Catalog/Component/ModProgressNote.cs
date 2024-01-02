@@ -1,22 +1,13 @@
-﻿// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-// Abatab: A custom web service/framework for myAvatar.
-// https://github.com/spectrum-health-systems/Abatab
-// Copyright (c) A Pretty Cool Program. All rights reserved.
-// Licensed under the Apache 2.0 license.
-// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+﻿// b231205.1411
 
-// -----------------------------------------------------------------------------
-// Abatab.Core.Catalog.Component.ModProgressNotes.cs
-// String values.
-// b230809.1307
-// -----------------------------------------------------------------------------
-
-/* DEVNOTE
+/* Development note
+ * ================
  * The strings that these methods return use Markdown syntax, which creates a
  * carriage return when a line ends with two blank characters:
  *
  *      $"**Mode:** {abSession.ModProgressNote.Mode}  {Environment.NewLine}"
  *                                                  ^^
+ *                                                  
  * Removing the blank characters will break the Markdown output.
  */
 
@@ -49,7 +40,7 @@ namespace Abatab.Core.Catalog.Component
         /// <param name="abSession">The Abatab session object.</param>
         /// <param name="logType">The type of log.</param>
         /// <returns>The verify location message for progress notes.</returns>
-        public static string VfyLocMessage(AbSession abSession, string logType) =>
+        public static string VfyLocMessage(AbSession abSession,string logType) =>
             $"# [{logType}] Progress Note >+ Verify Location{Environment.NewLine}" +
             $"{Detail(abSession)}{Environment.NewLine}" +
             $"# {logType} information{Environment.NewLine}" +

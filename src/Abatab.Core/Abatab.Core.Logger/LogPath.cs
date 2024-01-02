@@ -1,15 +1,4 @@
-﻿// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-// Abatab: A custom web service/framework for myAvatar.
-// https://github.com/spectrum-health-systems/Abatab
-// Copyright (c) A Pretty Cool Program. All rights reserved.
-// Licensed under the Apache 2.0 license.
-// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-
-// -----------------------------------------------------------------------------
-// Abatab.Core.Logger.LogPath.cs
-// Class summary goes here.
-// b230810.1150
-// -----------------------------------------------------------------------------
+﻿// b231205.1411
 
 using Abatab.Core.Catalog.Definition;
 using Abatab.Core.Utility;
@@ -27,7 +16,7 @@ namespace Abatab.Core.Logger
         /// <returns>An alert log filepath.</returns>
         public static string Alert(AbSession abSession)
         {
-            Debuggler.DebugLog(abSession.DebugglerMode, Assembly.GetExecutingAssembly().GetName().Name);
+            Debuggler.DebugLog(abSession.DebugglerMode,Assembly.GetExecutingAssembly().GetName().Name);
 
             var logPath = $@"{abSession.AlertLogDirectory}\{abSession.SentOptionObject.OptionUserId}\{DateTime.Now:yyMMdd}\{abSession.RequestModule}\{abSession.RequestCommand}"; // REVIEW Oof, this is ugly.
 
@@ -43,9 +32,9 @@ namespace Abatab.Core.Logger
         /// <param name="callMember">The calling method (e.g., "MethodName").</param>
         /// <param name="callLine">The calling line of the method (e.g., "100"</param>
         /// <returns>A trace log filepath.</returns>
-        public static string Trace(AbSession abSession, string assemblyName = "", string callPath = "", string callMember = "", int callLine = 0)
+        public static string Trace(AbSession abSession,string assemblyName = "",string callPath = "",string callMember = "",int callLine = 0)
         {
-            Debuggler.DebugLog(abSession.DebugglerMode, Assembly.GetExecutingAssembly().GetName().Name); // REVIEW Can a trace log go here, instead of a debuggler statement?
+            Debuggler.DebugLog(abSession.DebugglerMode,Assembly.GetExecutingAssembly().GetName().Name); // REVIEW Can a trace log go here, instead of a debuggler statement?
 
             return $@"{abSession.TraceLogDirectory}\{DateTime.Now:HHmmss_fffffff}-{assemblyName}-{Path.GetFileName(callPath)}-{callMember}-{callLine}-[TRACE].md";
         }
@@ -54,7 +43,7 @@ namespace Abatab.Core.Logger
         /// <param name="abSession">The Abatab session object.</param> 
         public static string Session(AbSession abSession)
         {
-            Debuggler.DebugLog(abSession.DebugglerMode, Assembly.GetExecutingAssembly().GetName().Name); // REVIEW Can a trace log go here, instead of a debuggler statement?
+            Debuggler.DebugLog(abSession.DebugglerMode,Assembly.GetExecutingAssembly().GetName().Name); // REVIEW Can a trace log go here, instead of a debuggler statement?
 
             return $@"{abSession.SessionDataDirectory}\{DateTime.Now:HHmmss.fffffff}-[SESSION].md";
         }
@@ -64,7 +53,7 @@ namespace Abatab.Core.Logger
         /// </summary>
         public static string Setting(AbSession abSession)
         {
-            Debuggler.DebugLog(abSession.DebugglerMode, Assembly.GetExecutingAssembly().GetName().Name); // REVIEW Can a trace log go here, instead of a debuggler statement?
+            Debuggler.DebugLog(abSession.DebugglerMode,Assembly.GetExecutingAssembly().GetName().Name); // REVIEW Can a trace log go here, instead of a debuggler statement?
 
             return $@"{abSession.AbatabDataRoot}\{abSession.AvatarEnvironment}\Abatab current settings.md";
         }
@@ -73,7 +62,7 @@ namespace Abatab.Core.Logger
         /// <param name="abSession">The Abatab session object.</param> 
         public static string Warning(AbSession abSession)
         {
-            Debuggler.DebugLog(abSession.DebugglerMode, Assembly.GetExecutingAssembly().GetName().Name); // REVIEW Can a trace log go here, instead of a debuggler statement?
+            Debuggler.DebugLog(abSession.DebugglerMode,Assembly.GetExecutingAssembly().GetName().Name); // REVIEW Can a trace log go here, instead of a debuggler statement?
 
             var logPath = $@"{abSession.WarningLogDirectory}\{abSession.SentOptionObject.OptionUserId}\{DateTime.Now:yyMMdd}\{abSession.RequestModule}\{abSession.RequestCommand}"; // REVIEW Oof, this is ugly.
 

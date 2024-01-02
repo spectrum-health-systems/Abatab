@@ -8,7 +8,7 @@
 //   Abatab/README.md
 // =============================================================================
 
-// b231107.1015
+// b231205.1344
 
 using Abatab.Core.Catalog.Definition;
 using Abatab.Core.Utility;
@@ -19,7 +19,7 @@ using System.Web.Services;
 
 namespace Abatab
 {
-    /// <summary>Entry point for Abatab.</summary>
+    /// <summary>The entry class for Abatab.</summary>
     /// <remarks>
     ///     - This class <i>should not be modified</i> unless there is a major change to the framework.
     /// </remarks>
@@ -37,15 +37,15 @@ namespace Abatab
         [WebMethod]
         public string GetVersion() => "VERSION 23.12";
 
-        /// <summary>The starting point for Abatab.</summary>
+        /// <summary>The starting method for Abatab.</summary>
         /// <param name="sentOptionObject">The OptionObject sent from myAvatar.</param>
-        /// <param name="scriptParameter">The Script Parameter sent from myAvatar.</param>
+        /// <param name="sentScriptParameter">The Script Parameter sent from myAvatar.</param>
         /// <remarks>
         ///     - This method is required by Avatar.
         /// </remarks>
         /// <returns>The finalized OptionObject to myAvatar.</returns>
         [WebMethod]
-        public OptionObject2015 RunScript(OptionObject2015 sentOptionObject,string scriptParameter)
+        public OptionObject2015 RunScript(OptionObject2015 sentOptionObject,string sentScriptParameter)
         {
             Debuggler.DebugLog(Settings.Default.DebugglerMode,Assembly.GetExecutingAssembly().GetName().Name);
 
@@ -53,7 +53,7 @@ namespace Abatab
 
             if (Settings.Default.AbatabMode == "enabled")
             {
-                Start.NewSession(abSession,scriptParameter,sentOptionObject);
+                Start.NewSession(abSession,sentScriptParameter,sentOptionObject);
 
                 Roundhouse.ParseModule(abSession);
 
@@ -68,13 +68,3 @@ namespace Abatab
         }
     }
 }
-
-
-/// <summary>The starting point for Abatab.</summary>
-/// <summary>The starting point for Abatab.</summary>
-/// <param name="sentOptionObject">The OptionObject sent from myAvatar.</param>
-/// <param name="scriptParameter">The Script Parameter from myAvatar.</param>
-/// <remarks>
-///    - This method is required by myAvatar.
-/// </remarks>
-/// <returns>The finalized OptionObject to myAvatar.</returns>

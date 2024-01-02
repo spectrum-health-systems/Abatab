@@ -1,16 +1,4 @@
-﻿// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-// Abatab: A custom web service/framework for myAvatar.
-// https://github.com/spectrum-health-systems/Abatab
-// Copyright (c) A Pretty Cool Program. All rights reserved.
-// Licensed under the Apache 2.0 license.
-// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-
-// -----------------------------------------------------------------------------
-// Abatab.Core.Framework.Validate.cs
-// Class summary goes here.
-// b230810.1111
-// -----------------------------------------------------------------------------
-
+﻿// b231205.1411
 
 using Abatab.Core.Catalog.Definition;
 using Abatab.Core.Logger;
@@ -23,18 +11,21 @@ namespace Abatab.Core.Framework
     public static class Validate
     {
         /// <summary>Executing assembly name for log files.</summary>
-        /// <remarks>This is defined at the start of the class so it can be easily used throughout the method.</remarks>
+        /// <remarks>
+        ///     - The executing assembly is defined at the start of the class so it can be easily used throughout the
+        ///       method when creating log files.
+        /// </remarks>
         public static string AssemblyName { get; set; } = Assembly.GetExecutingAssembly().GetName().Name;
 
         /// <summary>Verify framework status.</summary>
         /// <param name="abSession">The Abatab session object.</param>
         public static void Status(AbSession abSession)
         {
-            LogEvent.Trace("trace", abSession, AssemblyName);
+            LogEvent.Trace("trace",abSession,AssemblyName);
 
             if (!Directory.Exists(abSession.SessionDataDirectory))
             {
-                LogEvent.Trace("traceinternal", abSession, AssemblyName);
+                LogEvent.Trace("traceinternal",abSession,AssemblyName);
 
                 Maintenance.Refresh(abSession);
             }

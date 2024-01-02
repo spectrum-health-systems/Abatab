@@ -1,4 +1,4 @@
-﻿// b231106.1013
+﻿// b231205.1400
 
 using Abatab.Core.Catalog.Definition;
 using Abatab.Core.Logger;
@@ -6,12 +6,13 @@ using System.Reflection;
 
 namespace Abatab
 {
-    /// <summary>Logic for stopping an Abatab session.</summary>
+    /// <summary>Stop the current Abatab session.</summary>
     public class Stop
     {
         /// <summary>Executing assembly name for log files.</summary>
         /// <remarks>
-        ///     - Define this now so it can be used throughout the class.
+        ///     - The executing assembly is defined at the start of the class so it can be easily used throughout the
+        ///       method when creating log files.
         /// </remarks>
         public static string AssemblyName { get; set; } = Assembly.GetExecutingAssembly().GetName().Name;
 

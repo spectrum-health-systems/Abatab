@@ -1,4 +1,4 @@
-﻿// b231106.1013
+﻿// b231205.1400
 
 using Abatab.Core.Catalog.Definition;
 using Abatab.Core.Framework;
@@ -10,23 +10,27 @@ using System.Reflection;
 
 namespace Abatab
 {
-    /// <summary>Logic for starting an Abatab session.</summary>
+    /// <summary>Starts a new Abatab session.</summary>
     public static class Start
     {
         /// <summary>Executing assembly name for log files.</summary>
+        /// <remarks>
+        ///     - The executing assembly is defined at the start of the class so it can be easily used throughout the
+        ///       method when creating log files.
+        /// </remarks>
         public static string AssemblyName { get; set; } = Assembly.GetExecutingAssembly().GetName().Name;
 
         /// <summary>Initialize a new Abatab session.</summary>
         /// <param name="abSession">The Abatab session object.</param>
-        /// <param name="scriptParameter">The Script Parameter sent from myAvatar.</param>
+        /// <param name="sentScriptParameter">The Script Parameter sent from myAvatar.</param>
         /// <param name="sentOptionObject">The OptionObject sent from myAvatar.</param>
-        public static void NewSession(AbSession abSession,string scriptParameter,OptionObject2015 sentOptionObject)
+        public static void NewSession(AbSession abSession,string sentScriptParameter,OptionObject2015 sentOptionObject)
         {
             Debuggler.DebugLog(Settings.Default.DebugglerMode,Assembly.GetExecutingAssembly().GetName().Name);
 
             WebConfig.Load(abSession);
 
-            Build.NewSession(sentOptionObject,scriptParameter,abSession);
+            Build.NewSession(sentOptionObject,sentScriptParameter,abSession);
 
             Validate.Status(abSession);
         }

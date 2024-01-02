@@ -1,22 +1,13 @@
-﻿// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-// Abatab: A custom web service/framework for myAvatar.
-// https://github.com/spectrum-health-systems/Abatab
-// Copyright (c) A Pretty Cool Program. All rights reserved.
-// Licensed under the Apache 2.0 license.
-// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+﻿// b231205.1411
 
-// -----------------------------------------------------------------------------
-// Abatab.Core.Catalog.Body.Module.cs
-// String values.
-// b230809.1142
-// -----------------------------------------------------------------------------
-
-/* DEVNOTE
+/* Development note
+ * ================
  * The strings that these methods return use Markdown syntax, which creates a
  * carriage return when a line ends with two blank characters:
  *
  *      $"**Mode:** {abSession.ModProgressNote.Mode}  {Environment.NewLine}"
  *                                                  ^^
+ *                                                  
  * Removing the blank characters will break the Markdown output.
  */
 
