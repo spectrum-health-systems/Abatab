@@ -17,10 +17,11 @@ namespace Abatab.Core.Messaging
     /// </summary>
     public class EmailMsg
     {
-        /// <summary>
-        /// Executing assembly name for log files.
-        /// </summary>
-        /// <remarks>This is defined at the start of the class so it can be easily used throughout the method.</remarks>
+        /// <summary>Executing assembly name for log files.</summary>
+        /// <remarks>
+        ///     - The executing assembly is defined at the start of the class so it can be easily used throughout the
+        ///       method when creating log files.
+        /// </remarks>
         public static string AssemblyName { get; set; } = Assembly.GetExecutingAssembly().GetName().Name;
 
         /// <summary>
