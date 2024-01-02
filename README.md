@@ -8,19 +8,11 @@
 
   ![AbatabLogo](./.github/images/logo/app/AbatabLogo.png)
 
-</div>
+  ![BranchWarning](https://img.shields.io/badge/DEVELOPMENT%20VERSION-24.1-red?style=for-the-badge)
 
-<br>
+</div>
 
 ***
-
-<div align="center">
-
-  <br>
-
-  ![BranchWarning](https://img.shields.io/badge/THIS%20IS%20A-DEVELOPMENT%20VERSION-red?style=for-the-badge)
-
-</div>
 
 # About Abatab
 
@@ -30,25 +22,60 @@ While myAvatar™ is a robust platform, it isn't perfect. The good news is that 
 
 **Abatab** is one such custom web service which includes various tools and utilities for myAvatar™ that aren't included in the official release, and provides a solid foundation for building additional functionality quickly and efficiently.
 
-## About this repository
+## Features
+
+* Custom tools and utilities for use with myAvatar™
+* Does not require Java to be installed
+* A solid foundation to build additional myAvatar™ custom tools and utilities
+
+## Requirements
+
+* A location where you can host Abatab which meets the following requirements:
+  * .NET Framework 4.8+ installed
+  * Access to your myAvatar™ environments via HTTPS
+
+# About this repository
 
 This repository is for **development versions** of Abatab, which **are not intended for use in production environments** because:
 
-* There probably will be broken/missing functionality!
-* There definately Will have lots of ugly, gross code!
-* There will be extensive comments!
+* Broken/missing functionality!
+* Lots of ugly, gross code!
+* Extensive comments!
 * It might not even work!
 
-The current development version of Abatab is `v24.1`.
+If you want to use Abatab in a production environment, please use the [Abatab Community Release](https://github.com/spectrum-health-systems/Abatab-Community-Release).
 
+For more information about Abatab development, please see the [Abatab development documentation](https://github.com/spectrum-health-systems/Abatab-Documentation-Project/blob/main/Abatab%20Development/about-abatab-development.md).
 
-If you want to use Abatab in a production environment, use the [Abatab Community Release](https://github.com/spectrum-health-systems/Abatab-Community-Release).
+## Branches
 
+This repository has the following branches:
 
-***SO DO NOT USE IT***
+* `development`  
+This is where the bulk of Abatab development takes place.
 
-- [Abatab API documentation](https://spectrum-health-systems.github.io/Abatab/)
-- [Abatab Documentation Project](https://github.com/spectrum-health-systems/Abatab-Documentation-Project/blob/main/README.md)
+* `main`  
+The `development` branch is occasionally merged with `main` for testing.
+
+* `stable-release`  
+When a version of Abatab is stable enough to release, you can find it here.
+
+* `YY.MM-%type%`  
+All monthly development branches are archived here.
+
+## Archives
+
+You can find depreciated Abatab branches in the [Abatab Archives](https://github.com/spectrum-health-systems/Abatab-Archives).
+
+# Documentation
+
+## The Abatab Documentation Project
+
+This README is short because the majority of the Abatab documentation can be found at [The Abatab Documentation Project](https://github.com/spectrum-health-systems/Abatab-Documentation-Project), which is a living document for Abatab.
+
+## API documentation
+
+You can find the Abatab API documentation [here](https://spectrum-health-systems.github.io/Abatab/).
 
 ***
 
