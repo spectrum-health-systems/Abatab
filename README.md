@@ -16,7 +16,9 @@
 
 # About Abatab
 
-[Netsmart's myAvatar™](https://www.ntst.com/offerings/myavatar) is an electronic health record (EHR) specifically designed for organizations that provide behavioral health and addictions treatment services in community-based, residential and inpatient programs. It offers a recovery-focused suite of solutions that leverage real-time analytics and clinical decision support to drive decision-making. The robust platform streamlines workflow, making client information quickly accessible with user-friendly dashboards.
+[Netsmart's myAvatar™](https://www.ntst.com/offerings/myavatar) is an electronic health record (EHR) specifically designed for organizations that provide behavioral health and addictions treatment services in community-based, residential and inpatient programs.
+
+myAvatar™ offers a recovery-focused suite of solutions that leverage real-time analytics and clinical decision support to drive decision-making. The robust platform streamlines workflow, making client information quickly accessible with user-friendly dashboards.
 
 While myAvatar™ is a robust platform, it isn't perfect. The good news is that you can extend myAvatar™ functionality via Netsmart's myAvatar™ Web Services, and/or custom web services that are written by other myAvatar™ users.
 
@@ -45,7 +47,7 @@ This repository is for **development versions** of Abatab, which **are not inten
 
 If you want to use Abatab in a production environment, please use the [Abatab Community Release](https://github.com/spectrum-health-systems/Abatab-Community-Release).
 
-For more information about Abatab development, please see the [Abatab development documentation](https://github.com/spectrum-health-systems/Abatab-Documentation-Project/blob/main/Abatab%20Development/about-abatab-development.md).
+For more information about Abatab development, please see the [Abatab development documentation](https://github.com/spectrum-health-systems/Abatab-Documentation-Project/blob/main/Abatab%20Development/abatab-development.md).
 
 ## Branches
 
@@ -61,11 +63,7 @@ The `development` branch is occasionally merged with `main` for testing.
 When a version of Abatab is stable enough to release, you can find it here.
 
 * `YY.MM-%type%`  
-All monthly development branches are archived here.
-
-## Archives
-
-You can find depreciated Abatab branches in the [Abatab Archives](https://github.com/spectrum-health-systems/Abatab-Archives).
+Monthly development branches are archived here, and eventually moved to the [Abatab Archives](https://github.com/spectrum-health-systems/Abatab-Archives).
 
 # Documentation
 
