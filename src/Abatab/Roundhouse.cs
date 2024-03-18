@@ -28,7 +28,7 @@ namespace Abatab
         /// Script Parameter to the Roundhouse.cs for that specific Module. Therefore, this method <i>will need
         /// to be modified</i> when new Module functionality is added.
         /// 
-        /// * This method <i>does not need to be modified</i> when new a new `command-action[-option]` for an
+        /// * Thas method <i>does not need to be modified</i> when new a new `command-action[-option]` for an
         /// existing module is added, since that is handled by the Roundhouse.cs of the Module.
         /// </remarks>
         public static void ParseModule(AbSession abSession)
