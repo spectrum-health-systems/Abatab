@@ -67,20 +67,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Abatab.asmx" />
-    <Content Include="docs\doc\xml\gen\Abatab.Core.Catalog.xml" />
-    <Content Include="docs\doc\xml\gen\Abatab.Core.DataExport.xml" />
-    <Content Include="docs\doc\xml\gen\Abatab.Core.Framework.xml" />
-    <Content Include="docs\doc\xml\gen\Abatab.Core.Logger.xml" />
-    <Content Include="docs\doc\xml\gen\Abatab.Core.OptionObject.xml" />
-    <Content Include="docs\doc\xml\gen\Abatab.Core.OS.xml" />
-    <Content Include="docs\doc\xml\gen\Abatab.Core.Session.xml" />
-    <Content Include="docs\doc\xml\gen\Abatab.Core.Templates.xml" />
-    <Content Include="docs\doc\xml\gen\Abatab.Core.Utilities.xml" />
-    <Content Include="docs\doc\xml\gen\Abatab.Module.ProgressNote.xml" />
-    <Content Include="docs\doc\xml\gen\Abatab.Module.Prototype.xml" />
-    <Content Include="docs\doc\xml\gen\Abatab.Module.QuickMedicationOrder.xml" />
-    <Content Include="docs\doc\xml\gen\Abatab.Module.Testing.xml" />
-    <Content Include="docs\doc\xml\gen\Abatab.xml" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -101,35 +87,6 @@
     <Compile Include="WebConfig.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="docs\doc\docproj\docproj_directory-structure.md" />
-    <Content Include="docs\doc\docproj\docproj_Index.md" />
-    <Content Include="docs\doc\docproj\docproj_script-parameter.md" />
-    <Content Include="docs\doc\docproj\src\docproj_abatab.core.catalog.md" />
-    <Content Include="docs\doc\docproj\src\docproj_abatab.core.dataexport.md" />
-    <Content Include="docs\doc\docproj\src\docproj_abatab.core.framework.md" />
-    <Content Include="docs\doc\docproj\src\docproj_abatab.core.logger.md" />
-    <Content Include="docs\doc\docproj\src\docproj_abatab.core.optionobject.md" />
-    <Content Include="docs\doc\docproj\src\docproj_abatab.core.os.md" />
-    <Content Include="docs\doc\docproj\src\docproj_abatab.core.session.md" />
-    <Content Include="docs\doc\docproj\src\docproj_abatab.core.utilities.md" />
-    <Content Include="docs\doc\docproj\src\docproj_abatab.md" />
-    <Content Include="docs\doc\docproj\src\docproj_abatab.module.progressnote.md" />
-    <Content Include="docs\doc\docproj\src\docproj_abatab.module.prototype.md" />
-    <Content Include="docs\doc\docproj\src\docproj_abatab.module.quickmedicationorder.md" />
-    <Content Include="docs\doc\docproj\src\docproj_abatab.module.testing.md" />
-    <Content Include="docs\doc\xml\inc\Abatab.Core.Catalog.xmldoc" />
-    <Content Include="docs\doc\xml\inc\Abatab.Core.DataExport.xmldoc" />
-    <Content Include="docs\doc\xml\inc\Abatab.Core.Framework.xmldoc" />
-    <Content Include="docs\doc\xml\inc\Abatab.Core.Logger.xmldoc" />
-    <Content Include="docs\doc\xml\inc\Abatab.Core.OptionObject.xmldoc" />
-    <Content Include="docs\doc\xml\inc\Abatab.Core.OS.xmldoc" />
-    <Content Include="docs\doc\xml\inc\Abatab.Core.Session.xmldoc" />
-    <Content Include="docs\doc\xml\inc\Abatab.Core.Utilities.xmldoc" />
-    <Content Include="docs\doc\xml\inc\Abatab.Module.ProgressNote.xmldoc" />
-    <Content Include="docs\doc\xml\inc\Abatab.Module.Prototype.xmldoc" />
-    <Content Include="docs\doc\xml\inc\Abatab.Module.QuickMedicationOrder.xmldoc" />
-    <Content Include="docs\doc\xml\inc\Abatab.Module.Testing.xmldoc" />
-    <Content Include="docs\doc\xml\inc\Abatab.xmldoc" />
     <Content Include="AppData\Module\README.md">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -162,9 +119,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="docs\doc\relnotes\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Abatab.Core\Abatab.Core.Catalog\Abatab.Core.Catalog.csproj">
       <Project>{1B44E970-AF13-4188-A6EC-449BF42FA32E}</Project>

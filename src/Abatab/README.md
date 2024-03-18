@@ -2,9 +2,7 @@
 	Abatab Source Code Readme
 -->
 
-Abatab v24.x DEVELOPMENT
-
-# Development release
+# This is an Abatab Development release
 
 This is a [development version](https://github.com/spectrum-health-systems/Abatab) of Abatab, and is not intended for use in production environments.
 
