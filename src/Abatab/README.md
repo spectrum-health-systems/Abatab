@@ -2,7 +2,7 @@
 	Abatab Source Code Readme
 -->
 
-Abatab v23.12.0-DEVELOPMENT
+Abatab v24.x DEVELOPMENT
 
 # Development release
 
