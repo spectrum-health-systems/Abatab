@@ -2002,19 +2002,19 @@ references:
   isSpec: "True"
   fullName: Abatab.Roundhouse.AssemblyName
   nameWithType: Roundhouse.AssemblyName
-- uid: Abatab.Roundhouse.ParseModule(Abatab.Core.Catalog.Definition.AbSession)
-  name: ParseModule(AbSession)
-  href: api/Abatab.Roundhouse.html#Abatab_Roundhouse_ParseModule_Abatab_Core_Catalog_Definition_AbSession_
-  commentId: M:Abatab.Roundhouse.ParseModule(Abatab.Core.Catalog.Definition.AbSession)
-  fullName: Abatab.Roundhouse.ParseModule(Abatab.Core.Catalog.Definition.AbSession)
-  nameWithType: Roundhouse.ParseModule(AbSession)
-- uid: Abatab.Roundhouse.ParseModule*
-  name: ParseModule
-  href: api/Abatab.Roundhouse.html#Abatab_Roundhouse_ParseModule_
-  commentId: Overload:Abatab.Roundhouse.ParseModule
+- uid: Abatab.Roundhouse.SendToModule(Abatab.Core.Catalog.Definition.AbSession)
+  name: SendToModule(AbSession)
+  href: api/Abatab.Roundhouse.html#Abatab_Roundhouse_SendToModule_Abatab_Core_Catalog_Definition_AbSession_
+  commentId: M:Abatab.Roundhouse.SendToModule(Abatab.Core.Catalog.Definition.AbSession)
+  fullName: Abatab.Roundhouse.SendToModule(Abatab.Core.Catalog.Definition.AbSession)
+  nameWithType: Roundhouse.SendToModule(AbSession)
+- uid: Abatab.Roundhouse.SendToModule*
+  name: SendToModule
+  href: api/Abatab.Roundhouse.html#Abatab_Roundhouse_SendToModule_
+  commentId: Overload:Abatab.Roundhouse.SendToModule
   isSpec: "True"
-  fullName: Abatab.Roundhouse.ParseModule
-  nameWithType: Roundhouse.ParseModule
+  fullName: Abatab.Roundhouse.SendToModule
+  nameWithType: Roundhouse.SendToModule
 - uid: Abatab.Sandbox.DevFive
   name: Abatab.Sandbox.DevFive
   href: api/Abatab.Sandbox.DevFive.html

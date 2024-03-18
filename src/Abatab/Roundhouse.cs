@@ -1,4 +1,4 @@
-﻿// b231106.1009
+﻿// b240318.1310
 
 using System.Reflection;
 
@@ -9,29 +9,22 @@ namespace Abatab
 {
     /// <summary>Parses the module component of the Script Parameter.</summary>
     /// <remarks>
-    ///     - This class will need to be modified when a new Abatab Module is added.
+    /// - This class should not be modified unless a new Abatab Module is added.
+    /// - When a new Abatab Module is added, you will need to <see href="https://github.com/spectrum-health-systems/Abatab-Documentation-Project/blob/main/Development/Processes/adding-a-new-roundhouse-case.md">add a new case to the `SendToModule` method</see>.
+    /// - For more information about why this class is designed the way it is, please read about <see href="https://github.com/spectrum-health-systems/Abatab-Documentation-Project/blob/main/Development/the-methedology-behind-abatab.md">the methodology behind Abatab</see>.
     /// </remarks>
     public static class Roundhouse
     {
-        /// <summary>Executing assembly name for log files.</summary>
-        /// <remarks>
-        ///     - The execuring assembly is defined at the start of the class so it can be easily used throughout the
-        ///       method when creating log files.
-        /// </remarks>
         public static string AssemblyName { get; set; } = Assembly.GetExecutingAssembly().GetName().Name;
 
-        /// <summary>Parses the `module` component of the sent Script Parameter.
-        /// </summary>
+        /// <summary>Sends the OptionObject to a specific Abatab Module.</summary>
         /// <param name="abSession">The Abatab session object.</param>
         /// <remarks>
-        /// * Each module has a case statement that routes the `command-action[-option]`n component of the sent
-        /// Script Parameter to the Roundhouse.cs for that specific Module. Therefore, this method <i>will need
-        /// to be modified</i> when new Module functionality is added.
-        /// 
-        /// * Thas method <i>does not need to be modified</i> when new a new `command-action[-option]` for an
-        /// existing module is added, since that is handled by the Roundhouse.cs of the Module.
+        /// * The `command` component of the Script Parameter determines where to route the data sent from Avatar.
+        /// * This method ignores all other Script Parameter components are added, since they will be handled by the
+        /// recieving module's Roundhouse class.
         /// </remarks>
-        public static void ParseModule(AbSession abSession)
+        public static void SendToModule(AbSession abSession)
         {
             LogEvent.Trace("trace", abSession, AssemblyName);
 

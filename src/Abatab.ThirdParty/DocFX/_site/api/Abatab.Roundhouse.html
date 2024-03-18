@@ -113,7 +113,9 @@
   </div>
   <h5 id="Abatab_Roundhouse_remarks"><strong>Remarks</strong></h5>
   <div class="markdown level0 remarks"><ul>
-<li>This class will need to be modified when a new Abatab Module is added.</li>
+<li>This class should not be modified unless there is a new Abatab Module added.</li>
+<li>When a new Abatab Module is added, you will need to a<a href="https://github.com/spectrum-health-systems/Abatab-Documentation-Project/blob/main/Development/Processes/adding-a-new-roundhouse-case.md">add a new case to the <code>SendToModule</code> method</a>.</li>
+<li>For more information about why this class is designed the way it is, please read about <a href="https://github.com/spectrum-health-systems/Abatab-Documentation-Project/blob/main/Development/the-methedology-behind-abatab.md">the methodology behind Abatab</a>.</li>
 </ul>
 </div>
   <h3 id="properties">Properties
@@ -123,12 +125,11 @@
     <a href="https://github.com/spectrum-health-systems/Abatab/new/development/apiSpec/new?filename=Abatab_Roundhouse_AssemblyName.md&amp;value=---%0Auid%3A%20Abatab.Roundhouse.AssemblyName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/spectrum-health-systems/Abatab/blob/development/src/Abatab/Roundhouse.cs/#L21">View Source</a>
+    <a href="https://github.com/spectrum-health-systems/Abatab/blob/development/src/Abatab/Roundhouse.cs/#L18">View Source</a>
   </span>
   <a id="Abatab_Roundhouse_AssemblyName_" data-uid="Abatab.Roundhouse.AssemblyName*"></a>
   <h4 id="Abatab_Roundhouse_AssemblyName" data-uid="Abatab.Roundhouse.AssemblyName">AssemblyName</h4>
-  <div class="markdown level1 summary"><p>Executing assembly name for log files.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -149,29 +150,23 @@
       </tr>
     </tbody>
   </table>
-  <h5 id="Abatab_Roundhouse_AssemblyName_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><ul>
-<li>The execuring assembly is defined at the start of the class so it can be easily used throughout the
-method when creating log files.</li>
-</ul>
-</div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/spectrum-health-systems/Abatab/new/development/apiSpec/new?filename=Abatab_Roundhouse_ParseModule_Abatab_Core_Catalog_Definition_AbSession_.md&amp;value=---%0Auid%3A%20Abatab.Roundhouse.ParseModule(Abatab.Core.Catalog.Definition.AbSession)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/spectrum-health-systems/Abatab/new/development/apiSpec/new?filename=Abatab_Roundhouse_SendToModule_Abatab_Core_Catalog_Definition_AbSession_.md&amp;value=---%0Auid%3A%20Abatab.Roundhouse.SendToModule(Abatab.Core.Catalog.Definition.AbSession)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/spectrum-health-systems/Abatab/blob/development/src/Abatab/Roundhouse.cs/#L34">View Source</a>
+    <a href="https://github.com/spectrum-health-systems/Abatab/blob/development/src/Abatab/Roundhouse.cs/#L27">View Source</a>
   </span>
-  <a id="Abatab_Roundhouse_ParseModule_" data-uid="Abatab.Roundhouse.ParseModule*"></a>
-  <h4 id="Abatab_Roundhouse_ParseModule_Abatab_Core_Catalog_Definition_AbSession_" data-uid="Abatab.Roundhouse.ParseModule(Abatab.Core.Catalog.Definition.AbSession)">ParseModule(AbSession)</h4>
-  <div class="markdown level1 summary"><p>Parses the <code>module</code> component of the sent Script Parameter.</p>
+  <a id="Abatab_Roundhouse_SendToModule_" data-uid="Abatab.Roundhouse.SendToModule*"></a>
+  <h4 id="Abatab_Roundhouse_SendToModule_Abatab_Core_Catalog_Definition_AbSession_" data-uid="Abatab.Roundhouse.SendToModule(Abatab.Core.Catalog.Definition.AbSession)">SendToModule(AbSession)</h4>
+  <div class="markdown level1 summary"><p>Sends the OptionObject to a specific Abatab Module.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void ParseModule(AbSession abSession)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void SendToModule(AbSession abSession)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -191,15 +186,11 @@ method when creating log files.</li>
       </tr>
     </tbody>
   </table>
-  <h5 id="Abatab_Roundhouse_ParseModule_Abatab_Core_Catalog_Definition_AbSession__remarks">Remarks</h5>
+  <h5 id="Abatab_Roundhouse_SendToModule_Abatab_Core_Catalog_Definition_AbSession__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><ul>
-<li><p>Each module has a case statement that routes the <code>command-action[-option]</code>n component of the sent
-Script Parameter to the Roundhouse.cs for that specific Module. Therefore, this method <em>will need
-to be modified</em> when new Module functionality is added.</p>
-</li>
-<li><p>Thas method <em>does not need to be modified</em> when new a new <code>command-action[-option]</code> for an
-existing module is added, since that is handled by the Roundhouse.cs of the Module.</p>
-</li>
+<li>The <code>command</code> component of the Script Parameter determines where to route the data sent from Avatar.</li>
+<li>This method ignores all other Script Parameter components are added, since they will be handled by the
+recieving module&apos;s Roundhouse class.</li>
 </ul>
 </div>
 </article>
@@ -213,7 +204,7 @@ existing module is added, since that is handled by the Roundhouse.cs of the Modu
                     <a href="https://github.com/spectrum-health-systems/Abatab/new/development/apiSpec/new?filename=Abatab_Roundhouse.md&amp;value=---%0Auid%3A%20Abatab.Roundhouse%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/spectrum-health-systems/Abatab/blob/development/src/Abatab/Roundhouse.cs/#L14" class="contribution-link">View Source</a>
+                    <a href="https://github.com/spectrum-health-systems/Abatab/blob/development/src/Abatab/Roundhouse.cs/#L16" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
